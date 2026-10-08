@@ -1,6 +1,6 @@
 // 音效系统自检：无声环境下必须静默降级，绝不抛错
 const fs=require('fs'),vm=require('vm'),path=require('path');
-const root='C:/files/code/LuckLandlord';
+const root=path.resolve(__dirname,'../..');
 const ctx={window:{},console,Object,JSON,Math,Array,String,Number,Boolean,Date,Set,Map,Error,setTimeout,clearTimeout,isFinite};
 ctx.globalThis=ctx;ctx.window.window=ctx.window;
 vm.createContext(ctx);

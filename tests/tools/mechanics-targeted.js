@@ -1,6 +1,6 @@
 // 定向验证 v2：循环直到邻接条件满足，并打印真实 action 名称
 const fs=require('fs'),vm=require('vm'),path=require('path');
-const root='C:/files/code/LuckLandlord';
+const root=path.resolve(__dirname,'../..');
 function fresh(){
   const ctx={window:{},console,Object,JSON,Math,Array,String,Number,Boolean,Date,Set,Map,Error,isFinite,parseInt,parseFloat};
   ctx.globalThis=ctx;ctx.window.window=ctx.window;

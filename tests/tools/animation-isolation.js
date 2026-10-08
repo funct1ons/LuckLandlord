@@ -1,7 +1,7 @@
 // 关键验证：动画/演出档位绝不能影响逻辑结果
 // 方法：同一 seed 跑完整一局，逐命令比对不同 ANIM 档位下的状态哈希
 const fs=require('fs'),vm=require('vm'),path=require('path'),crypto=require('crypto');
-const root='C:/files/code/LuckLandlord';
+const root=path.resolve(__dirname,'../..');
 
 function fresh(speed){
   const ctx={window:{},console,Object,JSON,Math,Array,String,Number,Boolean,Date,Set,Map,Error,isFinite,parseInt,parseFloat,crypto};

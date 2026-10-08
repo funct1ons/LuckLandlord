@@ -1,6 +1,6 @@
 // gdd1 机制运行时验证：确认关键原语真的被执行，而非仅有代码
 const fs=require('fs'),vm=require('vm'),path=require('path');
-const root='C:/files/code/LuckLandlord';
+const root=path.resolve(__dirname,'../..');
 function fresh(){
   const ctx={window:{},console,Object,JSON,Math,Array,String,Number,Boolean,Date,Set,Map,Error,isFinite,parseInt,parseFloat};
   ctx.globalThis=ctx;ctx.window.window=ctx.window;

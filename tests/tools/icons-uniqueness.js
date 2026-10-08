@@ -1,5 +1,5 @@
-﻿const fs=require('fs'),vm=require('vm'),path=require('path');
-const root='C:/files/code/LuckLandlord';
+const fs=require('fs'),vm=require('vm'),path=require('path');
+const root=path.resolve(__dirname,'../..');
 const ctx={window:{},console,Object,JSON,Math,Array,String,Number,Boolean,Date,Set,Map,Error,isFinite,parseInt,parseFloat};
 ctx.globalThis=ctx;ctx.window.window=ctx.window;
 vm.createContext(ctx);
