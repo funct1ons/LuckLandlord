@@ -1,0 +1,83 @@
+{
+  "node": {
+    "total": 218,
+    "passed": 218
+  },
+  "reports": [
+    {
+      "file": "fix-edge-file-write.html",
+      "protocol": "file",
+      "mode": "write",
+      "total": 218,
+      "passed": 218,
+      "sameCases": true,
+      "storage": {
+        "mode": "write",
+        "ok": true,
+        "legacyNonempty": true,
+        "fiveStreamContinuation": true,
+        "asyncImportRetainsBytes": true
+      },
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+      "ok": true
+    },
+    {
+      "file": "fix-edge-file-read.html",
+      "protocol": "file",
+      "mode": "read",
+      "total": 218,
+      "passed": 218,
+      "sameCases": true,
+      "storage": {
+        "mode": "read",
+        "ok": true,
+        "legacyNonempty": true,
+        "fiveStreamContinuation": true,
+        "asyncImportRetainsBytes": true
+      },
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+      "ok": true
+    },
+    {
+      "file": "fix-edge-http-write.html",
+      "protocol": "http",
+      "mode": "write",
+      "total": 218,
+      "passed": 218,
+      "sameCases": true,
+      "storage": {
+        "mode": "write",
+        "ok": true,
+        "legacyNonempty": true,
+        "fiveStreamContinuation": true,
+        "asyncImportRetainsBytes": true
+      },
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+      "ok": true
+    },
+    {
+      "file": "fix-edge-http-read.html",
+      "protocol": "http",
+      "mode": "read",
+      "total": 218,
+      "passed": 218,
+      "sameCases": true,
+      "storage": {
+        "mode": "read",
+        "ok": true,
+        "legacyNonempty": true,
+        "fiveStreamContinuation": true,
+        "asyncImportRetainsBytes": true
+      },
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+      "ok": true
+    }
+  ],
+  "browserFixtureLiteralsMatch": true,
+  "chrome": {
+    "tested": false,
+    "reason": "Chrome absent from standard machine/user paths and HKLM/HKCU App Paths; no Chrome run claimed"
+  },
+  "scope": "Case-level F1 repair parity; each browser run also checks real localStorage",
+  "ok": true
+}

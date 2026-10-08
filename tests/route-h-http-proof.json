@@ -1,0 +1,111 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "name": "suite",
+      "edgeExit": 0,
+      "profile": "C:\\Users\\admin\\AppData\\Local\\Temp\\route-h-http-G3HYvr",
+      "strictMarker": "data-result=\"pass\"",
+      "total": 602,
+      "passed": 602,
+      "namesAndOrderMatch": true,
+      "exactCaseResultsMatch": true
+    },
+    {
+      "name": "ui",
+      "edgeExit": 0,
+      "profile": "C:\\Users\\admin\\AppData\\Local\\Temp\\route-h-http-wlSrDi",
+      "strictMarker": "data-smoke=\"pass\"",
+      "faults": [
+        {
+          "name": "mechanics-ui/import-validation",
+          "ok": true
+        },
+        {
+          "name": "mechanics-ui/import-preview-render",
+          "ok": true
+        },
+        {
+          "name": "mechanics-ui/import-getItem",
+          "ok": true
+        },
+        {
+          "name": "mechanics-ui/import-serialization",
+          "ok": true
+        },
+        {
+          "name": "mechanics-ui/import-capacity",
+          "ok": true
+        },
+        {
+          "name": "mechanics-ui/import-setItem",
+          "ok": true
+        }
+      ],
+      "hCases": [
+        {
+          "name": "route-h-ui/READY-accept-setting-save-restore",
+          "ok": true
+        },
+        {
+          "name": "route-h-ui/SYMBOL_CHOICE-setting-rejected-with-memory-and-bytes",
+          "ok": true
+        },
+        {
+          "name": "route-h-ui/pending-reload-choose-next-spin-no-repeat",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "name": "file-suite-comparison",
+      "total": 602,
+      "passed": 602,
+      "namesAndOrderMatch": true,
+      "exactCaseResultsMatch": true
+    },
+    {
+      "name": "file-ui-comparison",
+      "faults": [
+        {
+          "name": "mechanics-ui/import-validation",
+          "ok": true
+        },
+        {
+          "name": "mechanics-ui/import-preview-render",
+          "ok": true
+        },
+        {
+          "name": "mechanics-ui/import-getItem",
+          "ok": true
+        },
+        {
+          "name": "mechanics-ui/import-serialization",
+          "ok": true
+        },
+        {
+          "name": "mechanics-ui/import-capacity",
+          "ok": true
+        },
+        {
+          "name": "mechanics-ui/import-setItem",
+          "ok": true
+        }
+      ],
+      "hCases": [
+        {
+          "name": "route-h-ui/READY-accept-setting-save-restore",
+          "ok": true
+        },
+        {
+          "name": "route-h-ui/SYMBOL_CHOICE-setting-rejected-with-memory-and-bytes",
+          "ok": true
+        },
+        {
+          "name": "route-h-ui/pending-reload-choose-next-spin-no-repeat",
+          "ok": true
+        }
+      ]
+    }
+  ]
+}

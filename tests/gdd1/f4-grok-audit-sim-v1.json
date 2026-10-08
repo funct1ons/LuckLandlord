@@ -1,0 +1,1766 @@
+{
+  "auditor": "independent grok full-sim tool audit v1",
+  "scope": "full-v1 Normal 64/32/8 bot simulator/tools BEFORE economic aggregation. NOT slice 24/10/3. NOT formal Normal acceptance. F4 functional PASS not re-litigated.",
+  "judgment": {
+    "tools": "TOOLS_PASS",
+    "economy": "NOT APPROVED",
+    "economyNote": "Formal Normal economy is not approved regardless of recorded win rates. Slice 65% is not a substitute. This file does not accept economic aggregation.",
+    "lineVerifyOk": true,
+    "replayOk": true,
+    "isolationOk": true
+  },
+  "node": "v24.14.1",
+  "platform": "win32",
+  "startedAt": "2026-10-06T04:18:49.551Z",
+  "finishedAt": "2026-10-06T04:18:59.018Z",
+  "method": {
+    "lineVerify": "streamed all 16 official v3 jsonl; every line sha256/offset/bytes vs matching -index.json; seed formula vs full-sim-seeds.json; uniqueness; unfinished phases; command.ok; contribution sum vs spin income; per-spin bySource vs spin.income. Process exit 0 and progress.done are not acceptance.",
+    "replay": "fullNewRun(seed) then fullCommand each recorded action with live revision; final JSON SHA vs recorded finalHash. Not a Greedy policy re-run.",
+    "replaySelection": "all 8 games with index===0 (one per bot/split in *-0 shards); first record of each of 16 files (8 of those are index 0, 8 are index 500); plus 8 extra index===1 games (one per bot/split). 24 unique command replays.",
+    "income": "all 8000 games contribution sum == sum(spin.income); plus one index-0 game per bot reported; plus per-spin bySource.",
+    "isolation": "publicView deletes rng+seed; policyRng independent of five game streams; Greedy surrogate seed full-sim-model-v1/0; train/holdout exact seed strings disjoint.",
+    "wilson": "stats.js source inspection; rate() Wilson only on independent game/seed trials; ratio() without lo/hi for offer/event/acquisition-event."
+  },
+  "hashes": {
+    "docs/GAME_DESIGN_V1.md": {
+      "path": "docs/GAME_DESIGN_V1.md",
+      "bytes": 103576,
+      "sha256": "e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07"
+    },
+    "docs/GDD1_F4_AUDIT_SUPPLEMENT.md": {
+      "path": "docs/GDD1_F4_AUDIT_SUPPLEMENT.md",
+      "bytes": 7352,
+      "sha256": "8b83cc616b41a6b115cfb20f70b8d04dfe214de6c66cbdd33096449ffb229824"
+    },
+    "docs/GDD1_F4_GROK_AUDIT.md": {
+      "path": "docs/GDD1_F4_GROK_AUDIT.md",
+      "bytes": 11628,
+      "sha256": "19884a37955c48d4a468684aac87e05d3ae3d91c628f1cbaff99cb1487f5d23d"
+    },
+    "js/gdd1/resolver.js": {
+      "path": "js/gdd1/resolver.js",
+      "bytes": 27996,
+      "sha256": "e86d51fb4c20d235312b263146f18d2c4cd69c13453846fe0daf9b07a0aaf88b"
+    },
+    "js/gdd1/full-effects.js": {
+      "path": "js/gdd1/full-effects.js",
+      "bytes": 37993,
+      "sha256": "f65bc06b4c38fb35db14cc21f6ed4c63a42efbb06956f71078974990c5d8de55"
+    },
+    "js/gdd1/full-controller.js": {
+      "path": "js/gdd1/full-controller.js",
+      "bytes": 7963,
+      "sha256": "2c44f91f7f8806216b06666e685cbd4ab1a6f4ca2973528b7022102cd13e4558"
+    },
+    "js/gdd1/rng.js": {
+      "path": "js/gdd1/rng.js",
+      "bytes": 1680,
+      "sha256": "f3f5c055a8e3f4d5e18d355488194f94dfbc28603be7c29a5aab1743bd6704f7"
+    },
+    "js/gdd1/contract.js": {
+      "path": "js/gdd1/contract.js",
+      "bytes": 4911,
+      "sha256": "b7bd44d05ccdd4ffffe13e4949f7de92f3c7f37e628feaf3a6bf58023e7ea5c9"
+    },
+    "js/gdd1/schema.js": {
+      "path": "js/gdd1/schema.js",
+      "bytes": 17191,
+      "sha256": "00cca48c0545622b0b70fd36194615d336e639b48158cefc91ed68eddfa6aa16"
+    },
+    "js/gdd1/content.js": {
+      "path": "js/gdd1/content.js",
+      "bytes": 7631,
+      "sha256": "e6c753479683480c27ad0a3888a058edb8e90a0a4397e218c9e7fa8efe7ad239"
+    },
+    "js/gdd1/full-content.js": {
+      "path": "js/gdd1/full-content.js",
+      "bytes": 5797,
+      "sha256": "1326808297527bc3a033c29e9d4658b4e22061eb9a960be6fa2a3b4a7b3a8c0e"
+    },
+    "js/gdd1/offers.js": {
+      "path": "js/gdd1/offers.js",
+      "bytes": 3252,
+      "sha256": "81862b7b51e1eb335799f8dbacdb80c8b9df30e0cd322b9129c8654458f15bd0"
+    },
+    "js/gdd1/full-save.js": {
+      "path": "js/gdd1/full-save.js",
+      "bytes": 598,
+      "sha256": "cee2c57d646af61c7fc9e962e08f9115df07753dd235ae24adb3c61b5dd516a3"
+    },
+    "js/gdd1/save.js": {
+      "path": "js/gdd1/save.js",
+      "bytes": 4686,
+      "sha256": "2f0d39ceebee434cbbb38c9fb01c6bf73e7ad6328ced84ab022a135d618eebba"
+    },
+    "tests/gdd1/full-sim-engine.js": {
+      "path": "tests/gdd1/full-sim-engine.js",
+      "bytes": 10020,
+      "sha256": "90531adfbc08ea0f00b037e8366e1379417f2964f97ae0eca16b8fce773f5227"
+    },
+    "tests/gdd1/full-sim-run.js": {
+      "path": "tests/gdd1/full-sim-run.js",
+      "bytes": 8926,
+      "sha256": "940802bdf670801182c8bdf86b07290eecc99fdb35dd0f9d6c09bc7f3b02c53d"
+    },
+    "tests/gdd1/full-sim-stats.js": {
+      "path": "tests/gdd1/full-sim-stats.js",
+      "bytes": 11517,
+      "sha256": "4e900fb0cb336c327aac5942195b1f160dbedd13ae1f90f3ea70d5d892001424"
+    },
+    "tests/gdd1/full-sim-checks.js": {
+      "path": "tests/gdd1/full-sim-checks.js",
+      "bytes": 8136,
+      "sha256": "275843cb02a028b91a89b9f3c2093ec247dc394db9b7b4f5354544ef1a289f7b"
+    },
+    "tests/gdd1/full-sim-integrity.js": {
+      "path": "tests/gdd1/full-sim-integrity.js",
+      "bytes": 8731,
+      "sha256": "1fbcea05f4be3b5b7875817f01818b5114cae24d5077c98302faf697194a6978"
+    },
+    "tests/gdd1/full-sim-seeds.js": {
+      "path": "tests/gdd1/full-sim-seeds.js",
+      "bytes": 1220,
+      "sha256": "b43cf2162cef95feb0c9f55d7642031f9c224336c303d0baab8bfa7a438a3951"
+    },
+    "tests/gdd1/full-sim-seeds.json": {
+      "path": "tests/gdd1/full-sim-seeds.json",
+      "bytes": 1078594,
+      "sha256": "2ffb7bf01cfea9a4ed0213af41bcd277c7873471c79725cbbe59f7807150ae31"
+    },
+    "tests/gdd1/full-sim-gates.js": {
+      "path": "tests/gdd1/full-sim-gates.js",
+      "bytes": 6343,
+      "sha256": "a1d4853f99cc1918af0a8116ccd66b89a9f515c0d3ecd0a03960b8abcc98a2d8"
+    },
+    "tests/gdd1/full-sim-tool-audit.js": {
+      "path": "tests/gdd1/full-sim-tool-audit.js",
+      "bytes": 11016,
+      "sha256": "d8e62cdb35354464ff84e1b83c86ceb14674b1676ce4efbcc2b7be203aff2011"
+    },
+    "tests/gdd1/full-sim-tool-audit-v1.json": {
+      "path": "tests/gdd1/full-sim-tool-audit-v1.json",
+      "bytes": 6913,
+      "sha256": "cb15b22eb4a699be442e6481e4d7c53d4675c4534214dd200cd397cd14597e46"
+    },
+    "tests/gdd1/full-sim-tool-audit-v2.json": {
+      "path": "tests/gdd1/full-sim-tool-audit-v2.json",
+      "bytes": 6052,
+      "sha256": "26702163d0bf42eb139cf4a9afc6dd30874fe941b8104c8e015978e9f5c4d5d3"
+    },
+    "tests/gdd1/full-sim-tool-audit-v3.json": {
+      "path": "tests/gdd1/full-sim-tool-audit-v3.json",
+      "bytes": 7408,
+      "sha256": "dab8ebb368c5297ac1097389cd8114f4fc7b3e4dc8338f00b00457a985cd1fb6"
+    },
+    "tests/gdd1/full-sim-tool-audit-v4.json": {
+      "path": "tests/gdd1/full-sim-tool-audit-v4.json",
+      "bytes": 8517,
+      "sha256": "1912521f6d27283f0cf251d380bafb0ea19dd5add4b4a069474aef9398324f75"
+    },
+    "tests/gdd1/full-sim-tool-audit-v5.json": {
+      "path": "tests/gdd1/full-sim-tool-audit-v5.json",
+      "bytes": 7859,
+      "sha256": "75bb382128913187b8b44a3572173922a83217a5c7f850cb72ace73584174dfe"
+    }
+  },
+  "frozenHold": {
+    "gdd": "e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07",
+    "supplement": "8b83cc616b41a6b115cfb20f70b8d04dfe214de6c66cbdd33096449ffb229824",
+    "f4GrokAudit": "19884a37955c48d4a468684aac87e05d3ae3d91c628f1cbaff99cb1487f5d23d",
+    "resolver": "e86d51fb4c20d235312b263146f18d2c4cd69c13453846fe0daf9b07a0aaf88b",
+    "fullEffects": "f65bc06b4c38fb35db14cc21f6ed4c63a42efbb06956f71078974990c5d8de55",
+    "productionDrift": false
+  },
+  "seeds": {
+    "n": 8000,
+    "unique": 8000,
+    "policyUnique": 8000,
+    "train": 4000,
+    "holdout": 4000,
+    "sharedExactSeedStrings": 0,
+    "numericIndexOverlapAllowed": true,
+    "engineHashAtSeedFreeze": "90531adfbc08ea0f00b037e8366e1379417f2964f97ae0eca16b8fce773f5227",
+    "engineHashNow": "90531adfbc08ea0f00b037e8366e1379417f2964f97ae0eca16b8fce773f5227",
+    "runnerHashAtSeedFreeze": "2c2a67308eb4e29654df23aeeea7699c9c94df4f22cf2b1cf31b9f11b0ed3bb3",
+    "runnerHashNow": "940802bdf670801182c8bdf86b07290eecc99fdb35dd0f9d6c09bc7f3b02c53d",
+    "runnerDriftedAfterSeedFreeze": true,
+    "runnerDriftNote": "tool-audit records progress sidecar after seed freeze; play() seed formula still matches catalog"
+  },
+  "wilson": {
+    "wilsonHelper": "rate() Wilson 95% z=1.959963984540054",
+    "dependentHelper": "ratio() counts+rate, no lo/hi, independentBernoulli:false",
+    "wilsonTargets": [
+      "winRate",
+      "formationRate",
+      "mixedRate",
+      "stage.reached",
+      "stage.survival",
+      "stage.conditionalPayment",
+      "stage.formedAmongReached",
+      "acquiredWinRate (unique games that acquired id)",
+      "gameWinWilson (unique seed per stratum)"
+    ],
+    "ratioTargets": [
+      "eventAcceptance (event A vs A+B commands; dependent)",
+      "selectionRate (selected/exposures including rerolls; dependent)",
+      "eventRatio (acquisition-event in stratum; dependent)"
+    ],
+    "offerEventAcquisitionEventLabeledIndependentWilson": false,
+    "acquiredWinRateIsUniqueGameWilson": true,
+    "sourceOk": true
+  },
+  "isolation": {
+    "policyDoesNotMutateGameRng": true,
+    "policyReplayable": true,
+    "policyStrategySeparated": true,
+    "streams": [
+      "draw",
+      "effect",
+      "symbolOffer",
+      "itemOffer",
+      "event"
+    ],
+    "streamShape": "{state,consumed} via F.nextUint32; no stream.next",
+    "publicViewUsedByPlay": true,
+    "trainHoldoutExactStringDisjoint": true
+  },
+  "greedy": {
+    "action": {
+      "op": "choose",
+      "id": "dew_lantern",
+      "windowId": 1
+    },
+    "modelCommands": 16,
+    "surrogateSeed": "full-sim-model-v1/0",
+    "horizon": {
+      "spins": 2,
+      "commands": 4,
+      "capSpins": 2,
+      "capCommands": 14
+    },
+    "futureOffersIgnored": true,
+    "liveUnmutated": true,
+    "invariantToHiddenRng": true,
+    "readyPreferredOp": "spin",
+    "readyDecision": {
+      "op": "spin"
+    },
+    "readySkippedLookaheadIfSpin": true
+  },
+  "legal": {
+    "readyOps": [
+      "spin",
+      "remove"
+    ],
+    "symbolOps": [
+      "choose",
+      "skip",
+      "remove",
+      "reroll"
+    ],
+    "itemOps": [
+      "item",
+      "skipItem"
+    ],
+    "eventReached": true,
+    "eventOps": [
+      "B",
+      "A"
+    ]
+  },
+  "checks": [
+    {
+      "name": "frozen GDD SHA matches task",
+      "ok": true,
+      "detail": {
+        "path": "docs/GAME_DESIGN_V1.md",
+        "bytes": 103576,
+        "sha256": "e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07"
+      }
+    },
+    {
+      "name": "supplement SHA matches expected 64-hex",
+      "ok": true,
+      "detail": {
+        "path": "docs/GDD1_F4_AUDIT_SUPPLEMENT.md",
+        "bytes": 7352,
+        "sha256": "8b83cc616b41a6b115cfb20f70b8d04dfe214de6c66cbdd33096449ffb229824"
+      }
+    },
+    {
+      "name": "independent F4 grok-audit SHA matches task; not re-litigated",
+      "ok": true,
+      "detail": {
+        "path": "docs/GDD1_F4_GROK_AUDIT.md",
+        "bytes": 11628,
+        "sha256": "19884a37955c48d4a468684aac87e05d3ae3d91c628f1cbaff99cb1487f5d23d"
+      }
+    },
+    {
+      "name": "production resolver/full-effects match frozen F4 PASS bytes",
+      "ok": true,
+      "detail": {
+        "resolver": {
+          "path": "js/gdd1/resolver.js",
+          "bytes": 27996,
+          "sha256": "e86d51fb4c20d235312b263146f18d2c4cd69c13453846fe0daf9b07a0aaf88b"
+        },
+        "effects": {
+          "path": "js/gdd1/full-effects.js",
+          "bytes": 37993,
+          "sha256": "f65bc06b4c38fb35db14cc21f6ed4c63a42efbb06956f71078974990c5d8de55"
+        },
+        "controller": {
+          "path": "js/gdd1/full-controller.js",
+          "bytes": 7963,
+          "sha256": "2c44f91f7f8806216b06666e685cbd4ab1a6f4ca2973528b7022102cd13e4558"
+        }
+      }
+    },
+    {
+      "name": "enumerated 8000 seeds unique, formula, train/holdout prefixes disjoint",
+      "ok": true,
+      "detail": {
+        "n": 8000,
+        "unique": 8000,
+        "policyUnique": 8000,
+        "train": 4000,
+        "holdout": 4000,
+        "sharedExactSeedStrings": 0,
+        "numericIndexOverlapAllowed": true,
+        "engineHashAtSeedFreeze": "90531adfbc08ea0f00b037e8366e1379417f2964f97ae0eca16b8fce773f5227",
+        "engineHashNow": "90531adfbc08ea0f00b037e8366e1379417f2964f97ae0eca16b8fce773f5227",
+        "runnerHashAtSeedFreeze": "2c2a67308eb4e29654df23aeeea7699c9c94df4f22cf2b1cf31b9f11b0ed3bb3",
+        "runnerHashNow": "940802bdf670801182c8bdf86b07290eecc99fdb35dd0f9d6c09bc7f3b02c53d",
+        "runnerDriftedAfterSeedFreeze": true,
+        "runnerDriftNote": "tool-audit records progress sidecar after seed freeze; play() seed formula still matches catalog"
+      }
+    },
+    {
+      "name": "Wilson 95% not applied to offer/event/acquisition-event ratios in stats.js source",
+      "ok": true,
+      "detail": {
+        "wilsonHelper": "rate() Wilson 95% z=1.959963984540054",
+        "dependentHelper": "ratio() counts+rate, no lo/hi, independentBernoulli:false",
+        "wilsonTargets": [
+          "winRate",
+          "formationRate",
+          "mixedRate",
+          "stage.reached",
+          "stage.survival",
+          "stage.conditionalPayment",
+          "stage.formedAmongReached",
+          "acquiredWinRate (unique games that acquired id)",
+          "gameWinWilson (unique seed per stratum)"
+        ],
+        "ratioTargets": [
+          "eventAcceptance (event A vs A+B commands; dependent)",
+          "selectionRate (selected/exposures including rerolls; dependent)",
+          "eventRatio (acquisition-event in stratum; dependent)"
+        ],
+        "offerEventAcquisitionEventLabeledIndependentWilson": false,
+        "acquiredWinRateIsUniqueGameWilson": true,
+        "sourceOk": true
+      }
+    },
+    {
+      "name": "Normal 12-start 70-spin payments 64/32/8 live",
+      "ok": true,
+      "detail": {
+        "symbols": 64,
+        "items": 32,
+        "events": 8
+      }
+    },
+    {
+      "name": "publicView deletes live seed and five RNG streams",
+      "ok": true,
+      "detail": {
+        "keysHaveRng": false,
+        "keysHaveSeed": false,
+        "streams": [
+          "draw",
+          "effect",
+          "symbolOffer",
+          "itemOffer",
+          "event"
+        ]
+      }
+    },
+    {
+      "name": "policy RNG isolated from five game streams; Random uses policy rng only",
+      "ok": true,
+      "detail": {
+        "policyDoesNotMutateGameRng": true,
+        "policyReplayable": true,
+        "policyStrategySeparated": true,
+        "streams": [
+          "draw",
+          "effect",
+          "symbolOffer",
+          "itemOffer",
+          "event"
+        ],
+        "streamShape": "{state,consumed} via F.nextUint32; no stream.next",
+        "publicViewUsedByPlay": true,
+        "trainHoldoutExactStringDisjoint": true
+      }
+    },
+    {
+      "name": "Greedy lookahead: synthetic seed, no live RNG peek, horizon, prune",
+      "ok": true,
+      "detail": {
+        "action": {
+          "op": "choose",
+          "id": "dew_lantern",
+          "windowId": 1
+        },
+        "modelCommands": 16,
+        "surrogateSeed": "full-sim-model-v1/0",
+        "horizon": {
+          "spins": 2,
+          "commands": 4,
+          "capSpins": 2,
+          "capCommands": 14
+        },
+        "futureOffersIgnored": true,
+        "liveUnmutated": true,
+        "invariantToHiddenRng": true,
+        "readyPreferredOp": "spin",
+        "readyDecision": {
+          "op": "spin"
+        },
+        "readySkippedLookaheadIfSpin": true
+      }
+    },
+    {
+      "name": "legal surface includes spin/choose/skip/remove/reroll/item/skipItem/event A/B",
+      "ok": true,
+      "detail": {
+        "readyOps": [
+          "spin",
+          "remove"
+        ],
+        "symbolOps": [
+          "choose",
+          "skip",
+          "remove",
+          "reroll"
+        ],
+        "itemOps": [
+          "item",
+          "skipItem"
+        ],
+        "eventReached": true,
+        "eventOps": [
+          "B",
+          "A"
+        ]
+      }
+    },
+    {
+      "name": "income attribution matches ledger+reward on a live spin",
+      "ok": true,
+      "detail": {
+        "total": 20,
+        "attributed": 20
+      }
+    }
+  ],
+  "totals": {
+    "v3Files": 16,
+    "games": 8000,
+    "expected": 8000,
+    "seenUnique": 8000,
+    "missing": 0,
+    "duplicates": 0,
+    "unfinished": 0,
+    "gameErrors": 0,
+    "commandErrors": 0,
+    "attributionFails": 0,
+    "perSpinAttributionFails": 0,
+    "indexOrFormulaErrors": 0,
+    "recordedWinsDisclosedNotApproved": 56,
+    "recordedWinsNote": "Greedy 56 / Random 0 / Synergy 0 / Value 0 across 8000 games. Disclosed only. Not economy acceptance."
+  },
+  "batches": [
+    {
+      "name": "full-sim-batch-v3-greedy-holdout-0.jsonl",
+      "bot": "Greedy",
+      "split": "holdout",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "jsonlBytes": 47048706,
+      "wins": 10,
+      "gameErrors": 0,
+      "commandErrors": 0,
+      "unfinished": 0,
+      "attributionFails": 0,
+      "complete": true,
+      "ms": 1828247.1375,
+      "verifyMs": 455,
+      "node": "v24.14.1",
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished/errors; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-greedy-holdout-500.jsonl",
+      "bot": "Greedy",
+      "split": "holdout",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "jsonlBytes": 47464778,
+      "wins": 13,
+      "gameErrors": 0,
+      "commandErrors": 0,
+      "unfinished": 0,
+      "attributionFails": 0,
+      "complete": true,
+      "ms": 1838973.7059000002,
+      "verifyMs": 439,
+      "node": "v24.14.1",
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished/errors; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-greedy-train-0.jsonl",
+      "bot": "Greedy",
+      "split": "train",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "jsonlBytes": 47181493,
+      "wins": 14,
+      "gameErrors": 0,
+      "commandErrors": 0,
+      "unfinished": 0,
+      "attributionFails": 0,
+      "complete": true,
+      "ms": 1823546.5969999998,
+      "verifyMs": 456,
+      "node": "v24.14.1",
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished/errors; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-greedy-train-500.jsonl",
+      "bot": "Greedy",
+      "split": "train",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "jsonlBytes": 47442738,
+      "wins": 19,
+      "gameErrors": 0,
+      "commandErrors": 0,
+      "unfinished": 0,
+      "attributionFails": 0,
+      "complete": true,
+      "ms": 1842221.8668,
+      "verifyMs": 442,
+      "node": "v24.14.1",
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished/errors; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-random-holdout-0.jsonl",
+      "bot": "Random",
+      "split": "holdout",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "jsonlBytes": 42232050,
+      "wins": 0,
+      "gameErrors": 0,
+      "commandErrors": 0,
+      "unfinished": 0,
+      "attributionFails": 0,
+      "complete": true,
+      "ms": 311228.21270000003,
+      "verifyMs": 367,
+      "node": "v24.14.1",
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished/errors; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-random-holdout-500.jsonl",
+      "bot": "Random",
+      "split": "holdout",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "jsonlBytes": 42460177,
+      "wins": 0,
+      "gameErrors": 0,
+      "commandErrors": 0,
+      "unfinished": 0,
+      "attributionFails": 0,
+      "complete": true,
+      "ms": 309500.1283,
+      "verifyMs": 375,
+      "node": "v24.14.1",
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished/errors; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-random-train-0.jsonl",
+      "bot": "Random",
+      "split": "train",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "jsonlBytes": 42169093,
+      "wins": 0,
+      "gameErrors": 0,
+      "commandErrors": 0,
+      "unfinished": 0,
+      "attributionFails": 0,
+      "complete": true,
+      "ms": 311048.429,
+      "verifyMs": 364,
+      "node": "v24.14.1",
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished/errors; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-random-train-500.jsonl",
+      "bot": "Random",
+      "split": "train",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "jsonlBytes": 41858916,
+      "wins": 0,
+      "gameErrors": 0,
+      "commandErrors": 0,
+      "unfinished": 0,
+      "attributionFails": 0,
+      "complete": true,
+      "ms": 298677.7908,
+      "verifyMs": 369,
+      "node": "v24.14.1",
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished/errors; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-synergy-holdout-0.jsonl",
+      "bot": "Synergy",
+      "split": "holdout",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "jsonlBytes": 42151262,
+      "wins": 0,
+      "gameErrors": 0,
+      "commandErrors": 0,
+      "unfinished": 0,
+      "attributionFails": 0,
+      "complete": true,
+      "ms": 353633.5236,
+      "verifyMs": 355,
+      "node": "v24.14.1",
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished/errors; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-synergy-holdout-500.jsonl",
+      "bot": "Synergy",
+      "split": "holdout",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "jsonlBytes": 42312216,
+      "wins": 0,
+      "gameErrors": 0,
+      "commandErrors": 0,
+      "unfinished": 0,
+      "attributionFails": 0,
+      "complete": true,
+      "ms": 353879.8678,
+      "verifyMs": 353,
+      "node": "v24.14.1",
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished/errors; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-synergy-train-0.jsonl",
+      "bot": "Synergy",
+      "split": "train",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "jsonlBytes": 42734218,
+      "wins": 0,
+      "gameErrors": 0,
+      "commandErrors": 0,
+      "unfinished": 0,
+      "attributionFails": 0,
+      "complete": true,
+      "ms": 354407.20680000004,
+      "verifyMs": 349,
+      "node": "v24.14.1",
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished/errors; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-synergy-train-500.jsonl",
+      "bot": "Synergy",
+      "split": "train",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "jsonlBytes": 42630860,
+      "wins": 0,
+      "gameErrors": 0,
+      "commandErrors": 0,
+      "unfinished": 0,
+      "attributionFails": 0,
+      "complete": true,
+      "ms": 353007.9367,
+      "verifyMs": 366,
+      "node": "v24.14.1",
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished/errors; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-value-holdout-0.jsonl",
+      "bot": "Value",
+      "split": "holdout",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "jsonlBytes": 45930224,
+      "wins": 0,
+      "gameErrors": 0,
+      "commandErrors": 0,
+      "unfinished": 0,
+      "attributionFails": 0,
+      "complete": true,
+      "ms": 345810.46609999996,
+      "verifyMs": 392,
+      "node": "v24.14.1",
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished/errors; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-value-holdout-500.jsonl",
+      "bot": "Value",
+      "split": "holdout",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "jsonlBytes": 46509895,
+      "wins": 0,
+      "gameErrors": 0,
+      "commandErrors": 0,
+      "unfinished": 0,
+      "attributionFails": 0,
+      "complete": true,
+      "ms": 350681.871,
+      "verifyMs": 388,
+      "node": "v24.14.1",
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished/errors; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-value-train-0.jsonl",
+      "bot": "Value",
+      "split": "train",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "jsonlBytes": 45897176,
+      "wins": 0,
+      "gameErrors": 0,
+      "commandErrors": 0,
+      "unfinished": 0,
+      "attributionFails": 0,
+      "complete": true,
+      "ms": 346034.9458,
+      "verifyMs": 384,
+      "node": "v24.14.1",
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished/errors; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-value-train-500.jsonl",
+      "bot": "Value",
+      "split": "train",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "jsonlBytes": 46611398,
+      "wins": 0,
+      "gameErrors": 0,
+      "commandErrors": 0,
+      "unfinished": 0,
+      "attributionFails": 0,
+      "complete": true,
+      "ms": 349071.8131,
+      "verifyMs": 383,
+      "node": "v24.14.1",
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished/errors; progress.done and process exit are insufficient"
+    }
+  ],
+  "unusedActions": {
+    "note": "Unused recorded commands are disclosure, not missing API. legal() includes spin/choose/skip/remove/reroll/item/skipItem/event A/B. Random exercised all nine. Greedy never recorded reroll or skipItem. Value/Synergy never recorded skipItem.",
+    "byGroup": {
+      "Greedy/holdout": {
+        "actions": {
+          "spin": 57342,
+          "choose": 23185,
+          "remove": 5459,
+          "item": 7411,
+          "skip": 34157,
+          "eventB": 984,
+          "eventA": 869
+        },
+        "unused": [
+          "reroll",
+          "skipItem"
+        ]
+      },
+      "Greedy/train": {
+        "actions": {
+          "spin": 57451,
+          "choose": 22924,
+          "remove": 5393,
+          "item": 7425,
+          "skip": 34527,
+          "eventB": 1010,
+          "eventA": 880
+        },
+        "unused": [
+          "reroll",
+          "skipItem"
+        ]
+      },
+      "Random/holdout": {
+        "actions": {
+          "remove": 6722,
+          "spin": 44677,
+          "choose": 33505,
+          "reroll": 7370,
+          "item": 4242,
+          "skip": 11172,
+          "eventA": 946,
+          "eventB": 464,
+          "skipItem": 1426
+        },
+        "unused": []
+      },
+      "Random/train": {
+        "actions": {
+          "remove": 6695,
+          "spin": 44383,
+          "choose": 33271,
+          "skip": 11112,
+          "skipItem": 1404,
+          "eventA": 884,
+          "item": 4222,
+          "reroll": 7257,
+          "eventB": 499
+        },
+        "unused": []
+      },
+      "Synergy/holdout": {
+        "actions": {
+          "spin": 50535,
+          "choose": 26577,
+          "remove": 2650,
+          "item": 6503,
+          "reroll": 10438,
+          "skip": 23958,
+          "eventA": 1568,
+          "eventB": 93
+        },
+        "unused": [
+          "skipItem"
+        ]
+      },
+      "Synergy/train": {
+        "actions": {
+          "spin": 50882,
+          "choose": 26938,
+          "remove": 2794,
+          "item": 6553,
+          "reroll": 10429,
+          "skip": 23944,
+          "eventA": 1528,
+          "eventB": 106
+        },
+        "unused": [
+          "skipItem"
+        ]
+      },
+      "Value/holdout": {
+        "actions": {
+          "remove": 6809,
+          "spin": 53445,
+          "choose": 29010,
+          "item": 6909,
+          "reroll": 10903,
+          "skip": 24435,
+          "eventA": 1649,
+          "eventB": 106
+        },
+        "unused": [
+          "skipItem"
+        ]
+      },
+      "Value/train": {
+        "actions": {
+          "remove": 6872,
+          "spin": 53376,
+          "choose": 29107,
+          "item": 6901,
+          "reroll": 10759,
+          "skip": 24269,
+          "eventA": 1672,
+          "eventB": 113
+        },
+        "unused": [
+          "skipItem"
+        ]
+      }
+    }
+  },
+  "incomeSpot": [
+    {
+      "bot": "Greedy",
+      "seed": "F4-FULL-v1/Greedy/holdout/0000",
+      "contribSum": 3522,
+      "spinTotal": 3522,
+      "match": true,
+      "nSpins": 54
+    },
+    {
+      "bot": "Random",
+      "seed": "F4-FULL-v1/Random/holdout/0000",
+      "contribSum": 2620,
+      "spinTotal": 2620,
+      "match": true,
+      "nSpins": 47
+    },
+    {
+      "bot": "Synergy",
+      "seed": "F4-FULL-v1/Synergy/holdout/0000",
+      "contribSum": 3299,
+      "spinTotal": 3299,
+      "match": true,
+      "nSpins": 54
+    },
+    {
+      "bot": "Value",
+      "seed": "F4-FULL-v1/Value/holdout/0000",
+      "contribSum": 2548,
+      "spinTotal": 2548,
+      "match": true,
+      "nSpins": 47
+    }
+  ],
+  "incomeAll8000": {
+    "contributionSumEqualsSpinIncome": true,
+    "perSpinBySourceEqualsIncome": true,
+    "fails": 0
+  },
+  "replays": [
+    {
+      "reason": "index-0+file-first",
+      "file": "full-sim-batch-v3-greedy-holdout-0.jsonl",
+      "seed": "F4-FULL-v1/Greedy/holdout/0000",
+      "bot": "Greedy",
+      "split": "holdout",
+      "index": 0,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 124,
+      "modelCommands": 1469,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "dfc1517aaffacca36c68ed23062a865c9bcf1c5eb8eee9f8ce82d117c2f7f18f",
+      "recordedHash": "dfc1517aaffacca36c68ed23062a865c9bcf1c5eb8eee9f8ce82d117c2f7f18f",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 3522,
+      "spinTotal": 3522,
+      "ms": 168,
+      "fail": null
+    },
+    {
+      "reason": "extra-index-1",
+      "file": "full-sim-batch-v3-greedy-holdout-0.jsonl",
+      "seed": "F4-FULL-v1/Greedy/holdout/0001",
+      "bot": "Greedy",
+      "split": "holdout",
+      "index": 1,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 135,
+      "modelCommands": 1325,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "d07b9bfd32dfe15e5efe81be0c0e7c21dca7bc2f401cc4c42f23633a5970549d",
+      "recordedHash": "d07b9bfd32dfe15e5efe81be0c0e7c21dca7bc2f401cc4c42f23633a5970549d",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 4660,
+      "spinTotal": 4660,
+      "ms": 173,
+      "fail": null
+    },
+    {
+      "reason": "file-first",
+      "file": "full-sim-batch-v3-greedy-holdout-500.jsonl",
+      "seed": "F4-FULL-v1/Greedy/holdout/0500",
+      "bot": "Greedy",
+      "split": "holdout",
+      "index": 500,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 124,
+      "modelCommands": 1286,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "99d43cf6eb014cb20683fae0b01c136dbdab8e461524acaaeab42c2ab1b5ec56",
+      "recordedHash": "99d43cf6eb014cb20683fae0b01c136dbdab8e461524acaaeab42c2ab1b5ec56",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 3742,
+      "spinTotal": 3742,
+      "ms": 141,
+      "fail": null
+    },
+    {
+      "reason": "index-0+file-first",
+      "file": "full-sim-batch-v3-greedy-train-0.jsonl",
+      "seed": "F4-FULL-v1/Greedy/train/0000",
+      "bot": "Greedy",
+      "split": "train",
+      "index": 0,
+      "recordedOutcome": "WON",
+      "recordedWon": true,
+      "actions": 151,
+      "modelCommands": 1479,
+      "replayOk": true,
+      "replayPhase": "WON",
+      "replayHash": "4ad5476a4f296e4e34e4f6a3662f4875fa36724208ea927853e8838d5ad1acc3",
+      "recordedHash": "4ad5476a4f296e4e34e4f6a3662f4875fa36724208ea927853e8838d5ad1acc3",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 9971,
+      "spinTotal": 9971,
+      "ms": 216,
+      "fail": null
+    },
+    {
+      "reason": "extra-index-1",
+      "file": "full-sim-batch-v3-greedy-train-0.jsonl",
+      "seed": "F4-FULL-v1/Greedy/train/0001",
+      "bot": "Greedy",
+      "split": "train",
+      "index": 1,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 118,
+      "modelCommands": 1137,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "64ade7c4e723482cacc0ded0b3b214e967008eb1b23c2e63517b4c3e1feea6bb",
+      "recordedHash": "64ade7c4e723482cacc0ded0b3b214e967008eb1b23c2e63517b4c3e1feea6bb",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 3213,
+      "spinTotal": 3213,
+      "ms": 126,
+      "fail": null
+    },
+    {
+      "reason": "file-first",
+      "file": "full-sim-batch-v3-greedy-train-500.jsonl",
+      "seed": "F4-FULL-v1/Greedy/train/0500",
+      "bot": "Greedy",
+      "split": "train",
+      "index": 500,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 125,
+      "modelCommands": 1276,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "74c95b6ac0c47dae775fad2f56fba96f1741e41469027c058394ae553a5ee519",
+      "recordedHash": "74c95b6ac0c47dae775fad2f56fba96f1741e41469027c058394ae553a5ee519",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 3774,
+      "spinTotal": 3774,
+      "ms": 141,
+      "fail": null
+    },
+    {
+      "reason": "index-0+file-first",
+      "file": "full-sim-batch-v3-random-holdout-0.jsonl",
+      "seed": "F4-FULL-v1/Random/holdout/0000",
+      "bot": "Random",
+      "split": "holdout",
+      "index": 0,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 117,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "d76ae7fb04e71d62d2bb21ecf746c9b36be31b97187ed9e847d7574c39ebd545",
+      "recordedHash": "d76ae7fb04e71d62d2bb21ecf746c9b36be31b97187ed9e847d7574c39ebd545",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 2620,
+      "spinTotal": 2620,
+      "ms": 124,
+      "fail": null
+    },
+    {
+      "reason": "extra-index-1",
+      "file": "full-sim-batch-v3-random-holdout-0.jsonl",
+      "seed": "F4-FULL-v1/Random/holdout/0001",
+      "bot": "Random",
+      "split": "holdout",
+      "index": 1,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 100,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "7fe1d9911f57bd279db1393617cd9c5127749083c232d2538b52547d93bcffd4",
+      "recordedHash": "7fe1d9911f57bd279db1393617cd9c5127749083c232d2538b52547d93bcffd4",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 1691,
+      "spinTotal": 1691,
+      "ms": 94,
+      "fail": null
+    },
+    {
+      "reason": "file-first",
+      "file": "full-sim-batch-v3-random-holdout-500.jsonl",
+      "seed": "F4-FULL-v1/Random/holdout/0500",
+      "bot": "Random",
+      "split": "holdout",
+      "index": 500,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 114,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "e2ec3a0e771cbdb7358caf257996f28b00580354363fd146b928996abc93a3da",
+      "recordedHash": "e2ec3a0e771cbdb7358caf257996f28b00580354363fd146b928996abc93a3da",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 2637,
+      "spinTotal": 2637,
+      "ms": 111,
+      "fail": null
+    },
+    {
+      "reason": "index-0+file-first",
+      "file": "full-sim-batch-v3-random-train-0.jsonl",
+      "seed": "F4-FULL-v1/Random/train/0000",
+      "bot": "Random",
+      "split": "train",
+      "index": 0,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 114,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "7842310233ff52db850bb5e7599bcbb87f5e3fce4b913dd75b2fa4441b9c7c9e",
+      "recordedHash": "7842310233ff52db850bb5e7599bcbb87f5e3fce4b913dd75b2fa4441b9c7c9e",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 2351,
+      "spinTotal": 2351,
+      "ms": 114,
+      "fail": null
+    },
+    {
+      "reason": "extra-index-1",
+      "file": "full-sim-batch-v3-random-train-0.jsonl",
+      "seed": "F4-FULL-v1/Random/train/0001",
+      "bot": "Random",
+      "split": "train",
+      "index": 1,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 82,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "b602b43a9ea7a315968080b305b35a58affed160f4f26c10d7ee3d0616ec75df",
+      "recordedHash": "b602b43a9ea7a315968080b305b35a58affed160f4f26c10d7ee3d0616ec75df",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 1166,
+      "spinTotal": 1166,
+      "ms": 63,
+      "fail": null
+    },
+    {
+      "reason": "file-first",
+      "file": "full-sim-batch-v3-random-train-500.jsonl",
+      "seed": "F4-FULL-v1/Random/train/0500",
+      "bot": "Random",
+      "split": "train",
+      "index": 500,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 118,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "9cfa88226955f53da5e739eafd40ec9b34269a4b2afde659dd61c99671c947fd",
+      "recordedHash": "9cfa88226955f53da5e739eafd40ec9b34269a4b2afde659dd61c99671c947fd",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 2295,
+      "spinTotal": 2295,
+      "ms": 116,
+      "fail": null
+    },
+    {
+      "reason": "index-0+file-first",
+      "file": "full-sim-batch-v3-synergy-holdout-0.jsonl",
+      "seed": "F4-FULL-v1/Synergy/holdout/0000",
+      "bot": "Synergy",
+      "split": "holdout",
+      "index": 0,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 130,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "299241744f725d574aa8c054fbe9baacc877804799dc58e7f49bf4b3c6617627",
+      "recordedHash": "299241744f725d574aa8c054fbe9baacc877804799dc58e7f49bf4b3c6617627",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 3299,
+      "spinTotal": 3299,
+      "ms": 131,
+      "fail": null
+    },
+    {
+      "reason": "extra-index-1",
+      "file": "full-sim-batch-v3-synergy-holdout-0.jsonl",
+      "seed": "F4-FULL-v1/Synergy/holdout/0001",
+      "bot": "Synergy",
+      "split": "holdout",
+      "index": 1,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 112,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "878526a9068c570bcad19c9593e17c80dacbcd19a27a1deeb52d09fb78432ad6",
+      "recordedHash": "878526a9068c570bcad19c9593e17c80dacbcd19a27a1deeb52d09fb78432ad6",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 2452,
+      "spinTotal": 2452,
+      "ms": 99,
+      "fail": null
+    },
+    {
+      "reason": "file-first",
+      "file": "full-sim-batch-v3-synergy-holdout-500.jsonl",
+      "seed": "F4-FULL-v1/Synergy/holdout/0500",
+      "bot": "Synergy",
+      "split": "holdout",
+      "index": 500,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 113,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "34a19d6b54bc3f9009d7f41fef9de265b299d2f48ae7ab5999d0a38b4bd247d9",
+      "recordedHash": "34a19d6b54bc3f9009d7f41fef9de265b299d2f48ae7ab5999d0a38b4bd247d9",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 2482,
+      "spinTotal": 2482,
+      "ms": 115,
+      "fail": null
+    },
+    {
+      "reason": "index-0+file-first",
+      "file": "full-sim-batch-v3-synergy-train-0.jsonl",
+      "seed": "F4-FULL-v1/Synergy/train/0000",
+      "bot": "Synergy",
+      "split": "train",
+      "index": 0,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 111,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "d067c9a837874a771b4fdd8c172cfa89267906e95785191b4424f7684033d3b4",
+      "recordedHash": "d067c9a837874a771b4fdd8c172cfa89267906e95785191b4424f7684033d3b4",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 2565,
+      "spinTotal": 2565,
+      "ms": 112,
+      "fail": null
+    },
+    {
+      "reason": "extra-index-1",
+      "file": "full-sim-batch-v3-synergy-train-0.jsonl",
+      "seed": "F4-FULL-v1/Synergy/train/0001",
+      "bot": "Synergy",
+      "split": "train",
+      "index": 1,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 111,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "52c20cf52cb65b74062df18c97732806c355e1d2573339da7b58337c99a82125",
+      "recordedHash": "52c20cf52cb65b74062df18c97732806c355e1d2573339da7b58337c99a82125",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 2446,
+      "spinTotal": 2446,
+      "ms": 99,
+      "fail": null
+    },
+    {
+      "reason": "file-first",
+      "file": "full-sim-batch-v3-synergy-train-500.jsonl",
+      "seed": "F4-FULL-v1/Synergy/train/0500",
+      "bot": "Synergy",
+      "split": "train",
+      "index": 500,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 113,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "3655b0a4678a140e104d8569a1a14faf05d8b90468fca05822f79894d69845ea",
+      "recordedHash": "3655b0a4678a140e104d8569a1a14faf05d8b90468fca05822f79894d69845ea",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 2307,
+      "spinTotal": 2307,
+      "ms": 124,
+      "fail": null
+    },
+    {
+      "reason": "index-0+file-first",
+      "file": "full-sim-batch-v3-value-holdout-0.jsonl",
+      "seed": "F4-FULL-v1/Value/holdout/0000",
+      "bot": "Value",
+      "split": "holdout",
+      "index": 0,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 119,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "e7724020ebd8b0bc5e7ba9a267720e96921aa6cf3cad704f6dd8f757fa16406b",
+      "recordedHash": "e7724020ebd8b0bc5e7ba9a267720e96921aa6cf3cad704f6dd8f757fa16406b",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 2548,
+      "spinTotal": 2548,
+      "ms": 118,
+      "fail": null
+    },
+    {
+      "reason": "extra-index-1",
+      "file": "full-sim-batch-v3-value-holdout-0.jsonl",
+      "seed": "F4-FULL-v1/Value/holdout/0001",
+      "bot": "Value",
+      "split": "holdout",
+      "index": 1,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 116,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "2790088b29c28aacfac6d036abb1dcf96ad35e3a75c529d7987d1a8878c9b340",
+      "recordedHash": "2790088b29c28aacfac6d036abb1dcf96ad35e3a75c529d7987d1a8878c9b340",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 2460,
+      "spinTotal": 2460,
+      "ms": 106,
+      "fail": null
+    },
+    {
+      "reason": "file-first",
+      "file": "full-sim-batch-v3-value-holdout-500.jsonl",
+      "seed": "F4-FULL-v1/Value/holdout/0500",
+      "bot": "Value",
+      "split": "holdout",
+      "index": 500,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 136,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "ae18fbc80d1fb9df26f302b0b35eb508f69151d54f45147a993cce5740bd8d13",
+      "recordedHash": "ae18fbc80d1fb9df26f302b0b35eb508f69151d54f45147a993cce5740bd8d13",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 3795,
+      "spinTotal": 3795,
+      "ms": 147,
+      "fail": null
+    },
+    {
+      "reason": "index-0+file-first",
+      "file": "full-sim-batch-v3-value-train-0.jsonl",
+      "seed": "F4-FULL-v1/Value/train/0000",
+      "bot": "Value",
+      "split": "train",
+      "index": 0,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 141,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "3928304543013f3df766a90fd4a05b21c2d192564cc51a5b2ff740473dfb047c",
+      "recordedHash": "3928304543013f3df766a90fd4a05b21c2d192564cc51a5b2ff740473dfb047c",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 3332,
+      "spinTotal": 3332,
+      "ms": 143,
+      "fail": null
+    },
+    {
+      "reason": "extra-index-1",
+      "file": "full-sim-batch-v3-value-train-0.jsonl",
+      "seed": "F4-FULL-v1/Value/train/0001",
+      "bot": "Value",
+      "split": "train",
+      "index": 1,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 131,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "c41356407ab5b4a397e86323cb9d62efe315abc8a49dc460cb5e77e35a68eeb2",
+      "recordedHash": "c41356407ab5b4a397e86323cb9d62efe315abc8a49dc460cb5e77e35a68eeb2",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 3246,
+      "spinTotal": 3246,
+      "ms": 135,
+      "fail": null
+    },
+    {
+      "reason": "file-first",
+      "file": "full-sim-batch-v3-value-train-500.jsonl",
+      "seed": "F4-FULL-v1/Value/train/0500",
+      "bot": "Value",
+      "split": "train",
+      "index": 500,
+      "recordedOutcome": "LOST",
+      "recordedWon": false,
+      "actions": 133,
+      "modelCommands": 0,
+      "replayOk": true,
+      "replayPhase": "LOST",
+      "replayHash": "074008733111d93513a022df105a6015ae5863c58c4b51f41db48a5536173799",
+      "recordedHash": "074008733111d93513a022df105a6015ae5863c58c4b51f41db48a5536173799",
+      "hashMatch": true,
+      "incomeMatch": true,
+      "contribSum": 3502,
+      "spinTotal": 3502,
+      "ms": 145,
+      "fail": null
+    }
+  ],
+  "historical": [
+    {
+      "name": "full-sim-batch-greedy-holdout-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-greedy-holdout-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-greedy-train-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-greedy-train-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-random-holdout-0.jsonl",
+      "bytes": 1514155,
+      "lines": 18,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-random-holdout-500.jsonl",
+      "bytes": 1524123,
+      "lines": 18,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-random-train-0.jsonl",
+      "bytes": 1514094,
+      "lines": 18,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-random-train-500.jsonl",
+      "bytes": 1580730,
+      "lines": 18,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-synergy-holdout-0.jsonl",
+      "bytes": 959311,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-synergy-holdout-500.jsonl",
+      "bytes": 861585,
+      "lines": 10,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-synergy-train-0.jsonl",
+      "bytes": 999813,
+      "lines": 12,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-synergy-train-500.jsonl",
+      "bytes": 949392,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-v2-greedy-holdout-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-v2-greedy-holdout-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-v2-greedy-train-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-v2-greedy-train-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-v2-random-holdout-0.jsonl",
+      "bytes": 1248029,
+      "lines": 15,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-v2-random-holdout-500.jsonl",
+      "bytes": 1307598,
+      "lines": 15,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-v2-random-train-0.jsonl",
+      "bytes": 1349342,
+      "lines": 16,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-v2-random-train-500.jsonl",
+      "bytes": 1324801,
+      "lines": 15,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-v2-synergy-holdout-0.jsonl",
+      "bytes": 880123,
+      "lines": 10,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-v2-synergy-holdout-500.jsonl",
+      "bytes": 861660,
+      "lines": 10,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-v2-synergy-train-0.jsonl",
+      "bytes": 924024,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-v2-synergy-train-500.jsonl",
+      "bytes": 851949,
+      "lines": 10,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-v2-value-holdout-0.jsonl",
+      "bytes": 1008153,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-v2-value-holdout-500.jsonl",
+      "bytes": 946329,
+      "lines": 10,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-v2-value-train-0.jsonl",
+      "bytes": 991409,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-v2-value-train-500.jsonl",
+      "bytes": 1016657,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-value-holdout-0.jsonl",
+      "bytes": 1100790,
+      "lines": 12,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-value-holdout-500.jsonl",
+      "bytes": 1128818,
+      "lines": 12,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-value-train-0.jsonl",
+      "bytes": 1184346,
+      "lines": 13,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    },
+    {
+      "name": "full-sim-batch-value-train-500.jsonl",
+      "bytes": 1209302,
+      "lines": 13,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed; not overwritten"
+    }
+  ],
+  "engineeringOracle": {
+    "v1": {
+      "passed": 7,
+      "total": 8,
+      "retainedFailure": "legal READY expected spin-only; live legal also includes remove. Oracle, not missing API.",
+      "sha": "cb15b22eb4a699be442e6481e4d7c53d4675c4534214dd200cd397cd14597e46"
+    },
+    "v2": {
+      "passed": 8,
+      "total": 8,
+      "sha": "26702163d0bf42eb139cf4a9afc6dd30874fe941b8104c8e015978e9f5c4d5d3"
+    },
+    "v3": {
+      "passed": 10,
+      "total": 11,
+      "retainedFailure": "oracle called s.rng.draw.next; streams are {state,consumed} and F.nextUint32. Not a live RNG leak.",
+      "sha": "dab8ebb368c5297ac1097389cd8114f4fc7b3e4dc8338f00b00457a985cd1fb6"
+    },
+    "v4": {
+      "passed": 10,
+      "total": 11,
+      "retainedFailure": "asserted effect.consumed>0 after one spin; first spin may not consume effect. Oracle over-constraint.",
+      "sha": "1912521f6d27283f0cf251d380bafb0ea19dd5add4b4a069474aef9398324f75"
+    },
+    "v5": {
+      "passed": 11,
+      "total": 11,
+      "sha": "75bb382128913187b8b44a3572173922a83217a5c7f850cb72ace73584174dfe"
+    },
+    "independentReRun": "this audit re-implemented checks; did not rubber-stamp v5"
+  },
+  "coverageLimits": [
+    "Chrome absent; UI not touched this round; Edge is browser gate if UI is later required.",
+    "Human play pending; bots cannot substitute GDD §13.4.",
+    "Art/audio deferred.",
+    "Formal Normal economy NOT APPROVED.",
+    "Historical v1/v2 jsonl retained incomplete; not overwritten.",
+    "full-sim-statistics.json / full-sim-gates.json were absent; aggregation not accepted.",
+    "Runner SHA at seed freeze differs from current runner (progress sidecar); play() seed formula still matches catalog."
+  ]
+}

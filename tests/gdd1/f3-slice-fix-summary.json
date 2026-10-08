@@ -1,0 +1,693 @@
+{
+  "pass": true,
+  "games": 8000,
+  "totalIncome": 34525911,
+  "commands": 1292678,
+  "spins": 542221,
+  "payments": 77770,
+  "coreCases": 14,
+  "allCases": 18,
+  "coverage": {
+    "allCommands": true,
+    "allBoards": true,
+    "allLedgers": true,
+    "allPayments": true,
+    "allFinalStatesAndHashes": true,
+    "physicalFileFirsts": [
+      "F3-SLICE-v1/Greedy/holdout/0000",
+      "F3-SLICE-v1/Greedy/holdout/0500",
+      "F3-SLICE-v1/Greedy/train/0000",
+      "F3-SLICE-v1/Greedy/train/0500",
+      "F3-SLICE-v1/Random/holdout/0000",
+      "F3-SLICE-v1/Random/train/0000",
+      "F3-SLICE-v1/Synergy/holdout/0000",
+      "F3-SLICE-v1/Synergy/train/0000",
+      "F3-SLICE-v1/Value/holdout/0000",
+      "F3-SLICE-v1/Value/train/0000"
+    ],
+    "representatives": [
+      {
+        "seed": "F3-SLICE-v1/Greedy/holdout/0000",
+        "outcome": "WON",
+        "eventA": [],
+        "finalHash": "26363e0181d11e7de7e4ace2123b088b3e7b6fa392b7ebd1f22039550e506595"
+      },
+      {
+        "seed": "F3-SLICE-v1/Greedy/holdout/0500",
+        "outcome": "WON",
+        "eventA": [],
+        "finalHash": "32dbdf9d2ee57635cfc265677f239d88d69c36214b4610edf1413d515e2e46c4"
+      },
+      {
+        "seed": "F3-SLICE-v1/Greedy/train/0000",
+        "outcome": "LOST",
+        "eventA": [
+          "event_brine_inspection"
+        ],
+        "finalHash": "3dc4ca06e93f1f2d5f0a0f612ebd4e2ca7c2c96975ab202a0bc2c12e143f3754"
+      },
+      {
+        "seed": "F3-SLICE-v1/Greedy/train/0500",
+        "outcome": "LOST",
+        "eventA": [],
+        "finalHash": "65b87795f7a1c9b09360258e6b62627247d8413dac16d40662725feac94f7ec9"
+      },
+      {
+        "seed": "F3-SLICE-v1/Random/holdout/0000",
+        "outcome": "LOST",
+        "eventA": [],
+        "finalHash": "80f88ea90379f7e7f8cae69efbf95b1fe14f65eb55cb04861c86dceaa8b61128"
+      },
+      {
+        "seed": "F3-SLICE-v1/Random/train/0000",
+        "outcome": "LOST",
+        "eventA": [
+          "event_brine_inspection"
+        ],
+        "finalHash": "ea4da234a90a1eed3c975c435ad89b90d932d835b198090208ce0135a34cf2b3"
+      },
+      {
+        "seed": "F3-SLICE-v1/Synergy/holdout/0000",
+        "outcome": "WON",
+        "eventA": [],
+        "finalHash": "d3dd3c0104436c7be0296eb21cac3db251331191211edfb145013e489a31b887"
+      },
+      {
+        "seed": "F3-SLICE-v1/Synergy/train/0000",
+        "outcome": "LOST",
+        "eventA": [
+          "event_brine_inspection"
+        ],
+        "finalHash": "fb791a3086fa668f10c8fbe3b9654f8eab4810fe543949ff0059617ed2e3a765"
+      },
+      {
+        "seed": "F3-SLICE-v1/Value/holdout/0000",
+        "outcome": "LOST",
+        "eventA": [
+          "event_brine_inspection"
+        ],
+        "finalHash": "97f2b5c183f6d893a9118e3199de17685777b6f9e41c0dee45e54dcb70fd19d3"
+      },
+      {
+        "seed": "F3-SLICE-v1/Value/train/0000",
+        "outcome": "LOST",
+        "eventA": [
+          "event_brine_inspection"
+        ],
+        "finalHash": "99c279f51633fde6e763de3f609b71138b5f61ea5cb6c4b45a45ab22a0b5ad29"
+      },
+      {
+        "seed": "F3-SLICE-v1/Greedy/holdout/0498",
+        "outcome": "LOST",
+        "eventA": [],
+        "finalHash": "59f11eab9220621dfe7eeb204f867d3e44e8866422dd4430f2f19d836376ce1f"
+      },
+      {
+        "seed": "F3-SLICE-v1/Greedy/holdout/0801",
+        "outcome": "WON",
+        "eventA": [],
+        "finalHash": "256775b4c594ec3f16a6332aa09e2470e7264637a135e2ee9edf6903498f7023"
+      },
+      {
+        "seed": "F3-SLICE-v1/Greedy/holdout/0052",
+        "outcome": "LOST",
+        "eventA": [],
+        "finalHash": "9497264cbb431bfb4e13c1beca7b0b233bdd39b2d542dc809461c4370faf6c4b"
+      },
+      {
+        "seed": "F3-SLICE-v1/Greedy/holdout/0001",
+        "outcome": "LOST",
+        "eventA": [],
+        "finalHash": "130e36f11cb1eb3e6da2c7723d313d980fdeb48df901bcfe12952d42f4a008bc"
+      },
+      {
+        "seed": "F3-SLICE-v1/Greedy/train/0544",
+        "outcome": "LOST",
+        "eventA": [],
+        "finalHash": "acb53e337440bdec07c008b97bf1bbefd9df139c1f8ded34e9f399c1048f88e6"
+      },
+      {
+        "seed": "F3-SLICE-v1/Greedy/train/0999",
+        "outcome": "WON",
+        "eventA": [],
+        "finalHash": "a3bd3e16d05a91a93f7e4d159b7680ad9a2fd7cd13c5f1fb20d6841d3b54b1a6"
+      },
+      {
+        "seed": "F3-SLICE-v1/Greedy/train/0804",
+        "outcome": "WON",
+        "eventA": [
+          "event_brine_inspection"
+        ],
+        "finalHash": "a0c5685173e6330cfc89bad464bbb31421bb597444b782d2d6b8e8951bed9fdb"
+      },
+      {
+        "seed": "F3-SLICE-v1/Greedy/train/0553",
+        "outcome": "LOST",
+        "eventA": [],
+        "finalHash": "f83c21849d54a9f7a50fcb834038c02464ac380c254f44eb5937f371346eee52"
+      },
+      {
+        "seed": "F3-SLICE-v1/Greedy/train/0001",
+        "outcome": "WON",
+        "eventA": [],
+        "finalHash": "db44434848192b1e012a3d9102647d901c9d32af7aa218600bb6822cb3575e48"
+      },
+      {
+        "seed": "F3-SLICE-v1/Random/holdout/0382",
+        "outcome": "LOST",
+        "eventA": [],
+        "finalHash": "4c721aa1c09b29e75b1f8179e83a3dbc296d7207801b58da1fde1712eb33c6bc"
+      },
+      {
+        "seed": "F3-SLICE-v1/Random/holdout/0077",
+        "outcome": "WON",
+        "eventA": [
+          "event_brine_inspection"
+        ],
+        "finalHash": "9b7cf14ba4aa86538afc7a7b93b2e8daad4f5bc84d4eda8f88f98e366397ae6e"
+      },
+      {
+        "seed": "F3-SLICE-v1/Random/holdout/0948",
+        "outcome": "LOST",
+        "eventA": [],
+        "finalHash": "97c0f38c36aff45579a78056e65095d979c0f1f9f30d70c58a28fc3d786e45e7"
+      },
+      {
+        "seed": "F3-SLICE-v1/Random/holdout/0933",
+        "outcome": "LOST",
+        "eventA": [],
+        "finalHash": "11c1b4fde799ccb1b47358a07fbfffbb7b66e39bc9474c6200d0fddd07e86e94"
+      },
+      {
+        "seed": "F3-SLICE-v1/Random/train/0334",
+        "outcome": "LOST",
+        "eventA": [
+          "event_brine_inspection"
+        ],
+        "finalHash": "8df444760b9c2eee6c2651ffcbc32ad8f9e1e54f00b540b59ba31f770d801e34"
+      },
+      {
+        "seed": "F3-SLICE-v1/Random/train/0395",
+        "outcome": "WON",
+        "eventA": [
+          "event_copper_queue"
+        ],
+        "finalHash": "4b2ae8ff66ad19b582f85d04cc608b12fdec7dda1a9cf4679a6e870434a2e599"
+      },
+      {
+        "seed": "F3-SLICE-v1/Random/train/0791",
+        "outcome": "LOST",
+        "eventA": [
+          "event_brine_inspection"
+        ],
+        "finalHash": "9396fb5dfab505c8eb9e91b16e83babd3738fb69ac1282e9105571dbd7d827d2"
+      },
+      {
+        "seed": "F3-SLICE-v1/Random/train/0059",
+        "outcome": "LOST",
+        "eventA": [],
+        "finalHash": "1ec00214c46a5ddacede3c2b04ea06bfa634f4bb3629b28fcf1967c1b67fa10e"
+      },
+      {
+        "seed": "F3-SLICE-v1/Synergy/holdout/0465",
+        "outcome": "LOST",
+        "eventA": [
+          "event_brine_inspection"
+        ],
+        "finalHash": "751ce33953281890a88ba687b03a916f1b14c004839e12118b7ef8e7320aa682"
+      },
+      {
+        "seed": "F3-SLICE-v1/Synergy/holdout/0872",
+        "outcome": "WON",
+        "eventA": [
+          "event_fog_shift"
+        ],
+        "finalHash": "71b6a0529e5c0cca455b0b1114e69ff414195c2725496d53b4313ae99f53bac1"
+      },
+      {
+        "seed": "F3-SLICE-v1/Synergy/holdout/0166",
+        "outcome": "WON",
+        "eventA": [
+          "event_fog_shift"
+        ],
+        "finalHash": "72ca497751ad248f35e7720519cf92a3dea68a995e918bed2721b6bec4ec845e"
+      },
+      {
+        "seed": "F3-SLICE-v1/Synergy/holdout/0458",
+        "outcome": "LOST",
+        "eventA": [],
+        "finalHash": "16de29231438c6aadacdbfb0196fba07e50815b2daded8eaf5fc5073802d65aa"
+      },
+      {
+        "seed": "F3-SLICE-v1/Synergy/holdout/0002",
+        "outcome": "LOST",
+        "eventA": [],
+        "finalHash": "34f788b8536072bbf64bda6146752bac11e2d804eeb2c83d2923cc2d576959a1"
+      },
+      {
+        "seed": "F3-SLICE-v1/Synergy/train/0805",
+        "outcome": "LOST",
+        "eventA": [
+          "event_brine_inspection"
+        ],
+        "finalHash": "2100b104e4ae3ca11c2f580dbfaf397562e7f2aff62ff9c8469acec4d9c35193"
+      },
+      {
+        "seed": "F3-SLICE-v1/Synergy/train/0968",
+        "outcome": "WON",
+        "eventA": [],
+        "finalHash": "92b3726b238593431a5dab879764fdf1b90612e98a5d801e8ccef8fd2d73cfe7"
+      },
+      {
+        "seed": "F3-SLICE-v1/Synergy/train/0078",
+        "outcome": "WON",
+        "eventA": [],
+        "finalHash": "6a560ae337c4cb53e1cbe86a085bc24760bb1c641e4bf3993b161dafbfa36864"
+      },
+      {
+        "seed": "F3-SLICE-v1/Synergy/train/0575",
+        "outcome": "LOST",
+        "eventA": [
+          "event_brine_inspection"
+        ],
+        "finalHash": "0341f212eec410c118f7fccab1d00b8f3cbfadd4291bb06e1aec4472fe6b06dd"
+      },
+      {
+        "seed": "F3-SLICE-v1/Synergy/train/0001",
+        "outcome": "WON",
+        "eventA": [
+          "event_fog_shift"
+        ],
+        "finalHash": "5383a0dfe5f6c7ab11546d44bde22230e19b10949e79295a75906aff0f8ef446"
+      },
+      {
+        "seed": "F3-SLICE-v1/Value/holdout/0607",
+        "outcome": "LOST",
+        "eventA": [
+          "event_brine_inspection"
+        ],
+        "finalHash": "0ea7ddf8f0e3f0f73bf264fa99d87dd3751afce064f409bc138cce4c4294f906"
+      },
+      {
+        "seed": "F3-SLICE-v1/Value/holdout/0104",
+        "outcome": "WON",
+        "eventA": [],
+        "finalHash": "8558ff82d85e3ac35c7f5b29ec1ad505ab74a6bf9136065e4880b31cd7f83c6d"
+      },
+      {
+        "seed": "F3-SLICE-v1/Value/holdout/0896",
+        "outcome": "LOST",
+        "eventA": [
+          "event_fog_shift"
+        ],
+        "finalHash": "9d785a48e811faf39297d4713286597aad9a5eceb716696ab229d8d767c8ce42"
+      },
+      {
+        "seed": "F3-SLICE-v1/Value/holdout/0002",
+        "outcome": "LOST",
+        "eventA": [
+          "event_fog_shift"
+        ],
+        "finalHash": "5426cf9264e999a00640da4ad300d9e8cb983eb54b4c503c7fbd14c8eb11f64a"
+      },
+      {
+        "seed": "F3-SLICE-v1/Value/holdout/0007",
+        "outcome": "WON",
+        "eventA": [],
+        "finalHash": "39daae184ee4909741dc24083c5b13c06a8aa3339c2f0f5ab2551d9adb3d2339"
+      },
+      {
+        "seed": "F3-SLICE-v1/Value/train/0145",
+        "outcome": "LOST",
+        "eventA": [
+          "event_brine_inspection"
+        ],
+        "finalHash": "e5d9ea2195e65561c85d18d924b154cef4ec53ebb350a101722c1b7f6fe1dc88"
+      },
+      {
+        "seed": "F3-SLICE-v1/Value/train/0487",
+        "outcome": "WON",
+        "eventA": [
+          "event_fog_shift"
+        ],
+        "finalHash": "55ee90c6adf856e2b2ce9c24919862c2abbfe5de964af70f91bc182517142f8c"
+      },
+      {
+        "seed": "F3-SLICE-v1/Value/train/0597",
+        "outcome": "LOST",
+        "eventA": [
+          "event_fog_shift",
+          "event_brine_inspection"
+        ],
+        "finalHash": "c2456dfa129babb9d62073a81893349965fa1ea07d5dd264c3a1dcbecd78513d"
+      },
+      {
+        "seed": "F3-SLICE-v1/Value/train/0088",
+        "outcome": "LOST",
+        "eventA": [
+          "event_fog_shift"
+        ],
+        "finalHash": "45913b96bbb5dffdc6941d5bd85ac161e79494dc3505f2ad6db8f648faf51563"
+      },
+      {
+        "seed": "F3-SLICE-v1/Value/train/0001",
+        "outcome": "WON",
+        "eventA": [
+          "event_fog_shift"
+        ],
+        "finalHash": "28e3a1db1880e2629e0d059f997db047040d7fd5942ddb5a881275735f02b85a"
+      }
+    ],
+    "originalReplayHistory": 8
+  },
+  "groups": {
+    "Greedy/holdout": {
+      "wins": 790,
+      "total": 4911351,
+      "legacyEverFormed": 937,
+      "strictEverFormed": 836,
+      "legacyBeforeStage4": 484,
+      "strictBeforeStage4": 384,
+      "legacyHistoricalMixedWins": 290,
+      "incomeMixedWins": 647,
+      "sourceChanges": [
+        {
+          "id": "tide_prism",
+          "before": 1884576,
+          "after": 1872396,
+          "delta": -12180
+        },
+        {
+          "id": "crystal_index",
+          "before": 693203,
+          "after": 705173,
+          "delta": 11970
+        },
+        {
+          "id": "reserve_facet",
+          "before": 72538,
+          "after": 72748,
+          "delta": 210
+        }
+      ],
+      "strata": {
+        "events": 41266,
+        "uniqueGameStratumMemberships": 37242,
+        "repeatedStrata": 425
+      },
+      "events": {
+        "A": 118,
+        "B": 693
+      }
+    },
+    "Greedy/train": {
+      "wins": 810,
+      "total": 4924038,
+      "legacyEverFormed": 945,
+      "strictEverFormed": 857,
+      "legacyBeforeStage4": 504,
+      "strictBeforeStage4": 369,
+      "legacyHistoricalMixedWins": 289,
+      "incomeMixedWins": 666,
+      "sourceChanges": [
+        {
+          "id": "tide_prism",
+          "before": 1892952,
+          "after": 1880984,
+          "delta": -11968
+        },
+        {
+          "id": "crystal_index",
+          "before": 694487,
+          "after": 706199,
+          "delta": 11712
+        },
+        {
+          "id": "reserve_facet",
+          "before": 78602,
+          "after": 78858,
+          "delta": 256
+        }
+      ],
+      "strata": {
+        "events": 41786,
+        "uniqueGameStratumMemberships": 37531,
+        "repeatedStrata": 433
+      },
+      "events": {
+        "A": 114,
+        "B": 650
+      }
+    },
+    "Random/holdout": {
+      "wins": 1,
+      "total": 3164630,
+      "legacyEverFormed": 972,
+      "strictEverFormed": 907,
+      "legacyBeforeStage4": 589,
+      "strictBeforeStage4": 360,
+      "legacyHistoricalMixedWins": 1,
+      "incomeMixedWins": 1,
+      "sourceChanges": [
+        {
+          "id": "tide_prism",
+          "before": 830444,
+          "after": 825358,
+          "delta": -5086
+        },
+        {
+          "id": "crystal_index",
+          "before": 186092,
+          "after": 190988,
+          "delta": 4896
+        },
+        {
+          "id": "reserve_facet",
+          "before": 49318,
+          "after": 49508,
+          "delta": 190
+        }
+      ],
+      "strata": {
+        "events": 53130,
+        "uniqueGameStratumMemberships": 49196,
+        "repeatedStrata": 862
+      },
+      "events": {
+        "A": 677,
+        "B": 476
+      }
+    },
+    "Random/train": {
+      "wins": 3,
+      "total": 3133298,
+      "legacyEverFormed": 970,
+      "strictEverFormed": 904,
+      "legacyBeforeStage4": 594,
+      "strictBeforeStage4": 335,
+      "legacyHistoricalMixedWins": 2,
+      "incomeMixedWins": 3,
+      "sourceChanges": [
+        {
+          "id": "tide_prism",
+          "before": 831893,
+          "after": 826695,
+          "delta": -5198
+        },
+        {
+          "id": "crystal_index",
+          "before": 189974,
+          "after": 194978,
+          "delta": 5004
+        },
+        {
+          "id": "reserve_facet",
+          "before": 48806,
+          "after": 49000,
+          "delta": 194
+        }
+      ],
+      "strata": {
+        "events": 52827,
+        "uniqueGameStratumMemberships": 48941,
+        "repeatedStrata": 856
+      },
+      "events": {
+        "A": 697,
+        "B": 488
+      }
+    },
+    "Synergy/holdout": {
+      "wins": 564,
+      "total": 4775208,
+      "legacyEverFormed": 980,
+      "strictEverFormed": 879,
+      "legacyBeforeStage4": 873,
+      "strictBeforeStage4": 764,
+      "legacyHistoricalMixedWins": 141,
+      "incomeMixedWins": 356,
+      "sourceChanges": [
+        {
+          "id": "tide_prism",
+          "before": 1376986,
+          "after": 1376148,
+          "delta": -838
+        },
+        {
+          "id": "reserve_facet",
+          "before": 166576,
+          "after": 166622,
+          "delta": 46
+        },
+        {
+          "id": "crystal_index",
+          "before": 1126916,
+          "after": 1127708,
+          "delta": 792
+        }
+      ],
+      "strata": {
+        "events": 44080,
+        "uniqueGameStratumMemberships": 35181,
+        "repeatedStrata": 420
+      },
+      "events": {
+        "A": 297,
+        "B": 164
+      }
+    },
+    "Synergy/train": {
+      "wins": 546,
+      "total": 4754139,
+      "legacyEverFormed": 983,
+      "strictEverFormed": 879,
+      "legacyBeforeStage4": 856,
+      "strictBeforeStage4": 761,
+      "legacyHistoricalMixedWins": 119,
+      "incomeMixedWins": 321,
+      "sourceChanges": [
+        {
+          "id": "tide_prism",
+          "before": 1380577,
+          "after": 1379777,
+          "delta": -800
+        },
+        {
+          "id": "reserve_facet",
+          "before": 164920,
+          "after": 164952,
+          "delta": 32
+        },
+        {
+          "id": "crystal_index",
+          "before": 1091283,
+          "after": 1092051,
+          "delta": 768
+        }
+      ],
+      "strata": {
+        "events": 44126,
+        "uniqueGameStratumMemberships": 35251,
+        "repeatedStrata": 385
+      },
+      "events": {
+        "A": 294,
+        "B": 189
+      }
+    },
+    "Value/holdout": {
+      "wins": 173,
+      "total": 4414114,
+      "legacyEverFormed": 999,
+      "strictEverFormed": 998,
+      "legacyBeforeStage4": 830,
+      "strictBeforeStage4": 821,
+      "legacyHistoricalMixedWins": 0,
+      "incomeMixedWins": 159,
+      "sourceChanges": [
+        {
+          "id": "tide_prism",
+          "before": 975790,
+          "after": 975782,
+          "delta": -8
+        },
+        {
+          "id": "reserve_facet",
+          "before": 19068,
+          "after": 19076,
+          "delta": 8
+        }
+      ],
+      "strata": {
+        "events": 44734,
+        "uniqueGameStratumMemberships": 33619,
+        "repeatedStrata": 233
+      },
+      "events": {
+        "A": 1122,
+        "B": 157
+      }
+    },
+    "Value/train": {
+      "wins": 195,
+      "total": 4449133,
+      "legacyEverFormed": 999,
+      "strictEverFormed": 999,
+      "legacyBeforeStage4": 835,
+      "strictBeforeStage4": 828,
+      "legacyHistoricalMixedWins": 3,
+      "incomeMixedWins": 184,
+      "sourceChanges": [
+        {
+          "id": "tide_prism",
+          "before": 991153,
+          "after": 991131,
+          "delta": -22
+        },
+        {
+          "id": "crystal_index",
+          "before": 1085,
+          "after": 1097,
+          "delta": 12
+        },
+        {
+          "id": "reserve_facet",
+          "before": 14142,
+          "after": 14152,
+          "delta": 10
+        }
+      ],
+      "strata": {
+        "events": 44814,
+        "uniqueGameStratumMemberships": 33559,
+        "repeatedStrata": 212
+      },
+      "events": {
+        "A": 1126,
+        "B": 159
+      }
+    }
+  },
+  "protection": {
+    "pass": true,
+    "baselineExisting": 586,
+    "unchanged": 585,
+    "changes": [],
+    "added": [],
+    "runtimeChanges": [
+      {
+        "path": ".pi/loops.json",
+        "before": "6cdb2b672736f5aafb018728cb42cc8df582bd71b5bbefa869cf3deb63295806",
+        "after": "c4aa74c78cc7b418b2e5b5b44d4f7f0f83f7b502df9c0a521573e1e441814075"
+      }
+    ],
+    "runtimeException": ".pi/loops.json and .pi/loops subtree only, parent scheduled runtime, outside fix ownership; never restored",
+    "historical245": 245,
+    "manifests": {
+      "f3-slice-sim-deliverables.json": 48,
+      "f3-slice-audit-freeze.json": 10
+    },
+    "auditProtected": 574,
+    "productionChanges": 0
+  }
+}

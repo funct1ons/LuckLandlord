@@ -1,0 +1,18 @@
+﻿PASS brine_strip threshold is second appearance
+PASS condense_coil one target and stable UID conversion
+PASS tide_prism direct versus converted reward
+PASS deep_still consumes one mist and creates next-round pool item
+PASS crystal_index counts distinct crystal types only
+PASS pearl_separator excludes product and takes one target
+PASS reserve_facet real command lifecycle reaches stage-end release
+PASS reserve_facet pressure cap is independent per instance
+PASS save restore preserves reserve counter and phase progression
+PASS multiple listeners do not duplicate one consume event
+PASS schema rejects illegal eventTargetType value
+PASS no ID-hardcoded resolver and no weak assertions
+PASS dual reserve sources each receive only own consume
+PASS triple reserve independent releases
+PASS same fuel competition rewards only stable winner
+PASS dead target snapshot still carries source and target UIDs
+PASS multi-round reserve save restore reaches release
+DISTILLATION AUDIT 8: 17/17 passed

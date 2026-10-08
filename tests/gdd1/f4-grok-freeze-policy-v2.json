@@ -1,0 +1,900 @@
+{
+  "status": "POST-POLICY-V2 SNAPSHOT / DOES NOT SUPERSEDE freeze-v4 OR agg-freeze / NOT FORMAL NORMAL ACCEPTANCE",
+  "prefix": "f4-grok-freeze-policy-v2",
+  "warning": "Does not overwrite freeze-v4, agg-freeze, v1 jsonl, or production. Economy NOT APPROVED. Phase B needs explicit auth. Human play pending.",
+  "gddSha256": "e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07",
+  "freezeV4": {
+    "path": "tests/gdd1/f4-grok-freeze-v4.json",
+    "bytes": 94204,
+    "sha256": "cadba0fa63b151cb1b3a7933697cbeb295e9154ec4adb5bae595ffa7e8c09953"
+  },
+  "aggFreeze": {
+    "path": "tests/gdd1/f4-grok-agg-freeze-v1.json",
+    "bytes": 2525,
+    "sha256": "af08f789b4b453e45a588f247a70a623f6c15ca62928f3995c2b65d23c5581a2"
+  },
+  "production": {
+    "resolver": {
+      "path": "js/gdd1/resolver.js",
+      "bytes": 27996,
+      "sha256": "e86d51fb4c20d235312b263146f18d2c4cd69c13453846fe0daf9b07a0aaf88b"
+    },
+    "effects": {
+      "path": "js/gdd1/full-effects.js",
+      "bytes": 37993,
+      "sha256": "f65bc06b4c38fb35db14cc21f6ed4c63a42efbb06956f71078974990c5d8de55"
+    }
+  },
+  "report": {
+    "path": "docs/GDD1_FULL_SIM_POLICY_V2.md",
+    "bytes": 33192,
+    "sha256": "e31677737726fa17a5396f3f04590fe6bf4788b372dfbf8e7932ee411264a4e4"
+  },
+  "audit": {
+    "path": "docs/GDD1_FULL_SIM_POLICY_V2_AUDIT.md",
+    "bytes": 18283,
+    "sha256": "988510d0a9e81b6594c643c0409da88ef8f10ba43eab53b5f0486b1d49598a3d"
+  },
+  "selfExcluded": true,
+  "entryCount": 143,
+  "entries": [
+    {
+      "path": "docs/GDD1_FULL_SIM_POLICY_V2.md",
+      "bytes": 33192,
+      "sha256": "e31677737726fa17a5396f3f04590fe6bf4788b372dfbf8e7932ee411264a4e4",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "docs/GDD1_FULL_SIM_POLICY_V2_AUDIT.md",
+      "bytes": 18283,
+      "sha256": "988510d0a9e81b6594c643c0409da88ef8f10ba43eab53b5f0486b1d49598a3d",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/f4-grok-audit-policy-v2.json",
+      "bytes": 81263,
+      "sha256": "e96d3c7c1ddece34061c5ddb3da553d26c49aaf5ae15b1e179caf5dc9d267f16",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/f4-grok-freeze-policy-v2.js",
+      "bytes": 5448,
+      "sha256": "aed7eff8e0f5961dfff2630c743fd1de1bbd958047b53713ae9a5bc2224516ae",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-engine-policy-v2.js",
+      "bytes": 6006,
+      "sha256": "ae021bf8e4b4e02104cc3a9d141a163ce798270def459b8870247a7d70abd915",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-gates-policy-v2.js",
+      "bytes": 6278,
+      "sha256": "6f39d1495712d13f7db89aff0177176182f978f893b099ecbacba55e95f870c6",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-integrity-policy-v2.js",
+      "bytes": 9119,
+      "sha256": "9ea112b92a91d3aa5376fae0a1da9c4f6c012278b418396d9d2cb23cd315d666",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-greedy-holdout-0-index.json",
+      "bytes": 191321,
+      "sha256": "8cf6c8c82ffc2c1ce810184572d8029b5d069814a84c6fd8020e94551ee9f75c",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-greedy-holdout-0-progress.json",
+      "bytes": 108,
+      "sha256": "676e95542502cf36c9ae641ab06e3dc348aa9ba442796362074e8741e1e5abbe",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-greedy-holdout-0.jsonl",
+      "bytes": 60128594,
+      "sha256": "bcf0f6e6ceb41686730fb7d37d6122717c1705d84b7183df6c6dc165770d5964",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-greedy-holdout-500-index.json",
+      "bytes": 191421,
+      "sha256": "081e4e6404510617c3457042e53b3fbe2e36e7c002be37e9a8a8b846f91a8099",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-greedy-holdout-500-progress.json",
+      "bytes": 110,
+      "sha256": "30510e60ff8e0358fd25fb1997657cf105127d6fd0b513aaeb0cbdf06ab33735",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-greedy-holdout-500.jsonl",
+      "bytes": 60290962,
+      "sha256": "9a1d122d3a008a7836778183aec975efada9285019a96814d63bb7e8ddde923f",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-greedy-train-0-index.json",
+      "bytes": 189307,
+      "sha256": "36bed912367d51bd9033b19b154bbf2f188d69f1085b28cb8f8d028b962e3548",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-greedy-train-0-progress.json",
+      "bytes": 106,
+      "sha256": "7c100b07c553f33a1d6ad4f581f9d76109b273f1e63d7f349eb72a7c71e57239",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-greedy-train-0.jsonl",
+      "bytes": 60004315,
+      "sha256": "c9908078a893570622f558dd21fb907c0e0b87b8f2e623901d5c3b309d959085",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-greedy-train-500-index.json",
+      "bytes": 189418,
+      "sha256": "ad86a5c1b56f8492885eb6ac8fbd4c82ed268cc083a68e2a948713655aa92bdf",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-greedy-train-500-progress.json",
+      "bytes": 108,
+      "sha256": "91cc6094f23db3d2ba4d908eef26ef45c07f18dd266908c7ab20438c11a75661",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-greedy-train-500.jsonl",
+      "bytes": 60052712,
+      "sha256": "a56a7d3cab5cd0bb18049ee1bfa1f97e38f56f7bf8c1dae32614a577fab549ad",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-random-holdout-0-index.json",
+      "bytes": 190951,
+      "sha256": "8ae8bf6ddd62e8821b6f20b5f17107593129b4db2f819f45be3edc0123bea120",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-random-holdout-0-progress.json",
+      "bytes": 105,
+      "sha256": "79278279327a432a09b12880df29e34b40cd338aa09ba67a5cfcfb0855bfabc6",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-random-holdout-0.jsonl",
+      "bytes": 43342588,
+      "sha256": "e859ce3ae24b9f27072ee79dcc2e2a2f4c95544e056fc4286e482c365a87a175",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-random-holdout-500-index.json",
+      "bytes": 191048,
+      "sha256": "128508c480e27aead5148c9e4af819c91c6dfabf95784eca05b2d7f491becc3c",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-random-holdout-500-progress.json",
+      "bytes": 107,
+      "sha256": "f4988d8d8256189d6b1c27858320c521fa514eb1cacf816538e575deb91a52b1",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-random-holdout-500.jsonl",
+      "bytes": 43573589,
+      "sha256": "38c2e067a752c3cbf6381a8bd996c4d798499e48c13e27f652e87727063beff8",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-random-train-0-index.json",
+      "bytes": 188940,
+      "sha256": "b973c743fb148180b6836dc407ad012b48988e62c70d3b51edfffc4b159d4f44",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-random-train-0-progress.json",
+      "bytes": 103,
+      "sha256": "e6cf7e56f248303d90d694a349e697bf3916cbec1bec6eeef1a6b3872c053897",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-random-train-0.jsonl",
+      "bytes": 43278115,
+      "sha256": "9bcc6c2975151d5fe193b8db98f8a962283314fa4a28b8ca1c58323ff159d47e",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-random-train-500-index.json",
+      "bytes": 189048,
+      "sha256": "01ba0401cca6f1657bbfb38ba1a1503b8b1babb641cea051cefcf55f3542451a",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-random-train-500-progress.json",
+      "bytes": 105,
+      "sha256": "a451511349e3e69b24ea74dbfa67334d43a667d801e429af2ada09a3b2fd3f2f",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-random-train-500.jsonl",
+      "bytes": 42960538,
+      "sha256": "584dd9fa4ccd4e9a1da4e1963423f9ce3624f38566f4353ae999a098277e57a0",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-synergy-holdout-0-index.json",
+      "bytes": 192298,
+      "sha256": "66b2c4062d81c491f48f2da0036a388abd46538c720f05b9111adc8d73411ec5",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-synergy-holdout-0-progress.json",
+      "bytes": 109,
+      "sha256": "53817edf4bafb81e3e813486e10649c324efe689a8ddb98f737637f08cbcdd45",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-synergy-holdout-0.jsonl",
+      "bytes": 59891144,
+      "sha256": "36c35d8feeb96bd6bbf03aab271a557aa2912962500eb33a9366f1d13d9bd7ee",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-synergy-holdout-500-index.json",
+      "bytes": 192424,
+      "sha256": "75875e8a44dda31ae594b73d2c605bd0826f8d1baac574150a3524ac0eb9152c",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-synergy-holdout-500-progress.json",
+      "bytes": 111,
+      "sha256": "8ac9a0bc0d067cd8f867ef5400e6bd834a53baa0a51b99b64beabcceb3d22370",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-synergy-holdout-500.jsonl",
+      "bytes": 60047058,
+      "sha256": "4219579af1b1c5f446aad2b40ec4e24c7e481ff1ebdecf6ea6226bd2d990a1df",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-synergy-train-0-index.json",
+      "bytes": 190314,
+      "sha256": "8e28fbc66f94c19bf9192f73f2c985d09143db910bf8ce3499a8ed6d4325ebd0",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-synergy-train-0-progress.json",
+      "bytes": 107,
+      "sha256": "2e27db62d87c56aa0ba36d01cfcbfd404ffebef2ca49e0640eef8cb0fb50535d",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-synergy-train-0.jsonl",
+      "bytes": 60091441,
+      "sha256": "344b66807ad2a4b8a1c2a330961d5b9b4e6595a6fe48bba04e1be510886be9fe",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-synergy-train-500-index.json",
+      "bytes": 190430,
+      "sha256": "6496e7777d19f230cf365411d68226b50106f2b465b2134d77c7440c51065433",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-synergy-train-500-progress.json",
+      "bytes": 109,
+      "sha256": "fd9cff87f89e5c35cada400f90fe8acfb9c2311466792be2525b211dc236ba97",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-synergy-train-500.jsonl",
+      "bytes": 60218579,
+      "sha256": "332ec04e508dafa23ce4f0ba13e19698ca0c7024ec993d54c2f3c605907a6134",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-value-holdout-0-index.json",
+      "bytes": 190301,
+      "sha256": "dae5b6a289232c50a2320c43eafedd2fe665825f0e5c0fd95c0b485983f5ea43",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-value-holdout-0-progress.json",
+      "bytes": 105,
+      "sha256": "eb88b4efb5874c118a1f23193d5f378be99893ff5f030103c0615b5d8d70b4b6",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-value-holdout-0.jsonl",
+      "bytes": 61424389,
+      "sha256": "e146d258ba2976f26cc530689fca38c617e5f5fa6702dd53b6cd9c54c4b6e113",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-value-holdout-500-index.json",
+      "bytes": 190390,
+      "sha256": "71209f8439b1119692d370199fdac9dfcf44e84d9c786924a1293afe8159a400",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-value-holdout-500-progress.json",
+      "bytes": 109,
+      "sha256": "c67ac98bb984408190c65d59e5dbd4e553624551fa3c2bc7ab7bf9100e732775",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-value-holdout-500.jsonl",
+      "bytes": 61361086,
+      "sha256": "c944a49fb093ad180f3dfa5f65244468e88f883f37dc7955b7b82688532fb213",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-value-train-0-index.json",
+      "bytes": 188290,
+      "sha256": "81bfa9914a507a08b7800d71089ae49de251529faf9514f43883e3e600df0de0",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-value-train-0-progress.json",
+      "bytes": 105,
+      "sha256": "b8fcb3850c885f1236523614a2cfd8eb0124c48d02f0e7789b77356c2ce0a439",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-value-train-0.jsonl",
+      "bytes": 61393809,
+      "sha256": "b6789f0faaa0d999f04ed02d97ca5e79446323eb9ae8ebb4dca85697f9704ca0",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-value-train-500-index.json",
+      "bytes": 188398,
+      "sha256": "2460b935123c9cbc2cc0029ebafeb5838ab28ca8578c50d7cf753c3648173fd8",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-value-train-500-progress.json",
+      "bytes": 107,
+      "sha256": "70af7a7e48269658bd9595675345b21cf5ebbffdb910469bf75b24590f57b06e",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-value-train-500.jsonl",
+      "bytes": 61475072,
+      "sha256": "f88a53dc8fa322ed8993bb6f3e51f3dec9cee5e265f8698211fa4c78b4338b20",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-checks.js",
+      "bytes": 4874,
+      "sha256": "bc0fac97dc18eb3ea7ab6a970f6d067b90e5d31919d70437f13aff0c6c37ba36",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-checks.json",
+      "bytes": 2125,
+      "sha256": "4ddc6499071aa054b193ba90dd268fcc38fa56efd16eb465a1eeaee98f4525a1",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-gates.json",
+      "bytes": 967389,
+      "sha256": "c8405c7b6633594b1b22fdd096801cc51e14cc8ee0424771a96515aa0f857207",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-integrity.json",
+      "bytes": 24377,
+      "sha256": "8d7ff470d7dc504e0a2163f0b93a8926d8194a6c15df85c34f0d62d9f562220f",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-greedy-holdout-0.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-greedy-holdout-500.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-greedy-train-0.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-greedy-train-500.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-greedy-holdout-0.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-greedy-holdout-0.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-greedy-holdout-500.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-greedy-holdout-500.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-greedy-train-0.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-greedy-train-0.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-greedy-train-500.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-greedy-train-500.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-random-holdout-0.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-random-holdout-0.out.txt",
+      "bytes": 202,
+      "sha256": "7db7ae6dea5fdea234aaa9974d4796159531469f757f1cd33f8f2fb64010f68a",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-random-holdout-500.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-random-holdout-500.out.txt",
+      "bytes": 206,
+      "sha256": "3c2a6ea49d72638135d0b858b1884cb4424e3977e24e860f710e92ce44498d8f",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-random-train-0.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-random-train-0.out.txt",
+      "bytes": 198,
+      "sha256": "359dc5c762973da4ea628f5bee417ca41ae839cf2326e51184b504362c726149",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-random-train-500.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-random-train-500.out.txt",
+      "bytes": 202,
+      "sha256": "9ea25d11444e9e0fd70f40ff640a2b9d2a5c2c3cb8aae6cf76025b15a58be0bf",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-synergy-holdout-0.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-synergy-holdout-0.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-synergy-holdout-500.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-synergy-holdout-500.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-synergy-train-0.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-synergy-train-0.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-synergy-train-500.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-synergy-train-500.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-value-holdout-0.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-value-holdout-0.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-value-holdout-500.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-value-holdout-500.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-value-train-0.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-value-train-0.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-value-train-500.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-log-value-train-500.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-random-holdout-0-progress.json",
+      "bytes": 101,
+      "sha256": "a9615acf8ff26b75e5e12631481a08f2032ca34388bd7338910a9ba9b2186653",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-random-holdout-0.jsonl",
+      "bytes": 675616,
+      "sha256": "3f613e4afe1cb5e2cf9dff5bf5b5d44a95daa476a31428c582279034c2fb2759",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-random-holdout-500-progress.json",
+      "bytes": 103,
+      "sha256": "2cfc4978583bc42dd3e1da16ba1f0cf7997b72ece68f6a8a8994cbe3938df711",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-random-holdout-500.jsonl",
+      "bytes": 734725,
+      "sha256": "fdbb13c3eb98f57fab23322799567a41f1c8dad3b91a6d9e8e210a47cd9bbf4b",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-random-train-0-progress.json",
+      "bytes": 99,
+      "sha256": "8766258d3c8be59798e11300e5f6effa0591032e6e410c948238f46ce5fa5ab4",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-random-train-0.jsonl",
+      "bytes": 711473,
+      "sha256": "76b680a8018a3ed7f752327d326d815ab04040e96505bcce91b1a5a6c59a2ade",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-random-train-500-progress.json",
+      "bytes": 101,
+      "sha256": "e09b625d9b8b4f6edc630da324c4e27c03e2ba9aa92632618e7a5c71fe25bf12",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-random-train-500.jsonl",
+      "bytes": 734695,
+      "sha256": "5803de049fd898067105c361f6f4d64d80c131df93f27f127d93c09bc6f271c4",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-synergy-holdout-0.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-synergy-holdout-500.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-synergy-train-0.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-synergy-train-500.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-value-holdout-0.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-value-holdout-500.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-value-train-0.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-jobkill-launch1-value-train-500.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-launch.js",
+      "bytes": 1794,
+      "sha256": "9ba83f5ace6183395f14452a1827e45384f6022f96ef702d035ad50b5dc563a4",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-launch.json",
+      "bytes": 3501,
+      "sha256": "f7a0cd0511a33b43d9dd06255ee8616cc659c52b092ac94125dbe31f5a68115c",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-greedy-holdout-0-index.json",
+      "bytes": 38217,
+      "sha256": "26dffdc7e92239dfce9498f82e77f466b92f2b43c4a302b87b68d75cbb095386",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-greedy-holdout-0-progress.json",
+      "bytes": 107,
+      "sha256": "abd5a01c9e1d8c7c6ecd1b36a10d58b36ee64cb38af0a87934eba52a658fbe11",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-greedy-holdout-0.jsonl",
+      "bytes": 11965463,
+      "sha256": "3d942f0f4cca1dc1ae791fe56ab73c5abf7d4ad6190218d9a576ab33670e77b0",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-greedy-train-0-index.json",
+      "bytes": 37813,
+      "sha256": "fb805f93bcc7805d9b5d70196c50429c7682c8bb0d3293a33e27412254aae3c8",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-greedy-train-0-progress.json",
+      "bytes": 105,
+      "sha256": "1314c4d0df4be58e25ca98eb250ef39cc95f317f9d21b13304e3ed0b5cb6e309",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-greedy-train-0.jsonl",
+      "bytes": 12054996,
+      "sha256": "664699fa8e7b42a998ebf9c476bf534908b670875fa3a18f73999c6fc48aca16",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-random-holdout-0-index.json",
+      "bytes": 38137,
+      "sha256": "7a54cba61cc537ee236412f0cb715567e95e547baa5834d592b8a768cc17f8c9",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-random-holdout-0-progress.json",
+      "bytes": 104,
+      "sha256": "d56e94ea9b94de357e55e7b8125aec9d30f89e6792e21aa2f98c2736185fcf5b",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-random-holdout-0.jsonl",
+      "bytes": 8950018,
+      "sha256": "b03dc881c83245af773525f13dc10ed1365fba722307a36b534659a941a7183f",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-random-train-0-index.json",
+      "bytes": 37717,
+      "sha256": "6ce8f2aa274c45fef6e34d5289cc182c4d436aaadf270c3720e758a46d8c8708",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-random-train-0-progress.json",
+      "bytes": 102,
+      "sha256": "cd1bdba3de3bb7bc812853f66c3456206bee4e79b23118dfa5a2713a1065240d",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-random-train-0.jsonl",
+      "bytes": 8580829,
+      "sha256": "04713fb58e2e5ce866ea034a490924a31ed58dee22ea3243361058e886676027",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-summary.json",
+      "bytes": 6334,
+      "sha256": "5ff4f0001ff2d32a25f4ee56112fb314ea1733efd7789819331fa41e9c1dd0be",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-synergy-holdout-0-index.json",
+      "bytes": 38408,
+      "sha256": "a8b3ebdbf97ec1334407314645f3dc66bb4c8f0dba20895ad6633759cb7aec60",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-synergy-holdout-0-progress.json",
+      "bytes": 108,
+      "sha256": "9a34853422177f06f3c29d2f58173afedb747dccfdd39b8d5d37468aebc65b30",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-synergy-holdout-0.jsonl",
+      "bytes": 11898525,
+      "sha256": "71be1bc25fcef020bfa772ac3709bbb4afb6bffbc37da911ea51ee0d561a00e8",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-synergy-train-0-index.json",
+      "bytes": 38007,
+      "sha256": "1fcaed39bc092a8c4af0c1f5e38cfbd766437d57160f734d45bb2c4c21125655",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-synergy-train-0-progress.json",
+      "bytes": 104,
+      "sha256": "85c091e9ce213298876d5d0a8b5bc304fb7eda2f0894b390b270c331d9ae6121",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-synergy-train-0.jsonl",
+      "bytes": 12027322,
+      "sha256": "6a468fe24f0b40080e878da2418743a8d13ccb100edffa36d941e662945ef6a5",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-value-holdout-0-index.json",
+      "bytes": 38009,
+      "sha256": "f69e588397358b0ebeb3bba24b519905671f8d5b9b92d6dca510ce0dddb71065",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-value-holdout-0-progress.json",
+      "bytes": 106,
+      "sha256": "8e2295b8ec1d907867ebdaf1a379c4ed686aade970c3f2dc4de3495539704836",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-value-holdout-0.jsonl",
+      "bytes": 12276381,
+      "sha256": "ba317969d5fd5b41c3b8e13a5a2c8b9ec46e6c383f85c4dffdad47181a162ef2",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-value-train-0-index.json",
+      "bytes": 37607,
+      "sha256": "38ed415722bd51c5bf795c8c5a4b4d81e4e77d27734d49c2c4b8dc540e09b71e",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-value-train-0-progress.json",
+      "bytes": 104,
+      "sha256": "b5774477303e6291f3fcf02548b1980edf256128ffa8f6ba6323619b07bb70ee",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-probe-value-train-0.jsonl",
+      "bytes": 12321734,
+      "sha256": "69f275218b2723b113165fbe8b278166ec52d1332639ec2fc927cf82a9486ce1",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-recompute.json",
+      "bytes": 1581,
+      "sha256": "37f4df3fbf45adb40ed87e985d1007e44eb09f303377893492e6e9152a246c18",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v2-statistics.json",
+      "bytes": 90972565,
+      "sha256": "2d8587f8ffb62ced250ab1f4cbbe1c071c9d5cec3c776e2fb3d885a12e3f29f4",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-report-policy-v2.js",
+      "bytes": 12443,
+      "sha256": "09aef29040b375d66b60ae1e9a21261b101c740e278c316a5419074220c46e21",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-run-policy-v2.js",
+      "bytes": 8824,
+      "sha256": "a72fed888fc71b43b20bfcf93bfff89eb913aadc691031dfc6bddcbe1c348895",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-stats-policy-v2.js",
+      "bytes": 11611,
+      "sha256": "62c1519cad9b2f56cae14b06dc6cac68a14d1549bb452b86a1dff57091356e5a",
+      "vsV4": "NEW_POLICY_V2_EVIDENCE"
+    }
+  ]
+}

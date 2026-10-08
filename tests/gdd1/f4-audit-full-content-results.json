@@ -1,0 +1,249 @@
+{
+  "scope": "GDD1 F4 independent full-content audit",
+  "total": 48,
+  "passed": 42,
+  "failed": [
+    {
+      "name": "resolver/oracle-H07-dock-row",
+      "ok": false,
+      "error": "9 == 3"
+    },
+    {
+      "name": "resolver/full-event-empty-target-guard",
+      "ok": false,
+      "error": "true == false"
+    },
+    {
+      "name": "resolver/epoch-transform-raises-epoch",
+      "ok": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(last.board[0].epoch>=1)\n"
+    },
+    {
+      "name": "resolver/stale-epoch-source-not-replayed",
+      "ok": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(src.includes('source.x.epoch===source.epoch'))\n"
+    },
+    {
+      "name": "resolver-refresh-cap-3",
+      "ok": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(r.ok)\n"
+    },
+    {
+      "name": "schema-event-count-cap",
+      "ok": false,
+      "error": "Missing expected exception."
+    }
+  ],
+  "synthetic": [
+    "resolver/oracle-H01",
+    "resolver/oracle-H02",
+    "resolver/oracle-H03-surge-zero",
+    "resolver/oracle-H04-pause-add",
+    "resolver/oracle-H05-blank-add",
+    "resolver/oracle-H06-copper",
+    "resolver/oracle-H07-dock-row",
+    "resolver/oracle-H08-tide-direct",
+    "resolver/oracle-H09-lean-cash",
+    "resolver/oracle-H10-negative-floor"
+  ],
+  "cases": [
+    {
+      "name": "structure/64-symbol-ids",
+      "ok": true
+    },
+    {
+      "name": "structure/32-item-ids",
+      "ok": true
+    },
+    {
+      "name": "structure/8-event-ids",
+      "ok": true
+    },
+    {
+      "name": "structure/full-payment-table",
+      "ok": true
+    },
+    {
+      "name": "structure/70-spins",
+      "ok": true
+    },
+    {
+      "name": "structure/full-initial-12",
+      "ok": true
+    },
+    {
+      "name": "structure/full-initial-uid-order",
+      "ok": true
+    },
+    {
+      "name": "structure/full-profile-symbol-membership",
+      "ok": true
+    },
+    {
+      "name": "structure/full-profile-item-membership",
+      "ok": true
+    },
+    {
+      "name": "structure/full-profile-event-membership",
+      "ok": true
+    },
+    {
+      "name": "structure/no-legacy-key-write",
+      "ok": true
+    },
+    {
+      "name": "resolver/oracle-H01",
+      "ok": true
+    },
+    {
+      "name": "resolver/oracle-H02",
+      "ok": true
+    },
+    {
+      "name": "resolver/oracle-H03-surge-zero",
+      "ok": true
+    },
+    {
+      "name": "resolver/oracle-H04-pause-add",
+      "ok": true
+    },
+    {
+      "name": "resolver/oracle-H05-blank-add",
+      "ok": true
+    },
+    {
+      "name": "resolver/oracle-H06-copper",
+      "ok": true
+    },
+    {
+      "name": "resolver/oracle-H07-dock-row",
+      "ok": false,
+      "error": "9 == 3"
+    },
+    {
+      "name": "resolver/oracle-H08-tide-direct",
+      "ok": true
+    },
+    {
+      "name": "resolver/oracle-H09-lean-cash",
+      "ok": true
+    },
+    {
+      "name": "resolver/oracle-H10-negative-floor",
+      "ok": true
+    },
+    {
+      "name": "resolver/full-uses-full-resolver-entry",
+      "ok": true
+    },
+    {
+      "name": "resolver/full-uses-slice-draw-entry",
+      "ok": true
+    },
+    {
+      "name": "resolver/full-uses-slice-offer-entry",
+      "ok": true
+    },
+    {
+      "name": "resolver/full-event-empty-target-guard",
+      "ok": false,
+      "error": "true == false"
+    },
+    {
+      "name": "resolver/full-event-cooldown-one-payment",
+      "ok": true
+    },
+    {
+      "name": "resolver/full-event-capacity-200",
+      "ok": true
+    },
+    {
+      "name": "resolver/epoch-transform-raises-epoch",
+      "ok": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(last.board[0].epoch>=1)\n"
+    },
+    {
+      "name": "resolver/stale-epoch-source-not-replayed",
+      "ok": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(src.includes('source.x.epoch===source.epoch'))\n"
+    },
+    {
+      "name": "resolver-pressure-cap",
+      "ok": true
+    },
+    {
+      "name": "resolver-emitted-source-effect-budget-64",
+      "ok": true
+    },
+    {
+      "name": "resolver-generation-limit-40",
+      "ok": true
+    },
+    {
+      "name": "resolver-pool-limit-200",
+      "ok": true
+    },
+    {
+      "name": "resolver-transaction-rollback",
+      "ok": true
+    },
+    {
+      "name": "resolver-pending-symbol-choice",
+      "ok": true
+    },
+    {
+      "name": "resolver-refresh-cap-3",
+      "ok": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(r.ok)\n"
+    },
+    {
+      "name": "resolver-final-payment-no-stage11",
+      "ok": true
+    },
+    {
+      "name": "save-profile-isolation",
+      "ok": true
+    },
+    {
+      "name": "save-invalid-current-does-not-fallback",
+      "ok": true
+    },
+    {
+      "name": "save-preview-must-be-sync",
+      "ok": true
+    },
+    {
+      "name": "save-import-one-write",
+      "ok": true
+    },
+    {
+      "name": "schema-all-five-rng-streams",
+      "ok": true
+    },
+    {
+      "name": "schema-refresh-range",
+      "ok": true
+    },
+    {
+      "name": "schema-event-count-cap",
+      "ok": false,
+      "error": "Missing expected exception."
+    },
+    {
+      "name": "schema-pending-negative-allowed",
+      "ok": true
+    },
+    {
+      "name": "ui/full-profile-label",
+      "ok": true
+    },
+    {
+      "name": "ui/busy-guard-present",
+      "ok": true
+    },
+    {
+      "name": "ui/chrome-unclaimed",
+      "ok": true
+    }
+  ]
+}

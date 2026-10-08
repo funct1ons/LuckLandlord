@@ -1,0 +1,42 @@
+{
+  "scope": "8000 completed games; slice only; STOP EDITING for independent audit",
+  "games": 8000,
+  "executionErrors": 0,
+  "unfinished": 0,
+  "baselineExisting": 556,
+  "byteIdentical": 554,
+  "rawProtectionOk": false,
+  "runtimeExceptions": [
+    {
+      "path": ".pi/loops.json",
+      "reason": "main-pane existing runtime ten-minute scheduler; no simulator edit; not restored",
+      "before": {
+        "bytes": 77,
+        "sha256": "c13b3964117e9117027700e629b5889d0b4e7dab749b14f0a769e1b3a5ec36e4"
+      },
+      "observed": {
+        "bytes": 77,
+        "sha256": "8761e5362ebd5c7a7aa880d52ded6c8e3c1220bce1a9ef8fbe5ceb3757d7d4d4"
+      }
+    },
+    {
+      "path": ".pi/loops/01a101f0-a171-761a-8429-9edd4dbe73ac.json",
+      "reason": "main-pane existing runtime ten-minute scheduler; no simulator edit; not restored",
+      "before": {
+        "bytes": 1788,
+        "sha256": "c9815c3a5515cc8c6e70f4a153e744b643cb555583e514d4d6a6e7cd31900029"
+      },
+      "observed": {
+        "bytes": 1788,
+        "sha256": "6daa6b2ae9c2d367a578d786e6cdb6c27504fd07964ceea10952f73a6ee39be3"
+      }
+    }
+  ],
+  "unexpected": [],
+  "background": "No background tasks at final status check; no servers launched",
+  "notApproved": [
+    "formal Normal balance",
+    "full F4 content gate",
+    "human play gate"
+  ]
+}

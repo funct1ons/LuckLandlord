@@ -1,0 +1,773 @@
+{
+  "scope": "per-game policy-v2 integrity; prefix full-sim-policy-v2-batch-; Random decision-full-v1 control; lookahead bots decision-full-v2; v1/probe/job-kill retained; not formal Normal acceptance",
+  "prefix": "full-sim-policy-v2-batch-",
+  "replayAll": true,
+  "expectedGames": 8000,
+  "seen": 8000,
+  "missing": 0,
+  "missingSeeds": [],
+  "duplicates": 0,
+  "duplicateRows": [],
+  "attributionFails": 0,
+  "replayFails": 0,
+  "replayFailRows": [],
+  "unfinished": 0,
+  "unfinishedRows": [],
+  "errors": 0,
+  "errorRows": [],
+  "historicalJobKill": [
+    {
+      "name": "full-sim-batch-greedy-holdout-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-greedy-holdout-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-greedy-train-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-greedy-train-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-random-holdout-0.jsonl",
+      "bytes": 1514155,
+      "lines": 18,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-random-holdout-500.jsonl",
+      "bytes": 1524123,
+      "lines": 18,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-random-train-0.jsonl",
+      "bytes": 1514094,
+      "lines": 18,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-random-train-500.jsonl",
+      "bytes": 1580730,
+      "lines": 18,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-synergy-holdout-0.jsonl",
+      "bytes": 959311,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-synergy-holdout-500.jsonl",
+      "bytes": 861585,
+      "lines": 10,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-synergy-train-0.jsonl",
+      "bytes": 999813,
+      "lines": 12,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-synergy-train-500.jsonl",
+      "bytes": 949392,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v2-greedy-holdout-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v2-greedy-holdout-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v2-greedy-train-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v2-greedy-train-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v2-random-holdout-0.jsonl",
+      "bytes": 1248029,
+      "lines": 15,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v2-random-holdout-500.jsonl",
+      "bytes": 1307598,
+      "lines": 15,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v2-random-train-0.jsonl",
+      "bytes": 1349342,
+      "lines": 16,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v2-random-train-500.jsonl",
+      "bytes": 1324801,
+      "lines": 15,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v2-synergy-holdout-0.jsonl",
+      "bytes": 880123,
+      "lines": 10,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v2-synergy-holdout-500.jsonl",
+      "bytes": 861660,
+      "lines": 10,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v2-synergy-train-0.jsonl",
+      "bytes": 924024,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v2-synergy-train-500.jsonl",
+      "bytes": 851949,
+      "lines": 10,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v2-value-holdout-0.jsonl",
+      "bytes": 1008153,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v2-value-holdout-500.jsonl",
+      "bytes": 946329,
+      "lines": 10,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v2-value-train-0.jsonl",
+      "bytes": 991409,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v2-value-train-500.jsonl",
+      "bytes": 1016657,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v3-greedy-holdout-0.jsonl",
+      "bytes": 47048706,
+      "lines": 500,
+      "hasIndex": true,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v3-greedy-holdout-500.jsonl",
+      "bytes": 47464778,
+      "lines": 500,
+      "hasIndex": true,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v3-greedy-train-0.jsonl",
+      "bytes": 47181493,
+      "lines": 500,
+      "hasIndex": true,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v3-greedy-train-500.jsonl",
+      "bytes": 47442738,
+      "lines": 500,
+      "hasIndex": true,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v3-random-holdout-0.jsonl",
+      "bytes": 42232050,
+      "lines": 500,
+      "hasIndex": true,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v3-random-holdout-500.jsonl",
+      "bytes": 42460177,
+      "lines": 500,
+      "hasIndex": true,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v3-random-train-0.jsonl",
+      "bytes": 42169093,
+      "lines": 500,
+      "hasIndex": true,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v3-random-train-500.jsonl",
+      "bytes": 41858916,
+      "lines": 500,
+      "hasIndex": true,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v3-synergy-holdout-0.jsonl",
+      "bytes": 42151262,
+      "lines": 500,
+      "hasIndex": true,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v3-synergy-holdout-500.jsonl",
+      "bytes": 42312216,
+      "lines": 500,
+      "hasIndex": true,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v3-synergy-train-0.jsonl",
+      "bytes": 42734218,
+      "lines": 500,
+      "hasIndex": true,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v3-synergy-train-500.jsonl",
+      "bytes": 42630860,
+      "lines": 500,
+      "hasIndex": true,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v3-value-holdout-0.jsonl",
+      "bytes": 45930224,
+      "lines": 500,
+      "hasIndex": true,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v3-value-holdout-500.jsonl",
+      "bytes": 46509895,
+      "lines": 500,
+      "hasIndex": true,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v3-value-train-0.jsonl",
+      "bytes": 45897176,
+      "lines": 500,
+      "hasIndex": true,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-v3-value-train-500.jsonl",
+      "bytes": 46611398,
+      "lines": 500,
+      "hasIndex": true,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-value-holdout-0.jsonl",
+      "bytes": 1100790,
+      "lines": 12,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-value-holdout-500.jsonl",
+      "bytes": 1128818,
+      "lines": 12,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-value-train-0.jsonl",
+      "bytes": 1184346,
+      "lines": 13,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-batch-value-train-500.jsonl",
+      "bytes": 1209302,
+      "lines": 13,
+      "hasIndex": false,
+      "note": "v1 official batch retained; excluded from policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-greedy-holdout-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-greedy-holdout-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-greedy-train-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-greedy-train-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-random-holdout-0.jsonl",
+      "bytes": 675616,
+      "lines": 8,
+      "hasIndex": false,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-random-holdout-500.jsonl",
+      "bytes": 734725,
+      "lines": 8,
+      "hasIndex": false,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-random-train-0.jsonl",
+      "bytes": 711473,
+      "lines": 8,
+      "hasIndex": false,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-random-train-500.jsonl",
+      "bytes": 734695,
+      "lines": 8,
+      "hasIndex": false,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-synergy-holdout-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-synergy-holdout-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-synergy-train-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-synergy-train-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-value-holdout-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-value-holdout-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-value-train-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-value-train-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-probe-greedy-holdout-0.jsonl",
+      "bytes": 11965463,
+      "lines": 100,
+      "hasIndex": true,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-probe-greedy-train-0.jsonl",
+      "bytes": 12054996,
+      "lines": 100,
+      "hasIndex": true,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-probe-random-holdout-0.jsonl",
+      "bytes": 8950018,
+      "lines": 100,
+      "hasIndex": true,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-probe-random-train-0.jsonl",
+      "bytes": 8580829,
+      "lines": 100,
+      "hasIndex": true,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-probe-synergy-holdout-0.jsonl",
+      "bytes": 11898525,
+      "lines": 100,
+      "hasIndex": true,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-probe-synergy-train-0.jsonl",
+      "bytes": 12027322,
+      "lines": 100,
+      "hasIndex": true,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-probe-value-holdout-0.jsonl",
+      "bytes": 12276381,
+      "lines": 100,
+      "hasIndex": true,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    },
+    {
+      "name": "full-sim-policy-v2-probe-value-train-0.jsonl",
+      "bytes": 12321734,
+      "lines": 100,
+      "hasIndex": true,
+      "note": "policy-v2 probe or job-kill retained; excluded from official policy-v2 8000"
+    }
+  ],
+  "batches": [
+    {
+      "name": "full-sim-policy-v2-batch-greedy-holdout-0.jsonl",
+      "bot": "Greedy",
+      "split": "holdout",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 112,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 8710563.811900001,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-policy-v2-batch-greedy-holdout-500.jsonl",
+      "bot": "Greedy",
+      "split": "holdout",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 121,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 8811577.716400001,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-policy-v2-batch-greedy-train-0.jsonl",
+      "bot": "Greedy",
+      "split": "train",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 123,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 8809613.7891,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-policy-v2-batch-greedy-train-500.jsonl",
+      "bot": "Greedy",
+      "split": "train",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 115,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 8815756.9487,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-policy-v2-batch-random-holdout-0.jsonl",
+      "bot": "Random",
+      "split": "holdout",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 0,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 145891.5711,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-policy-v2-batch-random-holdout-500.jsonl",
+      "bot": "Random",
+      "split": "holdout",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 0,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 146187.0981,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-policy-v2-batch-random-train-0.jsonl",
+      "bot": "Random",
+      "split": "train",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 0,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 145500.6017,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-policy-v2-batch-random-train-500.jsonl",
+      "bot": "Random",
+      "split": "train",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 0,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 143871.04179999998,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-policy-v2-batch-synergy-holdout-0.jsonl",
+      "bot": "Synergy",
+      "split": "holdout",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 122,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 8833156.9445,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-policy-v2-batch-synergy-holdout-500.jsonl",
+      "bot": "Synergy",
+      "split": "holdout",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 117,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 8842650.7565,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-policy-v2-batch-synergy-train-0.jsonl",
+      "bot": "Synergy",
+      "split": "train",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 114,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 8822374.508200001,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-policy-v2-batch-synergy-train-500.jsonl",
+      "bot": "Synergy",
+      "split": "train",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 111,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 8789392.572500002,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-policy-v2-batch-value-holdout-0.jsonl",
+      "bot": "Value",
+      "split": "holdout",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 140,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 8716957.270000001,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-policy-v2-batch-value-holdout-500.jsonl",
+      "bot": "Value",
+      "split": "holdout",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 159,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 8704318.870399999,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-policy-v2-batch-value-train-0.jsonl",
+      "bot": "Value",
+      "split": "train",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 145,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 8758361.276500002,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-policy-v2-batch-value-train-500.jsonl",
+      "bot": "Value",
+      "split": "train",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 146,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 8753328.8914,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    }
+  ],
+  "isolation": {
+    "trainSeeds": 4000,
+    "holdoutSeeds": 4000,
+    "sharedExactSeedStrings": 0,
+    "note": "train/holdout use disjoint path prefixes F4-FULL-v1/<Bot>/<split>/; same numeric index is allowed across splits because the path differs. Random uses decision-full-v1; Value/Synergy/Greedy use decision-full-v2. Policy streams are separate from the five game RNG streams."
+  },
+  "pass": true
+}

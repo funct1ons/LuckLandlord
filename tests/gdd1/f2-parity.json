@@ -1,0 +1,41 @@
+{
+  "node": "v24.14.1",
+  "reports": [
+    {
+      "protocol": "file",
+      "mode": "write",
+      "total": 165,
+      "passed": 165,
+      "engineCases": 154,
+      "caseParity": true,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0"
+    },
+    {
+      "protocol": "file",
+      "mode": "read",
+      "total": 156,
+      "passed": 156,
+      "engineCases": 154,
+      "caseParity": true,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0"
+    },
+    {
+      "protocol": "http",
+      "mode": "write",
+      "total": 165,
+      "passed": 165,
+      "engineCases": 154,
+      "caseParity": true,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0"
+    },
+    {
+      "protocol": "http",
+      "mode": "read",
+      "total": 156,
+      "passed": 156,
+      "engineCases": 154,
+      "caseParity": true,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0"
+    }
+  ]
+}

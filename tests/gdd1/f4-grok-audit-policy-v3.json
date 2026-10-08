@@ -1,0 +1,1361 @@
+{
+  "auditor": "independent grok full-sim policy-v3 A2 probe audit v1",
+  "scope": "policy-v3 official prefix full-sim-policy-v3-batch- (6 shards, 600 holdout games). Independent counts/Wilson/hashes/replays. Economy NOT APPROVED. Not a recitation of docs/GDD1_FULL_SIM_POLICY_V3_PROBE.md.",
+  "node": "v24.14.1",
+  "scannedAt": "2026-10-06T09:39:46.774Z",
+  "finishedScanAt": "2026-10-06T09:40:00.737Z",
+  "writtenAt": "2026-10-06T09:43:05.777Z",
+  "verdict": {
+    "tools": "TOOLS_PASS",
+    "economy": "NOT APPROVED",
+    "formalBalance": "NOT APPROVED",
+    "blockReasons": [],
+    "inBand40to70": false,
+    "maxHoldoutPoint": 0.335,
+    "note": "k/n/rate match engineering summary exactly. lo/hi differ by 1 ULP on some cells because compare.js uses (center-margin)/d while this audit uses the v2-audit Wilson (c-r). That is formula association, not a win-count defect. Point estimates stay below 40%."
+  },
+  "z": 1.959963984540054,
+  "hashes": {
+    "docs/GAME_DESIGN_V1.md": {
+      "path": "docs/GAME_DESIGN_V1.md",
+      "bytes": 103576,
+      "sha256": "e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07"
+    },
+    "js/gdd1/resolver.js": {
+      "path": "js/gdd1/resolver.js",
+      "bytes": 27996,
+      "sha256": "e86d51fb4c20d235312b263146f18d2c4cd69c13453846fe0daf9b07a0aaf88b"
+    },
+    "js/gdd1/full-effects.js": {
+      "path": "js/gdd1/full-effects.js",
+      "bytes": 37993,
+      "sha256": "f65bc06b4c38fb35db14cc21f6ed4c63a42efbb06956f71078974990c5d8de55"
+    },
+    "js/gdd1/full-controller.js": {
+      "path": "js/gdd1/full-controller.js",
+      "bytes": 7963,
+      "sha256": "2c44f91f7f8806216b06666e685cbd4ab1a6f4ca2973528b7022102cd13e4558"
+    },
+    "js/gdd1/rng.js": {
+      "path": "js/gdd1/rng.js",
+      "bytes": 1680,
+      "sha256": "f3f5c055a8e3f4d5e18d355488194f94dfbc28603be7c29a5aab1743bd6704f7"
+    },
+    "js/gdd1/contract.js": {
+      "path": "js/gdd1/contract.js",
+      "bytes": 4911,
+      "sha256": "b7bd44d05ccdd4ffffe13e4949f7de92f3c7f37e628feaf3a6bf58023e7ea5c9"
+    },
+    "gdd1.html": {
+      "path": "gdd1.html",
+      "bytes": 2266,
+      "sha256": "57a8bc7f8e770e6f0dc316f859f473840daf243ff5b54dc6033d0119c5ec20d5"
+    },
+    "tests/gdd1/f4-grok-freeze-v4.json": {
+      "path": "tests/gdd1/f4-grok-freeze-v4.json",
+      "bytes": 94204,
+      "sha256": "cadba0fa63b151cb1b3a7933697cbeb295e9154ec4adb5bae595ffa7e8c09953"
+    },
+    "tests/gdd1/f4-grok-agg-freeze-v1.json": {
+      "path": "tests/gdd1/f4-grok-agg-freeze-v1.json",
+      "bytes": 2525,
+      "sha256": "af08f789b4b453e45a588f247a70a623f6c15ca62928f3995c2b65d23c5581a2"
+    },
+    "tests/gdd1/f4-grok-freeze-policy-v2.json": {
+      "path": "tests/gdd1/f4-grok-freeze-policy-v2.json",
+      "bytes": 35511,
+      "sha256": "6b2df68cb12937c5daeb99dd081e3330bd22cc7b209e6ebc83c62717652d2460"
+    },
+    "tests/gdd1/full-sim-statistics.json": {
+      "path": "tests/gdd1/full-sim-statistics.json",
+      "bytes": 59337286,
+      "sha256": "3cb38a192b0fc2805d956eda40f91db827f8d43095c9b5d26d33e246eeea04bf"
+    },
+    "docs/GDD1_FULL_SIM.md": {
+      "path": "docs/GDD1_FULL_SIM.md",
+      "bytes": 24474,
+      "sha256": "4a31b21bd65569ac92a3fd0c7aa3f80e2635059388067e587428fa567c723dab"
+    },
+    "docs/GDD1_FULL_SIM_AUDIT.md": {
+      "path": "docs/GDD1_FULL_SIM_AUDIT.md",
+      "bytes": 16285,
+      "sha256": "e08580281e482d8bec0fce9414290401149fbecd171dc4a0f7d17177350ff437"
+    },
+    "docs/GDD1_FULL_SIM_AUDIT_AGG.md": {
+      "path": "docs/GDD1_FULL_SIM_AUDIT_AGG.md",
+      "bytes": 9680,
+      "sha256": "338e34e2fa548038993c8557373de3d5da72751a63ede271ecaac403f114227f"
+    },
+    "docs/GDD1_FULL_SIM_POLICY_V2.md": {
+      "path": "docs/GDD1_FULL_SIM_POLICY_V2.md",
+      "bytes": 33192,
+      "sha256": "e31677737726fa17a5396f3f04590fe6bf4788b372dfbf8e7932ee411264a4e4"
+    },
+    "docs/GDD1_FULL_SIM_POLICY_V2_AUDIT.md": {
+      "path": "docs/GDD1_FULL_SIM_POLICY_V2_AUDIT.md",
+      "bytes": 18283,
+      "sha256": "988510d0a9e81b6594c643c0409da88ef8f10ba43eab53b5f0486b1d49598a3d"
+    },
+    "docs/GDD1_FULL_SIM_POLICY_V3_PROBE.md": {
+      "path": "docs/GDD1_FULL_SIM_POLICY_V3_PROBE.md",
+      "bytes": 5363,
+      "sha256": "cca35206da7a989d13b75dbf9bf5b66853b30d0d148c0d6b800f4b950f474885"
+    },
+    "tests/gdd1/full-sim-engine.js": {
+      "path": "tests/gdd1/full-sim-engine.js",
+      "bytes": 10020,
+      "sha256": "90531adfbc08ea0f00b037e8366e1379417f2964f97ae0eca16b8fce773f5227"
+    },
+    "tests/gdd1/full-sim-engine-policy-v2.js": {
+      "path": "tests/gdd1/full-sim-engine-policy-v2.js",
+      "bytes": 6006,
+      "sha256": "ae021bf8e4b4e02104cc3a9d141a163ce798270def459b8870247a7d70abd915"
+    },
+    "tests/gdd1/full-sim-engine-policy-v3.js": {
+      "path": "tests/gdd1/full-sim-engine-policy-v3.js",
+      "bytes": 7066,
+      "sha256": "96743eba9e0c634826d2aa3a0676a4140adb0abbef009d5456906ce53f576e9e"
+    },
+    "tests/gdd1/full-sim-run-policy-v3.js": {
+      "path": "tests/gdd1/full-sim-run-policy-v3.js",
+      "bytes": 9331,
+      "sha256": "3d2775275e9491f85ee699ba173bf8a95532401a399f04b9f199f1e94b47a413"
+    },
+    "tests/gdd1/full-sim-policy-v3-compare.js": {
+      "path": "tests/gdd1/full-sim-policy-v3-compare.js",
+      "bytes": 10694,
+      "sha256": "92a3b57db52a6b4010b99c7a57304828f44c6062ece2a3d1212e81b814342f6d"
+    },
+    "tests/gdd1/full-sim-policy-v3-probe-summary.json": {
+      "path": "tests/gdd1/full-sim-policy-v3-probe-summary.json",
+      "bytes": 6258,
+      "sha256": "39d533875e8acb2ef253cb71495dca768dcb37f68f918700282e0ad0eb743626"
+    },
+    "tests/gdd1/full-sim-policy-v3-checks.js": {
+      "path": "tests/gdd1/full-sim-policy-v3-checks.js",
+      "bytes": 5207,
+      "sha256": "78823055cc95ead0a22b20f9bb18ac5c666a7ec71d43c3fa9f52277c669690e9"
+    },
+    "tests/gdd1/full-sim-policy-v3-checks.json": {
+      "path": "tests/gdd1/full-sim-policy-v3-checks.json",
+      "bytes": 1353,
+      "sha256": "8d59fb1403295c9a50c11746ede12442a3c53f07aaac14f6dfb38bb4f9eb14a1"
+    },
+    "tests/gdd1/f4-grok-audit-policy-v2.json": {
+      "path": "tests/gdd1/f4-grok-audit-policy-v2.json",
+      "bytes": 81263,
+      "sha256": "e96d3c7c1ddece34061c5ddb3da553d26c49aaf5ae15b1e179caf5dc9d267f16"
+    }
+  },
+  "jsonlHashes": {
+    "tests/gdd1/full-sim-policy-v3-batch-greedy-holdout-0.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-greedy-holdout-0.jsonl",
+      "bytes": 12560867,
+      "sha256": "bd7e052b17f049b5d07f7f2a8bf293177808a72d0fa3e61606cdeff916b8cb2c"
+    },
+    "tests/gdd1/full-sim-policy-v3-batch-greedy-holdout-100.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-greedy-holdout-100.jsonl",
+      "bytes": 12428480,
+      "sha256": "e6d84f725d499c1be31de53b271f4f427fb5b060a14f0360fd82c1b5995242cb"
+    },
+    "tests/gdd1/full-sim-policy-v3-batch-synergy-holdout-0.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-synergy-holdout-0.jsonl",
+      "bytes": 12471193,
+      "sha256": "51694f1fb4bf234d5ace12f4e087c1debde7fe20ea504818d6e267325b0b19ba"
+    },
+    "tests/gdd1/full-sim-policy-v3-batch-synergy-holdout-100.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-synergy-holdout-100.jsonl",
+      "bytes": 12730416,
+      "sha256": "a8ba38d709a16cc45fb53dac9f86ffd0411cd0a9ab7bd4c77d50ce51d50633ae"
+    },
+    "tests/gdd1/full-sim-policy-v3-batch-value-holdout-0.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-value-holdout-0.jsonl",
+      "bytes": 12607691,
+      "sha256": "12a91152bb2d27e3fe15ca2944f48cdbf89ec8e51b11f5df3907e2cb1e5e48c5"
+    },
+    "tests/gdd1/full-sim-policy-v3-batch-value-holdout-100.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-value-holdout-100.jsonl",
+      "bytes": 12649481,
+      "sha256": "d55d42c083ae56c33299d5f3271e2e529a498deaf19e100dae9a8137c3575917"
+    }
+  },
+  "freeze": {
+    "v4": {
+      "entryCount": 436,
+      "independentlyHashedOk": 436,
+      "fail": 0,
+      "failRows": [],
+      "verifyCommand": "node tests/gdd1/f4-grok-freeze-v4.js --verify",
+      "verifyPass": true,
+      "verifyEntries": "436/436",
+      "sha256": "cadba0fa63b151cb1b3a7933697cbeb295e9154ec4adb5bae595ffa7e8c09953"
+    },
+    "agg": {
+      "entryCount": 8,
+      "independentlyHashedOk": 8,
+      "fail": 0,
+      "failRows": [],
+      "verifyCommand": "node tests/gdd1/f4-grok-agg-freeze-v1.js --verify",
+      "verifyPass": true,
+      "verifyEntries": "8/8",
+      "sha256": "af08f789b4b453e45a588f247a70a623f6c15ca62928f3995c2b65d23c5581a2"
+    },
+    "policyV2": {
+      "entryCount": 143,
+      "independentlyHashedOk": 143,
+      "fail": 0,
+      "failRows": [],
+      "verifyCommand": "node tests/gdd1/f4-grok-freeze-policy-v2.js --verify",
+      "verifyPass": true,
+      "verifyEntries": "143/143",
+      "sha256": "6b2df68cb12937c5daeb99dd081e3330bd22cc7b209e6ebc83c62717652d2460"
+    }
+  },
+  "production": {
+    "docs/GAME_DESIGN_V1.md": {
+      "path": "docs/GAME_DESIGN_V1.md",
+      "bytes": 103576,
+      "sha256": "e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07"
+    },
+    "js/gdd1/resolver.js": {
+      "path": "js/gdd1/resolver.js",
+      "bytes": 27996,
+      "sha256": "e86d51fb4c20d235312b263146f18d2c4cd69c13453846fe0daf9b07a0aaf88b"
+    },
+    "js/gdd1/full-effects.js": {
+      "path": "js/gdd1/full-effects.js",
+      "bytes": 37993,
+      "sha256": "f65bc06b4c38fb35db14cc21f6ed4c63a42efbb06956f71078974990c5d8de55"
+    },
+    "js/gdd1/full-controller.js": {
+      "path": "js/gdd1/full-controller.js",
+      "bytes": 7963,
+      "sha256": "2c44f91f7f8806216b06666e685cbd4ab1a6f4ca2973528b7022102cd13e4558"
+    },
+    "js/gdd1/rng.js": {
+      "path": "js/gdd1/rng.js",
+      "bytes": 1680,
+      "sha256": "f3f5c055a8e3f4d5e18d355488194f94dfbc28603be7c29a5aab1743bd6704f7"
+    },
+    "js/gdd1/contract.js": {
+      "path": "js/gdd1/contract.js",
+      "bytes": 4911,
+      "sha256": "b7bd44d05ccdd4ffffe13e4949f7de92f3c7f37e628feaf3a6bf58023e7ea5c9"
+    },
+    "gdd1.html": {
+      "path": "gdd1.html",
+      "bytes": 2266,
+      "sha256": "57a8bc7f8e770e6f0dc316f859f473840daf243ff5b54dc6033d0119c5ec20d5"
+    }
+  },
+  "policyV3Tools": {
+    "tests/gdd1/full-sim-engine.js": {
+      "path": "tests/gdd1/full-sim-engine.js",
+      "bytes": 10020,
+      "sha256": "90531adfbc08ea0f00b037e8366e1379417f2964f97ae0eca16b8fce773f5227"
+    },
+    "tests/gdd1/full-sim-engine-policy-v3.js": {
+      "path": "tests/gdd1/full-sim-engine-policy-v3.js",
+      "bytes": 7066,
+      "sha256": "96743eba9e0c634826d2aa3a0676a4140adb0abbef009d5456906ce53f576e9e"
+    },
+    "tests/gdd1/full-sim-run-policy-v3.js": {
+      "path": "tests/gdd1/full-sim-run-policy-v3.js",
+      "bytes": 9331,
+      "sha256": "3d2775275e9491f85ee699ba173bf8a95532401a399f04b9f199f1e94b47a413"
+    },
+    "tests/gdd1/full-sim-policy-v3-compare.js": {
+      "path": "tests/gdd1/full-sim-policy-v3-compare.js",
+      "bytes": 10694,
+      "sha256": "92a3b57db52a6b4010b99c7a57304828f44c6062ece2a3d1212e81b814342f6d"
+    },
+    "tests/gdd1/full-sim-policy-v3-probe-summary.json": {
+      "path": "tests/gdd1/full-sim-policy-v3-probe-summary.json",
+      "bytes": 6258,
+      "sha256": "39d533875e8acb2ef253cb71495dca768dcb37f68f918700282e0ad0eb743626"
+    },
+    "docs/GDD1_FULL_SIM_POLICY_V3_PROBE.md": {
+      "path": "docs/GDD1_FULL_SIM_POLICY_V3_PROBE.md",
+      "bytes": 5363,
+      "sha256": "cca35206da7a989d13b75dbf9bf5b66853b30d0d148c0d6b800f4b950f474885"
+    }
+  },
+  "counts": {
+    "officialFiles": 6,
+    "games": 600,
+    "indexHashes": 600,
+    "indexMismatches": 0,
+    "uniqueSeeds": 600,
+    "duplicateSeeds": 0,
+    "duplicateBotSplitIndex": 0,
+    "missingVsCatalog": 0,
+    "catalogMissing": [],
+    "unfinished": 0,
+    "gameErrors": 0,
+    "commandErrors": 0,
+    "policySeedFails": 0,
+    "catalogFails": 0,
+    "attributionFails": 0,
+    "probesExcluded": 3
+  },
+  "wilson": {
+    "z": 1.959963984540054,
+    "auditorFormula": "c=(p+z^2/(2n))/(1+z^2/n); r=z*sqrt(p(1-p)/n+z^2/(4n^2))/(1+z^2/n); lo=c-r; hi=c+r",
+    "engineeringFormula": "d=1+z^2/n; center=p+z^2/(2n); margin=z*sqrt((p(1-p)+z^2/(4n))/n); lo=(center-margin)/d",
+    "knRateExactVsSummary": true,
+    "loHiBitwiseVsSummary": false,
+    "ulpOnly": true,
+    "engFormulaReproducesSummaryLo": true,
+    "ulpRows": [
+      {
+        "field": "Value.v2.wilson",
+        "kMatch": true,
+        "nMatch": true,
+        "rateMatch": true,
+        "loUlp": true,
+        "hiUlp": false,
+        "expected": {
+          "k": 54,
+          "n": 200,
+          "rate": 0.27,
+          "lo": 0.21323449814685844,
+          "hi": 0.33543435198668425,
+          "z": 1.959963984540054
+        },
+        "auditor": {
+          "k": 54,
+          "n": 200,
+          "rate": 0.27,
+          "lo": 0.21323449814685846,
+          "hi": 0.33543435198668425,
+          "z": 1.959963984540054
+        },
+        "engFormulaReproLo": 0.21323449814685844,
+        "engFormulaMatchesExpectedLo": true
+      },
+      {
+        "field": "Value.v1.wilson",
+        "kMatch": true,
+        "nMatch": true,
+        "rateMatch": true,
+        "loUlp": true,
+        "hiUlp": false,
+        "expected": {
+          "k": 0,
+          "n": 200,
+          "rate": 0,
+          "lo": 1.7020320458977177e-18,
+          "hi": 0.018845326377266575,
+          "z": 1.959963984540054
+        },
+        "auditor": {
+          "k": 0,
+          "n": 200,
+          "rate": 0,
+          "lo": 1.734723475976807e-18,
+          "hi": 0.018845326377266575,
+          "z": 1.959963984540054
+        },
+        "engFormulaReproLo": 1.7020320458977177e-18,
+        "engFormulaMatchesExpectedLo": true
+      },
+      {
+        "field": "Synergy.v2.wilson",
+        "kMatch": true,
+        "nMatch": true,
+        "rateMatch": true,
+        "loUlp": true,
+        "hiUlp": false,
+        "expected": {
+          "k": 50,
+          "n": 200,
+          "rate": 0.25,
+          "lo": 0.195081680068175,
+          "hi": 0.31434098312045833,
+          "z": 1.959963984540054
+        },
+        "auditor": {
+          "k": 50,
+          "n": 200,
+          "rate": 0.25,
+          "lo": 0.19508168006817497,
+          "hi": 0.31434098312045833,
+          "z": 1.959963984540054
+        },
+        "engFormulaReproLo": 0.195081680068175,
+        "engFormulaMatchesExpectedLo": true
+      },
+      {
+        "field": "Synergy.v1.wilson",
+        "kMatch": true,
+        "nMatch": true,
+        "rateMatch": true,
+        "loUlp": true,
+        "hiUlp": false,
+        "expected": {
+          "k": 0,
+          "n": 200,
+          "rate": 0,
+          "lo": 1.7020320458977177e-18,
+          "hi": 0.018845326377266575,
+          "z": 1.959963984540054
+        },
+        "auditor": {
+          "k": 0,
+          "n": 200,
+          "rate": 0,
+          "lo": 1.734723475976807e-18,
+          "hi": 0.018845326377266575,
+          "z": 1.959963984540054
+        },
+        "engFormulaReproLo": 1.7020320458977177e-18,
+        "engFormulaMatchesExpectedLo": true
+      },
+      {
+        "field": "Greedy.v3.wilson",
+        "kMatch": true,
+        "nMatch": true,
+        "rateMatch": true,
+        "loUlp": true,
+        "hiUlp": false,
+        "expected": {
+          "k": 51,
+          "n": 200,
+          "rate": 0.255,
+          "lo": 0.19960495172031348,
+          "hi": 0.3196292582045472,
+          "z": 1.959963984540054
+        },
+        "auditor": {
+          "k": 51,
+          "n": 200,
+          "rate": 0.255,
+          "lo": 0.1996049517203135,
+          "hi": 0.3196292582045472,
+          "z": 1.959963984540054
+        },
+        "engFormulaReproLo": 0.19960495172031348,
+        "engFormulaMatchesExpectedLo": true
+      },
+      {
+        "field": "Greedy.v1.wilson",
+        "kMatch": true,
+        "nMatch": true,
+        "rateMatch": true,
+        "loUlp": true,
+        "hiUlp": true,
+        "expected": {
+          "k": 3,
+          "n": 200,
+          "rate": 0.015,
+          "lo": 0.005114237793258312,
+          "hi": 0.04316572879269027,
+          "z": 1.959963984540054
+        },
+        "auditor": {
+          "k": 3,
+          "n": 200,
+          "rate": 0.015,
+          "lo": 0.00511423779325831,
+          "hi": 0.04316572879269026,
+          "z": 1.959963984540054
+        },
+        "engFormulaReproLo": 0.005114237793258312,
+        "engFormulaMatchesExpectedLo": true
+      },
+      {
+        "field": "Random.v2.wilson",
+        "kMatch": true,
+        "nMatch": true,
+        "rateMatch": true,
+        "loUlp": true,
+        "hiUlp": false,
+        "expected": {
+          "k": 0,
+          "n": 200,
+          "rate": 0,
+          "lo": 1.7020320458977177e-18,
+          "hi": 0.018845326377266575,
+          "z": 1.959963984540054
+        },
+        "auditor": {
+          "k": 0,
+          "n": 200,
+          "rate": 0,
+          "lo": 1.734723475976807e-18,
+          "hi": 0.018845326377266575,
+          "z": 1.959963984540054
+        },
+        "engFormulaReproLo": 1.7020320458977177e-18,
+        "engFormulaMatchesExpectedLo": true
+      },
+      {
+        "field": "Random.v1.wilson",
+        "kMatch": true,
+        "nMatch": true,
+        "rateMatch": true,
+        "loUlp": true,
+        "hiUlp": false,
+        "expected": {
+          "k": 0,
+          "n": 200,
+          "rate": 0,
+          "lo": 1.7020320458977177e-18,
+          "hi": 0.018845326377266575,
+          "z": 1.959963984540054
+        },
+        "auditor": {
+          "k": 0,
+          "n": 200,
+          "rate": 0,
+          "lo": 1.734723475976807e-18,
+          "hi": 0.018845326377266575,
+          "z": 1.959963984540054
+        },
+        "engFormulaReproLo": 1.7020320458977177e-18,
+        "engFormulaMatchesExpectedLo": true
+      }
+    ],
+    "table": {
+      "Value": {
+        "n": 200,
+        "indexMin": 0,
+        "indexMax": 199,
+        "v3": {
+          "k": 67,
+          "n": 200,
+          "rate": 0.335,
+          "lo": 0.2732408697841632,
+          "hi": 0.40297808792033485,
+          "z": 1.959963984540054
+        },
+        "v2": {
+          "k": 54,
+          "n": 200,
+          "rate": 0.27,
+          "lo": 0.21323449814685846,
+          "hi": 0.33543435198668425,
+          "z": 1.959963984540054
+        },
+        "v1": {
+          "k": 0,
+          "n": 200,
+          "rate": 0,
+          "lo": 1.734723475976807e-18,
+          "hi": 0.018845326377266575,
+          "z": 1.959963984540054
+        },
+        "v3pct": {
+          "rate": "33.50%",
+          "lo": "27.32%",
+          "hi": "40.30%"
+        },
+        "v2pct": {
+          "rate": "27.00%",
+          "lo": "21.32%",
+          "hi": "33.54%"
+        },
+        "v1pct": {
+          "rate": "0.00%",
+          "lo": "0.00%",
+          "hi": "1.88%"
+        },
+        "deltaV2pp": 6.5,
+        "deltaV1pp": 33.5,
+        "failV3": "10:54, 8:13, 9:66, WON:67",
+        "failV2": "10:49, 8:16, 9:81, WON:54",
+        "failV1": "10:1, 7:38, 8:148, 9:13",
+        "actionsV3": {
+          "spin": 13264,
+          "reroll": 2211,
+          "remove": 2029,
+          "choose": 7832,
+          "item": 1708,
+          "skip": 5432,
+          "event": 412
+        },
+        "actionsSplit": {
+          "spin": 13264,
+          "reroll": 2211,
+          "remove": 2029,
+          "choose": 7832,
+          "item": 1708,
+          "skip": 5432,
+          "eventA": 238,
+          "eventB": 174
+        },
+        "unused": [
+          "skipItem"
+        ],
+        "missingV2": 0,
+        "missingV1": 0,
+        "bitwiseV3": true,
+        "bitwiseV2": false,
+        "bitwiseV1": false
+      },
+      "Synergy": {
+        "n": 200,
+        "indexMin": 0,
+        "indexMax": 199,
+        "v3": {
+          "k": 67,
+          "n": 200,
+          "rate": 0.335,
+          "lo": 0.2732408697841632,
+          "hi": 0.40297808792033485,
+          "z": 1.959963984540054
+        },
+        "v2": {
+          "k": 50,
+          "n": 200,
+          "rate": 0.25,
+          "lo": 0.19508168006817497,
+          "hi": 0.31434098312045833,
+          "z": 1.959963984540054
+        },
+        "v1": {
+          "k": 0,
+          "n": 200,
+          "rate": 0,
+          "lo": 1.734723475976807e-18,
+          "hi": 0.018845326377266575,
+          "z": 1.959963984540054
+        },
+        "v3pct": {
+          "rate": "33.50%",
+          "lo": "27.32%",
+          "hi": "40.30%"
+        },
+        "v2pct": {
+          "rate": "25.00%",
+          "lo": "19.51%",
+          "hi": "31.43%"
+        },
+        "v1pct": {
+          "rate": "0.00%",
+          "lo": "0.00%",
+          "hi": "1.88%"
+        },
+        "deltaV2pp": 8.5,
+        "deltaV1pp": 33.5,
+        "failV3": "10:41, 8:15, 9:77, WON:67",
+        "failV2": "10:43, 8:24, 9:83, WON:50",
+        "failV1": "6:4, 7:89, 8:104, 9:3",
+        "actionsV3": {
+          "spin": 13144,
+          "reroll": 2262,
+          "choose": 7762,
+          "item": 1692,
+          "remove": 1982,
+          "skip": 5382,
+          "event": 421,
+          "skipItem": 1
+        },
+        "actionsSplit": {
+          "spin": 13144,
+          "reroll": 2262,
+          "choose": 7762,
+          "item": 1692,
+          "remove": 1982,
+          "skip": 5382,
+          "eventA": 287,
+          "eventB": 134,
+          "skipItem": 1
+        },
+        "unused": [],
+        "missingV2": 0,
+        "missingV1": 0,
+        "bitwiseV3": true,
+        "bitwiseV2": false,
+        "bitwiseV1": false
+      },
+      "Greedy": {
+        "n": 200,
+        "indexMin": 0,
+        "indexMax": 199,
+        "v3": {
+          "k": 51,
+          "n": 200,
+          "rate": 0.255,
+          "lo": 0.1996049517203135,
+          "hi": 0.3196292582045472,
+          "z": 1.959963984540054
+        },
+        "v2": {
+          "k": 44,
+          "n": 200,
+          "rate": 0.22,
+          "lo": 0.16816538358833258,
+          "hi": 0.28238799918293667,
+          "z": 1.959963984540054
+        },
+        "v1": {
+          "k": 3,
+          "n": 200,
+          "rate": 0.015,
+          "lo": 0.00511423779325831,
+          "hi": 0.04316572879269026,
+          "z": 1.959963984540054
+        },
+        "v3pct": {
+          "rate": "25.50%",
+          "lo": "19.96%",
+          "hi": "31.96%"
+        },
+        "v2pct": {
+          "rate": "22.00%",
+          "lo": "16.82%",
+          "hi": "28.24%"
+        },
+        "v1pct": {
+          "rate": "1.50%",
+          "lo": "0.51%",
+          "hi": "4.32%"
+        },
+        "deltaV2pp": 3.5000000000000004,
+        "deltaV1pp": 24,
+        "failV3": "10:52, 8:17, 9:80, WON:51",
+        "failV2": "10:37, 7:1, 8:21, 9:97, WON:44",
+        "failV1": "10:12, 7:7, 8:113, 9:65, WON:3",
+        "actionsV3": {
+          "spin": 13088,
+          "remove": 1952,
+          "choose": 7760,
+          "reroll": 2184,
+          "item": 1685,
+          "skip": 5328,
+          "event": 390,
+          "skipItem": 1
+        },
+        "actionsSplit": {
+          "spin": 13088,
+          "remove": 1952,
+          "choose": 7760,
+          "reroll": 2184,
+          "item": 1685,
+          "skip": 5328,
+          "eventB": 175,
+          "eventA": 215,
+          "skipItem": 1
+        },
+        "unused": [],
+        "missingV2": 0,
+        "missingV1": 0,
+        "bitwiseV3": false,
+        "bitwiseV2": true,
+        "bitwiseV1": false
+      }
+    },
+    "randomControl": {
+      "n": 200,
+      "v2": {
+        "k": 0,
+        "n": 200,
+        "rate": 0,
+        "lo": 1.734723475976807e-18,
+        "hi": 0.018845326377266575,
+        "z": 1.959963984540054
+      },
+      "v1": {
+        "k": 0,
+        "n": 200,
+        "rate": 0,
+        "lo": 1.734723475976807e-18,
+        "hi": 0.018845326377266575,
+        "z": 1.959963984540054
+      },
+      "v2pct": {
+        "rate": "0.00%",
+        "lo": "0.00%",
+        "hi": "1.88%"
+      },
+      "v1pct": {
+        "rate": "0.00%",
+        "lo": "0.00%",
+        "hi": "1.88%"
+      },
+      "missingV2": 0,
+      "missingV1": 0,
+      "bitwiseV2": false,
+      "bitwiseV1": false
+    }
+  },
+  "unusedActions": {
+    "Value": {
+      "unused": [
+        "skipItem"
+      ],
+      "actionsOp": {
+        "spin": 13264,
+        "reroll": 2211,
+        "remove": 2029,
+        "choose": 7832,
+        "item": 1708,
+        "skip": 5432,
+        "event": 412
+      },
+      "actionsSplit": {
+        "spin": 13264,
+        "reroll": 2211,
+        "remove": 2029,
+        "choose": 7832,
+        "item": 1708,
+        "skip": 5432,
+        "eventA": 238,
+        "eventB": 174
+      }
+    },
+    "Synergy": {
+      "unused": [],
+      "actionsOp": {
+        "spin": 13144,
+        "reroll": 2262,
+        "choose": 7762,
+        "item": 1692,
+        "remove": 1982,
+        "skip": 5382,
+        "event": 421,
+        "skipItem": 1
+      },
+      "actionsSplit": {
+        "spin": 13144,
+        "reroll": 2262,
+        "choose": 7762,
+        "item": 1692,
+        "remove": 1982,
+        "skip": 5382,
+        "eventA": 287,
+        "eventB": 134,
+        "skipItem": 1
+      }
+    },
+    "Greedy": {
+      "unused": [],
+      "actionsOp": {
+        "spin": 13088,
+        "remove": 1952,
+        "choose": 7760,
+        "reroll": 2184,
+        "item": 1685,
+        "skip": 5328,
+        "event": 390,
+        "skipItem": 1
+      },
+      "actionsSplit": {
+        "spin": 13088,
+        "remove": 1952,
+        "choose": 7760,
+        "reroll": 2184,
+        "item": 1685,
+        "skip": 5328,
+        "eventB": 175,
+        "eventA": 215,
+        "skipItem": 1
+      }
+    }
+  },
+  "replays": {
+    "engine": "tests/gdd1/full-sim-engine.js F.fullNewRun + F.fullCommand (production)",
+    "n": 9,
+    "hashMatch": 9,
+    "rows": [
+      {
+        "reason": "index-0",
+        "seed": "F4-FULL-v1/Value/holdout/0000",
+        "bot": "Value",
+        "split": "holdout",
+        "index": 0,
+        "actions": 152,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "5a15d90aaea534fbd459aa93bbb64ad1eaf669505b7d325b8c23c541d3844ad9",
+        "recordedHash": "5a15d90aaea534fbd459aa93bbb64ad1eaf669505b7d325b8c23c541d3844ad9",
+        "fail": null,
+        "ms": 384
+      },
+      {
+        "reason": "index-100",
+        "seed": "F4-FULL-v1/Value/holdout/0100",
+        "bot": "Value",
+        "split": "holdout",
+        "index": 100,
+        "actions": 181,
+        "recordedOutcome": "WON",
+        "replayPhase": "WON",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "490f2fc6997271d3f3d2ae130e1891a1471ed7ef6991f38032d607e3487b1efd",
+        "recordedHash": "490f2fc6997271d3f3d2ae130e1891a1471ed7ef6991f38032d607e3487b1efd",
+        "fail": null,
+        "ms": 537
+      },
+      {
+        "reason": "extra-index-50",
+        "seed": "F4-FULL-v1/Value/holdout/0050",
+        "bot": "Value",
+        "split": "holdout",
+        "index": 50,
+        "actions": 171,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "2b2cf64d93833639958379ae2791f1c0e9392d6687fc617f028f5db6bbb3bee5",
+        "recordedHash": "2b2cf64d93833639958379ae2791f1c0e9392d6687fc617f028f5db6bbb3bee5",
+        "fail": null,
+        "ms": 437
+      },
+      {
+        "reason": "index-0",
+        "seed": "F4-FULL-v1/Synergy/holdout/0000",
+        "bot": "Synergy",
+        "split": "holdout",
+        "index": 0,
+        "actions": 171,
+        "recordedOutcome": "WON",
+        "replayPhase": "WON",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "525e8f9ada8b7cd58b4ab730cfce66b21c96e10917174dca3e54d898ad084ce8",
+        "recordedHash": "525e8f9ada8b7cd58b4ab730cfce66b21c96e10917174dca3e54d898ad084ce8",
+        "fail": null,
+        "ms": 490
+      },
+      {
+        "reason": "index-100",
+        "seed": "F4-FULL-v1/Synergy/holdout/0100",
+        "bot": "Synergy",
+        "split": "holdout",
+        "index": 100,
+        "actions": 155,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "383901a50958bcf38ead4a25086320441a39788fa5734fdbc4f907a63d36aea4",
+        "recordedHash": "383901a50958bcf38ead4a25086320441a39788fa5734fdbc4f907a63d36aea4",
+        "fail": null,
+        "ms": 321
+      },
+      {
+        "reason": "extra-index-50",
+        "seed": "F4-FULL-v1/Synergy/holdout/0050",
+        "bot": "Synergy",
+        "split": "holdout",
+        "index": 50,
+        "actions": 173,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "d77bcad2f4acb4ece1a9c7bb66fb68c048ecd5e6efcd5b1f845c21d71edf3828",
+        "recordedHash": "d77bcad2f4acb4ece1a9c7bb66fb68c048ecd5e6efcd5b1f845c21d71edf3828",
+        "fail": null,
+        "ms": 382
+      },
+      {
+        "reason": "index-0",
+        "seed": "F4-FULL-v1/Greedy/holdout/0000",
+        "bot": "Greedy",
+        "split": "holdout",
+        "index": 0,
+        "actions": 133,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "a05eeceb84e59bd5454b58cb439093844ea217b08f1fc25d0c9f372b3a179afa",
+        "recordedHash": "a05eeceb84e59bd5454b58cb439093844ea217b08f1fc25d0c9f372b3a179afa",
+        "fail": null,
+        "ms": 285
+      },
+      {
+        "reason": "index-100",
+        "seed": "F4-FULL-v1/Greedy/holdout/0100",
+        "bot": "Greedy",
+        "split": "holdout",
+        "index": 100,
+        "actions": 134,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "454c4529bd3cc243e2a595775ec89e02667dbf3472f3d6d835a9012c30c435d8",
+        "recordedHash": "454c4529bd3cc243e2a595775ec89e02667dbf3472f3d6d835a9012c30c435d8",
+        "fail": null,
+        "ms": 299
+      },
+      {
+        "reason": "extra-index-50",
+        "seed": "F4-FULL-v1/Greedy/holdout/0050",
+        "bot": "Greedy",
+        "split": "holdout",
+        "index": 50,
+        "actions": 153,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "a50199706c01929dfe45b2424de4f924cf9847377b6d21480eb6cfdb7a00f1b0",
+        "recordedHash": "a50199706c01929dfe45b2424de4f924cf9847377b6d21480eb6cfdb7a00f1b0",
+        "fail": null,
+        "ms": 352
+      }
+    ]
+  },
+  "lookahead": {
+    "constants": {
+      "HORIZON_SPINS": 8,
+      "COMMAND_CAP": 64,
+      "REMOVE_BEAM": 8,
+      "MODEL_SEED": "full-sim-model-v3/0",
+      "LOOKAHEAD": "policy-v3: Random is NOT re-run (v1/v2 control on the same seeds). Value/Synergy/Greedy: root beam over ALL legal action TYPES with no skipItem/reroll/remove prune; remove UIDs ranked by dual static+synergy value, beam width min(8, |removes|) (wider than v2 beam 3; full set when pool removes ≤ 8). After the root action, continuation is dualChoiceV3 (staticChoice under synergy=false AND synergy=true; if they differ, keep the higher dualActionScore) for at most 8 spins / 64 fullCommand. Surrogate reseeds synthetic full-sim-model-v3/0 (createRng); live seed and five streams never copied. Model-generated offers are visible to dual continuation; they are not live offers. Branch width = |root candidates| (typically 8-20). Root utility still bot-specific: Value uses static mean, Greedy/Synergy use synergy mean. Utility: WON +1e5, LOST -1e5, model income, mean value, pool, tokens, cash-payment margin. Not optimal, not exhaustive tree search, not a live-RNG oracle. Horizon 8 (low end of 8-10) chosen to keep wall under the 3h budget with REMOVE_BEAM 8.",
+      "exportMatch": true
+    },
+    "construction": {
+      "source": "function rootCandidates(v) {\n  const a = legal(v);\n  const core = a.filter(x => x.op !== 'remove');\n  return [...core, ...worstRemoves(v, REMOVE_BEAM)];\n}",
+      "coreExcludesOnlyRemove": true,
+      "skipItemRerollNotPrunedFromCore": true
+    },
+    "symbolPhase": {
+      "legalOps": [
+        "choose",
+        "skip",
+        "remove",
+        "reroll"
+      ],
+      "candidateOps": [
+        "choose",
+        "skip",
+        "reroll",
+        "remove"
+      ],
+      "legalRemoves": 12,
+      "candidateRemoves": 8,
+      "removeBeam": 8,
+      "beamEqualsMin8orLegal": true
+    },
+    "itemPhase": {
+      "reached": true,
+      "phase": "ITEM_CHOICE",
+      "legalOps": [
+        "item",
+        "skipItem"
+      ],
+      "candidateOps": [
+        "item",
+        "skipItem"
+      ],
+      "skipItemLegal": true,
+      "skipItemInRoot": true,
+      "guard": 13
+    },
+    "note": "core = legal.filter(op!==remove); skipItem/reroll/item/choose/skip/event remain in core. Unused live skipItem means beam did not select it. remove beam = min(8, |removes|)."
+  },
+  "candidateConstruction": {
+    "source": "function rootCandidates(v) {\n  const a = legal(v);\n  const core = a.filter(x => x.op !== 'remove');\n  return [...core, ...worstRemoves(v, REMOVE_BEAM)];\n}",
+    "coreExcludesOnlyRemove": true,
+    "skipItemRerollNotPrunedFromCore": true,
+    "constants": {
+      "HORIZON_SPINS": 8,
+      "COMMAND_CAP": 64,
+      "REMOVE_BEAM": 8,
+      "MODEL_SEED": "full-sim-model-v3/0",
+      "LOOKAHEAD": "policy-v3: Random is NOT re-run (v1/v2 control on the same seeds). Value/Synergy/Greedy: root beam over ALL legal action TYPES with no skipItem/reroll/remove prune; remove UIDs ranked by dual static+synergy value, beam width min(8, |removes|) (wider than v2 beam 3; full set when pool removes ≤ 8). After the root action, continuation is dualChoiceV3 (staticChoice under synergy=false AND synergy=true; if they differ, keep the higher dualActionScore) for at most 8 spins / 64 fullCommand. Surrogate reseeds synthetic full-sim-model-v3/0 (createRng); live seed and five streams never copied. Model-generated offers are visible to dual continuation; they are not live offers. Branch width = |root candidates| (typically 8-20). Root utility still bot-specific: Value uses static mean, Greedy/Synergy use synergy mean. Utility: WON +1e5, LOST -1e5, model income, mean value, pool, tokens, cash-payment margin. Not optimal, not exhaustive tree search, not a live-RNG oracle. Horizon 8 (low end of 8-10) chosen to keep wall under the 3h budget with REMOVE_BEAM 8.",
+      "exportMatch": true
+    },
+    "symbolPhase": {
+      "legalOps": [
+        "choose",
+        "skip",
+        "remove",
+        "reroll"
+      ],
+      "candidateOps": [
+        "choose",
+        "skip",
+        "reroll",
+        "remove"
+      ],
+      "legalRemoves": 12,
+      "candidateRemoves": 8,
+      "removeBeam": 8,
+      "beamEqualsMin8orLegal": true
+    },
+    "itemPhase": {
+      "reached": true,
+      "phase": "ITEM_CHOICE",
+      "legalOps": [
+        "item",
+        "skipItem"
+      ],
+      "candidateOps": [
+        "item",
+        "skipItem"
+      ],
+      "skipItemLegal": true,
+      "skipItemInRoot": true,
+      "guard": 13
+    },
+    "note": "core = legal.filter(op!==remove); skipItem/reroll/item/choose/skip/event remain in core. Unused live skipItem means beam did not select it. remove beam = min(8, |removes|)."
+  },
+  "peek": {
+    "publicViewDeletes": true,
+    "surrogateReseeds": true,
+    "copiesLiveRng": false,
+    "randomThrew": true,
+    "randomMsg": "policy-v3 does not re-run Random; use v1/v2 control",
+    "actionEqual": true,
+    "stateUnchanged": true,
+    "viewHasRng": false,
+    "viewHasSeed": false,
+    "surrogateSeed": "full-sim-model-v3/0",
+    "surrogateRngIsLive": false,
+    "liveRngUnchangedAfterRollout": true,
+    "decideAction": {
+      "op": "reroll",
+      "windowId": 1
+    },
+    "candidates": 13,
+    "modelCommands": 242,
+    "verdict": "PASS",
+    "publicViewSource": "function publicView(s) { const v = copy(s); delete v.rng; delete v.seed; return v; }",
+    "surrogateV3Source": "function surrogateV3(v) { const s = copy(v); s.seed = MODEL_SEED; s.rng = F.createRng(s.seed, s.profile, s.difficulty); return s; }"
+  },
+  "gatesIndependent": {
+    "z": 1.959963984540054,
+    "maxHoldoutRate": 0.335,
+    "pointInBand40to70": false,
+    "hiOverlaps40": [
+      {
+        "bot": "Value",
+        "hi": 0.40297808792033485,
+        "hiPct": "40.30%"
+      },
+      {
+        "bot": "Synergy",
+        "hi": 0.40297808792033485,
+        "hiPct": "40.30%"
+      }
+    ],
+    "synergyGreedyWinBand": "OUTSIDE 40-70%",
+    "deltas": [
+      {
+        "bot": "Value",
+        "dV2": 6.5,
+        "dV1": 33.5
+      },
+      {
+        "bot": "Synergy",
+        "dV2": 8.5,
+        "dV1": 33.5
+      },
+      {
+        "bot": "Greedy",
+        "dV2": 3.5000000000000004,
+        "dV1": 24
+      }
+    ],
+    "economyResidualStrengthened": true,
+    "formalBalance": "NOT APPROVED",
+    "economy": "NOT APPROVED",
+    "phaseB": "NOT STARTED"
+  },
+  "probesExcluded": [
+    {
+      "name": "full-sim-policy-v3-probe-greedy-holdout-0.jsonl",
+      "bytes": 3690897,
+      "excludedFromOfficial": true
+    },
+    {
+      "name": "full-sim-policy-v3-probe-synergy-holdout-0.jsonl",
+      "bytes": 3741519,
+      "excludedFromOfficial": true
+    },
+    {
+      "name": "full-sim-policy-v3-probe-value-holdout-0.jsonl",
+      "bytes": 3781287,
+      "excludedFromOfficial": true
+    }
+  ],
+  "v1Retention": {
+    "v3Jsonl": 16,
+    "expected": 16
+  },
+  "v2Retention": {
+    "pv2Jsonl": 16,
+    "expected": 16
+  },
+  "mismatchesMaterial": [],
+  "mismatchesUlp": [
+    {
+      "field": "Value.v2.wilson",
+      "expected": {
+        "k": 54,
+        "n": 200,
+        "rate": 0.27,
+        "lo": 0.21323449814685844,
+        "hi": 0.33543435198668425,
+        "z": 1.959963984540054
+      },
+      "actual": {
+        "k": 54,
+        "n": 200,
+        "rate": 0.27,
+        "lo": 0.21323449814685846,
+        "hi": 0.33543435198668425,
+        "z": 1.959963984540054
+      }
+    },
+    {
+      "field": "Value.v1.wilson",
+      "expected": {
+        "k": 0,
+        "n": 200,
+        "rate": 0,
+        "lo": 1.7020320458977177e-18,
+        "hi": 0.018845326377266575,
+        "z": 1.959963984540054
+      },
+      "actual": {
+        "k": 0,
+        "n": 200,
+        "rate": 0,
+        "lo": 1.734723475976807e-18,
+        "hi": 0.018845326377266575,
+        "z": 1.959963984540054
+      }
+    },
+    {
+      "field": "Synergy.v2.wilson",
+      "expected": {
+        "k": 50,
+        "n": 200,
+        "rate": 0.25,
+        "lo": 0.195081680068175,
+        "hi": 0.31434098312045833,
+        "z": 1.959963984540054
+      },
+      "actual": {
+        "k": 50,
+        "n": 200,
+        "rate": 0.25,
+        "lo": 0.19508168006817497,
+        "hi": 0.31434098312045833,
+        "z": 1.959963984540054
+      }
+    },
+    {
+      "field": "Synergy.v1.wilson",
+      "expected": {
+        "k": 0,
+        "n": 200,
+        "rate": 0,
+        "lo": 1.7020320458977177e-18,
+        "hi": 0.018845326377266575,
+        "z": 1.959963984540054
+      },
+      "actual": {
+        "k": 0,
+        "n": 200,
+        "rate": 0,
+        "lo": 1.734723475976807e-18,
+        "hi": 0.018845326377266575,
+        "z": 1.959963984540054
+      }
+    },
+    {
+      "field": "Greedy.v3.wilson",
+      "expected": {
+        "k": 51,
+        "n": 200,
+        "rate": 0.255,
+        "lo": 0.19960495172031348,
+        "hi": 0.3196292582045472,
+        "z": 1.959963984540054
+      },
+      "actual": {
+        "k": 51,
+        "n": 200,
+        "rate": 0.255,
+        "lo": 0.1996049517203135,
+        "hi": 0.3196292582045472,
+        "z": 1.959963984540054
+      }
+    },
+    {
+      "field": "Greedy.v1.wilson",
+      "expected": {
+        "k": 3,
+        "n": 200,
+        "rate": 0.015,
+        "lo": 0.005114237793258312,
+        "hi": 0.04316572879269027,
+        "z": 1.959963984540054
+      },
+      "actual": {
+        "k": 3,
+        "n": 200,
+        "rate": 0.015,
+        "lo": 0.00511423779325831,
+        "hi": 0.04316572879269026,
+        "z": 1.959963984540054
+      }
+    },
+    {
+      "field": "Random.v2.wilson",
+      "expected": {
+        "k": 0,
+        "n": 200,
+        "rate": 0,
+        "lo": 1.7020320458977177e-18,
+        "hi": 0.018845326377266575,
+        "z": 1.959963984540054
+      },
+      "actual": {
+        "k": 0,
+        "n": 200,
+        "rate": 0,
+        "lo": 1.734723475976807e-18,
+        "hi": 0.018845326377266575,
+        "z": 1.959963984540054
+      }
+    },
+    {
+      "field": "Random.v1.wilson",
+      "expected": {
+        "k": 0,
+        "n": 200,
+        "rate": 0,
+        "lo": 1.7020320458977177e-18,
+        "hi": 0.018845326377266575,
+        "z": 1.959963984540054
+      },
+      "actual": {
+        "k": 0,
+        "n": 200,
+        "rate": 0,
+        "lo": 1.734723475976807e-18,
+        "hi": 0.018845326377266575,
+        "z": 1.959963984540054
+      }
+    }
+  ],
+  "judgment": {
+    "tools": "TOOLS_PASS",
+    "economy": "NOT APPROVED",
+    "formalBalance": "NOT APPROVED",
+    "economyResidualStrengthened": true,
+    "inBand40": false,
+    "maxHoldoutRate": 0.335,
+    "lineOk": true,
+    "replayOk": true,
+    "freezeOkAll": true,
+    "peekOk": true,
+    "candOk": true,
+    "knRateExact": true,
+    "mismatchCountMaterial": 0
+  }
+}

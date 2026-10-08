@@ -1,0 +1,2 @@
+{"bot":"Random","split":"holdout","startIndex":500,"done":1,"n":500,"wins":0,"errors":0,"seconds":0.3}
+{"bot":"Random","split":"holdout","startIndex":500,"done":10,"n":500,"wins":0,"errors":0,"seconds":3.4}

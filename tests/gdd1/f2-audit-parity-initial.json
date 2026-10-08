@@ -1,0 +1,68 @@
+[
+  {
+    "protocol": "file",
+    "mode": "write",
+    "total": 48,
+    "passed": 46,
+    "caseParity": true,
+    "failures": [
+      {
+        "name": "f2-audit/epoch/transformed-source-cancels-queued-old-structure",
+        "ok": false,
+        "error": "1 != 0"
+      },
+      {
+        "name": "f2-audit-ui/double-refresh-two-click-details-only-one-commit",
+        "ok": false,
+        "error": "[2,7,2] != [1,8,1]"
+      }
+    ]
+  },
+  {
+    "protocol": "file",
+    "mode": "read",
+    "total": 45,
+    "passed": 44,
+    "caseParity": true,
+    "failures": [
+      {
+        "name": "f2-audit/epoch/transformed-source-cancels-queued-old-structure",
+        "ok": false,
+        "error": "1 != 0"
+      }
+    ]
+  },
+  {
+    "protocol": "http",
+    "mode": "write",
+    "total": 48,
+    "passed": 46,
+    "caseParity": true,
+    "failures": [
+      {
+        "name": "f2-audit/epoch/transformed-source-cancels-queued-old-structure",
+        "ok": false,
+        "error": "1 != 0"
+      },
+      {
+        "name": "f2-audit-ui/double-refresh-two-click-details-only-one-commit",
+        "ok": false,
+        "error": "[2,7,2] != [1,8,1]"
+      }
+    ]
+  },
+  {
+    "protocol": "http",
+    "mode": "read",
+    "total": 45,
+    "passed": 44,
+    "caseParity": true,
+    "failures": [
+      {
+        "name": "f2-audit/epoch/transformed-source-cancels-queued-old-structure",
+        "ok": false,
+        "error": "1 != 0"
+      }
+    ]
+  }
+]

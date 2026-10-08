@@ -1,0 +1,175 @@
+{
+  "status": "Focused rule evidence only; integration and freeze remain separate gates",
+  "passed": 23,
+  "total": 24,
+  "cases": [
+    {
+      "file": "f4-base-route-contracts.js",
+      "sha256": "e393ccdafedfe5135ca7172c9e6078ffa8666b54c9cfb1887120f3e2ab5995f8",
+      "ok": true,
+      "stdout": "PASS 35 exact real full-v1 base-route ledgers, natural cycles, snapshots, immediate lifecycle, capped listeners, summary, transform preservation and no RNG\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-adjacency-snapshot.js",
+      "sha256": "14e2eae56fd35b8f97d712c8d2e6e26e93244f144915f4a78a60d19d04b3ddb9",
+      "ok": true,
+      "stdout": "PASS phase5 adjacency-add before all structures; locked first target no death fallback, one stable resonance neighbor, late product conversion cannot retroactively qualify; exact ledgers/no RNG\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-age-order.js",
+      "sha256": "afce795f05da199e40af62245dfeb39bd8069f2efc85321670827f9529e72b09",
+      "ok": true,
+      "stdout": "PASS eight event A/B transactions, numeric differences, invalid target/cost/capacity/option, input rollback, duplicate confirm, boiler fallback. Expiry/effect windows remain separate coverage.\nPASS exact natural→calendar→fog→stitcher age/action order, UID/epoch/quota, skip naturally matured first, immediate callbacks, no RNG\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-appearance-cases.js",
+      "sha256": "b42a9107aa33397929e7f656718937c26782638bb153f0439ad0374effbb2be4",
+      "ok": true,
+      "stdout": "PASS 11 exact appearance/consume ledgers: row sparsity, different types, snapshot multiplier target, initial empty cells, base-only consumer reward and death callback\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-cargo-bridges.js",
+      "sha256": "bcf48d49164a53b6b282ce16eaea249adb7b52c9c14056b81e1f43beac46bf4d",
+      "ok": true,
+      "stdout": "PASS 10 exact transit majority/ties/non-persistence/no RNG and return-station actor adjacency/cargo qualification/final20/21 pool boundary cases\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-contract-behaviors.js",
+      "sha256": "cf1103fa3aac33f007f0f6d1eec1843512d37be8c7e3d4e94f74c35f510f542e",
+      "ok": true,
+      "stdout": "PASS 14 exact contract/growth/demand cases: threshold ±1, actual growth/cap30/echo immediate reward, initial remaining, advance opt-in once/UID/obligation persists/full-pool optional failure/READY-only atomic setting\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-copy-cases.js",
+      "sha256": "30fb6dbd14f7ed4489eed9c09e3841c99fba13d0384638d46d10ae2d240d2e92",
+      "ok": true,
+      "stdout": "PASS 9 exact copy/retention cases: three-template whitelist, no conditional/pressure extra, carbon +2 only legal copy, step1 epoch, no RNG, next-spin consume and invalidation\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-cycle-cases.js",
+      "sha256": "b8b58d76bde1582e31435bff115e157052a91aa0c65dc8fc831079613d406d13",
+      "ok": true,
+      "stdout": "PASS exact 64-symbol and 32-item metadata; beat cycle 3 and mechanism-based threshold 2, eight exact ledgers\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-dock-cases.js",
+      "sha256": "bf87396b4425eb56fef3714b0353b37247c1714e04f9ce11bd9951011cf3e023",
+      "ok": true,
+      "stdout": "PASS dock snapshot row diversity: self exclusion, same-type neighbor, duplicates, cap3\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-event-draw.js",
+      "sha256": "9cf1f067ff75d14add5ab2263fa43b0f132bf7c95dbe633cdd15667907211413",
+      "ok": true,
+      "stdout": "{\n  \"scope\": \"Exact scheduling replay, not probability/balance estimates\",\n  \"trials\": 128,\n  \"success\": 37,\n  \"failure\": 91,\n  \"noEligibilityNoRng\": true,\n  \"paid9and10NoEvent\": true,\n  \"cooldownAndCountCap\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-event-transactions.js",
+      "sha256": "1ef49600ac472965074e1803e4141238eca12bf33017de08fbc60eaf2ac7e13c",
+      "ok": true,
+      "stdout": "PASS eight event A/B transactions, numeric differences, invalid target/cost/capacity/option, input rollback, duplicate confirm, boiler fallback. Expiry/effect windows remain separate coverage.\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-event-windows.js",
+      "sha256": "cad63b036c83b67172fd2ef0b4f2d4c87dc011cf21537956728e54bcd09a5433",
+      "ok": false,
+      "stdout": "PASS eight event A/B transactions, numeric differences, invalid target/cost/capacity/option, input rollback, duplicate confirm, boiler fallback. Expiry/effect windows remain separate coverage.\n",
+      "stderr": "node:assert:152\r\n  throw new AssertionError(obj);\r\n  ^\r\n\r\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\r\n\r\n1 !== 0\r\n\r\n    at C:\\files\\code\\LuckLandlord\\tests\\gdd1\\f4-event-windows.js:27:143\r\n    at Object.<anonymous> (C:\\files\\code\\LuckLandlord\\tests\\gdd1\\f4-event-windows.js:14:30)\r\n    at Module._compile (node:internal/modules/cjs/loader:1812:14)\r\n    at Object..js (node:internal/modules/cjs/loader:1943:10)\r\n    at Module.load (node:internal/modules/cjs/loader:1533:32)\r\n    at Module._load (node:internal/modules/cjs/loader:1335:12)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\n    at node:internal/main/run_main_module:33:47 {\r\n  generatedMessage: true,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 1,\r\n  expected: 0,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+    },
+    {
+      "file": "f4-item-commit.js",
+      "sha256": "83b55cdd8a6aa9ce3cad70826fd4e3aae05a0ecd7dbcdeea1897ef411df0f73a",
+      "ok": true,
+      "stdout": "PASS eight event A/B transactions, numeric differences, invalid target/cost/capacity/option, input rollback, duplicate confirm, boiler fallback. Expiry/effect windows remain separate coverage.\nPASS exact skip1/3 grants and cap, successful-payment junk qualification, final audit statistics without token/event/choice grant\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-item-focused.js",
+      "sha256": "dd54bb6905c9897ec56ffdc28f2f54ce8628f47ea4fd3876610b14c0c8bad190",
+      "ok": true,
+      "stdout": "PASS 16 focused exact item ledgers and bounds; remaining item contracts explicitly open\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-item-lifecycle-boundaries.js",
+      "sha256": "618b826458ba2bc3b99b2125fd62bdfab4d557d30b2c27f082ce08aafa85b789",
+      "ok": true,
+      "stdout": "PASS 17 exact lifecycle item/pressure/age ledgers, stage quotas, consumption exclusions, threshold/fraction bounds and tagAdded gauge parent/RNG\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-item-row-draw.js",
+      "sha256": "6467271aed9ed9cd0d259bb2120452acd8066d63e6e7af4a1fb59a475736b48a",
+      "ok": true,
+      "stdout": "PASS 21 exact row/end-item/stage-frost and seeded draw cases: type diversity, sparse-row floors, first real tag history, no death fallback, stage2 quota, nursery28/29 eligibility, junk half/no-replacement and separate shuffle RNG\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-pressure-cases.js",
+      "sha256": "f3420d9b9793277ffb1a8d98ec09dfa3c412cc28aa06b13eaf762e93a5654535",
+      "ok": true,
+      "stdout": "PASS 16 exact pressure ledgers: pouch, surge, capped immediate index and non-recursion\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-profile-save.js",
+      "sha256": "38fe0b0893eb845c22a229bb8147c74e738e8b266b133c5f4a72612e755c8f2f",
+      "ok": true,
+      "stdout": "PASS independent full/slice storage keys, exact restore and previous, invalid/preview/write-fault import atomicity, old slice bytes unchanged\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-profile-save-boundaries.js",
+      "sha256": "e7325af8878ad0bbd942a5f6250e16e69528c0bbf0c38a3d8733a0fd28823130",
+      "ok": true,
+      "stdout": "PASS wrong-profile import before preview/write; both-profile reload, explicit rollback, synchronous preview/write faults; other and legacy keys unchanged\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-reservation-priority.js",
+      "sha256": "71f82ca02f3a103bfcb969cd302fcebf8658690e8794622c7a78988743978b11",
+      "ok": true,
+      "stdout": "PASS exact deferred lamp→jar→pin global2 priority, duplicate target no second slot/no compensation, successful draw consumes once\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-risk-cases.js",
+      "sha256": "47a48e34487a8dd73100e281e34b446ae4b672e59224505bdf64813b0b12f468",
+      "ok": true,
+      "stdout": "PASS 7 exact risk ledgers: 3/4 roll, loss clamp, shim then shawl, pollution unchanged, replacement extra -3 not destroy, isolated effect RNG\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-spire-cases.js",
+      "sha256": "1ce13bb35f06001b98d8534a0d629355567110130fac73463f2810e4e9fcc0b0",
+      "ok": true,
+      "stdout": "PASS five exact spire ledgers: insufficient, spend3, remainder, threshold exclusion, same-UID release once\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-stage-boundaries.js",
+      "sha256": "9df05087432e07e08bbed04330e7e54dce70b71b67c0e70aa83733cd3b1581b5",
+      "ok": true,
+      "stdout": "{\n  \"scope\": \"Explicit funded all-stage transaction fixture; not balance or natural victory\",\n  \"phase\": \"WON\",\n  \"spin\": 70,\n  \"payments\": [\n    {\n      \"stage\": 1,\n      \"spin\": 6,\n      \"payment\": 70\n    },\n    {\n      \"stage\": 2,\n      \"spin\": 12,\n      \"payment\": 125\n    },\n    {\n      \"stage\": 3,\n      \"spin\": 19,\n      \"payment\": 210\n    },\n    {\n      \"stage\": 4,\n      \"spin\": 26,\n      \"payment\": 320\n    },\n    {\n      \"stage\": 5,\n      \"spin\": 33,\n      \"payment\": 460\n    },\n    {\n      \"stage\": 6,\n      \"spin\": 40,\n      \"payment\": 630\n    },\n    {\n      \"stage\": 7,\n      \"spin\": 47,\n      \"payment\": 850\n    },\n    {\n      \"stage\": 8,\n      \"spin\": 54,\n      \"payment\": 1120\n    },\n    {\n      \"stage\": 9,\n      \"spin\": 62,\n      \"payment\": 1460\n    },\n    {\n      \"stage\": 10,\n      \"spin\": 70,\n      \"payment\": 1880\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "file": "f4-tag-cases.js",
+      "sha256": "fdca0428447f251ee07ebb64920242aad41fe78b6075cd0756262abd4d51de7d",
+      "ok": true,
+      "stdout": "PASS 9 exact temporary-tag ledgers: resonance priority, crystal fallback, no fixed-point propagation, cloth after preprocess, book once, two real additions vs native tag, pool/RNG unchanged\n",
+      "stderr": ""
+    }
+  ]
+}

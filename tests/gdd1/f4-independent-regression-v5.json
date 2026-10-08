@@ -1,0 +1,386 @@
+{
+  "scope": "Unchanged independent assertions, full and slice coexistence for F2",
+  "f1": {
+    "total": 38,
+    "passed": 38,
+    "cases": [
+      {
+        "name": "retest/preview/sync-undefined-clone-and-no-storage-read",
+        "ok": true
+      },
+      {
+        "name": "retest/preview/reject-promise-resolve",
+        "ok": true
+      },
+      {
+        "name": "retest/preview/reject-promise-reject",
+        "ok": true
+      },
+      {
+        "name": "retest/preview/reject-then-getter",
+        "ok": true
+      },
+      {
+        "name": "retest/preview/reject-function-thenable",
+        "ok": true
+      },
+      {
+        "name": "retest/preview/reject-value",
+        "ok": true
+      },
+      {
+        "name": "retest/preview/sync-throw-no-publication",
+        "ok": true
+      },
+      {
+        "name": "retest/ash/legal-age-0",
+        "ok": true
+      },
+      {
+        "name": "retest/ash/legal-age-1",
+        "ok": true
+      },
+      {
+        "name": "retest/ash/legal-age-2",
+        "ok": true
+      },
+      {
+        "name": "retest/ash/reject-age-3-every-entry",
+        "ok": true
+      },
+      {
+        "name": "retest/fog/legal-mist_pouch-r1",
+        "ok": true
+      },
+      {
+        "name": "retest/fog/legal-mist_pouch-r2",
+        "ok": true
+      },
+      {
+        "name": "retest/fog/legal-dew_lantern-r1",
+        "ok": true
+      },
+      {
+        "name": "retest/fog/legal-dew_lantern-r2",
+        "ok": true
+      },
+      {
+        "name": "retest/fog/reject-nonplant-age-bearing",
+        "ok": true
+      },
+      {
+        "name": "retest/fog/reject-plant-without-age",
+        "ok": true
+      },
+      {
+        "name": "retest/fog/cross-stage-preserves-remaining",
+        "ok": true
+      },
+      {
+        "name": "retest/fog/same-uid-mist-to-dew",
+        "ok": true
+      },
+      {
+        "name": "retest/fog/natural-maturity-does-not-decrement",
+        "ok": true
+      },
+      {
+        "name": "retest/fog/age-less-conversion-must-clear",
+        "ok": true
+      },
+      {
+        "name": "retest/fog/deletion-and-no-rebind",
+        "ok": true
+      },
+      {
+        "name": "retest/event_silent_bell/boundary-sp0",
+        "ok": true
+      },
+      {
+        "name": "retest/event_silent_bell/boundary-sp1",
+        "ok": true
+      },
+      {
+        "name": "retest/event_silent_bell/boundary-sp2",
+        "ok": true
+      },
+      {
+        "name": "retest/event_silent_bell/boundary-sp3",
+        "ok": true
+      },
+      {
+        "name": "retest/event_silent_bell/wrong-stage-clear-point",
+        "ok": true
+      },
+      {
+        "name": "retest/event_misprint_window/boundary-sp0",
+        "ok": true
+      },
+      {
+        "name": "retest/event_misprint_window/boundary-sp1",
+        "ok": true
+      },
+      {
+        "name": "retest/event_misprint_window/boundary-sp2",
+        "ok": true
+      },
+      {
+        "name": "retest/event_misprint_window/boundary-sp3",
+        "ok": true
+      },
+      {
+        "name": "retest/event_misprint_window/wrong-stage-clear-point",
+        "ok": true
+      },
+      {
+        "name": "retest/event_empty_manifest/boundary-sp0",
+        "ok": true
+      },
+      {
+        "name": "retest/event_empty_manifest/boundary-sp1",
+        "ok": true
+      },
+      {
+        "name": "retest/event_empty_manifest/boundary-sp2",
+        "ok": true
+      },
+      {
+        "name": "retest/event_empty_manifest/boundary-sp3",
+        "ok": true
+      },
+      {
+        "name": "retest/event_empty_manifest/wrong-stage-clear-point",
+        "ok": true
+      },
+      {
+        "name": "retest/fixed-window/transaction-clears-before-symbol-choice",
+        "ok": true
+      }
+    ],
+    "scope": "Independent F1 retest; non-F2 schema/save boundary probes"
+  },
+  "f2Audit": {
+    "total": 41,
+    "passed": 41,
+    "cases": [
+      {
+        "name": "f2-audit/age/fog-maturity-decrements-retained-reference",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/age/fog-last-use-removes-modifier",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/age/fog-offboard-neither-age-nor-charge",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/age/double-natural-maturity-calendar-quota-zero",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/age/ash-third-death-no-fog-binding",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/epoch/transformed-source-cancels-queued-old-structure",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/epoch/new-tide-listener-not-new-appearance",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/reservation/source-left-two-fixed-corners",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/reservation/delete-clears-only-target",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/causal/immediate-growth-before-next-natural-root",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/death/permission-only-own-amber",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/death/consume-destroy-parent-not-nonconsume-router",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/death/ordinary-listener-after-death-with-real-uid",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/pressure/cap5-increase-actual1-and-release18",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/pressure/no-mechanism-does-not-create-counter",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/generation/two-different-sources-one-key-third-skips",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/generation/200-consume-two-spawns-only-one-slot",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/multiplier/three-sources-positive-single-floor",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/multiplier/negative-single-final-floor-not-truncated",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/conservation/dead-item-add-zero-independent-rewards-remain",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/draw/20-pool-all19-shuffle-no-sampling",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/draw/200-pool20-selected39-draws-pool-preserved",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/pool/201-spin-rejected-before-rng",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/offer/triple-guarantee-refresh-preserves-deferred-product",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/offer/no-tokens-refresh-rollback-all-fields",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/offer/stale-window-same-revision-rejects",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/delete/last-uid-confirmation-preserves-pending",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/payment/negative-pending-clamps-cash-no-refund",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/payment/stage2-exact-with-new-instance-no-revenue",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/payment/stage2-short1-no-item-rng",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/revision/double-choose-old-command-rejected-atomic",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/item/setup-cooldown-no-rng-and-cap9-quota-reset",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/event/empty-eligible-no-probability-consumption",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/event/quoted-target-now-wrong-type-keeps-event",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/event/fog-cost4-exact-consumed-once",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/event/copper-199-to200-preserves-permanent-no-logs",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/event/brine-delete-no-token-or-runtime-destroy",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/import/preview-disposable-clone-before-single-write",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/import/invalid-before-preview-read-write",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/import/throw-preview-preserves-envelope-previous",
+        "ok": true
+      },
+      {
+        "name": "f2-audit/generic/renamed-all-symbol-ids-same-primitives",
+        "ok": true
+      }
+    ]
+  },
+  "f2Retest": {
+    "total": 12,
+    "passed": 12,
+    "cases": [
+      {
+        "name": "f2-retest/queued-cancel-preserves-five-rng-pressure-and-target",
+        "ok": true
+      },
+      {
+        "name": "f2-retest/new-type-listener-parent-and-attribution-exact",
+        "ok": true
+      },
+      {
+        "name": "f2-retest/new-type-never-reopens-injected-appearance",
+        "ok": true
+      },
+      {
+        "name": "f2-retest/multi-target-source-epoch-changes-after-first-consume-stops-second",
+        "ok": true
+      },
+      {
+        "name": "f2-retest/multi-target-source-dies-after-first-consume-stops-second",
+        "ok": true
+      },
+      {
+        "name": "f2-retest/death-permission-own-amber-one-reward-no-bystander",
+        "ok": true
+      },
+      {
+        "name": "f2-retest/dead-ordinary-listener-cannot-grow-after-second-event",
+        "ok": true
+      },
+      {
+        "name": "f2-retest/cancelled-old-effect-does-not-spend-item-quota-before-next-legal-event",
+        "ok": true
+      },
+      {
+        "name": "f2-retest/public-spin-real-draw-cancel-and-roundtrip-exact",
+        "ok": true
+      },
+      {
+        "name": "f2-retest/hard-listener-fault-rolls-back-whole-command-and-five-rng",
+        "ok": true
+      },
+      {
+        "name": "f2-retest/failed-empty-event-target-followed-by-legal-same-revision-command",
+        "ok": true
+      },
+      {
+        "name": "f2-retest/storage-failure-keeps-bytes-and-pending-then-retry-single-write",
+        "ok": true
+      }
+    ]
+  }
+}

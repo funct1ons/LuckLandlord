@@ -1,0 +1,261 @@
+{
+  "scope": "partial/full v3 preview; retain all seeds; not formal acceptance; not a substitute for full-sim-statistics.json",
+  "prefix": "full-sim-batch-v3-",
+  "files": 12,
+  "groups": {
+    "Random/holdout": {
+      "n": 1000,
+      "wins": 0,
+      "errors": 0,
+      "unfinished": 0,
+      "actions": {
+        "remove": 6722,
+        "spin": 44677,
+        "choose": 33505,
+        "reroll": 7370,
+        "item": 4242,
+        "skip": 11172,
+        "eventA": 946,
+        "eventB": 464,
+        "skipItem": 1426
+      },
+      "stageAtEnd": [
+        0,
+        0,
+        0,
+        1,
+        7,
+        37,
+        315,
+        559,
+        80,
+        1,
+        0
+      ],
+      "lostStage": [
+        0,
+        0,
+        0,
+        1,
+        7,
+        37,
+        315,
+        559,
+        80,
+        1,
+        0
+      ]
+    },
+    "Random/train": {
+      "n": 1000,
+      "wins": 0,
+      "errors": 0,
+      "unfinished": 0,
+      "actions": {
+        "remove": 6695,
+        "spin": 44383,
+        "choose": 33271,
+        "skip": 11112,
+        "skipItem": 1404,
+        "eventA": 884,
+        "item": 4222,
+        "reroll": 7257,
+        "eventB": 499
+      },
+      "stageAtEnd": [
+        0,
+        0,
+        0,
+        0,
+        13,
+        49,
+        307,
+        562,
+        68,
+        1,
+        0
+      ],
+      "lostStage": [
+        0,
+        0,
+        0,
+        0,
+        13,
+        49,
+        307,
+        562,
+        68,
+        1,
+        0
+      ]
+    },
+    "Synergy/holdout": {
+      "n": 1000,
+      "wins": 0,
+      "errors": 0,
+      "unfinished": 0,
+      "actions": {
+        "spin": 50535,
+        "choose": 26577,
+        "remove": 2650,
+        "item": 6503,
+        "reroll": 10438,
+        "skip": 23958,
+        "eventA": 1568,
+        "eventB": 93
+      },
+      "stageAtEnd": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        15,
+        478,
+        492,
+        14,
+        0
+      ],
+      "lostStage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        15,
+        478,
+        492,
+        14,
+        0
+      ]
+    },
+    "Synergy/train": {
+      "n": 1000,
+      "wins": 0,
+      "errors": 0,
+      "unfinished": 0,
+      "actions": {
+        "spin": 50882,
+        "choose": 26938,
+        "remove": 2794,
+        "item": 6553,
+        "reroll": 10429,
+        "skip": 23944,
+        "eventA": 1528,
+        "eventB": 106
+      },
+      "stageAtEnd": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        13,
+        429,
+        546,
+        11,
+        0
+      ],
+      "lostStage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        13,
+        429,
+        546,
+        11,
+        0
+      ]
+    },
+    "Value/holdout": {
+      "n": 1000,
+      "wins": 0,
+      "errors": 0,
+      "unfinished": 0,
+      "actions": {
+        "remove": 6809,
+        "spin": 53445,
+        "choose": 29010,
+        "item": 6909,
+        "reroll": 10903,
+        "skip": 24435,
+        "eventA": 1649,
+        "eventB": 106
+      },
+      "stageAtEnd": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        169,
+        751,
+        74,
+        4
+      ],
+      "lostStage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        169,
+        751,
+        74,
+        4
+      ]
+    },
+    "Value/train": {
+      "n": 1000,
+      "wins": 0,
+      "errors": 0,
+      "unfinished": 0,
+      "actions": {
+        "remove": 6872,
+        "spin": 53376,
+        "choose": 29107,
+        "item": 6901,
+        "reroll": 10759,
+        "skip": 24269,
+        "eventA": 1672,
+        "eventB": 113
+      },
+      "stageAtEnd": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        166,
+        767,
+        63,
+        3
+      ],
+      "lostStage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        166,
+        767,
+        63,
+        3
+      ]
+    }
+  }
+}

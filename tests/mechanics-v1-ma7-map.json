@@ -1,0 +1,487 @@
+{
+  "advisory": "MA-1 §7",
+  "rows": [
+    {
+      "id": "7.1.1",
+      "scenario": "三register@0/1/2，tide@6",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/A/three-registers-exact-limit-and-provenance"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.1.2",
+      "scenario": "同盘池数组逆序、保持board/UID位置",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/A/pool-order-and-next-resolve-do-not-change-winners"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.1.3",
+      "scenario": "两register→tide，本来已有resonance+crystal（合成定义）",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/A/native-dual-tags-no-added-still-two-multipliers"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.1.4",
+      "scenario": "不同定义独立（测试A来源三枚×3/2，B来源三枚×2，共同作用base4目标）",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/A/different-definitions-and-targets-have-independent-caps",
+        "mechanics-contract/A/identical-ratios-different-definitions-remain-independent"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.1.5",
+      "scenario": "同定义三源、两个base4目标，scope board all",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/A/different-definitions-and-targets-have-independent-caps"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.1.6",
+      "scenario": "同源同定义同目标由两个成功事件再触发",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/A/same-source-events-dedupe-with-independent-effectIds"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.1.7",
+      "scenario": "两次resolve同盘 / command→choose→次轮",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/A/command-choose-next-round-resets-limits",
+        "mechanics-contract/A/pool-order-and-next-resolve-do-not-change-winners"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.1.8",
+      "scenario": "合成负base=-1目标，三同定义×3/2",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/A/three-sources-negative-floor"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.1.9",
+      "scenario": "合成同定义tag第三源倍率失败但新增另一标签",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/A/third-source-tag-is-retained-when-ratio-is-skipped"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.1.10",
+      "scenario": "死源先于倍率阶段死亡",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/A/dead-before-multiplier-does-not-take-source-quota",
+        "mechanics-contract/A/multiplier-already-applied-survives-owner-death"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.1.11",
+      "scenario": "legacy mirror@0+battery@1",
+      "status": "covered",
+      "cases": [
+        "route-g/copy/legacy-mirror-unmarked-battery-compatible",
+        "route-g/offset_reader/unmarked-legacy-battery-not-formal-whitelist"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.1.12",
+      "scenario": "legacy含warden的fixture",
+      "status": "covered",
+      "cases": [
+        "复杂fixture 自毁哨因果链",
+        "复杂fixture 永久成长双乘区"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.2.1",
+      "scenario": "三demand@0/1/2、现金0、payment30、spinsRemaining2",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/B/three-demand-soft-budget-preserves-values"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.2.2",
+      "scenario": "一个matrix源两个不同spawn定义",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/B/single-uid-two-spawn-effects-and-independent-uid"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.2.3",
+      "scenario": "同定义两个成功、第三失败；另一定义第四源同产物",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/B/different-spawn-definition-not-merged-by-product-type"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.2.4",
+      "scenario": "tong@0、ash@1/2/3",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/B/ash-only-consumed-owner-spawns"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.2.5",
+      "scenario": "三个真正被耗ash（分别被三个消费者）",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/B/three-consumed-ash-two-spawns-all-consume-rewards"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.2.6",
+      "scenario": "valve@0、amber@1",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/B/amber-owned-death-reward-and-payload"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.2.7",
+      "scenario": "runner@0、amber@1",
+      "status": "covered",
+      "cases": [
+        "cultivation/amber_frond/consumer-pays-independent-four",
+        "cultivation/amber_frond/consumer-base-separate"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.2.8",
+      "scenario": "原池200，其中deep_still成功耗一mist再生成",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/B/pool-200-consumed-mist-tombstone-frees-capacity"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.2.9",
+      "scenario": "池200且demand无删除释放空间",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/B/full-pool-optional-spawn-does-not-use-id"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.2.10",
+      "scenario": "池199，两个合法可选生成源且无死亡",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/B/pool-199-first-success-second-pool-full"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.2.11",
+      "scenario": "legacy20 seedbox各3 spawn定义",
+      "status": "covered",
+      "cases": [
+        "生成预算超限原子回滚"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.2.12",
+      "scenario": "已死echo_plate随后邻居grow2",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/B/dead-owner-echo-does-not-listen-without-permission",
+        "mechanics-contract/B/explicit-death-permission-self-snapshot-works"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.2.13",
+      "scenario": "一个普通tide直抽、另一个target转换成tide",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/B/direct-tide-not-rewarded-by-other-target-conversion"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.3.1",
+      "scenario": "tower@0、valve@1初压1、wick@2",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/C/tower-sees-injection-before-own-threshold",
+        "mechanics-contract/C/tower-and-age-position-swaps-preserve-checkpoints"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.3.2",
+      "scenario": "同盘valve初压4",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/C/natural-threshold-excluded-from-tower"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.3.3",
+      "scenario": "两塔、valve初压3且无fuel",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/C/two-towers-only-first-releases-three-pressure"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.3.4",
+      "scenario": "塔的首邻居surge当前2、第二合法valve3",
+      "status": "covered",
+      "cases": [
+        "audit-pressure-retest.js::P37 release excludes self-threshold and low pressure before legal UID"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.3.5",
+      "scenario": "pressure_pouch初压3+一个无加值matrix倍率源×2",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/C/pouch-independent-ten-is-not-multiplied"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.3.6",
+      "scenario": "reserve初压4吃wick",
+      "status": "covered",
+      "cases": [
+        "distillation/reserve_facet/release-boundary",
+        "distillation/reserve_facet/three-independent-reserves"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.3.7",
+      "scenario": "mist初age1@0、stitcher@1、root@2",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/C/natural-and-extra-age-crossing-is-immediate",
+        "mechanics-contract/C/tower-and-age-position-swaps-preserve-checkpoints"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.3.8",
+      "scenario": "cloudy初age2、permanent4",
+      "status": "covered",
+      "cases": [
+        "route-g/cloudy_negative/third-preserves-identity-clears-counters-no-appear"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.3.9",
+      "scenario": "初始facet后被转battery再让reader复制",
+      "status": "covered",
+      "cases": [
+        "route-g/copy/snapshot-retains-numeric-template-after-conversion"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.3.10",
+      "scenario": "grow请求3、原permanent29、邻echo_plate",
+      "status": "covered",
+      "cases": [
+        "route-g/echo_plate/cap-truncation-actual-one-not-requested-three",
+        "route-g/growth/at-cap-no-event-no-legacy-lens-multiply"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.3.11",
+      "scenario": "A→B→A与已排A动作",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/C/return-to-visited-type-rejected-old-source-queue-stale"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.3.12",
+      "scenario": "预处理获标→变型→织布",
+      "status": "covered",
+      "cases": [
+        "route-g/alignment_cloth/tag-history-not-transformed-final-tags",
+        "route-g/phase_chip/previous-turn-tag-is-not-current-turn-tag"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.4.1",
+      "scenario": "cash23、G现有七符号total37：spin后cash23/pending37；save/load任意次不变；非法choose全状态/两槽不变；合法choose→cash60/pendingnull；当前revision再choose也拒绝。",
+      "status": "covered",
+      "cases": [
+        "route-g/command/save-restore-pending-once-with-g-tags-copy-growth"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.4.2",
+      "scenario": "final stage配额651：cash650+pending1→WON/cash0；cash651+pending(-1)→LOST/cash650；cash0+pending(-1)→LOST/cash0。付款前必须先提交当前轮，不早付也不复活。",
+      "status": "covered",
+      "cases": [
+        "audit-pressure-retest.js::P11 final successful payment uses committed current spin cash",
+        "audit-pressure-retest.js::P29 final old sufficient cash becomes insufficient after negative income",
+        "audit-pressure-retest.js::P13 final negative income clamps cash zero before LOST"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.4.3",
+      "scenario": "signed pending ±1e9仍可导入/提交；cash0+1e9→1e9；cash5-1e9→0。cash5+1e9越现金硬上限时整个choose失败、pending保留，不偷偷截成1e9。",
+      "status": "new",
+      "cases": [
+        "pressure-transaction/signed-pending-boundary--1000000000",
+        "pressure-transaction/signed-pending-boundary-1000000000",
+        "mechanics-contract/D/choose-cash-overflow-rollback-and-full-pool-skip"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.4.4",
+      "scenario": "pending为null/string/object/fraction/NaN/Infinity/abs>1e9/缺失/不等last.total，SYMBOL_CHOICE均拒绝；其他稳定phase非null拒绝；旧未决缺字段不从last“修复”。",
+      "status": "covered",
+      "cases": [
+        "pressure-transaction/pending-damaged-0",
+        "pressure-transaction/pending-damaged-11",
+        "pressure-transaction/legacy-undecided-rejected",
+        "pressure-transaction/settled-phase-READY",
+        "pressure-transaction/settled-phase-ITEM_CHOICE",
+        "pressure-transaction/settled-phase-WON",
+        "pressure-transaction/settled-phase-LOST"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.4.5",
+      "scenario": "spin硬预算失败与choose满池添加失败均返回原状态；skip满池仍合法且单次入账。reroll与remove不结清pending。",
+      "status": "new",
+      "cases": [
+        "生成预算超限原子回滚",
+        "mechanics-contract/D/choose-cash-overflow-rollback-and-full-pool-skip",
+        "刷新/删除保存不刷候选"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.4.6",
+      "scenario": "decode缺settings/revision、非法payment/phase余轮/重复reservation/nextId冲突均拒绝；拒绝路径不写任一存储key、不改变UI state。",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/D/strict-state-invalid-boundaries-reject-before-clone"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.4.7",
+      "scenario": "主档坏/缺→合法backup恢复；主备都坏→可解释失败，不覆盖两槽。已存pending恢复仍只入账一次。",
+      "status": "covered",
+      "cases": [
+        "pressure-transaction/primary-backup-strict-and-unchanged",
+        "audit-pressure-transaction-retest.js::both-primary-and-backup-corrupt",
+        "audit-pressure-transaction-retest.js::primary-missing-backup-valid"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.4.8",
+      "scenario": "普通store：backup写失败→主不动；backup成功主写失败→保留合法旧主与旧主副本（沿现有语义）。这项不假装满足导入强原子。",
+      "status": "covered",
+      "cases": [
+        "备份写入失败不提交新档",
+        "route-g/command/save-main-write-failure-keeps-valid-pending-backup"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.4.9",
+      "scenario": "import：验证异常、预渲染异常、getItem异常、序列化/容量异常、最后setItem异常，各自独立注入，内存与current/backup原始字符串完全不变。旧current=B、backup=A为必须夹具，不能两槽一开始相同掩盖写变。",
+      "status": "new",
+      "cases": [
+        "mechanics-ui/import-validation",
+        "mechanics-ui/import-preview-render",
+        "mechanics-ui/import-getItem",
+        "mechanics-ui/import-serialization",
+        "mechanics-ui/import-capacity",
+        "mechanics-ui/import-setItem"
+      ],
+      "notApplicable": false
+    },
+    {
+      "id": "7.4.10",
+      "scenario": "import成功current封套=C/previous=B、backup仍A；重启load=C；人为损坏current内容后可回退B；再损坏previous回退A；每个有效pending都不重算。后续普通store应识别封套为有效旧档。",
+      "status": "new",
+      "cases": [
+        "mechanics-contract/D/envelope-rotation-fallback-and-storage-faults",
+        "mechanics-contract/D/ordinary-store-rotates-valid-envelope-current",
+        "mechanics-contract/D/pending-envelope-current-previous-backup-never-recomputes"
+      ],
+      "notApplicable": false
+    }
+  ],
+  "totalRows": 47,
+  "legacyCases": 475,
+  "mechanicsCases": 46,
+  "uiFaultCases": 6,
+  "migrations": {
+    "cultivation/amber_frond/consumer-pays-independent-four": {
+      "old": 10,
+      "new": 14,
+      "total": 15,
+      "basis": "approved amber target reward correction"
+    },
+    "cultivation/amber_frond/consumer-base-separate": {
+      "old": 10,
+      "new": 14,
+      "basis": "approved amber target reward correction"
+    }
+  },
+  "knownHistoricalConflicts": [
+    "audit-recycling.js/dead-listener-target-snapshot: formal dead owner without explicit permission is now rejected; corrected positive/negative cases are §7.2.12.",
+    "audit-cargo.js/switch_lamp/invalid-uid-clears-on-normal-resolve and audit-cargo-retest.js/reservation/runtime-invalid-record-is-cleaned: malformed reservation is rejected before clone; legitimate remove/consume/next-spin preservation is mechanics-contract/D/legal-reservation-remove-consume-next-spin-retention."
+  ],
+  "limitations": [
+    "Independent audit case citations are separate-process evidence; UI fault cases run real FogUI in Edge smoke, not Node DOM emulation.",
+    "Historical rule-changing FAILs remain FAIL; they are not counted as all-green audits."
+  ]
+}

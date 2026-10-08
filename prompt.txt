@@ -1,0 +1,3411 @@
+你现在负责从零设计并实现一款完整、可玩的 PC 单机 Roguelike 构筑策略游戏。
+
+游戏核心设计高度参考《Luck be a Landlord》这一类：
+
+**老虎机 + 符号构筑 + 随机选择 + Combo + 阶段性债务/租金压力 + Roguelike 重开。**
+
+但不要制作简单的老虎机模拟器。
+
+真正的核心应该是：
+
+> 玩家一开始几乎无法控制随机结果；
+>
+> 随着不断选择符号、删除垃圾符号、获得道具、构建组合，
+>
+> 玩家逐渐把“随机老虎机”变成一台按照自己策略运行的收益机器。
+
+这是一款：
+
+**随机性提供问题，构筑负责解决问题**
+
+的策略游戏。
+
+参考《Luck be a Landlord》的设计思想，但不得直接复制其：
+
+- 游戏名称
+- 美术
+- UI
+- 文本
+- 具体符号名称
+- 图标
+- 音效
+- 独有事件
+- 独有道具
+- 原版数值表
+
+核心玩法机制可以借鉴，但所有具体内容应原创。
+
+这是一款纯单机、虚拟货币游戏：
+
+**不得包含真钱充值、提现、真实赌博、联网博彩等功能。**
+
+---
+
+# 一、最终目标
+
+开发一个：
+
+**小体量，但完成度很高，可以连续玩很多局的 PC 单机 Roguelike 游戏。**
+
+最终游戏应该具有：
+
+- 强烈的“一局再来一次”动力
+- 大量符号协同
+- 清晰的构筑路线
+- 明显的成长曲线
+- 爆炸式 Combo
+- 有压力的阶段目标
+- 很好的数字反馈
+- 漂亮的 UI 和动画
+- 足够好的平衡性
+- 很低的运行环境要求
+
+不要停留在：
+
+> 点击 Spin → 随机金币 → 再点击 Spin
+
+这种老虎机 Demo。
+
+---
+
+# 二、技术原则
+
+最重要的工程原则：
+
+> 轻依赖、轻环境、完全离线、容易维护。
+
+使用：
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- SVG
+- Canvas（仅在真正适合动画/粒子效果时使用）
+- Web Audio API
+- localStorage
+- 可选 PWA
+
+原则上禁止：
+
+- React
+- Vue
+- Angular
+- Electron
+- Unity
+- Godot
+- npm 运行依赖
+- Node 后端
+- 数据库
+- 在线 API
+- CDN
+- 大型 UI 库
+- 大型动画库
+
+最终游戏应该：
+
+```text
+双击/打开网页即可玩
+```
+
+或者：
+
+```powershell
+python -m http.server 8000
+```
+
+即可运行。
+
+Python 只能作为可选开发服务器，不能成为游戏运行依赖。
+
+---
+
+# 三、平台
+
+优先针对：
+
+```text
+Windows PC
+Chrome
+Edge
+```
+
+主要分辨率：
+
+```text
+1366×768
+1920×1080
+2560×1440
+```
+
+这是 PC 游戏。
+
+不要简单把手机竖屏 UI 放大。
+
+充分利用横向屏幕。
+
+---
+
+# 四、原创世界观
+
+请自行设计游戏名称和世界观。
+
+可以采用类似：
+
+> 玩家欠下一笔巨额债务。
+>
+> 某天在廉价出租屋里得到一台奇怪的旧老虎机。
+>
+> 机器每运行一次都会生成不同的东西。
+>
+> 玩家发现，只要不断改装机器、加入新的符号并建立特殊组合，就可能产生越来越高的收益。
+>
+> 但债主会定期上门。
+>
+> 每一次付款期限都比上一次更加困难。
+
+可以是：
+
+- 房租
+- 债务
+- 贷款
+- 公司业绩要求
+- 星际能源税
+- 魔法契约
+- 黑市债务
+
+具体主题自行原创。
+
+风格可以：
+
+**轻松、荒诞、略带黑色幽默。**
+
+不要需要长剧情。
+
+---
+
+# 五、核心循环
+
+整个游戏必须围绕：
+
+```text
+Spin
+ ↓
+老虎机结算
+ ↓
+获得金币
+ ↓
+从随机候选中选择一个新符号
+ ↓
+修改自己的符号池
+ ↓
+继续 Spin
+ ↓
+产生更复杂 Combo
+ ↓
+达到付款期限
+ ↓
+支付债务
+ ↓
+获得道具 / 特殊奖励
+ ↓
+进入下一阶段
+ ↓
+压力越来越大
+```
+
+最终：
+
+```text
+完成所有债务阶段
+→
+获得胜利
+```
+
+或者：
+
+```text
+无法付款
+→
+本局结束
+```
+
+---
+
+# 六、老虎机盘面
+
+推荐默认：
+
+```text
+5 × 4
+```
+
+共：
+
+```text
+20 个位置
+```
+
+每次 Spin：
+
+从玩家当前拥有的 Symbol Pool 中抽取符号填充盘面。
+
+重要：
+
+老虎机视觉上可以像老虎机，
+
+但内部机制实际上更接近：
+
+```text
+Deck Builder
+```
+
+玩家的 Symbol Pool 就相当于：
+
+```text
+牌组
+```
+
+如果玩家拥有：
+
+```text
+27 个符号
+```
+
+每次随机抽其中：
+
+```text
+20 个
+```
+
+显示。
+
+因此：
+
+增加一个垃圾符号，会降低优质符号出现概率。
+
+删除垃圾符号本身就是强力操作。
+
+---
+
+# 七、一局游戏的基础节奏
+
+建议：
+
+```text
+每个债务阶段约 5～10 次 Spin
+```
+
+例如：
+
+```text
+第一阶段
+6 Spins
+需要支付 40
+
+第二阶段
+7 Spins
+需要支付 90
+
+第三阶段
+7 Spins
+需要支付 180
+
+第四阶段
+8 Spins
+需要支付 350
+
+……
+```
+
+不要直接采用固定表。
+
+需要通过模拟调整。
+
+整局时间目标：
+
+```text
+20～40 分钟
+```
+
+熟练玩家：
+
+```text
+15～25 分钟
+```
+
+---
+
+# 八、Spin 的爽感
+
+Spin 是游戏最频繁的操作。
+
+必须做好。
+
+一次 Spin 应该：
+
+```text
+点击 SPIN
+↓
+滚轮/卡槽快速运动
+↓
+逐列停止
+↓
+基础收益出现
+↓
+Combo 开始触发
+↓
+符号高亮
+↓
+金币飞出
+↓
+倍率计算
+↓
+总收益不断跳涨
+↓
+最终数字定格
+```
+
+普通 Spin：
+
+```text
+约 1～2 秒
+```
+
+大型 Combo：
+
+允许更长。
+
+但必须提供：
+
+```text
+快速动画
+跳过动画
+```
+
+选项。
+
+高手不能被动画拖慢。
+
+---
+
+# 九、最关键设计原则
+
+玩家必须经历：
+
+```text
+弱随机
+↓
+形成方向
+↓
+逐渐构筑
+↓
+Combo 成型
+↓
+收益明显提升
+↓
+寻找更强协同
+↓
+机器接近失控
+↓
+巨大 Combo
+```
+
+前期：
+
+```text
+10
+12
+9
+15
+```
+
+中期：
+
+```text
+35
+48
+70
+```
+
+后期可能：
+
+```text
+320
+850
+2,400
+```
+
+优秀构筑甚至可能产生：
+
+```text
+10,000+
+```
+
+这种指数式增长非常重要。
+
+但是：
+
+不能无脑增长。
+
+玩家必须通过正确构筑才能做到。
+
+---
+
+# 十、Symbol 系统
+
+第一版正式内容建议：
+
+```text
+60～90 个 Symbol
+```
+
+至少 60 个。
+
+不要为了数量制造 100 个只有：
+
+```text
++1
++2
++3
+```
+
+区别的符号。
+
+宁可：
+
+```text
+65 个有明显互动的 Symbol
+```
+
+也不要：
+
+```text
+150 个无聊符号。
+```
+
+---
+
+# 十一、Symbol 基础属性
+
+每个 Symbol 至少具有：
+
+```javascript
+{
+    id,
+    name,
+    rarity,
+    tags,
+    description,
+    baseValue,
+    icon,
+
+    triggers,
+    effects
+}
+```
+
+例如：
+
+```text
+名称：奶酪
+
+基础收益：1
+
+标签：
+Food
+Dairy
+
+效果：
+如果邻近 Mouse，
+Mouse 消耗 Cheese，
+Mouse 本次收益 +8。
+```
+
+注意：
+
+这只是示例。
+
+正式内容自行原创。
+
+---
+
+# 十二、稀有度
+
+建议：
+
+```text
+Common
+Uncommon
+Rare
+Epic
+```
+
+必要时增加：
+
+```text
+Special
+```
+
+不同阶段候选概率不同。
+
+不要简单：
+
+```text
+稀有 = 数字更高
+```
+
+高级符号更应该体现：
+
+```text
+特殊机制
+构筑核心
+高协同性
+```
+
+---
+
+# 十三、符号设计类别
+
+必须存在多种不同机制。
+
+至少覆盖以下类别。
+
+## 1. 基础生产者
+
+例如：
+
+```text
+每次出现 +1
+每次出现 +2
+```
+
+用途：
+
+前期稳定收入。
+
+---
+
+## 2. 邻接强化
+
+例如：
+
+```text
+每邻近一个植物，+2
+```
+
+或者：
+
+```text
+使相邻机器类符号收益 ×2
+```
+
+---
+
+## 3. 消耗型
+
+例如：
+
+```text
+猫吃鱼
+矿工开采矿石
+厨师使用食材
+盗贼偷走宝石
+```
+
+消耗另一个符号获得高收益。
+
+---
+
+## 4. 成长型
+
+例如：
+
+```text
+种子
+↓
+幼苗
+↓
+植物
+↓
+结果
+```
+
+需要若干 Spin 才成长。
+
+---
+
+## 5. 转换型
+
+例如：
+
+```text
+矿石
+→
+宝石
+```
+
+或者：
+
+```text
+牛奶
+→
+奶酪
+```
+
+---
+
+## 6. Destroy 型
+
+某些符号完成作用后：
+
+```text
+自我销毁
+```
+
+或：
+
+```text
+销毁其他符号
+```
+
+这可以帮助压缩牌池。
+
+---
+
+## 7. 永久成长型
+
+例如：
+
+```text
+每吃掉一个水果
+永久 +1
+```
+
+这是非常重要的 Build Around 机制。
+
+---
+
+## 8. 倍率型
+
+例如：
+
+```text
+相邻符号收益 ×2
+```
+
+或者：
+
+```text
+本轮所有 Technology 标签 ×1.5
+```
+
+倍率不能太泛滥。
+
+---
+
+## 9. 复制型
+
+例如：
+
+```text
+复制邻近符号效果
+```
+
+强度高。
+
+应放在高稀有度。
+
+---
+
+## 10. Wildcard
+
+可以：
+
+```text
+临时视为多个 Tag
+```
+
+产生复杂 Combo。
+
+---
+
+## 11. 风险型
+
+例如：
+
+```text
+80% +5
+20% -10
+```
+
+或者：
+
+```text
+连续存活越久收益越高
+但有概率消失
+```
+
+---
+
+## 12. 条件型
+
+例如：
+
+```text
+如果现金 < 50
+收益 ×3
+```
+
+或者：
+
+```text
+如果本轮没有重复 Symbol
+额外 +15
+```
+
+---
+
+## 13. Debuff / Junk
+
+例如：
+
+```text
+垃圾
+债务
+诅咒
+故障
+```
+
+占据 Symbol Pool。
+
+玩家需要想办法删除或利用它们。
+
+---
+
+# 十四、Tags 系统
+
+建立统一 Tags。
+
+例如：
+
+```text
+Food
+Animal
+Plant
+Human
+Machine
+Gem
+Magic
+Nature
+Wealth
+Tool
+Junk
+```
+
+互动尽量使用：
+
+```text
+Tags
+```
+
+而不是大量：
+
+```text
+if symbol === "apple"
+```
+
+这样以后增加内容方便很多。
+
+例如：
+
+```text
+Chef:
+所有邻近 Food +3
+```
+
+而不是为每一个食物单独写逻辑。
+
+---
+
+# 十五、Synergy 是游戏灵魂
+
+设计 Symbol 时不能单独考虑。
+
+应该构建：
+
+```text
+Synergy Graph
+```
+
+至少形成：
+
+```text
+8～12 条明显 Build 路线。
+```
+
+例如：
+
+### Build A：农场
+
+```text
+Seed
+→
+Plant
+→
+Fruit
+→
+Farmer
+→
+Market
+```
+
+### Build B：矿业
+
+```text
+Ore
+→
+Miner
+→
+Gem
+→
+Jeweler
+→
+Vault
+```
+
+### Build C：动物
+
+```text
+Food
+→
+Animal
+→
+Breeder
+```
+
+### Build D：机械
+
+```text
+Gear
+→
+Machine
+→
+Engineer
+→
+Factory
+```
+
+### Build E：魔法
+
+```text
+Rune
+→
+Mage
+→
+Crystal
+```
+
+以上仅是结构示例。
+
+请自行原创具体内容。
+
+---
+
+# 十六、避免“强制套装”
+
+Build 不应该意味着：
+
+```text
+只收同一种标签即可。
+```
+
+好的构筑应该允许：
+
+```text
+Farm + Food
+Machine + Gem
+Animal + Magic
+```
+
+出现跨体系 Combo。
+
+目标是产生：
+
+> “等等，这两个东西居然能一起用！”
+
+这种发现感。
+
+---
+
+# 十七、每次 Spin 后的选择
+
+普通情况下，每次 Spin 后：
+
+随机出现：
+
+```text
+3 个 Symbol
+```
+
+玩家可以：
+
+```text
+选择一个
+```
+
+或者：
+
+```text
+Skip
+```
+
+必须允许 Skip。
+
+否则后期会被迫污染自己的 Symbol Pool。
+
+---
+
+# 十八、Reroll
+
+玩家拥有有限：
+
+```text
+Reroll Token
+```
+
+可以重新生成候选。
+
+例如：
+
+```text
+♻ ×2
+```
+
+Reroll 是重要资源。
+
+不要无限免费刷新。
+
+---
+
+# 十九、Remove Token
+
+存在：
+
+```text
+Remove Token
+```
+
+用于永久删除一个 Symbol。
+
+这是极其重要的构筑资源。
+
+因为：
+
+```text
+减少垃圾
+=
+提高核心 Combo 抽取概率
+```
+
+UI 中必须让玩家明确理解这一点。
+
+---
+
+# 二十、Items / Relics
+
+除了 Symbol，还必须有独立：
+
+```text
+Item
+```
+
+系统。
+
+建议：
+
+```text
+30～50 个 Item
+```
+
+Item 不进入老虎机。
+
+而是在整局游戏中持续生效。
+
+例如：
+
+```text
+所有 Animal +1
+
+每第五次 Spin 获得 10
+
+第一个被销毁的 Symbol 收益 ×3
+
+Common Symbol 出现概率降低
+
+拥有少于 20 个 Symbol 时，全局 +10%
+```
+
+注意：
+
+Item 应该改变规则。
+
+不要全部只是：
+
+```text
++5%收益。
+```
+
+---
+
+# 二十一、阶段奖励
+
+每完成一次债务：
+
+玩家从：
+
+```text
+3 个 Item
+```
+
+中选择一个。
+
+某些阶段可以奖励：
+
+```text
+Reroll Token
+Remove Token
+特殊 Symbol
+特殊 Item
+```
+
+因此债务阶段同时承担：
+
+```text
+压力节点
++
+成长节点
+```
+
+两个作用。
+
+---
+
+# 二十二、债务系统
+
+债务/房租是游戏的节奏控制器。
+
+UI 中始终明显显示：
+
+```text
+距离付款：5 Spins
+
+目标：120
+当前现金：83
+```
+
+随着最后几次 Spin 临近：
+
+视觉和音效增加少量压力。
+
+例如：
+
+```text
+最后 3 Spin
+```
+
+开始明显提示。
+
+但不要烦人。
+
+---
+
+# 二十三、付款规则
+
+到期限时：
+
+如果：
+
+```text
+cash >= payment
+```
+
+则：
+
+```text
+扣除 payment
+→
+进入下一阶段
+```
+
+否则：
+
+```text
+Run Over
+```
+
+玩家失败。
+
+不要允许无限延期。
+
+---
+
+# 二十四、Risk / Reward
+
+游戏中必须有一些真正需要判断的风险机制。
+
+例如：
+
+```text
+高收益但会生成 Junk
+```
+
+```text
+每次 +10，但 10% 概率永久消失
+```
+
+```text
+收益翻倍，但下一次付款增加
+```
+
+```text
+立即获得 50，但加入 3 个 Debt Symbol
+```
+
+这种：
+
+```text
+现在变强
+vs
+未来风险
+```
+
+应该大量存在。
+
+---
+
+# 二十五、特殊商店
+
+可以加入轻量商店。
+
+但不要让商店破坏核心构筑。
+
+例如每个债务阶段后：
+
+```text
+黑市商店
+```
+
+随机出售：
+
+```text
+Remove Token
+Reroll Token
+特殊 Item
+一次性升级
+```
+
+价格很贵。
+
+玩家需要考虑：
+
+```text
+花钱变强
+vs
+留钱交债
+```
+
+---
+
+# 二十六、事件系统
+
+可以设计：
+
+```text
+20～30 个随机事件
+```
+
+但不要过度。
+
+例如：
+
+```text
+下一阶段 Rare 概率提高
+```
+
+```text
+债主提高本阶段付款金额，
+但奖励额外 Item
+```
+
+```text
+机器发生故障：
+随机加入一个 Junk
+```
+
+```text
+获得神秘包裹：
+三选一特殊 Symbol
+```
+
+事件应增加变化。
+
+不能让结果主要由事件决定。
+
+---
+
+# 二十七、Effect Engine
+
+这是整个工程最重要的技术部分之一。
+
+禁止把所有逻辑写成：
+
+```javascript
+if (...) {
+   ...
+}
+else if (...) {
+   ...
+}
+```
+
+堆成巨大函数。
+
+建立通用：
+
+```text
+Effect Resolver
+```
+
+模型。
+
+每个 Spin：
+
+```text
+1. Roll Board
+2. 建立 Board State
+3. 初始化基础收益
+4. 收集 Trigger
+5. 加入 Effect Queue
+6. 顺序解析 Effect
+7. Effect 可以生成新的 Trigger
+8. 继续解析
+9. 直到 Queue 为空
+10. Final Multiplier
+11. 更新金币
+12. 生成动画事件
+```
+
+---
+
+# 二十八、Trigger Queue
+
+必须有：
+
+```text
+Trigger Queue
+```
+
+明确处理触发顺序。
+
+例如：
+
+```text
+ON_SPIN
+ON_APPEAR
+ON_ADJACENT
+ON_CONSUME
+ON_DESTROY
+ON_TRANSFORM
+ON_GAIN
+ON_END_SPIN
+```
+
+必须明确：
+
+```text
+什么时候执行
+谁先执行
+谁后执行
+```
+
+否则后期 Combo 很容易出现 Bug。
+
+---
+
+# 二十九、防止无限循环
+
+例如：
+
+```text
+A 触发 B
+B 触发 C
+C 又触发 A
+```
+
+必须有保护。
+
+至少：
+
+```text
+MAX_TRIGGER_DEPTH
+MAX_EFFECTS_PER_SPIN
+```
+
+如果发现异常：
+
+开发环境报告。
+
+正式环境不能卡死浏览器。
+
+---
+
+# 三十、结算顺序
+
+为所有效果定义稳定规则。
+
+例如：
+
+```text
+基础值
+↓
+固定加法
+↓
+邻接效果
+↓
+消耗/转换
+↓
+倍率
+↓
+全局 Modifier
+↓
+最终奖励
+```
+
+具体顺序由你设计。
+
+但是：
+
+**一旦确定必须统一。**
+
+不能不同 Symbol 偷偷采用不同计算逻辑。
+
+---
+
+# 三十一、动画与逻辑解耦
+
+重要：
+
+游戏逻辑不能依赖动画完成才能算正确。
+
+正确结构：
+
+```text
+Game Engine
+↓
+生成 Resolution Log
+↓
+UI 播放 Resolution Log
+```
+
+例如：
+
+```javascript
+[
+  {type:"highlight", symbolId:"cat-2"},
+  {type:"consume", source:"cat-2", target:"fish-1"},
+  {type:"gain", amount:8},
+  {type:"destroy", target:"fish-1"}
+]
+```
+
+UI 只是重放。
+
+这样才能：
+
+```text
+快速模式
+跳过动画
+自动测试
+```
+
+---
+
+# 三十二、Deterministic RNG
+
+必须实现：
+
+```text
+Seeded RNG
+```
+
+禁止核心游戏逻辑直接使用：
+
+```javascript
+Math.random()
+```
+
+一局创建：
+
+```text
+Seed
+```
+
+例如：
+
+```text
+MACHINE-493821
+```
+
+所有：
+
+```text
+Roll
+Symbol Choice
+Item Choice
+Event
+```
+
+都基于这个 RNG。
+
+目的：
+
+```text
+复现 Bug
+分享 Seed
+自动测试
+```
+
+---
+
+# 三十三、存档
+
+使用：
+
+```text
+localStorage
+```
+
+保存：
+
+```text
+version
+seed
+rngState
+
+stage
+spinsRemaining
+
+cash
+payment
+
+symbols
+items
+
+rerollTokens
+removeTokens
+
+statistics
+settings
+history
+```
+
+每次 Spin 后自动保存。
+
+必须实现：
+
+```text
+SAVE_VERSION
+```
+
+---
+
+# 三十四、Build 查看界面
+
+玩家必须能够随时查看：
+
+```text
+我的 Symbols
+我的 Items
+```
+
+Symbols 页面显示：
+
+```text
+图标
+名称
+数量
+基础收益
+效果
+标签
+稀有度
+```
+
+允许：
+
+```text
+按 Tag 筛选
+按稀有度筛选
+```
+
+鼠标 Hover 出现 Tooltip。
+
+---
+
+# 三十五、信息必须非常透明
+
+虽然游戏是随机的，
+
+但不能让玩家：
+
+> 不知道为什么赚了这么多钱。
+
+大型 Combo 时允许查看：
+
+```text
+本轮结算详情
+```
+
+例如：
+
+```text
+苹果                 +2
+农夫邻接苹果          +4
+市场加成              ×2
+黄金苹果              +12
+-------------------------
+总收益                36
+```
+
+甚至可以提供：
+
+```text
+Combat Log / Spin Log
+```
+
+供高级玩家展开。
+
+默认不需要全部展开。
+
+---
+
+# 三十六、UI 总体布局
+
+建议 PC 主界面：
+
+```text
+┌─────────────────────────────────────────────────────┐
+│ Stage 5    Debt: 420    Cash: 268    Spins: 4       │
+├──────────────┬──────────────────────┬───────────────┤
+│              │                      │               │
+│  Items       │      Slot Board      │ Build Info    │
+│              │                      │               │
+│  Buffs       │       5 × 4          │ Symbols       │
+│              │                      │               │
+├──────────────┴──────────────────────┴───────────────┤
+│                  [      SPIN      ]                  │
+└─────────────────────────────────────────────────────┘
+```
+
+实际布局请继续优化。
+
+---
+
+# 三十七、老虎机视觉
+
+盘面必须是视觉中心。
+
+每个 Symbol 使用：
+
+```text
+统一风格原创 SVG 图标
+```
+
+不要使用 Emoji 作为正式美术。
+
+开发阶段可临时 Emoji。
+
+正式阶段全部替换。
+
+Symbol Card：
+
+```text
+图标
+底板
+稀有度边框
+收益数字
+触发状态
+```
+
+---
+
+# 三十八、美术方向
+
+美术要求与上一项目一样重要。
+
+不要做成：
+
+```text
+后台管理界面
+```
+
+建议视觉方向：
+
+**复古机械老虎机 + 都市出租屋 + 轻微霓虹 + 温暖像素/矢量插画**
+
+或者：
+
+**神秘自动贩卖机 / 异常机器实验室**
+
+由你选择一种统一方向。
+
+要求：
+
+```text
+游戏一眼看上去就是游戏。
+```
+
+---
+
+# 三十九、Design System
+
+CSS 使用统一变量：
+
+```css
+:root {
+    --bg;
+    --surface;
+    --surface-raised;
+
+    --text-primary;
+    --text-secondary;
+
+    --accent;
+    --gold;
+    --danger;
+    --success;
+
+    --common;
+    --uncommon;
+    --rare;
+    --epic;
+
+    --radius;
+    --shadow;
+    --spacing;
+}
+```
+
+不要到处硬编码视觉参数。
+
+---
+
+# 四十、Symbol 动画
+
+普通效果：
+
+```text
+轻微弹起
+高亮
+数字浮出
+```
+
+邻接触发：
+
+```text
+两 Symbol 之间出现短暂连线
+```
+
+消耗：
+
+```text
+目标缩小消失
+```
+
+升级：
+
+```text
+Symbol 发光并变形
+```
+
+倍率：
+
+```text
+×2
+×3
+```
+
+明显出现。
+
+---
+
+# 四十一、Big Combo
+
+这是最重要的正反馈。
+
+例如一次普通收益预期：
+
+```text
+40
+```
+
+但本轮开始：
+
+```text
+12
+↓
+24
+↓
+68
+↓
+×2
+↓
+136
+↓
+再触发
+↓
+372
+```
+
+UI 应配合：
+
+```text
+数字不断增加
+声音逐渐升高
+粒子增加
+屏幕轻微震动
+```
+
+最终：
+
+```text
+372!
+```
+
+明显定格。
+
+提供：
+
+```text
+Screen Shake
+```
+
+关闭选项。
+
+---
+
+# 四十二、声音
+
+使用 Web Audio API 或本地文件。
+
+至少包括：
+
+```text
+Spin
+Reel Stop
+Coin
+Symbol Trigger
+Consume
+Multiplier
+Rare Choice
+Debt Paid
+Game Over
+Victory
+```
+
+Combo 音效最好：
+
+```text
+连续触发时音高逐渐上升
+```
+
+形成：
+
+```text
+叮
+叮↑
+叮↑
+叮↑
+```
+
+的爽感。
+
+---
+
+# 四十三、音乐
+
+音乐不是核心。
+
+可以实现轻量背景音乐。
+
+如果没有合适原创音乐：
+
+宁可没有。
+
+不要依赖网络音乐。
+
+---
+
+# 四十四、统计数据
+
+记录：
+
+```text
+总 Spin 次数
+总收益
+最高单次收益
+最高 Combo
+最大倍率
+删除 Symbol 数
+获得 Item 数
+最高现金
+完成阶段数
+```
+
+还要记录：
+
+```text
+每个 Symbol 总贡献
+```
+
+结算时展示：
+
+```text
+MVP Symbol
+```
+
+例如：
+
+```text
+本局 MVP：
+炼金师
+
+累计贡献：
+4,382
+```
+
+这是很好的反馈。
+
+---
+
+# 四十五、Victory Screen
+
+完成最后付款以后不能只是：
+
+```text
+YOU WIN
+```
+
+应该有完整结算。
+
+显示：
+
+```text
+Run Complete
+
+Seed
+难度
+最终现金
+最高 Spin 收益
+总收益
+最常见 Symbol
+MVP Symbol
+核心 Build Tags
+使用时间
+```
+
+并展示整个最终 Build。
+
+按钮：
+
+```text
+再来一局
+复制 Seed
+返回菜单
+```
+
+---
+
+# 四十六、Game Over
+
+失败时显示：
+
+```text
+还差多少现金
+```
+
+例如：
+
+```text
+Payment Required
+850
+
+You had
+794
+
+差 56。
+```
+
+这会产生很强的：
+
+> “再来一局，这次一定行。”
+
+---
+
+# 四十七、难度
+
+建议：
+
+```text
+Normal
+Hard
+Nightmare
+```
+
+第一版主要平衡：
+
+```text
+Normal
+```
+
+难度影响：
+
+```text
+债务增长
+Spin 数量
+Junk 概率
+Rare 概率
+```
+
+不要简单：
+
+```text
+所有收益 -50%
+```
+
+---
+
+# 四十八、挑战模式
+
+正式版本可以加入：
+
+```text
+Daily Seed
+```
+
+但不联网。
+
+例如根据日期：
+
+```text
+2026-10-03
+```
+
+自动生成固定 Seed。
+
+当天所有本地玩家可以玩同一局。
+
+不需要排行榜服务器。
+
+---
+
+# 四十九、Ascension / Difficulty Modifiers
+
+如果基础游戏完成度足够高，
+
+可以加入逐级挑战。
+
+例如：
+
+```text
+Tier 1
+初始多一个 Junk
+
+Tier 2
+第一次付款 +10%
+
+Tier 3
+Rare 出现略晚
+
+Tier 4
+少一个 Remove Token
+```
+
+逐层增加难度。
+
+但是这是：
+
+```text
+Phase 2 内容
+```
+
+不能阻碍基础版本完成。
+
+---
+
+# 五十、Meta Progression
+
+谨慎处理局外成长。
+
+不要让：
+
+```text
+玩得越久 → 永久属性越强
+```
+
+导致 Roguelike 平衡失效。
+
+更推荐解锁：
+
+```text
+新 Symbol
+新 Item
+新挑战
+新主题
+新机器外观
+```
+
+而不是：
+
+```text
+永久 +20%金币
+```
+
+---
+
+# 五十一、内容发现
+
+第一次游戏不需要一次显示全部 Symbol。
+
+可以有：
+
+```text
+Collection
+```
+
+页面。
+
+显示：
+
+```text
+已发现 37 / 72
+```
+
+未发现：
+
+```text
+???
+```
+
+促进重复游玩。
+
+---
+
+# 五十二、新手引导
+
+第一次进入：
+
+不要长篇教程。
+
+采用：
+
+```text
+4～6 步 Overlay
+```
+
+第一步：
+
+> 点击 SPIN。机器会从你拥有的符号中抽取 20 个。
+
+第二步：
+
+> 每个符号都会产生不同收益。
+
+第三步：
+
+> Spin 后可以选择一个新的符号加入机器。
+
+第四步：
+
+> 某些符号之间会产生特殊组合。
+
+第五步：
+
+> 在倒计时结束前准备足够的钱支付债务。
+
+第六步：
+
+> 不要什么都拿。一个更精简的机器往往更强。
+
+然后让玩家自己发现系统。
+
+---
+
+# 五十三、Tooltip
+
+任何 Symbol / Item Hover：
+
+立即显示：
+
+```text
+名称
+效果
+Tag
+稀有度
+```
+
+关键术语：
+
+例如：
+
+```text
+Consume
+Destroy
+Adjacent
+Transform
+```
+
+可以 Hover 继续解释。
+
+避免玩家查说明书。
+
+---
+
+# 五十四、键鼠操作
+
+支持：
+
+```text
+Space     Spin
+1/2/3     选择候选
+S         Skip
+R         Reroll
+Esc       关闭弹窗
+Tab       Build
+```
+
+鼠标必须同样完整可玩。
+
+---
+
+# 五十五、核心代码架构
+
+建议：
+
+```text
+index.html
+
+css/
+    base.css
+    game.css
+    animations.css
+
+js/
+
+    main.js
+
+    core/
+        game.js
+        state.js
+        rng.js
+        save.js
+
+    engine/
+        spin.js
+        board.js
+        triggers.js
+        effects.js
+        resolver.js
+        rewards.js
+
+    systems/
+        debt.js
+        symbols.js
+        items.js
+        shop.js
+        events.js
+        statistics.js
+
+    data/
+        symbols.js
+        items.js
+        debts.js
+        events.js
+
+    ui/
+        render.js
+        boardView.js
+        choiceView.js
+        buildView.js
+        tooltip.js
+        modal.js
+        toast.js
+        animationQueue.js
+
+    audio/
+        audio.js
+
+tests/
+    simulation.html
+    balance.js
+```
+
+如果为了兼容：
+
+```text
+file://
+```
+
+而不用 ES Module，
+
+可以使用：
+
+```text
+window.Game
+```
+
+命名空间。
+
+自行选择合理方案。
+
+---
+
+# 五十六、GameState
+
+所有真实状态集中：
+
+```javascript
+GameState = {
+    version,
+
+    seed,
+    rngState,
+
+    stage,
+    spin,
+
+    cash,
+    payment,
+
+    symbols: [],
+    items: [],
+
+    rerolls,
+    removals,
+
+    activeModifiers: [],
+
+    stats: {},
+    history: []
+};
+```
+
+DOM 绝对不能成为状态来源。
+
+原则：
+
+```text
+State → Render
+```
+
+不是：
+
+```text
+DOM → Game Logic
+```
+
+---
+
+# 五十七、Symbol Data Driven
+
+Symbol 不应该把所有代码直接写在 UI 中。
+
+例如：
+
+```javascript
+{
+    id: "miner",
+    name: "Miner",
+
+    rarity: "uncommon",
+
+    tags: ["human"],
+
+    baseValue: 1,
+
+    effects: [
+        {
+            trigger: "adjacent",
+            targetTags: ["ore"],
+            action: "consume",
+            bonus: 8
+        }
+    ]
+}
+```
+
+对于非常特殊的 Symbol：
+
+允许注册：
+
+```text
+custom handler
+```
+
+但必须控制数量。
+
+优先使用通用机制。
+
+---
+
+# 五十八、Debug Mode
+
+开发阶段实现：
+
+```text
+DEBUG MODE
+```
+
+可以：
+
+```text
+添加指定 Symbol
+添加指定 Item
+修改现金
+跳到某 Stage
+固定 Board
+立即 Spin
+显示 Trigger Queue
+显示 RNG State
+```
+
+正式玩家默认看不到。
+
+这会大幅提高测试效率。
+
+---
+
+# 五十九、Balance Simulator
+
+必须实现自动平衡测试。
+
+这是重要验收内容。
+
+至少可以：
+
+```text
+自动运行 1,000～10,000 局
+```
+
+不播放 UI。
+
+Bot 可以采用简单策略：
+
+### Random Bot
+
+随机选 Symbol。
+
+### Value Bot
+
+优先基础收益。
+
+### Synergy Bot
+
+优先已有 Tag 协同。
+
+### Greedy Bot
+
+优先短期预估收益。
+
+统计：
+
+```text
+Win Rate
+Average Stage
+Median Cash
+Average Spin Income
+Top Symbols
+Top Items
+Pick Rate
+Win Rate When Picked
+```
+
+---
+
+# 六十、识别失衡内容
+
+自动测试帮助发现：
+
+```text
+某 Symbol 选择率 90%
+```
+
+或者：
+
+```text
+拿到某 Item 后胜率 95%
+```
+
+这种明显问题。
+
+但不能只看 Bot。
+
+还必须人工试玩。
+
+---
+
+# 六十一、经济目标
+
+Normal 难度希望：
+
+新玩家：
+
+```text
+前几局通常会失败
+```
+
+理解机制以后：
+
+```text
+胜率明显提高
+```
+
+高手：
+
+```text
+能稳定构筑，并追求极端 Combo
+```
+
+避免：
+
+```text
+全看运气
+```
+
+也避免：
+
+```text
+第一阶段就知道自己必胜。
+```
+
+---
+
+# 六十二、Randomness 设计原则
+
+随机性分成：
+
+### Input Randomness
+
+例如：
+
+```text
+三选一 Symbol
+老虎机抽取
+Item 候选
+```
+
+### Output Randomness
+
+例如：
+
+```text
+50% 概率爆炸
+```
+
+尽量更多使用：
+
+```text
+Input Randomness
+```
+
+因为它给玩家问题，
+
+但让玩家自己决策。
+
+过多：
+
+```text
+结果随机
+```
+
+会让策略失去意义。
+
+---
+
+# 六十三、玩家必须能够影响概率
+
+后期必须存在：
+
+```text
+删除符号
+增加特定 Tag 概率
+复制符号
+锁定符号
+减少牌池
+修改稀有度
+```
+
+等方式。
+
+核心体验：
+
+> 一开始是老虎机控制玩家。
+>
+> 后来是玩家控制老虎机。
+
+---
+
+# 六十四、避免三个常见失败
+
+## Failure 1
+
+所有 Symbol 都是：
+
+```text
++1
++2
++3
+```
+
+这种游戏会非常无聊。
+
+---
+
+## Failure 2
+
+Combo 太复杂，玩家不知道为什么触发。
+
+必须保证：
+
+```text
+规则可理解
+反馈清楚
+```
+
+---
+
+## Failure 3
+
+加入的 Symbol 永远是正收益。
+
+必须存在：
+
+```text
+牌池污染
+```
+
+概念。
+
+有时候：
+
+```text
+Skip
+```
+
+才是最优决策。
+
+---
+
+# 六十五、性能
+
+即使产生：
+
+```text
+几百个 Trigger
+```
+
+也必须不卡顿。
+
+Effect Engine 和 UI Animation 解耦。
+
+如果本轮产生：
+
+```text
+500 个动画
+```
+
+UI 可以：
+
+```text
+合并
+加速
+跳过
+```
+
+而不是播放 30 秒。
+
+---
+
+# 六十六、存档正确性
+
+必须测试：
+
+```text
+Spin 前保存
+Spin 后保存
+阶段结束保存
+浏览器关闭
+浏览器恢复
+```
+
+必须保持：
+
+```text
+RNG State
+```
+
+正确。
+
+重新打开游戏不能改变未来随机序列。
+
+---
+
+# 六十七、边界测试
+
+必须测试：
+
+```text
+0 cash
+大量 cash
+
+1 Symbol
+200 Symbols
+
+没有 Item
+大量 Item
+
+Combo 深度很大
+
+Symbol 在触发过程中被 Destroy
+Symbol 被 Transform 后再次 Trigger
+
+多个 Multiplier
+
+最后一次 Spin
+付款刚好相等
+付款差 1
+
+损坏 Save
+
+连续快速按 Space
+```
+
+---
+
+# 六十八、视觉完成度门禁
+
+最终游戏禁止出现：
+
+```text
+Bootstrap 风格
+Admin Dashboard 风格
+纯表格
+大量 Emoji
+默认按钮
+浏览器 alert()
+```
+
+应该像：
+
+```text
+独立 PC 游戏
+```
+
+而不是：
+
+```text
+程序员写的网页 Demo。
+```
+
+---
+
+# 六十九、开始菜单
+
+完整制作：
+
+```text
+Logo
+
+New Run
+Continue
+Collection
+Statistics
+Settings
+How to Play
+```
+
+背景应有：
+
+```text
+老虎机 / 房间 / 城市场景
+```
+
+形成世界观。
+
+---
+
+# 七十、设置
+
+至少：
+
+```text
+Master Volume
+Music
+SFX
+
+Animation Speed
+Fast Combo
+Screen Shake
+
+Fullscreen
+
+Autosave
+```
+
+还可以：
+
+```text
+Color Blind Friendly
+Reduced Motion
+```
+
+---
+
+# 七十一、开发阶段
+
+按照以下顺序推进。
+
+---
+
+## Phase 1：Core Engine
+
+先不做正式美术。
+
+实现：
+
+```text
+GameState
+Seeded RNG
+Symbol Pool
+5×4 Board
+Spin
+Base Income
+Symbol Selection
+Debt
+Win / Lose
+```
+
+验收：
+
+能够从第一阶段完整玩到失败/胜利。
+
+---
+
+## Phase 2：Effect Engine
+
+实现：
+
+```text
+Triggers
+Effect Queue
+Adjacency
+Consume
+Destroy
+Transform
+Multiplier
+Permanent Growth
+```
+
+至少：
+
+```text
+20 个测试 Symbol
+```
+
+验证复杂 Combo 正确。
+
+---
+
+## Phase 3：Build System
+
+扩展至：
+
+```text
+60+ Symbols
+30+ Items
+```
+
+形成至少：
+
+```text
+8 个 Build Archetype
+```
+
+并存在跨体系 Synergy。
+
+---
+
+## Phase 4：Roguelike 系统
+
+加入：
+
+```text
+Reroll
+Remove
+Item Rewards
+Events
+Difficulty
+Collection
+Statistics
+```
+
+---
+
+## Phase 5：Balance
+
+运行：
+
+```text
+Monte Carlo / Bot Simulation
+```
+
+调整：
+
+```text
+Debt
+Symbol Value
+Rarity
+Item Strength
+Choice Frequency
+```
+
+然后实际人工试玩多局。
+
+---
+
+## Phase 6：正式 UI
+
+重构视觉：
+
+```text
+Main Menu
+Slot Machine
+Choice Screen
+Build Screen
+Items
+Debt
+Statistics
+Game Over
+Victory
+```
+
+---
+
+## Phase 7：美术
+
+完成：
+
+```text
+统一原创 SVG Symbol
+原创 Item 图标
+背景
+机器外观
+按钮
+Tooltip
+稀有度视觉
+```
+
+---
+
+## Phase 8：Juice
+
+加入：
+
+```text
+Spin Animation
+Coin Animation
+Combo Animation
+Particles
+Sound
+Screen Shake
+Big Number Feedback
+```
+
+---
+
+## Phase 9：QA
+
+完整检查：
+
+```text
+功能
+平衡
+性能
+存档
+视觉
+动画
+分辨率
+边界情况
+```
+
+---
+
+# 七十二、验收 Gate A：零复杂环境
+
+在干净 PC：
+
+```text
+Chrome / Edge
+```
+
+可以直接运行。
+
+玩家不得需要：
+
+```text
+npm install
+pip install
+数据库
+服务器
+账号
+网络
+```
+
+---
+
+# 七十三、Gate B：完整 Run
+
+必须实际完成：
+
+```text
+New Run
+↓
+Spin
+↓
+Build
+↓
+多个 Debt Stage
+↓
+Final Stage
+↓
+Victory
+```
+
+同时测试：
+
+```text
+Game Over
+```
+
+---
+
+# 七十四、Gate C：Effect Correctness
+
+至少建立一组自动测试覆盖：
+
+```text
+Adjacency
+Consume
+Destroy
+Transform
+Multiplier
+Permanent Growth
+Multiple Trigger
+Chain Trigger
+```
+
+相同：
+
+```text
+Seed + State
+```
+
+必须得到：
+
+```text
+完全相同结果。
+```
+
+---
+
+# 七十五、Gate D：复杂 Combo
+
+主动构造至少：
+
+```text
+10 个复杂 Combo Test Case
+```
+
+每个涉及：
+
+```text
+≥ 4 种 Symbol
+≥ 3 层 Trigger
+```
+
+确认解析结果正确。
+
+---
+
+# 七十六、Gate E：存档
+
+测试：
+
+```text
+进行到 Run 中间
+关闭浏览器
+重新进入
+Continue
+```
+
+游戏必须精确恢复。
+
+不仅：
+
+```text
+现金
+```
+
+还包括：
+
+```text
+RNG State
+Symbol State
+Permanent Counters
+Items
+Stage
+```
+
+---
+
+# 七十七、Gate F：Balance
+
+自动运行至少：
+
+```text
+1000 局
+```
+
+确保不存在明显：
+
+```text
+必胜 Build
+必拿 Symbol
+完全无用 Rare
+明显错误 Debt Curve
+```
+
+---
+
+# 七十八、Gate G：Resolution
+
+至少检查：
+
+```text
+1366×768
+1920×1080
+2560×1440
+```
+
+不得出现：
+
+```text
+按钮遮挡
+Symbol 太小
+文字重叠
+横向滚动
+关键 UI 离屏
+```
+
+---
+
+# 七十九、Gate H：视觉
+
+最终截图如果隐藏浏览器地址栏，
+
+应该能够让人认为：
+
+```text
+这是一个正式独立游戏。
+```
+
+而不是：
+
+```text
+网页练习作业。
+```
+
+---
+
+# 八十、Gate I：Game Feel
+
+人工连续玩：
+
+```text
+至少 3 个完整 Run
+```
+
+重点观察：
+
+```text
+是否愿意继续 Spin
+选择 Symbol 是否需要思考
+Combo 是否有爽感
+失败是否知道为什么
+成功 Build 是否有明显成长
+后期是否过度拖沓
+动画是否烦人
+```
+
+发现问题继续迭代。
+
+---
+
+# 八十一、README
+
+最终提供：
+
+```text
+README.md
+```
+
+包括：
+
+```text
+游戏介绍
+运行方式
+玩法说明
+快捷键
+项目结构
+存档方式
+开发方式
+Debug Mode
+Balance Simulator
+```
+
+同时：
+
+```text
+CHANGELOG.md
+```
+
+记录开发阶段。
+
+---
+
+# 八十二、范围控制
+
+第一版不要加入：
+
+```text
+联网
+账号
+云存档
+真钱
+充值
+排行榜服务器
+多人游戏
+NFT
+复杂剧情
+地图探索
+战斗系统
+角色养成
+```
+
+这个项目真正重要的只有：
+
+```text
+Spin
+↓
+选择
+↓
+构筑
+↓
+Synergy
+↓
+Combo
+↓
+支付压力
+↓
+进一步优化 Build
+```
+
+所有功能都围绕这个循环服务。
+
+---
+
+# 八十三、最终质量目标
+
+最终不能只是：
+
+```text
+老虎机模拟器
+```
+
+也不能只是：
+
+```text
+随机数字游戏
+```
+
+它必须成为：
+
+**一款以老虎机为表现形式的概率构筑 Roguelike。**
+
+玩家玩的不是：
+
+```text
+“赌这一把能不能赢钱”
+```
+
+而应该是：
+
+```text
+“我要怎样修改整个概率系统，
+使越来越多的随机结果对我的 Build 有利？”
+```
+
+好的玩家应该能够通过：
+
+```text
+选择
+拒绝
+删除
+稀释
+复制
+Tag 协同
+倍率
+触发顺序
+长期规划
+```
+
+把一台最初混乱的老虎机，
+
+逐渐构造成：
+
+```text
+一台属于自己的 Combo Engine。
+```
+
+---
+
+# 八十四、工作方式
+
+你是这个项目的主执行 Agent。
+
+不要只生成：
+
+```text
+设计文档
+架构说明
+TODO
+代码片段
+```
+
+然后停止。
+
+你需要主动：
+
+```text
+检查项目
+建立工程
+实现
+运行
+测试
+试玩
+发现问题
+修复
+平衡
+继续完善
+```
+
+直到形成：
+
+```text
+可完整游玩的正式版本。
+```
+
+对于：
+
+```text
+具体命名
+普通 UI 决策
+代码组织
+普通数值
+具体 Symbol 设计
+```
+
+请自行作出高质量决定。
+
+只有真正遇到会改变：
+
+```text
+核心游戏方向
+技术栈
+项目范围
+```
+
+且无法从现有要求判断的问题时才需要询问。
+
+不要频繁向我确认。
+
+---
+
+# 八十五、开始执行
+
+现在首先检查当前工作目录。
+
+如果这里已经存在其他项目：
+
+不要修改无关项目。
+
+为本游戏建立独立目录。
+
+先建立：
+
+```text
+可运行的 Core Engine
+```
+
+而不是先花大量时间画 UI。
+
+第一优先级：
+
+```text
+老虎机抽取
++
+Symbol Pool
++
+效果解析
++
+三选一构筑
++
+债务循环
+```
+
+第二优先级：
+
+```text
+Synergy 深度
++
+经济平衡
+```
+
+第三优先级：
+
+```text
+正式 UI
++
+美术
++
+动画
++
+声音
+```
+
+在每个阶段完成后自行运行验收。
+
+不要停留在规划阶段。
+
+最终交付目标：
+
+> 一个零复杂环境、完全离线、视觉精致、规则清晰、构筑深、Combo 爽、能够让人反复重开的 PC 单机老虎机 Roguelike。

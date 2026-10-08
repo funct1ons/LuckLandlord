@@ -1,0 +1,493 @@
+{
+  "scope": "per-game v3 integrity; task completed ≠ 500 complete; historical job-kill jsonl retained; not formal Normal acceptance",
+  "prefix": "full-sim-batch-v3-",
+  "replayAll": true,
+  "expectedGames": 8000,
+  "seen": 8000,
+  "missing": 0,
+  "missingSeeds": [],
+  "duplicates": 0,
+  "duplicateRows": [],
+  "attributionFails": 0,
+  "replayFails": 0,
+  "replayFailRows": [],
+  "unfinished": 0,
+  "unfinishedRows": [],
+  "errors": 0,
+  "errorRows": [],
+  "historicalJobKill": [
+    {
+      "name": "full-sim-batch-greedy-holdout-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-greedy-holdout-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-greedy-train-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-greedy-train-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-random-holdout-0.jsonl",
+      "bytes": 1514155,
+      "lines": 18,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-random-holdout-500.jsonl",
+      "bytes": 1524123,
+      "lines": 18,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-random-train-0.jsonl",
+      "bytes": 1514094,
+      "lines": 18,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-random-train-500.jsonl",
+      "bytes": 1580730,
+      "lines": 18,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-synergy-holdout-0.jsonl",
+      "bytes": 959311,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-synergy-holdout-500.jsonl",
+      "bytes": 861585,
+      "lines": 10,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-synergy-train-0.jsonl",
+      "bytes": 999813,
+      "lines": 12,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-synergy-train-500.jsonl",
+      "bytes": 949392,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-v2-greedy-holdout-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-v2-greedy-holdout-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-v2-greedy-train-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-v2-greedy-train-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-v2-random-holdout-0.jsonl",
+      "bytes": 1248029,
+      "lines": 15,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-v2-random-holdout-500.jsonl",
+      "bytes": 1307598,
+      "lines": 15,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-v2-random-train-0.jsonl",
+      "bytes": 1349342,
+      "lines": 16,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-v2-random-train-500.jsonl",
+      "bytes": 1324801,
+      "lines": 15,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-v2-synergy-holdout-0.jsonl",
+      "bytes": 880123,
+      "lines": 10,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-v2-synergy-holdout-500.jsonl",
+      "bytes": 861660,
+      "lines": 10,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-v2-synergy-train-0.jsonl",
+      "bytes": 924024,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-v2-synergy-train-500.jsonl",
+      "bytes": 851949,
+      "lines": 10,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-v2-value-holdout-0.jsonl",
+      "bytes": 1008153,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-v2-value-holdout-500.jsonl",
+      "bytes": 946329,
+      "lines": 10,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-v2-value-train-0.jsonl",
+      "bytes": 991409,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-v2-value-train-500.jsonl",
+      "bytes": 1016657,
+      "lines": 11,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-value-holdout-0.jsonl",
+      "bytes": 1100790,
+      "lines": 12,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-value-holdout-500.jsonl",
+      "bytes": 1128818,
+      "lines": 12,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-value-train-0.jsonl",
+      "bytes": 1184346,
+      "lines": 13,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    },
+    {
+      "name": "full-sim-batch-value-train-500.jsonl",
+      "bytes": 1209302,
+      "lines": 13,
+      "hasIndex": false,
+      "note": "prior launch retained; not in v3 8000; job-kill/incomplete disclosed"
+    }
+  ],
+  "batches": [
+    {
+      "name": "full-sim-batch-v3-greedy-holdout-0.jsonl",
+      "bot": "Greedy",
+      "split": "holdout",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 10,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 1828247.1375,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-greedy-holdout-500.jsonl",
+      "bot": "Greedy",
+      "split": "holdout",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 13,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 1838973.7059000002,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-greedy-train-0.jsonl",
+      "bot": "Greedy",
+      "split": "train",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 14,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 1823546.5969999998,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-greedy-train-500.jsonl",
+      "bot": "Greedy",
+      "split": "train",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 19,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 1842221.8668,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-random-holdout-0.jsonl",
+      "bot": "Random",
+      "split": "holdout",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 0,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 311228.21270000003,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-random-holdout-500.jsonl",
+      "bot": "Random",
+      "split": "holdout",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 0,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 309500.1283,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-random-train-0.jsonl",
+      "bot": "Random",
+      "split": "train",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 0,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 311048.429,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-random-train-500.jsonl",
+      "bot": "Random",
+      "split": "train",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 0,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 298677.7908,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-synergy-holdout-0.jsonl",
+      "bot": "Synergy",
+      "split": "holdout",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 0,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 353633.5236,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-synergy-holdout-500.jsonl",
+      "bot": "Synergy",
+      "split": "holdout",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 0,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 353879.8678,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-synergy-train-0.jsonl",
+      "bot": "Synergy",
+      "split": "train",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 0,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 354407.20680000004,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-synergy-train-500.jsonl",
+      "bot": "Synergy",
+      "split": "train",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 0,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 353007.9367,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-value-holdout-0.jsonl",
+      "bot": "Value",
+      "split": "holdout",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 0,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 345810.46609999996,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-value-holdout-500.jsonl",
+      "bot": "Value",
+      "split": "holdout",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 0,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 350681.871,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-value-train-0.jsonl",
+      "bot": "Value",
+      "split": "train",
+      "startIndex": 0,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 0,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 346034.9458,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    },
+    {
+      "name": "full-sim-batch-v3-value-train-500.jsonl",
+      "bot": "Value",
+      "split": "train",
+      "startIndex": 500,
+      "progressDone": 500,
+      "indexN": 500,
+      "jsonlLines": 500,
+      "wins": 0,
+      "gameErrors": 0,
+      "replayed": 500,
+      "complete": true,
+      "ms": 349071.8131,
+      "note": "complete only if jsonl lines=500 AND index n=500 AND 0 unfinished; progress.done and process exit are insufficient"
+    }
+  ],
+  "isolation": {
+    "trainSeeds": 4000,
+    "holdoutSeeds": 4000,
+    "sharedExactSeedStrings": 0,
+    "note": "train/holdout use disjoint path prefixes F4-FULL-v1/<Bot>/<split>/; same numeric index is allowed across splits because the path differs. Policy decision-full-v1/... is a separate stream from the five game RNG streams."
+  },
+  "pass": true
+}

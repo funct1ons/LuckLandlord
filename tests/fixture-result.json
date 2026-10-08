@@ -1,0 +1,411 @@
+[
+  {
+    "name": "回收链",
+    "types": [
+      "slag",
+      "hook",
+      "echo",
+      "meter",
+      "lens"
+    ],
+    "expected": 13,
+    "actual": 13,
+    "derivation": "1+3+2+2+5=13",
+    "maxDepth": 3,
+    "chains": [
+      [
+        {
+          "type": "consume",
+          "source": "u2",
+          "depth": 0
+        },
+        {
+          "type": "add",
+          "source": "u3",
+          "depth": 1
+        },
+        {
+          "type": "grow",
+          "source": "u4",
+          "depth": 2
+        },
+        {
+          "type": "multiply",
+          "source": "u5",
+          "depth": 3
+        }
+      ]
+    ]
+  },
+  {
+    "name": "复制接入链",
+    "types": [
+      "slag",
+      "hook",
+      "echo",
+      "meter",
+      "lens",
+      "battery",
+      "mirror"
+    ],
+    "expected": 20,
+    "actual": 20,
+    "derivation": "13+定热芯4+薄相纸(1+复制2)=20",
+    "maxDepth": 3,
+    "chains": [
+      [
+        {
+          "type": "consume",
+          "source": "u2",
+          "depth": 0
+        },
+        {
+          "type": "add",
+          "source": "u3",
+          "depth": 1
+        },
+        {
+          "type": "grow",
+          "source": "u4",
+          "depth": 2
+        },
+        {
+          "type": "multiply",
+          "source": "u5",
+          "depth": 3
+        }
+      ]
+    ]
+  },
+  {
+    "name": "竞争消耗链",
+    "types": [
+      "slag",
+      "hook",
+      "echo",
+      "meter",
+      "lens"
+    ],
+    "expected": 14,
+    "actual": 14,
+    "derivation": "两钩争残片仅一次奖励；第二钩基础1：13+1=14",
+    "maxDepth": 3,
+    "chains": [
+      [
+        {
+          "type": "consume",
+          "source": "u2",
+          "depth": 0
+        },
+        {
+          "type": "add",
+          "source": "u3",
+          "depth": 1
+        },
+        {
+          "type": "grow",
+          "source": "u4",
+          "depth": 2
+        },
+        {
+          "type": "multiply",
+          "source": "u5",
+          "depth": 3
+        }
+      ]
+    ]
+  },
+  {
+    "name": "邻接调频",
+    "types": [
+      "slag",
+      "hook",
+      "echo",
+      "meter",
+      "lens",
+      "tuner"
+    ],
+    "expected": 16,
+    "actual": 16,
+    "derivation": "调频邻接echo加2，梳基础1：13+2+1=16",
+    "maxDepth": 3,
+    "chains": [
+      [
+        {
+          "type": "consume",
+          "source": "u2",
+          "depth": 0
+        },
+        {
+          "type": "add",
+          "source": "u3",
+          "depth": 1
+        },
+        {
+          "type": "grow",
+          "source": "u4",
+          "depth": 2
+        },
+        {
+          "type": "multiply",
+          "source": "u5",
+          "depth": 3
+        }
+      ]
+    ]
+  },
+  {
+    "name": "销毁哨增幅",
+    "types": [
+      "slag",
+      "hook",
+      "echo",
+      "meter",
+      "lens",
+      "warden"
+    ],
+    "expected": 20,
+    "actual": 20,
+    "derivation": "哨1+3，额外GAIN使表+1、镜由2到4：13+4+1+2=20",
+    "maxDepth": 3,
+    "chains": [
+      [
+        {
+          "type": "consume",
+          "source": "u2",
+          "depth": 0
+        },
+        {
+          "type": "add",
+          "source": "u6",
+          "depth": 1
+        },
+        {
+          "type": "grow",
+          "source": "u4",
+          "depth": 2
+        },
+        {
+          "type": "multiply",
+          "source": "u5",
+          "depth": 3
+        }
+      ],
+      [
+        {
+          "type": "consume",
+          "source": "u2",
+          "depth": 0
+        },
+        {
+          "type": "add",
+          "source": "u3",
+          "depth": 1
+        },
+        {
+          "type": "grow",
+          "source": "u4",
+          "depth": 2
+        },
+        {
+          "type": "multiply",
+          "source": "u5",
+          "depth": 3
+        }
+      ]
+    ]
+  },
+  {
+    "name": "转换后因果链",
+    "types": [
+      "still",
+      "bloom",
+      "meter",
+      "lens",
+      "echo"
+    ],
+    "expected": 12,
+    "actual": 12,
+    "derivation": "釜转换0→晶加法1→表成长2→镜倍率3；1+6+2+2+1=12",
+    "maxDepth": 3,
+    "chains": [
+      [
+        {
+          "type": "transform",
+          "source": "u1",
+          "depth": 0
+        },
+        {
+          "type": "add",
+          "source": "u2",
+          "depth": 1
+        },
+        {
+          "type": "grow",
+          "source": "u3",
+          "depth": 2
+        },
+        {
+          "type": "multiply",
+          "source": "u4",
+          "depth": 3
+        }
+      ]
+    ]
+  },
+  {
+    "name": "永久成长双乘区",
+    "types": [
+      "slag",
+      "hook",
+      "echo",
+      "meter",
+      "lens",
+      "press"
+    ],
+    "expected": 17,
+    "actual": 17,
+    "derivation": "表floor(2×1.5×1.5)=4，两环各floor(1×1.5)=1：13+2+2=17",
+    "maxDepth": 3,
+    "chains": [
+      [
+        {
+          "type": "consume",
+          "source": "u2",
+          "depth": 0
+        },
+        {
+          "type": "add",
+          "source": "u3",
+          "depth": 1
+        },
+        {
+          "type": "grow",
+          "source": "u4",
+          "depth": 2
+        },
+        {
+          "type": "multiply",
+          "source": "u5",
+          "depth": 3
+        }
+      ]
+    ]
+  },
+  {
+    "name": "雾芽成熟",
+    "types": [
+      "slag",
+      "hook",
+      "echo",
+      "meter",
+      "lens",
+      "bud"
+    ],
+    "expected": 16,
+    "actual": 16,
+    "derivation": "第二次出现转灯花基础3：13+3=16",
+    "maxDepth": 3,
+    "chains": [
+      [
+        {
+          "type": "consume",
+          "source": "u2",
+          "depth": 0
+        },
+        {
+          "type": "add",
+          "source": "u3",
+          "depth": 1
+        },
+        {
+          "type": "grow",
+          "source": "u4",
+          "depth": 2
+        },
+        {
+          "type": "multiply",
+          "source": "u5",
+          "depth": 3
+        }
+      ]
+    ]
+  },
+  {
+    "name": "自毁哨因果链",
+    "types": [
+      "spark",
+      "warden",
+      "meter",
+      "lens",
+      "tuner"
+    ],
+    "expected": 12,
+    "actual": 12,
+    "derivation": "签自毁0→哨加法1→表成长2→镜倍率3；签额外GAIN另使表+1/镜×2：哨4+表3+镜4+梳1=12",
+    "maxDepth": 3,
+    "chains": [
+      [
+        {
+          "type": "destroy",
+          "source": "u1",
+          "depth": 0
+        },
+        {
+          "type": "add",
+          "source": "u2",
+          "depth": 1
+        },
+        {
+          "type": "grow",
+          "source": "u3",
+          "depth": 2
+        },
+        {
+          "type": "multiply",
+          "source": "u4",
+          "depth": 3
+        }
+      ]
+    ]
+  },
+  {
+    "name": "育匣新生",
+    "types": [
+      "slag",
+      "hook",
+      "echo",
+      "meter",
+      "lens",
+      "seedbox"
+    ],
+    "expected": 14,
+    "actual": 14,
+    "derivation": "13+1=14；生成雾芽只下轮出现",
+    "maxDepth": 3,
+    "chains": [
+      [
+        {
+          "type": "consume",
+          "source": "u2",
+          "depth": 0
+        },
+        {
+          "type": "add",
+          "source": "u3",
+          "depth": 1
+        },
+        {
+          "type": "grow",
+          "source": "u4",
+          "depth": 2
+        },
+        {
+          "type": "multiply",
+          "source": "u5",
+          "depth": 3
+        }
+      ]
+    ]
+  }
+]

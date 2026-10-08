@@ -1,0 +1,310 @@
+{
+  "scope": "policy-v2 probe 100 per bot/split; not formal 8000",
+  "lookahead": "HORIZON_SPINS=5 COMMAND_CAP=36 REMOVE_BEAM=3 MODEL_SEED=full-sim-model-v2/0; Random unchanged decision-full-v1",
+  "secondsPerLookaheadGame": 12.5,
+  "etaFull8000": {
+    "lookaheadCpuHours": 20.83,
+    "randomSeconds": 340,
+    "wallHoursAt6way": 3.47,
+    "shards": "16x500 prefix full-sim-policy-v2-batch-"
+  },
+  "v1Holdout": {
+    "Greedy": "23/1000 2.30% [1.54,3.43]",
+    "Random": "0/1000",
+    "Value": "0/1000",
+    "Synergy": "0/1000"
+  },
+  "groups": {
+    "Random/train": {
+      "n": 100,
+      "wins": 0,
+      "errors": 0,
+      "ms": 17199.3264,
+      "seconds": 17.2,
+      "wilson": {
+        "k": 0,
+        "n": 100,
+        "rate": 0,
+        "lo": 3.469446951953614e-18,
+        "hi": 0.03699349820698568
+      },
+      "formed": 100,
+      "failStages": {
+        "5": 6,
+        "6": 34,
+        "7": 54,
+        "8": 6
+      },
+      "actions": {
+        "remove": 667,
+        "spin": 4420,
+        "choose": 3298,
+        "skip": 1122,
+        "skipItem": 132,
+        "eventA": 90,
+        "item": 428,
+        "reroll": 722,
+        "eventB": 59
+      },
+      "unused": [],
+      "skipItem": 132,
+      "reroll": 722,
+      "remove": 667,
+      "random0000": "7842310233ff52db850bb5e7599bcbb87f5e3fce4b913dd75b2fa4441b9c7c9e"
+    },
+    "Random/holdout": {
+      "n": 100,
+      "wins": 0,
+      "errors": 0,
+      "ms": 18332.731900000002,
+      "seconds": 18.3,
+      "wilson": {
+        "k": 0,
+        "n": 100,
+        "rate": 0,
+        "lo": 3.469446951953614e-18,
+        "hi": 0.03699349820698568
+      },
+      "formed": 99,
+      "failStages": {
+        "4": 1,
+        "5": 2,
+        "6": 25,
+        "7": 56,
+        "8": 16
+      },
+      "actions": {
+        "remove": 686,
+        "spin": 4588,
+        "choose": 3433,
+        "reroll": 762,
+        "item": 441,
+        "skip": 1155,
+        "eventA": 101,
+        "eventB": 45,
+        "skipItem": 143
+      },
+      "unused": [],
+      "skipItem": 143,
+      "reroll": 762,
+      "remove": 686
+    },
+    "Value/train": {
+      "n": 100,
+      "wins": 29,
+      "errors": 0,
+      "ms": 1243637.5332,
+      "seconds": 1243.6,
+      "wilson": {
+        "k": 29,
+        "n": 100,
+        "rate": 0.29,
+        "lo": 0.2101483574912227,
+        "hi": 0.3853889117557111
+      },
+      "formed": 100,
+      "failStages": {
+        "8": 7,
+        "9": 47,
+        "10": 46
+      },
+      "actions": {
+        "spin": 6512,
+        "choose": 3608,
+        "remove": 956,
+        "reroll": 1080,
+        "item": 839,
+        "skip": 2904,
+        "eventA": 111,
+        "eventB": 81
+      },
+      "unused": [
+        "skipItem"
+      ],
+      "skipItem": 0,
+      "reroll": 1080,
+      "remove": 956
+    },
+    "Value/holdout": {
+      "n": 100,
+      "wins": 28,
+      "errors": 0,
+      "ms": 1257619.5659,
+      "seconds": 1257.6,
+      "wilson": {
+        "k": 28,
+        "n": 100,
+        "rate": 0.28,
+        "lo": 0.20139685211186212,
+        "hi": 0.3748802870992116
+      },
+      "formed": 100,
+      "failStages": {
+        "8": 9,
+        "9": 44,
+        "10": 47
+      },
+      "actions": {
+        "spin": 6504,
+        "choose": 3571,
+        "reroll": 1081,
+        "item": 838,
+        "remove": 975,
+        "skip": 2933,
+        "eventA": 116,
+        "eventB": 89
+      },
+      "unused": [
+        "skipItem"
+      ],
+      "skipItem": 0,
+      "reroll": 1081,
+      "remove": 975
+    },
+    "Synergy/train": {
+      "n": 100,
+      "wins": 26,
+      "errors": 0,
+      "ms": 1266975.0722,
+      "seconds": 1267,
+      "wilson": {
+        "k": 26,
+        "n": 100,
+        "rate": 0.26,
+        "lo": 0.18404698464748132,
+        "hi": 0.3537098944918718
+      },
+      "formed": 100,
+      "failStages": {
+        "8": 13,
+        "9": 40,
+        "10": 47
+      },
+      "actions": {
+        "spin": 6472,
+        "choose": 3499,
+        "reroll": 957,
+        "remove": 952,
+        "item": 834,
+        "skip": 2973,
+        "eventA": 94,
+        "eventB": 104
+      },
+      "unused": [
+        "skipItem"
+      ],
+      "skipItem": 0,
+      "reroll": 957,
+      "remove": 952
+    },
+    "Synergy/holdout": {
+      "n": 100,
+      "wins": 22,
+      "errors": 0,
+      "ms": 1252286.796,
+      "seconds": 1252.3,
+      "wilson": {
+        "k": 22,
+        "n": 100,
+        "rate": 0.22,
+        "lo": 0.150012823846054,
+        "hi": 0.31070353514985793
+      },
+      "formed": 100,
+      "failStages": {
+        "8": 13,
+        "9": 46,
+        "10": 41
+      },
+      "actions": {
+        "spin": 6424,
+        "choose": 3518,
+        "remove": 947,
+        "reroll": 949,
+        "item": 828,
+        "skip": 2906,
+        "eventA": 119,
+        "eventB": 93
+      },
+      "unused": [
+        "skipItem"
+      ],
+      "skipItem": 0,
+      "reroll": 949,
+      "remove": 947
+    },
+    "Greedy/train": {
+      "n": 100,
+      "wins": 25,
+      "errors": 0,
+      "ms": 1265584.0288000002,
+      "seconds": 1265.6,
+      "wilson": {
+        "k": 25,
+        "n": 100,
+        "rate": 0.25,
+        "lo": 0.17545211362287672,
+        "hi": 0.34304463548061603
+      },
+      "formed": 100,
+      "failStages": {
+        "8": 8,
+        "9": 50,
+        "10": 42
+      },
+      "actions": {
+        "spin": 6472,
+        "remove": 950,
+        "choose": 3621,
+        "reroll": 997,
+        "item": 834,
+        "skip": 2851,
+        "eventB": 104,
+        "eventA": 96
+      },
+      "unused": [
+        "skipItem"
+      ],
+      "skipItem": 0,
+      "reroll": 997,
+      "remove": 950
+    },
+    "Greedy/holdout": {
+      "n": 100,
+      "wins": 17,
+      "errors": 0,
+      "ms": 1225731.2352,
+      "seconds": 1225.7,
+      "wilson": {
+        "k": 17,
+        "n": 100,
+        "rate": 0.17,
+        "lo": 0.10893566114059931,
+        "hi": 0.25548004767601123
+      },
+      "formed": 100,
+      "failStages": {
+        "7": 1,
+        "8": 12,
+        "9": 55,
+        "10": 32
+      },
+      "actions": {
+        "spin": 6345,
+        "remove": 940,
+        "choose": 3653,
+        "reroll": 946,
+        "item": 818,
+        "skip": 2692,
+        "eventB": 94,
+        "eventA": 102
+      },
+      "unused": [
+        "skipItem"
+      ],
+      "skipItem": 0,
+      "reroll": 946,
+      "remove": 940
+    }
+  }
+}

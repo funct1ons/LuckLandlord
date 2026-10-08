@@ -1,0 +1,261 @@
+{
+  "pass": true,
+  "tests": [
+    {
+      "name": "public boundary removes only identity and live RNG, detached deeply",
+      "pass": true,
+      "evidence": {
+        "redacted": [
+          "seed",
+          "rng"
+        ]
+      }
+    },
+    {
+      "name": "all bots invariant to hidden identities and unused live RNG states",
+      "pass": true,
+      "evidence": {
+        "bots": [
+          "Random",
+          "Value",
+          "Synergy",
+          "Greedy"
+        ],
+        "streams": [
+          "draw",
+          "effect",
+          "symbolOffer",
+          "itemOffer",
+          "event"
+        ]
+      }
+    },
+    {
+      "name": "Greedy candidate evaluation never consumes live or policy RNG and respects bounds",
+      "pass": true,
+      "evidence": {
+        "maxCommands": 5,
+        "maxSpins": 2
+      }
+    },
+    {
+      "name": "policy RNG draws cannot advance gameplay streams",
+      "pass": true,
+      "evidence": {
+        "state": 3242505463,
+        "consumed": 1000
+      }
+    },
+    {
+      "name": "reroll cap, stale window and revision failures preserve every byte",
+      "pass": true,
+      "evidence": {
+        "remaining": 6,
+        "errors": [
+          "Refresh unavailable",
+          "Stale symbol window",
+          "GDD1: stale/invalid command"
+        ]
+      }
+    },
+    {
+      "name": "remove in pending phase preserves current income and confirmation is atomic",
+      "pass": true,
+      "evidence": {
+        "pending": 16
+      }
+    },
+    {
+      "name": "deadline choice cannot rescue failed payment; reward held until next spin",
+      "pass": true,
+      "evidence": {
+        "phase": "LOST",
+        "newSymbol": "mist_pouch",
+        "payment": 46
+      }
+    },
+    {
+      "name": "successful tenth payment enters WON directly without item/event/token grant",
+      "pass": true,
+      "evidence": {
+        "spin": 70
+      }
+    },
+    {
+      "name": "natural/calendar/fog/stitcher combination matures at most once, keeps UID and permanent",
+      "pass": true,
+      "evidence": {
+        "uid": "u13",
+        "type": "dew_lantern",
+        "epoch": 1,
+        "total": 9
+      }
+    },
+    {
+      "name": "event B dismisses quotation without paying or applying A",
+      "pass": true,
+      "evidence": {
+        "events": 3
+      }
+    },
+    {
+      "name": "event A fog validates cost and current target atomically",
+      "pass": true,
+      "evidence": {
+        "modifier": {
+          "eventId": "event_fog_shift",
+          "uid": "u13",
+          "stageId": 3,
+          "remaining": 2
+        }
+      }
+    },
+    {
+      "name": "event copper preserves UID/permanent increments epoch and capacity is atomic",
+      "pass": true,
+      "evidence": {
+        "uid": "u13",
+        "pool": 2
+      }
+    },
+    {
+      "name": "brine event pending guarantee is consumed on next natural offer",
+      "pass": true,
+      "evidence": {
+        "offer": [
+          "tide_prism",
+          "brine_strip",
+          "wick_bed"
+        ]
+      }
+    },
+    {
+      "name": "formation A classifier accepts four non-aging plants with historical product income",
+      "pass": true,
+      "evidence": {
+        "route": [
+          "A"
+        ],
+        "qualification": "4 wick_bed, support, historical product income; no age-capable plant or product currently in pool"
+      }
+    },
+    {
+      "name": "Greedy scores generated future offers but never selects their identities",
+      "pass": true,
+      "evidence": {
+        "generatedOfferCalls": 10,
+        "invariant": true
+      }
+    },
+    {
+      "name": "per-ID attribution uses source final type and can move prior crystal_index bonus to tide_prism",
+      "pass": true,
+      "evidence": {
+        "sourceUid": "u13",
+        "bonusBeforeTransform": 6,
+        "bonusType": "crystal_index",
+        "finalType": "tide_prism",
+        "reportedFinalTypeContribution": 13,
+        "ledger": {
+          "uid": "u13",
+          "type": "tide_prism",
+          "amount": 13,
+          "alive": true,
+          "ratio": [
+            "1",
+            "1"
+          ],
+          "contributions": [
+            {
+              "source": "u13",
+              "amount": 13
+            }
+          ]
+        },
+        "causalAdds": [
+          {
+            "id": 0,
+            "parent": null,
+            "depth": 0,
+            "phase": "step4/appearance",
+            "action": "add",
+            "source": "u13",
+            "target": "u13",
+            "amount": 6,
+            "facts": {
+              "effectKey": "crystal_index:0",
+              "sourcePos": 0,
+              "targetPos": 0,
+              "beforeType": "crystal_index",
+              "afterType": "crystal_index",
+              "beforeTags": [
+                "crystal",
+                "support"
+              ],
+              "afterTags": [
+                "crystal",
+                "support"
+              ],
+              "cause": "add",
+              "actualIncrease": 0,
+              "createdUid": null,
+              "skipReason": null
+            }
+          },
+          {
+            "id": 2,
+            "parent": 1,
+            "depth": 1,
+            "phase": "step5/structural-event",
+            "action": "add",
+            "source": "u13",
+            "target": "u13",
+            "amount": 3,
+            "facts": {
+              "effectKey": "tide_prism:0",
+              "sourcePos": 0,
+              "targetPos": 0,
+              "beforeType": "tide_prism",
+              "afterType": "tide_prism",
+              "beforeTags": [
+                "crystal",
+                "product",
+                "cargo"
+              ],
+              "afterTags": [
+                "crystal",
+                "product",
+                "cargo"
+              ],
+              "cause": "add",
+              "actualIncrease": 0,
+              "createdUid": null,
+              "skipReason": null
+            }
+          }
+        ],
+        "expectedEffectAttribution": {
+          "crystal_index": 6,
+          "tide_prism": 7
+        },
+        "preservedUid": "u13"
+      }
+    },
+    {
+      "name": "actual frozen replay sample repeats acquisition trials from the same game in one stratum",
+      "pass": true,
+      "evidence": {
+        "seed": "F3-SLICE-v1/Greedy/holdout/0000",
+        "won": true,
+        "stratum": "sieve_drum/1/unformed/<20",
+        "repeatedEvents": 2,
+        "independentGames": 1,
+        "currentAggregatorWins": 2,
+        "expectedIndependentGameWins": 1,
+        "intervalIssue": "Repeated terminal outcome is counted as n Bernoulli observations, not one game cluster"
+      }
+    }
+  ],
+  "scope": "Adversarial audit fixtures; no production edits or original runners",
+  "count": 17
+}

@@ -1,0 +1,248 @@
+{
+  "scope": "Independent 32 fixtures Edge file:// AND HTTP vs Node compact; old 22 implementer parity is not this oracle",
+  "browser": "Edge",
+  "chromeClaimed": false,
+  "node": {
+    "total": 32,
+    "passed": 32
+  },
+  "file": {
+    "total": 32,
+    "passed": 32
+  },
+  "http": {
+    "total": 32,
+    "passed": 32
+  },
+  "fileEqHttp": true,
+  "fileEqNode": true,
+  "httpEqNode": true,
+  "mismatches": [],
+  "cases": [
+    {
+      "name": "wick-pair",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "negative-junk",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "pouch-first",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "pouch-release",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "surge-before-release",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "surge-release",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "pause-alone",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "pause-tag-not-mechanism",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "blank-appearance",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "cleared-appearance",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "lean-below-half",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "lean-exact-half",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "margin-deficit15",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "margin-deficit16",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "margin-funded",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "dock-row-first-target",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "copy-blank",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "copy-carbon",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "copy-no-template",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "cycle-third",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "cycle-second-metronome",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "natural-epoch",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "cloudy-matures-not-new-appearance",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "compliance-converted-no-appearance",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "cancellation-reward-and-growth",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "low-balance-item-boundary",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "low-balance-item-below",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "hold-below12",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "rest-single-negative-floor",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "cloth-tag-log-order",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "spectrum-book-deferred-phase",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    },
+    {
+      "name": "spectrum-book-dead-target",
+      "node": true,
+      "file": true,
+      "http": true,
+      "equal": true
+    }
+  ],
+  "ok": true
+}

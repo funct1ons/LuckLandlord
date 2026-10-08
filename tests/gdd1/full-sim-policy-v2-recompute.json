@@ -1,0 +1,56 @@
+{
+  "files": 16,
+  "games": 8000,
+  "errors": [],
+  "indexHashes": 8000,
+  "replays": [
+    {
+      "seed": "F4-FULL-v1/Greedy/holdout/0000",
+      "actions": 152,
+      "finalHash": "736ba7470433aa9f90aadcfb95e8e2dd142fefbf41fcbdd766bc7ac540a18594",
+      "ok": true
+    },
+    {
+      "seed": "F4-FULL-v1/Greedy/train/0000",
+      "actions": 179,
+      "finalHash": "33f03a7f00d9ef643ac4c178df090631d04a7e8e787892f3b169b081dc721269",
+      "ok": true
+    },
+    {
+      "seed": "F4-FULL-v1/Random/holdout/0000",
+      "actions": 117,
+      "finalHash": "d76ae7fb04e71d62d2bb21ecf746c9b36be31b97187ed9e847d7574c39ebd545",
+      "ok": true
+    },
+    {
+      "seed": "F4-FULL-v1/Random/train/0000",
+      "actions": 114,
+      "finalHash": "7842310233ff52db850bb5e7599bcbb87f5e3fce4b913dd75b2fa4441b9c7c9e",
+      "ok": true
+    },
+    {
+      "seed": "F4-FULL-v1/Synergy/holdout/0000",
+      "actions": 169,
+      "finalHash": "be36953ddfd01fce5b40c9b35fb6c062d8c63aee4b3050a4b39afd977fdf991d",
+      "ok": true
+    },
+    {
+      "seed": "F4-FULL-v1/Synergy/train/0000",
+      "actions": 170,
+      "finalHash": "a2f9fa11a34b169694cecdeb34c054b4627863f2883450538c375fbb4769d0b6",
+      "ok": true
+    },
+    {
+      "seed": "F4-FULL-v1/Value/holdout/0000",
+      "actions": 153,
+      "finalHash": "6b74eb3482612957f64174603e8d487b82a24f694d277988e146260972fafacd",
+      "ok": true
+    },
+    {
+      "seed": "F4-FULL-v1/Value/train/0000",
+      "actions": 170,
+      "finalHash": "03422c486bcae4c3631e15ba95f53f61109cd18f07f1126d3ad00a7de4752b2c",
+      "ok": true
+    }
+  ]
+}

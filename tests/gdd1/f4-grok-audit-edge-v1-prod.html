@@ -1,0 +1,1690 @@
+<!doctype html><html><head><meta charset="utf-8"><title>f4-grok-audit-edge-v1</title></head><body><script>
+(function (root) {
+  'use strict';
+  const F = root.GDD1 = root.GDD1 || {};
+  F.SCHEMA = 2;
+  F.RULES = 'GDD1';
+  F.CONTENT = 'GDD1';
+  F.SAVE_KEY = 'fog-port.save.v1.gdd1';
+  F.LEGACY_KEYS = Object.freeze(['fog-port.save.v1', 'fog-port.save.v1.backup']);
+  F.RNG_ALGORITHM = 'fnv1a-utf16le-xorshift32-v1';
+  F.STREAMS = Object.freeze(['draw', 'effect', 'symbolOffer', 'itemOffer', 'event']);
+  F.STABLE_PHASES = Object.freeze(['READY', 'SYMBOL_CHOICE', 'ITEM_CHOICE', 'EVENT_CHOICE', 'WON', 'LOST']);
+  F.PHASES = Object.freeze(['step1/draw', 'step2/tagAdded', 'step3/age', 'step4/appearance',
+    'step4/pressure-injection', 'step4/risk', 'step4/copy', 'step5/adjacency-add',
+    'step5/structural-event', 'step6/lifecycle', 'step6/pressure-injection',
+    'step7/pressure', 'step8/end-summary', 'step9/ledger', 'choice/commit']);
+  F.NORMAL_SPINS = Object.freeze([6,6,7,7,7,7,7,7,8,8]);
+  F.NORMAL_PAYMENTS = Object.freeze([70,125,210,320,460,630,850,1120,1460,1880]);
+  F.SLICE_PAYMENTS = Object.freeze([46,82,137,208,299,410,553,728,949,1222]);
+  const groups = [
+    'mist_pouch wick_bed dew_lantern amber_frond fog_stitcher root_ledger warm_pod nursery_gauge',
+    'ash_felt sorting_tong copper_burr spent_gasket sieve_drum heat_clerk clinker_router furnace_auditor',
+    'dock_chime pitch_fork fog_reed beat_spool chord_frame prism_hum silence_keeper harbor_conductor',
+    'brine_strip saline_ampoule condense_coil tide_prism deep_still crystal_index pearl_separator reserve_facet',
+    'cargo_rope route_stub parcel_cage sorting_runner manifest_desk switch_lamp transit_seal return_station',
+    'pressure_pouch feed_valve pause_dial surge_vessel cracked_regulator safety_shim release_spire demand_coupler',
+    'phase_chip spectrum_pin cloudy_negative blank_facet offset_reader alignment_cloth echo_plate split_register',
+    'arrears_slip lean_receipt compliance_desk cleared_stub cancellation_clerk quota_margin advance_stamp settlement_beacon'
+  ].map(x => x.split(' '));
+  F.SYMBOL_IDS = Object.freeze(groups.flat());
+  F.ITEM_IDS = Object.freeze(('dew_calendar root_wrap nursery_scale frost_glass sorting_apron waste_log offcut_chute clean_mesh lane_clapper rest_notch pitch_marker shared_metronome brine_lining fraction_gauge jar_rack residue_stamp manifest_clip return_track small_hold exchange_hook pressure_index insulation_shawl release_receipt spare_baffle safe_carbon spectrum_book registration_pin growth_negative low_balance_tab compliance_carbon audit_clip margin_lantern').split(' ').map(x => 'item_' + x));
+  F.EVENT_IDS = Object.freeze(('fog_shift copper_queue silent_bell brine_inspection empty_manifest boiler_test misprint_window quota_recount').split(' ').map(x => 'event_' + x));
+  F.PROFILES = Object.freeze({
+    'full-v1': Object.freeze({symbols:F.SYMBOL_IDS, items:F.ITEM_IDS, events:F.EVENT_IDS, payments:F.NORMAL_PAYMENTS}),
+    'slice-abd-v1': Object.freeze({symbols:Object.freeze([...groups[0], ...groups[1], ...groups[3]]),
+      items:Object.freeze(('dew_calendar root_wrap frost_glass sorting_apron waste_log offcut_chute clean_mesh brine_lining fraction_gauge residue_stamp').split(' ').map(x => 'item_' + x)),
+      events:Object.freeze(['event_fog_shift','event_copper_queue','event_brine_inspection']), payments:F.SLICE_PAYMENTS})
+  });
+  F.AGE_TYPES = Object.freeze({mist_pouch:3, dew_lantern:2, brine_strip:2, cloudy_negative:3});
+  F.PRESSURE_TYPES = Object.freeze({pressure_pouch:4, feed_valve:6, surge_vessel:3, reserve_facet:6});
+  F.clone = x => JSON.parse(JSON.stringify(x));
+  // A schema scaffold only: deliberately NOT a playable newRun or F2 controller.
+  F.createFoundationState = function (seed, profile = 'slice-abd-v1') {
+    if (!Object.hasOwn(F.PROFILES,profile) || typeof seed !== 'string' || seed.length > 1024) throw Error('Invalid identity');
+    const s = {schema:F.SCHEMA, rules:F.RULES, content:F.CONTENT, saveKey:F.SAVE_KEY,
+      rngAlgorithm:F.RNG_ALGORITHM, profile, difficulty:'Normal', seed, rng:F.createRng(seed, profile, 'Normal'),
+      revision:0, phase:'READY', stageId:1, spin:0, stageSpin:0, spinsRemaining:6,
+      basePayment:F.PROFILES[profile].payments[0], payment:F.PROFILES[profile].payments[0],
+      cash:0, pendingSettlement:null, last:null, pool:[], nextUid:1, items:[],
+      rerollTokens:2, removeTokens:2, offer:{windowId:0, kind:null, choices:[], choiceRefreshesUsed:0,
+        guarantees:{applied:null, stageCommonHandled:false, eventCrystalPending:false, itemProductPending:false}},
+      events:{seenIds:[], count:0, cooldownPayments:0, activeModifiers:[], choice:null},
+      reservations:[], fractionGaugeReserved:false,
+      itemState:{stageId:1, spin:0, quotas:{}, used:{}},
+      stageState:{advanceClaims:[], paymentModifiers:[], skipCount:0},
+      settings:{autosave:true, advanceAccepted:false}};
+    F.validateState(s);
+    return s;
+  };
+})(typeof window !== 'undefined' ? window : globalThis);
+
+</script><script>
+(function (root) {
+  'use strict';
+  const F = root.GDD1;
+  // FNV-1a over explicit UTF-16LE bytes, including unpaired surrogate code units.
+  F.hashIdentity = function (text) {
+    let h = 2166136261;
+    for (let i = 0; i < text.length; i++) {
+      const c = text.charCodeAt(i);
+      h = Math.imul(h ^ (c & 255), 16777619) >>> 0;
+      h = Math.imul(h ^ (c >>> 8), 16777619) >>> 0;
+    }
+    return h || 1;
+  };
+  F.createRng = function (seed, profile, difficulty) {
+    if (typeof seed !== 'string' || seed.length > 1024 || !Object.hasOwn(F.PROFILES,profile) || difficulty !== 'Normal') throw Error('Invalid RNG identity');
+    return Object.fromEntries(F.STREAMS.map(name => [name, {
+      state:F.hashIdentity(JSON.stringify([F.RULES,F.CONTENT,profile,difficulty,seed,name])), consumed:0
+    }]));
+  };
+  F.nextUint32 = function (rng, name) {
+    if (!F.STREAMS.includes(name) || !rng || !rng[name]) throw Error('Unknown RNG stream');
+    const r = rng[name];
+    if (!Number.isInteger(r.state) || r.state < 1 || r.state > 0xffffffff ||
+        !Number.isSafeInteger(r.consumed) || r.consumed < 0 || r.consumed === Number.MAX_SAFE_INTEGER) throw Error('Invalid RNG state/count');
+    let x = r.state;
+    x ^= x << 13; x ^= x >>> 17; x ^= x << 5;
+    r.state = x >>> 0;
+    r.consumed++;
+    return r.state;
+  };
+  F.random = (rng, name) => F.nextUint32(rng, name) / 4294967296;
+  F.shuffle = function (values, rng, name) {
+    const a = values.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(F.random(rng, name) * (i + 1));
+      [a[i],a[j]] = [a[j],a[i]];
+    }
+    return a;
+  };
+})(typeof window !== 'undefined' ? window : globalThis);
+
+</script><script>
+(function (root) {
+  'use strict';
+  const F = root.GDD1;
+  const object = x => x !== null && typeof x === 'object' && !Array.isArray(x);
+  const int = (x, lo = 0, hi = 1e9) => Number.isSafeInteger(x) && x >= lo && x <= hi;
+  const fail = message => { throw Error('GDD1: ' + message); };
+  const require = (ok, message) => { if (!ok) fail(message); };
+  const exact = (x, keys, name) => require(object(x) && Object.keys(x).sort().join('|') === keys.slice().sort().join('|'), name + ' fields');
+  const uid = x => typeof x === 'string' && /^u[1-9]\d*$/.test(x) && int(Number(x.slice(1)), 1, Number.MAX_SAFE_INTEGER);
+  const unique = a => new Set(a).size === a.length;
+  const list = (x, max, name) => require(Array.isArray(x) && x.length <= max, name);
+  const nullable = (x, predicate) => x === null || predicate(x);
+  F.validateState = function (s) {
+    exact(s, ['schema','rules','content','saveKey','rngAlgorithm','profile','difficulty','seed','rng','revision',
+      'phase','stageId','spin','stageSpin','spinsRemaining','basePayment','payment','cash','pendingSettlement','last',
+      'pool','nextUid','items','rerollTokens','removeTokens','offer','events','reservations','fractionGaugeReserved',
+      'itemState','stageState','settings'], 'state');
+    require(s.schema === 2 && s.rules === F.RULES && s.content === F.CONTENT && s.saveKey === F.SAVE_KEY &&
+      s.rngAlgorithm === F.RNG_ALGORITHM && Object.hasOwn(F.PROFILES,s.profile) && s.difficulty === 'Normal', 'incompatible version/profile');
+    const profile = F.PROFILES[s.profile];
+    require(typeof s.seed === 'string' && s.seed.length <= 1024 && int(s.revision,0,Number.MAX_SAFE_INTEGER), 'identity/revision');
+    exact(s.rng, F.STREAMS, 'rng');
+    const initialRng = F.createRng(s.seed,s.profile,s.difficulty);
+    for (const name of F.STREAMS) {
+      exact(s.rng[name], ['state','consumed'], 'rng.' + name);
+      require(int(s.rng[name].state,1,0xffffffff) && int(s.rng[name].consumed,0,Number.MAX_SAFE_INTEGER), 'rng.' + name);
+      require(s.rng[name].consumed !== 0 || s.rng[name].state === initialRng[name].state, 'unconsumed RNG identity');
+    }
+    require(F.STABLE_PHASES.includes(s.phase) && int(s.stageId,1,10) && int(s.spin,0,70) && int(s.stageSpin,0,F.NORMAL_SPINS[s.stageId-1]), 'phase/stage/spin');
+    require(s.spin === F.NORMAL_SPINS.slice(0,s.stageId-1).reduce((a,b) => a+b,0) + s.stageSpin &&
+      s.spinsRemaining === F.NORMAL_SPINS[s.stageId-1]-s.stageSpin, 'spin window');
+    require(s.basePayment === profile.payments[s.stageId-1] && int(s.payment,1) && int(s.cash) &&
+      int(s.nextUid,1,Number.MAX_SAFE_INTEGER) && int(s.rerollTokens,0,9) && int(s.removeTokens,0,9), 'money/resources');
+    require((s.phase !== 'READY' || s.spinsRemaining > 0) &&
+      (s.phase !== 'SYMBOL_CHOICE' || s.stageSpin > 0) &&
+      (!['ITEM_CHOICE','WON','LOST'].includes(s.phase) || s.spinsRemaining === 0) &&
+      (s.phase !== 'ITEM_CHOICE' || s.stageId < 10) && (s.phase !== 'WON' || s.stageId === 10) &&
+      (s.phase !== 'EVENT_CHOICE' || (s.stageId >= 3 && s.stageId <= 9 && s.stageSpin === 0)), 'stable phase window');
+    const track = x => { require(uid(x) && Number(x.slice(1)) < s.nextUid, 'UID/nextUid'); return x; };
+    list(s.pool,200,'pool');
+    require(unique(s.pool.map(x => x && x.uid)), 'duplicate pool UID');
+    const pool = new Map();
+    for (const x of s.pool) {
+      exact(x, ['uid','type','permanent','epoch','counters'], 'instance'); track(x.uid);
+      require(profile.symbols.includes(x.type) && int(x.permanent,0,30) && int(x.epoch,0,Number.MAX_SAFE_INTEGER), 'instance values');
+      const counterKeys = F.AGE_TYPES[x.type] || x.type === 'ash_felt' ? ['age'] :
+        F.PRESSURE_TYPES[x.type] ? ['pressure'] : x.type === 'beat_spool' ? ['beat'] : [];
+      exact(x.counters,counterKeys,'counters');
+      for (const [key,value] of Object.entries(x.counters)) {
+        const max = key === 'age' ? (F.AGE_TYPES[x.type] || (x.type === 'ash_felt' ? 3 : -1)) :
+          key === 'pressure' ? F.PRESSURE_TYPES[x.type] : key === 'beat' && x.type === 'beat_spool' ? 2 : -1;
+        require(int(value,0,max === undefined ? -1 : max), 'counter mechanism');
+        if (key === 'age') require(value < max,'uncommitted maturity');
+      }
+      pool.set(x.uid,x);
+    }
+    list(s.items,9,'items'); require(unique(s.items) && s.items.every(x => profile.items.includes(x)), 'items/profile');
+    require(s.items.length <= (s.phase === 'ITEM_CHOICE' ? s.stageId-1 : Math.min(s.stageId-1,9)), 'item acquisition window');
+    exact(s.offer, ['windowId','kind','choices','choiceRefreshesUsed','guarantees'], 'offer');
+    require(int(s.offer.windowId,0,Number.MAX_SAFE_INTEGER) && int(s.offer.choiceRefreshesUsed,0,3), 'offer window/refresh');
+    const g = s.offer.guarantees;
+    exact(g, ['applied','stageCommonHandled','eventCrystalPending','itemProductPending'], 'guarantees');
+    require([null,'stage-common','event-crystal','item-product'].includes(g.applied) &&
+      [g.stageCommonHandled,g.eventCrystalPending,g.itemProductPending].every(x => typeof x === 'boolean'), 'guarantees');
+    list(s.offer.choices,3,'choices'); require(unique(s.offer.choices), 'duplicate offers');
+    const kind = s.phase === 'SYMBOL_CHOICE' ? 'symbol' : s.phase === 'ITEM_CHOICE' ? 'item' : null;
+    require(s.offer.kind === kind && (kind ? s.offer.windowId > 0 && s.offer.choices.length > 0 : s.offer.choices.length === 0), 'offer phase');
+    require(s.offer.choices.every(x => kind === 'symbol' ? profile.symbols.includes(x) && !['spent_gasket','arrears_slip'].includes(x) :
+      kind === 'item' && profile.items.includes(x) && !s.items.includes(x)), 'offer definitions');
+    require(kind === 'symbol' || (s.offer.choiceRefreshesUsed === 0 && g.applied === null), 'refresh/applied phase');
+    require(s.offer.choiceRefreshesUsed === 0 || g.applied === null, 'refresh consumed guarantee');
+    exact(s.events, ['seenIds','count','cooldownPayments','activeModifiers','choice'], 'events');
+    list(s.events.seenIds,3,'seen events');
+    require(unique(s.events.seenIds) && s.events.seenIds.every(x => profile.events.includes(x)) && s.events.count === s.events.seenIds.length &&
+      int(s.events.cooldownPayments,0,1), 'event count/cooldown');
+    list(s.events.activeModifiers,200,'modifiers');
+    const modifierIds = new Set();
+    for (const m of s.events.activeModifiers) {
+      exact(m,['eventId','uid','stageId','remaining'], 'modifier');
+      require(s.events.seenIds.includes(m.eventId) && int(m.stageId,3,s.stageId), 'modifier event/stage');
+      const k = m.eventId + '/' + m.uid;
+      require(!modifierIds.has(k), 'duplicate modifier'); modifierIds.add(k);
+      if (m.eventId === 'event_fog_shift') {
+        track(m.uid); const target = pool.get(m.uid);
+        // Only age-bearing plant definitions qualify; UID-bound uses survive stages
+        // and mist -> dew conversion, but not conversion to an age-less product/deletion.
+        require(target && ['mist_pouch','dew_lantern'].includes(target.type) &&
+          F.AGE_TYPES[target.type] && int(m.remaining,1,2), 'fog modifier target/remaining');
+      } else {
+        const window = m.eventId === 'event_empty_manifest' ? 1 : 3;
+        // stageSpin counts completed spins, including an unresolved symbol choice.
+        // Fixed windows expire at spin commit even if no eligible symbol appeared.
+        require(['event_silent_bell','event_empty_manifest','event_misprint_window'].includes(m.eventId) && m.uid === null &&
+          m.stageId === s.stageId && s.stageSpin < window && m.remaining === window-s.stageSpin, 'stage modifier');
+      }
+    }
+    if (s.phase === 'EVENT_CHOICE') {
+      const c = s.events.choice; exact(c,['id','options','targetUids','cost','stageId'], 'event choice');
+      require(profile.events.includes(c.id) && s.events.seenIds.includes(c.id) && s.events.cooldownPayments === 1 &&
+        c.stageId === s.stageId && JSON.stringify(c.options) === '["A","B"]' &&
+        c.cost === (c.id === 'event_fog_shift' ? 4 : c.id === 'event_misprint_window' ? 6 : 0), 'event choice values');
+      require(!s.events.activeModifiers.some(m=>m.eventId === c.id), 'event effect applied before confirmation');
+      list(c.targetUids,200,'event targets'); require(unique(c.targetUids), 'event targets duplicated');
+      c.targetUids.forEach(track); // saved quotation can become stale; confirmation must revalidate it.
+    } else require(s.events.choice === null, 'event choice phase');
+    list(s.reservations,2,'reservations');
+    require(unique(s.reservations.map(x=>x&&x.uid)) && unique(s.reservations.map(x=>x&&x.pos)), 'reservation duplicates');
+    for (const r of s.reservations) {
+      exact(r,['uid','pos','epoch','source','expiresSpin'], 'reservation'); track(r.uid);
+      const target = pool.get(r.uid);
+      require(target && target.epoch === r.epoch && int(r.pos,0,19) && r.expiresSpin === s.spin+1 &&
+        (uid(r.source) || s.items.includes(r.source)), 'reservation validity');
+      if (uid(r.source)) track(r.source); // source may have left the pool.
+    }
+    require(s.fractionGaugeReserved === false, 'transient gauge reservation');
+    exact(s.itemState,['stageId','spin','quotas','used'], 'itemState');
+    require(s.itemState.stageId === s.stageId && s.itemState.spin === s.spin, 'item window');
+    exact(s.itemState.quotas,s.items,'item quotas'); exact(s.itemState.used,s.items,'item used');
+    for (const id of s.items) {
+      exact(s.itemState.quotas[id],['spin','stage','run'],'quota');
+      const q = s.itemState.quotas[id];
+      require(int(q.spin,0,64) && int(q.stage,0,5000) && int(q.run,0,350000), 'quota counts');
+      exact(s.itemState.used[id],['spin','stage'],'used');
+      require(typeof s.itemState.used[id].spin === 'boolean' && typeof s.itemState.used[id].stage === 'boolean','used flags');
+    }
+    exact(s.stageState,['advanceClaims','paymentModifiers','skipCount'], 'stageState');
+    list(s.stageState.advanceClaims,200,'advance claims'); require(unique(s.stageState.advanceClaims),'duplicate advance claims');
+    s.stageState.advanceClaims.forEach(track);
+    require(profile.symbols.includes('advance_stamp') || s.stageState.advanceClaims.length === 0,'slice advance');
+    list(s.stageState.paymentModifiers,203,'payment modifiers');
+    let obligation = 0; const sources = new Set();
+    for (const m of s.stageState.paymentModifiers) {
+      exact(m,['source','amount','cause'],'payment modifier');
+      require(!sources.has(m.source),'duplicate obligation'); sources.add(m.source);
+      if (m.cause === 'advance') require(s.stageState.advanceClaims.includes(track(m.source)) && m.amount === 12,'advance obligation');
+      else require(m.cause === 'event' && s.events.seenIds.includes(m.source) &&
+        (s.events.choice === null || s.events.choice.id !== m.source) &&
+        ((m.source === 'event_boiler_test' && m.amount === 12) || (m.source === 'event_quota_recount' && m.amount === 10)), 'event obligation');
+      obligation += m.amount;
+    }
+    require(s.stageState.advanceClaims.every(x=>sources.has(x)) && s.payment === s.basePayment+obligation &&
+      int(s.stageState.skipCount,0,s.stageSpin), 'actual payment/skipCount');
+    exact(s.settings,['autosave','advanceAccepted'],'settings');
+    require(typeof s.settings.autosave === 'boolean' && typeof s.settings.advanceAccepted === 'boolean','settings');
+    if (s.last !== null) {
+      const r = s.last;
+      exact(r,['spin','total','reward','board','ledger','log'], 'last');
+      require(r.spin === s.spin && r.spin > 0 && int(r.total,-1e9) && int(r.reward,-1e9), 'last values');
+      require(Array.isArray(r.board) && r.board.length === 20,'board');
+      const board = new Map();
+      for (let pos=0; pos<20; pos++) {
+        const c = r.board[pos]; if (c === null) continue;
+        exact(c,['uid','type','epoch','alive'],'cell'); track(c.uid);
+        require(!board.has(c.uid) && profile.symbols.includes(c.type) && int(c.epoch,0,Number.MAX_SAFE_INTEGER) &&
+          typeof c.alive === 'boolean','board cell'); board.set(c.uid,c);
+      }
+      list(r.ledger,20,'ledger'); const seen = new Set(); let sum = r.reward;
+      for (const x of r.ledger) {
+        exact(x,Object.hasOwn(x,'contributions')?['uid','type','amount','alive','ratio','contributions']:['uid','type','amount','alive','ratio'],'ledger entry');
+        const c = board.get(x.uid);
+        require(c && !seen.has(x.uid) && c.type === x.type && c.alive === x.alive && int(x.amount,-1e9) &&
+          (x.alive || x.amount === 0) && Array.isArray(x.ratio) && x.ratio.length === 2 &&
+          x.ratio.every(n=>typeof n === 'string' && /^[1-9]\d{0,255}$/.test(n)), 'ledger facts');
+        if (Object.hasOwn(x,'contributions')) {
+          list(x.contributions,5000,'contributions'); const contributors=new Set();let contributed=0;
+          for (const part of x.contributions) {
+            exact(part,['source','amount'],'contribution');
+            require((uid(part.source)||s.items.includes(part.source)||s.profile==='full-v1'&&s.events.seenIds.includes(part.source)) && !contributors.has(part.source) && int(part.amount,-1e9),'contribution facts');
+            if (uid(part.source)) track(part.source);contributors.add(part.source);contributed+=part.amount;
+          }
+          require(contributed===x.amount,'contribution conservation');
+        }
+        seen.add(x.uid); sum += x.amount;
+      }
+      require(seen.size === board.size && sum === r.total,'ledger conservation');
+      list(r.log,5000,'log');
+      const actions = ['age','transform','consume','destroy','grow','tagAdded','add','multiply','reward','pressureIncrease','release','spawn','copy','risk','reserve','limitSkipped'];
+      for (let i=0; i<r.log.length; i++) {
+        const e = r.log[i];
+        const baseLog=['id','parent','depth','phase','action','source','target','amount'];
+        const extendedLog=['id','parent','depth','phase','action','source','target','amount','facts'];
+        require(object(e) && (Object.keys(e).sort().join('|')===baseLog.slice().sort().join('|') || Object.keys(e).sort().join('|')===extendedLog.slice().sort().join('|')), 'causal log fields');
+        require(e.id === i && int(e.depth,0,32) && F.PHASES.includes(e.phase) && (actions.includes(e.action) || s.profile==='full-v1' && e.action==='cycle') &&
+          nullable(e.amount,x=>int(x,-1e9)) && nullable(e.source,x=>uid(x)||s.items.includes(x)||s.profile==='full-v1'&&s.events.seenIds.includes(x)) && nullable(e.target,uid),'log facts');
+        if (Object.hasOwn(e,'facts')) {
+          exact(e.facts,['effectKey','sourcePos','targetPos','beforeType','afterType','beforeTags','afterTags','cause','actualIncrease','createdUid','skipReason'],'causal facts');
+          require(typeof e.facts.effectKey==='string' && nullable(e.facts.sourcePos,x=>int(x,0,19)) && nullable(e.facts.targetPos,x=>int(x,0,19)) &&
+            nullable(e.facts.beforeType,x=>profile.symbols.includes(x)) && nullable(e.facts.afterType,x=>profile.symbols.includes(x)) &&
+            Array.isArray(e.facts.beforeTags) && Array.isArray(e.facts.afterTags) && typeof e.facts.cause==='string' && int(e.facts.actualIncrease,-1e9) &&
+            nullable(e.facts.createdUid,uid) && nullable(e.facts.skipReason,x=>typeof x==='string') &&
+            e.facts.beforeTags.every(x=>typeof x==='string') && e.facts.afterTags.every(x=>typeof x==='string') &&
+            unique(e.facts.beforeTags) && unique(e.facts.afterTags),'causal facts values');
+          if(e.facts.createdUid!==null)track(e.facts.createdUid);
+        }
+        if (e.source !== null && uid(e.source)) track(e.source);
+        if (e.target !== null) track(e.target);
+        if (e.parent === null) require(e.depth === 0,'root depth');
+        else require(int(e.parent,0,i-1) && r.log[e.parent].depth+1 === e.depth,'future/cyclic parent/depth');
+      }
+    }
+    require(s.phase === 'SYMBOL_CHOICE' ? int(s.pendingSettlement,-1e9) && s.last !== null && s.pendingSettlement === s.last.total :
+      s.pendingSettlement === null, 'pending settlement');
+    require(s.spin === 0 ? s.last === null : s.last !== null, 'missing last');
+    return true;
+  };
+  // Revision + clone + validation. No F2 commands are dispatched here.
+  F.transact = function (state, revision, operation) {
+    try {
+      F.validateState(state);
+      require(revision === state.revision && typeof operation === 'function' && state.revision < Number.MAX_SAFE_INTEGER, 'stale/invalid command');
+      const next = F.clone(state);
+      const returned = operation(next);
+      require(returned === undefined, 'operation must be synchronous and return undefined');
+      require(['schema','rules','content','saveKey','rngAlgorithm','profile','difficulty','seed'].every(k=>next[k] === state[k]), 'operation changed run identity');
+      require(next.revision === state.revision, 'operation changed revision');
+      next.revision++;
+      F.validateState(next);
+      return {ok:true, state:F.clone(next)}; // callback cannot retain an alias to the committed candidate
+    } catch (error) { return {ok:false,state,error:error.message}; }
+  };
+})(typeof window !== 'undefined' ? window : globalThis);
+
+</script><script>
+(function (root) {
+  'use strict';
+  const F = root.GDD1;
+  const MAX = 1024 * 1024;
+  const size = text => {
+    // Count UTF-8 bytes, not JS UTF-16 length (JSON import limit is <=1 MiB).
+    let bytes = 0;
+    for (let i=0; i<text.length; i++) {
+      const c = text.charCodeAt(i);
+      if (c < 128) bytes++;
+      else if (c < 2048) bytes += 2;
+      else if (c >= 0xd800 && c <= 0xdbff && i+1 < text.length && text.charCodeAt(i+1) >= 0xdc00 && text.charCodeAt(i+1) <= 0xdfff) { bytes += 4; i++; }
+      else bytes += 3;
+    }
+    return bytes;
+  };
+  const bounded = (text, max) => {
+    if (typeof text !== 'string' || text.length > max || size(text) > max) throw Error('GDD1 save exceeds byte limit');
+  };
+  F.encode = function (state) {
+    F.validateState(state);
+    const text = JSON.stringify(state); bounded(text,MAX); return text;
+  };
+  F.decode = function (text, expectedProfile) {
+    bounded(text,MAX);
+    const state = JSON.parse(text);
+    // Intentionally no migration, missing-field defaults, RNG generation, or resolver call.
+    F.validateState(state);
+    if (expectedProfile !== undefined && (!Object.hasOwn(F.PROFILES,expectedProfile) || state.profile !== expectedProfile)) throw Error('GDD1 profile mismatch');
+    return state;
+  };
+  F.decodeStorageRecord = function (text, expectedProfile) {
+    bounded(text,2*MAX+256);
+    const record = JSON.parse(text);
+    if (!record || record.storageVersion !== 1 || Object.keys(record).sort().join(',') !== 'current,previous,storageVersion') throw Error('GDD1 invalid envelope');
+    // Unknown future/schema/profile must not be masked by a compatible previous save.
+    // Recovery is explicit (recoverPrevious), never silent on an invalid current.
+    return F.decode(JSON.stringify(record.current),expectedProfile);
+  };
+  F.recoverPrevious = function (text) {
+    bounded(text,2*MAX+256);
+    const record = JSON.parse(text);
+    if (!record || record.storageVersion !== 1 || Object.keys(record).sort().join(',') !== 'current,previous,storageVersion' || record.previous === null) throw Error('GDD1 no valid previous record');
+    return F.decode(JSON.stringify(record.previous));
+  };
+  F.store = function (storage, state) {
+    try {
+      const current = JSON.parse(F.encode(state));
+      const old = storage.getItem(F.SAVE_KEY);
+      let previous = null;
+      if (old !== null) {
+        // Invalid old bytes remain intact: user must explicitly export/clear before replacing.
+        previous = F.decodeStorageRecord(old);
+      }
+      const envelope = JSON.stringify({storageVersion:1,current,previous});
+      bounded(envelope,2*MAX+256);
+      storage.setItem(F.SAVE_KEY,envelope); // exactly one write; legacy keys never touched
+      return {ok:true};
+    } catch (error) { return {ok:false,error:'Session-only: ' + error.message}; }
+  };
+  F.load = function (storage, expectedProfile) {
+    try {
+      const text = storage.getItem(F.SAVE_KEY);
+      if (text === null) return {ok:false,error:'No GDD1 save'};
+      return {ok:true,state:F.decodeStorageRecord(text,expectedProfile)};
+    } catch (error) { return {ok:false,error:error.message}; }
+  };
+  F.commitImport = function (storage, text, preview, expectedProfile) {
+    // Preview is synchronous, returns undefined, and works on a disposable clone.
+    // Validate completion before store performs any storage read/write or state publication.
+    try {
+      const next = F.decode(text,expectedProfile);
+      if (typeof preview !== 'function') throw Error('GDD1 import requires pre-render validation');
+      const returned = preview(F.clone(next));
+      if (returned !== undefined) throw Error('GDD1 preview must be synchronous and return undefined');
+      const result = F.store(storage,next);
+      return result.ok ? {ok:true,state:next} : result;
+    } catch (error) { return {ok:false,error:error.message}; }
+  };
+  F.readLegacy = function (storage) {
+    return F.LEGACY_KEYS.map(key => {
+      const text = storage.getItem(key);
+      let summary = null;
+      if (typeof text === 'string') {
+        try {
+          bounded(text,2*MAX+256);
+          const parsed = JSON.parse(text), s = parsed && parsed.storageVersion === 1 ? parsed.current : parsed;
+          if (s && typeof s === 'object') summary = {version:s.version ?? null,rules:s.rules ?? null,
+            contentVersion:s.contentVersion ?? null,phase:s.phase ?? null,cash:s.cash ?? null,
+            pendingSettlement:s.pendingSettlement ?? null};
+        } catch (_) { /* raw export remains available even for corrupt legacy bytes */ }
+      }
+      return {key,text,summary,readOnly:true};
+    });
+  };
+})(typeof window !== 'undefined' ? window : globalThis);
+
+</script><script>
+(function(root){
+'use strict';
+const F=root.GDD1;
+const effect=(phase,op,extra)=>Object.assign({phase,op},extra||{});
+const adj=(tag,extra)=>Object.assign({scope:'adjacent',tag},extra||{});
+const all=tag=>({scope:'all',tag});
+const self={scope:'self'};
+const rows=[
+['mist_pouch','凝雾软囊','common','plant mist',1,{age:{threshold:3,to:'dew_lantern'}}],['wick_bed','灯芯苗床','common','plant fuel',2,{}],['dew_lantern','露灯苞','uncommon','plant mist product',3,{age:{threshold:2,to:'amber_frond'}}],['amber_frond','琥露扇叶','uncommon','plant fuel product cargo',4,{},[effect('listen','reward',{event:'consume',match:{targetSelf:true},amount:4})]],['fog_stitcher','补雾工','uncommon','machine support',1,{},[effect('age-extra','age',{selector:adj('plant',{age:true}),amount:1})]],['root_ledger','根须账簿','rare','plant contract',1,{},[effect('listen','grow',{event:'transform',match:{beforeTag:'plant'},amount:1,limit:2})]],['warm_pod','温灯荚','common','plant pressure',1,{},[effect('appearance','add',{selector:self,predicate:{count:adj('fuel'),min:1},amount:3})]],['nursery_gauge','苗圃指针','rare','machine plant',2,{},[effect('summary','multiply',{selector:all('plant'),predicate:{events:'transform',min:2},ratio:[3,2]})]],
+['ash_felt','灰温毡','common','scrap fuel',1,{age:{threshold:3,destroy:true}},[effect('listen','spawn',{event:'consume',match:{targetSelf:true},type:'copper_burr'}),effect('end','destroy',{selector:self,predicate:{counter:'age',min:3},reward:3,cause:'self_mature'})]],['sorting_tong','分温夹','common','machine',1,{},[effect('structure','consume',{selector:adj('scrap'),reward:6})]],['copper_burr','铜毛刺','common','scrap product cargo',2,{},[effect('appearance','add',{selector:self,predicate:{count:adj('machine'),min:1},amount:2})]],['spent_gasket','过役垫圈','common','scrap junk',-1,{candidate:false}],['sieve_drum','除滞滚筒','uncommon','machine support',2,{},[effect('structure','transform',{selector:adj('junk'),type:'copper_burr'})]],['heat_clerk','余温录员','uncommon','machine contract',1,{},[effect('listen','grow',{event:'consume',match:{beforeTag:'scrap'},amount:1})]],['clinker_router','灰渣分路器','rare','machine pressure',2,{},[effect('structure','destroy',{selector:adj('junk')}),effect('listen','pressure',{event:'destroy',match:{beforeTag:'junk',notCause:'consume'},selector:all('pressure'),amount:2})]],['furnace_auditor','炉账稽核灯','rare','machine',2,{},[effect('summary','multiply',{selector:all('machine'),predicate:{events:'consume',min:2},ratio:[3,2]})]],
+['brine_strip','盐雾滤带','common','mist feedstock',1,{age:{threshold:2,to:'saline_ampoule'}}],['saline_ampoule','微盐安瓿','common','feedstock cargo',2,{}],['condense_coil','凝潮盘管','common','machine',1,{},[effect('structure','transform',{selector:adj('feedstock'),type:'tide_prism'})]],['tide_prism','潮棱块','uncommon','crystal product cargo',4,{},[effect('listen','add',{event:'transform',match:{targetSelf:true},amount:3})]],['deep_still','深盐分馏器','uncommon','machine',2,{},[effect('structure','consume',{selector:adj('mist'),reward:4,spawn:'saline_ampoule'})]],['crystal_index','晶层索引','uncommon','crystal support',1,{},[effect('appearance','add',{selector:self,predicate:{count:all('crystal'),distinct:true,min:2},amount:6})]],['pearl_separator','浮珠分离器','rare','machine',2,{},[effect('structure','transform',{selector:adj('crystal',{notTag:'product'}),type:'tide_prism'})]],['reserve_facet','留温晶面','rare','crystal pressure',2,{pressure:{cap:6,reward:18}},[effect('structure','consume',{selector:adj('fuel'),reward:2,pressure:2})]]
+];
+F.sliceSymbols=Object.fromEntries(rows.map(([id,name,rarity,tags,base,mechanics,effects=[]])=>[id,{id,name,rarity,tags:tags.split(' '),base,mechanics,effects:effects.map((e,i)=>Object.assign({key:id+':'+i,limit:1},e))}]));
+const items=[['dew_calendar','露班轮历','common',[effect('step3','age',{selector:all('plant'),age:true,amount:1})]],['root_wrap','根温绑带','uncommon',[effect('listen','add',{event:'transform',match:{beforeTag:'plant'},amount:4})]],['frost_glass','防寒窄窗','uncommon',[effect('initial','add',{selector:all('mist'),amount:3,limit:2})]],['sorting_apron','分温围裙','common',[effect('listen','reward',{event:'consume',match:{beforeTag:'scrap'},amount:3})]],['waste_log','滞物登记本','uncommon',[effect('listen','token',{event:'destroy',match:{beforeTag:'junk'},threshold:3,resource:'removeTokens',amount:1})]],['offcut_chute','边料回流槽','rare',[effect('listen','spawn',{event:'consume',match:{beforeTag:'scrap'},type:'ash_felt'})]],['clean_mesh','清栈细网','uncommon',[effect('step1','weight',{tag:'junk',ratio:[1,2]})]],['brine_lining','盐雾内衬','common',[effect('listen','add',{event:'transform',match:{beforeTag:'feedstock',afterTag:'crystal'},amount:4})]],['fraction_gauge','分馏格尺','uncommon',[effect('change','reward',{predicate:{count:all('crystal'),distinct:true,min:3},amount:7})]],['residue_stamp','残液验章','uncommon',[effect('listen','reward',{event:'consume',match:{beforeTag:'mist'},amount:2})]]];
+F.sliceItems=Object.fromEntries(items.map(([suffix,name,rarity,effects])=>{const id='item_'+suffix;return[id,{id,name,rarity,effects}]}));
+F.sliceEvents={event_fog_shift:{name:'雾班调换',tag:'plant',age:true,cost:4,op:'modifier',remaining:2},event_copper_queue:{name:'铜屑排队',tag:'junk',cost:0,op:'transform',type:'copper_burr',spawn:'spent_gasket'},event_brine_inspection:{name:'盐雾抽检',tag:'feedstock',cost:0,op:'remove',guarantee:'eventCrystalPending'}};
+// Listener permissions and windows are explicit data, not resolver type branches.
+F.sliceSymbols.amber_frond.effects[0].deathAllowed=true;
+F.sliceSymbols.ash_felt.effects[0].deathAllowed=true;
+F.sliceSymbols.clinker_router.effects[1].match.notCause='consume';
+F.sliceSymbols.clinker_router.effects[1].limit=2;
+F.sliceSymbols.clinker_router.effects[1].selector.pressureMechanism=true;
+Object.assign(F.sliceSymbols.nursery_gauge.effects[0],{each:true});
+Object.assign(F.sliceSymbols.nursery_gauge.effects[0].predicate,{beforeTag:'plant'});
+Object.assign(F.sliceSymbols.furnace_auditor.effects[0],{each:true});
+Object.assign(F.sliceSymbols.furnace_auditor.effects[0].predicate,{beforeTag:'scrap',distinct:true});
+F.sliceSymbols.tide_prism.effects[0].match.afterSelfType=true;
+F.sliceItems.item_dew_calendar.effects[0].selector.age=true;
+Object.assign(F.sliceItems.item_root_wrap.effects[0],{eventTarget:true});
+Object.assign(F.sliceItems.item_brine_lining.effects[0],{eventTarget:true});
+Object.assign(F.sliceItems.item_frost_glass.effects[0],{window:'stage',each:true});
+Object.assign(F.sliceItems.item_waste_log.effects[0],{window:'stage'});
+F.sliceItems.item_waste_log.effects[0].match.notCause='consume';
+F.sliceItems.item_offcut_chute.effects[0].match.notBeforeTag='junk';
+for(const d of Object.values(F.sliceItems))d.effects=d.effects.map((e,i)=>Object.assign({key:d.id+':'+i,limit:1},e));
+F.instance=function(s,type){const d=F.sliceSymbols[type];if(!d)throw Error('Unknown slice definition');const uid='u'+s.nextUid++;return{uid,type,permanent:0,epoch:0,counters:d.mechanics.age?{age:0}:d.mechanics.pressure?{pressure:0}:{}}};
+F.sliceNewRun=function(seed){const s=F.createFoundationState(seed,'slice-abd-v1');const types=['mist_pouch','mist_pouch','wick_bed','wick_bed','ash_felt','ash_felt','copper_burr','copper_burr','saline_ampoule','saline_ampoule','brine_strip','spent_gasket'];s.pool=types.map(t=>F.instance(s,t));F.validateState(s);return s};
+})(typeof window!=='undefined'?window:globalThis);
+
+</script><script>
+(function(root){
+'use strict';
+const F=root.GDD1;
+const baseSymbols=F.clone(F.sliceSymbols),baseItems=F.clone(F.sliceItems),baseEvents=F.clone(F.sliceEvents);
+const names={
+ dock_chime:'栈桥鸣片',pitch_fork:'港音分叉',fog_reed:'雾笛簧',beat_spool:'拍点线轴',chord_frame:'和音框',prism_hum:'晶腔哼鸣器',silence_keeper:'静拍保管员',harbor_conductor:'港湾拍长',
+ cargo_rope:'夜班扎绳',route_stub:'转栈短票',parcel_cage:'铜格货笼',sorting_runner:'分栈跑员',manifest_desk:'夜单台',switch_lamp:'换轨灯',transit_seal:'联运封蜡',return_station:'空箱返程站',
+ pressure_pouch:'余压软袋',feed_valve:'添温小阀',pause_dial:'歇拍刻盘',surge_vessel:'脉冲釜',cracked_regulator:'裂缝调压器',safety_shim:'卸压薄衬',release_spire:'泄峰塔',demand_coupler:'配额耦合器',
+ phase_chip:'偏相小片',spectrum_pin:'谱别别针',cloudy_negative:'雾面底片',blank_facet:'无谱晶坯',offset_reader:'偏印读头',alignment_cloth:'对相织布',echo_plate:'迟相印板',split_register:'双谱登记器',
+ arrears_slip:'待核欠条',lean_receipt:'薄账回执',compliance_desk:'合规小台',cleared_stub:'核清存根',cancellation_clerk:'撤账员',quota_margin:'配额边签',advance_stamp:'先支邮戳',settlement_beacon:'清算信标'};
+const groups=[
+ ['dock_chime','pitch_fork','fog_reed','beat_spool','chord_frame','prism_hum','silence_keeper','harbor_conductor'],
+ ['cargo_rope','route_stub','parcel_cage','sorting_runner','manifest_desk','switch_lamp','transit_seal','return_station'],
+ ['pressure_pouch','feed_valve','pause_dial','surge_vessel','cracked_regulator','safety_shim','release_spire','demand_coupler'],
+ ['phase_chip','spectrum_pin','cloudy_negative','blank_facet','offset_reader','alignment_cloth','echo_plate','split_register'],
+ ['arrears_slip','lean_receipt','compliance_desk','cleared_stub','cancellation_clerk','quota_margin','advance_stamp','settlement_beacon']];
+const tags=[['resonance','cargo'],['cargo'],['pressure'],['magic'],['contract']];
+const rar=['common','common','common','uncommon','uncommon','uncommon','rare','epic'];
+const base=[2,1,1,1,2,2,1,2];
+for(let g=0;g<groups.length;g++)for(let i=0;i<8;i++){const id=groups[g][i];if(!F.sliceSymbols[id])F.sliceSymbols[id]={id,name:names[id],rarity:rar[i],tags:[...tags[g]],base:base[i],mechanics:{},effects:[],description:'数据驱动效果定义；按阶段登记执行'};}
+// Full profile retains the frozen mechanics contract for all counter-bearing definitions.
+// Pressure mechanisms remain structured {cap,reward} contracts; never replace
+// inherited mechanisms with a numeric placeholder.
+Object.assign(F.sliceSymbols.cloudy_negative && F.sliceSymbols.cloudy_negative.mechanics || {},{age:{threshold:3}});
+Object.assign(F.sliceSymbols.ash_felt && F.sliceSymbols.ash_felt.mechanics || {},{age:{threshold:3,destroy:true}});
+const itemNames=['露班轮历','根温绑带','苗圃轻秤','防寒窄窗','分温围裙','滞物登记本','边料回流槽','清栈细网','轨边拍板','休拍刻槽','音高记签','公用节拍器','盐雾内衬','分馏格尺','安瓿架','残液验章','夜单夹','空返侧轨','小舱限载牌','换装挂钩','压班索引','隔温披布','泄压回执','备用挡板','安全复写膜','谱类手册','对版定位针','增量底片册','薄账分页条','合规复核纸','稽核夹','余账灯'];
+const itemR=['common','common','rare','uncommon','common','uncommon','rare','uncommon','common','uncommon','rare','uncommon','common','uncommon','rare','uncommon','common','uncommon','rare','uncommon','common','uncommon','rare','uncommon','common','uncommon','rare','uncommon','common','uncommon','rare','uncommon'];
+F.ITEM_IDS.forEach((id,i)=>{if(!F.sliceItems[id])F.sliceItems[id]={id,name:itemNames[i]||id,rarity:itemR[i]||'common',effects:[],description:'持续道具；按 activationPhase → targetSelectionPhase → commitPhase 执行'};});
+const eventData={event_fog_shift:['雾班调换',4,'plant'],event_copper_queue:['铜屑排队',0,'junk'],event_silent_bell:['停鸣通知',0,'resonance'],event_brine_inspection:['盐雾抽检',0,'feedstock'],event_empty_manifest:['空白夜单',0,'cargo'],event_boiler_test:['压锅试鸣',0,'pressure'],event_misprint_window:['错版窗口',6,'magic'],event_quota_recount:['配额复点',0,'contract']};
+for(const [id,[name,cost,tag]] of Object.entries(eventData))if(!F.sliceEvents[id])F.sliceEvents[id]={id,name,cost,tag,op:'modifier',remaining:2,description:'可选事件；A/B确认事务，资格、成本、容量和到期均重新验证'};
+F.fullSymbols=F.sliceSymbols;F.fullItems=F.sliceItems;F.fullEvents=F.sliceEvents;
+// Frozen schema counter contracts are owned by contract.js, not by mutable content.
+// Do not replace them while provisional full metadata is being registered.
+F.sliceSymbols=baseSymbols;F.sliceItems=baseItems;F.sliceEvents=baseEvents;
+F.defs=function(s){return s&&s.profile==='full-v1'?{symbols:F.fullSymbols,items:F.fullItems,events:F.fullEvents}:{symbols:F.sliceSymbols,items:F.sliceItems,events:F.sliceEvents}};
+F.instance=function(s,type){const d=F.defs(s).symbols[type];if(!d)throw Error('Unknown symbol definition');const uid='u'+s.nextUid++;return{uid,type,permanent:0,epoch:0,counters:d.mechanics&&d.mechanics.age?{age:0}:d.mechanics&&d.mechanics.pressure?{pressure:0}:d.mechanics&&d.mechanics.cycle_count?{beat:0}:{}}};
+F.FULL_INITIAL=['mist_pouch','mist_pouch','wick_bed','wick_bed','ash_felt','copper_burr','dock_chime','saline_ampoule','pressure_pouch','phase_chip','lean_receipt','spent_gasket'];
+F.fullNewRun=function(seed){const s=F.createFoundationState(seed,'full-v1');s.pool=F.FULL_INITIAL.map(t=>F.instance(s,t));F.validateState(s);return s};
+})(typeof window!=='undefined'?window:globalThis);
+</script><script>
+(function(root){
+'use strict';
+const F=root.GDD1;
+const e=(phase,op,x)=>Object.assign({phase,op},x||{});
+const S=F.fullSymbols;
+const rows={
+ dock_chime:{base:2,tags:['resonance','cargo'],effects:[e('appearance','add',{selector:{scope:'self'},countAmount:{selector:{scope:'row',tag:'resonance',excludeSelf:true},distinct:true,cap:3}})]},pitch_fork:{base:1,tags:['resonance','support'],effects:[e('adjacency-add','add',{selector:{scope:'adjacent',tag:'resonance'},amount:3,lockFirst:true})]},fog_reed:{base:1,tags:['resonance','mist'],effects:[e('appearance','add',{selector:{scope:'self'},predicate:{count:{scope:'adjacent',tag:'mist'},min:1},amount:3})]},beat_spool:{base:1,tags:['resonance','machine'],mechanics:{cycle_count:3},effects:[e('appearance','cycle',{selector:{scope:'self'},amount:9})]},chord_frame:{base:2,tags:['resonance','machine'],effects:[e('appearance','multiply',{selector:{scope:'adjacent',tag:'resonance'},predicate:{count:{scope:'adjacent',tag:'resonance'},distinct:true,min:2},ratio:[2,1]})]},prism_hum:{base:2,tags:['resonance','crystal'],effects:[e('appearance','add',{selector:{scope:'self'},predicate:{count:{scope:'adjacent',tag:'crystal'},min:1},amount:4})]},silence_keeper:{base:1,tags:['resonance','contract'],effects:[e('appearance','add',{selector:{scope:'self'},predicate:{count:{scope:'row',tag:'resonance'},min:1,max:1},amount:10})]},harbor_conductor:{base:2,rarity:'epic',tags:['resonance'],effects:[e('appearance','multiply',{selector:{scope:'row',tag:'resonance'},predicate:{count:{scope:'row',tag:'resonance'},distinct:true,min:3},ratio:[2,1],each:true})]},
+ cargo_rope:{base:1,tags:['cargo','support'],effects:[e('adjacency-add','add',{selector:{scope:'adjacent',tag:'product'},amount:3,lockFirst:true})]},route_stub:{base:2,tags:['cargo','contract'],effects:[e('appearance','add',{selector:{scope:'self'},predicate:{count:{scope:'all',tag:'cargo'},distinct:true,min:3},amount:4})]},parcel_cage:{base:2,tags:['cargo','machine'],effects:[e('appearance','add',{selector:{scope:'self'},predicate:{initialEmptyMin:4},amount:3})]},sorting_runner:{base:1,tags:['cargo'],effects:[e('structure','consume',{selector:{scope:'adjacent',tag:'product'},reward:6,rewardTargetBase:true})]},manifest_desk:{base:2,tags:['cargo','contract'],effects:[e('appearance','multiply',{selector:{scope:'self'},predicate:{count:{scope:'all',tag:'cargo'},distinct:true,min:4},ratio:[3,1]})]},switch_lamp:{base:1,tags:['cargo','machine'],effects:[e('structure','reserve',{selector:{scope:'adjacent',tag:'product'},defer:true,priority:0})]},transit_seal:{base:2,rarity:'rare',tags:['cargo','magic'],effects:[e('preprocess','tagMajority',{selector:{scope:'self'},tags:['plant','crystal','resonance']})]},return_station:{base:2,rarity:'rare',tags:['cargo','machine'],effects:[e('listen','reward',{event:'consume',match:{beforeTag:'product',actorTag:'cargo',actorAdjacent:true},defer:true,commitPredicate:{poolBetween:[0,20]},amount:8})]},
+ pressure_pouch:{base:1,tags:['pressure'],mechanics:{pressure:{cap:4,reward:10}},effects:[e('pressure-injection','pressure',{selector:{scope:'self'},amount:1})]},feed_valve:{base:1,tags:['machine','pressure'],mechanics:{pressure:{cap:6,reward:14}},effects:[e('structure','consume',{selector:{scope:'adjacent',tag:'fuel'},reward:3,pressure:2})]},pause_dial:{base:2,tags:['pressure','support'],effects:[e('appearance','add',{selector:{scope:'self'},amount:1,copyable:true}),e('appearance','add',{selector:{scope:'self'},predicate:{count:{scope:'adjacent',tag:'pressure'},min:1},amount:2})]},surge_vessel:{base:1,tags:['pressure','machine'],mechanics:{pressure:{cap:3,reward:16},ordinaryZero:true},effects:[e('pressure-injection','pressure',{selector:{scope:'self'},amount:1})]},cracked_regulator:{base:2,tags:['pressure','machine'],mechanics:{},effects:[e('appearance','risk',{selector:{scope:'self'},chance:[3,4],successAdd:8,failureLoss:6,spawn:'spent_gasket',riskTag:'pressure'})]},safety_shim:{base:1,tags:['pressure','support'],mechanics:{riskMitigation:{tag:'pressure',amount:4}}},release_spire:{base:3,rarity:'rare',tags:['pressure','machine'],effects:[e('step7','release',{selector:{scope:'adjacent',pressureMechanism:true,pressureAtLeast:3,belowReleaseThreshold:true,notReleased:true},spend:3,belowThreshold:true,ratio:[3,1],reward:8})]},demand_coupler:{base:1,rarity:'rare',tags:['pressure','contract'],effects:[e('appearance','multiply',{selector:{scope:'self'},predicate:{remainingAtMost:2},ratio:[4,1],spawn:'spent_gasket'})]},
+ phase_chip:{base:2,tags:['magic'],effects:[e('preprocess','tagChoice',{selector:{scope:'self'},tags:['resonance','crystal']})]},spectrum_pin:{base:1,tags:['magic','support'],effects:[e('appearance','add',{selector:{scope:'self'},predicate:{count:{scope:'adjacent',excludeSelf:true},distinct:true,min:3},amount:4})]},cloudy_negative:{base:1,tags:['magic','feedstock'],mechanics:{age:{threshold:3,to:'blank_facet'}}},blank_facet:{base:3,rarity:'uncommon',tags:['magic','crystal'],effects:[e('initial','add',{selector:{scope:'self'},amount:2,copyable:true})]},offset_reader:{base:3,rarity:'rare',tags:['magic','machine'],effects:[e('copy','copy',{selector:{scope:'adjacent',copyable:true},cap:8})]},alignment_cloth:{base:1,rarity:'uncommon',tags:['magic','support'],effects:[e('step2','add',{selector:{scope:'adjacent',receivedTag:true,order:'tagAdded'},amount:5,lockFirst:true})]},echo_plate:{base:1,rarity:'rare',tags:['magic','resonance'],effects:[Object.assign(e('listen','add',{event:'grow',match:{adjacent:true,positiveIncrease:true},eventAmount:{factor:4}}),{limit:2})]},split_register:{base:2,rarity:'epic',tags:['magic','contract'],effects:[e('preprocess','tagBundle',{selector:{scope:'adjacent',tag:'product'},tags:['resonance','crystal'],ratio:[3,2]})]},
+ arrears_slip:{base:-1,tags:['contract','junk'],mechanics:{candidate:false}},lean_receipt:{base:1,tags:['contract'],effects:[e('appearance','add',{selector:{scope:'self'},predicate:{cashBelowHalf:true},amount:4})]},compliance_desk:{base:1,tags:['contract','machine'],effects:[e('structure','transform',{selector:{scope:'adjacent',tag:'junk'},type:'cleared_stub'})]},cleared_stub:{base:3,tags:['contract','product','cargo'],effects:[e('initial','add',{selector:{scope:'self'},amount:1,copyable:true})]},cancellation_clerk:{base:1,rarity:'uncommon',tags:['contract'],effects:[e('structure','consume',{selector:{scope:'adjacent',tag:'junk'},reward:5,growSource:1})]},quota_margin:{base:2,rarity:'uncommon',tags:['contract','pressure'],effects:[e('appearance','add',{selector:{scope:'self'},predicate:{cashDeficitAtMost:15},amount:6})]},advance_stamp:{base:2,rarity:'rare',tags:['contract'],effects:[e('appearance','advance',{selector:{scope:'self'},amount:18,obligation:12,spawn:'arrears_slip'})]},settlement_beacon:{base:2,rarity:'rare',tags:['contract','machine'],effects:[e('summary','multiply',{selector:{scope:'all',tag:'contract'},predicate:{all:[{poolWithoutTag:'junk'},{count:{scope:'all',tag:'contract'},distinct:true,min:3}]},ratio:[2,1],each:true})]}
+};
+for(const [id,r] of Object.entries(rows)){const d=S[id];Object.assign(d,r);d.effects=(r.effects||d.effects||[]).map((x,i)=>Object.assign({key:id+':'+i,limit:1},x));d.description=d.description||'GDD1 F4 full effect';}
+Object.assign(S.cleared_stub,{rarity:'common'});
+// Full lifecycle callbacks remain eligible after their own successful consumption.
+for(const id of ['amber_frond','ash_felt'])for(const fx of S[id].effects)if(fx.phase==='listen'&&fx.match&&fx.match.targetSelf)fx.deathAllowed=true;
+// BEGIN EXACT FROZEN SYMBOL METADATA
+const exactMetadata={
+  "mist_pouch": {
+    "name": "凝雾软囊",
+    "rarity": "common",
+    "tags": [
+      "plant",
+      "mist"
+    ],
+    "base": 1,
+    "description": "第 3 次上盘转换为 dew_lantern；成长由 age 表达"
+  },
+  "wick_bed": {
+    "name": "灯芯苗床",
+    "rarity": "common",
+    "tags": [
+      "plant",
+      "fuel"
+    ],
+    "base": 2,
+    "description": "无附加效果；既能直接产出也可被热料消费者消耗"
+  },
+  "dew_lantern": {
+    "name": "露灯苞",
+    "rarity": "uncommon",
+    "tags": [
+      "plant",
+      "mist",
+      "product"
+    ],
+    "base": 3,
+    "description": "第 2 次上盘转换为 amber_frond；普通候选可直接获得"
+  },
+  "amber_frond": {
+    "name": "琥露扇叶",
+    "rarity": "uncommon",
+    "tags": [
+      "plant",
+      "fuel",
+      "product",
+      "cargo"
+    ],
+    "base": 4,
+    "description": "自身被消耗时发独立奖励 4；与消费者奖励不同来源"
+  },
+  "fog_stitcher": {
+    "name": "补雾工",
+    "rarity": "uncommon",
+    "tags": [
+      "machine",
+      "support"
+    ],
+    "base": 1,
+    "description": "每轮给一个邻接 plant 的 age 额外推进 1 步；无 age 的成品无效；本轮最多 1"
+  },
+  "root_ledger": {
+    "name": "根须账簿",
+    "rarity": "rare",
+    "tags": [
+      "plant",
+      "contract"
+    ],
+    "base": 1,
+    "description": "全盘每次 plant 成功转换，自身永久 +1；每轮最多 2，永久上限 30"
+  },
+  "warm_pod": {
+    "name": "温灯荚",
+    "rarity": "common",
+    "tags": [
+      "plant",
+      "pressure"
+    ],
+    "base": 1,
+    "description": "**出现快照（步骤4）**：若自身邻接至少一个起始存活 fuel，自身 +3，否则基础值"
+  },
+  "nursery_gauge": {
+    "name": "苗圃指针",
+    "rarity": "rare",
+    "tags": [
+      "machine",
+      "plant"
+    ],
+    "base": 2,
+    "description": "本轮至少 2 个 plant 成功转换时，全盘存活 plant ×3/2；每轮一次"
+  },
+  "ash_felt": {
+    "name": "灰温毡",
+    "rarity": "common",
+    "tags": [
+      "scrap",
+      "fuel"
+    ],
+    "base": 1,
+    "description": "被消耗时生成一枚 copper_burr；若累计上盘 3 次且结束时仍存活，原子自毁并发独立奖励 3，不产普通收入；两分支互斥"
+  },
+  "sorting_tong": {
+    "name": "分温夹",
+    "rarity": "common",
+    "tags": [
+      "machine"
+    ],
+    "base": 1,
+    "description": "消耗一个邻接 scrap，独立奖励 6；无目标不发独立奖励，仅基础1"
+  },
+  "copper_burr": {
+    "name": "铜毛刺",
+    "rarity": "common",
+    "tags": [
+      "scrap",
+      "product",
+      "cargo"
+    ],
+    "base": 2,
+    "description": "邻接任意 machine 时自身 +2"
+  },
+  "spent_gasket": {
+    "name": "过役垫圈",
+    "rarity": "common",
+    "tags": [
+      "scrap",
+      "junk"
+    ],
+    "base": -1,
+    "description": "无附加效果；禁正常候选，由高收益装置或事件生成"
+  },
+  "sieve_drum": {
+    "name": "除滞滚筒",
+    "rarity": "uncommon",
+    "tags": [
+      "machine",
+      "support"
+    ],
+    "base": 2,
+    "description": "转换一个邻接 junk 为 copper_burr；每轮一次；不是删除"
+  },
+  "heat_clerk": {
+    "name": "余温录员",
+    "rarity": "uncommon",
+    "tags": [
+      "machine",
+      "contract"
+    ],
+    "base": 1,
+    "description": "全盘发生 scrap 消耗时自身永久 +1，每轮最多 1，上限 30"
+  },
+  "clinker_router": {
+    "name": "灰渣分路器",
+    "rarity": "rare",
+    "tags": [
+      "machine",
+      "pressure"
+    ],
+    "base": 2,
+    "description": "每轮销毁一个邻接 junk，无消费奖励；监听全盘非消耗销毁 junk，给一个存活且具有蓄压计数机制的 pressure 蓄压 +2（不得超过该实例上限）；自身上盘监听，每轮最多 2"
+  },
+  "furnace_auditor": {
+    "name": "炉账稽核灯",
+    "rarity": "rare",
+    "tags": [
+      "machine"
+    ],
+    "base": 2,
+    "description": "全盘本轮成功消耗至少 2 个不同 type 的 scrap 时，给每个存活 machine ×3/2，一次"
+  },
+  "dock_chime": {
+    "name": "栈桥鸣片",
+    "rarity": "common",
+    "tags": [
+      "resonance",
+      "cargo"
+    ],
+    "base": 2,
+    "description": "**出现快照（步骤4）**：自身 + 同排其他起始存活 resonance 的不同 type 数，最多 +3；后续死亡不重算"
+  },
+  "pitch_fork": {
+    "name": "港音分叉",
+    "rarity": "common",
+    "tags": [
+      "resonance",
+      "support"
+    ],
+    "base": 1,
+    "description": "给一个邻接 resonance +3，排除自己"
+  },
+  "fog_reed": {
+    "name": "雾笛簧",
+    "rarity": "common",
+    "tags": [
+      "resonance",
+      "mist"
+    ],
+    "base": 1,
+    "description": "**出现快照（步骤4）**：若自身邻接至少一个起始存活 mist，自身 +3；后续目标被消费不撤销"
+  },
+  "beat_spool": {
+    "name": "拍点线轴",
+    "rarity": "uncommon",
+    "tags": [
+      "resonance",
+      "machine"
+    ],
+    "base": 1,
+    "description": "自身第 3 次上盘额外 +9 并重置拍点计数为 0；周期按上盘"
+  },
+  "chord_frame": {
+    "name": "和音框",
+    "rarity": "uncommon",
+    "tags": [
+      "resonance",
+      "machine"
+    ],
+    "base": 2,
+    "description": "**出现快照（步骤4）**：若自身邻接至少两种其他起始存活 resonance type，按稳定顺序给一个合法邻居 ×2；后续死亡不补选"
+  },
+  "prism_hum": {
+    "name": "晶腔哼鸣器",
+    "rarity": "uncommon",
+    "tags": [
+      "resonance",
+      "crystal"
+    ],
+    "base": 2,
+    "description": "**出现快照（步骤4）**：若自身邻接至少一个起始存活 crystal，自身 +4；本轮若由转换获得不执行出现效果"
+  },
+  "silence_keeper": {
+    "name": "静拍保管员",
+    "rarity": "rare",
+    "tags": [
+      "resonance",
+      "contract"
+    ],
+    "base": 1,
+    "description": "**出现快照（步骤4）**：若所在排起始存活 resonance 恰有1个（含自身），自身 +10；后续死亡不使其重判"
+  },
+  "harbor_conductor": {
+    "name": "港湾拍长",
+    "rarity": "epic",
+    "tags": [
+      "resonance"
+    ],
+    "base": 2,
+    "description": "所在排至少 3 个不同 resonance type 时，该排 resonance ×2；本轮一次，不叠自身第二份"
+  },
+  "brine_strip": {
+    "name": "盐雾滤带",
+    "rarity": "common",
+    "tags": [
+      "mist",
+      "feedstock"
+    ],
+    "base": 1,
+    "description": "第 2 次上盘转换为 saline_ampoule"
+  },
+  "saline_ampoule": {
+    "name": "微盐安瓿",
+    "rarity": "common",
+    "tags": [
+      "feedstock",
+      "cargo"
+    ],
+    "base": 2,
+    "description": "无额外效果；可直接产出或作为转换前体"
+  },
+  "condense_coil": {
+    "name": "凝潮盘管",
+    "rarity": "common",
+    "tags": [
+      "machine"
+    ],
+    "base": 1,
+    "description": "转换一个邻接 feedstock 为 tide_prism，每轮一次"
+  },
+  "tide_prism": {
+    "name": "潮棱块",
+    "rarity": "uncommon",
+    "tags": [
+      "crystal",
+      "product",
+      "cargo"
+    ],
+    "base": 4,
+    "description": "自身转换成为本类型时，自身本轮 +3；直接抽中只产基础"
+  },
+  "deep_still": {
+    "name": "深盐分馏器",
+    "rarity": "uncommon",
+    "tags": [
+      "machine"
+    ],
+    "base": 2,
+    "description": "消耗一个邻接 mist，独立奖励 4，并在池生成 saline_ampoule；生成失败不影响已成功消耗但须记录"
+  },
+  "crystal_index": {
+    "name": "晶层索引",
+    "rarity": "uncommon",
+    "tags": [
+      "crystal",
+      "support"
+    ],
+    "base": 1,
+    "description": "若全盘 crystal 有至少 2 种 type，自身 +6"
+  },
+  "pearl_separator": {
+    "name": "浮珠分离器",
+    "rarity": "rare",
+    "tags": [
+      "machine"
+    ],
+    "base": 2,
+    "description": "转换一个邻接 crystal 且非 product 的实例为 tide_prism；目标已是 tide_prism 不合法"
+  },
+  "reserve_facet": {
+    "name": "留温晶面",
+    "rarity": "rare",
+    "tags": [
+      "crystal",
+      "pressure"
+    ],
+    "base": 2,
+    "description": "消耗一个邻接 fuel，自身蓄压 +2（上限 6），独立奖励 2；蓄压达 6 时本轮压力检查点发独立奖励 18 并归零"
+  },
+  "cargo_rope": {
+    "name": "夜班扎绳",
+    "rarity": "common",
+    "tags": [
+      "cargo",
+      "support"
+    ],
+    "base": 1,
+    "description": "**邻接加值（步骤5 adjacency-add）**：进入该子阶段时锁定一个邻接 product +3；目标随后死亡不补选"
+  },
+  "route_stub": {
+    "name": "转栈短票",
+    "rarity": "common",
+    "tags": [
+      "cargo",
+      "contract"
+    ],
+    "base": 2,
+    "description": "**出现快照（步骤4）**：若全盘起始存活 cargo 至少3种 type，自身 +4；本轮后续生成/转换不补触发"
+  },
+  "parcel_cage": {
+    "name": "铜格货笼",
+    "rarity": "common",
+    "tags": [
+      "cargo",
+      "machine"
+    ],
+    "base": 2,
+    "description": "**出现快照（步骤4）**：若本轮抽盘空格至少4，自身 +3；空格按步骤1盘面快照计，池大小不替代空格"
+  },
+  "sorting_runner": {
+    "name": "分栈跑员",
+    "rarity": "uncommon",
+    "tags": [
+      "cargo"
+    ],
+    "base": 1,
+    "description": "消耗一个邻接 product，独立奖励为 6 + 目标基础值（不含永久/倍率）"
+  },
+  "manifest_desk": {
+    "name": "夜单台",
+    "rarity": "uncommon",
+    "tags": [
+      "cargo",
+      "contract"
+    ],
+    "base": 2,
+    "description": "**出现快照（步骤4）**：若全盘起始存活 cargo 至少4种 type，自身 ×3；本轮后续新增/死亡不重判"
+  },
+  "switch_lamp": {
+    "name": "换轨灯",
+    "rarity": "uncommon",
+    "tags": [
+      "cargo",
+      "machine"
+    ],
+    "base": 1,
+    "description": "下一轮保留一个邻接 product 在原格；每轮一次；全局保留上限 2，已保留不延长"
+  },
+  "transit_seal": {
+    "name": "联运封蜡",
+    "rarity": "rare",
+    "tags": [
+      "cargo",
+      "magic"
+    ],
+    "base": 2,
+    "description": "自身预处理临时获得 plant/crystal/resonance 中一个：选择其邻居含量最多者，同数按此序；当轮结束消失"
+  },
+  "return_station": {
+    "name": "空箱返程站",
+    "rarity": "rare",
+    "tags": [
+      "cargo",
+      "machine"
+    ],
+    "base": 2,
+    "description": "本轮邻接 cargo 源成功消耗 product 后，结束时若池不超过 20，发独立奖励 8；每轮一次"
+  },
+  "pressure_pouch": {
+    "name": "余压软袋",
+    "rarity": "common",
+    "tags": [
+      "pressure"
+    ],
+    "base": 1,
+    "description": "每次上盘蓄压 +1，上限 4；达到 4 时独立 reward10（不吃倍率）并归零，普通产出仍为1"
+  },
+  "feed_valve": {
+    "name": "添温小阀",
+    "rarity": "common",
+    "tags": [
+      "machine",
+      "pressure"
+    ],
+    "base": 1,
+    "description": "消耗一个邻接 fuel，独立奖励 3，自身蓄压 +2，上限 6；达 6 时独立奖励 14 并归零"
+  },
+  "pause_dial": {
+    "name": "歇拍刻盘",
+    "rarity": "common",
+    "tags": [
+      "pressure",
+      "support"
+    ],
+    "base": 2,
+    "description": "**出现快照（步骤4）**：自身固定平面 +1（可复制）；若邻接起始存活且带`pressure`标签的实例，另 +2（不可复制）；后续目标死亡不撤销"
+  },
+  "surge_vessel": {
+    "name": "脉冲釜",
+    "rarity": "uncommon",
+    "tags": [
+      "pressure",
+      "machine"
+    ],
+    "base": 1,
+    "description": "每次上盘先蓄压 +1；未达 3 时普通产出归零；达 3 时独立奖励 16 并归零，普通产出仍 0"
+  },
+  "cracked_regulator": {
+    "name": "裂缝调压器",
+    "rarity": "uncommon",
+    "tags": [
+      "pressure",
+      "machine"
+    ],
+    "base": 2,
+    "description": "每次上盘用本局 RNG：3/4 自身 +8；1/4 自身 -6 且池生成 spent_gasket；每轮一次"
+  },
+  "safety_shim": {
+    "name": "卸压薄衬",
+    "rarity": "uncommon",
+    "tags": [
+      "pressure",
+      "support"
+    ],
+    "base": 1,
+    "description": "本轮首次邻接 pressure 风险判定的失败损失减少 4（最多减到 0）；不改变失败/生成事实"
+  },
+  "release_spire": {
+    "name": "泄峰塔",
+    "rarity": "rare",
+    "tags": [
+      "pressure",
+      "machine"
+    ],
+    "base": 3,
+    "description": "对一个邻接蓄压至少 3 的实例，扣 3 蓄压，使其本轮 ×3，并发独立奖励8；只在该目标具有蓄压机制、尚未达到自身释放阈值且本轮未释放时合法"
+  },
+  "demand_coupler": {
+    "name": "配额耦合器",
+    "rarity": "rare",
+    "tags": [
+      "pressure",
+      "contract"
+    ],
+    "base": 1,
+    "description": "轮初现金低于本阶段配额且剩余运行不超过 2 时，自身 ×4，同时本轮在池生成 spent_gasket；每轮一次"
+  },
+  "phase_chip": {
+    "name": "偏相小片",
+    "rarity": "common",
+    "tags": [
+      "magic"
+    ],
+    "base": 2,
+    "description": "预处理：有邻接 resonance 时临时加 resonance；否则邻接 crystal 时临时加 crystal；否则不变"
+  },
+  "spectrum_pin": {
+    "name": "谱别别针",
+    "rarity": "common",
+    "tags": [
+      "magic",
+      "support"
+    ],
+    "base": 1,
+    "description": "**出现快照（步骤4）**：若邻接至少3种其他起始存活 type，自身 +4；不计自身、不因后续死亡补算"
+  },
+  "cloudy_negative": {
+    "name": "雾面底片",
+    "rarity": "common",
+    "tags": [
+      "magic",
+      "feedstock"
+    ],
+    "base": 1,
+    "description": "第 3 次上盘转换为 blank_facet"
+  },
+  "blank_facet": {
+    "name": "无谱晶坯",
+    "rarity": "uncommon",
+    "tags": [
+      "magic",
+      "crystal"
+    ],
+    "base": 3,
+    "description": "ON_APPEAR 平面 +2（可复制）；非 product，可交浮珠分离器精炼；转换获得不触发出现"
+  },
+  "offset_reader": {
+    "name": "偏印读头",
+    "rarity": "rare",
+    "tags": [
+      "magic",
+      "machine"
+    ],
+    "base": 3,
+    "description": "选一个邻接实例，复制其显式 copyable 的 ON_APPEAR 平面 add 常数，最多 +8；不复制条件、事件或其他动作"
+  },
+  "alignment_cloth": {
+    "name": "对相织布",
+    "rarity": "uncommon",
+    "tags": [
+      "magic",
+      "support"
+    ],
+    "base": 1,
+    "description": "给一个邻接本轮获得临时标签的实例 +5，每轮一次；按 tagAdded 日志而非最终标签猜测"
+  },
+  "echo_plate": {
+    "name": "迟相印板",
+    "rarity": "rare",
+    "tags": [
+      "magic",
+      "resonance"
+    ],
+    "base": 1,
+    "description": "一个邻接实例本轮永久值成功增加时，自身 + 该次实际增加值×4，每轮最多 2 次；不再产生 ON_GROW"
+  },
+  "split_register": {
+    "name": "双谱登记器",
+    "rarity": "epic",
+    "tags": [
+      "magic",
+      "contract"
+    ],
+    "base": 2,
+    "description": "预处理给一个邻接 product 临时增加 resonance 和 crystal；它本轮普通产出 ×3/2；一次，不影响池标签"
+  },
+  "arrears_slip": {
+    "name": "待核欠条",
+    "rarity": "common",
+    "tags": [
+      "contract",
+      "junk"
+    ],
+    "base": -1,
+    "description": "无额外效果；禁正常候选；可被合规台转换或撤账员消耗"
+  },
+  "lean_receipt": {
+    "name": "薄账回执",
+    "rarity": "common",
+    "tags": [
+      "contract"
+    ],
+    "base": 1,
+    "description": "轮初现金低于本阶段配额的 1/2 时自身 +4，否则基础值"
+  },
+  "compliance_desk": {
+    "name": "合规小台",
+    "rarity": "common",
+    "tags": [
+      "contract",
+      "machine"
+    ],
+    "base": 1,
+    "description": "转换一个邻接 junk 为 cleared_stub，每轮一次"
+  },
+  "cleared_stub": {
+    "name": "核清存根",
+    "rarity": "common",
+    "tags": [
+      "contract",
+      "product",
+      "cargo"
+    ],
+    "base": 3,
+    "description": "本轮若非由转换获得、自身 +1；转换轮不加；ON_APPEAR add +1 可复制"
+  },
+  "cancellation_clerk": {
+    "name": "撤账员",
+    "rarity": "uncommon",
+    "tags": [
+      "contract"
+    ],
+    "base": 1,
+    "description": "消耗一个邻接 junk，独立奖励 5；自身永久 +1，上限 30；成功才成长"
+  },
+  "quota_margin": {
+    "name": "配额边签",
+    "rarity": "uncommon",
+    "tags": [
+      "contract",
+      "pressure"
+    ],
+    "base": 2,
+    "description": "若本轮初现金不足配额且只差不超过 15，自身 +6；不得读本轮中途收益"
+  },
+  "advance_stamp": {
+    "name": "先支邮戳",
+    "rarity": "rare",
+    "tags": [
+      "contract"
+    ],
+    "base": 2,
+    "description": "每阶段自身首次上盘额外独立奖励 18，同时本阶段配额 +12 并尝试生成 arrears_slip（可选生成失败仍保留奖励与义务）；可选接受/拒绝在运行前配置，默认拒绝"
+  },
+  "settlement_beacon": {
+    "name": "清算信标",
+    "rarity": "rare",
+    "tags": [
+      "contract",
+      "machine"
+    ],
+    "base": 2,
+    "description": "若本轮池内 junk 为 0 且存活 contract 至少 3 种 type，本轮 contract ×2；每轮一次"
+  }
+};
+for(const [id,meta] of Object.entries(exactMetadata))Object.assign(S[id],meta);
+const exactItemMetadata={
+  "item_dew_calendar": {
+    "name": "露班轮历",
+    "rarity": "common",
+    "description": "**轮内步骤3之后**：每轮第一个起始带age、存活且本轮未自然成熟的 plant 额外推进1步；每轮一次；若首个自然成熟则跳过寻找下一个"
+  },
+  "item_root_wrap": {
+    "name": "根温绑带",
+    "rarity": "uncommon",
+    "description": "每轮第一个 plant 转换后存活实例本轮 +4"
+  },
+  "item_nursery_scale": {
+    "name": "苗圃轻秤",
+    "rarity": "rare",
+    "description": "抽盘时池内 plant 权重 ×3/2；仅当池总数不超过 28；无放回"
+  },
+  "item_frost_glass": {
+    "name": "防寒窄窗",
+    "rarity": "uncommon",
+    "description": "每阶段最先上盘的 2 个 mist 自身本轮 +3；每阶段重置"
+  },
+  "item_sorting_apron": {
+    "name": "分温围裙",
+    "rarity": "common",
+    "description": "每轮首次成功 consume 的 scrap 独立奖励额外 +3"
+  },
+  "item_waste_log": {
+    "name": "滞物登记本",
+    "rarity": "uncommon",
+    "description": "每阶段非消耗销毁 junk 累计 3 个后获得删除券 +1；每阶段最多 1 券"
+  },
+  "item_offcut_chute": {
+    "name": "边料回流槽",
+    "rarity": "rare",
+    "description": "每轮首次消耗非 junk 的 scrap 时生成 ash_felt；同轮新实例不出现"
+  },
+  "item_clean_mesh": {
+    "name": "清栈细网",
+    "rarity": "uncommon",
+    "description": "抽盘时 junk 权重 ×1/2；仍留池中，不等于删除"
+  },
+  "item_lane_clapper": {
+    "name": "轨边拍板",
+    "rarity": "common",
+    "description": "每轮每排第一个 resonance，若该排至少 2 种 resonance type，自身 +2"
+  },
+  "item_rest_notch": {
+    "name": "休拍刻槽",
+    "rarity": "uncommon",
+    "description": "每轮恰有 1 个 resonance 的排，该实例普通产出 ×3/2"
+  },
+  "item_pitch_marker": {
+    "name": "音高记签",
+    "rarity": "rare",
+    "description": "每轮本盘首个成功新增 resonance 临时标签的实例，若存活则 +5"
+  },
+  "item_shared_metronome": {
+    "name": "公用节拍器",
+    "rarity": "uncommon",
+    "description": "beat_spool 的拍点阈值降低 1，最低 2；相同 mechanic:cycle_count 的后续符号也可用"
+  },
+  "item_brine_lining": {
+    "name": "盐雾内衬",
+    "rarity": "common",
+    "description": "每轮首次 feedstock 转换为 crystal，产物本轮 +4"
+  },
+  "item_fraction_gauge": {
+    "name": "分馏格尺",
+    "rarity": "uncommon",
+    "description": "每轮第一个全盘 crystal 异 type 数至少 3 的时点，独立奖励 7；每轮一次"
+  },
+  "item_jar_rack": {
+    "name": "安瓿架",
+    "rarity": "rare",
+    "description": "每轮转换得到的第一个 crystal 保留到下一轮原格；与灯共享全局 2 格上限"
+  },
+  "item_residue_stamp": {
+    "name": "残液验章",
+    "rarity": "uncommon",
+    "description": "每轮第一个 mist 被消耗，独立奖励 +2；但不补回目标"
+  },
+  "item_manifest_clip": {
+    "name": "夜单夹",
+    "rarity": "common",
+    "description": "每轮 cargo 的不同 type 数至少 4 时，独立奖励 6"
+  },
+  "item_return_track": {
+    "name": "空返侧轨",
+    "rarity": "uncommon",
+    "description": "每阶段第 1、3 次主动跳过符号候选，各得刷新券 +1；每阶段最多 2"
+  },
+  "item_small_hold": {
+    "name": "小舱限载牌",
+    "rarity": "rare",
+    "description": "池数量在 12–20 时，每轮独立奖励 5；小于 12 无效"
+  },
+  "item_exchange_hook": {
+    "name": "换装挂钩",
+    "rarity": "uncommon",
+    "description": "每阶段首次成功 consume product 时，下一次符号候选保证一个 common product（可用集合中等权）；仍需选择"
+  },
+  "item_pressure_index": {
+    "name": "压班索引",
+    "rarity": "common",
+    "description": "每轮第一个 pressure 正常增加蓄压时额外 +1，不超实例上限；附加增加不再次触发本件"
+  },
+  "item_insulation_shawl": {
+    "name": "隔温披布",
+    "rarity": "uncommon",
+    "description": "每轮首次 pressure risk 失败的负加值减少 3，最小 0；不改变污染或失败事实"
+  },
+  "item_release_receipt": {
+    "name": "泄压回执",
+    "rarity": "rare",
+    "description": "每阶段第三次成功蓄压释放时独立奖励 12；每阶段最多一次"
+  },
+  "item_spare_baffle": {
+    "name": "备用挡板",
+    "rarity": "uncommon",
+    "description": "每轮首个风险生成的 junk 不入池，改为该源本轮 -3；生成事实记为替代，不能触发消耗/销毁奖励"
+  },
+  "item_safe_carbon": {
+    "name": "安全复写膜",
+    "rarity": "common",
+    "description": "每轮首个合法数值 copy 的实际加值增加 2，总加值仍不超过 8；无合法 copy 不生效"
+  },
+  "item_spectrum_book": {
+    "name": "谱类手册",
+    "rarity": "uncommon",
+    "description": "每轮首次实例临时获得其原定义没有的标签，若存活则 +3；多加两个标签只触发一次"
+  },
+  "item_registration_pin": {
+    "name": "对版定位针",
+    "rarity": "rare",
+    "description": "每轮首次 copy 成功后，保留其被复制目标到下一轮；全局 2 格上限；保留失败不补偿"
+  },
+  "item_growth_negative": {
+    "name": "增量底片册",
+    "rarity": "uncommon",
+    "description": "每轮第一个成功永久成长事件，独立奖励为实际增长值×2，最多 6；不发 ON_GROW"
+  },
+  "item_low_balance_tab": {
+    "name": "薄账分页条",
+    "rarity": "common",
+    "description": "每轮轮初现金不足本阶段配额 1/2 时，独立奖励 3；不是初获现金"
+  },
+  "item_compliance_carbon": {
+    "name": "合规复核纸",
+    "rarity": "uncommon",
+    "description": "每轮首次 junk 转换为非 junk 的产物，本轮 +3；失败转换不奖励"
+  },
+  "item_audit_clip": {
+    "name": "稽核夹",
+    "rarity": "rare",
+    "description": "每阶段首次成功付款且付款后池内无 junk，获得删除券 +1；最终胜利仅记统计，不追加待选步骤"
+  },
+  "item_margin_lantern": {
+    "name": "余账灯",
+    "rarity": "uncommon",
+    "description": "每阶段最后一轮，若轮初现金在配额的 3/4 至不足配额区间，该轮 contract ×3/2"
+  }
+};
+for(const [id,meta] of Object.entries(exactItemMetadata))Object.assign(F.fullItems[id],meta);
+// END EXACT FROZEN SYMBOL METADATA
+const I=F.fullItems;
+const itemEffects={
+ item_dew_calendar:e('step3','age',{selector:{scope:'all',age:true},age:true,amount:1}),item_root_wrap:e('listen','add',{event:'transform',match:{beforeTag:'plant'},amount:4}),item_nursery_scale:e('step1','weight',{tag:'plant',ratio:[3,2]}),item_frost_glass:e('appearance','add',{selector:{scope:'all',tag:'mist'},amount:3,window:'stage',limit:2,each:true}),item_sorting_apron:e('listen','reward',{event:'consume',match:{beforeTag:'scrap'},amount:3}),item_waste_log:e('listen','token',{event:'destroy',match:{beforeTag:'junk',notCause:'consume'},threshold:3,resource:'removeTokens',amount:1}),item_offcut_chute:e('listen','spawn',{event:'consume',match:{beforeTag:'scrap',notBeforeTag:'junk'},type:'ash_felt'}),item_clean_mesh:e('step1','weight',{tag:'junk',ratio:[1,2]}),item_lane_clapper:e('summary','add',{selector:{scope:'all',tag:'resonance',rowFirst:true,rowMinTypes:2},amount:2,each:true,limit:4}),item_rest_notch:e('summary','multiply',{selector:{scope:'all',tag:'resonance',rowCountExact:1},ratio:[3,2],each:true,limit:4}),item_pitch_marker:e('listen','add',{event:'tagAdded',match:{afterTag:'resonance',notBeforeTag:'resonance'},eventTarget:true,defer:true,amount:5}),item_shared_metronome:e('initial','add',{selector:{scope:'self'},amount:0}),item_brine_lining:e('listen','add',{event:'transform',match:{afterTag:'crystal'},amount:4}),item_fraction_gauge:e('change','reward',{predicate:{count:{scope:'all',tag:'crystal'},distinct:true,min:3},amount:7}),item_jar_rack:e('listen','reserve',{event:'transform',match:{afterTag:'crystal'}}),item_residue_stamp:e('listen','reward',{event:'consume',match:{beforeTag:'mist'},amount:2}),item_manifest_clip:e('summary','reward',{amount:6}),item_return_track:e('commit','token',{resource:'rerollTokens',amount:1}),item_small_hold:e('summary','reward',{amount:5}),item_exchange_hook:e('listen','guarantee',{event:'consume',match:{afterTag:'product'}}),item_pressure_index:e('listen','pressure',{event:'pressureIncrease',eventTarget:true,noDispatch:true,amount:1}),item_insulation_shawl:e('listen','riskReduce',{event:'risk',amount:3}),item_release_receipt:e('listen','reward',{event:'release',amount:12}),item_spare_baffle:e('listen','replaceRisk',{event:'risk',amount:3}),item_safe_carbon:e('listen','copyAdd',{event:'copy',amount:2}),item_spectrum_book:e('listen','add',{event:'tagAdded',eventTarget:true,defer:true,amount:3}),item_registration_pin:e('listen','reserve',{event:'copy'}),item_growth_negative:e('listen','reward',{event:'grow',match:{positiveIncrease:true},eventAmount:{factor:2,cap:6}}),item_low_balance_tab:e('appearance','reward',{amount:3}),item_compliance_carbon:e('listen','add',{event:'transform',match:{beforeTag:'junk'},amount:3}),item_audit_clip:e('commit','token',{resource:'removeTokens',amount:1}),item_margin_lantern:e('appearance','multiply',{selector:{scope:'self'},ratio:[3,2]})};
+Object.assign(itemEffects.item_dew_calendar.selector,{tag:'plant'});
+itemEffects.item_root_wrap.eventTarget=true;
+Object.assign(itemEffects.item_brine_lining,{eventTarget:true,match:{beforeTag:'feedstock',afterTag:'crystal'}});
+Object.assign(itemEffects.item_compliance_carbon,{eventTarget:true,match:{beforeTag:'junk',notAfterTag:'junk'}});
+Object.assign(itemEffects.item_exchange_hook,{match:{beforeTag:'product'},guarantee:'itemProductPending',window:'stage'});
+itemEffects.item_manifest_clip.predicate={count:{scope:'all',tag:'cargo'},distinct:true,min:4};
+itemEffects.item_small_hold.predicate={poolBetween:[12,20]};
+itemEffects.item_low_balance_tab.predicate={cashBelowHalf:true};
+Object.assign(itemEffects.item_margin_lantern,{phase:'summary',selector:{scope:'all',tag:'contract'},each:true,predicate:{lastSpin:true,cashFraction:[3,4],cashBelowPayment:true},limit:20});
+Object.assign(itemEffects.item_release_receipt,{threshold:3,window:'stage'});
+for(const [id,fx] of Object.entries(itemEffects)){if(I[id])I[id].effects=[Object.assign({key:id+':0',limit:1},fx)];}
+I.item_shared_metronome.mechanics={cycleThresholdReduction:1};I.item_shared_metronome.effects=[];
+Object.assign(I.item_nursery_scale.effects[0],{poolMax:28});
+I.item_return_track.effects=[];I.item_return_track.mechanics={skipOrdinals:[1,3],resource:'rerollTokens',amount:1};
+I.item_audit_clip.effects=[];I.item_audit_clip.mechanics={paymentResource:'removeTokens',amount:1,poolWithoutTag:'junk',finalOnlyStats:true};
+I.item_safe_carbon.mechanics={copyBonus:2};I.item_safe_carbon.effects=[];
+Object.assign(I.item_jar_rack.effects[0],{defer:true,priority:1,eventTarget:true});
+Object.assign(I.item_registration_pin.effects[0],{defer:true,priority:2,eventTarget:true});
+I.item_insulation_shawl.mechanics={riskReduction:3};I.item_insulation_shawl.effects=[];
+I.item_spare_baffle.mechanics={replaceRiskJunk:true,replacementLoss:3};I.item_spare_baffle.effects=[];
+const E=F.fullEvents;E.event_boiler_test={id:'event_boiler_test',name:'压锅试鸣',cost:0,tag:'pressure',op:'boiler',remaining:1};E.event_silent_bell={id:'event_silent_bell',name:'停鸣通知',cost:0,tag:'resonance',op:'modifier',remaining:3};E.event_empty_manifest={id:'event_empty_manifest',name:'空白夜单',cost:0,tag:'cargo',op:'modifier',remaining:1};E.event_misprint_window={id:'event_misprint_window',name:'错版窗口',cost:6,tag:'magic',op:'modifier',remaining:3};E.event_quota_recount={id:'event_quota_recount',name:'配额复点',cost:0,tag:'contract',op:'quota',remaining:1};
+E.event_silent_bell.spinEffects=[{phase:'summary',op:'multiply',selector:{scope:'all',tag:'resonance'},ratios:[[1,2],[1,2],[2,1]]}];
+E.event_misprint_window.spinEffects=[{phase:'preprocess',op:'tagAdded',selector:{scope:'all',tag:'magic'},tag:'cargo',maxTargets:1},{phase:'preprocess',op:'add',selector:{scope:'all',tag:'magic'},amount:2,maxTargets:1}];
+E.event_empty_manifest.spinEffects=[{phase:'summary',op:'add',selector:{scope:'all',tag:'cargo'},amount:2,maxTargets:5}];
+Object.assign(E.event_empty_manifest,{tag:null,target:{rarity:'common',notTag:'junk'},minPool:21,op:'removeModifier',remaining:1});
+Object.assign(E.event_boiler_test,{tag:'pressure',target:{tag:'pressure',pressureMechanism:true},allowEmptyTarget:true,capacityWhenEmpty:true});
+Object.assign(E.event_quota_recount,{tag:null,target:null,allowEmptyTarget:true,requiresCapacity:true});
+Object.assign(E.event_copper_queue,{requiresCapacity:true});
+Object.assign(E.event_silent_bell,{target:{tag:'resonance'},minStageSpins:3});
+for(const [id,x] of Object.entries(E)){x.id=id;x.description=x.description||'GDD1 F4 event transaction';x.name=x.name||id;x.cost=Number(x.cost||0);x.tag=x.tag||'contract';x.op=x.op||'modifier';}
+})(typeof window!=='undefined'?window:globalThis);
+
+</script><script>
+(function(root){
+'use strict';
+const F=root.GDD1;
+const symbolWeights=[[72,25,3,0],[58,34,8,0],[43,42,14,1],[32,45,21,2],[25,45,27,3]];
+const itemWeights=[[55,40,5,0],[30,50,20,0],[20,50,30,0]];
+const rarities=['common','uncommon','rare','epic'];
+F.weightedIndex=function(weights,rng,stream){const sum=weights.reduce((a,b)=>a+b,0);if(sum<=0)throw Error('Empty weights');let x=F.random(rng,stream)*sum;for(let i=0;i<weights.length;i++){x-=weights[i];if(x<0)return i}return weights.length-1};
+const pick=(ids,s,stream)=>ids[Math.floor(F.random(s.rng,stream)*ids.length)];
+F.sliceOffer=function(s,kind,natural=true){
+ const symbols=kind==='symbol',defs=symbols?F.defs(s).symbols:F.defs(s).items,stream=symbols?'symbolOffer':'itemOffer';
+ let remaining=Object.values(defs).filter(d=>symbols?d.mechanics.candidate!==false:!s.items.includes(d.id));
+ const weights=symbols?symbolWeights[Math.floor((s.stageId-1)/2)]:itemWeights[Math.min(2,Math.floor((s.stageId-1)/3))];
+ const choices=[],g=s.offer.guarantees;g.applied=null;
+ if(symbols&&natural){
+  let eligible=[];
+  if(g.eventCrystalPending){eligible=remaining.filter(d=>d.rarity==='uncommon'&&d.tags.includes('crystal'));g.applied='event-crystal'}
+  else if(g.itemProductPending){eligible=remaining.filter(d=>d.rarity==='common'&&d.tags.includes('product'));g.applied='item-product'}
+  else if(!g.stageCommonHandled){eligible=remaining.filter(d=>d.rarity==='common');g.applied='stage-common'}
+  if(eligible.length){const id=pick(eligible.map(d=>d.id),s,stream);choices.push(id);remaining=remaining.filter(d=>d.id!==id);if(g.applied==='event-crystal')g.eventCrystalPending=false;if(g.applied==='item-product')g.itemProductPending=false}
+  else g.applied=null;
+  g.stageCommonHandled=true;
+ }
+ while(choices.length<3&&remaining.length){const layerWeights=rarities.map((r,i)=>remaining.some(d=>d.rarity===r)?weights[i]:0);const rarity=rarities[F.weightedIndex(layerWeights,s.rng,stream)];const id=pick(remaining.filter(d=>d.rarity===rarity).map(d=>d.id),s,stream);choices.push(id);remaining=remaining.filter(d=>d.id!==id)}
+ s.offer.kind=kind;s.offer.choices=choices;
+ if(natural){s.offer.windowId++;s.offer.choiceRefreshesUsed=0}
+};
+F.sliceDraw=function(s){
+ const board=Array(20).fill(null),reserved=new Set();
+ for(const r of s.reservations){const x=s.pool.find(x=>x.uid===r.uid&&x.epoch===r.epoch);if(x&&r.expiresSpin===s.spin+1){board[r.pos]=x;reserved.add(x.uid)}}
+ s.reservations=[];
+ const rest=s.pool.filter(x=>!reserved.has(x.uid)),selected=[];
+ const slots=board.map((x,i)=>x?null:i).filter(x=>x!==null);
+ if(rest.length<=slots.length)selected.push(...rest);
+ else while(selected.length<slots.length){const weights=rest.map(x=>{let w=1;for(const id of s.items)for(const e of F.defs(s).items[id].effects)if(e.op==='weight'&&(!e.poolMax||s.pool.length<=e.poolMax)&&F.defs(s).symbols[x.type].tags.includes(e.tag))w*=e.ratio[0]/e.ratio[1];return Math.max(.25,Math.min(2,w))});const index=F.weightedIndex(weights,s.rng,'draw');selected.push(rest.splice(index,1)[0])}
+ // Shuffle all unlocked slots, including empties: no top-left packing.
+ const positions=F.shuffle(slots,s.rng,'draw');selected.forEach((x,i)=>{board[positions[i]]=x});return board;
+};
+})(typeof window!=='undefined'?window:globalThis);
+
+</script><script>
+(function(root){
+'use strict';
+const F=root.GDD1;
+if(!F.defs)F.defs=function(){return{symbols:F.sliceSymbols,items:F.sliceItems,events:F.sliceEvents}};
+const phases={initial:'step4/appearance',step1:'step1/draw',step2:'step2/tagAdded',preprocess:'step2/tagAdded',step3:'step3/age',appearance:'step4/appearance',step4:'step4/appearance','pressure-injection':'step4/pressure-injection',risk:'step4/risk',copy:'step4/copy','adjacency-add':'step5/adjacency-add',structure:'step5/structural-event',step5:'step5/structural-event',end:'step6/lifecycle',step6:'step6/lifecycle',step7:'step7/pressure',listen:'step6/lifecycle',summary:'step8/end-summary',step8:'step8/end-summary',change:'step6/lifecycle',commit:'choice/commit'};
+F.sliceResolve=function(s,input){
+ if(!Array.isArray(input)||input.length!==20)throw Error('20-cell board required');
+ const ids=input.filter(Boolean).map(x=>x.uid);if(new Set(ids).size!==ids.length)throw Error('Duplicate board UID');
+ const cells=input.map((x,pos)=>{if(!x)return null;const instance=s.pool.find(p=>p.uid===x.uid);if(!instance)throw Error('Board outside pool');return{x:instance,pos,alive:true,add:0,addParts:[],multiplyParts:[],ratio:[1n,1n],startType:instance.type,startEpoch:instance.epoch,matured:false,visited:new Set([instance.type])}});
+ const copyTemplates=new Map(cells.filter(Boolean).map(c=>[c.x.uid,{epoch:c.x.epoch,amount:F.defs(s).symbols[c.x.type].effects.filter(e=>e.copyable===true&&e.op==='add'&&!e.predicate&&Number.isSafeInteger(e.amount)&&['initial','appearance'].includes(e.phase)).reduce((n,e)=>n+e.amount,0)}]));
+ const reserveRequests=[],deferredAdds=[],deferredRewards=[];
+ const initial={cash:s.cash,payment:s.payment,remaining:s.spinsRemaining+1};
+ const log=[],events=[],counts=new Map(),hardCounts=new Map(),generated=new Map(),multipliers=new Map();let reward=0,spawnCount=0,fractionReserved=false;
+ for(const id of s.items){s.itemState.quotas[id].spin=0;s.itemState.used[id].spin=false}
+ s.itemState.spin=s.spin;
+ const d=c=>F.defs(s).symbols[c.x.type];
+ const tag=(c,t)=>d(c).tags.includes(t)||(c.tags||[]).includes(t);
+ const near=(a,b)=>a.x.uid!==b.x.uid&&Math.abs(a.pos%5-b.pos%5)<=1&&Math.abs(Math.floor(a.pos/5)-Math.floor(b.pos/5))<=1;
+ const safe=v=>{if(!Number.isSafeInteger(v)||Math.abs(v)>1e9)throw Error('Amount safety bound');return v};
+ const emit=(action,source,target,amount,parent,phase,detail={})=>{
+  if(log.length>=5000)throw Error('Action safety bound');if(s.profile==='full-v1'){const key=source.id+'/'+(source.key||source.id),count=(hardCounts.get(key)||0)+1;if(count>64)throw Error('Source effect safety bound');hardCounts.set(key,count);}const depth=parent===null?0:log[parent].depth+1;if(depth>32)throw Error('Depth safety bound');
+  const row={id:log.length,parent,depth,phase,action,source:source.id,target:target?target.x.uid:null,amount:amount===undefined?null:amount,
+   facts:Object.assign({effectKey:source.key||source.id,sourcePos:source.cell?source.cell.pos:null,targetPos:target?target.pos:null,beforeType:target?target.x.type:null,afterType:target?target.x.type:null,beforeTags:target?d(target).tags.slice():[],afterTags:target?d(target).tags.slice():[],cause:action,actualIncrease:0,createdUid:null,skipReason:null},detail)};
+  log.push(row);return row.id;
+ };
+ const sourceOf=(c,e)=>({id:c.x.uid,cell:c,key:e.key,epoch:c.x.epoch,type:c.x.type});
+ const itemSource=(id,e)=>({id,cell:null,key:e.key});
+ const sourceValid=(source,e,event)=>!source.cell||(source.cell.x.uid===source.id&&source.cell.x.epoch===source.epoch&&source.cell.x.type===source.type&&(source.cell.alive||(e.deathAllowed&&event&&event.target===source.id)));
+ const poolCleanup=()=>{s.reservations=s.reservations.filter(r=>s.pool.some(x=>x.uid===r.uid&&x.epoch===r.epoch));s.events.activeModifiers=s.events.activeModifiers.filter(m=>{if(s.profile==='full-v1'&&m.uid===null)return m.remaining>0&&m.stageId===s.stageId;const x=s.pool.find(x=>x.uid===m.uid);return m.remaining>0&&x&&F.defs(s).symbols[x.type].tags.includes('plant')&&F.defs(s).symbols[x.type].mechanics.age})};
+ const select=(selector,source,view=cells)=>{
+  if(!selector)return source.cell&&source.cell.alive?[source.cell]:[];
+  return view.filter(c=>c&&c.alive&&(selector.scope!=='self'||source.cell&&c.x.uid===source.cell.x.uid)&&(selector.scope!=='adjacent'||source.cell&&near(source.cell,c))&&(selector.scope!=='row'||source.cell&&Math.floor(c.pos/5)===Math.floor(source.cell.pos/5))&&(!selector.excludeSelf||!source.cell||c.x.uid!==source.id)&&(!selector.tag||tag(c,selector.tag))&&(!selector.notTag||!tag(c,selector.notTag))&&(!selector.age||d(c).mechanics.age&&!c.matured)&&(!selector.pressureMechanism||d(c).mechanics.pressure)&&(!selector.pressureAtLeast||d(c).mechanics.pressure&&c.x.counters.pressure>=selector.pressureAtLeast)&&(!selector.belowReleaseThreshold||d(c).mechanics.pressure&&c.x.counters.pressure<d(c).mechanics.pressure.cap)&&(!selector.notReleased||!c.released)&&(!selector.rowFirst||!view.some(other=>other&&other.alive&&Math.floor(other.pos/5)===Math.floor(c.pos/5)&&other.pos<c.pos&&tag(other,selector.tag)))&&(!selector.rowMinTypes||new Set(view.filter(other=>other&&other.alive&&Math.floor(other.pos/5)===Math.floor(c.pos/5)&&tag(other,selector.tag)).map(other=>other.x.type)).size>=selector.rowMinTypes)&&(selector.rowCountExact===undefined||view.filter(other=>other&&other.alive&&Math.floor(other.pos/5)===Math.floor(c.pos/5)&&tag(other,selector.tag)).length===selector.rowCountExact)&&(!selector.receivedTag||events.some(e=>e.action==='tagAdded'&&e.target===c.x.uid))&&(!selector.copyable||copyTemplates.has(c.x.uid)&&copyTemplates.get(c.x.uid).epoch===c.x.epoch&&copyTemplates.get(c.x.uid).amount>0)).sort((a,b)=>{if(selector.receivedTag||selector.order==='tagAdded'){const ia=log.findIndex(row=>row.action==='tagAdded'&&row.target===a.x.uid);const ib=log.findIndex(row=>row.action==='tagAdded'&&row.target===b.x.uid);if(ia!==ib)return ia-ib;}return a.pos-b.pos||Number(a.x.uid.slice(1))-Number(b.x.uid.slice(1));});
+ };
+ let appearance=null;
+ const predicate=(p,source,view)=>{
+  if(!p)return true;
+  if(p.all)return p.all.every(x=>predicate(x,source,view));
+  if(p.cashDeficitAtMost)return initial.cash<initial.payment&&initial.payment-initial.cash<=p.cashDeficitAtMost;
+  if(p.remainingAtMost)return initial.cash<initial.payment&&initial.remaining<=p.remainingAtMost;
+  if(p.poolWithoutTag)return !s.pool.some(x=>F.defs(s).symbols[x.type].tags.includes(p.poolWithoutTag));
+  if(p.initialEmptyMin!==undefined)return 20-input.filter(Boolean).length>=p.initialEmptyMin;
+  if(p.lastSpin&&s.spinsRemaining!==0)return false;
+  if(p.cashFraction&&initial.cash*p.cashFraction[1]<initial.payment*p.cashFraction[0])return false;
+  if(p.cashBelowPayment&&initial.cash>=initial.payment)return false;
+  if(p.poolBetween&&(s.pool.length<p.poolBetween[0]||s.pool.length>p.poolBetween[1]))return false;
+  if(p.poolBetween||p.cashFraction||p.lastSpin||p.cashBelowPayment)return true;
+  if(p.cashBelowHalf)return initial.cash*2<initial.payment;
+  if(p.counter)return source.cell.x.counters[p.counter]>=p.min;
+  if(p.events){let found=events.filter(e=>e.action===p.events&&(!p.beforeTag||e.beforeTags.includes(p.beforeTag)));return(p.distinct?new Set(found.map(e=>e.beforeType)).size:found.length)>=p.min}
+  const found=select(p.count,source,view),count=p.distinct?new Set(found.map(c=>c.x.type)).size:found.length;return count>=(p.min||0)&&(p.max===undefined||count<=p.max);
+ };
+ const allowance=(source,e)=>{
+  if(source.cell)return(counts.get(source.id+'/'+e.key)||0)<(e.limit||1);
+  const q=s.itemState.quotas[source.id],used=s.itemState.used[source.id];return e.threshold?!used[e.window||'spin']:q[e.window||'spin']<(e.limit||1);
+ };
+ const consumeQuota=(source,e)=>{
+  if(source.cell){const k=source.id+'/'+e.key;counts.set(k,(counts.get(k)||0)+1)}
+  else{const q=s.itemState.quotas[source.id],u=s.itemState.used[source.id];q.spin++;q.stage++;q.run++;u.spin=true;if(e.window==='stage')u.stage=true}
+ };
+ const skip=(source,target,e,reason,parent,phase)=>{emit('limitSkipped',source,target,null,parent,phase,{skipReason:reason});return false};
+ function dispatch(event,parent){
+  events.push(event);
+  const listeners=[];
+  for(const c of cells){if(!c)continue;for(const e of d(c).effects)if(e.phase==='listen'&&e.event===event.action&&(c.alive||e.deathAllowed&&event.target===c.x.uid))listeners.push([sourceOf(c,e),e])}
+  for(const id of s.items.slice().sort())for(const e of F.defs(s).items[id].effects)if(e.phase==='listen'&&e.event===event.action)listeners.push([itemSource(id,e),e]);
+  for(const [source,e]of listeners){const m=e.match||{};if(!sourceValid(source,e,event)||m.targetSelf&&event.target!==source.id||m.afterSelfType&&event.afterType!==source.cell.x.type||m.beforeTag&&!event.beforeTags.includes(m.beforeTag)||m.afterTag&&!event.afterTags.includes(m.afterTag)||m.notAfterTag&&event.afterTags.includes(m.notAfterTag)||m.notBeforeTag&&event.beforeTags.includes(m.notBeforeTag)||m.notCause&&event.cause===m.notCause||m.adjacent&&(!source.cell||!cells.some(c=>c&&c.x.uid===event.target&&near(source.cell,c)))||m.positiveIncrease&&!(event.actualIncrease>0)||m.actorTag&&!(event.actorTags||[]).includes(m.actorTag)||m.actorAdjacent&&(!source.cell||!cells.some(c=>c&&c.x.uid===event.actor&&near(source.cell,c))))continue;
+   if(e.threshold){const q=s.itemState.quotas[source.id],u=s.itemState.used[source.id];q.spin++;q.stage++;q.run++;if(q.stage===e.threshold&&!u.stage){const t=perform(source,e,null,parent,'step6/lifecycle');if(t)u.stage=true}continue}
+   if(!allowance(source,e))continue;
+   const targets=e.eventTarget||e.op==='reserve'&&event.target?[cells.find(c=>c&&c.x.uid===event.target&&c.alive)]:e.selector?select(e.selector,source):[source.cell];
+   for(const target of targets)if(sourceValid(source,e,event)&&perform(source,e.eventAmount?Object.assign({},e,{amount:Math.min(e.eventAmount.cap||1e9,event.actualIncrease*e.eventAmount.factor)}):e,target,parent,e.op==='pressure'?'step6/pressure-injection':log[parent].phase)){consumeQuota(source,e);break}
+  }
+ }
+ function gauge(parent){
+  for(const id of s.items.slice().sort())for(const e of F.defs(s).items[id].effects)if(e.phase==='change'){
+   const source=itemSource(id,e);if(!allowance(source,e)||fractionReserved||!predicate(e.predicate,source,cells))continue;
+   fractionReserved=true;try{if(perform(source,e,null,parent,'step6/lifecycle'))consumeQuota(source,e)}finally{fractionReserved=false}
+  }
+ }
+ function transform(source,target,type,parent,phase,cause){
+  if(!target||!target.alive||target.x.type===type||target.visited.has(type))return false;
+  const beforeType=target.x.type,beforeTags=d(target).tags.slice(),old=target.x;
+  const fresh=F.instance({profile:s.profile,nextUid:1},type);old.type=type;old.epoch++;old.counters=fresh.counters;target.tags=[];target.visited.add(type);poolCleanup();
+  const detail={beforeType,afterType:type,beforeTags,afterTags:d(target).tags.slice(),cause};
+  const id=emit('transform',source,target,null,parent,phase,detail);dispatch(Object.assign({action:'transform',target:old.uid},detail),id);gauge(id);return true;
+ }
+ function age(source,target,parent){
+  if(!target||!target.alive||target.matured||!d(target).mechanics.age||target.startEpoch!==target.x.epoch)return false;
+  const m=d(target).mechanics.age;target.x.counters.age++;
+  const id=emit('age',source,target,1,parent,'step3/age');
+  if(target.x.counters.age>=m.threshold&&!m.destroy){target.matured=true;transform(source,target,m.to,id,'step3/age','mature')}
+  return true;
+ }
+ function spawn(source,type,parent,phase){
+  const key=source.key,sourceCount=generated.get(source.id)||0,globalCount=generated.get(key)||0;
+  if(s.pool.length>=200)return skip(source,null,{},'pool-cap',parent,phase);
+  if(sourceCount>=1||globalCount>=2)return skip(source,null,{},'generation-budget',parent,phase);
+  if(spawnCount>=40)throw Error('Generation safety bound');
+  const x=F.instance(s,type);s.pool.push(x);spawnCount++;generated.set(source.id,sourceCount+1);generated.set(key,globalCount+1);emit('spawn',source,null,null,parent,phase,{createdUid:x.uid,afterType:type,afterTags:F.defs(s).symbols[type].tags.slice()});return true;
+ }
+ function perform(source,e,target,parent,phase){
+  if(e.op==='age')return age(source,target,parent);
+  if(e.op==='advance'){if(!s.settings.advanceAccepted||s.stageState.advanceClaims.includes(source.id))return false;s.stageState.advanceClaims.push(source.id);s.stageState.paymentModifiers.push({source:source.id,amount:e.obligation,cause:'advance'});s.payment+=e.obligation;perform(source,{op:'reward',amount:e.amount},source.cell,parent,phase);if(e.spawn)spawn(source,e.spawn,parent,phase);return true;}
+  if(e.op==='copy'){
+   const template=target&&copyTemplates.get(target.x.uid);if(!source.cell||!source.cell.alive||!target||!target.alive||!template||template.epoch!==target.x.epoch||template.amount<=0)return false;
+   let amount=Math.min(e.cap||8,template.amount);const supplements=[];
+   for(const id of s.items.slice().sort()){const m=F.defs(s).items[id].mechanics||{},fx={key:id+':copy',limit:1},src=itemSource(id,fx);if(m.copyBonus&&allowance(src,fx)){amount=Math.min(e.cap||8,amount+m.copyBonus);supplements.push([src,fx]);}}
+   const id=emit('copy',source,target,amount,parent,'step4/copy',{actualIncrease:amount});perform(source,{op:'add',amount},source.cell,id,'step4/copy');for(const [src,fx]of supplements)consumeQuota(src,fx);
+   dispatch({action:'copy',target:target.x.uid,beforeType:target.x.type,afterType:target.x.type,beforeTags:d(target).tags.slice(),afterTags:d(target).tags.slice(),cause:'copy',actualIncrease:amount},id);return true;
+  }
+  if(e.op==='risk'){
+   if(!target||!target.alive)return false;const success=F.random(s.rng,'effect')<e.chance[0]/e.chance[1];let loss=success?0:e.failureLoss;
+   const id=emit('risk',source,target,success?e.successAdd:-loss,parent,'step4/risk',{cause:success?'risk-success':'risk-failure'});
+   if(!success){for(const c of cells){if(!c||!c.alive||!near(c,target))continue;const protection=d(c).mechanics.riskMitigation,key=c.x.uid+'/risk-protection';if(protection&&protection.tag===e.riskTag&&!counts.has(key)){loss=Math.max(0,loss-protection.amount);counts.set(key,1);emit('risk',sourceOf(c,{key:'risk-protection'}),target,protection.amount,id,'step4/risk',{cause:'loss-reduction'})}}
+    for(const item of s.items.slice().sort()){const def=F.defs(s).items[item],m=def.mechanics||{},fx={key:item+':risk',limit:1};const src=itemSource(item,fx);if(m.riskReduction&&e.riskTag==='pressure'&&allowance(src,fx)){loss=Math.max(0,loss-m.riskReduction);consumeQuota(src,fx);emit('risk',src,target,m.riskReduction,id,'step4/risk',{cause:'loss-reduction'})}}}
+   perform(source,{op:'add',amount:success?e.successAdd:-loss},target,id,'step4/risk');
+   if(!success&&e.spawn){let replacement=false;const spawnDef=F.defs(s).symbols[e.spawn];for(const item of s.items.slice().sort()){const m=F.defs(s).items[item].mechanics||{},fx={key:item+':risk',limit:1},src=itemSource(item,fx);if(m.replaceRiskJunk&&spawnDef.tags.includes('junk')&&allowance(src,fx)){perform(src,{op:'add',amount:-m.replacementLoss},target,id,'step4/risk');consumeQuota(src,fx);emit('limitSkipped',src,target,null,id,'step4/risk',{cause:'risk-replaced',skipReason:'replacement-not-generation'});replacement=true;break}}if(!replacement)spawn(source,e.spawn,id,'step4/risk')}
+   return true;
+  }
+  if(e.op==='cycle'){
+   if(!target||!target.alive||!d(target).mechanics.cycle_count)return false;
+   const threshold=Math.max(2,d(target).mechanics.cycle_count-(s.items.some(id=>F.defs(s).items[id].mechanics&&F.defs(s).items[id].mechanics.cycleThresholdReduction)?1:0));
+   target.x.counters.beat++;const id=emit('cycle',source,target,1,parent,phase);
+   if(target.x.counters.beat>=threshold){target.x.counters.beat=0;perform(source,{op:'add',amount:e.amount},target,id,phase)}
+   return true;
+  }
+  if(e.op==='reward'){if(e.defer){deferredRewards.push({source,e,target,parent});return true;}reward=safe(reward+e.amount);emit('reward',source,target,e.amount,parent,phase);return true}
+  if(e.op==='spawn')return spawn(source,e.type,parent,phase);
+  if(e.op==='token'){s[e.resource]=Math.min(9,s[e.resource]+e.amount);emit('reward',source,null,0,parent,'choice/commit',{cause:'token'});return true}
+  if(e.op==='add'){if(!target||!target.alive)return false;if(e.defer){deferredAdds.push({source,e,target,parent});return true;}let amount=e.amount;
+   if(e.countAmount){const found=select(e.countAmount.selector,source,appearance||cells);amount=Math.min(e.countAmount.cap,e.countAmount.distinct?new Set(found.map(c=>c.x.type)).size:found.length)}
+   target.add=safe(target.add+amount);target.addParts.push({source:source.id,amount});emit('add',source,target,amount,parent,phase);return true}
+  if(e.op==='grow'){if(!target||!target.alive)return false;const amount=Math.min(e.amount,30-target.x.permanent);if(!amount)return false;target.x.permanent+=amount;const id=emit('grow',source,target,amount,parent,phase,{actualIncrease:amount});dispatch({action:'grow',target:target.x.uid,beforeType:target.x.type,afterType:target.x.type,beforeTags:d(target).tags,afterTags:d(target).tags,cause:'growth',actualIncrease:amount},id);return true}
+  if(e.op==='multiply'){
+   if(!target||!target.alive)return false;const key=e.key+'/'+target.x.uid,k=source.id+'/'+key;
+   if(multipliers.has(k)||(multipliers.get(key)||0)>=2)return skip(source,target,e,'multiplier-budget',parent,phase);
+   target.ratio[0]*=BigInt(e.ratio[0]);target.ratio[1]*=BigInt(e.ratio[1]);target.multiplyParts.push({source:source.id,ratio:e.ratio});multipliers.set(k,1);multipliers.set(key,(multipliers.get(key)||0)+1);const id=emit('multiply',source,target,null,parent,phase);if(e.spawn)spawn(source,e.spawn,id,phase);return true;
+  }
+  if(e.op==='pressure'){
+   if(!target||!target.alive||!d(target).mechanics.pressure)return false;const cap=d(target).mechanics.pressure.cap,amount=Math.min(e.amount,cap-target.x.counters.pressure);if(!amount)return false;target.x.counters.pressure+=amount;const id=emit('pressureIncrease',source,target,amount,parent,phase,{actualIncrease:amount});if(!e.noDispatch)dispatch({action:'pressureIncrease',target:target.x.uid,beforeType:target.x.type,afterType:target.x.type,beforeTags:d(target).tags,afterTags:d(target).tags,cause:'pressure'},id);return true;
+  }
+  if(e.op==='release'){
+   if(!target||!target.alive||!d(target).mechanics.pressure||target.released)return false;const before=target.x.counters.pressure,spent=e.spend||before;
+   if(before<spent||e.belowThreshold&&before>=d(target).mechanics.pressure.cap)return false;
+   target.x.counters.pressure-=spent;target.released=true;const id=emit('release',source,target,spent,parent,phase,{actualIncrease:-spent});
+   if(e.ratio)perform(source,{op:'multiply',ratio:e.ratio,key:e.key},target,id,phase);
+   if(e.reward)perform(source,{op:'reward',amount:e.reward},target,id,phase);
+   dispatch({action:'release',target:target.x.uid,beforeType:target.x.type,afterType:target.x.type,beforeTags:d(target).tags,afterTags:d(target).tags,cause:'pressure'},id);return true;
+  }
+  if(e.op==='reserve'){
+   if(e.defer){if(!target||!target.alive)return false;const id=emit('reserve',source,target,null,parent,phase,{cause:'reservation-request'});reserveRequests.push({source,e,target,epoch:target.x.epoch,parent:id});return true;}
+   if(!target||!target.alive||s.reservations.length>=2||s.reservations.some(r=>r.uid===target.x.uid||r.pos===target.pos))return false;
+   const pos=target.pos,sourceId=source.cell?source.id:source.id;s.reservations.push({uid:target.x.uid,pos,epoch:target.x.epoch,source:sourceId,expiresSpin:s.spin+1});emit('reserve',source,target,null,parent,phase);return true;
+  }
+  if(e.op==='guarantee'){
+   if(!e.guarantee)return false;s.offer.guarantees[e.guarantee]=true;emit('reward',source,target,0,parent,'choice/commit',{cause:'offer-guarantee'});return true;
+  }
+  if(e.op==='tagMajority'){let winner=e.tags[0],maximum=-1;for(const tagName of e.tags){const count=select({scope:'adjacent',tag:tagName},source).length;if(count>maximum){maximum=count;winner=tagName;}}return perform(source,{op:'tagAdded',tag:winner},target,parent,phase);}
+  if(e.op==='tagChoice'){for(const tagName of e.tags){if(select({scope:'adjacent',tag:tagName},source).length)return perform(source,{op:'tagAdded',tag:tagName},target,parent,phase);}return false;}
+  if(e.op==='tagBundle'){if(!target||!target.alive)return false;let success=false;for(const tagName of e.tags)success=perform(source,{op:'tagAdded',tag:tagName},target,parent,phase)||success;if(e.ratio)success=perform(source,{op:'multiply',ratio:e.ratio},target,parent,phase)||success;return success;}
+  if(e.op==='tagAdded'){
+   if(!target||!target.alive)return false;const tagName=e.tag||'temporary';if(tag(target,tagName))return false;target.tags=target.tags||[];const beforeTags=[...d(target).tags,...target.tags];target.tags.push(tagName);const id=emit('tagAdded',source,target,0,parent,phase,{beforeTags,afterTags:[...beforeTags,tagName]});dispatch({action:'tagAdded',target:target.x.uid,beforeType:target.x.type,afterType:target.x.type,beforeTags,afterTags:[...beforeTags,tagName],cause:'tagAdded'},id);gauge(id);return true;
+  }
+  if(e.op==='transform')return transform(source,target,e.type,parent,phase,'transform');
+  if(e.op==='consume'||e.op==='destroy'){
+   if(!target||!target.alive)return false;
+   const beforeType=target.x.type,beforeTags=[...new Set([...d(target).tags,...target.tags||[]])],cause=e.op==='consume'?'consume':e.cause||'destroy';
+   target.alive=false;s.pool=s.pool.filter(x=>x.uid!==target.x.uid);poolCleanup();
+   const facts={beforeType,afterType:null,beforeTags,afterTags:[],cause};const id=emit(e.op,source,target,null,parent,phase,facts);
+   dispatch(Object.assign({action:e.op,target:target.x.uid,actor:source.id,actorTags:source.cell?[...new Set([...d(source.cell).tags,...source.cell.tags||[]])]:[]},facts),id);
+   if(e.op==='consume'){const death=emit('destroy',source,target,null,id,phase,facts);dispatch(Object.assign({action:'destroy',target:target.x.uid},facts),death)}
+   if(e.reward)perform(source,{op:'reward',amount:e.reward+(e.rewardTargetBase?F.defs(s).symbols[beforeType].base:0)},target,id,phase);
+   if(e.growSource&&source.cell&&source.cell.alive)perform(source,{op:'grow',amount:e.growSource},source.cell,id,phase);
+   if(e.pressure)perform(source,{op:'pressure',amount:e.pressure},source.cell,id,phase);
+   if(e.spawn)spawn(source,e.spawn,id,phase);
+   gauge(id);return true;
+  }
+  throw Error('Unsupported primitive '+e.op);
+ }
+ function run(phase,view=cells){
+  const sources=[];for(const c of cells)if(c&&c.alive&&c.x.epoch===c.startEpoch)for(const e of d(c).effects)if(e.phase===phase)sources.push([sourceOf(c,e),e]);
+  for(const id of s.items.slice().sort())for(const e of F.defs(s).items[id].effects)if(e.phase===phase)sources.push([itemSource(id,e),e]);
+  for(const [source,e]of sources){if(!sourceValid(source,e)||!allowance(source,e)||!predicate(e.predicate,source,view))continue;
+   const selection=source.cell===null&&!e.selector?[null]:select(e.selector,source,view),targets=e.lockFirst?selection.slice(0,1):selection;let success=false;
+   for(const old of targets){if(!sourceValid(source,e)||!allowance(source,e))break;const target=old?cells.find(c=>c&&c.x.uid===old.x.uid):null;if(perform(source,e,target,null,phases[phase]||'step3/age')){success=true;if(e.each&&source.cell===null)consumeQuota(source,e);if(!e.each)break}}
+   if(success&&!(e.each&&source.cell===null))consumeQuota(source,e);
+  }
+ }
+ function eventEffects(phase){if(s.profile!=='full-v1')return;for(const m of s.events.activeModifiers){if(m.uid!==null||m.stageId!==s.stageId||m.remaining<=0)continue;const def=F.defs(s).events[m.eventId];for(const [index,fx] of (def.spinEffects||[]).entries()){if(fx.phase!==phase)continue;const e=Object.assign({key:m.eventId+':'+index},fx);if(e.ratios)e.ratio=e.ratios[s.stageSpin-1];if(e.op==='multiply'&&!e.ratio)continue;const source={id:m.eventId,cell:null,key:e.key};for(const c of select(e.selector,source).slice(0,e.maxTargets||20))perform(source,e,c,null,phase==='preprocess'?'step2/tagAdded':'step8/end-summary')}}}
+ gauge(null);
+ eventEffects('preprocess');
+ if(s.profile==='full-v1')run('preprocess');
+ run('initial');
+ // Draw-phase weight effects have already executed in sliceDraw; never replay
+ // them as resolver actions (including when full content coexists with slice).
+ if(s.profile==='full-v1')run('step2');
+ for(const c of cells)if(c){const m=d(c).mechanics.age;if(m)age({id:c.x.uid,cell:c,key:'natural-age'},c,null)}
+ run('step3');
+ for(const m of s.events.activeModifiers.slice()){const c=cells.find(c=>c&&c.x.uid===m.uid);if(c&&age({id:c.x.uid,cell:c,key:'event-age'},c,null))m.remaining--}
+ poolCleanup();run('age-extra');
+ appearance=cells.map(c=>c&&Object.assign({},c,{x:F.clone(c.x)}));
+ run('appearance',appearance);run('step4',appearance);if(s.profile==='full-v1'){run('copy',appearance);run('pressure-injection');run('adjacency-add');}run('structure');run('step5');run('end');run('step6');
+ run('step7');
+ for(const c of cells)if(c&&c.alive&&d(c).mechanics.pressure){const m=d(c).mechanics.pressure;if(c.x.counters.pressure>=m.cap&&!c.released){c.released=true;c.x.counters.pressure=0;const src={id:c.x.uid,cell:c,key:'pressure-release'};const id=emit('release',src,c,m.reward,null,'step7/pressure');perform(src,{op:'reward',amount:m.reward},c,id,'step7/pressure');if(s.profile==='full-v1')dispatch({action:'release',target:c.x.uid,beforeType:c.x.type,afterType:c.x.type,beforeTags:d(c).tags,afterTags:d(c).tags,cause:'pressure'},id)}}
+ run('summary');eventEffects('summary');
+ for(const request of deferredRewards)if(sourceValid(request.source,request.e)&&predicate(request.e.commitPredicate,request.source,cells))perform(request.source,Object.assign({},request.e,{defer:false}),request.target,request.parent,'step8/end-summary');
+ for(const request of deferredAdds)if(request.target.alive)perform(request.source,Object.assign({},request.e,{defer:false}),request.target,request.parent,'step8/end-summary');
+ for(const request of reserveRequests.sort((a,b)=>(a.e.priority||0)-(b.e.priority||0)||(a.source.cell?a.source.cell.pos:0)-(b.source.cell?b.source.cell.pos:0)||a.source.id.localeCompare(b.source.id))){if(request.target.alive&&request.target.x.epoch===request.epoch)perform(request.source,Object.assign({},request.e,{defer:false}),request.target,request.parent,'step8/end-summary');else skip(request.source,request.target,request.e,'reservation-target-invalid',request.parent,'step8/end-summary');}
+ if(s.profile==='full-v1')for(const m of s.events.activeModifiers)if(m.uid===null&&m.stageId===s.stageId)m.remaining--;
+ const board=cells.map(c=>c?{uid:c.x.uid,type:c.x.type,epoch:c.x.epoch,alive:c.alive}:null),ledger=[];
+ const floor=(n,den)=>n>=0n?n/den:-((-n+den-1n)/den);
+ for(const c of cells){if(!c)continue;const flat=safe(d(c).base+c.x.permanent+c.add),ordinaryZero=s.profile==='full-v1'&&d(c).mechanics.ordinaryZero,n=BigInt(ordinaryZero?0:flat)*c.ratio[0],den=c.ratio[1];const amount=c.alive?safe(Number(floor(n,den))):0,parts=new Map();
+  const add=(id,value)=>parts.set(id,safe((parts.get(id)||0)+value));
+  if(c.alive&&!ordinaryZero){add(c.x.uid,d(c).base+c.x.permanent);for(const p of c.addParts)add(p.source,p.amount);let num=BigInt(flat),div=1n,previous=BigInt(flat);for(const p of c.multiplyParts){num*=BigInt(p.ratio[0]);div*=BigInt(p.ratio[1]);const next=floor(num,div);add(p.source,Number(next-previous));previous=next}}
+  const contributions=Array.from(parts,([source,amount])=>({source,amount}));if(contributions.reduce((a,b)=>a+b.amount,0)!==amount)throw Error('Contribution mismatch');ledger.push({uid:c.x.uid,type:c.x.type,amount,alive:c.alive,ratio:c.ratio.map(String),contributions})}
+ const total=safe(reward+ledger.reduce((a,b)=>a+b.amount,0));poolCleanup();return{spin:s.spin,total,reward,board,ledger,log};
+};
+})(typeof window!=='undefined'?window:globalThis);
+
+</script><script>
+(function(root){
+'use strict';
+const F=root.GDD1;
+const check=(ok,message)=>{if(!ok)throw Error(message)};
+const clearOffer=s=>{s.offer.kind=null;s.offer.choices=[];s.offer.choiceRefreshesUsed=0;s.offer.guarantees.applied=null};
+const counters=(s,type)=>{const m=F.defs(s).symbols[type].mechanics||{};return m.age?{age:0}:m.pressure?{pressure:0}:{}};
+const cleanup=s=>{s.reservations=s.reservations.filter(r=>s.pool.some(x=>x.uid===r.uid&&x.epoch===r.epoch));s.events.activeModifiers=s.events.activeModifiers.filter(m=>{if(m.uid===null)return m.remaining>0&&m.stageId===s.stageId;const x=s.pool.find(x=>x.uid===m.uid);return x&&F.defs(s).symbols[x.type].tags.includes('plant')&&F.defs(s).symbols[x.type].mechanics.age})};
+F.fullEventTargets=function(s,id){const e=F.defs(s).events[id];if(!e||e.target===null)return[];const t=e.target||{tag:e.tag,age:e.age};return s.pool.filter(x=>{const d=F.defs(s).symbols[x.type];return (!t.tag||d.tags.includes(t.tag))&&(!t.notTag||!d.tags.includes(t.notTag))&&(!t.rarity||d.rarity===t.rarity)&&(!t.age||d.mechanics.age)&&(!t.pressureMechanism||d.mechanics.pressure)}).map(x=>x.uid)};
+F.fullEventEligible=function(s,id){const e=F.defs(s).events[id];if(!e)return false;const targets=F.fullEventTargets(s,id);return s.pool.length>=(e.minPool||0)&&s.spinsRemaining>=(e.minStageSpins||0)&&s.cash>=e.cost&&(targets.length>0||e.allowEmptyTarget===true)&&(!(e.requiresCapacity||e.spawn||e.capacityWhenEmpty&&!targets.length)||s.pool.length<200)};
+function events(s,paid){
+ const ev=s.events;
+ if(ev.cooldownPayments){ev.cooldownPayments--;return}
+ if(paid<2||paid>8||ev.count>=3)return;
+ const eligible=Object.keys(F.defs(s).events).filter(id=>!ev.seenIds.includes(id)&&F.fullEventEligible(s,id));
+ if(!eligible.length)return;
+ if(F.random(s.rng,'event')>=.4)return;
+ const id=eligible[Math.floor(F.random(s.rng,'event')*eligible.length)];ev.seenIds.push(id);ev.count++;ev.cooldownPayments=1;
+ ev.choice={id,options:['A','B'],targetUids:F.fullEventTargets(s,id),cost:F.defs(s).events[id].cost,stageId:s.stageId};s.phase='EVENT_CHOICE';
+}
+// Shared scheduling boundary used by stage setup and deterministic contract tests.
+F.fullScheduleEvent=events;
+function setup(s){
+ const paid=s.stageId;s.stageId++;s.stageSpin=0;s.spinsRemaining=F.NORMAL_SPINS[s.stageId-1];s.basePayment=s.payment=F.PROFILES[s.profile].payments[s.stageId-1];s.phase='READY';
+ s.rerollTokens=Math.min(9,s.rerollTokens+1);if(s.stageId>=3)s.removeTokens=Math.min(9,s.removeTokens+1);
+ s.stageState={advanceClaims:[],paymentModifiers:[],skipCount:0};s.offer.guarantees.stageCommonHandled=false;
+ s.itemState.stageId=s.stageId;for(const id of s.items){s.itemState.quotas[id].stage=0;s.itemState.used[id].stage=false}
+ events(s,paid);
+}
+F.fullCommand=function(state,command){
+ return F.transact(state,command.revision,s=>{
+  check(s.profile==='full-v1','Full profile required');
+  const op=command.op;
+  if(op==='spin'){
+   check(s.phase==='READY','Not ready');const board=F.sliceDraw(s);s.spin++;s.stageSpin++;s.spinsRemaining--;s.last=F.sliceResolve(s,board);s.pendingSettlement=s.last.total;s.phase='SYMBOL_CHOICE';F.sliceOffer(s,'symbol');
+  }else if(op==='reroll'){
+   check(s.phase==='SYMBOL_CHOICE'&&command.windowId===s.offer.windowId,'Stale symbol window');check(s.rerollTokens>0&&s.offer.choiceRefreshesUsed<3,'Refresh unavailable');s.rerollTokens--;s.offer.choiceRefreshesUsed++;F.sliceOffer(s,'symbol',false);
+  }else if(op==='remove'){
+   check(['READY','SYMBOL_CHOICE'].includes(s.phase)&&s.removeTokens>0,'Removal unavailable');check(s.pool.some(x=>x.uid===command.uid),'Unknown UID');check(s.pool.length!==1||command.confirmEmpty===true,'Confirm empty pool');s.pool=s.pool.filter(x=>x.uid!==command.uid);s.removeTokens--;cleanup(s);
+  }else if(op==='choose'||op==='skip'){
+   check(s.phase==='SYMBOL_CHOICE'&&command.windowId===s.offer.windowId,'Stale symbol window');
+   if(op==='choose'){check(s.offer.choices.includes(command.id)&&s.pool.length<200,'Illegal selection/full pool');s.pool.push(F.instance(s,command.id))}else {s.stageState.skipCount++;for(const id of s.items.slice().sort()){const m=F.defs(s).items[id].mechanics||{};if(m.skipOrdinals&&m.skipOrdinals.includes(s.stageState.skipCount)){s[m.resource]=Math.min(9,s[m.resource]+m.amount);const q=s.itemState.quotas[id];q.spin++;q.stage++;q.run++;s.itemState.used[id].spin=true;}}}
+   s.cash=Math.max(0,s.cash+s.pendingSettlement);check(s.cash<=1e9,'Cash safety bound');s.pendingSettlement=null;clearOffer(s);
+   if(s.spinsRemaining){s.phase='READY';return}
+   if(s.cash<s.payment){s.phase='LOST';return}
+   s.cash-=s.payment;for(const id of s.items.slice().sort()){const m=F.defs(s).items[id].mechanics||{},q=s.itemState.quotas[id];if(m.paymentResource&&q.stage===0&&!s.pool.some(x=>F.defs(s).symbols[x.type].tags.includes(m.poolWithoutTag))){if(s.stageId!==10||!m.finalOnlyStats)s[m.paymentResource]=Math.min(9,s[m.paymentResource]+m.amount);q.stage++;q.run++;s.itemState.used[id].stage=true;}}
+   if(s.stageId===10){s.phase='WON';return}
+   s.phase='ITEM_CHOICE';F.sliceOffer(s,'item');
+  }else if(op==='item'||op==='skipItem'){
+   check(s.phase==='ITEM_CHOICE'&&command.windowId===s.offer.windowId,'Stale item window');
+   if(op==='item'){check(s.offer.choices.includes(command.id)&&!s.items.includes(command.id),'Illegal item');s.items.push(command.id);s.itemState.quotas[command.id]={spin:0,stage:0,run:0};s.itemState.used[command.id]={spin:false,stage:false}}
+   clearOffer(s);setup(s);
+  }else if(op==='event'){
+   check(s.phase==='EVENT_CHOICE'&&s.events.choice.id===command.id,'Stale event');check(['A','B'].includes(command.option),'Unknown option');
+   if(command.option==='A'){
+    const e=F.defs(s).events[command.id],c=s.events.choice;check(F.fullEventEligible(s,c.id),'Event qualification/cost/capacity changed');
+    const targets=F.fullEventTargets(s,c.id),targetUid=command.uid||c.targetUids[0];const x=targetUid&&s.pool.find(x=>x.uid===targetUid);if(targets.length)check(x&&c.targetUids.includes(targetUid)&&targets.includes(targetUid),'Invalid event target');else check(!command.uid,'Unexpected event target');
+    s.cash-=e.cost;
+    if(e.op==='modifier')s.events.activeModifiers.push({eventId:c.id,uid:e.age&&x?x.uid:null,stageId:s.stageId,remaining:e.remaining||1});
+    if(e.op==='transform'){check(x,'Event transform target required');x.type=e.type;x.epoch++;x.counters=counters(s,e.type);cleanup(s);if(e.spawn){check(s.pool.length<200,'Event pool capacity');s.pool.push(F.instance(s,e.spawn))}}
+    if(e.op==='remove'||e.op==='removeModifier'){check(x,'Event remove target required');s.pool=s.pool.filter(p=>p.uid!==x.uid);cleanup(s);if(e.guarantee)s.offer.guarantees[e.guarantee]=true;if(e.op==='removeModifier')s.events.activeModifiers.push({eventId:c.id,uid:null,stageId:s.stageId,remaining:e.remaining})}
+    if(e.op==='boiler'){s.stageState.paymentModifiers.push({source:c.id,amount:12,cause:'event'});s.payment+=12;s.cash+=10;const target=x||(()=>{check(s.pool.length<200,'Event pool capacity');const created=F.instance(s,'pressure_pouch');s.pool.push(created);return created})();check(F.defs(s).symbols[target.type].mechanics.pressure,'Pressure mechanism required');target.counters.pressure=Math.min(F.defs(s).symbols[target.type].mechanics.pressure.cap,target.counters.pressure+2)}
+    if(e.op==='quota'){s.stageState.paymentModifiers.push({source:c.id,amount:10,cause:'event'});s.payment+=10;s.rerollTokens=Math.min(9,s.rerollTokens+1);check(s.pool.length<200,'Event pool capacity');s.pool.push(F.instance(s,'cleared_stub'))}
+   }
+   s.events.choice=null;s.phase='READY';
+  }else if(op==='advanceAccepted'){check(s.phase==='READY'&&typeof command.value==='boolean','READY boolean required');s.settings.advanceAccepted=command.value;
+  }else if(op==='autosave'){check(typeof command.value==='boolean','Boolean required');s.settings.autosave=command.value}
+  else throw Error('Unknown command');
+ });
+};
+})(typeof window!=='undefined'?window:globalThis);
+
+</script><div id="ready">production</div></body></html>

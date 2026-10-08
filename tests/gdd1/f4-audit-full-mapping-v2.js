@@ -1,0 +1,22 @@
+'use strict';
+const fs=require('fs'),path=require('path'),assert=require('assert');
+const root=path.resolve(__dirname,'../..'),out=path.join(__dirname,'f4-audit-full-mapping-v2-results-v5.json');
+if(fs.existsSync(out))throw Error('refusing overwrite '+out);
+global.GDD1={};for(const f of ['contract','rng','schema','save','content','full-content','full-effects','offers','resolver','full-controller'])require(path.join(root,'js/gdd1',f+'.js'));
+const F=GDD1,cases=[];function t(name,fn){try{fn();cases.push({name,ok:true})}catch(e){cases.push({name,ok:false,error:e.message})}}
+const knownOps=new Set(['add','multiply','cycle','age','pressure','risk','consume','transform','reward','copy','tagChoice','tagBundle','advance','spawn','weight','token','reserve','guarantee','riskReduce','replaceRisk','copyAdd','change','release','tagAdded','boiler','modifier','quota','removeModifier','grow','destroy','tagMajority']);
+t('dispatch/full-defs-selects-full',()=>{const s=F.fullNewRun('MAP');const d=F.defs(s);assert.strictEqual(d.symbols,F.fullSymbols);assert.strictEqual(d.items,F.fullItems);assert.strictEqual(d.events,F.fullEvents);assert.equal(d.symbols.spectrum_pin.effects[0].amount,4)});
+t('dispatch/slice-defs-selects-slice',()=>{const s=F.sliceNewRun('MAP');const d=F.defs(s);assert.strictEqual(d.symbols,F.sliceSymbols);assert.strictEqual(d.items,F.sliceItems);assert.strictEqual(d.events,F.sliceEvents);assert(!d.symbols.spectrum_pin)});
+t('symbols/all-64-defined',()=>{assert.equal(F.SYMBOL_IDS.length,64);for(const id of F.SYMBOL_IDS){const d=F.fullSymbols[id];assert(d&&d.id===id&&d.name&&d.rarity&&Array.isArray(d.tags)&&Number.isInteger(d.base)&&Array.isArray(d.effects));}});
+t('symbols/all-64-tags-nonempty',()=>{for(const id of F.SYMBOL_IDS)assert(F.fullSymbols[id].tags.length,id)});
+t('symbols/all-effect-ops-known',()=>{for(const id of F.SYMBOL_IDS)for(const e of F.fullSymbols[id].effects)assert(knownOps.has(e.op),id+':'+e.op)});
+t('symbols/all-64-isolated-resolve',()=>{for(const id of F.SYMBOL_IDS){const s=F.fullNewRun('MAP-'+id);s.pool=[F.instance(s,id)];const b=Array(20).fill(null);b[0]=s.pool[0];const r=F.sliceResolve(s,b);assert(Number.isSafeInteger(r.total),id)}});
+t('items/all-32-defined',()=>{assert.equal(F.ITEM_IDS.length,32);for(const id of F.ITEM_IDS){const d=F.fullItems[id];assert(d&&d.id===id&&d.name&&d.rarity&&Array.isArray(d.effects));assert(d.effects.length||Object.keys(d.mechanics||{}).length,id)}});
+t('items/all-32-effect-ops-known',()=>{for(const id of F.ITEM_IDS)for(const e of F.fullItems[id].effects)assert(knownOps.has(e.op),id+':'+e.op)});
+t('events/all-8-defined',()=>{assert.equal(F.EVENT_IDS.length,8);for(const id of F.EVENT_IDS){const d=F.fullEvents[id];assert(d&&d.id===id&&d.name&&Number.isInteger(d.cost)&&d.tag!==undefined&&d.op);}});
+t('events/all-spin-effect-ops-known',()=>{for(const id of F.EVENT_IDS)for(const e of F.fullEvents[id].spinEffects||[])assert(knownOps.has(e.op),id+':'+e.op)});
+t('events/full-specific-cost-and-targets',()=>{assert.equal(F.fullEvents.event_misprint_window.cost,6);assert.equal(F.fullEvents.event_empty_manifest.minPool,21);assert.equal(F.fullEvents.event_boiler_test.allowEmptyTarget,true);assert.equal(F.fullEvents.event_quota_recount.allowEmptyTarget,true)});
+t('controller/full-command-observes-full-defs',()=>{const s=F.fullNewRun('MAP-CMD'),orig=F.defs,calls=[];F.defs=x=>{const d=orig(x);if(x&&x.profile==='full-v1')calls.push(d);return d};try{const r=F.fullCommand(s,{op:'spin',revision:s.revision});assert(r.ok);assert(calls.length>0);assert(calls.every(d=>d.symbols===F.fullSymbols&&d.items===F.fullItems&&d.events===F.fullEvents));}finally{F.defs=orig}});
+t('controller/full-specific-content-not-slice-only',()=>{const src=fs.readFileSync(path.join(root,'js/gdd1/full-controller.js'),'utf8');assert(src.includes("s.profile==='full-v1'"));assert(src.includes('F.defs(s).events'))});
+t('resolver/full-effect-execution-uses-full-def',()=>{const s=F.fullNewRun('MAP-EFFECT'),before=F.fullSymbols.spectrum_pin.effects;const x=F.instance(s,'spectrum_pin');s.pool=[x];const b=Array(20).fill(null);b[0]=x;const r=F.sliceResolve(s,b);assert(Array.isArray(r.ledger));assert.strictEqual(F.defs(s).symbols.spectrum_pin.effects,before)});
+const result={scope:'GDD1 F4 supplemental full 64/32/8 mapping audit',total:cases.length,passed:cases.filter(x=>x.ok).length,failed:cases.filter(x=>!x.ok),cases};fs.writeFileSync(out,JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));if(result.failed.length)process.exitCode=1;

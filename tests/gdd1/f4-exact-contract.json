@@ -1,0 +1,1061 @@
+{
+  "source": "docs/GAME_DESIGN_V1.md",
+  "sha256": "E33E1699AED464CD656ABC2344D9E68BE92A7238DA482F9861E5E67DEDC8DF07",
+  "status": "CONTRACT EXTRACTION ONLY / NOT BEHAVIOR ACCEPTANCE",
+  "symbols": [
+    {
+      "id": "mist_pouch",
+      "name": "凝雾软囊",
+      "rarity": "common",
+      "tags": [
+        "plant",
+        "mist"
+      ],
+      "base": 1,
+      "rule": "第 3 次上盘转换为 dew_lantern；成长由 age 表达",
+      "role": "common 入口，稳定等待"
+    },
+    {
+      "id": "wick_bed",
+      "name": "灯芯苗床",
+      "rarity": "common",
+      "tags": [
+        "plant",
+        "fuel"
+      ],
+      "base": 2,
+      "rule": "无附加效果；既能直接产出也可被热料消费者消耗",
+      "role": "基础生产者、过渡供给"
+    },
+    {
+      "id": "dew_lantern",
+      "name": "露灯苞",
+      "rarity": "uncommon",
+      "tags": [
+        "plant",
+        "mist",
+        "product"
+      ],
+      "base": 3,
+      "rule": "第 2 次上盘转换为 amber_frond；普通候选可直接获得",
+      "role": "中段成长件"
+    },
+    {
+      "id": "amber_frond",
+      "name": "琥露扇叶",
+      "rarity": "uncommon",
+      "tags": [
+        "plant",
+        "fuel",
+        "product",
+        "cargo"
+      ],
+      "base": 4,
+      "rule": "自身被消耗时发独立奖励 4；与消费者奖励不同来源",
+      "role": "成熟回报、货运成品"
+    },
+    {
+      "id": "fog_stitcher",
+      "name": "补雾工",
+      "rarity": "uncommon",
+      "tags": [
+        "machine",
+        "support"
+      ],
+      "base": 1,
+      "rule": "每轮给一个邻接 plant 的 age 额外推进 1 步；无 age 的成品无效；本轮最多 1",
+      "role": "可替代成长核心"
+    },
+    {
+      "id": "root_ledger",
+      "name": "根须账簿",
+      "rarity": "rare",
+      "tags": [
+        "plant",
+        "contract"
+      ],
+      "base": 1,
+      "rule": "全盘每次 plant 成功转换，自身永久 +1；每轮最多 2，永久上限 30",
+      "role": "长期回报核心"
+    },
+    {
+      "id": "warm_pod",
+      "name": "温灯荚",
+      "rarity": "common",
+      "tags": [
+        "plant",
+        "pressure"
+      ],
+      "base": 1,
+      "rule": "**出现快照（步骤4）**：若自身邻接至少一个起始存活 fuel，自身 +3，否则基础值",
+      "role": "common 快速条件回报"
+    },
+    {
+      "id": "nursery_gauge",
+      "name": "苗圃指针",
+      "rarity": "rare",
+      "tags": [
+        "machine",
+        "plant"
+      ],
+      "base": 2,
+      "rule": "本轮至少 2 个 plant 成功转换时，全盘存活 plant ×3/2；每轮一次",
+      "role": "成型放大，非必需核心"
+    },
+    {
+      "id": "ash_felt",
+      "name": "灰温毡",
+      "rarity": "common",
+      "tags": [
+        "scrap",
+        "fuel"
+      ],
+      "base": 1,
+      "rule": "被消耗时生成一枚 copper_burr；若累计上盘 3 次且结束时仍存活，原子自毁并发独立奖励 3，不产普通收入；两分支互斥",
+      "role": "common 链式输入"
+    },
+    {
+      "id": "sorting_tong",
+      "name": "分温夹",
+      "rarity": "common",
+      "tags": [
+        "machine"
+      ],
+      "base": 1,
+      "rule": "消耗一个邻接 scrap，独立奖励 6；无目标不发独立奖励，仅基础1",
+      "role": "common 回收核心"
+    },
+    {
+      "id": "copper_burr",
+      "name": "铜毛刺",
+      "rarity": "common",
+      "tags": [
+        "scrap",
+        "product",
+        "cargo"
+      ],
+      "base": 2,
+      "rule": "邻接任意 machine 时自身 +2",
+      "role": "次级原料与过渡成品"
+    },
+    {
+      "id": "spent_gasket",
+      "name": "过役垫圈",
+      "rarity": "common",
+      "tags": [
+        "scrap",
+        "junk"
+      ],
+      "base": -1,
+      "rule": "无附加效果；禁正常候选，由高收益装置或事件生成",
+      "role": "明确污染/回收输入"
+    },
+    {
+      "id": "sieve_drum",
+      "name": "除滞滚筒",
+      "rarity": "uncommon",
+      "tags": [
+        "machine",
+        "support"
+      ],
+      "base": 2,
+      "rule": "转换一个邻接 junk 为 copper_burr；每轮一次；不是删除",
+      "role": "可替代无消耗核心"
+    },
+    {
+      "id": "heat_clerk",
+      "name": "余温录员",
+      "rarity": "uncommon",
+      "tags": [
+        "machine",
+        "contract"
+      ],
+      "base": 1,
+      "rule": "全盘发生 scrap 消耗时自身永久 +1，每轮最多 1，上限 30",
+      "role": "回收长期回报"
+    },
+    {
+      "id": "clinker_router",
+      "name": "灰渣分路器",
+      "rarity": "rare",
+      "tags": [
+        "machine",
+        "pressure"
+      ],
+      "base": 2,
+      "rule": "每轮销毁一个邻接 junk，无消费奖励；监听全盘非消耗销毁 junk，给一个存活且具有蓄压计数机制的 pressure 蓄压 +2（不得超过该实例上限）；自身上盘监听，每轮最多 2",
+      "role": "废物转蓄压接口"
+    },
+    {
+      "id": "furnace_auditor",
+      "name": "炉账稽核灯",
+      "rarity": "rare",
+      "tags": [
+        "machine"
+      ],
+      "base": 2,
+      "rule": "全盘本轮成功消耗至少 2 个不同 type 的 scrap 时，给每个存活 machine ×3/2，一次",
+      "role": "多原料回报，避免只堆同件"
+    },
+    {
+      "id": "dock_chime",
+      "name": "栈桥鸣片",
+      "rarity": "common",
+      "tags": [
+        "resonance",
+        "cargo"
+      ],
+      "base": 2,
+      "rule": "**出现快照（步骤4）**：自身 + 同排其他起始存活 resonance 的不同 type 数，最多 +3；后续死亡不重算",
+      "role": "common 入口/异类频率"
+    },
+    {
+      "id": "pitch_fork",
+      "name": "港音分叉",
+      "rarity": "common",
+      "tags": [
+        "resonance",
+        "support"
+      ],
+      "base": 1,
+      "rule": "给一个邻接 resonance +3，排除自己",
+      "role": "common 邻接支援"
+    },
+    {
+      "id": "fog_reed",
+      "name": "雾笛簧",
+      "rarity": "common",
+      "tags": [
+        "resonance",
+        "mist"
+      ],
+      "base": 1,
+      "rule": "**出现快照（步骤4）**：若自身邻接至少一个起始存活 mist，自身 +3；后续目标被消费不撤销",
+      "role": "培育/蒸馏桥接"
+    },
+    {
+      "id": "beat_spool",
+      "name": "拍点线轴",
+      "rarity": "uncommon",
+      "tags": [
+        "resonance",
+        "machine"
+      ],
+      "base": 1,
+      "rule": "自身第 3 次上盘额外 +9 并重置拍点计数为 0；周期按上盘",
+      "role": "周期性过渡收入"
+    },
+    {
+      "id": "chord_frame",
+      "name": "和音框",
+      "rarity": "uncommon",
+      "tags": [
+        "resonance",
+        "machine"
+      ],
+      "base": 2,
+      "rule": "**出现快照（步骤4）**：若自身邻接至少两种其他起始存活 resonance type，按稳定顺序给一个合法邻居 ×2；后续死亡不补选",
+      "role": "可替代倍率核心"
+    },
+    {
+      "id": "prism_hum",
+      "name": "晶腔哼鸣器",
+      "rarity": "uncommon",
+      "tags": [
+        "resonance",
+        "crystal"
+      ],
+      "base": 2,
+      "rule": "**出现快照（步骤4）**：若自身邻接至少一个起始存活 crystal，自身 +4；本轮若由转换获得不执行出现效果",
+      "role": "蒸馏连接、稳定回报"
+    },
+    {
+      "id": "silence_keeper",
+      "name": "静拍保管员",
+      "rarity": "rare",
+      "tags": [
+        "resonance",
+        "contract"
+      ],
+      "base": 1,
+      "rule": "**出现快照（步骤4）**：若所在排起始存活 resonance 恰有1个（含自身），自身 +10；后续死亡不使其重判",
+      "role": "稀疏路线替代核心"
+    },
+    {
+      "id": "harbor_conductor",
+      "name": "港湾拍长",
+      "rarity": "epic",
+      "tags": [
+        "resonance"
+      ],
+      "base": 2,
+      "rule": "所在排至少 3 个不同 resonance type 时，该排 resonance ×2；本轮一次，不叠自身第二份",
+      "role": "密集同排回报，非启动要求"
+    },
+    {
+      "id": "brine_strip",
+      "name": "盐雾滤带",
+      "rarity": "common",
+      "tags": [
+        "mist",
+        "feedstock"
+      ],
+      "base": 1,
+      "rule": "第 2 次上盘转换为 saline_ampoule",
+      "role": "common 原液入口"
+    },
+    {
+      "id": "saline_ampoule",
+      "name": "微盐安瓿",
+      "rarity": "common",
+      "tags": [
+        "feedstock",
+        "cargo"
+      ],
+      "base": 2,
+      "rule": "无额外效果；可直接产出或作为转换前体",
+      "role": "common 前体/过渡"
+    },
+    {
+      "id": "condense_coil",
+      "name": "凝潮盘管",
+      "rarity": "common",
+      "tags": [
+        "machine"
+      ],
+      "base": 1,
+      "rule": "转换一个邻接 feedstock 为 tide_prism，每轮一次",
+      "role": "common 转换核心"
+    },
+    {
+      "id": "tide_prism",
+      "name": "潮棱块",
+      "rarity": "uncommon",
+      "tags": [
+        "crystal",
+        "product",
+        "cargo"
+      ],
+      "base": 4,
+      "rule": "自身转换成为本类型时，自身本轮 +3；直接抽中只产基础",
+      "role": "多用途成品回报"
+    },
+    {
+      "id": "deep_still",
+      "name": "深盐分馏器",
+      "rarity": "uncommon",
+      "tags": [
+        "machine"
+      ],
+      "base": 2,
+      "rule": "消耗一个邻接 mist，独立奖励 4，并在池生成 saline_ampoule；生成失败不影响已成功消耗但须记录",
+      "role": "可替代供料核心"
+    },
+    {
+      "id": "crystal_index",
+      "name": "晶层索引",
+      "rarity": "uncommon",
+      "tags": [
+        "crystal",
+        "support"
+      ],
+      "base": 1,
+      "rule": "若全盘 crystal 有至少 2 种 type，自身 +6",
+      "role": "混型中期回报"
+    },
+    {
+      "id": "pearl_separator",
+      "name": "浮珠分离器",
+      "rarity": "rare",
+      "tags": [
+        "machine"
+      ],
+      "base": 2,
+      "rule": "转换一个邻接 crystal 且非 product 的实例为 tide_prism；目标已是 tide_prism 不合法",
+      "role": "异谱材料精炼接口"
+    },
+    {
+      "id": "reserve_facet",
+      "name": "留温晶面",
+      "rarity": "rare",
+      "tags": [
+        "crystal",
+        "pressure"
+      ],
+      "base": 2,
+      "rule": "消耗一个邻接 fuel，自身蓄压 +2（上限 6），独立奖励 2；蓄压达 6 时本轮压力检查点发独立奖励 18 并归零",
+      "role": "延迟回报、蓄压过渡"
+    },
+    {
+      "id": "cargo_rope",
+      "name": "夜班扎绳",
+      "rarity": "common",
+      "tags": [
+        "cargo",
+        "support"
+      ],
+      "base": 1,
+      "rule": "**邻接加值（步骤5 adjacency-add）**：进入该子阶段时锁定一个邻接 product +3；目标随后死亡不补选",
+      "role": "common 多体系入口"
+    },
+    {
+      "id": "route_stub",
+      "name": "转栈短票",
+      "rarity": "common",
+      "tags": [
+        "cargo",
+        "contract"
+      ],
+      "base": 2,
+      "rule": "**出现快照（步骤4）**：若全盘起始存活 cargo 至少3种 type，自身 +4；本轮后续生成/转换不补触发",
+      "role": "common 异类回报"
+    },
+    {
+      "id": "parcel_cage",
+      "name": "铜格货笼",
+      "rarity": "common",
+      "tags": [
+        "cargo",
+        "machine"
+      ],
+      "base": 2,
+      "rule": "**出现快照（步骤4）**：若本轮抽盘空格至少4，自身 +3；空格按步骤1盘面快照计，池大小不替代空格",
+      "role": "精简池过渡"
+    },
+    {
+      "id": "sorting_runner",
+      "name": "分栈跑员",
+      "rarity": "uncommon",
+      "tags": [
+        "cargo"
+      ],
+      "base": 1,
+      "rule": "消耗一个邻接 product，独立奖励为 6 + 目标基础值（不含永久/倍率）",
+      "role": "可替代兑现核心"
+    },
+    {
+      "id": "manifest_desk",
+      "name": "夜单台",
+      "rarity": "uncommon",
+      "tags": [
+        "cargo",
+        "contract"
+      ],
+      "base": 2,
+      "rule": "**出现快照（步骤4）**：若全盘起始存活 cargo 至少4种 type，自身 ×3；本轮后续新增/死亡不重判",
+      "role": "混搭构筑核心"
+    },
+    {
+      "id": "switch_lamp",
+      "name": "换轨灯",
+      "rarity": "uncommon",
+      "tags": [
+        "cargo",
+        "machine"
+      ],
+      "base": 1,
+      "rule": "下一轮保留一个邻接 product 在原格；每轮一次；全局保留上限 2，已保留不延长",
+      "role": "概率控制核心"
+    },
+    {
+      "id": "transit_seal",
+      "name": "联运封蜡",
+      "rarity": "rare",
+      "tags": [
+        "cargo",
+        "magic"
+      ],
+      "base": 2,
+      "rule": "自身预处理临时获得 plant/crystal/resonance 中一个：选择其邻居含量最多者，同数按此序；当轮结束消失",
+      "role": "跨体系通配，不改变池标签"
+    },
+    {
+      "id": "return_station",
+      "name": "空箱返程站",
+      "rarity": "rare",
+      "tags": [
+        "cargo",
+        "machine"
+      ],
+      "base": 2,
+      "rule": "本轮邻接 cargo 源成功消耗 product 后，结束时若池不超过 20，发独立奖励 8；每轮一次",
+      "role": "需其他消费者的精简回报"
+    },
+    {
+      "id": "pressure_pouch",
+      "name": "余压软袋",
+      "rarity": "common",
+      "tags": [
+        "pressure"
+      ],
+      "base": 1,
+      "rule": "每次上盘蓄压 +1，上限 4；达到 4 时独立 reward10（不吃倍率）并归零，普通产出仍为1",
+      "role": "common 延迟回报入口"
+    },
+    {
+      "id": "feed_valve",
+      "name": "添温小阀",
+      "rarity": "common",
+      "tags": [
+        "machine",
+        "pressure"
+      ],
+      "base": 1,
+      "rule": "消耗一个邻接 fuel，独立奖励 3，自身蓄压 +2，上限 6；达 6 时独立奖励 14 并归零",
+      "role": "common 蓄压核心"
+    },
+    {
+      "id": "pause_dial",
+      "name": "歇拍刻盘",
+      "rarity": "common",
+      "tags": [
+        "pressure",
+        "support"
+      ],
+      "base": 2,
+      "rule": "**出现快照（步骤4）**：自身固定平面 +1（可复制）；若邻接起始存活且带`pressure`标签的实例，另 +2（不可复制）；后续目标死亡不撤销",
+      "role": "稳定过渡"
+    },
+    {
+      "id": "surge_vessel",
+      "name": "脉冲釜",
+      "rarity": "uncommon",
+      "tags": [
+        "pressure",
+        "machine"
+      ],
+      "base": 1,
+      "rule": "每次上盘先蓄压 +1；未达 3 时普通产出归零；达 3 时独立奖励 16 并归零，普通产出仍 0",
+      "role": "可替代纯时间核心"
+    },
+    {
+      "id": "cracked_regulator",
+      "name": "裂缝调压器",
+      "rarity": "uncommon",
+      "tags": [
+        "pressure",
+        "machine"
+      ],
+      "base": 2,
+      "rule": "每次上盘用本局 RNG：3/4 自身 +8；1/4 自身 -6 且池生成 spent_gasket；每轮一次",
+      "role": "高收益污染风险"
+    },
+    {
+      "id": "safety_shim",
+      "name": "卸压薄衬",
+      "rarity": "uncommon",
+      "tags": [
+        "pressure",
+        "support"
+      ],
+      "base": 1,
+      "rule": "本轮首次邻接 pressure 风险判定的失败损失减少 4（最多减到 0）；不改变失败/生成事实",
+      "role": "风险过渡、非全免"
+    },
+    {
+      "id": "release_spire",
+      "name": "泄峰塔",
+      "rarity": "rare",
+      "tags": [
+        "pressure",
+        "machine"
+      ],
+      "base": 3,
+      "rule": "对一个邻接蓄压至少 3 的实例，扣 3 蓄压，使其本轮 ×3，并发独立奖励8；只在该目标具有蓄压机制、尚未达到自身释放阈值且本轮未释放时合法",
+      "role": "资源型倍率回报"
+    },
+    {
+      "id": "demand_coupler",
+      "name": "配额耦合器",
+      "rarity": "rare",
+      "tags": [
+        "pressure",
+        "contract"
+      ],
+      "base": 1,
+      "rule": "轮初现金低于本阶段配额且剩余运行不超过 2 时，自身 ×4，同时本轮在池生成 spent_gasket；每轮一次",
+      "role": "临期抢救，未来污染"
+    },
+    {
+      "id": "phase_chip",
+      "name": "偏相小片",
+      "rarity": "common",
+      "tags": [
+        "magic"
+      ],
+      "base": 2,
+      "rule": "预处理：有邻接 resonance 时临时加 resonance；否则邻接 crystal 时临时加 crystal；否则不变",
+      "role": "common 通配入口"
+    },
+    {
+      "id": "spectrum_pin",
+      "name": "谱别别针",
+      "rarity": "common",
+      "tags": [
+        "magic",
+        "support"
+      ],
+      "base": 1,
+      "rule": "**出现快照（步骤4）**：若邻接至少3种其他起始存活 type，自身 +4；不计自身、不因后续死亡补算",
+      "role": "common 异类过渡"
+    },
+    {
+      "id": "cloudy_negative",
+      "name": "雾面底片",
+      "rarity": "common",
+      "tags": [
+        "magic",
+        "feedstock"
+      ],
+      "base": 1,
+      "rule": "第 3 次上盘转换为 blank_facet",
+      "role": "common 映印/蒸馏原料"
+    },
+    {
+      "id": "blank_facet",
+      "name": "无谱晶坯",
+      "rarity": "uncommon",
+      "tags": [
+        "magic",
+        "crystal"
+      ],
+      "base": 3,
+      "rule": "ON_APPEAR 平面 +2（可复制）；非 product，可交浮珠分离器精炼；转换获得不触发出现",
+      "role": "简明跨路线产物"
+    },
+    {
+      "id": "offset_reader",
+      "name": "偏印读头",
+      "rarity": "rare",
+      "tags": [
+        "magic",
+        "machine"
+      ],
+      "base": 3,
+      "rule": "选一个邻接实例，复制其显式 copyable 的 ON_APPEAR 平面 add 常数，最多 +8；不复制条件、事件或其他动作",
+      "role": "数值复制核心"
+    },
+    {
+      "id": "alignment_cloth",
+      "name": "对相织布",
+      "rarity": "uncommon",
+      "tags": [
+        "magic",
+        "support"
+      ],
+      "base": 1,
+      "rule": "给一个邻接本轮获得临时标签的实例 +5，每轮一次；按 tagAdded 日志而非最终标签猜测",
+      "role": "通配核心替代，不靠稀有复制"
+    },
+    {
+      "id": "echo_plate",
+      "name": "迟相印板",
+      "rarity": "rare",
+      "tags": [
+        "magic",
+        "resonance"
+      ],
+      "base": 1,
+      "rule": "一个邻接实例本轮永久值成功增加时，自身 + 该次实际增加值×4，每轮最多 2 次；不再产生 ON_GROW",
+      "role": "永久成长跨体系回报"
+    },
+    {
+      "id": "split_register",
+      "name": "双谱登记器",
+      "rarity": "epic",
+      "tags": [
+        "magic",
+        "contract"
+      ],
+      "base": 2,
+      "rule": "预处理给一个邻接 product 临时增加 resonance 和 crystal；它本轮普通产出 ×3/2；一次，不影响池标签",
+      "role": "双接口回报，无递归复制"
+    },
+    {
+      "id": "arrears_slip",
+      "name": "待核欠条",
+      "rarity": "common",
+      "tags": [
+        "contract",
+        "junk"
+      ],
+      "base": -1,
+      "rule": "无额外效果；禁正常候选；可被合规台转换或撤账员消耗",
+      "role": "有用途的污染，不是假奖励"
+    },
+    {
+      "id": "lean_receipt",
+      "name": "薄账回执",
+      "rarity": "common",
+      "tags": [
+        "contract"
+      ],
+      "base": 1,
+      "rule": "轮初现金低于本阶段配额的 1/2 时自身 +4，否则基础值",
+      "role": "common 低谷入口"
+    },
+    {
+      "id": "compliance_desk",
+      "name": "合规小台",
+      "rarity": "common",
+      "tags": [
+        "contract",
+        "machine"
+      ],
+      "base": 1,
+      "rule": "转换一个邻接 junk 为 cleared_stub，每轮一次",
+      "role": "common 减负核心"
+    },
+    {
+      "id": "cleared_stub",
+      "name": "核清存根",
+      "rarity": "common",
+      "tags": [
+        "contract",
+        "product",
+        "cargo"
+      ],
+      "base": 3,
+      "rule": "本轮若非由转换获得、自身 +1；转换轮不加；ON_APPEAR add +1 可复制",
+      "role": "垃圾转换回报/货运供货"
+    },
+    {
+      "id": "cancellation_clerk",
+      "name": "撤账员",
+      "rarity": "uncommon",
+      "tags": [
+        "contract"
+      ],
+      "base": 1,
+      "rule": "消耗一个邻接 junk，独立奖励 5；自身永久 +1，上限 30；成功才成长",
+      "role": "可替代压缩池核心"
+    },
+    {
+      "id": "quota_margin",
+      "name": "配额边签",
+      "rarity": "uncommon",
+      "tags": [
+        "contract",
+        "pressure"
+      ],
+      "base": 2,
+      "rule": "若本轮初现金不足配额且只差不超过 15，自身 +6；不得读本轮中途收益",
+      "role": "支付前过渡"
+    },
+    {
+      "id": "advance_stamp",
+      "name": "先支邮戳",
+      "rarity": "rare",
+      "tags": [
+        "contract"
+      ],
+      "base": 2,
+      "rule": "每阶段自身首次上盘额外独立奖励 18，同时本阶段配额 +12 并尝试生成 arrears_slip（可选生成失败仍保留奖励与义务）；可选接受/拒绝在运行前配置，默认拒绝",
+      "role": "透明借支风险核心"
+    },
+    {
+      "id": "settlement_beacon",
+      "name": "清算信标",
+      "rarity": "rare",
+      "tags": [
+        "contract",
+        "machine"
+      ],
+      "base": 2,
+      "rule": "若本轮池内 junk 为 0 且存活 contract 至少 3 种 type，本轮 contract ×2；每轮一次",
+      "role": "清池后的构筑回报"
+    }
+  ],
+  "items": [
+    {
+      "id": "item_dew_calendar",
+      "name": "露班轮历",
+      "rarity": "common",
+      "rule": "**轮内步骤3之后**：每轮第一个起始带age、存活且本轮未自然成熟的 plant 额外推进1步；每轮一次；若首个自然成熟则跳过寻找下一个",
+      "role": "培育速度"
+    },
+    {
+      "id": "item_root_wrap",
+      "name": "根温绑带",
+      "rarity": "uncommon",
+      "rule": "每轮第一个 plant 转换后存活实例本轮 +4",
+      "role": "成熟过渡"
+    },
+    {
+      "id": "item_nursery_scale",
+      "name": "苗圃轻秤",
+      "rarity": "rare",
+      "rule": "抽盘时池内 plant 权重 ×3/2；仅当池总数不超过 28；无放回",
+      "role": "概率调节，有扩池成本"
+    },
+    {
+      "id": "item_frost_glass",
+      "name": "防寒窄窗",
+      "rarity": "uncommon",
+      "rule": "每阶段最先上盘的 2 个 mist 自身本轮 +3；每阶段重置",
+      "role": "雾料经济"
+    },
+    {
+      "id": "item_sorting_apron",
+      "name": "分温围裙",
+      "rarity": "common",
+      "rule": "每轮首次成功 consume 的 scrap 独立奖励额外 +3",
+      "role": "回收兑现"
+    },
+    {
+      "id": "item_waste_log",
+      "name": "滞物登记本",
+      "rarity": "uncommon",
+      "rule": "每阶段非消耗销毁 junk 累计 3 个后获得删除券 +1；每阶段最多 1 券",
+      "role": "长期压池规则"
+    },
+    {
+      "id": "item_offcut_chute",
+      "name": "边料回流槽",
+      "rarity": "rare",
+      "rule": "每轮首次消耗非 junk 的 scrap 时生成 ash_felt；同轮新实例不出现",
+      "role": "续料但会稀释池"
+    },
+    {
+      "id": "item_clean_mesh",
+      "name": "清栈细网",
+      "rarity": "uncommon",
+      "rule": "抽盘时 junk 权重 ×1/2；仍留池中，不等于删除",
+      "role": "缓解而非取消污染"
+    },
+    {
+      "id": "item_lane_clapper",
+      "name": "轨边拍板",
+      "rarity": "common",
+      "rule": "每轮每排第一个 resonance，若该排至少 2 种 resonance type，自身 +2",
+      "role": "同排多样性"
+    },
+    {
+      "id": "item_rest_notch",
+      "name": "休拍刻槽",
+      "rarity": "uncommon",
+      "rule": "每轮恰有 1 个 resonance 的排，该实例普通产出 ×3/2",
+      "role": "稀疏共振替代"
+    },
+    {
+      "id": "item_pitch_marker",
+      "name": "音高记签",
+      "rarity": "rare",
+      "rule": "每轮本盘首个成功新增 resonance 临时标签的实例，若存活则 +5",
+      "role": "通配接口"
+    },
+    {
+      "id": "item_shared_metronome",
+      "name": "公用节拍器",
+      "rarity": "uncommon",
+      "rule": "beat_spool 的拍点阈值降低 1，最低 2；相同 mechanic:cycle_count 的后续符号也可用",
+      "role": "用机制键不写死名字"
+    },
+    {
+      "id": "item_brine_lining",
+      "name": "盐雾内衬",
+      "rarity": "common",
+      "rule": "每轮首次 feedstock 转换为 crystal，产物本轮 +4",
+      "role": "转换过渡"
+    },
+    {
+      "id": "item_fraction_gauge",
+      "name": "分馏格尺",
+      "rarity": "uncommon",
+      "rule": "每轮第一个全盘 crystal 异 type 数至少 3 的时点，独立奖励 7；每轮一次",
+      "role": "异类晶构筑"
+    },
+    {
+      "id": "item_jar_rack",
+      "name": "安瓿架",
+      "rarity": "rare",
+      "rule": "每轮转换得到的第一个 crystal 保留到下一轮原格；与灯共享全局 2 格上限",
+      "role": "保留概率"
+    },
+    {
+      "id": "item_residue_stamp",
+      "name": "残液验章",
+      "rarity": "uncommon",
+      "rule": "每轮第一个 mist 被消耗，独立奖励 +2；但不补回目标",
+      "role": "蒸馏/回收接口"
+    },
+    {
+      "id": "item_manifest_clip",
+      "name": "夜单夹",
+      "rarity": "common",
+      "rule": "每轮 cargo 的不同 type 数至少 4 时，独立奖励 6",
+      "role": "多路线轻回报"
+    },
+    {
+      "id": "item_return_track",
+      "name": "空返侧轨",
+      "rarity": "uncommon",
+      "rule": "每阶段第 1、3 次主动跳过符号候选，各得刷新券 +1；每阶段最多 2",
+      "role": "跳过有节奏价值，非无限刷"
+    },
+    {
+      "id": "item_small_hold",
+      "name": "小舱限载牌",
+      "rarity": "rare",
+      "rule": "池数量在 12–20 时，每轮独立奖励 5；小于 12 无效",
+      "role": "精简但不鼓励单符号池"
+    },
+    {
+      "id": "item_exchange_hook",
+      "name": "换装挂钩",
+      "rarity": "uncommon",
+      "rule": "每阶段首次成功 consume product 时，下一次符号候选保证一个 common product（可用集合中等权）；仍需选择",
+      "role": "补货而非免费产币"
+    },
+    {
+      "id": "item_pressure_index",
+      "name": "压班索引",
+      "rarity": "common",
+      "rule": "每轮第一个 pressure 正常增加蓄压时额外 +1，不超实例上限；附加增加不再次触发本件",
+      "role": "延迟线提速"
+    },
+    {
+      "id": "item_insulation_shawl",
+      "name": "隔温披布",
+      "rarity": "uncommon",
+      "rule": "每轮首次 pressure risk 失败的负加值减少 3，最小 0；不改变污染或失败事实",
+      "role": "降损不免风险"
+    },
+    {
+      "id": "item_release_receipt",
+      "name": "泄压回执",
+      "rarity": "rare",
+      "rule": "每阶段第三次成功蓄压释放时独立奖励 12；每阶段最多一次",
+      "role": "鼓励可重复释放"
+    },
+    {
+      "id": "item_spare_baffle",
+      "name": "备用挡板",
+      "rarity": "uncommon",
+      "rule": "每轮首个风险生成的 junk 不入池，改为该源本轮 -3；生成事实记为替代，不能触发消耗/销毁奖励",
+      "role": "风险换代价，非免费免灾"
+    },
+    {
+      "id": "item_safe_carbon",
+      "name": "安全复写膜",
+      "rarity": "common",
+      "rule": "每轮首个合法数值 copy 的实际加值增加 2，总加值仍不超过 8；无合法 copy 不生效",
+      "role": "受限复制"
+    },
+    {
+      "id": "item_spectrum_book",
+      "name": "谱类手册",
+      "rarity": "uncommon",
+      "rule": "每轮首次实例临时获得其原定义没有的标签，若存活则 +3；多加两个标签只触发一次",
+      "role": "通配，不认原有标签"
+    },
+    {
+      "id": "item_registration_pin",
+      "name": "对版定位针",
+      "rarity": "rare",
+      "rule": "每轮首次 copy 成功后，保留其被复制目标到下一轮；全局 2 格上限；保留失败不补偿",
+      "role": "概率控制但不复制实例"
+    },
+    {
+      "id": "item_growth_negative",
+      "name": "增量底片册",
+      "rarity": "uncommon",
+      "rule": "每轮第一个成功永久成长事件，独立奖励为实际增长值×2，最多 6；不发 ON_GROW",
+      "role": "成长跨体系"
+    },
+    {
+      "id": "item_low_balance_tab",
+      "name": "薄账分页条",
+      "rarity": "common",
+      "rule": "每轮轮初现金不足本阶段配额 1/2 时，独立奖励 3；不是初获现金",
+      "role": "低谷过渡"
+    },
+    {
+      "id": "item_compliance_carbon",
+      "name": "合规复核纸",
+      "rarity": "uncommon",
+      "rule": "每轮首次 junk 转换为非 junk 的产物，本轮 +3；失败转换不奖励",
+      "role": "清理接口"
+    },
+    {
+      "id": "item_audit_clip",
+      "name": "稽核夹",
+      "rarity": "rare",
+      "rule": "每阶段首次成功付款且付款后池内无 junk，获得删除券 +1；最终胜利仅记统计，不追加待选步骤",
+      "role": "可重复履约规则"
+    },
+    {
+      "id": "item_margin_lantern",
+      "name": "余账灯",
+      "rarity": "uncommon",
+      "rule": "每阶段最后一轮，若轮初现金在配额的 3/4 至不足配额区间，该轮 contract ×3/2",
+      "role": "条件临期乘区"
+    }
+  ],
+  "events": [
+    {
+      "id": "event_fog_shift",
+      "name": "雾班调换",
+      "qualification": "池有带age的plant；1",
+      "optionA": "支付4；选一plant，其接下来2次合法年龄推进的上盘各额外+1步",
+      "optionB": "不参与",
+      "boundary": "modifier绑定确认的UID，初始remaining=2；每轮最多1次，在自然年龄后；若绑定UID自然成熟则本轮不扣次数、不转绑其他UID；转换后仅在新类型仍有age时继续保留，成为无age成品或删除则失效；无合格目标不出本事件"
+    },
+    {
+      "id": "event_copper_queue",
+      "name": "铜屑排队",
+      "qualification": "池有junk且池<200；1",
+      "optionA": "免费选一junk转copper_burr，并加1 spent_gasket",
+      "optionB": "不参与",
+      "boundary": "**池总数+1**，不是旧稿“总数量不变”；欠条-1→毛刺2但多一垫圈-1，基础净+2，换取稀释；保UID/永久值、清counter/预约；满池A禁用"
+    },
+    {
+      "id": "event_silent_bell",
+      "name": "停鸣通知",
+      "qualification": "池有resonance；1",
+      "optionA": "新阶段第1、2轮resonance普通产出×1/2；第3轮×2",
+      "optionB": "不参与",
+      "boundary": "不延长到“下一次有鸣片才算”，按全局阶段轮次到期；没有上盘也消耗窗口。与其他倍率精确相乘，独立奖励不受影响；新阶段至少3轮才有资格"
+    },
+    {
+      "id": "event_brine_inspection",
+      "name": "盐雾抽检",
+      "qualification": "池有feedstock；1",
+      "optionA": "免费删除自选1 feedstock；下一次符号候选保底1 uncommon crystal",
+      "optionB": "不参与",
+      "boundary": "是删原料换更好候选，不直接给晶体；无删除券消耗；普通精良晶候选为tide_prism/prism_hum/crystal_index/blank_facet；可跳过或刷新，保底规则见§8"
+    },
+    {
+      "id": "event_empty_manifest",
+      "name": "空白夜单",
+      "qualification": "池≥21且有common非junk；1",
+      "optionA": "免费删自选1 common非junk；新阶段首轮最多5个cargo各普通+2",
+      "optionB": "不参与",
+      "boundary": "保留计数/永久成长会丢失，先展示确认；按板位首5个存活cargo步骤8加值；临时cargo也有效；首轮不上盘不补发"
+    },
+    {
+      "id": "event_boiler_test",
+      "name": "压锅试鸣",
+      "qualification": "有下一阶段；1",
+      "optionA": "新阶段配额+12；立即得10现金；给自选1有蓄压机制的pressure +2，封固有上限；无合格目标则加pressure_pouch且初压2",
+      "optionB": "不参与",
+      "boundary": "立即现金净义务仍2，换取蓄压/符号；不现场释放，下次上盘检查；需生成而池满时A禁用。给单件成长可能合算但不是免费净收益"
+    },
+    {
+      "id": "event_misprint_window",
+      "name": "错版窗口",
+      "qualification": "池有magic；1",
+      "optionA": "支付6；新阶段前3轮首个上盘magic临时得cargo且普通+2",
+      "optionB": "不参与",
+      "boundary": "每轮最多1，步骤2按板位选；本来有cargo仍加2但不伪造tagAdded；无magic上盘不补发；第4轮到期；和货运成型收益相比支付6才可能值得"
+    },
+    {
+      "id": "event_quota_recount",
+      "name": "配额复点",
+      "qualification": "有下一阶段且池<200；1",
+      "optionA": "新阶段配额+10；池加1 cleared_stub，刷新券+1",
+      "optionB": "不参与",
+      "boundary": "给后续稳定4/轮但会稀释池；第一个上盘正常+1；刷新上限9时提示溢出，允许自愿确认，不能偷偷折现金"
+    }
+  ]
+}

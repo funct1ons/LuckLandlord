@@ -1,0 +1,10 @@
+{
+  "existing": 556,
+  "unchanged": 554,
+  "changed": [
+    ".pi/loops.json",
+    ".pi/loops/01a101f0-a171-761a-8429-9edd4dbe73ac.json"
+  ],
+  "unexpected": [],
+  "ok": false
+}

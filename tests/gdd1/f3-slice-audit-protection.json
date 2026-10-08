@@ -1,0 +1,32 @@
+{
+  "changes": [
+    {
+      "before": {
+        "path": ".pi/loops.json",
+        "bytes": 77,
+        "sha256": "d498f3dbe16899d666d232d0ae9f7670fc4c20ab3e9a84e8fe12c2b0aadeaded"
+      },
+      "after": {
+        "path": ".pi/loops.json",
+        "bytes": 77,
+        "sha256": "d27e1d14d54d43debeb7602d7365b81524249b278f89432c25a84185810c3abb"
+      },
+      "runtimeException": true
+    },
+    {
+      "before": {
+        "path": ".pi/loops/01a101f0-a171-761a-8429-9edd4dbe73ac.json",
+        "bytes": 1788,
+        "sha256": "30fb89405d63ccfd19f16d206394a6a0a198db94ed64521c2ef9f522f8019f57"
+      },
+      "after": {
+        "path": ".pi/loops/01a101f0-a171-761a-8429-9edd4dbe73ac.json",
+        "bytes": 1788,
+        "sha256": "09a9b8fac5bb34a4e651d78a5981d622c2fd57a2e9fec42326fcee735dc049f7"
+      },
+      "runtimeException": true
+    }
+  ],
+  "added": [],
+  "pass": true
+}

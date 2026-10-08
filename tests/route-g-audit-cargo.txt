@@ -1,0 +1,80 @@
+﻿{
+  "scope": "CARGO independent freeze audit",
+  "total": 18,
+  "passed": 18,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "cargo_rope/stable-one-target-and-row-edge",
+      "ok": true
+    },
+    {
+      "name": "route_stub/exact-three-distinct-types",
+      "ok": true
+    },
+    {
+      "name": "parcel_cage/empty-four-threshold-not-pool-size",
+      "ok": true
+    },
+    {
+      "name": "sorting_runner/base-only-reward-and-consume-once",
+      "ok": true
+    },
+    {
+      "name": "sorting_runner/two-runners-compete-single-target",
+      "ok": true
+    },
+    {
+      "name": "manifest_desk/four-distinct-and-floor",
+      "ok": true
+    },
+    {
+      "name": "transit_seal/tie-precedence-and-pool-unchanged",
+      "ok": true
+    },
+    {
+      "name": "return_station/cargo-cause-only",
+      "ok": true
+    },
+    {
+      "name": "switch_lamp/reserve-next-normal-command-and-save-restore",
+      "ok": true
+    },
+    {
+      "name": "switch_lamp/fixed-board-does-not-falsely-prove-lock",
+      "ok": true
+    },
+    {
+      "name": "switch_lamp/invalid-uid-clears-on-normal-resolve",
+      "ok": true
+    },
+    {
+      "name": "switch_lamp/dead-target-not-reserved-after-consume",
+      "ok": true
+    },
+    {
+      "name": "multiple-listeners/independent-per-source-limits",
+      "ok": true
+    },
+    {
+      "name": "異type-and-space/route-stub-does-not-count-duplicates",
+      "ok": true
+    },
+    {
+      "name": "transit_seal/temporary-tag-does-not-persist-next-round",
+      "ok": true
+    },
+    {
+      "name": "schema/invalid-amount-selector-expression-rejected",
+      "ok": true
+    },
+    {
+      "name": "schema/invalid-unknown-selector-field-rejected",
+      "ok": true
+    },
+    {
+      "name": "schema/invalid-empty-tags-rejected",
+      "ok": true
+    }
+  ]
+}

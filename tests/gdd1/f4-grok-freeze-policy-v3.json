@@ -1,0 +1,269 @@
+{
+  "status": "POST-POLICY-V3-PROBE SNAPSHOT / DOES NOT SUPERSEDE freeze-v4, agg-freeze, or freeze-policy-v2 / NOT FORMAL NORMAL ACCEPTANCE",
+  "prefix": "f4-grok-freeze-policy-v3",
+  "warning": "Does not overwrite prior freezes, v1/v2 jsonl, or production. Economy NOT APPROVED. Phase B needs explicit auth.",
+  "gddSha256": "e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07",
+  "freezeV4": {
+    "path": "tests/gdd1/f4-grok-freeze-v4.json",
+    "bytes": 94204,
+    "sha256": "cadba0fa63b151cb1b3a7933697cbeb295e9154ec4adb5bae595ffa7e8c09953"
+  },
+  "aggFreeze": {
+    "path": "tests/gdd1/f4-grok-agg-freeze-v1.json",
+    "bytes": 2525,
+    "sha256": "af08f789b4b453e45a588f247a70a623f6c15ca62928f3995c2b65d23c5581a2"
+  },
+  "freezePolicyV2": {
+    "path": "tests/gdd1/f4-grok-freeze-policy-v2.json",
+    "bytes": 35511,
+    "sha256": "6b2df68cb12937c5daeb99dd081e3330bd22cc7b209e6ebc83c62717652d2460"
+  },
+  "production": {
+    "resolver": {
+      "path": "js/gdd1/resolver.js",
+      "bytes": 27996,
+      "sha256": "e86d51fb4c20d235312b263146f18d2c4cd69c13453846fe0daf9b07a0aaf88b"
+    },
+    "effects": {
+      "path": "js/gdd1/full-effects.js",
+      "bytes": 37993,
+      "sha256": "f65bc06b4c38fb35db14cc21f6ed4c63a42efbb06956f71078974990c5d8de55"
+    }
+  },
+  "report": {
+    "path": "docs/GDD1_FULL_SIM_POLICY_V3_PROBE.md",
+    "bytes": 5824,
+    "sha256": "c79941e290ebd5196ce3b683a7e4c2a0aaf2cfa706fee2deaf32a3ba9b22979f"
+  },
+  "audit": {
+    "path": "docs/GDD1_FULL_SIM_POLICY_V3_PROBE_AUDIT.md",
+    "bytes": 10107,
+    "sha256": "919fc1d5661f1a81fedb5ae3d80dc009f70df8b5ba8cc675a9e4c835b6ad97cc"
+  },
+  "selfExcluded": true,
+  "entryCount": 37,
+  "entries": [
+    {
+      "path": "docs/GDD1_FULL_SIM_POLICY_V3_PROBE.md",
+      "bytes": 5824,
+      "sha256": "c79941e290ebd5196ce3b683a7e4c2a0aaf2cfa706fee2deaf32a3ba9b22979f",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "docs/GDD1_FULL_SIM_POLICY_V3_PROBE_AUDIT.md",
+      "bytes": 10107,
+      "sha256": "919fc1d5661f1a81fedb5ae3d80dc009f70df8b5ba8cc675a9e4c835b6ad97cc",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/f4-grok-audit-policy-v3.json",
+      "bytes": 41129,
+      "sha256": "b2306883bff33a91fd11147136fe7efb1bfa27d8db5156b1fa6cadfa262a1715",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/f4-grok-freeze-policy-v3.js",
+      "bytes": 5177,
+      "sha256": "e41ed2ff0046ab4c55ae0f74a277640975a98ccf64104cad09a57fba34f0e13d",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-engine-policy-v3.js",
+      "bytes": 7066,
+      "sha256": "96743eba9e0c634826d2aa3a0676a4140adb0abbef009d5456906ce53f576e9e",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-greedy-holdout-0-index.json",
+      "bytes": 49773,
+      "sha256": "6cce4d948d8122ebb0f6642aa55849280b08567f4c1b1e439fbc2bba0bf5d68c",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-greedy-holdout-0-progress.json",
+      "bytes": 122,
+      "sha256": "2b7022687b03558a19df5c6f10d2ec658a564d328f412e1a791ea9220f819acb",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-greedy-holdout-0.jsonl",
+      "bytes": 12560867,
+      "sha256": "bd7e052b17f049b5d07f7f2a8bf293177808a72d0fa3e61606cdeff916b8cb2c",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-greedy-holdout-100-index.json",
+      "bytes": 49891,
+      "sha256": "293e17698234ba9c81dce8622f0fa2704644d6f59e825fbdd1a2dcc2240ae56e",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-greedy-holdout-100-progress.json",
+      "bytes": 124,
+      "sha256": "8828727fdb29c4297ade80dcf59f2f5ae797467baf75097997c20c6196808a6b",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-greedy-holdout-100.jsonl",
+      "bytes": 12428480,
+      "sha256": "e6d84f725d499c1be31de53b271f4f427fb5b060a14f0360fd82c1b5995242cb",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-synergy-holdout-0-index.json",
+      "bytes": 49931,
+      "sha256": "f2cac6c246ceff9e399be7c88323550dd08c95e291e968798318a4a610860e31",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-synergy-holdout-0-progress.json",
+      "bytes": 123,
+      "sha256": "fb3466c1da5d7c8d406d354179de35a3b61a9fa67cb1e2564d9bac571c0b214c",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-synergy-holdout-0.jsonl",
+      "bytes": 12471193,
+      "sha256": "51694f1fb4bf234d5ace12f4e087c1debde7fe20ea504818d6e267325b0b19ba",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-synergy-holdout-100-index.json",
+      "bytes": 50053,
+      "sha256": "44b3e9b19517031dec7006c653891d6da054b0c583e56a0f892f24c548a595d3",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-synergy-holdout-100-progress.json",
+      "bytes": 125,
+      "sha256": "8aa4ebff401faf48b436395e348aaa380135eaa8a6bada5fefd70a8aeb6c3d7d",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-synergy-holdout-100.jsonl",
+      "bytes": 12730416,
+      "sha256": "a8ba38d709a16cc45fb53dac9f86ffd0411cd0a9ab7bd4c77d50ce51d50633ae",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-value-holdout-0-index.json",
+      "bytes": 49553,
+      "sha256": "60ff569bf31139171c0913631f7d1cb8a11a2695b0c5b1d43356f2b116506b80",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-value-holdout-0-progress.json",
+      "bytes": 119,
+      "sha256": "c1d710e83220231de82e18154ae188350c7d9712a79c778cf13d954fee250fbf",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-value-holdout-0.jsonl",
+      "bytes": 12607691,
+      "sha256": "12a91152bb2d27e3fe15ca2944f48cdbf89ec8e51b11f5df3907e2cb1e5e48c5",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-value-holdout-100-index.json",
+      "bytes": 49657,
+      "sha256": "f85ed7e1488eb2605fe97303a747328ff9619212439363b18a65b6d43f0104a0",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-value-holdout-100-progress.json",
+      "bytes": 123,
+      "sha256": "62dbdcf2d0adf652e10bbadc21f4548fe06aaae935ec5b425a347684c7efa438",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-batch-value-holdout-100.jsonl",
+      "bytes": 12649481,
+      "sha256": "d55d42c083ae56c33299d5f3271e2e529a498deaf19e100dae9a8137c3575917",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-checks.js",
+      "bytes": 5207,
+      "sha256": "78823055cc95ead0a22b20f9bb18ac5c666a7ec71d43c3fa9f52277c669690e9",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-checks.json",
+      "bytes": 1353,
+      "sha256": "8d59fb1403295c9a50c11746ede12442a3c53f07aaac14f6dfb38bb4f9eb14a1",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-compare.js",
+      "bytes": 10694,
+      "sha256": "92a3b57db52a6b4010b99c7a57304828f44c6062ece2a3d1212e81b814342f6d",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-probe-greedy-holdout-0-index.json",
+      "bytes": 15868,
+      "sha256": "20a54fde528bf76d7ab7ed1830fea225d6cd7aa97a8a915ab6d216d94b4e40a3",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-probe-greedy-holdout-0-progress.json",
+      "bytes": 118,
+      "sha256": "01f0ff5aa40921368f752912450075353e35b920d380152905a1879c5a898e02",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-probe-greedy-holdout-0.jsonl",
+      "bytes": 3690897,
+      "sha256": "e1786094831505474da1fe30242209ab7d92fdec4fef6a9093a6462637c16450",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-probe-summary.json",
+      "bytes": 6258,
+      "sha256": "39d533875e8acb2ef253cb71495dca768dcb37f68f918700282e0ad0eb743626",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-probe-synergy-holdout-0-index.json",
+      "bytes": 15907,
+      "sha256": "e98b2aabd33aa62002b577bdb1cac900f795aef783e6dbe5017c62a70bc4d3f4",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-probe-synergy-holdout-0-progress.json",
+      "bytes": 120,
+      "sha256": "7e81bde7b2737998fc977bba70022e0aeed3b818b053c6c87e5e4b65f5c1ac63",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-probe-synergy-holdout-0.jsonl",
+      "bytes": 3741519,
+      "sha256": "56585ee88a86fc86e0d3755ab40db152d672ded901730ba7e87261622f3a31fa",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-probe-value-holdout-0-index.json",
+      "bytes": 15793,
+      "sha256": "86a2d98494351b18b3e1e903bd75f250e4b00638ec6a0ec62af4cfa6ed9560c3",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-probe-value-holdout-0-progress.json",
+      "bytes": 118,
+      "sha256": "99fcedaf0a62a25c7d3ba3e59f869f84cb3b91c1d38c7a0c6511536bfbabe23e",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-policy-v3-probe-value-holdout-0.jsonl",
+      "bytes": 3781287,
+      "sha256": "9d3790a6635e559ec299137a69b2f1f9be7d36d87c288aa832df344adc85c4b0",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-run-policy-v3.js",
+      "bytes": 9331,
+      "sha256": "3d2775275e9491f85ee699ba173bf8a95532401a399f04b9f199f1e94b47a413",
+      "vsPrior": "NEW_POLICY_V3_EVIDENCE"
+    }
+  ]
+}

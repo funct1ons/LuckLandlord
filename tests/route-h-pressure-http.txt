@@ -1,0 +1,54 @@
+PASS P1 pending is created only after spin and equals last.total
+PASS P2 choose skip commits once and clears pending
+PASS P3 choose symbol commits before newly chosen symbol affects payment
+PASS P4 reroll leaves pending and cash unchanged
+PASS P5 delete during symbol choice does not settle, choose does
+PASS P6 stale choose revision cannot settle twice
+PASS P7 reload pending before choose commits exactly once
+PASS P8 damaged pending string is rejected or explicitly migrated
+PASS P9 unknown pending field is rejected
+PASS P10 old save missing pending field has explicit migration/rejection
+PASS P11 final successful payment uses committed current spin cash
+PASS P12 final failed payment still commits positive income then LOST
+PASS P13 final negative income clamps cash zero before LOST
+PASS P14 pending equals last.total and ledger+reward invariant survives save
+PASS P15 pending null during SYMBOL_CHOICE must reject to prevent lost income
+PASS P16 pending negative commits once with clamp
+PASS P17 release target skips threshold and takes next legal target
+PASS P18 risk guard excludes legacy gambit
+PASS P19 counter valid bounds and unknown keys
+PASS P20 pending is not double added through payment branch
+PASS P21 invalid pending 1.5
+PASS P21 invalid pending 1000000001
+PASS P21 invalid pending 9007199254740992
+PASS P22 pending must equal last.total
+PASS P23 READY pending must be null
+PASS P24 legacy READY missing pending cannot poison next cycle
+PASS P25 legacy SYMBOL_CHOICE missing pending recovers amount or rejects
+PASS P26 invalid choose indices preserve whole pending state
+PASS P27 duplicate current revision choose and spin cannot recredit
+PASS P28 nonfinal quota uses current income then reward advances stage
+PASS P29 final old sufficient cash becomes insufficient after negative income
+PASS P30 negative net from mixed raw board exact cash subtraction
+PASS P31 release spire chooses only one of two legal targets
+PASS P32 stored counter invalid -1
+PASS P32 stored counter invalid 1.5
+PASS P32 stored counter invalid 1000000001
+PASS P32 stored counter invalid 9007199254740992
+PASS P33 counter strict {"name":"unknown"}
+PASS P33 counter strict {"release":"yes"}
+PASS P34 release strict {"unknown":1}
+PASS P34 release strict {"amount":-3}
+PASS P34 release strict {"ratio":[0,1]}
+PASS P35 risk strict {"unknown":1} fields=unknown
+PASS P35 risk strict {} fields=loss
+PASS P35 risk strict {} fields=chance
+PASS P35 risk strict {"loss":-1.5} fields=loss
+PASS P36 corrupt primary pending must fall back without overwriting valid backup
+PASS P37 release excludes self-threshold and low pressure before legal UID
+PASS P38 mixed legacy and pressure risks consume guard only for pressure
+49/49 passed
+HTTP Edge exit=0 strictSmoke=true independent=[{"name":"UI final click skip commits before WON","ok":true},{"name":"UI click choose then reward progresses","ok":true},{"name":"UI negative final click LOST with cash clamp","ok":true},{"name":"UI damaged pending import rejected preserving state/current/backup","ok":true}] evidence=C:\Users\admin\AppData\Local\Temp\pressure-http-1791189979844.html
+
+
+EXIT 0

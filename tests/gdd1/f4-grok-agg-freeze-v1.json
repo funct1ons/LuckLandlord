@@ -1,0 +1,73 @@
+{
+  "status": "POST-AGGREGATION-AUDIT SNAPSHOT / DOES NOT SUPERSEDE freeze-v4 / NOT FORMAL NORMAL ACCEPTANCE",
+  "prefix": "f4-grok-agg-v1",
+  "warning": "Does not overwrite freeze-v4 or prior reports. Economy NOT APPROVED. Human play pending.",
+  "gddSha256": "e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07",
+  "freezeV4": {
+    "path": "tests/gdd1/f4-grok-freeze-v4.json",
+    "bytes": 94204,
+    "sha256": "cadba0fa63b151cb1b3a7933697cbeb295e9154ec4adb5bae595ffa7e8c09953"
+  },
+  "priorSimAudit": {
+    "path": "docs/GDD1_FULL_SIM_AUDIT.md",
+    "bytes": 16285,
+    "sha256": "e08580281e482d8bec0fce9414290401149fbecd171dc4a0f7d17177350ff437"
+  },
+  "aggAudit": {
+    "path": "docs/GDD1_FULL_SIM_AUDIT_AGG.md",
+    "bytes": 9680,
+    "sha256": "338e34e2fa548038993c8557373de3d5da72751a63ede271ecaac403f114227f"
+  },
+  "selfExcluded": true,
+  "entryCount": 8,
+  "entries": [
+    {
+      "path": "docs/GDD1_FULL_SIM_AUDIT_AGG.md",
+      "bytes": 9680,
+      "sha256": "338e34e2fa548038993c8557373de3d5da72751a63ede271ecaac403f114227f",
+      "vsV4": "NEW_AGG_EVIDENCE"
+    },
+    {
+      "path": "docs/GDD1_FULL_SIM_CLARIFICATION.md",
+      "bytes": 1190,
+      "sha256": "aaffdcbae14714eef31f26ba37e699afc7fc6e23e297ab07b67e856f5cf7ed6e",
+      "vsV4": "NEW_AGG_EVIDENCE"
+    },
+    {
+      "path": "docs/GDD1_FULL_SIM_DIAGNOSIS.md",
+      "bytes": 4282,
+      "sha256": "0f0d0a1e61c711e336cadd2015032a4ffa6d56c35680750c97fe45ef0d75508c",
+      "vsV4": "NEW_AGG_EVIDENCE"
+    },
+    {
+      "path": "docs/GDD1_FULL_SIM_HANDOFF.md",
+      "bytes": 3514,
+      "sha256": "cb3d993c2e0cbf8de5ab44f52f0148ee70680ccb5187fd4a414dd6600bf3b275",
+      "vsV4": "NEW_AGG_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/f4-grok-agg-freeze-v1.js",
+      "bytes": 3988,
+      "sha256": "78f347f79982737fbf22980dbc5c009155d6e3c8fd89f0b95dd2ef6d1ed69d4d",
+      "vsV4": "NEW_AGG_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/f4-grok-audit-sim-agg-v1.json",
+      "bytes": 50437,
+      "sha256": "36cb6592218f2ff04f350ad1afe08750e57dbcccf3b421942c76a760246cfe1e",
+      "vsV4": "NEW_AGG_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-diagnosis-v1.json",
+      "bytes": 27026,
+      "sha256": "531de92fb176efb6091adaad58247dfcbd27c8e12bb6eb880190658513e23a6b",
+      "vsV4": "NEW_AGG_EVIDENCE"
+    },
+    {
+      "path": "tests/gdd1/full-sim-diagnosis.js",
+      "bytes": 8152,
+      "sha256": "b744434ed65d1d8aaa7a39302daab12b333962574918a98c0113c7e36d7f3039",
+      "vsV4": "NEW_AGG_EVIDENCE"
+    }
+  ]
+}

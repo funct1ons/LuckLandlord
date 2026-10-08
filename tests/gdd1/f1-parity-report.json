@@ -1,0 +1,51 @@
+{
+  "node": {
+    "total": 117,
+    "passed": 117
+  },
+  "reports": [
+    {
+      "browser": "Edge",
+      "protocol": "file",
+      "mode": "write",
+      "total": 118,
+      "passed": 118,
+      "sameCases": true,
+      "nodeBaseCases": 117
+    },
+    {
+      "browser": "Edge",
+      "protocol": "file",
+      "mode": "read",
+      "total": 118,
+      "passed": 118,
+      "sameCases": true,
+      "nodeBaseCases": 117
+    },
+    {
+      "browser": "Edge",
+      "protocol": "http",
+      "mode": "write",
+      "total": 118,
+      "passed": 118,
+      "sameCases": true,
+      "nodeBaseCases": 117
+    },
+    {
+      "browser": "Edge",
+      "protocol": "http",
+      "mode": "read",
+      "total": 118,
+      "passed": 118,
+      "sameCases": true,
+      "nodeBaseCases": 117
+    }
+  ],
+  "independentPythonReferenceMatches": true,
+  "browserFixtureLiteralsMatch": true,
+  "chrome": {
+    "tested": false,
+    "reason": "No installed Chrome executable found in machine/user application paths; not claimed passed"
+  },
+  "scope": "F1 foundation parity only, not gameplay/UI acceptance or independent audit"
+}

@@ -1,0 +1,93 @@
+{
+  "status": "AUTHORIZED SOURCE DIFF VS 158 FREEZE; freeze v4 is post-8000-sim snapshot; NOT formal Normal acceptance",
+  "warning": "Does not overwrite f4-review-freeze-v1.json or grok freeze v1/v2/v3. Independent tool audit still required before economic conclusions.",
+  "gddSha256": "e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07",
+  "freeze158": {
+    "path": "tests/gdd1/f4-review-freeze-v1.json",
+    "bytes": 27504,
+    "sha256": "c715a8a3e95aa66aef89cffce36d15604acbeee6fd3d28066987a06eefdec529"
+  },
+  "semanticV4": {
+    "path": "tests/gdd1/f4-audit-semantic-v4-results.json",
+    "bytes": 268091,
+    "sha256": "48b9045350a34a078f0c48a559dfc96de01423dd6c3edfdcdd644687b98ec676"
+  },
+  "supplement": {
+    "path": "docs/GDD1_F4_AUDIT_SUPPLEMENT.md",
+    "bytes": 7352,
+    "sha256": "8b83cc616b41a6b115cfb20f70b8d04dfe214de6c66cbdd33096449ffb229824"
+  },
+  "independentAudit": {
+    "path": "docs/GDD1_F4_GROK_AUDIT.md",
+    "bytes": 11628,
+    "sha256": "19884a37955c48d4a468684aac87e05d3ae3d91c628f1cbaff99cb1487f5d23d"
+  },
+  "priorGrokFreezeV3": {
+    "path": "tests/gdd1/f4-grok-freeze-v3.json",
+    "bytes": 49762,
+    "sha256": "f04d90262d64b5393f64250e9705c0df5cbbd03f832aeff3f857ae37a829a8b9"
+  },
+  "productionBefore": {
+    "resolver": {
+      "path": "js/gdd1/resolver.js",
+      "bytes": 27757,
+      "sha256": "435bf3266b0b3d161f2d26d5345c9b21e2a669a316c9c4bbaf09e3c6ab34351c"
+    },
+    "fullEffects158": {
+      "path": "js/gdd1/full-effects.js",
+      "bytes": 38016,
+      "sha256": "82b207481c292270bb73109854ecd2f474ae4e191317f8476a4ccf80e7e338a3"
+    },
+    "fullEffectsClothBook": {
+      "path": "js/gdd1/full-effects.js",
+      "bytes": 38059,
+      "sha256": "b602a74a9e485454b3d5801e7a1a648ffa7fc8bdc220cc8928b483728c8af205"
+    }
+  },
+  "productionAfter": {
+    "resolver": {
+      "path": "js/gdd1/resolver.js",
+      "bytes": 27996,
+      "sha256": "e86d51fb4c20d235312b263146f18d2c4cd69c13453846fe0daf9b07a0aaf88b"
+    },
+    "fullEffects": {
+      "path": "js/gdd1/full-effects.js",
+      "bytes": 37993,
+      "sha256": "f65bc06b4c38fb35db14cc21f6ed4c63a42efbb06956f71078974990c5d8de55"
+    }
+  },
+  "authorizedPaths": [
+    "js/gdd1/resolver.js",
+    "js/gdd1/full-effects.js"
+  ],
+  "unchanged158": 156,
+  "authorized158": [
+    {
+      "path": "js/gdd1/full-effects.js",
+      "freeze": {
+        "bytes": 38016,
+        "sha256": "82b207481c292270bb73109854ecd2f474ae4e191317f8476a4ccf80e7e338a3"
+      },
+      "current": {
+        "path": "js/gdd1/full-effects.js",
+        "bytes": 37993,
+        "sha256": "f65bc06b4c38fb35db14cc21f6ed4c63a42efbb06956f71078974990c5d8de55"
+      },
+      "status": "AUTHORIZED_F4_GROK_FIX"
+    },
+    {
+      "path": "js/gdd1/resolver.js",
+      "freeze": {
+        "bytes": 27757,
+        "sha256": "435bf3266b0b3d161f2d26d5345c9b21e2a669a316c9c4bbaf09e3c6ab34351c"
+      },
+      "current": {
+        "path": "js/gdd1/resolver.js",
+        "bytes": 27996,
+        "sha256": "e86d51fb4c20d235312b263146f18d2c4cd69c13453846fe0daf9b07a0aaf88b"
+      },
+      "status": "AUTHORIZED_F4_GROK_FIX"
+    }
+  ],
+  "supplementErrata": "64-hex live SHA matches frozen reports; 65-hex typed string is extra d; docs/GDD1_F4_GROK_SHA_ERRATA.md"
+}

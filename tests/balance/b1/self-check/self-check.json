@@ -1,0 +1,1015 @@
+{
+  "generatedAt": "2026-10-07T16:05:44Z",
+  "commandLine": "node tests/tools/balance-v1.js --self-check --config tests/balance/b1/configs/P0-baseline.json --out tests/balance/b1",
+  "configId": "P0-baseline",
+  "sourceHash": "63b46982183010f57ecc01278c94ded6d1fb6bc72213b4fe78324527bafe465a",
+  "seeds": [
+    "B1-TRAIN-0000",
+    "B1-TRAIN-0001",
+    "B1-TRAIN-0002",
+    "B1-TRAIN-0003",
+    "B1-TRAIN-0004",
+    "B1-TRAIN-0005",
+    "B1-TRAIN-0006",
+    "B1-TRAIN-0007",
+    "B1-TRAIN-0008",
+    "B1-TRAIN-0009"
+  ],
+  "passed": 22,
+  "total": 22,
+  "checks": [
+    {
+      "name": "profile 隔离：slice-abd-v1 与 full-v1 的配额表不同",
+      "ok": true,
+      "detail": "slice=98,173,260,277,290,293,296,309,358,381 full=150,265,400,425,445,450,455,475,550,585"
+    },
+    {
+      "name": "提示：切片配额为完整表 ×0.65 向上取整（可直接核算）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "无 ERROR：10 seed × 4 策略全部在预算内正常终止",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "终止性：每局最终 phase 为 WON 或 LOST",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "复现性：同 seed 同策略两次运行结果与动作次数一致",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "策略间种子一致：4 策略覆盖同一 10 个 seed 的笛卡尔积",
+      "ok": true,
+      "detail": "40 / 40"
+    },
+    {
+      "name": "游戏 RNG 不被 Bot 使用：同 seed 同策略可复现（若 Bot 消耗游戏流则统计会漂移）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Random 非固定取中间项：10 个 seed 产生多于 1 种结果签名",
+      "ok": true,
+      "detail": "签名数=9"
+    },
+    {
+      "name": "动作覆盖：Random 使用了刷新或移除（非\"形式上接入\"）",
+      "ok": true,
+      "detail": "reroll=37 remove=38"
+    },
+    {
+      "name": "动作覆盖：Greedy 执行了副本前瞻",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "非法命令被识别为 ERROR（不当作 LOST）",
+      "ok": true,
+      "detail": "rejected=true outcome=ERROR reason=Illegal selection/full pool / GDD1: stale/invalid command"
+    },
+    {
+      "name": "非法命令不推进状态（revision 与现金不变）",
+      "ok": true,
+      "detail": "revision 1→1, cash 0→0"
+    },
+    {
+      "name": "覆盖生效：chord_frame 倍率 ratio → [7,4]",
+      "ok": true,
+      "detail": "[7,4]"
+    },
+    {
+      "name": "覆盖生效：silence_keeper amount → 8",
+      "ok": true,
+      "detail": "8"
+    },
+    {
+      "name": "覆盖生效：pressure_pouch 压力奖励 → 11",
+      "ok": true,
+      "detail": "11"
+    },
+    {
+      "name": "覆盖生效：sorting_runner base → 2",
+      "ok": true,
+      "detail": "2"
+    },
+    {
+      "name": "覆盖生效：生产牌第1档权重 → [70,27,3,0]",
+      "ok": true,
+      "detail": "[70,27,3,0]"
+    },
+    {
+      "name": "覆盖未泄漏到基线：另一次加载仍是原始 ratio [2,1]",
+      "ok": true,
+      "detail": "[2,1]"
+    },
+    {
+      "name": "profile 隔离：改 full-v1 的 mist_pouch.base 不动 slice-abd-v1",
+      "ok": true,
+      "detail": "full=9 slice=1"
+    },
+    {
+      "name": "配额：切片表仍为完整表 ×0.65 向上取整",
+      "ok": true,
+      "detail": "full=150,270,405,430,450,455,460,480,555,590 slice=98,176,264,280,293,296,299,312,361,384"
+    },
+    {
+      "name": "非法配额表被拒绝（不静默修正单调性）",
+      "ok": true,
+      "detail": "配置不可用：normalPayments 必须严格递增（工具不会自动修正）"
+    },
+    {
+      "name": "白名单外的字段覆盖被拒绝",
+      "ok": true,
+      "detail": "配置不可用：target「cash」不在白名单内（允许：normalPayments, slicePayments, spins, symbolWeightRow, itemWeightRow, symbolBase, symbolTags, symbolRarity, symbolEffect, symbolMechanic）"
+    }
+  ],
+  "perGame": [
+    {
+      "policy": "random",
+      "seed": "B1-TRAIN-0000",
+      "outcome": "LOST",
+      "finalStage": 5,
+      "spins": 33,
+      "actions": {
+        "decisions": 78,
+        "choose": 26,
+        "skip": 7,
+        "remove": 2,
+        "reroll": 4,
+        "item": 3,
+        "skipItem": 1,
+        "eventAccept": 1,
+        "eventReject": 1,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "random",
+      "seed": "B1-TRAIN-0001",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 164,
+        "choose": 64,
+        "skip": 6,
+        "remove": 6,
+        "reroll": 6,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 3,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "random",
+      "seed": "B1-TRAIN-0002",
+      "outcome": "LOST",
+      "finalStage": 2,
+      "spins": 12,
+      "actions": {
+        "decisions": 28,
+        "choose": 11,
+        "skip": 1,
+        "remove": 2,
+        "reroll": 1,
+        "item": 1,
+        "skipItem": 0,
+        "eventAccept": 0,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "random",
+      "seed": "B1-TRAIN-0003",
+      "outcome": "LOST",
+      "finalStage": 7,
+      "spins": 47,
+      "actions": {
+        "decisions": 111,
+        "choose": 45,
+        "skip": 2,
+        "remove": 5,
+        "reroll": 4,
+        "item": 4,
+        "skipItem": 2,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "random",
+      "seed": "B1-TRAIN-0004",
+      "outcome": "LOST",
+      "finalStage": 2,
+      "spins": 12,
+      "actions": {
+        "decisions": 27,
+        "choose": 12,
+        "skip": 0,
+        "remove": 2,
+        "reroll": 0,
+        "item": 1,
+        "skipItem": 0,
+        "eventAccept": 0,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "random",
+      "seed": "B1-TRAIN-0005",
+      "outcome": "LOST",
+      "finalStage": 8,
+      "spins": 54,
+      "actions": {
+        "decisions": 124,
+        "choose": 49,
+        "skip": 5,
+        "remove": 5,
+        "reroll": 2,
+        "item": 6,
+        "skipItem": 1,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "random",
+      "seed": "B1-TRAIN-0006",
+      "outcome": "LOST",
+      "finalStage": 6,
+      "spins": 40,
+      "actions": {
+        "decisions": 95,
+        "choose": 37,
+        "skip": 3,
+        "remove": 5,
+        "reroll": 3,
+        "item": 5,
+        "skipItem": 0,
+        "eventAccept": 1,
+        "eventReject": 1,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "random",
+      "seed": "B1-TRAIN-0007",
+      "outcome": "LOST",
+      "finalStage": 4,
+      "spins": 26,
+      "actions": {
+        "decisions": 61,
+        "choose": 25,
+        "skip": 1,
+        "remove": 3,
+        "reroll": 3,
+        "item": 3,
+        "skipItem": 0,
+        "eventAccept": 0,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "random",
+      "seed": "B1-TRAIN-0008",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 163,
+        "choose": 61,
+        "skip": 9,
+        "remove": 5,
+        "reroll": 7,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 0,
+        "eventReject": 2,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "random",
+      "seed": "B1-TRAIN-0009",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 161,
+        "choose": 64,
+        "skip": 6,
+        "remove": 3,
+        "reroll": 7,
+        "item": 8,
+        "skipItem": 1,
+        "eventAccept": 0,
+        "eventReject": 2,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "value",
+      "seed": "B1-TRAIN-0000",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 156,
+        "choose": 40,
+        "skip": 30,
+        "remove": 4,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 3,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "value",
+      "seed": "B1-TRAIN-0001",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 159,
+        "choose": 37,
+        "skip": 33,
+        "remove": 7,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 3,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "value",
+      "seed": "B1-TRAIN-0002",
+      "outcome": "LOST",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 158,
+        "choose": 43,
+        "skip": 27,
+        "remove": 7,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "value",
+      "seed": "B1-TRAIN-0003",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 156,
+        "choose": 34,
+        "skip": 36,
+        "remove": 4,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 3,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "value",
+      "seed": "B1-TRAIN-0004",
+      "outcome": "LOST",
+      "finalStage": 2,
+      "spins": 12,
+      "actions": {
+        "decisions": 27,
+        "choose": 12,
+        "skip": 0,
+        "remove": 2,
+        "reroll": 0,
+        "item": 1,
+        "skipItem": 0,
+        "eventAccept": 0,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "value",
+      "seed": "B1-TRAIN-0005",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 155,
+        "choose": 42,
+        "skip": 28,
+        "remove": 4,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "value",
+      "seed": "B1-TRAIN-0006",
+      "outcome": "LOST",
+      "finalStage": 6,
+      "spins": 40,
+      "actions": {
+        "decisions": 93,
+        "choose": 26,
+        "skip": 14,
+        "remove": 6,
+        "reroll": 0,
+        "item": 5,
+        "skipItem": 0,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "value",
+      "seed": "B1-TRAIN-0007",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 160,
+        "choose": 45,
+        "skip": 25,
+        "remove": 9,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "value",
+      "seed": "B1-TRAIN-0008",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 161,
+        "choose": 56,
+        "skip": 14,
+        "remove": 10,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "value",
+      "seed": "B1-TRAIN-0009",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 155,
+        "choose": 38,
+        "skip": 32,
+        "remove": 4,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "synergy",
+      "seed": "B1-TRAIN-0000",
+      "outcome": "LOST",
+      "finalStage": 5,
+      "spins": 33,
+      "actions": {
+        "decisions": 76,
+        "choose": 33,
+        "skip": 0,
+        "remove": 4,
+        "reroll": 0,
+        "item": 4,
+        "skipItem": 0,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "synergy",
+      "seed": "B1-TRAIN-0001",
+      "outcome": "LOST",
+      "finalStage": 3,
+      "spins": 19,
+      "actions": {
+        "decisions": 44,
+        "choose": 19,
+        "skip": 0,
+        "remove": 3,
+        "reroll": 0,
+        "item": 2,
+        "skipItem": 0,
+        "eventAccept": 1,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "synergy",
+      "seed": "B1-TRAIN-0002",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 161,
+        "choose": 69,
+        "skip": 1,
+        "remove": 10,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "synergy",
+      "seed": "B1-TRAIN-0003",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 159,
+        "choose": 69,
+        "skip": 1,
+        "remove": 7,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 3,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "synergy",
+      "seed": "B1-TRAIN-0004",
+      "outcome": "LOST",
+      "finalStage": 1,
+      "spins": 6,
+      "actions": {
+        "decisions": 14,
+        "choose": 6,
+        "skip": 0,
+        "remove": 2,
+        "reroll": 0,
+        "item": 0,
+        "skipItem": 0,
+        "eventAccept": 0,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "synergy",
+      "seed": "B1-TRAIN-0005",
+      "outcome": "LOST",
+      "finalStage": 6,
+      "spins": 40,
+      "actions": {
+        "decisions": 89,
+        "choose": 40,
+        "skip": 0,
+        "remove": 3,
+        "reroll": 0,
+        "item": 5,
+        "skipItem": 0,
+        "eventAccept": 1,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "synergy",
+      "seed": "B1-TRAIN-0006",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 159,
+        "choose": 69,
+        "skip": 1,
+        "remove": 7,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 3,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "synergy",
+      "seed": "B1-TRAIN-0007",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 161,
+        "choose": 69,
+        "skip": 1,
+        "remove": 10,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "synergy",
+      "seed": "B1-TRAIN-0008",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 161,
+        "choose": 69,
+        "skip": 1,
+        "remove": 10,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "synergy",
+      "seed": "B1-TRAIN-0009",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 162,
+        "choose": 70,
+        "skip": 0,
+        "remove": 11,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "greedy",
+      "seed": "B1-TRAIN-0000",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 159,
+        "choose": 70,
+        "skip": 0,
+        "remove": 7,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 3,
+        "eventReject": 0,
+        "lookaheadDecisions": 70,
+        "lookaheadCandidates": 210,
+        "lookaheadRuns": 1680,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "greedy",
+      "seed": "B1-TRAIN-0001",
+      "outcome": "LOST",
+      "finalStage": 3,
+      "spins": 19,
+      "actions": {
+        "decisions": 44,
+        "choose": 19,
+        "skip": 0,
+        "remove": 3,
+        "reroll": 0,
+        "item": 2,
+        "skipItem": 0,
+        "eventAccept": 1,
+        "eventReject": 0,
+        "lookaheadDecisions": 19,
+        "lookaheadCandidates": 57,
+        "lookaheadRuns": 456,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "greedy",
+      "seed": "B1-TRAIN-0002",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 161,
+        "choose": 69,
+        "skip": 1,
+        "remove": 10,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 70,
+        "lookaheadCandidates": 210,
+        "lookaheadRuns": 1680,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "greedy",
+      "seed": "B1-TRAIN-0003",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 161,
+        "choose": 65,
+        "skip": 5,
+        "remove": 9,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 3,
+        "eventReject": 0,
+        "lookaheadDecisions": 70,
+        "lookaheadCandidates": 210,
+        "lookaheadRuns": 1680,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "greedy",
+      "seed": "B1-TRAIN-0004",
+      "outcome": "LOST",
+      "finalStage": 4,
+      "spins": 26,
+      "actions": {
+        "decisions": 58,
+        "choose": 26,
+        "skip": 0,
+        "remove": 3,
+        "reroll": 0,
+        "item": 3,
+        "skipItem": 0,
+        "eventAccept": 0,
+        "eventReject": 0,
+        "lookaheadDecisions": 26,
+        "lookaheadCandidates": 78,
+        "lookaheadRuns": 624,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "greedy",
+      "seed": "B1-TRAIN-0005",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 161,
+        "choose": 69,
+        "skip": 1,
+        "remove": 10,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 70,
+        "lookaheadCandidates": 210,
+        "lookaheadRuns": 1680,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "greedy",
+      "seed": "B1-TRAIN-0006",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 159,
+        "choose": 69,
+        "skip": 1,
+        "remove": 7,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 3,
+        "eventReject": 0,
+        "lookaheadDecisions": 70,
+        "lookaheadCandidates": 210,
+        "lookaheadRuns": 1680,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "greedy",
+      "seed": "B1-TRAIN-0007",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 161,
+        "choose": 67,
+        "skip": 3,
+        "remove": 10,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 70,
+        "lookaheadCandidates": 210,
+        "lookaheadRuns": 1680,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "greedy",
+      "seed": "B1-TRAIN-0008",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 161,
+        "choose": 70,
+        "skip": 0,
+        "remove": 10,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 70,
+        "lookaheadCandidates": 210,
+        "lookaheadRuns": 1680,
+        "lookaheadFailures": 0
+      }
+    },
+    {
+      "policy": "greedy",
+      "seed": "B1-TRAIN-0009",
+      "outcome": "WON",
+      "finalStage": 10,
+      "spins": 70,
+      "actions": {
+        "decisions": 162,
+        "choose": 70,
+        "skip": 0,
+        "remove": 11,
+        "reroll": 0,
+        "item": 9,
+        "skipItem": 0,
+        "eventAccept": 2,
+        "eventReject": 0,
+        "lookaheadDecisions": 70,
+        "lookaheadCandidates": 210,
+        "lookaheadRuns": 1680,
+        "lookaheadFailures": 0
+      }
+    }
+  ],
+  "evidence": "C:\\files\\code\\LuckLandlord\\tests\\balance\\b1\\self-check\\self-check.txt"
+}

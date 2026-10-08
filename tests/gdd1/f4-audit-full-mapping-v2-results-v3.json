@@ -1,0 +1,71 @@
+{
+  "scope": "GDD1 F4 supplemental full 64/32/8 mapping audit",
+  "total": 14,
+  "passed": 13,
+  "failed": [
+    {
+      "name": "symbols/all-effect-ops-known",
+      "ok": false,
+      "error": "ash_felt:destroy"
+    }
+  ],
+  "cases": [
+    {
+      "name": "dispatch/full-defs-selects-full",
+      "ok": true
+    },
+    {
+      "name": "dispatch/slice-defs-selects-slice",
+      "ok": true
+    },
+    {
+      "name": "symbols/all-64-defined",
+      "ok": true
+    },
+    {
+      "name": "symbols/all-64-tags-nonempty",
+      "ok": true
+    },
+    {
+      "name": "symbols/all-effect-ops-known",
+      "ok": false,
+      "error": "ash_felt:destroy"
+    },
+    {
+      "name": "symbols/all-64-isolated-resolve",
+      "ok": true
+    },
+    {
+      "name": "items/all-32-defined",
+      "ok": true
+    },
+    {
+      "name": "items/all-32-effect-ops-known",
+      "ok": true
+    },
+    {
+      "name": "events/all-8-defined",
+      "ok": true
+    },
+    {
+      "name": "events/all-spin-effect-ops-known",
+      "ok": true
+    },
+    {
+      "name": "events/full-specific-cost-and-targets",
+      "ok": true
+    },
+    {
+      "name": "controller/full-command-observes-full-defs",
+      "ok": true
+    },
+    {
+      "name": "controller/full-specific-content-not-slice-only",
+      "ok": true
+    },
+    {
+      "name": "resolver/full-effect-execution-uses-full-def",
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "scope": "8 explicitly funded command integration fixtures, NOT Normal economy/Bot/balance evidence; every stable boundary strict save/reload and replay, immutable input, other keys, cash ledger, RNG, removal/refresh pending conservation",
+  "results": [
+    {
+      "seed": 0,
+      "steps": 172,
+      "phases": {
+        "READY": 70,
+        "SYMBOL_CHOICE": 90,
+        "ITEM_CHOICE": 9,
+        "EVENT_CHOICE": 3
+      },
+      "items": [
+        "item_brine_lining",
+        "item_offcut_chute",
+        "item_lane_clapper",
+        "item_waste_log",
+        "item_jar_rack",
+        "item_root_wrap",
+        "item_manifest_clip",
+        "item_rest_notch",
+        "item_sorting_apron"
+      ],
+      "events": [
+        "event_misprint_window",
+        "event_silent_bell",
+        "event_empty_manifest"
+      ],
+      "finalPool": 66,
+      "traceSha256": "531b5a7a7c50e642a60264843caaef8c484b8a39a2df3d1a608e348ce65a42d9"
+    },
+    {
+      "seed": 1,
+      "steps": 171,
+      "phases": {
+        "READY": 70,
+        "SYMBOL_CHOICE": 90,
+        "ITEM_CHOICE": 9,
+        "EVENT_CHOICE": 2
+      },
+      "items": [
+        "item_compliance_carbon",
+        "item_brine_lining",
+        "item_small_hold",
+        "item_low_balance_tab",
+        "item_root_wrap",
+        "item_registration_pin",
+        "item_manifest_clip",
+        "item_release_receipt",
+        "item_audit_clip"
+      ],
+      "events": [
+        "event_misprint_window",
+        "event_quota_recount"
+      ],
+      "finalPool": 52,
+      "traceSha256": "00a3628ace8f28f9c25882f3972352a95197f7135b96ed9c29785e188bac9c25"
+    },
+    {
+      "seed": 2,
+      "steps": 171,
+      "phases": {
+        "READY": 70,
+        "SYMBOL_CHOICE": 90,
+        "ITEM_CHOICE": 9,
+        "EVENT_CHOICE": 2
+      },
+      "items": [
+        "item_sorting_apron",
+        "item_low_balance_tab",
+        "item_compliance_carbon",
+        "item_waste_log",
+        "item_spare_baffle",
+        "item_exchange_hook",
+        "item_fraction_gauge",
+        "item_return_track",
+        "item_insulation_shawl"
+      ],
+      "events": [
+        "event_quota_recount",
+        "event_boiler_test"
+      ],
+      "finalPool": 59,
+      "traceSha256": "1d2f511cc4d51744097af21b49daec5e415bd203c95f231cab1e8d1bcaa671e7"
+    },
+    {
+      "seed": 3,
+      "steps": 172,
+      "phases": {
+        "READY": 70,
+        "SYMBOL_CHOICE": 90,
+        "ITEM_CHOICE": 9,
+        "EVENT_CHOICE": 3
+      },
+      "items": [
+        "item_return_track",
+        "item_growth_negative",
+        "item_low_balance_tab",
+        "item_exchange_hook",
+        "item_small_hold",
+        "item_shared_metronome",
+        "item_dew_calendar",
+        "item_audit_clip",
+        "item_root_wrap"
+      ],
+      "events": [
+        "event_misprint_window",
+        "event_silent_bell",
+        "event_empty_manifest"
+      ],
+      "finalPool": 61,
+      "traceSha256": "5ddb5ace399192bb7ca7cb8e5db679c2839606a4dee424b739abe1b0f161b104"
+    },
+    {
+      "seed": 4,
+      "steps": 169,
+      "phases": {
+        "READY": 70,
+        "SYMBOL_CHOICE": 90,
+        "ITEM_CHOICE": 9
+      },
+      "items": [
+        "item_brine_lining",
+        "item_manifest_clip",
+        "item_registration_pin",
+        "item_audit_clip",
+        "item_growth_negative",
+        "item_small_hold",
+        "item_spare_baffle",
+        "item_exchange_hook",
+        "item_fraction_gauge"
+      ],
+      "events": [],
+      "finalPool": 66,
+      "traceSha256": "efc03281b444bd5cd8915038f474a2f81dcf4012784e1514e7c040dd0b3e5306"
+    },
+    {
+      "seed": 5,
+      "steps": 172,
+      "phases": {
+        "READY": 70,
+        "SYMBOL_CHOICE": 90,
+        "ITEM_CHOICE": 9,
+        "EVENT_CHOICE": 3
+      },
+      "items": [
+        "item_lane_clapper",
+        "item_dew_calendar",
+        "item_sorting_apron",
+        "item_spectrum_book",
+        "item_safe_carbon",
+        "item_pressure_index",
+        "item_frost_glass",
+        "item_insulation_shawl",
+        "item_audit_clip"
+      ],
+      "events": [
+        "event_boiler_test",
+        "event_brine_inspection",
+        "event_empty_manifest"
+      ],
+      "finalPool": 55,
+      "traceSha256": "ff7041687cc07f19f9e1b6dc9f833446b0df5d174f9e492c7c96cde9fc13f974"
+    },
+    {
+      "seed": 6,
+      "steps": 172,
+      "phases": {
+        "READY": 70,
+        "SYMBOL_CHOICE": 90,
+        "ITEM_CHOICE": 9,
+        "EVENT_CHOICE": 3
+      },
+      "items": [
+        "item_brine_lining",
+        "item_waste_log",
+        "item_pressure_index",
+        "item_jar_rack",
+        "item_manifest_clip",
+        "item_safe_carbon",
+        "item_compliance_carbon",
+        "item_offcut_chute",
+        "item_exchange_hook"
+      ],
+      "events": [
+        "event_quota_recount",
+        "event_silent_bell",
+        "event_boiler_test"
+      ],
+      "finalPool": 57,
+      "traceSha256": "d376044deed84f9b4447114f6c360d6afbcc0e60129a10ecab38b53954bca44e"
+    },
+    {
+      "seed": 7,
+      "steps": 170,
+      "phases": {
+        "READY": 70,
+        "SYMBOL_CHOICE": 90,
+        "ITEM_CHOICE": 9,
+        "EVENT_CHOICE": 1
+      },
+      "items": [
+        "item_shared_metronome",
+        "item_pressure_index",
+        "item_rest_notch",
+        "item_sorting_apron",
+        "item_safe_carbon",
+        "item_jar_rack",
+        "item_frost_glass",
+        "item_small_hold",
+        "item_waste_log"
+      ],
+      "events": [
+        "event_quota_recount"
+      ],
+      "finalPool": 55,
+      "traceSha256": "ef53f565749b24997286f12b899a645f216092fd56bacc62213fa93f679502de"
+    }
+  ]
+}

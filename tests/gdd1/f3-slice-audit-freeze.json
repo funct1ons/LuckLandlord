@@ -1,0 +1,63 @@
+{
+  "status": "BLOCKED",
+  "scope": "Only slice simulation tooling, diagnostic semantics and evidence delivery; no formal balance/full-content/browser/human approval",
+  "coreVerificationPass": true,
+  "games": 8000,
+  "replays": 47,
+  "probes": 17,
+  "comparisons": 1668979,
+  "originalManifest": {
+    "bytes": 8136,
+    "sha256": "1f1acb1a9f0a7352d65f6bda9f2f43c4dc514ebc80c212acd459f9f7f16d21a3"
+  },
+  "existingFiles": 605,
+  "byteIdentical": 603,
+  "runtimeExceptions": [
+    ".pi/loops.json",
+    ".pi/loops/01a101f0-a171-761a-8429-9edd4dbe73ac.json"
+  ],
+  "unexpectedAdded": [],
+  "selfExcluded": true,
+  "entries": {
+    "docs/GDD1_SLICE_SIMULATION_AUDIT.md": {
+      "bytes": 15363,
+      "sha256": "7d0812a0a219c0ede1ec4af6706615c9e821dfa13d10415b22d00bea49d8ba40"
+    },
+    "tests/gdd1/f3-slice-audit-baseline.json": {
+      "bytes": 101914,
+      "sha256": "bf7209f342da61ebd82e5cf5246954e84c7122f8dae01a6a1cfd4e3b2600e573"
+    },
+    "tests/gdd1/f3-slice-audit-evidence.js": {
+      "bytes": 13423,
+      "sha256": "530e53650ce1b1493861b634078cf8ebf15b9c33b7f3d29c74cf1220ad17d729"
+    },
+    "tests/gdd1/f3-slice-audit-evidence.json": {
+      "bytes": 137224,
+      "sha256": "6a7ae5ff18b16af80eb1c92798a4712fe7adeac3a2a8bbd06d8f6088effa6012"
+    },
+    "tests/gdd1/f3-slice-audit-freeze.js": {
+      "bytes": 2583,
+      "sha256": "59513a93fbbbb9efd63e3a7b08c1a1fd73aad87a09bda4b51b6beaf4ce534c46"
+    },
+    "tests/gdd1/f3-slice-audit-probes.js": {
+      "bytes": 12568,
+      "sha256": "d26288bed240903fc5a525af9da59c97299fd5d944b73bd8076acc2d8f02db8d"
+    },
+    "tests/gdd1/f3-slice-audit-probes.json": {
+      "bytes": 6747,
+      "sha256": "61406516271129ef33c88e59401d5138c584e0c107dd0ff4af99f576b5a6eea3"
+    },
+    "tests/gdd1/f3-slice-audit-protect.js": {
+      "bytes": 1562,
+      "sha256": "8db53004970a349bcd3517c9ca2672c52aaa44b5fe989e3c61f1823b02a0c4f1"
+    },
+    "tests/gdd1/f3-slice-audit-protection.json": {
+      "bytes": 884,
+      "sha256": "6cff792e4a6b00a33ca11308dab341f80975e5ef87a796b936238bf98f897603"
+    },
+    "tests/gdd1/f3-slice-audit-statistics.json": {
+      "bytes": 5695667,
+      "sha256": "2cfa4c308341240c0c6cae8311f41345fde3c0f0231be97fd4e2ddf288c02ea1"
+    }
+  }
+}

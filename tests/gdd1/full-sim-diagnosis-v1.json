@@ -1,0 +1,1299 @@
+{
+  "scope": "engineering diagnosis; NOT independent audit; economy NOT APPROVED; no retune applied",
+  "gdd": {
+    "human": "35-65% experienced / 10-30% novice first 3; bots cannot substitute",
+    "synergyGreedy": "40-70% and ≥15pp above Random",
+    "stage1": "≥95%",
+    "stage3": "≥75%",
+    "stage6": "45-70%",
+    "winPool": "median 18-26",
+    "formedBefore4": "≥70% small loop before stage 4",
+    "singleRouteWin": "5-25%",
+    "mixedWin": "≥40%",
+    "lateP90P50": "1.5-3.5"
+  },
+  "rows": {
+    "Greedy/holdout": {
+      "n": 1000,
+      "wins": 23,
+      "winRate": {
+        "k": 23,
+        "n": 1000,
+        "rate": 0.023,
+        "lo": 0.015374276932992918,
+        "hi": 0.03427645066222667
+      },
+      "unused": [
+        "reroll",
+        "skipItem"
+      ],
+      "formedBeforeStage4": 997,
+      "formedBeforeStage4Rate": 0.997,
+      "winningRoutes": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "unformed": 0,
+        "mixed": 23
+      },
+      "mixedWins": 23,
+      "unformedWins": 0,
+      "winPoolP50": 25,
+      "poolP50": 25,
+      "stagePaid": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        999,
+        947,
+        387,
+        78,
+        23
+      ],
+      "stageReached": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        999,
+        947,
+        387,
+        78
+      ],
+      "lostStage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        52,
+        560,
+        309,
+        55
+      ],
+      "s1": {
+        "k": 1000,
+        "n": 1000,
+        "rate": 1,
+        "lo": 0.996173241514445,
+        "hi": 1
+      },
+      "s3": {
+        "k": 1000,
+        "n": 1000,
+        "rate": 1,
+        "lo": 0.996173241514445,
+        "hi": 1
+      },
+      "s6": {
+        "k": 999,
+        "n": 1000,
+        "rate": 0.999,
+        "lo": 0.9943574414020421,
+        "hi": 0.9998234536293739
+      },
+      "s7": {
+        "k": 947,
+        "n": 1000,
+        "rate": 0.947,
+        "lo": 0.9313253831625082,
+        "hi": 0.9592534947514054
+      },
+      "s8": {
+        "k": 387,
+        "n": 1000,
+        "rate": 0.387,
+        "lo": 0.35729917409070144,
+        "hi": 0.417565673327034
+      },
+      "s9": {
+        "k": 78,
+        "n": 1000,
+        "rate": 0.078,
+        "lo": 0.06294716759073615,
+        "hi": 0.09628261657107237
+      },
+      "s10": {
+        "k": 23,
+        "n": 1000,
+        "rate": 0.023,
+        "lo": 0.015374276932992918,
+        "hi": 0.03427645066222667
+      },
+      "s8spin": {
+        "n": 6629,
+        "P10": 64,
+        "P50": 82,
+        "P90": 110,
+        "P99": 167
+      },
+      "s8margin": {
+        "n": 947,
+        "P10": -449,
+        "P50": -80,
+        "P90": 518,
+        "P99": 1620
+      },
+      "lateP90P50": 1.3414634146341464,
+      "actions": {
+        "spin": 57342,
+        "choose": 23185,
+        "remove": 5459,
+        "item": 7411,
+        "skip": 34157,
+        "eventB": 984,
+        "eventA": 869
+      },
+      "eventAcceptance": {
+        "k": 869,
+        "n": 1853,
+        "rate": 0.4689692390717755,
+        "unit": "event A command",
+        "denominator": "all event A+B commands; repeated events in one game are dependent",
+        "independentBernoulli": false
+      }
+    },
+    "Greedy/train": {
+      "n": 1000,
+      "wins": 33,
+      "winRate": {
+        "k": 33,
+        "n": 1000,
+        "rate": 0.033,
+        "lo": 0.023592927958426907,
+        "hi": 0.04598126446708159
+      },
+      "unused": [
+        "reroll",
+        "skipItem"
+      ],
+      "formedBeforeStage4": 995,
+      "formedBeforeStage4Rate": 0.995,
+      "winningRoutes": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "unformed": 0,
+        "mixed": 33
+      },
+      "mixedWins": 33,
+      "unformedWins": 0,
+      "winPoolP50": 25,
+      "poolP50": 25,
+      "stagePaid": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        999,
+        950,
+        378,
+        98,
+        33
+      ],
+      "stageReached": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        999,
+        950,
+        378,
+        98
+      ],
+      "lostStage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        49,
+        572,
+        280,
+        65
+      ],
+      "s1": {
+        "k": 1000,
+        "n": 1000,
+        "rate": 1,
+        "lo": 0.996173241514445,
+        "hi": 1
+      },
+      "s3": {
+        "k": 1000,
+        "n": 1000,
+        "rate": 1,
+        "lo": 0.996173241514445,
+        "hi": 1
+      },
+      "s6": {
+        "k": 999,
+        "n": 1000,
+        "rate": 0.999,
+        "lo": 0.9943574414020421,
+        "hi": 0.9998234536293739
+      },
+      "s7": {
+        "k": 950,
+        "n": 1000,
+        "rate": 0.95,
+        "lo": 0.9346861797557492,
+        "hi": 0.9618697376072513
+      },
+      "s8": {
+        "k": 378,
+        "n": 1000,
+        "rate": 0.378,
+        "lo": 0.34846769603702693,
+        "hi": 0.4084660330334485
+      },
+      "s9": {
+        "k": 98,
+        "n": 1000,
+        "rate": 0.098,
+        "lo": 0.08108201152335034,
+        "hi": 0.11799470229903597
+      },
+      "s10": {
+        "k": 33,
+        "n": 1000,
+        "rate": 0.033,
+        "lo": 0.023592927958426907,
+        "hi": 0.04598126446708159
+      },
+      "s8spin": {
+        "n": 6650,
+        "P10": 65,
+        "P50": 82,
+        "P90": 114,
+        "P99": 184
+      },
+      "s8margin": {
+        "n": 950,
+        "P10": -451,
+        "P50": -95,
+        "P90": 580,
+        "P99": 1819
+      },
+      "lateP90P50": 1.3902439024390243,
+      "actions": {
+        "spin": 57451,
+        "choose": 22924,
+        "remove": 5393,
+        "item": 7425,
+        "skip": 34527,
+        "eventB": 1010,
+        "eventA": 880
+      },
+      "eventAcceptance": {
+        "k": 880,
+        "n": 1890,
+        "rate": 0.4656084656084656,
+        "unit": "event A command",
+        "denominator": "all event A+B commands; repeated events in one game are dependent",
+        "independentBernoulli": false
+      }
+    },
+    "Random/holdout": {
+      "n": 1000,
+      "wins": 0,
+      "winRate": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "unused": [],
+      "formedBeforeStage4": 952,
+      "formedBeforeStage4Rate": 0.952,
+      "winningRoutes": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "unformed": 0,
+        "mixed": 0
+      },
+      "mixedWins": 0,
+      "unformedWins": 0,
+      "winPoolP50": null,
+      "poolP50": 33,
+      "stagePaid": [
+        1000,
+        1000,
+        999,
+        992,
+        955,
+        640,
+        81,
+        1,
+        0,
+        0
+      ],
+      "stageReached": [
+        1000,
+        1000,
+        1000,
+        999,
+        992,
+        955,
+        640,
+        81,
+        1,
+        0
+      ],
+      "lostStage": [
+        0,
+        0,
+        0,
+        1,
+        7,
+        37,
+        315,
+        559,
+        80,
+        1,
+        0
+      ],
+      "s1": {
+        "k": 1000,
+        "n": 1000,
+        "rate": 1,
+        "lo": 0.996173241514445,
+        "hi": 1
+      },
+      "s3": {
+        "k": 999,
+        "n": 1000,
+        "rate": 0.999,
+        "lo": 0.9943574414020421,
+        "hi": 0.9998234536293739
+      },
+      "s6": {
+        "k": 640,
+        "n": 1000,
+        "rate": 0.64,
+        "lo": 0.609766237395941,
+        "hi": 0.6691622702281036
+      },
+      "s7": {
+        "k": 81,
+        "n": 1000,
+        "rate": 0.081,
+        "lo": 0.0656496215412003,
+        "hi": 0.0995572020696949
+      },
+      "s8": {
+        "k": 1,
+        "n": 1000,
+        "rate": 0.001,
+        "lo": 0.00017654637062607809,
+        "hi": 0.0056425585979579355
+      },
+      "s9": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "s10": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "s8spin": {
+        "n": 567,
+        "P10": 55,
+        "P50": 72,
+        "P90": 91,
+        "P99": 138
+      },
+      "s8margin": {
+        "n": 81,
+        "P10": -626,
+        "P50": -537,
+        "P90": -271,
+        "P99": 499
+      },
+      "lateP90P50": 1.2638888888888888,
+      "actions": {
+        "remove": 6722,
+        "spin": 44677,
+        "choose": 33505,
+        "reroll": 7370,
+        "item": 4242,
+        "skip": 11172,
+        "eventA": 946,
+        "eventB": 464,
+        "skipItem": 1426
+      },
+      "eventAcceptance": {
+        "k": 946,
+        "n": 1410,
+        "rate": 0.6709219858156028,
+        "unit": "event A command",
+        "denominator": "all event A+B commands; repeated events in one game are dependent",
+        "independentBernoulli": false
+      }
+    },
+    "Random/train": {
+      "n": 1000,
+      "wins": 0,
+      "winRate": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "unused": [],
+      "formedBeforeStage4": 955,
+      "formedBeforeStage4Rate": 0.955,
+      "winningRoutes": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "unformed": 0,
+        "mixed": 0
+      },
+      "mixedWins": 0,
+      "unformedWins": 0,
+      "winPoolP50": null,
+      "poolP50": 33,
+      "stagePaid": [
+        1000,
+        1000,
+        1000,
+        987,
+        938,
+        631,
+        69,
+        1,
+        0,
+        0
+      ],
+      "stageReached": [
+        1000,
+        1000,
+        1000,
+        1000,
+        987,
+        938,
+        631,
+        69,
+        1,
+        0
+      ],
+      "lostStage": [
+        0,
+        0,
+        0,
+        0,
+        13,
+        49,
+        307,
+        562,
+        68,
+        1,
+        0
+      ],
+      "s1": {
+        "k": 1000,
+        "n": 1000,
+        "rate": 1,
+        "lo": 0.996173241514445,
+        "hi": 1
+      },
+      "s3": {
+        "k": 1000,
+        "n": 1000,
+        "rate": 1,
+        "lo": 0.996173241514445,
+        "hi": 1
+      },
+      "s6": {
+        "k": 631,
+        "n": 1000,
+        "rate": 0.631,
+        "lo": 0.600644550435556,
+        "hi": 0.6603528388412285
+      },
+      "s7": {
+        "k": 69,
+        "n": 1000,
+        "rate": 0.069,
+        "lo": 0.054883945585911253,
+        "hi": 0.08641472022863728
+      },
+      "s8": {
+        "k": 1,
+        "n": 1000,
+        "rate": 0.001,
+        "lo": 0.00017654637062607809,
+        "hi": 0.0056425585979579355
+      },
+      "s9": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "s10": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "s8spin": {
+        "n": 483,
+        "P10": 57,
+        "P50": 73,
+        "P90": 93,
+        "P99": 110
+      },
+      "s8margin": {
+        "n": 69,
+        "P10": -612,
+        "P50": -502,
+        "P90": -278,
+        "P99": 69
+      },
+      "lateP90P50": 1.273972602739726,
+      "actions": {
+        "remove": 6695,
+        "spin": 44383,
+        "choose": 33271,
+        "skip": 11112,
+        "skipItem": 1404,
+        "eventA": 884,
+        "item": 4222,
+        "reroll": 7257,
+        "eventB": 499
+      },
+      "eventAcceptance": {
+        "k": 884,
+        "n": 1383,
+        "rate": 0.6391901663051338,
+        "unit": "event A command",
+        "denominator": "all event A+B commands; repeated events in one game are dependent",
+        "independentBernoulli": false
+      }
+    },
+    "Synergy/holdout": {
+      "n": 1000,
+      "wins": 0,
+      "winRate": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "unused": [
+        "skipItem"
+      ],
+      "formedBeforeStage4": 1000,
+      "formedBeforeStage4Rate": 1,
+      "winningRoutes": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "unformed": 0,
+        "mixed": 0
+      },
+      "mixedWins": 0,
+      "unformedWins": 0,
+      "winPoolP50": null,
+      "poolP50": 32,
+      "stagePaid": [
+        1000,
+        1000,
+        1000,
+        1000,
+        999,
+        984,
+        506,
+        14,
+        0,
+        0
+      ],
+      "stageReached": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        999,
+        984,
+        506,
+        14,
+        0
+      ],
+      "lostStage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        15,
+        478,
+        492,
+        14,
+        0
+      ],
+      "s1": {
+        "k": 1000,
+        "n": 1000,
+        "rate": 1,
+        "lo": 0.996173241514445,
+        "hi": 1
+      },
+      "s3": {
+        "k": 1000,
+        "n": 1000,
+        "rate": 1,
+        "lo": 0.996173241514445,
+        "hi": 1
+      },
+      "s6": {
+        "k": 984,
+        "n": 1000,
+        "rate": 0.984,
+        "lo": 0.97416793978826,
+        "hi": 0.9901277579977227
+      },
+      "s7": {
+        "k": 506,
+        "n": 1000,
+        "rate": 0.506,
+        "lo": 0.47504885836338107,
+        "hi": 0.5369052205347923
+      },
+      "s8": {
+        "k": 14,
+        "n": 1000,
+        "rate": 0.014,
+        "lo": 0.00835757513042392,
+        "hi": 0.02336203411753566
+      },
+      "s9": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "s10": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "s8spin": {
+        "n": 3542,
+        "P10": 60,
+        "P50": 69,
+        "P90": 83,
+        "P99": 101
+      },
+      "s8margin": {
+        "n": 506,
+        "P10": -633,
+        "P50": -494,
+        "P90": -203,
+        "P99": 111
+      },
+      "lateP90P50": 1.2028985507246377,
+      "actions": {
+        "spin": 50535,
+        "choose": 26577,
+        "remove": 2650,
+        "item": 6503,
+        "reroll": 10438,
+        "skip": 23958,
+        "eventA": 1568,
+        "eventB": 93
+      },
+      "eventAcceptance": {
+        "k": 1568,
+        "n": 1661,
+        "rate": 0.9440096327513546,
+        "unit": "event A command",
+        "denominator": "all event A+B commands; repeated events in one game are dependent",
+        "independentBernoulli": false
+      }
+    },
+    "Synergy/train": {
+      "n": 1000,
+      "wins": 0,
+      "winRate": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "unused": [
+        "skipItem"
+      ],
+      "formedBeforeStage4": 998,
+      "formedBeforeStage4Rate": 0.998,
+      "winningRoutes": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "unformed": 0,
+        "mixed": 0
+      },
+      "mixedWins": 0,
+      "unformedWins": 0,
+      "winPoolP50": null,
+      "poolP50": 32,
+      "stagePaid": [
+        1000,
+        1000,
+        1000,
+        1000,
+        999,
+        986,
+        557,
+        11,
+        0,
+        0
+      ],
+      "stageReached": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        999,
+        986,
+        557,
+        11,
+        0
+      ],
+      "lostStage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        13,
+        429,
+        546,
+        11,
+        0
+      ],
+      "s1": {
+        "k": 1000,
+        "n": 1000,
+        "rate": 1,
+        "lo": 0.996173241514445,
+        "hi": 1
+      },
+      "s3": {
+        "k": 1000,
+        "n": 1000,
+        "rate": 1,
+        "lo": 0.996173241514445,
+        "hi": 1
+      },
+      "s6": {
+        "k": 986,
+        "n": 1000,
+        "rate": 0.986,
+        "lo": 0.9766379658824644,
+        "hi": 0.9916424248695761
+      },
+      "s7": {
+        "k": 557,
+        "n": 1000,
+        "rate": 0.557,
+        "lo": 0.5260523439907523,
+        "hi": 0.5875114055418946
+      },
+      "s8": {
+        "k": 11,
+        "n": 1000,
+        "rate": 0.011,
+        "lo": 0.006153174098086638,
+        "hi": 0.019589395700786275
+      },
+      "s9": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "s10": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "s8spin": {
+        "n": 3899,
+        "P10": 59,
+        "P50": 69,
+        "P90": 83,
+        "P99": 101
+      },
+      "s8margin": {
+        "n": 557,
+        "P10": -637,
+        "P50": -503,
+        "P90": -206,
+        "P99": 149
+      },
+      "lateP90P50": 1.2028985507246377,
+      "actions": {
+        "spin": 50882,
+        "choose": 26938,
+        "remove": 2794,
+        "item": 6553,
+        "reroll": 10429,
+        "skip": 23944,
+        "eventA": 1528,
+        "eventB": 106
+      },
+      "eventAcceptance": {
+        "k": 1528,
+        "n": 1634,
+        "rate": 0.9351285189718482,
+        "unit": "event A command",
+        "denominator": "all event A+B commands; repeated events in one game are dependent",
+        "independentBernoulli": false
+      }
+    },
+    "Value/holdout": {
+      "n": 1000,
+      "wins": 0,
+      "winRate": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "unused": [
+        "skipItem"
+      ],
+      "formedBeforeStage4": 1000,
+      "formedBeforeStage4Rate": 1,
+      "winningRoutes": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "unformed": 0,
+        "mixed": 0
+      },
+      "mixedWins": 0,
+      "unformedWins": 0,
+      "winPoolP50": null,
+      "poolP50": 25,
+      "stagePaid": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        998,
+        829,
+        78,
+        4,
+        0
+      ],
+      "stageReached": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        998,
+        829,
+        78,
+        4
+      ],
+      "lostStage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        169,
+        751,
+        74,
+        4
+      ],
+      "s1": {
+        "k": 1000,
+        "n": 1000,
+        "rate": 1,
+        "lo": 0.996173241514445,
+        "hi": 1
+      },
+      "s3": {
+        "k": 1000,
+        "n": 1000,
+        "rate": 1,
+        "lo": 0.996173241514445,
+        "hi": 1
+      },
+      "s6": {
+        "k": 998,
+        "n": 1000,
+        "rate": 0.998,
+        "lo": 0.9927371921365079,
+        "hi": 0.9994513564118793
+      },
+      "s7": {
+        "k": 829,
+        "n": 1000,
+        "rate": 0.829,
+        "lo": 0.8044158480970535,
+        "hi": 0.8510661448194513
+      },
+      "s8": {
+        "k": 78,
+        "n": 1000,
+        "rate": 0.078,
+        "lo": 0.06294716759073615,
+        "hi": 0.09628261657107237
+      },
+      "s9": {
+        "k": 4,
+        "n": 1000,
+        "rate": 0.004,
+        "lo": 0.0015565881404084308,
+        "hi": 0.010239556277262253
+      },
+      "s10": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "s8spin": {
+        "n": 5803,
+        "P10": 64,
+        "P50": 76,
+        "P90": 92,
+        "P99": 110
+      },
+      "s8margin": {
+        "n": 829,
+        "P10": -552,
+        "P50": -341,
+        "P90": -7,
+        "P99": 441
+      },
+      "lateP90P50": 1.2105263157894737,
+      "actions": {
+        "remove": 6809,
+        "spin": 53445,
+        "choose": 29010,
+        "item": 6909,
+        "reroll": 10903,
+        "skip": 24435,
+        "eventA": 1649,
+        "eventB": 106
+      },
+      "eventAcceptance": {
+        "k": 1649,
+        "n": 1755,
+        "rate": 0.9396011396011396,
+        "unit": "event A command",
+        "denominator": "all event A+B commands; repeated events in one game are dependent",
+        "independentBernoulli": false
+      }
+    },
+    "Value/train": {
+      "n": 1000,
+      "wins": 0,
+      "winRate": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "unused": [
+        "skipItem"
+      ],
+      "formedBeforeStage4": 1000,
+      "formedBeforeStage4Rate": 1,
+      "winningRoutes": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "unformed": 0,
+        "mixed": 0
+      },
+      "mixedWins": 0,
+      "unformedWins": 0,
+      "winPoolP50": null,
+      "poolP50": 24,
+      "stagePaid": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        999,
+        833,
+        66,
+        3,
+        0
+      ],
+      "stageReached": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        999,
+        833,
+        66,
+        3
+      ],
+      "lostStage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        166,
+        767,
+        63,
+        3
+      ],
+      "s1": {
+        "k": 1000,
+        "n": 1000,
+        "rate": 1,
+        "lo": 0.996173241514445,
+        "hi": 1
+      },
+      "s3": {
+        "k": 1000,
+        "n": 1000,
+        "rate": 1,
+        "lo": 0.996173241514445,
+        "hi": 1
+      },
+      "s6": {
+        "k": 999,
+        "n": 1000,
+        "rate": 0.999,
+        "lo": 0.9943574414020421,
+        "hi": 0.9998234536293739
+      },
+      "s7": {
+        "k": 833,
+        "n": 1000,
+        "rate": 0.833,
+        "lo": 0.8086179403533302,
+        "hi": 0.85483343849529
+      },
+      "s8": {
+        "k": 66,
+        "n": 1000,
+        "rate": 0.066,
+        "lo": 0.05221235045948584,
+        "hi": 0.08310927590597601
+      },
+      "s9": {
+        "k": 3,
+        "n": 1000,
+        "rate": 0.003,
+        "lo": 0.0010207838811386186,
+        "hi": 0.008783014053503173
+      },
+      "s10": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "s8spin": {
+        "n": 5831,
+        "P10": 65,
+        "P50": 76,
+        "P90": 91,
+        "P99": 109
+      },
+      "s8margin": {
+        "n": 833,
+        "P10": -554,
+        "P50": -334,
+        "P90": -41,
+        "P99": 356
+      },
+      "lateP90P50": 1.1973684210526316,
+      "actions": {
+        "remove": 6872,
+        "spin": 53376,
+        "choose": 29107,
+        "item": 6901,
+        "reroll": 10759,
+        "skip": 24269,
+        "eventA": 1672,
+        "eventB": 113
+      },
+      "eventAcceptance": {
+        "k": 1672,
+        "n": 1785,
+        "rate": 0.9366946778711485,
+        "unit": "event A command",
+        "denominator": "all event A+B commands; repeated events in one game are dependent",
+        "independentBernoulli": false
+      }
+    }
+  },
+  "gaps": {
+    "Greedy/holdout": {
+      "winBand": "OUT",
+      "fifteenAboveRandom": "NOT MET",
+      "stage1": "IN",
+      "stage3": "IN",
+      "stage6": "ABOVE 70%",
+      "winPool": "IN",
+      "formedBefore4": "IN (diagnostic formation, not GDD small-loop identity)",
+      "mixedWins": "IN",
+      "lateP90P50": "OUT"
+    },
+    "Random/holdout": {
+      "winBand": "OUT",
+      "fifteenAboveRandom": "n/a",
+      "stage1": "IN",
+      "stage3": "IN",
+      "stage6": "IN",
+      "winPool": "no wins",
+      "formedBefore4": "IN (diagnostic formation, not GDD small-loop identity)",
+      "mixedWins": "no wins",
+      "lateP90P50": "OUT"
+    },
+    "Synergy/holdout": {
+      "winBand": "OUT",
+      "fifteenAboveRandom": "NOT MET",
+      "stage1": "IN",
+      "stage3": "IN",
+      "stage6": "ABOVE 70%",
+      "winPool": "no wins",
+      "formedBefore4": "IN (diagnostic formation, not GDD small-loop identity)",
+      "mixedWins": "no wins",
+      "lateP90P50": "OUT"
+    },
+    "Value/holdout": {
+      "winBand": "OUT",
+      "fifteenAboveRandom": "NOT MET",
+      "stage1": "IN",
+      "stage3": "IN",
+      "stage6": "ABOVE 70%",
+      "winPool": "no wins",
+      "formedBefore4": "IN (diagnostic formation, not GDD small-loop identity)",
+      "mixedWins": "no wins",
+      "lateP90P50": "OUT"
+    }
+  },
+  "proposal": {
+    "version": "tune-candidate-full-v1-diag-1",
+    "status": "DIAGNOSTIC CANDIDATE ONLY; do not apply; do not edit GAME_DESIGN_V1.md or js/gdd1; do not rescreen seeds",
+    "observation": "Strong and weak bots survive stages 1-6 then fail stages 7-10 against payments 850/1120/1460/1880. Stage 6 is not a universal collapse. Win rates are near zero except Greedy ~2-3%. Formation diagnostic fires early for Greedy/Value but does not convert to payment coverage. Greedy never recorded reroll or skipItem; Value/Synergy never skipItem. Random used all legal ops and still 0 wins.",
+    "orderPerGdd": [
+      "candidate/feed/yield first",
+      "then quotas",
+      "small versioned steps"
+    ],
+    "candidates": [
+      {
+        "id": "C1-late-yield-not-rent",
+        "change": "Investigate late-stage yield (spin income P50 vs payment 850+) before cutting early rents 70-630. Do not raise all rents from P99 spikes.",
+        "reason": "Stage6 paid Random 640, others 984-999; losses concentrate at 7-9 with negative margins.",
+        "apply": false
+      },
+      {
+        "id": "C2-policy-unused-ops",
+        "change": "If a later policy version is introduced, give Greedy a non-pruned skipItem/reroll branch. This is a bot change, not a GDD price change.",
+        "reason": "Greedy unused reroll|skipItem; Value/Synergy unused skipItem. Random used both and still 0 wins, so unused ops are not a sufficient explanation of 0 wins.",
+        "apply": false
+      },
+      {
+        "id": "C3-feed-not-quota-first",
+        "change": "If yield is structurally below stage-7 payment after formed pools, consider candidate/feed/yield tables next, not quota width, and version it. No seed screening.",
+        "reason": "GDD §13.3: tune candidate/feed/yield then quotas. Stage6 overshoot vs 45-70% plus late failure is not the “all routes collapse at stage 6” rollback trigger.",
+        "apply": false
+      }
+    ]
+  }
+}

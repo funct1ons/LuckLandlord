@@ -1,0 +1,108 @@
+{
+  "pass": true,
+  "count": 10,
+  "cases": [
+    {
+      "name": "A1 11/12 committed product income; 3/4 qualified plants; full window and support",
+      "pass": true,
+      "evidence": {
+        "eleven": false,
+        "twelve": true,
+        "threeQualified": false
+      }
+    },
+    {
+      "name": "A1 threshold 19.9/20 percent, alphabetical income tie and other denominator",
+      "pass": true,
+      "evidence": {
+        "threshold": "tool >=20%, not GDD gate",
+        "otherIncluded": true
+      }
+    },
+    {
+      "name": "A2 index6/prism7 retains UID and advances epoch exactly one",
+      "pass": true,
+      "evidence": {
+        "uid": "u13",
+        "index": 6,
+        "prism": 7
+      }
+    },
+    {
+      "name": "A2 consumed plant product loses item add and base but retains own death reward",
+      "pass": true,
+      "evidence": {
+        "baseAndItemAdd": 0,
+        "deathReward": 4,
+        "consumer": 4,
+        "total": 8
+      }
+    },
+    {
+      "name": "A2 synthetic negative two-source cumulative floor -1,-2,-3",
+      "pass": true,
+      "evidence": {
+        "syntheticOnly": true,
+        "negativeTarget": -3,
+        "marginals": [
+          -1,
+          -1
+        ],
+        "total": 5
+      }
+    },
+    {
+      "name": "A2 production VM instrumentation parity across transform/death/growth/item/spawn/negative",
+      "pass": true,
+      "evidence": {
+        "hookChangesToLogic": false
+      }
+    },
+    {
+      "name": "A3 event repetition and duplicate-seed game denominator independently computed",
+      "pass": true,
+      "evidence": {
+        "events": 5,
+        "eventWins": 3,
+        "games": 2,
+        "wins": 1
+      }
+    },
+    {
+      "name": "A4 offer generation changes identities without changing selected action or utility",
+      "pass": true,
+      "evidence": {
+        "calls": 45,
+        "decision": {
+          "action": {
+            "op": "choose",
+            "id": "sieve_drum",
+            "windowId": 1
+          },
+          "utility": 62.54454545454545,
+          "modelCommands": 21
+        },
+        "samples": 1,
+        "maxFutureSpins": 2,
+        "maxCommands": 14
+      }
+    },
+    {
+      "name": "A5 unsafe/missing prefixes rejected and frozen destinations refuse before work",
+      "pass": true,
+      "evidence": {
+        "preflight": true,
+        "noLegacyEntryExecuted": true
+      }
+    },
+    {
+      "name": "A5 destination created after preflight rolls back only owned links",
+      "pass": true,
+      "evidence": {
+        "lateCollision": true,
+        "ownedLinksRolledBack": 2,
+        "competitorUnchanged": true
+      }
+    }
+  ]
+}

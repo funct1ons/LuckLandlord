@@ -1,0 +1,30 @@
+# 模拟输出：可重新生成，且单个文件可达数百 MB。
+# 注意：仓库中当前不存在任何 .jsonl（原始产出已归档到项目外），
+# 此规则仅用于防止将来重跑模拟时把大文件写进版本历史。
+*.jsonl
+
+# DSH harness 运行时目录（调度器状态、临时验证产物），不属于项目内容。
+# 曾经放在这里的 route-g 冻结快照已迁至 docs/archive/route-g-snapshot/。
+.pi/
+
+# 编辑器/系统杂项
+node_modules/
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp
+*.log
+
+# 无头浏览器截图产物：脚本每次运行都会全量重写，含临时 profile 缓存，
+# 均属可再生产物，需要时跑 tests/gdd1/*-shot.js 重新生成即可。
+# 注意：tests/gdd1/ 根目录下的平铺 PNG 是已入库的审计证据，不在此列。
+tests/gdd1/*-shots/
+
+# 全量模拟产出：单文件可达数百 MB（statistics 合计约 176 MB），
+# 全部由 tests/gdd1/*-sim*.js 等脚本重新生成，不入库以免拖慢克隆。
+# 这些文件保留在本地磁盘，冻结校验脚本在本机仍可正常读取。
+tests/gdd1/*-statistics.json
+tests/gdd1/*-index.json
+tests/gdd1/*-progress.json
+tests/gdd1/*-seeds.json
+tests/gdd1/*-gates.json

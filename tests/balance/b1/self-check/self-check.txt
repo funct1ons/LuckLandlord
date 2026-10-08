@@ -1,0 +1,46 @@
+=== balance-v1 工具自检（10 个固定 seed × 4 策略）===
+配置: P0-baseline  源码哈希: 63b46982183010f57ecc01278c94ded6d1fb6bc72213b4fe78324527bafe465a
+生成时间（UTC）: 2026-10-07T16:05:44Z
+命令: node tests/tools/balance-v1.js --self-check --config tests/balance/b1/configs/P0-baseline.json --out tests/balance/b1
+seed: B1-TRAIN-0000, B1-TRAIN-0001, B1-TRAIN-0002, B1-TRAIN-0003, B1-TRAIN-0004, B1-TRAIN-0005, B1-TRAIN-0006, B1-TRAIN-0007, B1-TRAIN-0008, B1-TRAIN-0009
+
+PASS profile 隔离：slice-abd-v1 与 full-v1 的配额表不同
+      slice=98,173,260,277,290,293,296,309,358,381 full=150,265,400,425,445,450,455,475,550,585
+PASS 提示：切片配额为完整表 ×0.65 向上取整（可直接核算）
+PASS 无 ERROR：10 seed × 4 策略全部在预算内正常终止
+PASS 终止性：每局最终 phase 为 WON 或 LOST
+PASS 复现性：同 seed 同策略两次运行结果与动作次数一致
+PASS 策略间种子一致：4 策略覆盖同一 10 个 seed 的笛卡尔积
+      40 / 40
+PASS 游戏 RNG 不被 Bot 使用：同 seed 同策略可复现（若 Bot 消耗游戏流则统计会漂移）
+PASS Random 非固定取中间项：10 个 seed 产生多于 1 种结果签名
+      签名数=9
+PASS 动作覆盖：Random 使用了刷新或移除（非"形式上接入"）
+      reroll=37 remove=38
+PASS 动作覆盖：Greedy 执行了副本前瞻
+PASS 非法命令被识别为 ERROR（不当作 LOST）
+      rejected=true outcome=ERROR reason=Illegal selection/full pool / GDD1: stale/invalid command
+PASS 非法命令不推进状态（revision 与现金不变）
+      revision 1→1, cash 0→0
+PASS 覆盖生效：chord_frame 倍率 ratio → [7,4]
+      [7,4]
+PASS 覆盖生效：silence_keeper amount → 8
+      8
+PASS 覆盖生效：pressure_pouch 压力奖励 → 11
+      11
+PASS 覆盖生效：sorting_runner base → 2
+      2
+PASS 覆盖生效：生产牌第1档权重 → [70,27,3,0]
+      [70,27,3,0]
+PASS 覆盖未泄漏到基线：另一次加载仍是原始 ratio [2,1]
+      [2,1]
+PASS profile 隔离：改 full-v1 的 mist_pouch.base 不动 slice-abd-v1
+      full=9 slice=1
+PASS 配额：切片表仍为完整表 ×0.65 向上取整
+      full=150,270,405,430,450,455,460,480,555,590 slice=98,176,264,280,293,296,299,312,361,384
+PASS 非法配额表被拒绝（不静默修正单调性）
+      配置不可用：normalPayments 必须严格递增（工具不会自动修正）
+PASS 白名单外的字段覆盖被拒绝
+      配置不可用：target「cash」不在白名单内（允许：normalPayments, slicePayments, spins, symbolWeightRow, itemWeightRow, symbolBase, symbolTags, symbolRarity, symbolEffect, symbolMechanic）
+
+22/22 自检项通过

@@ -1,0 +1,80 @@
+﻿{
+  "scope": "C resonance eight IDs",
+  "total": 18,
+  "passed": 18,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "dock_chime/duplicate-type-dedup",
+      "ok": true
+    },
+    {
+      "name": "dock_chime/row-edge-no-wrap",
+      "ok": true
+    },
+    {
+      "name": "pitch_fork/diagonal-eight-neighbor",
+      "ok": true
+    },
+    {
+      "name": "pitch_fork/edge-no-wrap",
+      "ok": true
+    },
+    {
+      "name": "pitch_fork/stable-single-target",
+      "ok": true
+    },
+    {
+      "name": "fog_reed/self-add-direction",
+      "ok": true
+    },
+    {
+      "name": "beat_spool/cycle-boundary-and-reset",
+      "ok": true
+    },
+    {
+      "name": "beat_spool/multi-instance-independent",
+      "ok": true
+    },
+    {
+      "name": "chord_frame/distinct-type-and-ratio",
+      "ok": true
+    },
+    {
+      "name": "prism_hum/converted-does-not-reappear",
+      "ok": true
+    },
+    {
+      "name": "silence_keeper/exact-row-one",
+      "ok": true
+    },
+    {
+      "name": "harbor_conductor/row-wide-single-application",
+      "ok": true
+    },
+    {
+      "name": "harbor_conductor/two-types-negative",
+      "ok": true
+    },
+    {
+      "name": "save-restore/real-command-state",
+      "ok": true
+    },
+    {
+      "name": "schema/count-zero-threshold",
+      "ok": true
+    },
+    {
+      "name": "schema/row-count-both-at-exact",
+      "ok": true
+    },
+    {
+      "name": "schema/cycle-invalid-threshold-type",
+      "ok": true
+    },
+    {
+      "name": "schema/unknown-expression-tag",
+      "ok": true
+    }
+  ]
+}

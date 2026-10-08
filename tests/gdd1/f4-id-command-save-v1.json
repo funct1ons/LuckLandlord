@@ -1,0 +1,3018 @@
+{
+  "scope": "64 single-symbol and 32 isolated-item fullCommand strict causal log/save/replay integration, NOT replacement for neighboring/trigger focused rule cases or economic evidence",
+  "results": [
+    {
+      "kind": "symbol",
+      "id": "mist_pouch",
+      "ok": true,
+      "total": 1,
+      "logActions": [
+        "age"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "wick_bed",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "dew_lantern",
+      "ok": true,
+      "total": 3,
+      "logActions": [
+        "age"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "amber_frond",
+      "ok": true,
+      "total": 4,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "fog_stitcher",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "root_ledger",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "warm_pod",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "nursery_gauge",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "ash_felt",
+      "ok": true,
+      "total": 1,
+      "logActions": [
+        "age"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "sorting_tong",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "copper_burr",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "spent_gasket",
+      "ok": true,
+      "total": -1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "sieve_drum",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "heat_clerk",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "clinker_router",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "furnace_auditor",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "brine_strip",
+      "ok": true,
+      "total": 1,
+      "logActions": [
+        "age"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "saline_ampoule",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "condense_coil",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "tide_prism",
+      "ok": true,
+      "total": 4,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "deep_still",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "crystal_index",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "pearl_separator",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "reserve_facet",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "dock_chime",
+      "ok": true,
+      "total": 2,
+      "logActions": [
+        "add"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "pitch_fork",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "fog_reed",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "beat_spool",
+      "ok": true,
+      "total": 1,
+      "logActions": [
+        "cycle"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "chord_frame",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "prism_hum",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "silence_keeper",
+      "ok": true,
+      "total": 11,
+      "logActions": [
+        "add"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "harbor_conductor",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "cargo_rope",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "route_stub",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "parcel_cage",
+      "ok": true,
+      "total": 5,
+      "logActions": [
+        "add"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "sorting_runner",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "manifest_desk",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "switch_lamp",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "transit_seal",
+      "ok": true,
+      "total": 2,
+      "logActions": [
+        "tagAdded"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "return_station",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "pressure_pouch",
+      "ok": true,
+      "total": 1,
+      "logActions": [
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "feed_valve",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "pause_dial",
+      "ok": true,
+      "total": 3,
+      "logActions": [
+        "add"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "surge_vessel",
+      "ok": true,
+      "total": 0,
+      "logActions": [
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "cracked_regulator",
+      "ok": true,
+      "total": 10,
+      "logActions": [
+        "risk",
+        "add"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "safety_shim",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "release_spire",
+      "ok": true,
+      "total": 3,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "demand_coupler",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "phase_chip",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "spectrum_pin",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "cloudy_negative",
+      "ok": true,
+      "total": 1,
+      "logActions": [
+        "age",
+        "age"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "blank_facet",
+      "ok": true,
+      "total": 5,
+      "logActions": [
+        "add"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "offset_reader",
+      "ok": true,
+      "total": 3,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "alignment_cloth",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "echo_plate",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "split_register",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "arrears_slip",
+      "ok": true,
+      "total": -1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "lean_receipt",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "compliance_desk",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "cleared_stub",
+      "ok": true,
+      "total": 4,
+      "logActions": [
+        "add"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "cancellation_clerk",
+      "ok": true,
+      "total": 1,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "quota_margin",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "advance_stamp",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "symbol",
+      "id": "settlement_beacon",
+      "ok": true,
+      "total": 2,
+      "logActions": [],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 1284011455,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_dew_calendar",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_root_wrap",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_frost_glass",
+      "ok": true,
+      "total": 26,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_sorting_apron",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_waste_log",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_offcut_chute",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_clean_mesh",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_brine_lining",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_fraction_gauge",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_residue_stamp",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_nursery_scale",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_lane_clapper",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_rest_notch",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_pitch_marker",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_shared_metronome",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_jar_rack",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_manifest_clip",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_return_track",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_small_hold",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_exchange_hook",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_pressure_index",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_insulation_shawl",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_release_receipt",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_spare_baffle",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_safe_carbon",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_spectrum_book",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_registration_pin",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_growth_negative",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_low_balance_tab",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_compliance_carbon",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_audit_clip",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    },
+    {
+      "kind": "item",
+      "id": "item_margin_lantern",
+      "ok": true,
+      "total": 23,
+      "logActions": [
+        "add",
+        "age",
+        "risk",
+        "add",
+        "pressureIncrease"
+      ],
+      "rng": {
+        "draw": {
+          "state": 2388680820,
+          "consumed": 133
+        },
+        "effect": {
+          "state": 97067168,
+          "consumed": 1
+        },
+        "symbolOffer": {
+          "state": 2624003937,
+          "consumed": 40
+        },
+        "itemOffer": {
+          "state": 740190555,
+          "consumed": 6
+        },
+        "event": {
+          "state": 515431476,
+          "consumed": 0
+        }
+      }
+    }
+  ]
+}

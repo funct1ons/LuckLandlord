@@ -1,0 +1,73 @@
+{
+  "scope": "CARGO independent retest after fixes",
+  "total": 15,
+  "passed": 14,
+  "failed": 1,
+  "cases": [
+    {
+      "name": "reservation/legal-remove-clears",
+      "ok": true
+    },
+    {
+      "name": "reservation/consume-clears-and-does-not-reappear",
+      "ok": true
+    },
+    {
+      "name": "reservation/destroy-clears",
+      "ok": true
+    },
+    {
+      "name": "reservation/transform-clears",
+      "ok": true
+    },
+    {
+      "name": "reservation/runtime-invalid-record-is-cleaned",
+      "ok": false,
+      "error": "Invalid reservations\n\nfalse !== true\n"
+    },
+    {
+      "name": "reservation/next-normal-spin-and-save-restore",
+      "ok": true
+    },
+    {
+      "name": "save/invalid-reservation-import-does-not-mutate-source",
+      "ok": true
+    },
+    {
+      "name": "rope/two-sources-each-effect-on-one-product",
+      "ok": true
+    },
+    {
+      "name": "rope/three-sources-each-effect-limit-independent",
+      "ok": true
+    },
+    {
+      "name": "rope/nonproduct-neighbor-remains-base",
+      "ok": true
+    },
+    {
+      "name": "schema/chooseTags-empty",
+      "ok": true
+    },
+    {
+      "name": "schema/chooseTags-duplicate",
+      "ok": true
+    },
+    {
+      "name": "schema/chooseTags-unknown",
+      "ok": true
+    },
+    {
+      "name": "schema/chooseTags-nonstring",
+      "ok": true
+    },
+    {
+      "name": "chooseTags/legal-precedence-and-temporary",
+      "ok": true
+    }
+  ]
+}
+
+STDERR
+
+EXIT 1

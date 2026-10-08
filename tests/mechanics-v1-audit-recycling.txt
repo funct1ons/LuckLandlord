@@ -1,0 +1,15 @@
+PASS ash-felt-consume-cause-is-exclusive expected=6 actual=6 — consume reward is single and no extra self-mature reward
+PASS sorting-tong-stable-single-target expected=1 actual=1 — P1 default count=1 and stable selector
+PASS heat-clerk-listeners-independent expected=[1,1] actual=[1,1] — P3 perSource/perListener limit
+PASS furnace-auditor-type-not-instance expected=1 actual=1 — CONTENT_MATRIX B uniqueTypeCount
+PASS conversion-preserves-uid-permanent-clears-counters expected=["u12",7,{}] actual=["u12",7,{}] — RULES conversion snapshot
+FAIL dead-listener-target-snapshot expected=true actual=false — P4 consume cause payload after death
+PASS schema-illegal-save-rejected expected=true actual=true — duplicate UID rejection
+PASS spin-settle-save-restore expected=[1,"copper_burr",4] actual=[1,"copper_burr",4] — real settle-save recovery
+PASS event-dedup-state-is-per-spin expected=6 actual=6 — consumed type set resets per resolve
+PASS resolver-no-symbol-id-hardcoding expected=true actual=true — generic resolver route check
+AUDIT-RECYCLING 9/10 passed; 1 failed
+
+STDERR
+
+EXIT 1

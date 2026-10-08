@@ -1,0 +1,37 @@
+'use strict';
+(function (G) {
+  const out = [], fail = m => { throw Error(m); }, ok = (v,m) => { if (!v) fail(m); }, eq = (a,b,m) => { if (JSON.stringify(a)!==JSON.stringify(b)) fail(`${m}: ${JSON.stringify(a)} != ${JSON.stringify(b)}`); };
+  const state = types => { const s=G.newRun('CARGO-BEHAVIOR'); s.symbols=[]; types.forEach(t=>s.symbols.push(G.instance(s,t))); return s; };
+  const resolve = (types, board) => { const s=state(types); const ids=s.symbols.map(x=>x.uid); return {s,r:G.resolve(s, board||ids)}; };
+  const test=(name,fn)=>{try{fn();out.push({name:`cargo/${name}`,ok:true});}catch(e){out.push({name:`cargo/${name}`,ok:false,error:e.message});}};
+  ['cargo_rope','route_stub','parcel_cage','sorting_runner','manifest_desk','switch_lamp','transit_seal','return_station'].forEach(id=>{
+    test(`${id}/schema`,()=>{ok(G.symbols[id].formal);ok(G.symbols[id].effects.every(e=>G.actions.includes(e.action)));});
+    test(`${id}/negative`,()=>{const {r}=resolve([id]);ok(r.reward>=0);});
+    test(`${id}/boundary`,()=>{const {r}=resolve([id]);ok(r.ledger.some(x=>x.type===id));});
+  });
+  test('cargo_rope/single-target-and-nonproduct',()=>{const {r}=resolve(['cargo_rope','tide_prism','tide_prism','wick_bed']);eq(r.ledger.map(x=>x.amount),[1,7,4,2],'one product receives +3');});
+  test('cargo_rope/no-target',()=>eq(resolve(['cargo_rope','wick_bed']).r.ledger[0].amount,1,'no product')); 
+  test('route_stub/exact-three-distinct',()=>{const {r}=resolve(['route_stub','saline_ampoule','tide_prism','copper_burr']);eq(r.ledger[0].amount,6,'three cargo types');});
+  test('route_stub/two-types-negative',()=>eq(resolve(['route_stub','saline_ampoule']).r.ledger[0].amount,2,'two types'));
+  test('parcel_cage/empty-slot-boundary',()=>{const {s,r}=resolve(['parcel_cage','wick_bed','wick_bed']);eq(r.ledger[0].amount,5,'17 empty slots includes threshold');s.symbols.push(...Array.from({length:15},()=>G.instance(s,'wick_bed')));eq(G.resolve(s,s.symbols.map(x=>x.uid)).ledger[0].amount,2,'three empty slots no bonus');});
+  test('parcel_cage/pool-size-is-not-empty',()=>{const {r}=resolve(['parcel_cage']);eq(r.ledger[0].amount,5,'empty board spaces drive condition');});
+  test('sorting_runner/base-snapshot-reward',()=>{const {s,r}=resolve(['sorting_runner','tide_prism']);eq(r.reward,10,'6 plus target base 4');ok(!s.symbols.some(x=>x.type==='tide_prism'),'target consumed');});
+  test('sorting_runner/competes-one-target',()=>{const {s,r}=resolve(['sorting_runner','sorting_runner','tide_prism']);eq(r.log.filter(x=>x.type==='consume').length,1,'one target consumed');eq(r.reward,10,'one reward');ok(s.symbols.some(x=>x.type==='sorting_runner'));});
+  test('sorting_runner/nonproduct-no-effect',()=>{const {r}=resolve(['sorting_runner','wick_bed']);eq(r.reward,0,'fuel is not product');});
+  test('manifest_desk/four-distinct-multiplier',()=>{const {r}=resolve(['manifest_desk','saline_ampoule','tide_prism','copper_burr']);eq(r.ledger[0].amount,6,'base2 times3');});
+  test('manifest_desk/three-negative',()=>eq(resolve(['manifest_desk','saline_ampoule','tide_prism']).r.ledger[0].amount,2,'under threshold')); 
+  test('manifest_desk/same-type-not-distinct',()=>eq(resolve(['manifest_desk','saline_ampoule','saline_ampoule','saline_ampoule','saline_ampoule']).r.ledger[0].amount,2,'same type')); 
+  test('switch_lamp/uid-and-cap',()=>{const {s,r}=resolve(['switch_lamp','tide_prism']);eq(r.log.filter(x=>x.type==='reserve').length,1,'reserve action');eq(s.reservations.length,1,'one UID lock');eq(s.reservations[0].uid,s.symbols[1].uid,'target UID');});
+  test('switch_lamp/nonproduct-unlocked',()=>{const {s,r}=resolve(['switch_lamp','wick_bed']);eq(r.log.filter(x=>x.type==='reserve').length,0,'no product');ok(!s.reservations||s.reservations.length===0,'no lock');});
+  test('switch_lamp/two-sources-global-cap',()=>{const s=state(['switch_lamp','tide_prism','switch_lamp','tide_prism']);const ids=s.symbols.map(x=>x.uid);const board=Array(20).fill(null);board[0]=ids[0];board[1]=ids[1];board[5]=ids[2];board[6]=ids[3];G.resolve(s,board);eq(s.reservations.length,1,'stable reservation target is not duplicated');});
+  test('transit_seal/plant-precedence',()=>{const {r}=resolve(['transit_seal','wick_bed','wick_bed','saline_ampoule']);eq(r.ledger[0].amount,2,'temporary plant tag does not change base');ok(!r.board[0].tags,'temporary tags absent from snapshot');});
+  test('transit_seal/tie-precedence',()=>{const {s,r}=resolve(['transit_seal','saline_ampoule','tide_prism']);eq(r.ledger[0].amount,2,'tie remains stable');ok(!s.symbols[0].tags,'pool tags unchanged');});
+  test('transit_seal/no-neighbor',()=>{const {r}=resolve(['transit_seal']);eq(r.ledger[0].amount,2,'no temporary tag');});
+  test('return_station/cargo-source-consumes-product',()=>{const {r}=resolve(['return_station','sorting_runner','tide_prism']);eq(r.reward,18,'runner10 plus station8');});
+  test('return_station/noncargo-consumer-no-reward',()=>eq(resolve(['return_station','deep_still','wick_bed']).r.reward,0,'non-cargo source')); 
+  test('return_station/nonproduct-no-reward',()=>eq(resolve(['return_station','sorting_runner','wick_bed']).r.reward,0,'no product')); 
+  test('schema-rejects-string-values',()=>{const d=G.symbols.cargo_rope,old=d.effects;try{d.effects=[{trigger:'ON_APPEAR',action:'add',scope:'self',target:'self',priority:0,amount:'3'}];let failed=false;try{G.validateContent();}catch(e){failed=true;}ok(failed,'string amount rejected');}finally{d.effects=old;}});
+  test('schema-rejects-unknown-selector-field',()=>{const d=G.symbols.cargo_rope,old=d.effects;try{d.effects=[{trigger:'ON_APPEAR',action:'add',scope:'self',target:{area:'self',bogus:true},priority:0,amount:3}];let failed=false;try{G.validateContent();}catch(e){failed=true;}ok(failed,'unknown selector field rejected');}finally{d.effects=old;}});
+  test('schema-rejects-recursive-depth',()=>{const d=G.symbols.cargo_rope,old=d.effects;try{let v={constant:1};for(let i=0;i<10;i++)v={add:[v,{constant:1}]};d.effects=[{trigger:'ON_APPEAR',action:'add',scope:'self',target:'self',priority:0,amount:v}];let failed=false;try{G.validateContent();}catch(e){failed=true;}ok(failed,'recursive expression rejected');}finally{d.effects=old;}});
+  G.cargoBehaviorTests=()=>out.map(x=>({...x}));
+})(window.Game);

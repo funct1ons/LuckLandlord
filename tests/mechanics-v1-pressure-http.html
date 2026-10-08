@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>雾港余热局 · M2 原型</title><link rel="stylesheet" href="../css/game.css"><script defer="" src="../js/core/rng.js"></script><script defer="" src="../js/data/content.js"></script><script defer="" src="../js/engine/resolver.js"></script><script defer="" src="../js/core/game.js"></script><script defer="" src="../js/core/validation.js"></script><script defer="" src="../js/core/save.js"></script><script defer="" src="../js/ui/main.js"></script><script defer="" src="ui-smoke.js"></script></head><body data-smoke="pass" data-pressure="pass"><header><div><small>FOG PORT / 离线回收机</small><h1>雾港余热局</h1></div><div class="toolbar"><input id="seed" value="FOG-PORT" aria-label="新局种子"><button id="new">新局</button><button id="continue">继续</button><button id="save">手动保存</button><button id="export">导出 JSON</button><label class="button">导入<input id="import" type="file" accept=".json" hidden=""></label></div></header><div id="status" role="status">已提交 · SYMBOL_CHOICE</div><main><aside><h2>供能配额</h2><div id="hud"><p>阶段 1/10</p><p>现金 5</p><p>配额 30</p><p>剩余 0 次</p><p>刷新 2 · 删除 2</p><p>种子 UI-PRESSURE</p></div><p>池少于 20 时留空；超过 20 时抽取 20 个不同实例。拒绝与删除能提高核心出现率。</p><label><input id="autosave" type="checkbox" checked="">自动保存</label><p><a href="tests/index.html">自动测试</a> · <a href="tests/simulation.html">模拟原型</a></p></aside><section class="machine"><div id="board" class="board"><div class="cell" title="pressure_pouch
+Formal content: pressure_pouch via pressure
+pressure / uncommon"><div class="glyph">◇ 41</div><span>pressure_pouch</span><span class="value">+1</span></div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div><div class="cell empty">—</div></div><div id="income">本轮净收益 1</div><button id="spin" class="spin" disabled="">运行回收机 [Space]</button><div id="choices"><button title="选一个邻接实例，复制其显式 copyable 的 ON_APPEAR 平面 add 常数，最多 +8；不复制条件、事件或其他动作。
+magic, machine">1. 偏印读头<small>1 · 选一个邻接实例，复制其显式 copyable 的 ON_APPEAR 平面 add 常数，最多 +8；不复制条件、事件或其他动作。</small></button><button title="Formal content: sorting_runner via consumeproduct
+cargo">2. sorting_runner<small>1 · Formal content: sorting_runner via consumeproduct</small></button><button title="Formal content: prism_hum via adjcrystal
+resonance, crystal">3. prism_hum<small>2 · Formal content: prism_hum via adjcrystal</small></button><button>跳过 [S]</button><button>刷新 [R]</button></div><details><summary>本轮结算账本 / 因果队列</summary><pre id="log">{
+  "ledger": [
+    {
+      "uid": "u11",
+      "type": "pressure_pouch",
+      "amount": 1,
+      "alive": true,
+      "multiplier": 1,
+      "ratio": [
+        "1",
+        "1"
+      ]
+    }
+  ],
+  "reward": 0,
+  "total": 1,
+  "queue": [
+    {
+      "id": 0,
+      "parent": null,
+      "type": "counter",
+      "source": "u11",
+      "target": "u11",
+      "depth": 0,
+      "event": "ON_APPEAR",
+      "amount": null,
+      "payload": null
+    }
+  ]
+}</pre></details></section><aside><h2>我的符号池</h2><select id="tag" aria-label="标签过滤"><option value="">所有标签</option><option value="plant">plant</option><option value="fuel">fuel</option><option value="scrap">scrap</option><option value="junk">junk</option><option value="machine">machine</option><option value="resonance">resonance</option><option value="crystal">crystal</option><option value="magic">magic</option><option value="contract">contract</option><option value="cargo">cargo</option><option value="pressure">pressure</option><option value="mist">mist</option><option value="feedstock">feedstock</option><option value="product">product</option><option value="support">support</option></select><select id="rarity" aria-label="稀有度过滤"><option value="">所有稀有度</option><option>common</option><option>uncommon</option><option>rare</option></select><div id="pool"><div class="pool-row" title="Formal content: pressure_pouch via pressure"><button>删除</button><span>pressure_pouch u11 基础 1 永久 +0</span><small>pressure · uncommon · Formal content: pressure_pouch via pressure</small></div></div><h3>阶段资源奖励</h3><div id="items">无</div></aside></main><section id="debug" hidden=""><h2>开发工具（仅 #debug）</h2><select id="debugSymbol"><option value="mist_pouch">mist_pouch</option><option value="wick_bed">wick_bed</option><option value="dew_lantern">dew_lantern</option><option value="amber_frond">鐞ラ湶鎵囧彾</option><option value="fog_stitcher">fog_stitcher</option><option value="root_ledger">root_ledger</option><option value="warm_pod">warm_pod</option><option value="nursery_gauge">nursery_gauge</option><option value="ash_felt">ash_felt</option><option value="sorting_tong">sorting_tong</option><option value="copper_burr">copper_burr</option><option value="spent_gasket">spent_gasket</option><option value="sieve_drum">sieve_drum</option><option value="heat_clerk">heat_clerk</option><option value="clinker_router">clinker_router</option><option value="furnace_auditor">furnace_auditor</option><option value="dock_chime">dock_chime</option><option value="pitch_fork">pitch_fork</option><option value="fog_reed">fog_reed</option><option value="beat_spool">beat_spool</option><option value="chord_frame">chord_frame</option><option value="prism_hum">prism_hum</option><option value="silence_keeper">silence_keeper</option><option value="harbor_conductor">harbor_conductor</option><option value="brine_strip">brine_strip</option><option value="saline_ampoule">saline_ampoule</option><option value="condense_coil">condense_coil</option><option value="tide_prism">娼１鍧?</option><option value="deep_still">deep_still</option><option value="crystal_index">crystal_index</option><option value="pearl_separator">pearl_separator</option><option value="reserve_facet">reserve_facet</option><option value="cargo_rope">cargo_rope</option><option value="route_stub">route_stub</option><option value="parcel_cage">parcel_cage</option><option value="sorting_runner">sorting_runner</option><option value="manifest_desk">manifest_desk</option><option value="switch_lamp">switch_lamp</option><option value="transit_seal">transit_seal</option><option value="return_station">return_station</option><option value="pressure_pouch">pressure_pouch</option><option value="feed_valve">feed_valve</option><option value="pause_dial">pause_dial</option><option value="surge_vessel">surge_vessel</option><option value="cracked_regulator">cracked_regulator</option><option value="safety_shim">safety_shim</option><option value="release_spire">release_spire</option><option value="demand_coupler">demand_coupler</option><option value="phase_chip">偏相小片</option><option value="spectrum_pin">谱别别针</option><option value="cloudy_negative">雾面底片</option><option value="blank_facet">无谱晶坯</option><option value="offset_reader">偏印读头</option><option value="alignment_cloth">对相织布</option><option value="echo_plate">迟相印板</option><option value="split_register">双谱登记器</option><option value="arrears_slip">arrears_slip</option><option value="lean_receipt">lean_receipt</option><option value="compliance_desk">compliance_desk</option><option value="cleared_stub">鏍告竻瀛樻牴</option><option value="cancellation_clerk">cancellation_clerk</option><option value="quota_margin">quota_margin</option><option value="advance_stamp">advance_stamp</option><option value="settlement_beacon">settlement_beacon</option><option value="slag">slag</option><option value="hook">hook</option><option value="echo">echo</option><option value="meter">meter</option><option value="lens">lens</option><option value="bud">bud</option><option value="bloom">bloom</option><option value="still">still</option><option value="crystal">crystal</option><option value="tuner">tuner</option><option value="press">press</option><option value="mirror">mirror</option><option value="spark">spark</option><option value="warden">warden</option><option value="seedbox">seedbox</option><option value="wild">wild</option><option value="gambit">gambit</option><option value="voucher">voucher</option><option value="rust">rust</option><option value="battery">battery</option></select><button id="add">添加符号</button><input id="cash" type="number" value="100" aria-label="调试现金"><button id="setCash">修改现金</button><input id="stage" type="number" min="1" max="10" value="1" aria-label="调试阶段"><button id="setStage">跳转阶段</button><p>固定盘面：20 格 UID JSON 数组；null 留空。不填写使用随机盘面。</p><textarea id="fixed" placeholder="[&quot;u1&quot;,null,&quot;u2&quot;]"></textarea><pre id="rng">{"rngState":3696405876,"revision":1,"nextId":12,"phase":"SYMBOL_CHOICE"}</pre></section><footer>纯虚拟凭证 · 无网络 / 真钱 · 这是 M0–M2 技术原型</footer>
+<pre id="smoke-result">{
+  "pass": true,
+  "evidence": [
+    "reroll token consumed",
+    {
+      "run": "normal value selections",
+      "phase": "WON",
+      "spins": 69,
+      "stages": 10,
+      "cash": 1378
+    },
+    "invalid imports preserve state and storage",
+    "7 damaged pending imports preserve memory/primary/backup",
+    {
+      "mechanicsImportFaults": [
+        {
+          "name": "mechanics-ui/import-validation",
+          "ok": true
+        },
+        {
+          "name": "mechanics-ui/import-preview-render",
+          "ok": true
+        },
+        {
+          "name": "mechanics-ui/import-getItem",
+          "ok": true
+        },
+        {
+          "name": "mechanics-ui/import-serialization",
+          "ok": true
+        },
+        {
+          "name": "mechanics-ui/import-capacity",
+          "ok": true
+        },
+        {
+          "name": "mechanics-ui/import-setItem",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "run": "normal skip selections",
+      "phase": "LOST",
+      "spins": 42,
+      "stage": 6,
+      "shortfall": 125
+    }
+  ],
+  "note": "真实Edge DOM点击烟测；不等于人工试玩、视觉审查或关闭浏览器后恢复"
+}</pre><pre id="pressure-independent">[{"name":"UI final click skip commits before WON","ok":true},{"name":"UI click choose then reward progresses","ok":true},{"name":"UI negative final click LOST with cash clamp","ok":true},{"name":"UI damaged pending import rejected preserving state/current/backup","ok":true}]</pre></body></html>

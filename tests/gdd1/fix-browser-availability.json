@@ -1,0 +1,20 @@
+﻿{
+    "pathCandidates":  [
+                           "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+                           "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+                           "C:\\Users\\admin\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe"
+                       ],
+    "foundPaths":  [
+
+                   ],
+    "registryCandidates":  [
+                               "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths\\chrome.exe",
+                               "HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths\\chrome.exe",
+                               "HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\App Paths\\chrome.exe"
+                           ],
+    "foundRegistry":  [
+
+                      ],
+    "tested":  false,
+    "edgeVersion":  "154.0.4258.53"
+}

@@ -1,0 +1,272 @@
+{
+  "total": 66,
+  "passed": 64,
+  "cases": [
+    {
+      "name": "route-m3/definitions/exact-ten-data-driven",
+      "ok": true
+    },
+    {
+      "name": "route-m3/dew/no-age-plant-no-placeholder-reward",
+      "ok": true
+    },
+    {
+      "name": "route-m3/dew/natural-plus-one",
+      "ok": true
+    },
+    {
+      "name": "route-m3/dew/first-eligible-stable-position-not-pool-order",
+      "ok": true
+    },
+    {
+      "name": "route-m3/dew/cross-threshold-immediate-no-new-appear",
+      "ok": true
+    },
+    {
+      "name": "route-m3/dew/naturally-matured-first-does-not-age-product-or-second",
+      "ok": true
+    },
+    {
+      "name": "route-m3/root/natural-transform-ordinary-add-four",
+      "ok": true
+    },
+    {
+      "name": "route-m3/root/dew-transform-composition-exact-seven",
+      "ok": true
+    },
+    {
+      "name": "route-m3/root/first-only-two-transformations",
+      "ok": true
+    },
+    {
+      "name": "route-m3/root/nonplant-transform-no-bonus",
+      "ok": true
+    },
+    {
+      "name": "route-m3/root/later-death-zero-ordinary-output",
+      "ok": true
+    },
+    {
+      "name": "route-m3/frost/first-two-stage-appearances-exact-additions",
+      "ok": true
+    },
+    {
+      "name": "route-m3/frost/one-appearance-save-restore-then-second-only",
+      "ok": true
+    },
+    {
+      "name": "route-m3/sorting/surviving-scrap-no-placeholder-reward",
+      "ok": true
+    },
+    {
+      "name": "route-m3/sorting/consume-all-scrap-first-success-independent-three",
+      "ok": true
+    },
+    {
+      "name": "route-m3/sorting/repeated-spin-resets-window",
+      "ok": true
+    },
+    {
+      "name": "route-m3/sorting/no-success-no-reward-on-fallback",
+      "ok": true
+    },
+    {
+      "name": "route-m3/sorting/destroy-not-consume",
+      "ok": true
+    },
+    {
+      "name": "route-m3/waste/acquisition-no-token-placeholder",
+      "ok": true
+    },
+    {
+      "name": "route-m3/waste/third-nonconsume-junk-destroy-and-stage-cap",
+      "ok": true
+    },
+    {
+      "name": "route-m3/waste/consume-and-remove-command-do-not-count",
+      "ok": true
+    },
+    {
+      "name": "route-m3/waste/save-count-two-restores-third-and-no-replay",
+      "ok": true
+    },
+    {
+      "name": "route-m3/waste/new-stage-resets-after-real-reward",
+      "ok": true
+    },
+    {
+      "name": "route-m3/offcut/first-nonjunk-scrap-spawn-one-no-same-spin-appearance",
+      "ok": true
+    },
+    {
+      "name": "route-m3/offcut/junk-scrap-ineligible-does-not-spend-window",
+      "ok": true
+    },
+    {
+      "name": "route-m3/offcut/common-spawn-separate-source-from-symbol-death",
+      "ok": true
+    },
+    {
+      "name": "route-m3/offcut/pool-200-dead-capacity-reused",
+      "ok": true
+    },
+    {
+      "name": "route-m3/mesh/clean-board-no-placeholder-reward",
+      "ok": true
+    },
+    {
+      "name": "route-m3/mesh/weights-half-junk-one-nonjunk-no-pool-removal",
+      "ok": true
+    },
+    {
+      "name": "route-m3/mesh/weighted-draw-reservations-first-no-duplicates-repeatable",
+      "ok": true
+    },
+    {
+      "name": "route-m3/mesh/draw-attribution-includes-offboard-junk",
+      "ok": true
+    },
+    {
+      "name": "route-m3/mesh/deterministic-draw-threshold-proves-half-vs-one",
+      "ok": true
+    },
+    {
+      "name": "route-m3/mesh/no-item-retains-original-shuffle-rng-and-board",
+      "ok": true
+    },
+    {
+      "name": "route-m3/brine/feedstock-to-crystal-first-add-four",
+      "ok": false,
+      "error": "[[1,11],0,12] != [[2,8],0,10]"
+    },
+    {
+      "name": "route-m3/brine/crystal-to-crystal-ineligible",
+      "ok": true
+    },
+    {
+      "name": "route-m3/brine/feedstock-to-noncrystal-ineligible",
+      "ok": true
+    },
+    {
+      "name": "route-m3/fraction/three-live-distinct-crystals-independent-seven",
+      "ok": true
+    },
+    {
+      "name": "route-m3/fraction/duplicate-types-and-offboard-do-not-count",
+      "ok": true
+    },
+    {
+      "name": "route-m3/fraction/first-transient-threshold-survives-later-death",
+      "ok": true
+    },
+    {
+      "name": "route-m3/fraction/repeated-threshold-only-once-per-spin",
+      "ok": true
+    },
+    {
+      "name": "route-m3/residue/first-mist-consume-independent-two",
+      "ok": true
+    },
+    {
+      "name": "route-m3/residue/ordinary-scrap-consume-ineligible",
+      "ok": true
+    },
+    {
+      "name": "route-m3/residue/mist-destroy-ineligible",
+      "ok": true
+    },
+    {
+      "name": "route-m3/bus/ownership-order-does-not-alter-result",
+      "ok": true
+    },
+    {
+      "name": "route-m3/bus/pending-reload-does-not-fire-or-recompute",
+      "ok": true
+    },
+    {
+      "name": "route-m3/bus/storage-envelope-and-backup-counters-preserved",
+      "ok": false,
+      "error": "undefined != {\"version\":1,\"rules\":\"0.3\",\"contentVersion\":\"M3-1\",\"stageState\":{\"claims\":[],\"paymentModifiers\":[]},\"itemState\":{\"version\":1,\"stage\":0,\"spin\":1,\"runCounts\":{\"item_frost_glass/0\":1},\"stageCounts\":{\"item_frost_glass/0\":1},\"spinCounts\":{}},\"seed\":\"M3-ITEM-BUS\",\"rngState\":44785601,\"revision\":1,\"phase\":\"SYMBOL_CHOICE\",\"stage\":0,\"spin\":1,\"spinsRemaining\":5,\"payment\":30,\"cash\":0,\"symbols\":[{\"uid\":\"u11\",\"type\":\"mist_pouch\",\"permanent\":0,\"counters\":{\"age\":1}}],\"items\":[\"item_frost_glass\"],\"nextId\":12,\"rerollTokens\":2,\"removeTokens\":2,\"activeModifiers\":[],\"stats\":{\"spins\":1,\"total\":4,\"best\":4,\"removed\":0,\"stages\":0,\"chosen\":{},\"skipped\":0,\"rerolls\":0,\"events\":0},\"settings\":{\"autosave\":true,\"advanceAccepted\":false},\"history\":[{\"spin\":1,\"total\":4}],\"choices\":[\"alignment_cloth\",\"clinker_router\",\"sorting_tong\"],\"last\":{\"resolvedRules\":\"0.3\",\"board\":[{\"uid\":\"u11\",\"type\":\"mist_pouch\",\"alive\":true},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],\"ledger\":[{\"uid\":\"u11\",\"type\":\"mist_pouch\",\"amount\":4,\"alive\":true,\"multiplier\":1,\"ratio\":[\"1\",\"1\"]}],\"reward\":0,\"total\":4,\"log\":[{\"id\":0,\"parent\":null,\"type\":\"itemEffect\",\"itemId\":\"item_frost_glass\",\"effectKey\":\"item_frost_glass/0\",\"hook\":\"appear\",\"action\":\"add\",\"source\":\"u11\",\"target\":\"u11\",\"depth\":0,\"amount\":3,\"createdUid\":null,\"reason\":null},{\"id\":1,\"parent\":null,\"type\":\"age\",\"source\":\"u11\",\"target\":\"u11\",\"depth\":0,\"event\":\"ON_APPEAR\",\"amount\":null,\"payload\":null}],\"effects\":1},\"pendingSettlement\":4,\"event\":null,\"reservations\":[]}"
+    },
+    {
+      "name": "route-m3/bus/h1-migration-preserves-money-pending-rng-and-h-obligation",
+      "ok": true
+    },
+    {
+      "name": "route-m3/bus/clone-transaction-item-hook-throw-no-state-or-storage-change",
+      "ok": true
+    },
+    {
+      "name": "route-m3/bus/resource-overflow-rolls-back-destruction-and-counts",
+      "ok": true
+    },
+    {
+      "name": "route-m3/schema/missing-state-reject-original-reference",
+      "ok": true
+    },
+    {
+      "name": "route-m3/schema/future-version-reject-original-reference",
+      "ok": true
+    },
+    {
+      "name": "route-m3/schema/unknown-field-reject-original-reference",
+      "ok": true
+    },
+    {
+      "name": "route-m3/schema/negative-count-reject-original-reference",
+      "ok": true
+    },
+    {
+      "name": "route-m3/schema/fraction-count-reject-original-reference",
+      "ok": true
+    },
+    {
+      "name": "route-m3/schema/stage-cap-reject-original-reference",
+      "ok": true
+    },
+    {
+      "name": "route-m3/schema/unowned-counter-reject-original-reference",
+      "ok": true
+    },
+    {
+      "name": "route-m3/schema/unknown-effect-reject-original-reference",
+      "ok": true
+    },
+    {
+      "name": "route-m3/schema/wrong-window-reject-original-reference",
+      "ok": true
+    },
+    {
+      "name": "route-m3/content/unknown-hook-reject",
+      "ok": true
+    },
+    {
+      "name": "route-m3/content/unknown-action-reject",
+      "ok": true
+    },
+    {
+      "name": "route-m3/content/unknown-tag-reject",
+      "ok": true
+    },
+    {
+      "name": "route-m3/content/unknown-field-reject",
+      "ok": true
+    },
+    {
+      "name": "route-m3/content/zero-limit-reject",
+      "ok": true
+    },
+    {
+      "name": "route-m3/content/fraction-amount-reject",
+      "ok": true
+    },
+    {
+      "name": "route-m3/content/bad-window-reject",
+      "ok": true
+    },
+    {
+      "name": "route-m3/logs/itemId-tampering-rejects-save",
+      "ok": true
+    }
+  ]
+}

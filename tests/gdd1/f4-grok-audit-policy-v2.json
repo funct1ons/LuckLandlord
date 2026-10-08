@@ -1,0 +1,2750 @@
+{
+  "auditor": "independent grok full-sim policy-v2 tool audit v1",
+  "scope": "policy-v2 tools + official prefix full-sim-policy-v2-batch- vs original jsonl. Independent counts/Wilson/hashes/replays. Economy NOT APPROVED. Not a recitation of docs/GDD1_FULL_SIM_POLICY_V2.md.",
+  "node": "v24.14.1",
+  "scannedAt": "2026-10-06T08:19:48.703Z",
+  "finishedScanAt": "2026-10-06T08:20:01.413Z",
+  "writtenAt": "2026-10-06T08:28:14.864Z",
+  "verdict": {
+    "tools": "TOOLS_PASS",
+    "economy": "NOT APPROVED",
+    "formalBalance": "NOT APPROVED",
+    "blockReasons": [],
+    "integrityReplayAll": "SAMPLE_CONFIRMED",
+    "note": "Tools are honest on independent numbers. Greedy/Synergy holdout Wilson is outside GDD §13.3 40–70%. Remaining distance to 40% is an economy/price issue. No retune. No phase B."
+  },
+  "z": 1.959963984540054,
+  "hashes": {
+    "docs/GAME_DESIGN_V1.md": {
+      "path": "docs/GAME_DESIGN_V1.md",
+      "bytes": 103576,
+      "sha256": "e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07"
+    },
+    "js/gdd1/resolver.js": {
+      "path": "js/gdd1/resolver.js",
+      "bytes": 27996,
+      "sha256": "e86d51fb4c20d235312b263146f18d2c4cd69c13453846fe0daf9b07a0aaf88b"
+    },
+    "js/gdd1/full-effects.js": {
+      "path": "js/gdd1/full-effects.js",
+      "bytes": 37993,
+      "sha256": "f65bc06b4c38fb35db14cc21f6ed4c63a42efbb06956f71078974990c5d8de55"
+    },
+    "tests/gdd1/f4-grok-freeze-v4.json": {
+      "path": "tests/gdd1/f4-grok-freeze-v4.json",
+      "bytes": 94204,
+      "sha256": "cadba0fa63b151cb1b3a7933697cbeb295e9154ec4adb5bae595ffa7e8c09953"
+    },
+    "tests/gdd1/f4-grok-agg-freeze-v1.json": {
+      "path": "tests/gdd1/f4-grok-agg-freeze-v1.json",
+      "bytes": 2525,
+      "sha256": "af08f789b4b453e45a588f247a70a623f6c15ca62928f3995c2b65d23c5581a2"
+    },
+    "tests/gdd1/full-sim-statistics.json": {
+      "path": "tests/gdd1/full-sim-statistics.json",
+      "bytes": 59337286,
+      "sha256": "3cb38a192b0fc2805d956eda40f91db827f8d43095c9b5d26d33e246eeea04bf"
+    },
+    "docs/GDD1_FULL_SIM.md": {
+      "path": "docs/GDD1_FULL_SIM.md",
+      "bytes": 24474,
+      "sha256": "4a31b21bd65569ac92a3fd0c7aa3f80e2635059388067e587428fa567c723dab"
+    },
+    "docs/GDD1_FULL_SIM_AUDIT.md": {
+      "path": "docs/GDD1_FULL_SIM_AUDIT.md",
+      "bytes": 16285,
+      "sha256": "e08580281e482d8bec0fce9414290401149fbecd171dc4a0f7d17177350ff437"
+    },
+    "docs/GDD1_FULL_SIM_AUDIT_AGG.md": {
+      "path": "docs/GDD1_FULL_SIM_AUDIT_AGG.md",
+      "bytes": 9680,
+      "sha256": "338e34e2fa548038993c8557373de3d5da72751a63ede271ecaac403f114227f"
+    },
+    "docs/GDD1_FULL_SIM_POLICY_V2.md": {
+      "path": "docs/GDD1_FULL_SIM_POLICY_V2.md",
+      "bytes": 31747,
+      "sha256": "c45fa8ae127eacb43467b707d1eb28d5e0c3d2d0c5ea6f9a6518ba95210c62a8"
+    },
+    "tests/gdd1/full-sim-engine.js": {
+      "path": "tests/gdd1/full-sim-engine.js",
+      "bytes": 10020,
+      "sha256": "90531adfbc08ea0f00b037e8366e1379417f2964f97ae0eca16b8fce773f5227"
+    },
+    "tests/gdd1/full-sim-engine-policy-v2.js": {
+      "path": "tests/gdd1/full-sim-engine-policy-v2.js",
+      "bytes": 6006,
+      "sha256": "ae021bf8e4b4e02104cc3a9d141a163ce798270def459b8870247a7d70abd915"
+    },
+    "tests/gdd1/full-sim-run-policy-v2.js": {
+      "path": "tests/gdd1/full-sim-run-policy-v2.js",
+      "bytes": 8824,
+      "sha256": "a72fed888fc71b43b20bfcf93bfff89eb913aadc691031dfc6bddcbe1c348895"
+    },
+    "tests/gdd1/full-sim-stats-policy-v2.js": {
+      "path": "tests/gdd1/full-sim-stats-policy-v2.js",
+      "bytes": 11611,
+      "sha256": "62c1519cad9b2f56cae14b06dc6cac68a14d1549bb452b86a1dff57091356e5a"
+    },
+    "tests/gdd1/full-sim-gates-policy-v2.js": {
+      "path": "tests/gdd1/full-sim-gates-policy-v2.js",
+      "bytes": 6278,
+      "sha256": "6f39d1495712d13f7db89aff0177176182f978f893b099ecbacba55e95f870c6"
+    },
+    "tests/gdd1/full-sim-integrity-policy-v2.js": {
+      "path": "tests/gdd1/full-sim-integrity-policy-v2.js",
+      "bytes": 9119,
+      "sha256": "9ea112b92a91d3aa5376fae0a1da9c4f6c012278b418396d9d2cb23cd315d666"
+    },
+    "tests/gdd1/full-sim-policy-v2-statistics.json": {
+      "path": "tests/gdd1/full-sim-policy-v2-statistics.json",
+      "bytes": 90972565,
+      "sha256": "2d8587f8ffb62ced250ab1f4cbbe1c071c9d5cec3c776e2fb3d885a12e3f29f4"
+    },
+    "tests/gdd1/full-sim-policy-v2-gates.json": {
+      "path": "tests/gdd1/full-sim-policy-v2-gates.json",
+      "bytes": 967389,
+      "sha256": "c8405c7b6633594b1b22fdd096801cc51e14cc8ee0424771a96515aa0f857207"
+    },
+    "tests/gdd1/full-sim-policy-v2-recompute.json": {
+      "path": "tests/gdd1/full-sim-policy-v2-recompute.json",
+      "bytes": 1581,
+      "sha256": "37f4df3fbf45adb40ed87e985d1007e44eb09f303377893492e6e9152a246c18"
+    },
+    "tests/gdd1/full-sim-policy-v2-checks.js": {
+      "path": "tests/gdd1/full-sim-policy-v2-checks.js",
+      "bytes": 4874,
+      "sha256": "bc0fac97dc18eb3ea7ab6a970f6d067b90e5d31919d70437f13aff0c6c37ba36"
+    },
+    "tests/gdd1/full-sim-seeds.json": {
+      "path": "tests/gdd1/full-sim-seeds.json",
+      "bytes": 1078594,
+      "sha256": "2ffb7bf01cfea9a4ed0213af41bcd277c7873471c79725cbbe59f7807150ae31"
+    },
+    "tests/gdd1/f4-grok-audit-sim-v1.json": {
+      "path": "tests/gdd1/f4-grok-audit-sim-v1.json",
+      "bytes": 56366,
+      "sha256": "9b3c5cc1a615ce13d35608abb7bb129a3526b63e6a42ef80f59f8ed868ac9bbf"
+    },
+    "tests/gdd1/f4-grok-audit-sim-agg-v1.json": {
+      "path": "tests/gdd1/f4-grok-audit-sim-agg-v1.json",
+      "bytes": 50437,
+      "sha256": "36cb6592218f2ff04f350ad1afe08750e57dbcccf3b421942c76a760246cfe1e"
+    },
+    "tests/gdd1/full-sim-policy-v2-integrity.json": {
+      "path": "tests/gdd1/full-sim-policy-v2-integrity.json",
+      "bytes": 24377,
+      "sha256": "8d7ff470d7dc504e0a2163f0b93a8926d8194a6c15df85c34f0d62d9f562220f"
+    },
+    "js/gdd1/rng.js": {
+      "path": "js/gdd1/rng.js",
+      "bytes": 1680,
+      "sha256": "f3f5c055a8e3f4d5e18d355488194f94dfbc28603be7c29a5aab1743bd6704f7"
+    },
+    "js/gdd1/contract.js": {
+      "path": "js/gdd1/contract.js",
+      "bytes": 4911,
+      "sha256": "b7bd44d05ccdd4ffffe13e4949f7de92f3c7f37e628feaf3a6bf58023e7ea5c9"
+    },
+    "js/gdd1/full-controller.js": {
+      "path": "js/gdd1/full-controller.js",
+      "bytes": 7963,
+      "sha256": "2c44f91f7f8806216b06666e685cbd4ab1a6f4ca2973528b7022102cd13e4558"
+    },
+    "gdd1.html": {
+      "path": "gdd1.html",
+      "bytes": 2266,
+      "sha256": "57a8bc7f8e770e6f0dc316f859f473840daf243ff5b54dc6033d0119c5ec20d5"
+    }
+  },
+  "jsonlHashes": {
+    "tests/gdd1/full-sim-policy-v2-batch-greedy-holdout-0.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-greedy-holdout-0.jsonl",
+      "bytes": 60128594,
+      "sha256": "bcf0f6e6ceb41686730fb7d37d6122717c1705d84b7183df6c6dc165770d5964"
+    },
+    "tests/gdd1/full-sim-policy-v2-batch-greedy-holdout-500.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-greedy-holdout-500.jsonl",
+      "bytes": 60290962,
+      "sha256": "9a1d122d3a008a7836778183aec975efada9285019a96814d63bb7e8ddde923f"
+    },
+    "tests/gdd1/full-sim-policy-v2-batch-greedy-train-0.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-greedy-train-0.jsonl",
+      "bytes": 60004315,
+      "sha256": "c9908078a893570622f558dd21fb907c0e0b87b8f2e623901d5c3b309d959085"
+    },
+    "tests/gdd1/full-sim-policy-v2-batch-greedy-train-500.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-greedy-train-500.jsonl",
+      "bytes": 60052712,
+      "sha256": "a56a7d3cab5cd0bb18049ee1bfa1f97e38f56f7bf8c1dae32614a577fab549ad"
+    },
+    "tests/gdd1/full-sim-policy-v2-batch-random-holdout-0.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-random-holdout-0.jsonl",
+      "bytes": 43342588,
+      "sha256": "e859ce3ae24b9f27072ee79dcc2e2a2f4c95544e056fc4286e482c365a87a175"
+    },
+    "tests/gdd1/full-sim-policy-v2-batch-random-holdout-500.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-random-holdout-500.jsonl",
+      "bytes": 43573589,
+      "sha256": "38c2e067a752c3cbf6381a8bd996c4d798499e48c13e27f652e87727063beff8"
+    },
+    "tests/gdd1/full-sim-policy-v2-batch-random-train-0.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-random-train-0.jsonl",
+      "bytes": 43278115,
+      "sha256": "9bcc6c2975151d5fe193b8db98f8a962283314fa4a28b8ca1c58323ff159d47e"
+    },
+    "tests/gdd1/full-sim-policy-v2-batch-random-train-500.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-random-train-500.jsonl",
+      "bytes": 42960538,
+      "sha256": "584dd9fa4ccd4e9a1da4e1963423f9ce3624f38566f4353ae999a098277e57a0"
+    },
+    "tests/gdd1/full-sim-policy-v2-batch-synergy-holdout-0.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-synergy-holdout-0.jsonl",
+      "bytes": 59891144,
+      "sha256": "36c35d8feeb96bd6bbf03aab271a557aa2912962500eb33a9366f1d13d9bd7ee"
+    },
+    "tests/gdd1/full-sim-policy-v2-batch-synergy-holdout-500.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-synergy-holdout-500.jsonl",
+      "bytes": 60047058,
+      "sha256": "4219579af1b1c5f446aad2b40ec4e24c7e481ff1ebdecf6ea6226bd2d990a1df"
+    },
+    "tests/gdd1/full-sim-policy-v2-batch-synergy-train-0.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-synergy-train-0.jsonl",
+      "bytes": 60091441,
+      "sha256": "344b66807ad2a4b8a1c2a330961d5b9b4e6595a6fe48bba04e1be510886be9fe"
+    },
+    "tests/gdd1/full-sim-policy-v2-batch-synergy-train-500.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-synergy-train-500.jsonl",
+      "bytes": 60218579,
+      "sha256": "332ec04e508dafa23ce4f0ba13e19698ca0c7024ec993d54c2f3c605907a6134"
+    },
+    "tests/gdd1/full-sim-policy-v2-batch-value-holdout-0.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-value-holdout-0.jsonl",
+      "bytes": 61424389,
+      "sha256": "e146d258ba2976f26cc530689fca38c617e5f5fa6702dd53b6cd9c54c4b6e113"
+    },
+    "tests/gdd1/full-sim-policy-v2-batch-value-holdout-500.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-value-holdout-500.jsonl",
+      "bytes": 61361086,
+      "sha256": "c944a49fb093ad180f3dfa5f65244468e88f883f37dc7955b7b82688532fb213"
+    },
+    "tests/gdd1/full-sim-policy-v2-batch-value-train-0.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-value-train-0.jsonl",
+      "bytes": 61393809,
+      "sha256": "b6789f0faaa0d999f04ed02d97ca5e79446323eb9ae8ebb4dca85697f9704ca0"
+    },
+    "tests/gdd1/full-sim-policy-v2-batch-value-train-500.jsonl": {
+      "path": "tests/gdd1/full-sim-policy-v2-batch-value-train-500.jsonl",
+      "bytes": 61475072,
+      "sha256": "f88a53dc8fa322ed8993bb6f3e51f3dec9cee5e265f8698211fa4c78b4338b20"
+    }
+  },
+  "v1JsonlHashes": {
+    "tests/gdd1/full-sim-batch-v3-greedy-holdout-0.jsonl": {
+      "path": "tests/gdd1/full-sim-batch-v3-greedy-holdout-0.jsonl",
+      "bytes": 47048706,
+      "sha256": "e5960fc0611eb16564534cea3775d3430b97f69b9ad07615f61b74434a6da46a"
+    },
+    "tests/gdd1/full-sim-batch-v3-greedy-holdout-500.jsonl": {
+      "path": "tests/gdd1/full-sim-batch-v3-greedy-holdout-500.jsonl",
+      "bytes": 47464778,
+      "sha256": "f4f30704cbf9e1d07eb28baf6fb328ef6787df932c66c5959cbc92125e31de99"
+    },
+    "tests/gdd1/full-sim-batch-v3-greedy-train-0.jsonl": {
+      "path": "tests/gdd1/full-sim-batch-v3-greedy-train-0.jsonl",
+      "bytes": 47181493,
+      "sha256": "5c542f160f064c14ebd872fa3bc6f9d67995d8b1d564c2e668b34d740aa0bf3b"
+    },
+    "tests/gdd1/full-sim-batch-v3-greedy-train-500.jsonl": {
+      "path": "tests/gdd1/full-sim-batch-v3-greedy-train-500.jsonl",
+      "bytes": 47442738,
+      "sha256": "7f54b6d6d01adcdf374ab20b90a126570711cc9d41d31e8fe0edf504bb93c800"
+    },
+    "tests/gdd1/full-sim-batch-v3-random-holdout-0.jsonl": {
+      "path": "tests/gdd1/full-sim-batch-v3-random-holdout-0.jsonl",
+      "bytes": 42232050,
+      "sha256": "9fe8fcf3c500756aa1f4465d922086c261c2d5a7f60d653b90c10f518dd4c2c6"
+    },
+    "tests/gdd1/full-sim-batch-v3-random-holdout-500.jsonl": {
+      "path": "tests/gdd1/full-sim-batch-v3-random-holdout-500.jsonl",
+      "bytes": 42460177,
+      "sha256": "c408336bc44c9743b617713c0c3d3486edc9ea598282aafb71b920624dd00df0"
+    },
+    "tests/gdd1/full-sim-batch-v3-random-train-0.jsonl": {
+      "path": "tests/gdd1/full-sim-batch-v3-random-train-0.jsonl",
+      "bytes": 42169093,
+      "sha256": "0a510219d81d56a547aefb2b4d99d1b9f0ccad5ddc8161fc785c21c254157264"
+    },
+    "tests/gdd1/full-sim-batch-v3-random-train-500.jsonl": {
+      "path": "tests/gdd1/full-sim-batch-v3-random-train-500.jsonl",
+      "bytes": 41858916,
+      "sha256": "c47be41a559e3b618a2e051ffadaf1e83f365c8d8961f256c385676783343060"
+    },
+    "tests/gdd1/full-sim-batch-v3-synergy-holdout-0.jsonl": {
+      "path": "tests/gdd1/full-sim-batch-v3-synergy-holdout-0.jsonl",
+      "bytes": 42151262,
+      "sha256": "16b1a40122c43386936cb4eb15e497e1447703ebb789ba205d5493a6e7a1a350"
+    },
+    "tests/gdd1/full-sim-batch-v3-synergy-holdout-500.jsonl": {
+      "path": "tests/gdd1/full-sim-batch-v3-synergy-holdout-500.jsonl",
+      "bytes": 42312216,
+      "sha256": "7c40b183f8cef53d678cd601237111323277b13b6ed3114050f8be1b4bd8290b"
+    },
+    "tests/gdd1/full-sim-batch-v3-synergy-train-0.jsonl": {
+      "path": "tests/gdd1/full-sim-batch-v3-synergy-train-0.jsonl",
+      "bytes": 42734218,
+      "sha256": "3f1b335c7ffe9ae237bb50b0484d8a4870f6fa384be9fcdc49ea4d3f894f54af"
+    },
+    "tests/gdd1/full-sim-batch-v3-synergy-train-500.jsonl": {
+      "path": "tests/gdd1/full-sim-batch-v3-synergy-train-500.jsonl",
+      "bytes": 42630860,
+      "sha256": "a1b8f39f64fb06003bbb88f36bc2317a9e7c8cadb920bc10ef21f73bc677f46d"
+    },
+    "tests/gdd1/full-sim-batch-v3-value-holdout-0.jsonl": {
+      "path": "tests/gdd1/full-sim-batch-v3-value-holdout-0.jsonl",
+      "bytes": 45930224,
+      "sha256": "277f7bc01a2135747aee3d2384a192ee95498b5bfaf0cbc987c328a172b919ad"
+    },
+    "tests/gdd1/full-sim-batch-v3-value-holdout-500.jsonl": {
+      "path": "tests/gdd1/full-sim-batch-v3-value-holdout-500.jsonl",
+      "bytes": 46509895,
+      "sha256": "607c6b2837a7be2efa11b66c738e7fd4d1e3cbee123474c9f960774addfca22e"
+    },
+    "tests/gdd1/full-sim-batch-v3-value-train-0.jsonl": {
+      "path": "tests/gdd1/full-sim-batch-v3-value-train-0.jsonl",
+      "bytes": 45897176,
+      "sha256": "29c5640f08405f81a258cff455345734720a3aa35a49f85ef6730208ea711dc2"
+    },
+    "tests/gdd1/full-sim-batch-v3-value-train-500.jsonl": {
+      "path": "tests/gdd1/full-sim-batch-v3-value-train-500.jsonl",
+      "bytes": 46611398,
+      "sha256": "c549d36f7140e8e9e25e1a0b19c07bd3e7c2537d1e8b41df7a495c8201ad5b22"
+    }
+  },
+  "freeze": {
+    "v4": {
+      "entryCount": 436,
+      "independentlyHashedOk": 436,
+      "fail": 0,
+      "failRows": [],
+      "verifyCommand": "node tests/gdd1/f4-grok-freeze-v4.js --verify",
+      "verifyPass": true,
+      "verifyEntries": "436/436",
+      "sha256": "cadba0fa63b151cb1b3a7933697cbeb295e9154ec4adb5bae595ffa7e8c09953"
+    },
+    "agg": {
+      "entryCount": 8,
+      "independentlyHashedOk": 8,
+      "fail": 0,
+      "failRows": [],
+      "verifyCommand": "node tests/gdd1/f4-grok-agg-freeze-v1.js --verify",
+      "verifyPass": true,
+      "verifyEntries": "8/8",
+      "sha256": "af08f789b4b453e45a588f247a70a623f6c15ca62928f3995c2b65d23c5581a2"
+    }
+  },
+  "production": {
+    "docs/GAME_DESIGN_V1.md": {
+      "path": "docs/GAME_DESIGN_V1.md",
+      "bytes": 103576,
+      "sha256": "e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07"
+    },
+    "js/gdd1/resolver.js": {
+      "path": "js/gdd1/resolver.js",
+      "bytes": 27996,
+      "sha256": "e86d51fb4c20d235312b263146f18d2c4cd69c13453846fe0daf9b07a0aaf88b"
+    },
+    "js/gdd1/full-effects.js": {
+      "path": "js/gdd1/full-effects.js",
+      "bytes": 37993,
+      "sha256": "f65bc06b4c38fb35db14cc21f6ed4c63a42efbb06956f71078974990c5d8de55"
+    },
+    "js/gdd1/full-controller.js": {
+      "path": "js/gdd1/full-controller.js",
+      "bytes": 7963,
+      "sha256": "2c44f91f7f8806216b06666e685cbd4ab1a6f4ca2973528b7022102cd13e4558"
+    },
+    "js/gdd1/rng.js": {
+      "path": "js/gdd1/rng.js",
+      "bytes": 1680,
+      "sha256": "f3f5c055a8e3f4d5e18d355488194f94dfbc28603be7c29a5aab1743bd6704f7"
+    },
+    "js/gdd1/contract.js": {
+      "path": "js/gdd1/contract.js",
+      "bytes": 4911,
+      "sha256": "b7bd44d05ccdd4ffffe13e4949f7de92f3c7f37e628feaf3a6bf58023e7ea5c9"
+    },
+    "gdd1.html": {
+      "path": "gdd1.html",
+      "bytes": 2266,
+      "sha256": "57a8bc7f8e770e6f0dc316f859f473840daf243ff5b54dc6033d0119c5ec20d5"
+    }
+  },
+  "policyV2Tools": {
+    "tests/gdd1/full-sim-engine.js": {
+      "path": "tests/gdd1/full-sim-engine.js",
+      "bytes": 10020,
+      "sha256": "90531adfbc08ea0f00b037e8366e1379417f2964f97ae0eca16b8fce773f5227"
+    },
+    "tests/gdd1/full-sim-engine-policy-v2.js": {
+      "path": "tests/gdd1/full-sim-engine-policy-v2.js",
+      "bytes": 6006,
+      "sha256": "ae021bf8e4b4e02104cc3a9d141a163ce798270def459b8870247a7d70abd915"
+    },
+    "tests/gdd1/full-sim-run-policy-v2.js": {
+      "path": "tests/gdd1/full-sim-run-policy-v2.js",
+      "bytes": 8824,
+      "sha256": "a72fed888fc71b43b20bfcf93bfff89eb913aadc691031dfc6bddcbe1c348895"
+    },
+    "tests/gdd1/full-sim-stats-policy-v2.js": {
+      "path": "tests/gdd1/full-sim-stats-policy-v2.js",
+      "bytes": 11611,
+      "sha256": "62c1519cad9b2f56cae14b06dc6cac68a14d1549bb452b86a1dff57091356e5a"
+    },
+    "tests/gdd1/full-sim-gates-policy-v2.js": {
+      "path": "tests/gdd1/full-sim-gates-policy-v2.js",
+      "bytes": 6278,
+      "sha256": "6f39d1495712d13f7db89aff0177176182f978f893b099ecbacba55e95f870c6"
+    },
+    "tests/gdd1/full-sim-integrity-policy-v2.js": {
+      "path": "tests/gdd1/full-sim-integrity-policy-v2.js",
+      "bytes": 9119,
+      "sha256": "9ea112b92a91d3aa5376fae0a1da9c4f6c012278b418396d9d2cb23cd315d666"
+    },
+    "tests/gdd1/full-sim-policy-v2-statistics.json": {
+      "path": "tests/gdd1/full-sim-policy-v2-statistics.json",
+      "bytes": 90972565,
+      "sha256": "2d8587f8ffb62ced250ab1f4cbbe1c071c9d5cec3c776e2fb3d885a12e3f29f4"
+    },
+    "tests/gdd1/full-sim-policy-v2-gates.json": {
+      "path": "tests/gdd1/full-sim-policy-v2-gates.json",
+      "bytes": 967389,
+      "sha256": "c8405c7b6633594b1b22fdd096801cc51e14cc8ee0424771a96515aa0f857207"
+    },
+    "tests/gdd1/full-sim-policy-v2-recompute.json": {
+      "path": "tests/gdd1/full-sim-policy-v2-recompute.json",
+      "bytes": 1581,
+      "sha256": "37f4df3fbf45adb40ed87e985d1007e44eb09f303377893492e6e9152a246c18"
+    },
+    "tests/gdd1/full-sim-policy-v2-integrity.json": {
+      "path": "tests/gdd1/full-sim-policy-v2-integrity.json",
+      "bytes": 24377,
+      "sha256": "8d7ff470d7dc504e0a2163f0b93a8926d8194a6c15df85c34f0d62d9f562220f"
+    },
+    "docs/GDD1_FULL_SIM_POLICY_V2.md": {
+      "path": "docs/GDD1_FULL_SIM_POLICY_V2.md",
+      "bytes": 31747,
+      "sha256": "c45fa8ae127eacb43467b707d1eb28d5e0c3d2d0c5ea6f9a6518ba95210c62a8"
+    }
+  },
+  "counts": {
+    "v2Files": 16,
+    "games": 8000,
+    "indexHashes": 8000,
+    "indexMismatches": 0,
+    "uniqueSeeds": 8000,
+    "duplicateSeeds": 0,
+    "duplicateBotSplitIndex": 0,
+    "missingVsCatalog": 0,
+    "extraVsCatalog": 0,
+    "train": 4000,
+    "holdout": 4000,
+    "sharedExactSeedStrings": 0,
+    "attributionFails": 0,
+    "commandErrors": 0,
+    "unfinished": 0,
+    "gameErrors": 0,
+    "policySeedFails": 0,
+    "catalogFails": 0,
+    "sampleRecordKeys": [
+      "acquisitions",
+      "actions",
+      "bot",
+      "contributions",
+      "error",
+      "exposures",
+      "finalHash",
+      "finalState",
+      "firstFormation",
+      "index",
+      "lookahead",
+      "modelCommands",
+      "ms",
+      "outcome",
+      "payments",
+      "paymentsTable",
+      "policyRng",
+      "policySeed",
+      "seed",
+      "spins",
+      "split",
+      "startPool",
+      "uidHistory",
+      "version",
+      "won"
+    ],
+    "gamesHaveLogField": 0
+  },
+  "groups": {
+    "Greedy/holdout": {
+      "n": 1000,
+      "wins": 233,
+      "errors": 0,
+      "unfinished": 0,
+      "uniqueSeeds": 1000,
+      "uniqueKeys": 1000,
+      "winRate": {
+        "k": 233,
+        "n": 1000,
+        "rate": 0.233,
+        "lo": 0.20785061925196213,
+        "hi": 0.2601928697793244
+      },
+      "winRatePct": {
+        "rate": "23.30%",
+        "lo": "20.79%",
+        "hi": "26.02%"
+      },
+      "unused": [],
+      "actions": {
+        "spin": 64525,
+        "remove": 9496,
+        "choose": 36055,
+        "reroll": 9683,
+        "item": 8314,
+        "skip": 28470,
+        "eventB": 902,
+        "eventA": 1128,
+        "skipItem": 1
+      },
+      "logOps": {},
+      "hasLogField": 0,
+      "liveCommands": 158574,
+      "formed": 1000,
+      "mixed": 996,
+      "winRoutes": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "unformed": 0,
+        "mixed": 233
+      },
+      "stage1Paid": 1000,
+      "stage3Paid": 1000,
+      "stage6Paid": 999,
+      "stage": [
+        {
+          "stage": 1,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 2,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 3,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 4,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 5,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 6,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 999,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 999
+        },
+        {
+          "stage": 7,
+          "reachedFromSpins": 999,
+          "reachedFromStageId": 999,
+          "paid": 996,
+          "statsReachedK": 999,
+          "statsSurvivalK": 996
+        },
+        {
+          "stage": 8,
+          "reachedFromSpins": 996,
+          "reachedFromStageId": 996,
+          "paid": 902,
+          "statsReachedK": 996,
+          "statsSurvivalK": 902
+        },
+        {
+          "stage": 9,
+          "reachedFromSpins": 902,
+          "reachedFromStageId": 902,
+          "paid": 418,
+          "statsReachedK": 902,
+          "statsSurvivalK": 418
+        },
+        {
+          "stage": 10,
+          "reachedFromSpins": 418,
+          "reachedFromStageId": 418,
+          "paid": 233,
+          "statsReachedK": 418,
+          "statsSurvivalK": 233
+        }
+      ],
+      "attributionFails": 0,
+      "commandErrors": 0,
+      "contribSum": 5914521,
+      "spinIncomeSum": 5914521,
+      "policySeedFails": 0,
+      "catalogFails": 0,
+      "statsWinRate": {
+        "k": 233,
+        "n": 1000,
+        "rate": 0.233,
+        "lo": 0.20785061925196213,
+        "hi": 0.2601928697793244
+      }
+    },
+    "Greedy/train": {
+      "n": 1000,
+      "wins": 238,
+      "errors": 0,
+      "unfinished": 0,
+      "uniqueSeeds": 1000,
+      "uniqueKeys": 1000,
+      "winRate": {
+        "k": 238,
+        "n": 1000,
+        "rate": 0.238,
+        "lo": 0.21263955247557198,
+        "hi": 0.2653656689708589
+      },
+      "winRatePct": {
+        "rate": "23.80%",
+        "lo": "21.26%",
+        "hi": "26.54%"
+      },
+      "unused": [
+        "skipItem"
+      ],
+      "actions": {
+        "spin": 64433,
+        "remove": 9521,
+        "choose": 35893,
+        "reroll": 9536,
+        "item": 8304,
+        "skip": 28540,
+        "eventB": 949,
+        "eventA": 1071
+      },
+      "logOps": {},
+      "hasLogField": 0,
+      "liveCommands": 158247,
+      "formed": 1000,
+      "mixed": 998,
+      "winRoutes": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "unformed": 0,
+        "mixed": 238
+      },
+      "stage1Paid": 1000,
+      "stage3Paid": 1000,
+      "stage6Paid": 1000,
+      "stage": [
+        {
+          "stage": 1,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 2,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 3,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 4,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 5,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 6,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 7,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 999,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 999
+        },
+        {
+          "stage": 8,
+          "reachedFromSpins": 999,
+          "reachedFromStageId": 999,
+          "paid": 887,
+          "statsReachedK": 999,
+          "statsSurvivalK": 887
+        },
+        {
+          "stage": 9,
+          "reachedFromSpins": 887,
+          "reachedFromStageId": 887,
+          "paid": 418,
+          "statsReachedK": 887,
+          "statsSurvivalK": 418
+        },
+        {
+          "stage": 10,
+          "reachedFromSpins": 418,
+          "reachedFromStageId": 418,
+          "paid": 238,
+          "statsReachedK": 418,
+          "statsSurvivalK": 238
+        }
+      ],
+      "attributionFails": 0,
+      "commandErrors": 0,
+      "contribSum": 5915443,
+      "spinIncomeSum": 5915443,
+      "policySeedFails": 0,
+      "catalogFails": 0,
+      "statsWinRate": {
+        "k": 238,
+        "n": 1000,
+        "rate": 0.238,
+        "lo": 0.21263955247557198,
+        "hi": 0.2653656689708589
+      }
+    },
+    "Random/holdout": {
+      "n": 1000,
+      "wins": 0,
+      "errors": 0,
+      "unfinished": 0,
+      "uniqueSeeds": 1000,
+      "uniqueKeys": 1000,
+      "winRate": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "winRatePct": {
+        "rate": "0.00%",
+        "lo": "0.00%",
+        "hi": "0.38%"
+      },
+      "unused": [],
+      "actions": {
+        "remove": 6722,
+        "spin": 44677,
+        "choose": 33505,
+        "reroll": 7370,
+        "item": 4242,
+        "skip": 11172,
+        "eventA": 946,
+        "eventB": 464,
+        "skipItem": 1426
+      },
+      "logOps": {},
+      "hasLogField": 0,
+      "liveCommands": 110524,
+      "formed": 996,
+      "mixed": 972,
+      "winRoutes": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "unformed": 0,
+        "mixed": 0
+      },
+      "stage1Paid": 1000,
+      "stage3Paid": 999,
+      "stage6Paid": 640,
+      "stage": [
+        {
+          "stage": 1,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 2,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 3,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 999,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 999
+        },
+        {
+          "stage": 4,
+          "reachedFromSpins": 999,
+          "reachedFromStageId": 999,
+          "paid": 992,
+          "statsReachedK": 999,
+          "statsSurvivalK": 992
+        },
+        {
+          "stage": 5,
+          "reachedFromSpins": 992,
+          "reachedFromStageId": 992,
+          "paid": 955,
+          "statsReachedK": 992,
+          "statsSurvivalK": 955
+        },
+        {
+          "stage": 6,
+          "reachedFromSpins": 955,
+          "reachedFromStageId": 955,
+          "paid": 640,
+          "statsReachedK": 955,
+          "statsSurvivalK": 640
+        },
+        {
+          "stage": 7,
+          "reachedFromSpins": 640,
+          "reachedFromStageId": 640,
+          "paid": 81,
+          "statsReachedK": 640,
+          "statsSurvivalK": 81
+        },
+        {
+          "stage": 8,
+          "reachedFromSpins": 81,
+          "reachedFromStageId": 81,
+          "paid": 1,
+          "statsReachedK": 81,
+          "statsSurvivalK": 1
+        },
+        {
+          "stage": 9,
+          "reachedFromSpins": 1,
+          "reachedFromStageId": 1,
+          "paid": 0,
+          "statsReachedK": 1,
+          "statsSurvivalK": 0
+        },
+        {
+          "stage": 10,
+          "reachedFromSpins": 0,
+          "reachedFromStageId": 0,
+          "paid": 0,
+          "statsReachedK": 0,
+          "statsSurvivalK": 0
+        }
+      ],
+      "attributionFails": 0,
+      "commandErrors": 0,
+      "contribSum": 2209731,
+      "spinIncomeSum": 2209731,
+      "policySeedFails": 0,
+      "catalogFails": 0,
+      "statsWinRate": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      }
+    },
+    "Random/train": {
+      "n": 1000,
+      "wins": 0,
+      "errors": 0,
+      "unfinished": 0,
+      "uniqueSeeds": 1000,
+      "uniqueKeys": 1000,
+      "winRate": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      },
+      "winRatePct": {
+        "rate": "0.00%",
+        "lo": "0.00%",
+        "hi": "0.38%"
+      },
+      "unused": [],
+      "actions": {
+        "remove": 6695,
+        "spin": 44383,
+        "choose": 33271,
+        "skip": 11112,
+        "skipItem": 1404,
+        "eventA": 884,
+        "item": 4222,
+        "reroll": 7257,
+        "eventB": 499
+      },
+      "logOps": {},
+      "hasLogField": 0,
+      "liveCommands": 109727,
+      "formed": 996,
+      "mixed": 973,
+      "winRoutes": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "unformed": 0,
+        "mixed": 0
+      },
+      "stage1Paid": 1000,
+      "stage3Paid": 1000,
+      "stage6Paid": 631,
+      "stage": [
+        {
+          "stage": 1,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 2,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 3,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 4,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 987,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 987
+        },
+        {
+          "stage": 5,
+          "reachedFromSpins": 987,
+          "reachedFromStageId": 987,
+          "paid": 938,
+          "statsReachedK": 987,
+          "statsSurvivalK": 938
+        },
+        {
+          "stage": 6,
+          "reachedFromSpins": 938,
+          "reachedFromStageId": 938,
+          "paid": 631,
+          "statsReachedK": 938,
+          "statsSurvivalK": 631
+        },
+        {
+          "stage": 7,
+          "reachedFromSpins": 631,
+          "reachedFromStageId": 631,
+          "paid": 69,
+          "statsReachedK": 631,
+          "statsSurvivalK": 69
+        },
+        {
+          "stage": 8,
+          "reachedFromSpins": 69,
+          "reachedFromStageId": 69,
+          "paid": 1,
+          "statsReachedK": 69,
+          "statsSurvivalK": 1
+        },
+        {
+          "stage": 9,
+          "reachedFromSpins": 1,
+          "reachedFromStageId": 1,
+          "paid": 0,
+          "statsReachedK": 1,
+          "statsSurvivalK": 0
+        },
+        {
+          "stage": 10,
+          "reachedFromSpins": 0,
+          "reachedFromStageId": 0,
+          "paid": 0,
+          "statsReachedK": 0,
+          "statsSurvivalK": 0
+        }
+      ],
+      "attributionFails": 0,
+      "commandErrors": 0,
+      "contribSum": 2179227,
+      "spinIncomeSum": 2179227,
+      "policySeedFails": 0,
+      "catalogFails": 0,
+      "statsWinRate": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234
+      }
+    },
+    "Synergy/holdout": {
+      "n": 1000,
+      "wins": 239,
+      "errors": 0,
+      "unfinished": 0,
+      "uniqueSeeds": 1000,
+      "uniqueKeys": 1000,
+      "winRate": {
+        "k": 239,
+        "n": 1000,
+        "rate": 0.239,
+        "lo": 0.2135979397357572,
+        "hi": 0.2663996281937026
+      },
+      "winRatePct": {
+        "rate": "23.90%",
+        "lo": "21.36%",
+        "hi": "26.64%"
+      },
+      "unused": [
+        "skipItem"
+      ],
+      "actions": {
+        "spin": 64499,
+        "choose": 35509,
+        "remove": 9508,
+        "reroll": 9444,
+        "item": 8312,
+        "skip": 28990,
+        "eventA": 1100,
+        "eventB": 937
+      },
+      "logOps": {},
+      "hasLogField": 0,
+      "liveCommands": 158299,
+      "formed": 1000,
+      "mixed": 998,
+      "winRoutes": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "unformed": 0,
+        "mixed": 239
+      },
+      "stage1Paid": 1000,
+      "stage3Paid": 1000,
+      "stage6Paid": 1000,
+      "stage": [
+        {
+          "stage": 1,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 2,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 3,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 4,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 5,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 6,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 7,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 997,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 997
+        },
+        {
+          "stage": 8,
+          "reachedFromSpins": 997,
+          "reachedFromStageId": 997,
+          "paid": 893,
+          "statsReachedK": 997,
+          "statsSurvivalK": 893
+        },
+        {
+          "stage": 9,
+          "reachedFromSpins": 893,
+          "reachedFromStageId": 893,
+          "paid": 422,
+          "statsReachedK": 893,
+          "statsSurvivalK": 422
+        },
+        {
+          "stage": 10,
+          "reachedFromSpins": 422,
+          "reachedFromStageId": 422,
+          "paid": 239,
+          "statsReachedK": 422,
+          "statsSurvivalK": 239
+        }
+      ],
+      "attributionFails": 0,
+      "commandErrors": 0,
+      "contribSum": 5982383,
+      "spinIncomeSum": 5982383,
+      "policySeedFails": 0,
+      "catalogFails": 0,
+      "statsWinRate": {
+        "k": 239,
+        "n": 1000,
+        "rate": 0.239,
+        "lo": 0.2135979397357572,
+        "hi": 0.2663996281937026
+      }
+    },
+    "Synergy/train": {
+      "n": 1000,
+      "wins": 225,
+      "errors": 0,
+      "unfinished": 0,
+      "uniqueSeeds": 1000,
+      "uniqueKeys": 1000,
+      "winRate": {
+        "k": 225,
+        "n": 1000,
+        "rate": 0.225,
+        "lo": 0.20019895514206568,
+        "hi": 0.25190576202498965
+      },
+      "winRatePct": {
+        "rate": "22.50%",
+        "lo": "20.02%",
+        "hi": "25.19%"
+      },
+      "unused": [],
+      "actions": {
+        "spin": 64627,
+        "choose": 35683,
+        "reroll": 9498,
+        "remove": 9539,
+        "item": 8327,
+        "skip": 28944,
+        "eventA": 1077,
+        "eventB": 909,
+        "skipItem": 1
+      },
+      "logOps": {},
+      "hasLogField": 0,
+      "liveCommands": 158605,
+      "formed": 1000,
+      "mixed": 996,
+      "winRoutes": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "unformed": 0,
+        "mixed": 225
+      },
+      "stage1Paid": 1000,
+      "stage3Paid": 1000,
+      "stage6Paid": 999,
+      "stage": [
+        {
+          "stage": 1,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 2,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 3,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 4,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 5,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 6,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 999,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 999
+        },
+        {
+          "stage": 7,
+          "reachedFromSpins": 999,
+          "reachedFromStageId": 999,
+          "paid": 998,
+          "statsReachedK": 999,
+          "statsSurvivalK": 998
+        },
+        {
+          "stage": 8,
+          "reachedFromSpins": 998,
+          "reachedFromStageId": 998,
+          "paid": 896,
+          "statsReachedK": 998,
+          "statsSurvivalK": 896
+        },
+        {
+          "stage": 9,
+          "reachedFromSpins": 896,
+          "reachedFromStageId": 896,
+          "paid": 435,
+          "statsReachedK": 896,
+          "statsSurvivalK": 435
+        },
+        {
+          "stage": 10,
+          "reachedFromSpins": 435,
+          "reachedFromStageId": 435,
+          "paid": 225,
+          "statsReachedK": 435,
+          "statsSurvivalK": 225
+        }
+      ],
+      "attributionFails": 0,
+      "commandErrors": 0,
+      "contribSum": 5961192,
+      "spinIncomeSum": 5961192,
+      "policySeedFails": 0,
+      "catalogFails": 0,
+      "statsWinRate": {
+        "k": 225,
+        "n": 1000,
+        "rate": 0.225,
+        "lo": 0.20019895514206568,
+        "hi": 0.25190576202498965
+      }
+    },
+    "Value/holdout": {
+      "n": 1000,
+      "wins": 299,
+      "errors": 0,
+      "unfinished": 0,
+      "uniqueSeeds": 1000,
+      "uniqueKeys": 1000,
+      "winRate": {
+        "k": 299,
+        "n": 1000,
+        "rate": 0.299,
+        "lo": 0.27143763442230356,
+        "hi": 0.3281007224888896
+      },
+      "winRatePct": {
+        "rate": "29.90%",
+        "lo": "27.14%",
+        "hi": "32.81%"
+      },
+      "unused": [
+        "skipItem"
+      ],
+      "actions": {
+        "spin": 65417,
+        "choose": 35669,
+        "reroll": 10855,
+        "item": 8427,
+        "remove": 9643,
+        "skip": 29748,
+        "eventA": 1134,
+        "eventB": 887
+      },
+      "logOps": {},
+      "hasLogField": 0,
+      "liveCommands": 161780,
+      "formed": 1000,
+      "mixed": 997,
+      "winRoutes": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "unformed": 0,
+        "mixed": 299
+      },
+      "stage1Paid": 1000,
+      "stage3Paid": 1000,
+      "stage6Paid": 1000,
+      "stage": [
+        {
+          "stage": 1,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 2,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 3,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 4,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 5,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 6,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 7,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 999,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 999
+        },
+        {
+          "stage": 8,
+          "reachedFromSpins": 999,
+          "reachedFromStageId": 999,
+          "paid": 919,
+          "statsReachedK": 999,
+          "statsSurvivalK": 919
+        },
+        {
+          "stage": 9,
+          "reachedFromSpins": 919,
+          "reachedFromStageId": 919,
+          "paid": 509,
+          "statsReachedK": 919,
+          "statsSurvivalK": 509
+        },
+        {
+          "stage": 10,
+          "reachedFromSpins": 509,
+          "reachedFromStageId": 509,
+          "paid": 299,
+          "statsReachedK": 509,
+          "statsSurvivalK": 299
+        }
+      ],
+      "attributionFails": 0,
+      "commandErrors": 0,
+      "contribSum": 6289339,
+      "spinIncomeSum": 6289339,
+      "policySeedFails": 0,
+      "catalogFails": 0,
+      "statsWinRate": {
+        "k": 299,
+        "n": 1000,
+        "rate": 0.299,
+        "lo": 0.27143763442230356,
+        "hi": 0.3281007224888896
+      }
+    },
+    "Value/train": {
+      "n": 1000,
+      "wins": 291,
+      "errors": 0,
+      "unfinished": 0,
+      "uniqueSeeds": 1000,
+      "uniqueKeys": 1000,
+      "winRate": {
+        "k": 291,
+        "n": 1000,
+        "rate": 0.291,
+        "lo": 0.2636897827038124,
+        "hi": 0.3199098023431496
+      },
+      "winRatePct": {
+        "rate": "29.10%",
+        "lo": "26.37%",
+        "hi": "31.99%"
+      },
+      "unused": [],
+      "actions": {
+        "spin": 65282,
+        "choose": 35526,
+        "remove": 9645,
+        "reroll": 10772,
+        "item": 8409,
+        "skip": 29756,
+        "eventA": 1195,
+        "eventB": 849,
+        "skipItem": 1
+      },
+      "logOps": {},
+      "hasLogField": 0,
+      "liveCommands": 161435,
+      "formed": 1000,
+      "mixed": 999,
+      "winRoutes": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "unformed": 0,
+        "mixed": 291
+      },
+      "stage1Paid": 1000,
+      "stage3Paid": 1000,
+      "stage6Paid": 1000,
+      "stage": [
+        {
+          "stage": 1,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 2,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 3,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 4,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 5,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 6,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 1000,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 1000
+        },
+        {
+          "stage": 7,
+          "reachedFromSpins": 1000,
+          "reachedFromStageId": 1000,
+          "paid": 998,
+          "statsReachedK": 1000,
+          "statsSurvivalK": 998
+        },
+        {
+          "stage": 8,
+          "reachedFromSpins": 998,
+          "reachedFromStageId": 998,
+          "paid": 923,
+          "statsReachedK": 998,
+          "statsSurvivalK": 923
+        },
+        {
+          "stage": 9,
+          "reachedFromSpins": 923,
+          "reachedFromStageId": 923,
+          "paid": 489,
+          "statsReachedK": 923,
+          "statsSurvivalK": 489
+        },
+        {
+          "stage": 10,
+          "reachedFromSpins": 489,
+          "reachedFromStageId": 489,
+          "paid": 291,
+          "statsReachedK": 489,
+          "statsSurvivalK": 291
+        }
+      ],
+      "attributionFails": 0,
+      "commandErrors": 0,
+      "contribSum": 6225443,
+      "spinIncomeSum": 6225443,
+      "policySeedFails": 0,
+      "catalogFails": 0,
+      "statsWinRate": {
+        "k": 291,
+        "n": 1000,
+        "rate": 0.291,
+        "lo": 0.2636897827038124,
+        "hi": 0.3199098023431496
+      }
+    }
+  },
+  "wilson": {
+    "z": 1.959963984540054,
+    "formula": "c=(p+z^2/(2n))/(1+z^2/n); r=z*sqrt(p(1-p)/n+z^2/(4n^2))/(1+z^2/n); lo=c-r; hi=c+r",
+    "independentGamesOnly": true,
+    "bitwiseMatchVsStatistics": true,
+    "table": {
+      "Greedy/holdout": {
+        "k": 233,
+        "n": 1000,
+        "rate": 0.233,
+        "lo": 0.20785061925196213,
+        "hi": 0.2601928697793244,
+        "pct": {
+          "rate": "23.30%",
+          "lo": "20.79%",
+          "hi": "26.02%"
+        },
+        "statsMatchBitwise": true
+      },
+      "Greedy/train": {
+        "k": 238,
+        "n": 1000,
+        "rate": 0.238,
+        "lo": 0.21263955247557198,
+        "hi": 0.2653656689708589,
+        "pct": {
+          "rate": "23.80%",
+          "lo": "21.26%",
+          "hi": "26.54%"
+        },
+        "statsMatchBitwise": true
+      },
+      "Random/holdout": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234,
+        "pct": {
+          "rate": "0.00%",
+          "lo": "0.00%",
+          "hi": "0.38%"
+        },
+        "statsMatchBitwise": true
+      },
+      "Random/train": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234,
+        "pct": {
+          "rate": "0.00%",
+          "lo": "0.00%",
+          "hi": "0.38%"
+        },
+        "statsMatchBitwise": true
+      },
+      "Synergy/holdout": {
+        "k": 239,
+        "n": 1000,
+        "rate": 0.239,
+        "lo": 0.2135979397357572,
+        "hi": 0.2663996281937026,
+        "pct": {
+          "rate": "23.90%",
+          "lo": "21.36%",
+          "hi": "26.64%"
+        },
+        "statsMatchBitwise": true
+      },
+      "Synergy/train": {
+        "k": 225,
+        "n": 1000,
+        "rate": 0.225,
+        "lo": 0.20019895514206568,
+        "hi": 0.25190576202498965,
+        "pct": {
+          "rate": "22.50%",
+          "lo": "20.02%",
+          "hi": "25.19%"
+        },
+        "statsMatchBitwise": true
+      },
+      "Value/holdout": {
+        "k": 299,
+        "n": 1000,
+        "rate": 0.299,
+        "lo": 0.27143763442230356,
+        "hi": 0.3281007224888896,
+        "pct": {
+          "rate": "29.90%",
+          "lo": "27.14%",
+          "hi": "32.81%"
+        },
+        "statsMatchBitwise": true
+      },
+      "Value/train": {
+        "k": 291,
+        "n": 1000,
+        "rate": 0.291,
+        "lo": 0.2636897827038124,
+        "hi": 0.3199098023431496,
+        "pct": {
+          "rate": "29.10%",
+          "lo": "26.37%",
+          "hi": "31.99%"
+        },
+        "statsMatchBitwise": true
+      }
+    },
+    "ratioScan": {
+      "eventAcceptanceWithLoHi": 0,
+      "selectionRateWithLoHi": 0,
+      "eventRatioWithLoHi": 0,
+      "eventAcceptance": 8,
+      "selectionRate": 824,
+      "eventRatio": 116984
+    }
+  },
+  "unusedActions": {
+    "Greedy/holdout": {
+      "liveSource": "game.actions (0 games have game.log)",
+      "liveCommands": 158574,
+      "counts": {
+        "spin": 64525,
+        "choose": 36055,
+        "skip": 28470,
+        "remove": 9496,
+        "reroll": 9683,
+        "item": 8314,
+        "skipItem": 1,
+        "eventA": 1128,
+        "eventB": 902
+      },
+      "unused": [],
+      "unusedMatchScan": true
+    },
+    "Greedy/train": {
+      "liveSource": "game.actions (0 games have game.log)",
+      "liveCommands": 158247,
+      "counts": {
+        "spin": 64433,
+        "choose": 35893,
+        "skip": 28540,
+        "remove": 9521,
+        "reroll": 9536,
+        "item": 8304,
+        "skipItem": 0,
+        "eventA": 1071,
+        "eventB": 949
+      },
+      "unused": [
+        "skipItem"
+      ],
+      "unusedMatchScan": true
+    },
+    "Random/holdout": {
+      "liveSource": "game.actions (0 games have game.log)",
+      "liveCommands": 110524,
+      "counts": {
+        "spin": 44677,
+        "choose": 33505,
+        "skip": 11172,
+        "remove": 6722,
+        "reroll": 7370,
+        "item": 4242,
+        "skipItem": 1426,
+        "eventA": 946,
+        "eventB": 464
+      },
+      "unused": [],
+      "unusedMatchScan": true
+    },
+    "Random/train": {
+      "liveSource": "game.actions (0 games have game.log)",
+      "liveCommands": 109727,
+      "counts": {
+        "spin": 44383,
+        "choose": 33271,
+        "skip": 11112,
+        "remove": 6695,
+        "reroll": 7257,
+        "item": 4222,
+        "skipItem": 1404,
+        "eventA": 884,
+        "eventB": 499
+      },
+      "unused": [],
+      "unusedMatchScan": true
+    },
+    "Synergy/holdout": {
+      "liveSource": "game.actions (0 games have game.log)",
+      "liveCommands": 158299,
+      "counts": {
+        "spin": 64499,
+        "choose": 35509,
+        "skip": 28990,
+        "remove": 9508,
+        "reroll": 9444,
+        "item": 8312,
+        "skipItem": 0,
+        "eventA": 1100,
+        "eventB": 937
+      },
+      "unused": [
+        "skipItem"
+      ],
+      "unusedMatchScan": true
+    },
+    "Synergy/train": {
+      "liveSource": "game.actions (0 games have game.log)",
+      "liveCommands": 158605,
+      "counts": {
+        "spin": 64627,
+        "choose": 35683,
+        "skip": 28944,
+        "remove": 9539,
+        "reroll": 9498,
+        "item": 8327,
+        "skipItem": 1,
+        "eventA": 1077,
+        "eventB": 909
+      },
+      "unused": [],
+      "unusedMatchScan": true
+    },
+    "Value/holdout": {
+      "liveSource": "game.actions (0 games have game.log)",
+      "liveCommands": 161780,
+      "counts": {
+        "spin": 65417,
+        "choose": 35669,
+        "skip": 29748,
+        "remove": 9643,
+        "reroll": 10855,
+        "item": 8427,
+        "skipItem": 0,
+        "eventA": 1134,
+        "eventB": 887
+      },
+      "unused": [
+        "skipItem"
+      ],
+      "unusedMatchScan": true
+    },
+    "Value/train": {
+      "liveSource": "game.actions (0 games have game.log)",
+      "liveCommands": 161435,
+      "counts": {
+        "spin": 65282,
+        "choose": 35526,
+        "skip": 29756,
+        "remove": 9645,
+        "reroll": 10772,
+        "item": 8409,
+        "skipItem": 1,
+        "eventA": 1195,
+        "eventB": 849
+      },
+      "unused": [],
+      "unusedMatchScan": true
+    }
+  },
+  "randomControl": {
+    "v1IndexFinalHash": "7842310233ff52db850bb5e7599bcbb87f5e3fce4b913dd75b2fa4441b9c7c9e",
+    "v2Jsonl": {
+      "seed": "F4-FULL-v1/Random/train/0000",
+      "policySeed": "decision-full-v1/Random/train/0",
+      "finalHash": "7842310233ff52db850bb5e7599bcbb87f5e3fce4b913dd75b2fa4441b9c7c9e",
+      "outcome": "LOST",
+      "actions": 114
+    },
+    "expected": "7842310233ff52db850bb5e7599bcbb87f5e3fce4b913dd75b2fa4441b9c7c9e",
+    "match": true,
+    "policySeed": "decision-full-v1/Random/train/0"
+  },
+  "replays": {
+    "engine": "tests/gdd1/full-sim-engine.js F.fullNewRun + F.fullCommand (production resolver/effects)",
+    "n": 16,
+    "hashMatch": 16,
+    "rows": [
+      {
+        "reason": "index-0",
+        "seed": "F4-FULL-v1/Greedy/holdout/0000",
+        "bot": "Greedy",
+        "split": "holdout",
+        "index": 0,
+        "actions": 152,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "736ba7470433aa9f90aadcfb95e8e2dd142fefbf41fcbdd766bc7ac540a18594",
+        "recordedHash": "736ba7470433aa9f90aadcfb95e8e2dd142fefbf41fcbdd766bc7ac540a18594",
+        "fail": null,
+        "ms": 205
+      },
+      {
+        "reason": "extra-index-100",
+        "seed": "F4-FULL-v1/Greedy/holdout/0100",
+        "bot": "Greedy",
+        "split": "holdout",
+        "index": 100,
+        "actions": 134,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "374fdf269a4ace4aeeac91d6c3fcca2124516e452499df729aa8ab779416e004",
+        "recordedHash": "374fdf269a4ace4aeeac91d6c3fcca2124516e452499df729aa8ab779416e004",
+        "fail": null,
+        "ms": 170
+      },
+      {
+        "reason": "index-0",
+        "seed": "F4-FULL-v1/Greedy/train/0000",
+        "bot": "Greedy",
+        "split": "train",
+        "index": 0,
+        "actions": 179,
+        "recordedOutcome": "WON",
+        "replayPhase": "WON",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "33f03a7f00d9ef643ac4c178df090631d04a7e8e787892f3b169b081dc721269",
+        "recordedHash": "33f03a7f00d9ef643ac4c178df090631d04a7e8e787892f3b169b081dc721269",
+        "fail": null,
+        "ms": 244
+      },
+      {
+        "reason": "extra-index-100",
+        "seed": "F4-FULL-v1/Greedy/train/0100",
+        "bot": "Greedy",
+        "split": "train",
+        "index": 100,
+        "actions": 172,
+        "recordedOutcome": "WON",
+        "replayPhase": "WON",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "ce9ef271d837755e869a1407a1b145fb0470847e81d4720f2963025a11194617",
+        "recordedHash": "ce9ef271d837755e869a1407a1b145fb0470847e81d4720f2963025a11194617",
+        "fail": null,
+        "ms": 225
+      },
+      {
+        "reason": "index-0",
+        "seed": "F4-FULL-v1/Random/holdout/0000",
+        "bot": "Random",
+        "split": "holdout",
+        "index": 0,
+        "actions": 117,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "d76ae7fb04e71d62d2bb21ecf746c9b36be31b97187ed9e847d7574c39ebd545",
+        "recordedHash": "d76ae7fb04e71d62d2bb21ecf746c9b36be31b97187ed9e847d7574c39ebd545",
+        "fail": null,
+        "ms": 117
+      },
+      {
+        "reason": "extra-index-100",
+        "seed": "F4-FULL-v1/Random/holdout/0100",
+        "bot": "Random",
+        "split": "holdout",
+        "index": 100,
+        "actions": 117,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "907d92af00d90b02f77b88a9766dd1ceb6a15b04728caec281050189ac66b2cd",
+        "recordedHash": "907d92af00d90b02f77b88a9766dd1ceb6a15b04728caec281050189ac66b2cd",
+        "fail": null,
+        "ms": 102
+      },
+      {
+        "reason": "index-0",
+        "seed": "F4-FULL-v1/Random/train/0000",
+        "bot": "Random",
+        "split": "train",
+        "index": 0,
+        "actions": 114,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "7842310233ff52db850bb5e7599bcbb87f5e3fce4b913dd75b2fa4441b9c7c9e",
+        "recordedHash": "7842310233ff52db850bb5e7599bcbb87f5e3fce4b913dd75b2fa4441b9c7c9e",
+        "fail": null,
+        "ms": 114
+      },
+      {
+        "reason": "extra-index-100",
+        "seed": "F4-FULL-v1/Random/train/0100",
+        "bot": "Random",
+        "split": "train",
+        "index": 100,
+        "actions": 116,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "a68dbf2e478e6d06719b57cececd0defac44c4d537755e49b6fa114584bb6273",
+        "recordedHash": "a68dbf2e478e6d06719b57cececd0defac44c4d537755e49b6fa114584bb6273",
+        "fail": null,
+        "ms": 104
+      },
+      {
+        "reason": "index-0",
+        "seed": "F4-FULL-v1/Synergy/holdout/0000",
+        "bot": "Synergy",
+        "split": "holdout",
+        "index": 0,
+        "actions": 169,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "be36953ddfd01fce5b40c9b35fb6c062d8c63aee4b3050a4b39afd977fdf991d",
+        "recordedHash": "be36953ddfd01fce5b40c9b35fb6c062d8c63aee4b3050a4b39afd977fdf991d",
+        "fail": null,
+        "ms": 205
+      },
+      {
+        "reason": "extra-index-100",
+        "seed": "F4-FULL-v1/Synergy/holdout/0100",
+        "bot": "Synergy",
+        "split": "holdout",
+        "index": 100,
+        "actions": 153,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "ecfbaa58c9bca7af9a85c8920351fef06a61a85fe5f72192bebfa4b56e8ac927",
+        "recordedHash": "ecfbaa58c9bca7af9a85c8920351fef06a61a85fe5f72192bebfa4b56e8ac927",
+        "fail": null,
+        "ms": 184
+      },
+      {
+        "reason": "index-0",
+        "seed": "F4-FULL-v1/Synergy/train/0000",
+        "bot": "Synergy",
+        "split": "train",
+        "index": 0,
+        "actions": 170,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "a2f9fa11a34b169694cecdeb34c054b4627863f2883450538c375fbb4769d0b6",
+        "recordedHash": "a2f9fa11a34b169694cecdeb34c054b4627863f2883450538c375fbb4769d0b6",
+        "fail": null,
+        "ms": 192
+      },
+      {
+        "reason": "extra-index-100",
+        "seed": "F4-FULL-v1/Synergy/train/0100",
+        "bot": "Synergy",
+        "split": "train",
+        "index": 100,
+        "actions": 153,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "d6eba96d9431d141bf39efa40ae3b3233ca72290f59a07e3a497058ef7c12f8a",
+        "recordedHash": "d6eba96d9431d141bf39efa40ae3b3233ca72290f59a07e3a497058ef7c12f8a",
+        "fail": null,
+        "ms": 182
+      },
+      {
+        "reason": "index-0",
+        "seed": "F4-FULL-v1/Value/holdout/0000",
+        "bot": "Value",
+        "split": "holdout",
+        "index": 0,
+        "actions": 153,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "6b74eb3482612957f64174603e8d487b82a24f694d277988e146260972fafacd",
+        "recordedHash": "6b74eb3482612957f64174603e8d487b82a24f694d277988e146260972fafacd",
+        "fail": null,
+        "ms": 176
+      },
+      {
+        "reason": "extra-index-100",
+        "seed": "F4-FULL-v1/Value/holdout/0100",
+        "bot": "Value",
+        "split": "holdout",
+        "index": 100,
+        "actions": 171,
+        "recordedOutcome": "WON",
+        "replayPhase": "WON",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "75586dc2553d22c25bf2d9d449f19e84c705d892b7325707c33eccf232179c8d",
+        "recordedHash": "75586dc2553d22c25bf2d9d449f19e84c705d892b7325707c33eccf232179c8d",
+        "fail": null,
+        "ms": 208
+      },
+      {
+        "reason": "index-0",
+        "seed": "F4-FULL-v1/Value/train/0000",
+        "bot": "Value",
+        "split": "train",
+        "index": 0,
+        "actions": 170,
+        "recordedOutcome": "WON",
+        "replayPhase": "WON",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "03422c486bcae4c3631e15ba95f53f61109cd18f07f1126d3ad00a7de4752b2c",
+        "recordedHash": "03422c486bcae4c3631e15ba95f53f61109cd18f07f1126d3ad00a7de4752b2c",
+        "fail": null,
+        "ms": 218
+      },
+      {
+        "reason": "extra-index-100",
+        "seed": "F4-FULL-v1/Value/train/0100",
+        "bot": "Value",
+        "split": "train",
+        "index": 100,
+        "actions": 154,
+        "recordedOutcome": "LOST",
+        "replayPhase": "LOST",
+        "replayOk": true,
+        "hashMatch": true,
+        "replayHash": "021bc6fc5067d42d5c3e6eeb6f22e2aa4f219446b0bce670d2dd5c1468349b10",
+        "recordedHash": "021bc6fc5067d42d5c3e6eeb6f22e2aa4f219446b0bce670d2dd5c1468349b10",
+        "fail": null,
+        "ms": 182
+      }
+    ]
+  },
+  "lookahead": {
+    "constants": {
+      "HORIZON_SPINS": 5,
+      "COMMAND_CAP": 36,
+      "REMOVE_BEAM": 3,
+      "MODEL_SEED": "full-sim-model-v2/0",
+      "LOOKAHEAD": "policy-v2: Random identical to full-sim-v1 (uniform legal, policy-full-v1 / decision-full-v1). Value/Synergy/Greedy: root beam over all legal action TYPES with no skipItem/reroll/remove prune; remove UIDs limited to the 3 statically worst pool members. After the root action, continuation is staticChoiceV2 for at most 5 spins / 36 fullCommand. Surrogate reseeds synthetic full-sim-model-v2/0 (createRng); live seed and five streams never copied. Model-generated offers are visible to static continuation; they are not live offers. Branch width = |root candidates| (typically 4-12). Utility: WON +1e5, LOST -1e5, model income, mean synergy-or-static value, pool, tokens, cash-payment margin. Not optimal, not exhaustive tree search, not a live-RNG oracle.",
+      "exportMatch": true
+    },
+    "construction": {
+      "source": "function rootCandidates(v, synergy) {\n  const a = legal(v);\n  const core = a.filter(x => !['remove'].includes(x.op));\n  return [...core, ...worstRemoves(v, synergy, REMOVE_BEAM)];\n}",
+      "coreExcludesOnlyRemove": true,
+      "skipItemRerollNotPrunedFromCore": true
+    },
+    "symbolPhase": {
+      "legalOps": [
+        "choose",
+        "skip",
+        "remove",
+        "reroll"
+      ],
+      "candidateOps": [
+        "choose",
+        "skip",
+        "reroll",
+        "remove"
+      ],
+      "legalRemoves": 12,
+      "candidateRemoves": 3,
+      "removeBeam": 3
+    },
+    "itemPhase": {
+      "reached": true,
+      "phase": "ITEM_CHOICE",
+      "legalOps": [
+        "item",
+        "skipItem"
+      ],
+      "candidateOps": [
+        "item",
+        "skipItem"
+      ],
+      "skipItemLegal": true,
+      "skipItemInRoot": true,
+      "guard": 13
+    },
+    "note": "core = legal.filter(op!==remove); skipItem/reroll/item/choose/skip/event remain in core. Unused live skipItem means beam did not select it."
+  },
+  "candidateConstruction": {
+    "source": "function rootCandidates(v, synergy) {\n  const a = legal(v);\n  const core = a.filter(x => !['remove'].includes(x.op));\n  return [...core, ...worstRemoves(v, synergy, REMOVE_BEAM)];\n}",
+    "coreExcludesOnlyRemove": true,
+    "skipItemRerollNotPrunedFromCore": true,
+    "constants": {
+      "HORIZON_SPINS": 5,
+      "COMMAND_CAP": 36,
+      "REMOVE_BEAM": 3,
+      "MODEL_SEED": "full-sim-model-v2/0",
+      "LOOKAHEAD": "policy-v2: Random identical to full-sim-v1 (uniform legal, policy-full-v1 / decision-full-v1). Value/Synergy/Greedy: root beam over all legal action TYPES with no skipItem/reroll/remove prune; remove UIDs limited to the 3 statically worst pool members. After the root action, continuation is staticChoiceV2 for at most 5 spins / 36 fullCommand. Surrogate reseeds synthetic full-sim-model-v2/0 (createRng); live seed and five streams never copied. Model-generated offers are visible to static continuation; they are not live offers. Branch width = |root candidates| (typically 4-12). Utility: WON +1e5, LOST -1e5, model income, mean synergy-or-static value, pool, tokens, cash-payment margin. Not optimal, not exhaustive tree search, not a live-RNG oracle.",
+      "exportMatch": true
+    },
+    "symbolPhase": {
+      "legalOps": [
+        "choose",
+        "skip",
+        "remove",
+        "reroll"
+      ],
+      "candidateOps": [
+        "choose",
+        "skip",
+        "reroll",
+        "remove"
+      ],
+      "legalRemoves": 12,
+      "candidateRemoves": 3,
+      "removeBeam": 3
+    },
+    "itemPhase": {
+      "reached": true,
+      "phase": "ITEM_CHOICE",
+      "legalOps": [
+        "item",
+        "skipItem"
+      ],
+      "candidateOps": [
+        "item",
+        "skipItem"
+      ],
+      "skipItemLegal": true,
+      "skipItemInRoot": true,
+      "guard": 13
+    },
+    "note": "core = legal.filter(op!==remove); skipItem/reroll/item/choose/skip/event remain in core. Unused live skipItem means beam did not select it.",
+    "unusedLiveSkipItemMeansBeamDidNotSelect": true
+  },
+  "peek": {
+    "publicViewDeletes": true,
+    "surrogateReseeds": true,
+    "copiesLiveRng": false,
+    "actionEqual": true,
+    "stateUnchanged": true,
+    "viewHasRng": false,
+    "viewHasSeed": false,
+    "surrogateSeed": "full-sim-model-v2/0",
+    "surrogateRngIsLive": false,
+    "liveRngUnchangedAfterRollout": true,
+    "decideAction": {
+      "op": "remove",
+      "uid": "u12",
+      "confirmEmpty": false
+    },
+    "candidates": 8,
+    "modelCommands": 91,
+    "publicViewSource": "function publicView(s) { const v = copy(s); delete v.rng; delete v.seed; return v; }",
+    "surrogateV2Source": "function surrogateV2(v) { const s = copy(v); s.seed = MODEL_SEED; s.rng = F.createRng(s.seed, s.profile, s.difficulty); return s; }",
+    "verdict": "PASS"
+  },
+  "integrity": {
+    "exists": true,
+    "sha256": "8d7ff470d7dc504e0a2163f0b93a8926d8194a6c15df85c34f0d62d9f562220f",
+    "bytes": 24377,
+    "engineeringPass": true,
+    "engineering": {
+      "expectedGames": 8000,
+      "seen": 8000,
+      "missing": 0,
+      "duplicates": 0,
+      "attributionFails": 0,
+      "replayFails": 0,
+      "unfinished": 0,
+      "errors": 0,
+      "replayAll": true
+    },
+    "vsAuditorStream": {
+      "games": 8000,
+      "expectedGamesMatch": true,
+      "seenMatch": true,
+      "missingMatch": true,
+      "duplicatesMatch": true,
+      "attributionMatch": true,
+      "unfinishedMatch": true,
+      "errorsMatch": true,
+      "isolationTrain": true,
+      "isolationHoldout": true,
+      "isolationShared": true
+    },
+    "replayAll": {
+      "engineeringClaim": true,
+      "auditorIndependentReplays": 16,
+      "auditorHashMatch": true,
+      "auditorDidNotReplayAll8000": true,
+      "status": "SAMPLE_CONFIRMED"
+    },
+    "note": "Integrity count claims match this auditor stream. replayAll=8000 is an engineering claim; this auditor independently replayed 16/16 sampled games via production fullNewRun+fullCommand and did not replay all 8000."
+  },
+  "gatesIndependent": {
+    "z": 1.959963984540054,
+    "holdout": {
+      "Greedy": {
+        "k": 233,
+        "n": 1000,
+        "rate": 0.233,
+        "lo": 0.20785061925196213,
+        "hi": 0.2601928697793244,
+        "pct": {
+          "rate": "23.30%",
+          "lo": "20.79%",
+          "hi": "26.02%"
+        }
+      },
+      "Synergy": {
+        "k": 239,
+        "n": 1000,
+        "rate": 0.239,
+        "lo": 0.2135979397357572,
+        "hi": 0.2663996281937026,
+        "pct": {
+          "rate": "23.90%",
+          "lo": "21.36%",
+          "hi": "26.64%"
+        }
+      },
+      "Value": {
+        "k": 299,
+        "n": 1000,
+        "rate": 0.299,
+        "lo": 0.27143763442230356,
+        "hi": 0.3281007224888896,
+        "pct": {
+          "rate": "29.90%",
+          "lo": "27.14%",
+          "hi": "32.81%"
+        }
+      },
+      "Random": {
+        "k": 0,
+        "n": 1000,
+        "rate": 0,
+        "lo": 2.168404344971009e-19,
+        "hi": 0.0038267584855551234,
+        "pct": {
+          "rate": "0.00%",
+          "lo": "0.00%",
+          "hi": "0.38%"
+        }
+      }
+    },
+    "synergyGreedyWinBand40to70": {
+      "greedyInBand": false,
+      "synergyInBand": false,
+      "verdict": "OUTSIDE 40-70%",
+      "greedyHiPct": 26.02,
+      "synergyHiPct": 26.64,
+      "note": "Wilson upper bounds 26.02% / 26.64% are both below 40%. Band failure is not a CI artifact."
+    },
+    "fifteenPointsAboveRandom": {
+      "greedyMinusRandomPp": 23.3,
+      "synergyMinusRandomPp": 23.9,
+      "conservativeLoMinusHiPp": {
+        "greedy": 20.4,
+        "synergy": 20.98
+      },
+      "verdict": "HOLD"
+    },
+    "stagePaidHoldout": {
+      "Greedy": {
+        "s1": 1000,
+        "s3": 1000,
+        "s6": 999
+      },
+      "Synergy": {
+        "s1": 1000,
+        "s3": 1000,
+        "s6": 1000
+      },
+      "Value": {
+        "s1": 1000,
+        "s3": 1000,
+        "s6": 1000
+      },
+      "Random": {
+        "s1": 1000,
+        "s3": 999,
+        "s6": 640
+      }
+    },
+    "stage1ge95": "HOLD all 8 groups",
+    "stage3ge75": "HOLD all 8 groups",
+    "stage6band45to70": "Random in band; Greedy/Synergy/Value outside (paid ~100%)",
+    "samplingPass": true,
+    "formalBalance": "NOT APPROVED",
+    "economy": "NOT APPROVED",
+    "human": "PENDING",
+    "phaseB": "NOT STARTED"
+  },
+  "historicalExcludedFrom8000": [
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-greedy-holdout-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-greedy-holdout-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-greedy-train-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-greedy-train-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-random-holdout-0.jsonl",
+      "bytes": 675616,
+      "lines": 8,
+      "hasIndex": false
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-random-holdout-500.jsonl",
+      "bytes": 734725,
+      "lines": 8,
+      "hasIndex": false
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-random-train-0.jsonl",
+      "bytes": 711473,
+      "lines": 8,
+      "hasIndex": false
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-random-train-500.jsonl",
+      "bytes": 734695,
+      "lines": 8,
+      "hasIndex": false
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-synergy-holdout-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-synergy-holdout-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-synergy-train-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-synergy-train-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-value-holdout-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-value-holdout-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-value-train-0.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false
+    },
+    {
+      "name": "full-sim-policy-v2-jobkill-launch1-value-train-500.jsonl",
+      "bytes": 0,
+      "lines": 0,
+      "hasIndex": false
+    },
+    {
+      "name": "full-sim-policy-v2-probe-greedy-holdout-0.jsonl",
+      "bytes": 11965463,
+      "lines": 100,
+      "hasIndex": true
+    },
+    {
+      "name": "full-sim-policy-v2-probe-greedy-train-0.jsonl",
+      "bytes": 12054996,
+      "lines": 100,
+      "hasIndex": true
+    },
+    {
+      "name": "full-sim-policy-v2-probe-random-holdout-0.jsonl",
+      "bytes": 8950018,
+      "lines": 100,
+      "hasIndex": true
+    },
+    {
+      "name": "full-sim-policy-v2-probe-random-train-0.jsonl",
+      "bytes": 8580829,
+      "lines": 100,
+      "hasIndex": true
+    },
+    {
+      "name": "full-sim-policy-v2-probe-synergy-holdout-0.jsonl",
+      "bytes": 11898525,
+      "lines": 100,
+      "hasIndex": true
+    },
+    {
+      "name": "full-sim-policy-v2-probe-synergy-train-0.jsonl",
+      "bytes": 12027322,
+      "lines": 100,
+      "hasIndex": true
+    },
+    {
+      "name": "full-sim-policy-v2-probe-value-holdout-0.jsonl",
+      "bytes": 12276381,
+      "lines": 100,
+      "hasIndex": true
+    },
+    {
+      "name": "full-sim-policy-v2-probe-value-train-0.jsonl",
+      "bytes": 12321734,
+      "lines": 100,
+      "hasIndex": true
+    }
+  ],
+  "v1Retention": {
+    "v3Jsonl": 16,
+    "v1StatsSha": {
+      "path": "tests/gdd1/full-sim-statistics.json",
+      "bytes": 59337286,
+      "sha256": "3cb38a192b0fc2805d956eda40f91db827f8d43095c9b5d26d33e246eeea04bf"
+    },
+    "auditMd": {
+      "path": "docs/GDD1_FULL_SIM_AUDIT.md",
+      "bytes": 16285,
+      "sha256": "e08580281e482d8bec0fce9414290401149fbecd171dc4a0f7d17177350ff437"
+    },
+    "aggAuditMd": {
+      "path": "docs/GDD1_FULL_SIM_AUDIT_AGG.md",
+      "bytes": 9680,
+      "sha256": "338e34e2fa548038993c8557373de3d5da72751a63ede271ecaac403f114227f"
+    },
+    "reportMd": {
+      "path": "docs/GDD1_FULL_SIM.md",
+      "bytes": 24474,
+      "sha256": "4a31b21bd65569ac92a3fd0c7aa3f80e2635059388067e587428fa567c723dab"
+    },
+    "v3JsonlPresent": 16,
+    "v3JsonlExpected": 16,
+    "v3JsonlHashes": {
+      "tests/gdd1/full-sim-batch-v3-greedy-holdout-0.jsonl": {
+        "path": "tests/gdd1/full-sim-batch-v3-greedy-holdout-0.jsonl",
+        "bytes": 47048706,
+        "sha256": "e5960fc0611eb16564534cea3775d3430b97f69b9ad07615f61b74434a6da46a"
+      },
+      "tests/gdd1/full-sim-batch-v3-greedy-holdout-500.jsonl": {
+        "path": "tests/gdd1/full-sim-batch-v3-greedy-holdout-500.jsonl",
+        "bytes": 47464778,
+        "sha256": "f4f30704cbf9e1d07eb28baf6fb328ef6787df932c66c5959cbc92125e31de99"
+      },
+      "tests/gdd1/full-sim-batch-v3-greedy-train-0.jsonl": {
+        "path": "tests/gdd1/full-sim-batch-v3-greedy-train-0.jsonl",
+        "bytes": 47181493,
+        "sha256": "5c542f160f064c14ebd872fa3bc6f9d67995d8b1d564c2e668b34d740aa0bf3b"
+      },
+      "tests/gdd1/full-sim-batch-v3-greedy-train-500.jsonl": {
+        "path": "tests/gdd1/full-sim-batch-v3-greedy-train-500.jsonl",
+        "bytes": 47442738,
+        "sha256": "7f54b6d6d01adcdf374ab20b90a126570711cc9d41d31e8fe0edf504bb93c800"
+      },
+      "tests/gdd1/full-sim-batch-v3-random-holdout-0.jsonl": {
+        "path": "tests/gdd1/full-sim-batch-v3-random-holdout-0.jsonl",
+        "bytes": 42232050,
+        "sha256": "9fe8fcf3c500756aa1f4465d922086c261c2d5a7f60d653b90c10f518dd4c2c6"
+      },
+      "tests/gdd1/full-sim-batch-v3-random-holdout-500.jsonl": {
+        "path": "tests/gdd1/full-sim-batch-v3-random-holdout-500.jsonl",
+        "bytes": 42460177,
+        "sha256": "c408336bc44c9743b617713c0c3d3486edc9ea598282aafb71b920624dd00df0"
+      },
+      "tests/gdd1/full-sim-batch-v3-random-train-0.jsonl": {
+        "path": "tests/gdd1/full-sim-batch-v3-random-train-0.jsonl",
+        "bytes": 42169093,
+        "sha256": "0a510219d81d56a547aefb2b4d99d1b9f0ccad5ddc8161fc785c21c254157264"
+      },
+      "tests/gdd1/full-sim-batch-v3-random-train-500.jsonl": {
+        "path": "tests/gdd1/full-sim-batch-v3-random-train-500.jsonl",
+        "bytes": 41858916,
+        "sha256": "c47be41a559e3b618a2e051ffadaf1e83f365c8d8961f256c385676783343060"
+      },
+      "tests/gdd1/full-sim-batch-v3-synergy-holdout-0.jsonl": {
+        "path": "tests/gdd1/full-sim-batch-v3-synergy-holdout-0.jsonl",
+        "bytes": 42151262,
+        "sha256": "16b1a40122c43386936cb4eb15e497e1447703ebb789ba205d5493a6e7a1a350"
+      },
+      "tests/gdd1/full-sim-batch-v3-synergy-holdout-500.jsonl": {
+        "path": "tests/gdd1/full-sim-batch-v3-synergy-holdout-500.jsonl",
+        "bytes": 42312216,
+        "sha256": "7c40b183f8cef53d678cd601237111323277b13b6ed3114050f8be1b4bd8290b"
+      },
+      "tests/gdd1/full-sim-batch-v3-synergy-train-0.jsonl": {
+        "path": "tests/gdd1/full-sim-batch-v3-synergy-train-0.jsonl",
+        "bytes": 42734218,
+        "sha256": "3f1b335c7ffe9ae237bb50b0484d8a4870f6fa384be9fcdc49ea4d3f894f54af"
+      },
+      "tests/gdd1/full-sim-batch-v3-synergy-train-500.jsonl": {
+        "path": "tests/gdd1/full-sim-batch-v3-synergy-train-500.jsonl",
+        "bytes": 42630860,
+        "sha256": "a1b8f39f64fb06003bbb88f36bc2317a9e7c8cadb920bc10ef21f73bc677f46d"
+      },
+      "tests/gdd1/full-sim-batch-v3-value-holdout-0.jsonl": {
+        "path": "tests/gdd1/full-sim-batch-v3-value-holdout-0.jsonl",
+        "bytes": 45930224,
+        "sha256": "277f7bc01a2135747aee3d2384a192ee95498b5bfaf0cbc987c328a172b919ad"
+      },
+      "tests/gdd1/full-sim-batch-v3-value-holdout-500.jsonl": {
+        "path": "tests/gdd1/full-sim-batch-v3-value-holdout-500.jsonl",
+        "bytes": 46509895,
+        "sha256": "607c6b2837a7be2efa11b66c738e7fd4d1e3cbee123474c9f960774addfca22e"
+      },
+      "tests/gdd1/full-sim-batch-v3-value-train-0.jsonl": {
+        "path": "tests/gdd1/full-sim-batch-v3-value-train-0.jsonl",
+        "bytes": 45897176,
+        "sha256": "29c5640f08405f81a258cff455345734720a3aa35a49f85ef6730208ea711dc2"
+      },
+      "tests/gdd1/full-sim-batch-v3-value-train-500.jsonl": {
+        "path": "tests/gdd1/full-sim-batch-v3-value-train-500.jsonl",
+        "bytes": 46611398,
+        "sha256": "c549d36f7140e8e9e25e1a0b19c07bd3e7c2537d1e8b41df7a495c8201ad5b22"
+      }
+    },
+    "docs": {
+      "docs/GDD1_FULL_SIM.md": {
+        "path": "docs/GDD1_FULL_SIM.md",
+        "bytes": 24474,
+        "sha256": "4a31b21bd65569ac92a3fd0c7aa3f80e2635059388067e587428fa567c723dab"
+      },
+      "docs/GDD1_FULL_SIM_AUDIT.md": {
+        "path": "docs/GDD1_FULL_SIM_AUDIT.md",
+        "bytes": 16285,
+        "sha256": "e08580281e482d8bec0fce9414290401149fbecd171dc4a0f7d17177350ff437"
+      },
+      "docs/GDD1_FULL_SIM_AUDIT_AGG.md": {
+        "path": "docs/GDD1_FULL_SIM_AUDIT_AGG.md",
+        "bytes": 9680,
+        "sha256": "338e34e2fa548038993c8557373de3d5da72751a63ede271ecaac403f114227f"
+      }
+    },
+    "freezeV4Still436": true,
+    "aggFreezeStill8": true
+  },
+  "mismatches": [],
+  "judgment": {
+    "tools": "TOOLS_PASS",
+    "economy": "NOT APPROVED",
+    "formalBalance": "NOT APPROVED",
+    "lineOk": true,
+    "replayOk": true,
+    "freezeOkAll": true,
+    "peekOk": true,
+    "candOk": true,
+    "randomOk": true,
+    "wilsonMatch": true,
+    "mismatchCount": 0,
+    "integrity": "PRESENT count-match; replayAll SAMPLE_CONFIRMED 16/16"
+  }
+}

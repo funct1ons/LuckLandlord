@@ -1,0 +1,56 @@
+{
+  "files": 10,
+  "games": 8000,
+  "errors": [],
+  "indexHashes": 8000,
+  "replays": [
+    {
+      "seed": "F3-SLICE-v1/Greedy/holdout/0000",
+      "actions": 153,
+      "finalHash": "26363e0181d11e7de7e4ace2123b088b3e7b6fa392b7ebd1f22039550e506595",
+      "ok": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Greedy/train/0000",
+      "actions": 160,
+      "finalHash": "3dc4ca06e93f1f2d5f0a0f612ebd4e2ca7c2c96975ab202a0bc2c12e143f3754",
+      "ok": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Random/holdout/0000",
+      "actions": 171,
+      "finalHash": "80f88ea90379f7e7f8cae69efbf95b1fe14f65eb55cb04861c86dceaa8b61128",
+      "ok": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Random/train/0000",
+      "actions": 131,
+      "finalHash": "ea4da234a90a1eed3c975c435ad89b90d932d835b198090208ce0135a34cf2b3",
+      "ok": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Synergy/holdout/0000",
+      "actions": 166,
+      "finalHash": "d3dd3c0104436c7be0296eb21cac3db251331191211edfb145013e489a31b887",
+      "ok": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Synergy/train/0000",
+      "actions": 169,
+      "finalHash": "fb791a3086fa668f10c8fbe3b9654f8eab4810fe543949ff0059617ed2e3a765",
+      "ok": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Value/holdout/0000",
+      "actions": 171,
+      "finalHash": "97f2b5c183f6d893a9118e3199de17685777b6f9e41c0dee45e54dcb70fd19d3",
+      "ok": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Value/train/0000",
+      "actions": 171,
+      "finalHash": "99c279f51633fde6e763de3f609b71138b5f61ea5cb6c4b45a45ab22a0b5ad29",
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "scope": "Read-only existing regression; M3 is not independently accepted",
+  "old": {
+    "total": 602,
+    "passed": 602,
+    "namesPreserved": true
+  },
+  "m3": {
+    "total": 66,
+    "passed": 64,
+    "failures": [
+      {
+        "name": "route-m3/brine/feedstock-to-crystal-first-add-four",
+        "ok": false,
+        "error": "[[1,11],0,12] != [[2,8],0,10]"
+      },
+      {
+        "name": "route-m3/bus/storage-envelope-and-backup-counters-preserved",
+        "ok": false,
+        "error": "undefined != {\"version\":1,\"rules\":\"0.3\",\"contentVersion\":\"M3-1\",\"stageState\":{\"claims\":[],\"paymentModifiers\":[]},\"itemState\":{\"version\":1,\"stage\":0,\"spin\":1,\"runCounts\":{\"item_frost_glass/0\":1},\"stageCounts\":{\"item_frost_glass/0\":1},\"spinCounts\":{}},\"seed\":\"M3-ITEM-BUS\",\"rngState\":44785601,\"revision\":1,\"phase\":\"SYMBOL_CHOICE\",\"stage\":0,\"spin\":1,\"spinsRemaining\":5,\"payment\":30,\"cash\":0,\"symbols\":[{\"uid\":\"u11\",\"type\":\"mist_pouch\",\"permanent\":0,\"counters\":{\"age\":1}}],\"items\":[\"item_frost_glass\"],\"nextId\":12,\"rerollTokens\":2,\"removeTokens\":2,\"activeModifiers\":[],\"stats\":{\"spins\":1,\"total\":4,\"best\":4,\"removed\":0,\"stages\":0,\"chosen\":{},\"skipped\":0,\"rerolls\":0,\"events\":0},\"settings\":{\"autosave\":true,\"advanceAccepted\":false},\"history\":[{\"spin\":1,\"total\":4}],\"choices\":[\"alignment_cloth\",\"clinker_router\",\"sorting_tong\"],\"last\":{\"resolvedRules\":\"0.3\",\"board\":[{\"uid\":\"u11\",\"type\":\"mist_pouch\",\"alive\":true},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],\"ledger\":[{\"uid\":\"u11\",\"type\":\"mist_pouch\",\"amount\":4,\"alive\":true,\"multiplier\":1,\"ratio\":[\"1\",\"1\"]}],\"reward\":0,\"total\":4,\"log\":[{\"id\":0,\"parent\":null,\"type\":\"itemEffect\",\"itemId\":\"item_frost_glass\",\"effectKey\":\"item_frost_glass/0\",\"hook\":\"appear\",\"action\":\"add\",\"source\":\"u11\",\"target\":\"u11\",\"depth\":0,\"amount\":3,\"createdUid\":null,\"reason\":null},{\"id\":1,\"parent\":null,\"type\":\"age\",\"source\":\"u11\",\"target\":\"u11\",\"depth\":0,\"event\":\"ON_APPEAR\",\"amount\":null,\"payload\":null}],\"effects\":1},\"pendingSettlement\":4,\"event\":null,\"reservations\":[]}"
+      }
+    ]
+  }
+}

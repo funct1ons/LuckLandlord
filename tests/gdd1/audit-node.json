@@ -1,0 +1,2162 @@
+{
+  "node": "v24.14.1",
+  "baseline": {
+    "total": 117,
+    "passed": 117,
+    "cases": [
+      {
+        "name": "gdd1/f1/isolated-namespace-and-no-game-dependency",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/profile-counts-and-no-prototype-or-placeholder",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/payment-constants-exact-integer-ceil-not-new-economy",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/slice-abd-v1/\"F1-GOLDEN\"/draw",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/slice-abd-v1/\"F1-GOLDEN\"/effect",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/slice-abd-v1/\"F1-GOLDEN\"/symbolOffer",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/slice-abd-v1/\"F1-GOLDEN\"/itemOffer",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/slice-abd-v1/\"F1-GOLDEN\"/event",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/slice-abd-v1/\"雾港🌫\"/draw",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/slice-abd-v1/\"雾港🌫\"/effect",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/slice-abd-v1/\"雾港🌫\"/symbolOffer",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/slice-abd-v1/\"雾港🌫\"/itemOffer",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/slice-abd-v1/\"雾港🌫\"/event",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/full-v1/\"\"/draw",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/full-v1/\"\"/effect",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/full-v1/\"\"/symbolOffer",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/full-v1/\"\"/itemOffer",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/full-v1/\"\"/event",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/full-v1/\"F1-GOLDEN\"/draw",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/full-v1/\"F1-GOLDEN\"/effect",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/full-v1/\"F1-GOLDEN\"/symbolOffer",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/full-v1/\"F1-GOLDEN\"/itemOffer",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/golden/full-v1/\"F1-GOLDEN\"/event",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/cross-stream-isolation-interleaving",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/all-stream-continuations-survive-roundtrip",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/shuffle-nonmutation-and-exact-consumption",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/unknown-stream/unknown",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/unknown-stream/DRAW",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/unknown-stream/null",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/stable-roundtrip/READY",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/stable-roundtrip/SYMBOL_CHOICE",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/stable-roundtrip/ITEM_CHOICE",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/stable-roundtrip/EVENT_CHOICE",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/stable-roundtrip/WON",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/stable-roundtrip/LOST",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/pending-original-no-recompute/-19",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/pending-original-no-recompute/0",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/pending-original-no-recompute/42",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/schema",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/rules",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/content",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/key",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/future",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/missingRng",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/extraRng",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/rngZero",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/rngFraction",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/missingConsumed",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/negativeConsumed",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/emptyWrongIdentity",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/extra",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/missingEvents",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/missingOffer",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/missingQuotas",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/missingGauge",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/gaugeReserved",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/cash",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/resourceOverflow",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/fractionalStage",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/transientPhase",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/illegalReady",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/fakeSpin",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/unknownProfile",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/badDifficulty",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/unknownItems",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/legacyInstance",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/nonexistentCounter",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/missingMechanismCounter",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/maturityUncommitted",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/futureUid",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/permanentCap",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/unknownModifier",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/unpairedClaim",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/unexplainedPayment",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/eventCount",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/schema-reject/eventDuplicate",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/pending-reject/missingPending",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/pending-reject/wrongPending",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/pending-reject/duplicateOffer",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/pending-reject/fourthRefresh",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/pending-reject/futureLog",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/pending-reject/badSum",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/pending-reject/unknownLogAction",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/three-layer-causal-log-and-nonempty-ledger-preserved",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/pool-200-and-zero-pool-valid-but-201-rejects",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/duplicate-uid-rejects",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/reservation-epoch-expiry-source-may-have-left",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/persistent-fog-and-item-window-roundtrip",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/event-unconfirmed-modifier-and-wrong-cost-reject",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/transaction-success-on-clone-single-revision",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/transaction-rejects-async-and-seals-callback-alias",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/transaction-rollback/stale",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/transaction-rollback/throw",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/transaction-rollback/invalid",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/transaction-rollback/identity",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/save-single-new-key-write-and-previous-valid-state",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/legacy-raw-and-envelope-readonly-export",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/future-current-not-silently-recovered-or-overwritten",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/blocked-storage-or-write-failure-preserves-state-and-record",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/import-preview-throw-no-storage-or-memory-publication",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/import-preview-disposable-clone-and-one-write",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/import-validation-before-preview-and-storage",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/import-write-fault-does-not-publish-candidate",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/explicit-profile-mismatch-never-converted",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/prototype-property-is-not-profile",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/UTF8-import-byte-limit-and-malformed-json",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/oracle-integrity/H01-single-maturity-growth-echo-no-gauge",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/oracle-integrity/H02-two-maturity-actual-cap-and-rational-floor",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/oracle-integrity/H03-maturity-then-fuel-consumption-index-tower",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/oracle-integrity/H04-scrap-consume-death-spawn-growth-echo",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/oracle-integrity/H05-two-scrap-types-limits-and-auditor-floor",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/oracle-integrity/H06-real-tags-adjacency-and-rational-multiplier",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/oracle-integrity/H07-phase-resonance-priority-cloth-pitch-chord",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/oracle-integrity/H08-index-immediate-tower-third-release-receipt",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/oracle-integrity/H09-cap-zero-injection-no-event-and-self-release",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/oracle-integrity/H10-calendar-fog-stitcher-common-maturity-guard",
+        "ok": true
+      },
+      {
+        "name": "gdd1/f1/oracle-integrity/H11-distillation-growth-and-crystal-gauge",
+        "ok": true
+      }
+    ]
+  },
+  "audit": {
+    "total": 28,
+    "passed": 28,
+    "cases": [
+      {
+        "name": "audit/legacy-isolation",
+        "ok": true
+      },
+      {
+        "name": "audit/durable/READY",
+        "ok": true
+      },
+      {
+        "name": "audit/durable/SYMBOL_CHOICE",
+        "ok": true
+      },
+      {
+        "name": "audit/durable/ITEM_CHOICE",
+        "ok": true
+      },
+      {
+        "name": "audit/durable/EVENT_CHOICE",
+        "ok": true
+      },
+      {
+        "name": "audit/durable/WON",
+        "ok": true
+      },
+      {
+        "name": "audit/durable/LOST",
+        "ok": true
+      },
+      {
+        "name": "audit/pending/-1000000000",
+        "ok": true
+      },
+      {
+        "name": "audit/pending/-1",
+        "ok": true
+      },
+      {
+        "name": "audit/pending/0",
+        "ok": true
+      },
+      {
+        "name": "audit/pending/1",
+        "ok": true
+      },
+      {
+        "name": "audit/pending/1000000000",
+        "ok": true
+      },
+      {
+        "name": "audit/pending-causal",
+        "ok": true
+      },
+      {
+        "name": "audit/transaction-rollback",
+        "ok": true
+      },
+      {
+        "name": "audit/async-alias",
+        "ok": true
+      },
+      {
+        "name": "audit/rng-overflow",
+        "ok": true
+      },
+      {
+        "name": "audit/shuffle-boundaries",
+        "ok": true
+      },
+      {
+        "name": "audit/storage-faults",
+        "ok": true
+      },
+      {
+        "name": "audit/invalid-import",
+        "ok": true
+      },
+      {
+        "name": "audit/future-explicit-recovery",
+        "ok": true
+      },
+      {
+        "name": "audit/profile-isolation",
+        "ok": true
+      },
+      {
+        "name": "audit/pool-boundaries",
+        "ok": true
+      },
+      {
+        "name": "audit/reproduce-A1-async-preview",
+        "ok": true
+      },
+      {
+        "name": "audit/reproduce-A2-ash-age3",
+        "ok": true
+      },
+      {
+        "name": "audit/reproduce-A3-fog-nonplant",
+        "ok": true
+      },
+      {
+        "name": "audit/reproduce-A4a",
+        "ok": true
+      },
+      {
+        "name": "audit/reproduce-A4b",
+        "ok": true
+      },
+      {
+        "name": "audit/reproduce-A4c",
+        "ok": true
+      }
+    ],
+    "findings": [
+      {
+        "id": "A1",
+        "title": "Async preview commits before rejection",
+        "observed": {
+          "ok": true,
+          "writes": 1,
+          "savedCash": 99
+        },
+        "expected": "reject async preview before write"
+      },
+      {
+        "id": "A2",
+        "title": "Stable ash age3 accepted",
+        "reason": "GDD requires third-appearance consumption or self-destruction",
+        "input": {
+          "schema": 2,
+          "rules": "GDD1",
+          "content": "GDD1",
+          "saveKey": "fog-port.save.v1.gdd1",
+          "rngAlgorithm": "fnv1a-utf16le-xorshift32-v1",
+          "profile": "full-v1",
+          "difficulty": "Normal",
+          "seed": "AUDIT-F1",
+          "rng": {
+            "draw": {
+              "state": 2841615362,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 3273659013,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 3350290540,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 1543718183,
+              "consumed": 0
+            },
+            "event": {
+              "state": 1976810878,
+              "consumed": 0
+            }
+          },
+          "revision": 0,
+          "phase": "READY",
+          "stageId": 3,
+          "spin": 12,
+          "stageSpin": 0,
+          "spinsRemaining": 7,
+          "basePayment": 210,
+          "payment": 210,
+          "cash": 0,
+          "pendingSettlement": null,
+          "last": {
+            "spin": 12,
+            "total": 0,
+            "reward": 0,
+            "board": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "ledger": [],
+            "log": []
+          },
+          "pool": [
+            {
+              "uid": "u1",
+              "type": "ash_felt",
+              "permanent": 0,
+              "epoch": 0,
+              "counters": {
+                "age": 3
+              }
+            }
+          ],
+          "nextUid": 2,
+          "items": [],
+          "rerollTokens": 2,
+          "removeTokens": 2,
+          "offer": {
+            "windowId": 0,
+            "kind": null,
+            "choices": [],
+            "choiceRefreshesUsed": 0,
+            "guarantees": {
+              "applied": null,
+              "stageCommonHandled": false,
+              "eventCrystalPending": false,
+              "itemProductPending": false
+            }
+          },
+          "events": {
+            "seenIds": [],
+            "count": 0,
+            "cooldownPayments": 0,
+            "activeModifiers": [],
+            "choice": null
+          },
+          "reservations": [],
+          "fractionGaugeReserved": false,
+          "itemState": {
+            "stageId": 3,
+            "spin": 12,
+            "quotas": {},
+            "used": {}
+          },
+          "stageState": {
+            "advanceClaims": [],
+            "paymentModifiers": [],
+            "skipCount": 0
+          },
+          "settings": {
+            "autosave": true,
+            "advanceAccepted": false
+          }
+        },
+        "observed": "decode/store/load accept",
+        "expected": "reject impossible stable state"
+      },
+      {
+        "id": "A3",
+        "title": "Fog on nonplant accepted",
+        "reason": "fog target must be age-bearing plant",
+        "input": {
+          "schema": 2,
+          "rules": "GDD1",
+          "content": "GDD1",
+          "saveKey": "fog-port.save.v1.gdd1",
+          "rngAlgorithm": "fnv1a-utf16le-xorshift32-v1",
+          "profile": "full-v1",
+          "difficulty": "Normal",
+          "seed": "AUDIT-F1",
+          "rng": {
+            "draw": {
+              "state": 2841615362,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 3273659013,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 3350290540,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 1543718183,
+              "consumed": 0
+            },
+            "event": {
+              "state": 1976810878,
+              "consumed": 0
+            }
+          },
+          "revision": 0,
+          "phase": "READY",
+          "stageId": 3,
+          "spin": 12,
+          "stageSpin": 0,
+          "spinsRemaining": 7,
+          "basePayment": 210,
+          "payment": 210,
+          "cash": 0,
+          "pendingSettlement": null,
+          "last": {
+            "spin": 12,
+            "total": 0,
+            "reward": 0,
+            "board": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "ledger": [],
+            "log": []
+          },
+          "pool": [
+            {
+              "uid": "u1",
+              "type": "cloudy_negative",
+              "permanent": 0,
+              "epoch": 0,
+              "counters": {
+                "age": 1
+              }
+            }
+          ],
+          "nextUid": 2,
+          "items": [],
+          "rerollTokens": 2,
+          "removeTokens": 2,
+          "offer": {
+            "windowId": 0,
+            "kind": null,
+            "choices": [],
+            "choiceRefreshesUsed": 0,
+            "guarantees": {
+              "applied": null,
+              "stageCommonHandled": false,
+              "eventCrystalPending": false,
+              "itemProductPending": false
+            }
+          },
+          "events": {
+            "seenIds": [
+              "event_fog_shift"
+            ],
+            "count": 1,
+            "cooldownPayments": 0,
+            "activeModifiers": [
+              {
+                "eventId": "event_fog_shift",
+                "uid": "u1",
+                "stageId": 3,
+                "remaining": 2
+              }
+            ],
+            "choice": null
+          },
+          "reservations": [],
+          "fractionGaugeReserved": false,
+          "itemState": {
+            "stageId": 3,
+            "spin": 12,
+            "quotas": {},
+            "used": {}
+          },
+          "stageState": {
+            "advanceClaims": [],
+            "paymentModifiers": [],
+            "skipCount": 0
+          },
+          "settings": {
+            "autosave": true,
+            "advanceAccepted": false
+          }
+        },
+        "observed": "decode/store/load accept",
+        "expected": "reject impossible stable state"
+      },
+      {
+        "id": "A4a",
+        "title": "Expired modifier accepted",
+        "reason": "stage modifier remains outside fixed stage window",
+        "input": {
+          "schema": 2,
+          "rules": "GDD1",
+          "content": "GDD1",
+          "saveKey": "fog-port.save.v1.gdd1",
+          "rngAlgorithm": "fnv1a-utf16le-xorshift32-v1",
+          "profile": "full-v1",
+          "difficulty": "Normal",
+          "seed": "AUDIT-F1",
+          "rng": {
+            "draw": {
+              "state": 2841615362,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 3273659013,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 3350290540,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 1543718183,
+              "consumed": 0
+            },
+            "event": {
+              "state": 1976810878,
+              "consumed": 0
+            }
+          },
+          "revision": 0,
+          "phase": "READY",
+          "stageId": 3,
+          "spin": 16,
+          "stageSpin": 4,
+          "spinsRemaining": 3,
+          "basePayment": 210,
+          "payment": 210,
+          "cash": 0,
+          "pendingSettlement": null,
+          "last": {
+            "spin": 16,
+            "total": 0,
+            "reward": 0,
+            "board": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "ledger": [],
+            "log": []
+          },
+          "pool": [],
+          "nextUid": 1,
+          "items": [],
+          "rerollTokens": 2,
+          "removeTokens": 2,
+          "offer": {
+            "windowId": 0,
+            "kind": null,
+            "choices": [],
+            "choiceRefreshesUsed": 0,
+            "guarantees": {
+              "applied": null,
+              "stageCommonHandled": false,
+              "eventCrystalPending": false,
+              "itemProductPending": false
+            }
+          },
+          "events": {
+            "seenIds": [
+              "event_silent_bell"
+            ],
+            "count": 1,
+            "cooldownPayments": 0,
+            "activeModifiers": [
+              {
+                "eventId": "event_silent_bell",
+                "uid": null,
+                "stageId": 3,
+                "remaining": 3
+              }
+            ],
+            "choice": null
+          },
+          "reservations": [],
+          "fractionGaugeReserved": false,
+          "itemState": {
+            "stageId": 3,
+            "spin": 16,
+            "quotas": {},
+            "used": {}
+          },
+          "stageState": {
+            "advanceClaims": [],
+            "paymentModifiers": [],
+            "skipCount": 0
+          },
+          "settings": {
+            "autosave": true,
+            "advanceAccepted": false
+          }
+        },
+        "observed": "decode/store/load accept",
+        "expected": "reject impossible stable state"
+      },
+      {
+        "id": "A4b",
+        "title": "Expired modifier accepted",
+        "reason": "stage modifier remains outside fixed stage window",
+        "input": {
+          "schema": 2,
+          "rules": "GDD1",
+          "content": "GDD1",
+          "saveKey": "fog-port.save.v1.gdd1",
+          "rngAlgorithm": "fnv1a-utf16le-xorshift32-v1",
+          "profile": "full-v1",
+          "difficulty": "Normal",
+          "seed": "AUDIT-F1",
+          "rng": {
+            "draw": {
+              "state": 2841615362,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 3273659013,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 3350290540,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 1543718183,
+              "consumed": 0
+            },
+            "event": {
+              "state": 1976810878,
+              "consumed": 0
+            }
+          },
+          "revision": 0,
+          "phase": "READY",
+          "stageId": 3,
+          "spin": 16,
+          "stageSpin": 4,
+          "spinsRemaining": 3,
+          "basePayment": 210,
+          "payment": 210,
+          "cash": 0,
+          "pendingSettlement": null,
+          "last": {
+            "spin": 16,
+            "total": 0,
+            "reward": 0,
+            "board": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "ledger": [],
+            "log": []
+          },
+          "pool": [],
+          "nextUid": 1,
+          "items": [],
+          "rerollTokens": 2,
+          "removeTokens": 2,
+          "offer": {
+            "windowId": 0,
+            "kind": null,
+            "choices": [],
+            "choiceRefreshesUsed": 0,
+            "guarantees": {
+              "applied": null,
+              "stageCommonHandled": false,
+              "eventCrystalPending": false,
+              "itemProductPending": false
+            }
+          },
+          "events": {
+            "seenIds": [
+              "event_misprint_window"
+            ],
+            "count": 1,
+            "cooldownPayments": 0,
+            "activeModifiers": [
+              {
+                "eventId": "event_misprint_window",
+                "uid": null,
+                "stageId": 3,
+                "remaining": 3
+              }
+            ],
+            "choice": null
+          },
+          "reservations": [],
+          "fractionGaugeReserved": false,
+          "itemState": {
+            "stageId": 3,
+            "spin": 16,
+            "quotas": {},
+            "used": {}
+          },
+          "stageState": {
+            "advanceClaims": [],
+            "paymentModifiers": [],
+            "skipCount": 0
+          },
+          "settings": {
+            "autosave": true,
+            "advanceAccepted": false
+          }
+        },
+        "observed": "decode/store/load accept",
+        "expected": "reject impossible stable state"
+      },
+      {
+        "id": "A4c",
+        "title": "Expired modifier accepted",
+        "reason": "stage modifier remains outside fixed stage window",
+        "input": {
+          "schema": 2,
+          "rules": "GDD1",
+          "content": "GDD1",
+          "saveKey": "fog-port.save.v1.gdd1",
+          "rngAlgorithm": "fnv1a-utf16le-xorshift32-v1",
+          "profile": "full-v1",
+          "difficulty": "Normal",
+          "seed": "AUDIT-F1",
+          "rng": {
+            "draw": {
+              "state": 2841615362,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 3273659013,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 3350290540,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 1543718183,
+              "consumed": 0
+            },
+            "event": {
+              "state": 1976810878,
+              "consumed": 0
+            }
+          },
+          "revision": 0,
+          "phase": "READY",
+          "stageId": 3,
+          "spin": 14,
+          "stageSpin": 2,
+          "spinsRemaining": 5,
+          "basePayment": 210,
+          "payment": 210,
+          "cash": 0,
+          "pendingSettlement": null,
+          "last": {
+            "spin": 14,
+            "total": 0,
+            "reward": 0,
+            "board": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "ledger": [],
+            "log": []
+          },
+          "pool": [],
+          "nextUid": 1,
+          "items": [],
+          "rerollTokens": 2,
+          "removeTokens": 2,
+          "offer": {
+            "windowId": 0,
+            "kind": null,
+            "choices": [],
+            "choiceRefreshesUsed": 0,
+            "guarantees": {
+              "applied": null,
+              "stageCommonHandled": false,
+              "eventCrystalPending": false,
+              "itemProductPending": false
+            }
+          },
+          "events": {
+            "seenIds": [
+              "event_empty_manifest"
+            ],
+            "count": 1,
+            "cooldownPayments": 0,
+            "activeModifiers": [
+              {
+                "eventId": "event_empty_manifest",
+                "uid": null,
+                "stageId": 3,
+                "remaining": 1
+              }
+            ],
+            "choice": null
+          },
+          "reservations": [],
+          "fractionGaugeReserved": false,
+          "itemState": {
+            "stageId": 3,
+            "spin": 14,
+            "quotas": {},
+            "used": {}
+          },
+          "stageState": {
+            "advanceClaims": [],
+            "paymentModifiers": [],
+            "skipCount": 0
+          },
+          "settings": {
+            "autosave": true,
+            "advanceAccepted": false
+          }
+        },
+        "observed": "decode/store/load accept",
+        "expected": "reject impossible stable state"
+      }
+    ],
+    "scope": "Independent F1 audit; findings are blockers"
+  },
+  "rngReference": {
+    "method": "Independent BigInt byte FNV and unsigned xorshift",
+    "identities": 80,
+    "outputs": 20480,
+    "passed": 80,
+    "rows": [
+      {
+        "profile": "full-v1",
+        "seed": "F1-GOLDEN",
+        "stream": "draw",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 904846719,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "F1-GOLDEN",
+        "stream": "effect",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 2646832230,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "F1-GOLDEN",
+        "stream": "symbolOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 2365498233,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "F1-GOLDEN",
+        "stream": "itemOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3843668625,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "F1-GOLDEN",
+        "stream": "event",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3232031598,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "",
+        "stream": "draw",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 23193199,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "",
+        "stream": "effect",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 2570565100,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "",
+        "stream": "symbolOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 2455561824,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "",
+        "stream": "itemOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 554696749,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "",
+        "stream": "event",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 58456134,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "雾港🌫",
+        "stream": "draw",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3567508305,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "雾港🌫",
+        "stream": "effect",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 4051833393,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "雾港🌫",
+        "stream": "symbolOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3863610923,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "雾港🌫",
+        "stream": "itemOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3456100596,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "雾港🌫",
+        "stream": "event",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 811881090,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "a\"\\\n",
+        "stream": "draw",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3213805859,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "a\"\\\n",
+        "stream": "effect",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 1728424732,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "a\"\\\n",
+        "stream": "symbolOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 544542210,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "a\"\\\n",
+        "stream": "itemOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3587483078,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "a\"\\\n",
+        "stream": "event",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3304935486,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "\ud800",
+        "stream": "draw",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 496755984,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "\ud800",
+        "stream": "effect",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 2081411915,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "\ud800",
+        "stream": "symbolOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3001376307,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "\ud800",
+        "stream": "itemOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3201195272,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "\ud800",
+        "stream": "event",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3161914223,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "é",
+        "stream": "draw",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 1301710681,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "é",
+        "stream": "effect",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 2040641705,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "é",
+        "stream": "symbolOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 2396141186,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "é",
+        "stream": "itemOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 2260642085,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "é",
+        "stream": "event",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3862022696,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "é",
+        "stream": "draw",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 2272826656,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "é",
+        "stream": "effect",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 1199027905,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "é",
+        "stream": "symbolOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3576239671,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "é",
+        "stream": "itemOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3549566967,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "é",
+        "stream": "event",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 2156190124,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "stream": "draw",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 354660120,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "stream": "effect",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 1473622003,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "stream": "symbolOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 11824963,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "stream": "itemOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 4005356478,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "full-v1",
+        "seed": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "stream": "event",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 1449308337,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "F1-GOLDEN",
+        "stream": "draw",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 2597329100,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "F1-GOLDEN",
+        "stream": "effect",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3860258916,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "F1-GOLDEN",
+        "stream": "symbolOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 1223237098,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "F1-GOLDEN",
+        "stream": "itemOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 560581102,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "F1-GOLDEN",
+        "stream": "event",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 4143643319,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "",
+        "stream": "draw",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 1537274017,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "",
+        "stream": "effect",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3109818546,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "",
+        "stream": "symbolOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 620670464,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "",
+        "stream": "itemOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 900921528,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "",
+        "stream": "event",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3400615395,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "雾港🌫",
+        "stream": "draw",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 716720975,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "雾港🌫",
+        "stream": "effect",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 244802584,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "雾港🌫",
+        "stream": "symbolOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 2679969260,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "雾港🌫",
+        "stream": "itemOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 1795483713,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "雾港🌫",
+        "stream": "event",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 189719048,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "a\"\\\n",
+        "stream": "draw",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 4028145446,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "a\"\\\n",
+        "stream": "effect",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 2003817893,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "a\"\\\n",
+        "stream": "symbolOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 4107048491,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "a\"\\\n",
+        "stream": "itemOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 4286155237,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "a\"\\\n",
+        "stream": "event",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 1543526883,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "\ud800",
+        "stream": "draw",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3638156380,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "\ud800",
+        "stream": "effect",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 137457277,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "\ud800",
+        "stream": "symbolOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3797212114,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "\ud800",
+        "stream": "itemOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 832813398,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "\ud800",
+        "stream": "event",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 652091674,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "é",
+        "stream": "draw",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 737694332,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "é",
+        "stream": "effect",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 2188507381,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "é",
+        "stream": "symbolOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 4225411467,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "é",
+        "stream": "itemOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3990790310,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "é",
+        "stream": "event",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 1267082767,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "é",
+        "stream": "draw",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 380633861,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "é",
+        "stream": "effect",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 1942127179,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "é",
+        "stream": "symbolOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3075164650,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "é",
+        "stream": "itemOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 1239766414,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "é",
+        "stream": "event",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3594934718,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "stream": "draw",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 2412041759,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "stream": "effect",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 3966315473,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "stream": "symbolOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 1707910431,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "stream": "itemOffer",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 1917494788,
+          "consumed": 256
+        }
+      },
+      {
+        "profile": "slice-abd-v1",
+        "seed": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "stream": "event",
+        "outputs": 256,
+        "ok": true,
+        "final": {
+          "state": 1297888127,
+          "consumed": 256
+        }
+      }
+    ]
+  },
+  "protection": {
+    "original": {
+      "total": 245,
+      "unchanged": 245
+    },
+    "f1Deliverables": {
+      "total": 33,
+      "unchanged": 33
+    },
+    "auditEntry": {
+      "total": 279,
+      "unchanged": 279
+    },
+    "failures": []
+  }
+}

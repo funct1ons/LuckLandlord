@@ -1,0 +1,171 @@
+{
+  "generatedAt": "2026-10-07T16:31:37Z",
+  "source": "tests/balance/b1/baseline-train100/aggregate.json",
+  "sourceHash": "63b46982183010f57ecc01278c94ded6d1fb6bc72213b4fe78324527bafe465a",
+  "configId": "P0-baseline",
+  "seedsHash": "2b4b442164c1d6759f10716c65a073e1f6e348cfac1cc604f7961dcc94835dd6",
+  "seedCount": 100,
+  "gamesPerPolicy": 100,
+  "policyCount": 4,
+  "difficulty": {
+    "targetBand": [
+      0.4,
+      0.7
+    ],
+    "minSkillGap": 0.15,
+    "usable": true,
+    "note": "无 ERROR，胜率可用于初步判断。",
+    "strongPolicies": [
+      {
+        "policy": "synergy",
+        "winRate": 0.54,
+        "inBand": true,
+        "aboveBand": false,
+        "belowBand": false
+      },
+      {
+        "policy": "greedy",
+        "winRate": 0.76,
+        "inBand": false,
+        "aboveBand": true,
+        "belowBand": false
+      }
+    ],
+    "skillGapVsRandom": [
+      {
+        "policy": "synergy",
+        "gap": 0.32000000000000006,
+        "meetsMinimum": true
+      },
+      {
+        "policy": "greedy",
+        "gap": 0.54,
+        "meetsMinimum": true
+      }
+    ]
+  },
+  "routes": {
+    "methodNote": "观察性证据：路线构成由策略选择决定，非随机分配；不能单独作为路线强度结论。",
+    "gamesUsable": 400,
+    "gamesWithError": 0,
+    "byRoute": {
+      "resonance": {
+        "terminalInstances": 2200,
+        "totalAttributedIncome": 191914,
+        "incomePerInstance": 87.23363636363636
+      },
+      "cargo": {
+        "terminalInstances": 1937,
+        "totalAttributedIncome": 77021,
+        "incomePerInstance": 39.76303562209603
+      },
+      "pressure": {
+        "terminalInstances": 2726,
+        "totalAttributedIncome": 164964,
+        "incomePerInstance": 60.51504035216434
+      },
+      "magic": {
+        "terminalInstances": 2928,
+        "totalAttributedIncome": 175229,
+        "incomePerInstance": 59.84596994535519
+      },
+      "contract": {
+        "terminalInstances": 2998,
+        "totalAttributedIncome": 207298,
+        "incomePerInstance": 69.1454302868579
+      }
+    },
+    "mainRouteWinRate": {
+      "resonance": {
+        "games": 0,
+        "wins": 0,
+        "winRate": null
+      },
+      "cargo": {
+        "games": 0,
+        "wins": 0,
+        "winRate": null
+      },
+      "pressure": {
+        "games": 0,
+        "wins": 0,
+        "winRate": null
+      },
+      "magic": {
+        "games": 0,
+        "wins": 0,
+        "winRate": null
+      },
+      "contract": {
+        "games": 1,
+        "wins": 0,
+        "winRate": 0
+      }
+    },
+    "resonanceConcentration": {
+      "games": 400,
+      "meanShare": 0.13017767221036938,
+      "p10": 0.03333333333333333,
+      "p50": 0.10869565217391304,
+      "p90": 0.2631578947368421,
+      "shareOfGamesAbove50pct": 0
+    },
+    "confound": [
+      {
+        "policy": "random",
+        "games": 100,
+        "resonanceMainRouteGames": 0,
+        "resonanceDominantGames": 8,
+        "meanResonanceShare": 0.1346971185471371
+      },
+      {
+        "policy": "value",
+        "games": 100,
+        "resonanceMainRouteGames": 0,
+        "resonanceDominantGames": 27,
+        "meanResonanceShare": 0.19836465598730693
+      },
+      {
+        "policy": "synergy",
+        "games": 100,
+        "resonanceMainRouteGames": 0,
+        "resonanceDominantGames": 3,
+        "meanResonanceShare": 0.09157228165391591
+      },
+      {
+        "policy": "greedy",
+        "games": 100,
+        "resonanceMainRouteGames": 0,
+        "resonanceDominantGames": 2,
+        "meanResonanceShare": 0.09607663265311767
+      }
+    ],
+    "dominantRouteWinRate": {
+      "resonance": {
+        "games": 40,
+        "wins": 15,
+        "winRate": 0.375
+      },
+      "cargo": {
+        "games": 2,
+        "wins": 1,
+        "winRate": 0.5
+      },
+      "pressure": {
+        "games": 18,
+        "wins": 9,
+        "winRate": 0.5
+      },
+      "magic": {
+        "games": 30,
+        "wins": 18,
+        "winRate": 0.6
+      },
+      "contract": {
+        "games": 24,
+        "wins": 17,
+        "winRate": 0.7083333333333334
+      }
+    }
+  }
+}

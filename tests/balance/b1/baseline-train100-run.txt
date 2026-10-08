@@ -1,0 +1,10 @@
+﻿=== balance-v1 批次完成 ===
+配置 P0-baseline | 源码 63b46982183010f5… | seed 100 | 局数 400 | 用时 1393.3s
+
+  random   WON   22  LOST   78  ERROR   0  胜率 22.0%  95%CI [15.0%, 31.1%]
+  value    WON   65  LOST   35  ERROR   0  胜率 65.0%  95%CI [55.3%, 73.6%]
+  synergy  WON   54  LOST   46  ERROR   0  胜率 54.0%  95%CI [44.3%, 63.4%]
+  greedy   WON   76  LOST   24  ERROR   0  胜率 76.0%  95%CI [66.8%, 83.3%]
+
+批次状态：OK（无 ERROR）
+输出：C:\files\code\LuckLandlord\tests\balance\b1\baseline-train100

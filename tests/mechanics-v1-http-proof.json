@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "name": "suite",
+      "edgeExit": 0,
+      "profile": "C:\\Users\\admin\\AppData\\Local\\Temp\\mechanics-v1-http-NpSvdC",
+      "strictMarker": "data-result=\"pass\"",
+      "total": 521,
+      "passed": 521,
+      "namesAndOrderMatch": true,
+      "exactCaseResultsMatch": true
+    },
+    {
+      "name": "ui",
+      "edgeExit": 0,
+      "profile": "C:\\Users\\admin\\AppData\\Local\\Temp\\mechanics-v1-http-8dex0A",
+      "strictMarker": "data-smoke=\"pass\"",
+      "faults": true
+    },
+    {
+      "name": "file-suite-comparison",
+      "total": 521,
+      "passed": 521,
+      "namesAndOrderMatch": true,
+      "exactCaseResultsMatch": true
+    }
+  ]
+}

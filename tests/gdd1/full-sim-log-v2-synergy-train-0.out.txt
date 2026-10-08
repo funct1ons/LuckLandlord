@@ -1,0 +1,2 @@
+{"bot":"Synergy","split":"train","startIndex":0,"done":1,"n":500,"wins":0,"errors":0,"seconds":0.5}
+{"bot":"Synergy","split":"train","startIndex":0,"done":10,"n":500,"wins":0,"errors":0,"seconds":8.2}

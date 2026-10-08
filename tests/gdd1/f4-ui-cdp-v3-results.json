@@ -1,0 +1,157 @@
+{
+  "scope": "Real gdd1.html Edge UI via CDP; not complete F4 acceptance",
+  "results": [
+    {
+      "route": "file",
+      "case": "valid-full-import-exact-reload-real-double-click-detail2-stale-detached-button-refresh-cap3-other-legacy-keys",
+      "ok": true
+    },
+    {
+      "route": "file",
+      "case": "real-ui-layout",
+      "width": 1280,
+      "height": 720,
+      "layout": {
+        "viewport": 1280,
+        "scroll": 1265,
+        "cells": 20,
+        "board": {
+          "x": 36,
+          "y": 245.5,
+          "width": 859,
+          "height": 370,
+          "top": 245.5,
+          "right": 895,
+          "bottom": 615.5,
+          "left": 36
+        }
+      },
+      "ok": true
+    },
+    {
+      "route": "file",
+      "case": "real-ui-layout",
+      "width": 1600,
+      "height": 900,
+      "layout": {
+        "viewport": 1600,
+        "scroll": 1585,
+        "cells": 20,
+        "board": {
+          "x": 108.5,
+          "y": 245.5,
+          "width": 1034,
+          "height": 370,
+          "top": 245.5,
+          "right": 1142.5,
+          "bottom": 615.5,
+          "left": 108.5
+        }
+      },
+      "ok": true
+    },
+    {
+      "route": "file",
+      "case": "real-ui-layout",
+      "width": 1920,
+      "height": 1080,
+      "layout": {
+        "viewport": 1920,
+        "scroll": 1920,
+        "cells": 20,
+        "board": {
+          "x": 276,
+          "y": 245.5,
+          "width": 1034,
+          "height": 370,
+          "top": 245.5,
+          "right": 1310,
+          "bottom": 615.5,
+          "left": 276
+        }
+      },
+      "ok": true
+    },
+    {
+      "route": "file",
+      "case": "real-buttons-full-entry-setting-spin-skip-save-reload-independent-storage-write-fault-invalid-import",
+      "ok": true
+    },
+    {
+      "route": "http",
+      "case": "valid-full-import-exact-reload-real-double-click-detail2-stale-detached-button-refresh-cap3-other-legacy-keys",
+      "ok": true
+    },
+    {
+      "route": "http",
+      "case": "real-ui-layout",
+      "width": 1280,
+      "height": 720,
+      "layout": {
+        "viewport": 1280,
+        "scroll": 1265,
+        "cells": 20,
+        "board": {
+          "x": 36,
+          "y": 245.5,
+          "width": 859,
+          "height": 370,
+          "top": 245.5,
+          "right": 895,
+          "bottom": 615.5,
+          "left": 36
+        }
+      },
+      "ok": true
+    },
+    {
+      "route": "http",
+      "case": "real-ui-layout",
+      "width": 1600,
+      "height": 900,
+      "layout": {
+        "viewport": 1600,
+        "scroll": 1585,
+        "cells": 20,
+        "board": {
+          "x": 108.5,
+          "y": 245.5,
+          "width": 1034,
+          "height": 370,
+          "top": 245.5,
+          "right": 1142.5,
+          "bottom": 615.5,
+          "left": 108.5
+        }
+      },
+      "ok": true
+    },
+    {
+      "route": "http",
+      "case": "real-ui-layout",
+      "width": 1920,
+      "height": 1080,
+      "layout": {
+        "viewport": 1920,
+        "scroll": 1920,
+        "cells": 20,
+        "board": {
+          "x": 276,
+          "y": 245.5,
+          "width": 1034,
+          "height": 370,
+          "top": 245.5,
+          "right": 1310,
+          "bottom": 615.5,
+          "left": 276
+        }
+      },
+      "ok": true
+    },
+    {
+      "route": "http",
+      "case": "real-buttons-full-entry-setting-spin-skip-save-reload-independent-storage-write-fault-invalid-import",
+      "ok": true
+    }
+  ]
+}

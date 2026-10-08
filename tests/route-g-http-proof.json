@@ -1,0 +1,12 @@
+{
+  "protocol": "http",
+  "freshProfile": "C:\\Users\\admin\\AppData\\Local\\Temp\\route-g-http-81c6ba3a-d54e-4017-974a-b2f48d1e3593",
+  "checks": 2,
+  "suite": {
+    "total": 475,
+    "routeG": 118,
+    "baseline": 357,
+    "exactNodeParity": true
+  },
+  "strictSmoke": true
+}

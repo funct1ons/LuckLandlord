@@ -1,0 +1,62 @@
+{
+  "dest": "full-sim-policy-v3-checks.json",
+  "pass": true,
+  "passed": 6,
+  "total": 6,
+  "results": [
+    {
+      "name": "production resolver/full-effects/GDD bytes unchanged",
+      "ok": true,
+      "detail": true
+    },
+    {
+      "name": "v1 and v2 evidence still present",
+      "ok": true,
+      "detail": true
+    },
+    {
+      "name": "constants horizon 8 / cap 64 / remove beam 8 / model seed v3",
+      "ok": true,
+      "detail": true
+    },
+    {
+      "name": "publicView and decideV3 ignore live seed/RNG",
+      "ok": true,
+      "detail": {
+        "action": {
+          "op": "reroll",
+          "windowId": 1
+        },
+        "modelCommands": 242,
+        "candidates": 13
+      }
+    },
+    {
+      "name": "root candidates include skipItem, reroll, and remove when legal; remove beam wider than 3",
+      "ok": true,
+      "detail": {
+        "symbolOps": [
+          "choose",
+          "skip",
+          "reroll",
+          "remove"
+        ],
+        "itemOps": [
+          "item",
+          "skipItem"
+        ],
+        "removeCandidates": 8,
+        "legalRemoves": 12
+      }
+    },
+    {
+      "name": "horizon 8 spins / 64 commands; model offers do not read live streams; Random throws",
+      "ok": true,
+      "detail": {
+        "utility": 395.498,
+        "commands": 18,
+        "spins": 8
+      }
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+[60332:65136:1006/014750.357:ERROR:chrome\browser\importer\edge_china_browsers\edge_qqbrowser_importer_utils_win.cc:165] QQBrowser user data path not found.
+45493 bytes written to file C:\files\code\LuckLandlord\tests\gdd1\f2-mobile.png

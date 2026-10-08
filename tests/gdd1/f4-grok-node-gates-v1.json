@@ -1,0 +1,38 @@
+{
+  "scope": "Independent Node save/RNG/payment/pending/event-double-click gates; not Edge UI and not auditor signature",
+  "total": 7,
+  "passed": 5,
+  "cases": [
+    {
+      "name": "save-keys-isolation-previous-import-faults",
+      "ok": false,
+      "error": "Values have same structure but are not reference-equal:\n\n... Skipped lines\n{\n  basePayment: 70,\n  cash: 0,\n  content: 'GDD1',\n  difficulty: 'Normal',\n  events: {\n    activeModifiers: [],\n    choice: null,\n    cooldownPayments: 0,\n    count: 0,\n    seenIds: []\n  },\n  fractionGaugeReserved: false,\n  itemState: {\n    quotas: {},\n    spin: 0,\n    stageId: 1,\n    used: {}\n  },\n  items: [],\n  last: null,\n  nextUid: 13,\n  offer: {\n    choiceRefreshesUsed: 0,\n    choices: [],\n    guarantees: {\n      applied: null,\n      eventCrystalPending: false,\n      itemProductPending: false,\n      stageCommonHandled: false\n    },\n    kind: null,\n    windowId: 0\n  },\n  payment: 70,\n  pendingSettlement: null,\n  phase: 'READY',\n  pool: [\n    {\n      counters: {\n        age: 0\n      },\n      epoch: 0,\n      permanent: 0,\n      type: 'mist_pouch',\n      uid: 'u1'\n    },\n    {\n      counters: {\n        age: 0\n...}\n"
+    },
+    {
+      "name": "wrong-profile-import-legacy-keys",
+      "ok": true
+    },
+    {
+      "name": "rng-atomic-failed-command",
+      "ok": true
+    },
+    {
+      "name": "payment-skip-double-click",
+      "ok": true
+    },
+    {
+      "name": "pending-remove-retains-settlement",
+      "ok": true
+    },
+    {
+      "name": "event-double-click",
+      "ok": true
+    },
+    {
+      "name": "payments-table-matches-gdd",
+      "ok": false,
+      "error": "Values have same structure but are not reference-equal:\n\n[\n  70,\n  125,\n  210,\n  320,\n  460,\n  630,\n  850,\n  1120,\n  1460,\n  1880\n]\n"
+    }
+  ],
+  "ok": false
+}

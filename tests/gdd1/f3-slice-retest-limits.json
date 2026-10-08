@@ -1,0 +1,37 @@
+{
+  "pass": true,
+  "count": 3,
+  "rows": [
+    {
+      "name": "third synthetic negative multiplier source blocked at cap2 with floor -3",
+      "pass": true,
+      "evidence": {
+        "syntheticOnly": true,
+        "total": 9,
+        "target": -3,
+        "thirdSourceSkipped": 4
+      }
+    },
+    {
+      "name": "three distinct consumed source UIDs share generation effect budget2",
+      "pass": true,
+      "evidence": {
+        "total": 21,
+        "generated": 2,
+        "consumed": 3,
+        "pool": 5
+      }
+    },
+    {
+      "name": "two plant conversions at permanent29 commit actual grow1 then no phantom growth",
+      "pass": true,
+      "evidence": {
+        "actualGrowth": [
+          1
+        ],
+        "permanent": 30,
+        "total": 37
+      }
+    }
+  ]
+}

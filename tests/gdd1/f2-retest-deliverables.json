@@ -1,0 +1,255 @@
+{
+  "scope": "Independent F2 E1/E2 retest new artifacts; self-excluded",
+  "files": [
+    {
+      "path": "docs/GDD1_F2_RETEST.md",
+      "bytes": 7698,
+      "sha256": "c2e55991cb6c16efa642a5c92a3e631496aa059f8072001cd8109ee15b3daf80"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-before.json",
+      "bytes": 62514,
+      "sha256": "a15c2d8e26c618d91441daf88e4bf2e13fbdf9539ae58ec45c70ac001892076b"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-browser.html",
+      "bytes": 671,
+      "sha256": "07b6410301474e892cf8465286f585156c308871347ee926206fb82b56680092"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-browser.js",
+      "bytes": 7759,
+      "sha256": "4ae747b191c041615ebf1bc1fabbb45f770657bd88c2a9eb8f4cc18baa62ec5f"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-browser.ps1",
+      "bytes": 1159,
+      "sha256": "6bed156f8bc532aeecb616bbf59b9b8addb641b1e79229f93b0c699b5f43f703"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-build-harness.js",
+      "bytes": 2648,
+      "sha256": "f9f8deaca17c16e2d95447e70fcc1eaaa8aba8d82f06f6b9ed8f5cda27989c23"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-checks.js",
+      "bytes": 6331,
+      "sha256": "c12ca8399c72e30a874ce7d654005ac41e254518f06a57d11928ae9f3d9b2bb2"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-file-read-boundary-only.html",
+      "bytes": 3398,
+      "sha256": "38642037d0b10fd1eea7485b681df432da2e7f9d8b0189fcf10272987641a739"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-file-read-initial.html",
+      "bytes": 3398,
+      "sha256": "38642037d0b10fd1eea7485b681df432da2e7f9d8b0189fcf10272987641a739"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-file-read-stderr-initial.txt",
+      "bytes": 158,
+      "sha256": "1003ce5e1ad7727ca5f4378d38294e53c3eebeb9f6a8ffc143364972ce14dd14"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-file-read-stderr.txt",
+      "bytes": 158,
+      "sha256": "be3451e6c76d8b88d150bdb462ee326080b65dcbd7f56d90f5fd6d586535e30a"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-file-read.html",
+      "bytes": 9646,
+      "sha256": "f955e1ba02712c66bf0c6dc7150876521a6cac86ce11f2e75742c667ed845600"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-file-write-boundary-only.html",
+      "bytes": 3898,
+      "sha256": "58efabc516be222c9b16f85583404379cec458f8d9ca32cf8227a5f83ad77eb6"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-file-write-initial.html",
+      "bytes": 3898,
+      "sha256": "58efabc516be222c9b16f85583404379cec458f8d9ca32cf8227a5f83ad77eb6"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-file-write-stderr-initial.txt",
+      "bytes": 158,
+      "sha256": "15a4898655128bfc8d5ca05a5d21b830650a7daf567e802079fd7607468199f4"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-file-write-stderr.txt",
+      "bytes": 158,
+      "sha256": "f906e3b885e497cfbc5fa99774449768268bd2ff38d8c445df9a6196391406cf"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-file-write.html",
+      "bytes": 10146,
+      "sha256": "f46efdd3f31bbb2cbd423daf37cd7fd32ef59aadcdeb6d27e390eab8e60fbbd1"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-http-read-boundary-only.html",
+      "bytes": 3398,
+      "sha256": "1568172a812e6e21ec1c3c486c60ee702592ce61ee20972674a0ba185ff89a89"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-http-read-stderr.txt",
+      "bytes": 158,
+      "sha256": "2aeabcf1f8250c274347c9f5a87c7b826037c0b57d24db8f9a63620c46b8fa79"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-http-read.html",
+      "bytes": 9646,
+      "sha256": "08a38385479188dadd3474ed1bad1feed079e33b5a46eb240e093e0b54c57abc"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-http-write-boundary-only.html",
+      "bytes": 3898,
+      "sha256": "438dc66c22abf6be655e7f3ec302cc66a72609653932831d54ae9a5368ec1658"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-http-write-initial.html",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-http-write-stderr-initial.txt",
+      "bytes": 309,
+      "sha256": "6594d38fcbd6127206c398433b127aa90b96b8982d4e67cf7fabda8cb62a9683"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-http-write-stderr.txt",
+      "bytes": 158,
+      "sha256": "f32380e48e93cb030332e364e35191a3bac6f5d302e57af3a5a38bbb6db1a80e"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-edge-http-write.html",
+      "bytes": 10146,
+      "sha256": "3c24973dfae3ce77e2e2bccd382b984c86333f4a1d076d899f982b8433d67ab0"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-f1-run.txt",
+      "bytes": 56626,
+      "sha256": "b67f30f3f6973aa084ebc6f043a4b91240084f093407dce585da400f04c53111"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-f1.json",
+      "bytes": 27272,
+      "sha256": "17447f669087e5ca7f85f5b339cdfee33a1c6c623f98ff208bc2af1afabcbd40"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-file-read.json",
+      "bytes": 11763,
+      "sha256": "48210c256d2d0a7db32a2088535daf41f5394b825b1c7582bdef8ce25d992eb6"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-file-write.json",
+      "bytes": 12419,
+      "sha256": "fbcf2586ee4ed092b0d4e0061e6d4a30b76277df703cec3290c436588760b2d5"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-final-check.js",
+      "bytes": 1477,
+      "sha256": "52e84305fb9b6faf7b10517f1a58aa9baee5896c153e151573803f5c0e722139"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-final-verification.txt",
+      "bytes": 1684,
+      "sha256": "8d36e90e21423d84011bcc118b39edf690d1dac2c5da14a34bb54afb7f167905"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-historical-run.txt",
+      "bytes": 8044,
+      "sha256": "7f0b36be63a45567f71c817bba72253ef245f4d701c4afbad5187126a1dabc55"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-historical-summary.json",
+      "bytes": 36895,
+      "sha256": "8b9cc3da2749156bb8b90170022144a9835dc271af641c0acc5816d41b63d99c"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-historical.js",
+      "bytes": 2543,
+      "sha256": "8a637373e1c6eeb0700f2180fcca55d579f478e73ca98cc58704b853865afe5f"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-http-read.json",
+      "bytes": 11763,
+      "sha256": "0629c70a25b7666a45593fb21eae84fcaebef1f473960dc038d47baf21531794"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-http-write.json",
+      "bytes": 12419,
+      "sha256": "d49227744184acaa0dfcd6df18cc65211bb58e3e56bc1c84789dabd1eadb0574"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-incident.js",
+      "bytes": 1357,
+      "sha256": "7366f5c0c25a4799172e495fee91dfa7c5026325b510ad5170becb15a04843b2"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-incident.json",
+      "bytes": 1093,
+      "sha256": "7a329efa468881782e900e7fda473ffe439bf118710d98fee59a66312b9f4842"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-legacy.json",
+      "bytes": 2316,
+      "sha256": "89a0730f5ca2d52d7cc720db840ab40719fd34c13f6c26b1792f87ed1ec8e7ac"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-manifest.js",
+      "bytes": 893,
+      "sha256": "befd318fc87a7426b81e5bf2ac2c173ea9790c3620767dca917bcf44a9c14d72"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-node-boundary-only.json",
+      "bytes": 1457,
+      "sha256": "0f2324e0392942b6a80769adc96720c0fb6ef671b43ccb4ea72c61495b9d581a"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-node.json",
+      "bytes": 5626,
+      "sha256": "fb1181b8ec9436559f296bf992c5cf1b3acd54683de309e374783bd5cec20331"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-original154-node.json",
+      "bytes": 14462,
+      "sha256": "ac51b7dd4ebf992765839f7fc08f2795074753a6756a67b35221fcfe6a78041e"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-original41-node.json",
+      "bytes": 4278,
+      "sha256": "d2b4553514bae6e136f08c3221b85bf8cdf71f77c8b3a1ea1366a6d4387f77fd"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-parity.json",
+      "bytes": 749,
+      "sha256": "60cb0493086b3f36ea20bda4f7f65b2b7235f6c3947846353550deffb73f9ce6"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-protection.json",
+      "bytes": 2879,
+      "sha256": "023946ba9fb0a00f186bd1f8045c2b8b0679c5ed5f51a470f2c8a279367edf96"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-run.js",
+      "bytes": 973,
+      "sha256": "08b300a3f2de3f84bdcc3f2c2a655aae8ef827aeb5c0729216a8e9c97b421888"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-server-stop.json",
+      "bytes": 62,
+      "sha256": "941a3f86f37a9732f73a83e307884eac20a2cdbec293f2d1760eee8292a96c70"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-server.js",
+      "bytes": 613,
+      "sha256": "51d854d2db0e99cb9eb93e3d757f75e8c910bd4a0abfde00e7bc494da39c50b7"
+    },
+    {
+      "path": "tests/gdd1/f2-retest-verify.js",
+      "bytes": 2963,
+      "sha256": "a3282d757ee5b8a738f844ddb17a3768d6bbc83a0b0101422ca09f3312647e39"
+    }
+  ]
+}

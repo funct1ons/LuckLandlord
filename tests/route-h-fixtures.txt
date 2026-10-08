@@ -1,0 +1,4 @@
+10 fixtures reported; all match manual expectation: true
+
+
+EXIT 0

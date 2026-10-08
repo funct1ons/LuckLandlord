@@ -1,0 +1,242 @@
+{
+  "pass": false,
+  "count": 17,
+  "tests": [
+    {
+      "name": "A1 rejects four wick beds despite active products and support",
+      "pass": true,
+      "evidence": {
+        "expected": []
+      }
+    },
+    {
+      "name": "A1 strict age/product inventory, support and last three spins",
+      "pass": true,
+      "evidence": {
+        "window": 3,
+        "eligible": 4,
+        "minimumTransform": 2,
+        "productIncome": 12
+      }
+    },
+    {
+      "name": "A1 main and secondary are actual income, historical formation irrelevant",
+      "pass": true,
+      "evidence": {
+        "income": {
+          "A": 20,
+          "B": 80,
+          "D": 0,
+          "other": 0
+        },
+        "shares": {
+          "A": 0.2,
+          "B": 0.8,
+          "D": 0,
+          "other": 0
+        },
+        "main": "B",
+        "secondary": [
+          "A"
+        ],
+        "mixed": true,
+        "diagnosticThreshold": 0.2
+      }
+    },
+    {
+      "name": "A2 transform UID epoch exact index6 prism7 independently expected total17",
+      "pass": true,
+      "evidence": {
+        "expected": {
+          "crystal_index": 6,
+          "tide_prism": 7
+        },
+        "uid": "u13",
+        "parts": [
+          {
+            "sourceUid": "u13",
+            "sourceType": "tide_prism",
+            "sourceEpoch": 1,
+            "targetUid": "u13",
+            "kind": "base-permanent",
+            "amount": 4
+          },
+          {
+            "sourceUid": "u13",
+            "sourceType": "crystal_index",
+            "sourceEpoch": 0,
+            "targetUid": "u13",
+            "kind": "add",
+            "effectKey": "crystal_index:0",
+            "logId": 0,
+            "amount": 6
+          },
+          {
+            "sourceUid": "u13",
+            "sourceType": "tide_prism",
+            "sourceEpoch": 1,
+            "targetUid": "u13",
+            "kind": "add",
+            "effectKey": "tide_prism:0",
+            "logId": 2,
+            "amount": 3
+          },
+          {
+            "sourceUid": "u14",
+            "sourceType": "pearl_separator",
+            "sourceEpoch": 0,
+            "targetUid": "u14",
+            "kind": "base-permanent",
+            "amount": 2
+          },
+          {
+            "sourceUid": "u15",
+            "sourceType": "reserve_facet",
+            "sourceEpoch": 0,
+            "targetUid": "u15",
+            "kind": "base-permanent",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "A2 half rounding and external multiplier ownership exact total11",
+      "pass": true,
+      "evidence": {
+        "expectedBase": 8,
+        "externalMarginals": [
+          1,
+          1,
+          1
+        ],
+        "total": 11
+      }
+    },
+    {
+      "name": "A2 multiply cap2 and cumulative rational flooring exact total24",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Values have same structure but are not reference-equal:\n\n[\n  4,\n  4,\n  4,\n  6,\n  6\n]\n\n    at C:\\files\\code\\LuckLandlord\\tests\\gdd1\\f3-slice-fix-checks.js:11:387\n    at test (C:\\files\\code\\LuckLandlord\\tests\\gdd1\\f3-slice-fix-checks.js:2:265)\n    at Object.<anonymous> (C:\\files\\code\\LuckLandlord\\tests\\gdd1\\f3-slice-fix-checks.js:11:1)\n    at Module._compile (node:internal/modules/cjs/loader:1812:14)\n    at Object..js (node:internal/modules/cjs/loader:1943:10)\n    at Module.load (node:internal/modules/cjs/loader:1533:32)\n    at Module._load (node:internal/modules/cjs/loader:1335:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47"
+    },
+    {
+      "name": "A2 negative ordinary income retained",
+      "pass": true,
+      "evidence": {
+        "expected": -1
+      }
+    },
+    {
+      "name": "A2 consumed ordinary zero, item independent reward and generated UID",
+      "pass": true,
+      "evidence": {
+        "expected": {
+          "sorting_tong": 7,
+          "item_sorting_apron": 3
+        },
+        "generated": {
+          "uid": "u15",
+          "type": "copper_burr",
+          "permanent": 0,
+          "epoch": 0,
+          "counters": {}
+        }
+      }
+    },
+    {
+      "name": "A2 actual permanent growth is own future income, cap30",
+      "pass": true,
+      "evidence": {
+        "cap": 30,
+        "actualGrowth": 1,
+        "permanentIncomeOwner": "heat_clerk",
+        "total": 38
+      }
+    },
+    {
+      "name": "A2 event fog age cause preserves transform identity and item add source",
+      "pass": true,
+      "evidence": {
+        "expected": {
+          "dew_lantern": 3,
+          "item_root_wrap": 4
+        },
+        "eventCashOwnership": 0
+      }
+    },
+    {
+      "name": "A3 repetition counterexample retains events but deduplicates game Wilson",
+      "pass": true,
+      "evidence": {
+        "key": "mist_pouch/1/unformed/<20",
+        "events": 4,
+        "eventWins": 3,
+        "games": 2,
+        "wins": 1,
+        "eventRatio": {
+          "k": 3,
+          "n": 4,
+          "rate": 0.75,
+          "unit": "acquisition event",
+          "denominator": "all acquisition events in stratum",
+          "correlation": "Repeated observations within a game are correlated; no independent-binomial interval"
+        },
+        "gameWinWilson": {
+          "k": 1,
+          "n": 2,
+          "rate": 0.5,
+          "lo": 0.09453120573423074,
+          "hi": 0.9054687942657693
+        },
+        "interpretation": "Unique game/seed per stratum; terminal win conditional on selection, not causal"
+      }
+    },
+    {
+      "name": "A4 frozen Greedy generated offers do not read identities; sample/2spin/14command bounds",
+      "pass": true,
+      "evidence": {
+        "generatedOffers": 10,
+        "maxSpin": 2,
+        "maxCommands": 5,
+        "samples": 1
+      }
+    },
+    {
+      "name": "A5 preflight rejects existing final and staging paths, no partial writes",
+      "pass": true,
+      "evidence": {
+        "finalAndStagingPreflight": true
+      }
+    },
+    {
+      "name": "A5 publish exclusive failure rolls back new links preserving existing bytes",
+      "pass": true,
+      "evidence": {
+        "exclusiveLinks": true,
+        "rollback": true
+      }
+    },
+    {
+      "name": "A2 negative rational floor independently expected -2 and multiplier -1 (synthetic algebra only)",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Values have same structure but are not reference-equal:\n\n[\n  3,\n  -2\n]\n\n    at C:\\files\\code\\LuckLandlord\\tests\\gdd1\\f3-slice-fix-checks.js:20:333\n    at test (C:\\files\\code\\LuckLandlord\\tests\\gdd1\\f3-slice-fix-checks.js:2:265)\n    at Object.<anonymous> (C:\\files\\code\\LuckLandlord\\tests\\gdd1\\f3-slice-fix-checks.js:20:1)\n    at Module._compile (node:internal/modules/cjs/loader:1812:14)\n    at Object..js (node:internal/modules/cjs/loader:1943:10)\n    at Module.load (node:internal/modules/cjs/loader:1533:32)\n    at Module._load (node:internal/modules/cjs/loader:1335:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47"
+    },
+    {
+      "name": "A2 generation pool cap200 preserves spawn source and skips extra child",
+      "pass": true,
+      "evidence": {
+        "expected": 7,
+        "pool": 200,
+        "generated": 1,
+        "blockedSource": "item_offcut_chute"
+      }
+    },
+    {
+      "name": "A3 duplicate seed records share one game denominator",
+      "pass": true,
+      "evidence": {
+        "events": 2,
+        "uniqueGameSeed": 1
+      }
+    }
+  ]
+}

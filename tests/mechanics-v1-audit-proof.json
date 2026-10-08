@@ -1,0 +1,80 @@
+{
+  "status": "review-not-frozen",
+  "results": [
+    {
+      "audit": "audit-cargo-retest.js",
+      "exit": 1,
+      "evidence": "mechanics-v1-audit-cargo-retest.txt"
+    },
+    {
+      "audit": "audit-cargo.js",
+      "exit": 1,
+      "evidence": "mechanics-v1-audit-cargo.txt"
+    },
+    {
+      "audit": "audit-cultivation-retest.js",
+      "exit": 0,
+      "evidence": "mechanics-v1-audit-cultivation-retest.txt"
+    },
+    {
+      "audit": "audit-cultivation.js",
+      "exit": 0,
+      "evidence": "mechanics-v1-audit-cultivation.txt"
+    },
+    {
+      "audit": "audit-distillation.js",
+      "exit": 0,
+      "evidence": "mechanics-v1-audit-distillation.txt"
+    },
+    {
+      "audit": "audit-pressure-retest.js",
+      "exit": 0,
+      "evidence": "mechanics-v1-audit-pressure-retest.txt"
+    },
+    {
+      "audit": "audit-pressure-transaction-retest.js",
+      "exit": 0,
+      "evidence": "mechanics-v1-audit-pressure-transaction-retest.txt"
+    },
+    {
+      "audit": "audit-pressure.js",
+      "exit": 0,
+      "evidence": "mechanics-v1-audit-pressure.txt"
+    },
+    {
+      "audit": "audit-recycling.js",
+      "exit": 1,
+      "evidence": "mechanics-v1-audit-recycling.txt"
+    },
+    {
+      "audit": "audit-resonance-retest.js",
+      "exit": 0,
+      "evidence": "mechanics-v1-audit-resonance-retest.txt"
+    },
+    {
+      "audit": "audit-resonance.js",
+      "exit": 0,
+      "evidence": "mechanics-v1-audit-resonance.txt"
+    },
+    {
+      "audit": "audit-pressure-retest.js --http",
+      "exit": 0,
+      "strict": true,
+      "evidence": "mechanics-v1-pressure-http.txt"
+    },
+    {
+      "audit": "fixture-report.js (writes redirected)",
+      "exit": 0,
+      "evidence": "mechanics-v1-fixtures.txt"
+    }
+  ],
+  "frozenEvidenceUnchanged": true,
+  "changedEvidence": [],
+  "original475NamesPreserved": true,
+  "knownContractDifferences": [
+    "audit-cargo.js malformed reservation input rejected before clone",
+    "audit-cargo-retest.js runtime malformed reservation input rejected before clone",
+    "audit-recycling.js dead formal listener lacking explicit allowDeadSource"
+  ],
+  "allHistoricalAuditsGreen": false
+}

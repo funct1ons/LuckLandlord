@@ -1,0 +1,2624 @@
+{
+  "scope": "Engineering 64/32/8 GDD map plus hand-calculated triggers; not independent auditor signature",
+  "symbols": {
+    "total": 64,
+    "mapped": 60
+  },
+  "items": {
+    "total": 32,
+    "mapped": 32
+  },
+  "events": {
+    "total": 8,
+    "mapped": 8
+  },
+  "triggers": {
+    "total": 33,
+    "passed": 32,
+    "cases": [
+      {
+        "name": "spent_gasket-base-only",
+        "ok": true,
+        "total": -1
+      },
+      {
+        "name": "wick-base2",
+        "ok": true,
+        "total": 2
+      },
+      {
+        "name": "copper-base2",
+        "ok": true,
+        "total": 2
+      },
+      {
+        "name": "copper-machine-neighbor",
+        "ok": true,
+        "total": 7
+      },
+      {
+        "name": "blank-appearance",
+        "ok": true,
+        "total": 5
+      },
+      {
+        "name": "cleared-appearance",
+        "ok": true,
+        "total": 4
+      },
+      {
+        "name": "pause-alone",
+        "ok": true,
+        "total": 3
+      },
+      {
+        "name": "pouch-ordinary",
+        "ok": true,
+        "total": 1
+      },
+      {
+        "name": "pouch-release",
+        "ok": true,
+        "total": 11
+      },
+      {
+        "name": "surge-ordinary-zero",
+        "ok": true,
+        "total": 0
+      },
+      {
+        "name": "mist-natural-epoch",
+        "ok": true,
+        "total": 3
+      },
+      {
+        "name": "cloudy-to-blank-no-appearance",
+        "ok": true,
+        "total": 3
+      },
+      {
+        "name": "cloth-record-order",
+        "ok": true,
+        "total": 15
+      },
+      {
+        "name": "book-step8",
+        "ok": true,
+        "total": 8
+      },
+      {
+        "name": "book-dead-no-retarget",
+        "ok": true,
+        "total": 11
+      },
+      {
+        "name": "dock-row",
+        "ok": true,
+        "total": 9
+      },
+      {
+        "name": "lean-below-half",
+        "ok": true,
+        "total": 5
+      },
+      {
+        "name": "lean-half",
+        "ok": true,
+        "total": 1
+      },
+      {
+        "name": "low-balance-below",
+        "ok": true,
+        "total": 5
+      },
+      {
+        "name": "low-balance-half",
+        "ok": true,
+        "total": 2
+      },
+      {
+        "name": "cycle-third",
+        "ok": true,
+        "total": 10
+      },
+      {
+        "name": "metronome-second",
+        "ok": true,
+        "total": 10
+      },
+      {
+        "name": "copy-blank",
+        "ok": true,
+        "total": 10
+      },
+      {
+        "name": "pitch-lock-first",
+        "ok": false,
+        "error": "total expected 6 actual 7"
+      },
+      {
+        "name": "cargo-rope-product",
+        "ok": true,
+        "total": 8
+      },
+      {
+        "name": "sorting-runner-consume",
+        "ok": true,
+        "total": 10
+      },
+      {
+        "name": "compliance-desk",
+        "ok": true,
+        "total": 4
+      },
+      {
+        "name": "cancellation-clerk",
+        "ok": true,
+        "total": 7
+      },
+      {
+        "name": "margin-deficit15",
+        "ok": true,
+        "total": 8
+      },
+      {
+        "name": "margin-deficit16",
+        "ok": true,
+        "total": 2
+      },
+      {
+        "name": "rest-single",
+        "ok": true,
+        "total": 3
+      },
+      {
+        "name": "hold-one-copper",
+        "ok": true,
+        "total": 2
+      },
+      {
+        "name": "phase-chip-tag",
+        "ok": true,
+        "total": 5
+      }
+    ]
+  },
+  "failures": [
+    {
+      "kind": "symbol-map",
+      "id": "wick_bed",
+      "gdd": "step4/appearance",
+      "primary": "base-only",
+      "effects": []
+    },
+    {
+      "kind": "symbol-map",
+      "id": "saline_ampoule",
+      "gdd": "step4/appearance",
+      "primary": "base-only",
+      "effects": []
+    },
+    {
+      "kind": "symbol-map",
+      "id": "switch_lamp",
+      "gdd": "step8/end-summary",
+      "primary": "step5/structural-event",
+      "effects": [
+        {
+          "phase": "structure",
+          "canon": "step5/structural-event",
+          "op": "reserve",
+          "defer": true,
+          "lockFirst": false,
+          "event": null,
+          "selector": {
+            "scope": "adjacent",
+            "tag": "product"
+          },
+          "amount": null
+        }
+      ]
+    },
+    {
+      "kind": "symbol-map",
+      "id": "arrears_slip",
+      "gdd": "step4/appearance",
+      "primary": "base-only",
+      "effects": []
+    },
+    {
+      "kind": "trigger",
+      "name": "pitch-lock-first",
+      "error": "total expected 6 actual 7"
+    }
+  ],
+  "ids": {
+    "symbols": [
+      {
+        "id": "mist_pouch",
+        "gdd": "step3/age",
+        "primary": "base-only",
+        "effects": [],
+        "mapOk": {
+          "threshold": 3,
+          "to": "dew_lantern"
+        },
+        "name": "凝雾软囊",
+        "base": 1,
+        "tags": [
+          "plant",
+          "mist"
+        ]
+      },
+      {
+        "id": "wick_bed",
+        "gdd": "step4/appearance",
+        "primary": "base-only",
+        "effects": [],
+        "mapOk": false,
+        "name": "灯芯苗床",
+        "base": 2,
+        "tags": [
+          "plant",
+          "fuel"
+        ]
+      },
+      {
+        "id": "dew_lantern",
+        "gdd": "step3/age",
+        "primary": "base-only",
+        "effects": [],
+        "mapOk": {
+          "threshold": 2,
+          "to": "amber_frond"
+        },
+        "name": "露灯苞",
+        "base": 3,
+        "tags": [
+          "plant",
+          "mist",
+          "product"
+        ]
+      },
+      {
+        "id": "amber_frond",
+        "gdd": "step6/lifecycle",
+        "primary": "step6/lifecycle",
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "reward",
+            "defer": false,
+            "lockFirst": false,
+            "event": "consume",
+            "selector": null,
+            "amount": 4
+          }
+        ],
+        "mapOk": true,
+        "name": "琥露扇叶",
+        "base": 4,
+        "tags": [
+          "plant",
+          "fuel",
+          "product",
+          "cargo"
+        ]
+      },
+      {
+        "id": "fog_stitcher",
+        "gdd": "step3/age",
+        "primary": "step3/age",
+        "effects": [
+          {
+            "phase": "age-extra",
+            "canon": "step3/age",
+            "op": "age",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "plant",
+              "age": true
+            },
+            "amount": 1
+          }
+        ],
+        "mapOk": true,
+        "name": "补雾工",
+        "base": 1,
+        "tags": [
+          "machine",
+          "support"
+        ]
+      },
+      {
+        "id": "root_ledger",
+        "gdd": "step6/lifecycle",
+        "primary": "step6/lifecycle",
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "grow",
+            "defer": false,
+            "lockFirst": false,
+            "event": "transform",
+            "selector": null,
+            "amount": 1
+          }
+        ],
+        "mapOk": true,
+        "name": "根须账簿",
+        "base": 1,
+        "tags": [
+          "plant",
+          "contract"
+        ]
+      },
+      {
+        "id": "warm_pod",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 3
+          }
+        ],
+        "mapOk": true,
+        "name": "温灯荚",
+        "base": 1,
+        "tags": [
+          "plant",
+          "pressure"
+        ]
+      },
+      {
+        "id": "nursery_gauge",
+        "gdd": "step8/end-summary",
+        "primary": "step8/end-summary",
+        "effects": [
+          {
+            "phase": "summary",
+            "canon": "step8/end-summary",
+            "op": "multiply",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "all",
+              "tag": "plant"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "苗圃指针",
+        "base": 2,
+        "tags": [
+          "machine",
+          "plant"
+        ]
+      },
+      {
+        "id": "ash_felt",
+        "gdd": "step6/lifecycle",
+        "primary": "step6/lifecycle",
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "spawn",
+            "defer": false,
+            "lockFirst": false,
+            "event": "consume",
+            "selector": null,
+            "amount": null
+          },
+          {
+            "phase": "end",
+            "canon": "step6/lifecycle",
+            "op": "destroy",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "灰温毡",
+        "base": 1,
+        "tags": [
+          "scrap",
+          "fuel"
+        ]
+      },
+      {
+        "id": "sorting_tong",
+        "gdd": "step5/structural-event",
+        "primary": "step5/structural-event",
+        "effects": [
+          {
+            "phase": "structure",
+            "canon": "step5/structural-event",
+            "op": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "scrap"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "分温夹",
+        "base": 1,
+        "tags": [
+          "machine"
+        ]
+      },
+      {
+        "id": "copper_burr",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 2
+          }
+        ],
+        "mapOk": true,
+        "name": "铜毛刺",
+        "base": 2,
+        "tags": [
+          "scrap",
+          "product",
+          "cargo"
+        ]
+      },
+      {
+        "id": "spent_gasket",
+        "gdd": "base-only",
+        "primary": "base-only",
+        "effects": [],
+        "mapOk": true,
+        "name": "过役垫圈",
+        "base": -1,
+        "tags": [
+          "scrap",
+          "junk"
+        ]
+      },
+      {
+        "id": "sieve_drum",
+        "gdd": "step5/structural-event",
+        "primary": "step5/structural-event",
+        "effects": [
+          {
+            "phase": "structure",
+            "canon": "step5/structural-event",
+            "op": "transform",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "junk"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "除滞滚筒",
+        "base": 2,
+        "tags": [
+          "machine",
+          "support"
+        ]
+      },
+      {
+        "id": "heat_clerk",
+        "gdd": "step6/lifecycle",
+        "primary": "step6/lifecycle",
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "grow",
+            "defer": false,
+            "lockFirst": false,
+            "event": "consume",
+            "selector": null,
+            "amount": 1
+          }
+        ],
+        "mapOk": true,
+        "name": "余温录员",
+        "base": 1,
+        "tags": [
+          "machine",
+          "contract"
+        ]
+      },
+      {
+        "id": "clinker_router",
+        "gdd": "step5/structural-event",
+        "primary": "step5/structural-event",
+        "effects": [
+          {
+            "phase": "structure",
+            "canon": "step5/structural-event",
+            "op": "destroy",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "junk"
+            },
+            "amount": null
+          },
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "pressure",
+            "defer": false,
+            "lockFirst": false,
+            "event": "destroy",
+            "selector": {
+              "scope": "all",
+              "tag": "pressure",
+              "pressureMechanism": true
+            },
+            "amount": 2
+          }
+        ],
+        "mapOk": true,
+        "name": "灰渣分路器",
+        "base": 2,
+        "tags": [
+          "machine",
+          "pressure"
+        ]
+      },
+      {
+        "id": "furnace_auditor",
+        "gdd": "step8/end-summary",
+        "primary": "step8/end-summary",
+        "effects": [
+          {
+            "phase": "summary",
+            "canon": "step8/end-summary",
+            "op": "multiply",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "all",
+              "tag": "machine"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "炉账稽核灯",
+        "base": 2,
+        "tags": [
+          "machine"
+        ]
+      },
+      {
+        "id": "dock_chime",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "栈桥鸣片",
+        "base": 2,
+        "tags": [
+          "resonance",
+          "cargo"
+        ]
+      },
+      {
+        "id": "pitch_fork",
+        "gdd": "step5/adjacency-add",
+        "primary": "step5/adjacency-add",
+        "effects": [
+          {
+            "phase": "adjacency-add",
+            "canon": "step5/adjacency-add",
+            "op": "add",
+            "defer": false,
+            "lockFirst": true,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "resonance"
+            },
+            "amount": 3
+          }
+        ],
+        "mapOk": true,
+        "name": "港音分叉",
+        "base": 1,
+        "tags": [
+          "resonance",
+          "support"
+        ]
+      },
+      {
+        "id": "fog_reed",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 3
+          }
+        ],
+        "mapOk": true,
+        "name": "雾笛簧",
+        "base": 1,
+        "tags": [
+          "resonance",
+          "mist"
+        ]
+      },
+      {
+        "id": "beat_spool",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "cycle",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 9
+          }
+        ],
+        "mapOk": true,
+        "name": "拍点线轴",
+        "base": 1,
+        "tags": [
+          "resonance",
+          "machine"
+        ]
+      },
+      {
+        "id": "chord_frame",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "multiply",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "resonance"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "和音框",
+        "base": 2,
+        "tags": [
+          "resonance",
+          "machine"
+        ]
+      },
+      {
+        "id": "prism_hum",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 4
+          }
+        ],
+        "mapOk": true,
+        "name": "晶腔哼鸣器",
+        "base": 2,
+        "tags": [
+          "resonance",
+          "crystal"
+        ]
+      },
+      {
+        "id": "silence_keeper",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 10
+          }
+        ],
+        "mapOk": true,
+        "name": "静拍保管员",
+        "base": 1,
+        "tags": [
+          "resonance",
+          "contract"
+        ]
+      },
+      {
+        "id": "harbor_conductor",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "multiply",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "row",
+              "tag": "resonance"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "港湾拍长",
+        "base": 2,
+        "tags": [
+          "resonance"
+        ]
+      },
+      {
+        "id": "brine_strip",
+        "gdd": "step3/age",
+        "primary": "base-only",
+        "effects": [],
+        "mapOk": {
+          "threshold": 2,
+          "to": "saline_ampoule"
+        },
+        "name": "盐雾滤带",
+        "base": 1,
+        "tags": [
+          "mist",
+          "feedstock"
+        ]
+      },
+      {
+        "id": "saline_ampoule",
+        "gdd": "step4/appearance",
+        "primary": "base-only",
+        "effects": [],
+        "mapOk": false,
+        "name": "微盐安瓿",
+        "base": 2,
+        "tags": [
+          "feedstock",
+          "cargo"
+        ]
+      },
+      {
+        "id": "condense_coil",
+        "gdd": "step5/structural-event",
+        "primary": "step5/structural-event",
+        "effects": [
+          {
+            "phase": "structure",
+            "canon": "step5/structural-event",
+            "op": "transform",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "feedstock"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "凝潮盘管",
+        "base": 1,
+        "tags": [
+          "machine"
+        ]
+      },
+      {
+        "id": "tide_prism",
+        "gdd": "step6/lifecycle",
+        "primary": "step6/lifecycle",
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": "transform",
+            "selector": null,
+            "amount": 3
+          }
+        ],
+        "mapOk": true,
+        "name": "潮棱块",
+        "base": 4,
+        "tags": [
+          "crystal",
+          "product",
+          "cargo"
+        ]
+      },
+      {
+        "id": "deep_still",
+        "gdd": "step5/structural-event",
+        "primary": "step5/structural-event",
+        "effects": [
+          {
+            "phase": "structure",
+            "canon": "step5/structural-event",
+            "op": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "mist"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "深盐分馏器",
+        "base": 2,
+        "tags": [
+          "machine"
+        ]
+      },
+      {
+        "id": "crystal_index",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 6
+          }
+        ],
+        "mapOk": true,
+        "name": "晶层索引",
+        "base": 1,
+        "tags": [
+          "crystal",
+          "support"
+        ]
+      },
+      {
+        "id": "pearl_separator",
+        "gdd": "step5/structural-event",
+        "primary": "step5/structural-event",
+        "effects": [
+          {
+            "phase": "structure",
+            "canon": "step5/structural-event",
+            "op": "transform",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "crystal",
+              "notTag": "product"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "浮珠分离器",
+        "base": 2,
+        "tags": [
+          "machine"
+        ]
+      },
+      {
+        "id": "reserve_facet",
+        "gdd": "step5/structural-event",
+        "primary": "step5/structural-event",
+        "effects": [
+          {
+            "phase": "structure",
+            "canon": "step5/structural-event",
+            "op": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "fuel"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "留温晶面",
+        "base": 2,
+        "tags": [
+          "crystal",
+          "pressure"
+        ]
+      },
+      {
+        "id": "cargo_rope",
+        "gdd": "step5/adjacency-add",
+        "primary": "step5/adjacency-add",
+        "effects": [
+          {
+            "phase": "adjacency-add",
+            "canon": "step5/adjacency-add",
+            "op": "add",
+            "defer": false,
+            "lockFirst": true,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "product"
+            },
+            "amount": 3
+          }
+        ],
+        "mapOk": true,
+        "name": "夜班扎绳",
+        "base": 1,
+        "tags": [
+          "cargo",
+          "support"
+        ]
+      },
+      {
+        "id": "route_stub",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 4
+          }
+        ],
+        "mapOk": true,
+        "name": "转栈短票",
+        "base": 2,
+        "tags": [
+          "cargo",
+          "contract"
+        ]
+      },
+      {
+        "id": "parcel_cage",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 3
+          }
+        ],
+        "mapOk": true,
+        "name": "铜格货笼",
+        "base": 2,
+        "tags": [
+          "cargo",
+          "machine"
+        ]
+      },
+      {
+        "id": "sorting_runner",
+        "gdd": "step5/structural-event",
+        "primary": "step5/structural-event",
+        "effects": [
+          {
+            "phase": "structure",
+            "canon": "step5/structural-event",
+            "op": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "product"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "分栈跑员",
+        "base": 1,
+        "tags": [
+          "cargo"
+        ]
+      },
+      {
+        "id": "manifest_desk",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "multiply",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "夜单台",
+        "base": 2,
+        "tags": [
+          "cargo",
+          "contract"
+        ]
+      },
+      {
+        "id": "switch_lamp",
+        "gdd": "step8/end-summary",
+        "primary": "step5/structural-event",
+        "effects": [
+          {
+            "phase": "structure",
+            "canon": "step5/structural-event",
+            "op": "reserve",
+            "defer": true,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "product"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": false,
+        "name": "换轨灯",
+        "base": 1,
+        "tags": [
+          "cargo",
+          "machine"
+        ]
+      },
+      {
+        "id": "transit_seal",
+        "gdd": "step2/tagAdded",
+        "primary": "step2/tagAdded",
+        "effects": [
+          {
+            "phase": "preprocess",
+            "canon": "step2/tagAdded",
+            "op": "tagMajority",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "联运封蜡",
+        "base": 2,
+        "tags": [
+          "cargo",
+          "magic"
+        ]
+      },
+      {
+        "id": "return_station",
+        "gdd": "step8/end-summary",
+        "primary": "step6/lifecycle",
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "reward",
+            "defer": true,
+            "lockFirst": false,
+            "event": "consume",
+            "selector": null,
+            "amount": 8
+          }
+        ],
+        "mapOk": true,
+        "name": "空箱返程站",
+        "base": 2,
+        "tags": [
+          "cargo",
+          "machine"
+        ]
+      },
+      {
+        "id": "pressure_pouch",
+        "gdd": "step4/pressure-injection",
+        "primary": "step4/pressure-injection",
+        "effects": [
+          {
+            "phase": "pressure-injection",
+            "canon": "step4/pressure-injection",
+            "op": "pressure",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 1
+          }
+        ],
+        "mapOk": true,
+        "name": "余压软袋",
+        "base": 1,
+        "tags": [
+          "pressure"
+        ]
+      },
+      {
+        "id": "feed_valve",
+        "gdd": "step5/structural-event",
+        "primary": "step5/structural-event",
+        "effects": [
+          {
+            "phase": "structure",
+            "canon": "step5/structural-event",
+            "op": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "fuel"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "添温小阀",
+        "base": 1,
+        "tags": [
+          "machine",
+          "pressure"
+        ]
+      },
+      {
+        "id": "pause_dial",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 1
+          },
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 2
+          }
+        ],
+        "mapOk": true,
+        "name": "歇拍刻盘",
+        "base": 2,
+        "tags": [
+          "pressure",
+          "support"
+        ]
+      },
+      {
+        "id": "surge_vessel",
+        "gdd": "step4/pressure-injection",
+        "primary": "step4/pressure-injection",
+        "effects": [
+          {
+            "phase": "pressure-injection",
+            "canon": "step4/pressure-injection",
+            "op": "pressure",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 1
+          }
+        ],
+        "mapOk": true,
+        "name": "脉冲釜",
+        "base": 1,
+        "tags": [
+          "pressure",
+          "machine"
+        ]
+      },
+      {
+        "id": "cracked_regulator",
+        "gdd": "step4/risk",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "risk",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "裂缝调压器",
+        "base": 2,
+        "tags": [
+          "pressure",
+          "machine"
+        ]
+      },
+      {
+        "id": "safety_shim",
+        "gdd": "step4/risk",
+        "primary": "base-only",
+        "effects": [],
+        "mapOk": {
+          "tag": "pressure",
+          "amount": 4
+        },
+        "name": "卸压薄衬",
+        "base": 1,
+        "tags": [
+          "pressure",
+          "support"
+        ]
+      },
+      {
+        "id": "release_spire",
+        "gdd": "step7/pressure",
+        "primary": "step7/pressure",
+        "effects": [
+          {
+            "phase": "step7",
+            "canon": "step7/pressure",
+            "op": "release",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "pressureMechanism": true,
+              "pressureAtLeast": 3,
+              "belowReleaseThreshold": true,
+              "notReleased": true
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "泄峰塔",
+        "base": 3,
+        "tags": [
+          "pressure",
+          "machine"
+        ]
+      },
+      {
+        "id": "demand_coupler",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "multiply",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "配额耦合器",
+        "base": 1,
+        "tags": [
+          "pressure",
+          "contract"
+        ]
+      },
+      {
+        "id": "phase_chip",
+        "gdd": "step2/tagAdded",
+        "primary": "step2/tagAdded",
+        "effects": [
+          {
+            "phase": "preprocess",
+            "canon": "step2/tagAdded",
+            "op": "tagChoice",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "偏相小片",
+        "base": 2,
+        "tags": [
+          "magic"
+        ]
+      },
+      {
+        "id": "spectrum_pin",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 4
+          }
+        ],
+        "mapOk": true,
+        "name": "谱别别针",
+        "base": 1,
+        "tags": [
+          "magic",
+          "support"
+        ]
+      },
+      {
+        "id": "cloudy_negative",
+        "gdd": "step3/age",
+        "primary": "step3/age",
+        "effects": [
+          {
+            "phase": "age-extra",
+            "canon": "step3/age",
+            "op": "age",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 0
+          }
+        ],
+        "mapOk": true,
+        "name": "雾面底片",
+        "base": 1,
+        "tags": [
+          "magic",
+          "feedstock"
+        ]
+      },
+      {
+        "id": "blank_facet",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "initial",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 2
+          }
+        ],
+        "mapOk": true,
+        "name": "无谱晶坯",
+        "base": 3,
+        "tags": [
+          "magic",
+          "crystal"
+        ]
+      },
+      {
+        "id": "offset_reader",
+        "gdd": "step4/copy",
+        "primary": "step4/copy",
+        "effects": [
+          {
+            "phase": "copy",
+            "canon": "step4/copy",
+            "op": "copy",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "copyable": true
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "偏印读头",
+        "base": 3,
+        "tags": [
+          "magic",
+          "machine"
+        ]
+      },
+      {
+        "id": "alignment_cloth",
+        "gdd": "step2/tagAdded",
+        "primary": "step2/tagAdded",
+        "effects": [
+          {
+            "phase": "step2",
+            "canon": "step2/tagAdded",
+            "op": "add",
+            "defer": false,
+            "lockFirst": true,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "receivedTag": true,
+              "order": "tagAdded"
+            },
+            "amount": 5
+          }
+        ],
+        "mapOk": true,
+        "name": "对相织布",
+        "base": 1,
+        "tags": [
+          "magic",
+          "support"
+        ]
+      },
+      {
+        "id": "echo_plate",
+        "gdd": "step6/lifecycle",
+        "primary": "step6/lifecycle",
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": "grow",
+            "selector": null,
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "迟相印板",
+        "base": 1,
+        "tags": [
+          "magic",
+          "resonance"
+        ]
+      },
+      {
+        "id": "split_register",
+        "gdd": "step2/tagAdded",
+        "primary": "step2/tagAdded",
+        "effects": [
+          {
+            "phase": "preprocess",
+            "canon": "step2/tagAdded",
+            "op": "tagBundle",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "product"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "双谱登记器",
+        "base": 2,
+        "tags": [
+          "magic",
+          "contract"
+        ]
+      },
+      {
+        "id": "arrears_slip",
+        "gdd": "step4/appearance",
+        "primary": "base-only",
+        "effects": [],
+        "mapOk": false,
+        "name": "待核欠条",
+        "base": -1,
+        "tags": [
+          "contract",
+          "junk"
+        ]
+      },
+      {
+        "id": "lean_receipt",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 4
+          }
+        ],
+        "mapOk": true,
+        "name": "薄账回执",
+        "base": 1,
+        "tags": [
+          "contract"
+        ]
+      },
+      {
+        "id": "compliance_desk",
+        "gdd": "step5/structural-event",
+        "primary": "step5/structural-event",
+        "effects": [
+          {
+            "phase": "structure",
+            "canon": "step5/structural-event",
+            "op": "transform",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "junk"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "合规小台",
+        "base": 1,
+        "tags": [
+          "contract",
+          "machine"
+        ]
+      },
+      {
+        "id": "cleared_stub",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "initial",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 1
+          }
+        ],
+        "mapOk": true,
+        "name": "核清存根",
+        "base": 3,
+        "tags": [
+          "contract",
+          "product",
+          "cargo"
+        ]
+      },
+      {
+        "id": "cancellation_clerk",
+        "gdd": "step5/structural-event",
+        "primary": "step5/structural-event",
+        "effects": [
+          {
+            "phase": "structure",
+            "canon": "step5/structural-event",
+            "op": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "junk"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "撤账员",
+        "base": 1,
+        "tags": [
+          "contract"
+        ]
+      },
+      {
+        "id": "quota_margin",
+        "gdd": "step4/appearance",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 6
+          }
+        ],
+        "mapOk": true,
+        "name": "配额边签",
+        "base": 2,
+        "tags": [
+          "contract",
+          "pressure"
+        ]
+      },
+      {
+        "id": "advance_stamp",
+        "gdd": "step4/copy",
+        "primary": "step4/appearance",
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "advance",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 18
+          }
+        ],
+        "mapOk": true,
+        "name": "先支邮戳",
+        "base": 2,
+        "tags": [
+          "contract"
+        ]
+      },
+      {
+        "id": "settlement_beacon",
+        "gdd": "step8/end-summary",
+        "primary": "step8/end-summary",
+        "effects": [
+          {
+            "phase": "summary",
+            "canon": "step8/end-summary",
+            "op": "multiply",
+            "defer": false,
+            "lockFirst": false,
+            "event": null,
+            "selector": {
+              "scope": "all",
+              "tag": "contract"
+            },
+            "amount": null
+          }
+        ],
+        "mapOk": true,
+        "name": "清算信标",
+        "base": 2,
+        "tags": [
+          "contract",
+          "machine"
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "item_dew_calendar",
+        "gdd": {
+          "a": "step3/age",
+          "s": "step3/age",
+          "c": "step3/age"
+        },
+        "effects": [
+          {
+            "phase": "step3",
+            "canon": "step3/age",
+            "op": "age",
+            "defer": false,
+            "event": null,
+            "eventTarget": false,
+            "amount": 1
+          }
+        ],
+        "mechanics": {},
+        "name": "露班轮历",
+        "mapOk": true
+      },
+      {
+        "id": "item_root_wrap",
+        "gdd": {
+          "a": "step3/age",
+          "s": "step3/age",
+          "c": "step3/age"
+        },
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "add",
+            "defer": false,
+            "event": "transform",
+            "eventTarget": true,
+            "amount": 4
+          }
+        ],
+        "mechanics": {},
+        "name": "根温绑带",
+        "mapOk": true
+      },
+      {
+        "id": "item_nursery_scale",
+        "gdd": {
+          "a": "step1/draw",
+          "s": "step1/draw",
+          "c": "step1/draw"
+        },
+        "effects": [
+          {
+            "phase": "step1",
+            "canon": "step1/draw",
+            "op": "weight",
+            "defer": false,
+            "event": null,
+            "eventTarget": false,
+            "amount": null
+          }
+        ],
+        "mechanics": {},
+        "name": "苗圃轻秤",
+        "mapOk": true
+      },
+      {
+        "id": "item_frost_glass",
+        "gdd": {
+          "a": "step4/appearance",
+          "s": "step4/appearance",
+          "c": "step9/ledger"
+        },
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "add",
+            "defer": false,
+            "event": null,
+            "eventTarget": false,
+            "amount": 3
+          }
+        ],
+        "mechanics": {},
+        "name": "防寒窄窗",
+        "mapOk": true
+      },
+      {
+        "id": "item_sorting_apron",
+        "gdd": {
+          "a": "step5/structural-event",
+          "s": "step5/structural-event",
+          "c": "step6/lifecycle"
+        },
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "reward",
+            "defer": false,
+            "event": "consume",
+            "eventTarget": false,
+            "amount": 3
+          }
+        ],
+        "mechanics": {},
+        "name": "分温围裙",
+        "mapOk": true
+      },
+      {
+        "id": "item_waste_log",
+        "gdd": {
+          "a": "step6/lifecycle",
+          "s": "step6/lifecycle",
+          "c": "choice/commit"
+        },
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "token",
+            "defer": false,
+            "event": "destroy",
+            "eventTarget": false,
+            "amount": 1
+          }
+        ],
+        "mechanics": {},
+        "name": "滞物登记本",
+        "mapOk": true
+      },
+      {
+        "id": "item_offcut_chute",
+        "gdd": {
+          "a": "step5/structural-event",
+          "s": "step5/structural-event",
+          "c": "step5/structural-event"
+        },
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "spawn",
+            "defer": false,
+            "event": "consume",
+            "eventTarget": false,
+            "amount": null
+          }
+        ],
+        "mechanics": {},
+        "name": "边料回流槽",
+        "mapOk": true
+      },
+      {
+        "id": "item_clean_mesh",
+        "gdd": {
+          "a": "step1/draw",
+          "s": "step1/draw",
+          "c": "step1/draw"
+        },
+        "effects": [
+          {
+            "phase": "step1",
+            "canon": "step1/draw",
+            "op": "weight",
+            "defer": false,
+            "event": null,
+            "eventTarget": false,
+            "amount": null
+          }
+        ],
+        "mechanics": {},
+        "name": "清栈细网",
+        "mapOk": true
+      },
+      {
+        "id": "item_lane_clapper",
+        "gdd": {
+          "a": "step8/end-summary",
+          "s": "step8/end-summary",
+          "c": "step9/ledger"
+        },
+        "effects": [
+          {
+            "phase": "summary",
+            "canon": "step8/end-summary",
+            "op": "add",
+            "defer": false,
+            "event": null,
+            "eventTarget": false,
+            "amount": 2
+          }
+        ],
+        "mechanics": {},
+        "name": "轨边拍板",
+        "mapOk": true
+      },
+      {
+        "id": "item_rest_notch",
+        "gdd": {
+          "a": "step8/end-summary",
+          "s": "step8/end-summary",
+          "c": "step9/ledger"
+        },
+        "effects": [
+          {
+            "phase": "summary",
+            "canon": "step8/end-summary",
+            "op": "multiply",
+            "defer": false,
+            "event": null,
+            "eventTarget": false,
+            "amount": null
+          }
+        ],
+        "mechanics": {},
+        "name": "休拍刻槽",
+        "mapOk": true
+      },
+      {
+        "id": "item_pitch_marker",
+        "gdd": {
+          "a": "step2/tagAdded",
+          "s": "step2/tagAdded",
+          "c": "step8/end-summary"
+        },
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "add",
+            "defer": true,
+            "event": "tagAdded",
+            "eventTarget": true,
+            "amount": 5
+          }
+        ],
+        "mechanics": {},
+        "name": "音高记签",
+        "mapOk": true
+      },
+      {
+        "id": "item_shared_metronome",
+        "gdd": {
+          "a": "step1/draw",
+          "s": "step1/draw",
+          "c": "step1/draw"
+        },
+        "effects": [],
+        "mechanics": {
+          "cycleThresholdReduction": 1
+        },
+        "name": "公用节拍器",
+        "mapOk": true
+      },
+      {
+        "id": "item_brine_lining",
+        "gdd": {
+          "a": "step5/structural-event",
+          "s": "step5/structural-event",
+          "c": "step9/ledger"
+        },
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "add",
+            "defer": false,
+            "event": "transform",
+            "eventTarget": true,
+            "amount": 4
+          }
+        ],
+        "mechanics": {},
+        "name": "盐雾内衬",
+        "mapOk": true
+      },
+      {
+        "id": "item_fraction_gauge",
+        "gdd": {
+          "a": "step1/draw",
+          "s": "step1/draw",
+          "c": "step1/draw"
+        },
+        "effects": [
+          {
+            "phase": "change",
+            "canon": "step6/lifecycle",
+            "op": "reward",
+            "defer": false,
+            "event": null,
+            "eventTarget": false,
+            "amount": 7
+          }
+        ],
+        "mechanics": {},
+        "name": "分馏格尺",
+        "mapOk": true
+      },
+      {
+        "id": "item_jar_rack",
+        "gdd": {
+          "a": "step5/structural-event",
+          "s": "step5/structural-event",
+          "c": "step8/end-summary"
+        },
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "reserve",
+            "defer": true,
+            "event": "transform",
+            "eventTarget": true,
+            "amount": null
+          }
+        ],
+        "mechanics": {},
+        "name": "安瓿架",
+        "mapOk": true
+      },
+      {
+        "id": "item_residue_stamp",
+        "gdd": {
+          "a": "step5/structural-event",
+          "s": "step5/structural-event",
+          "c": "step6/lifecycle"
+        },
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "reward",
+            "defer": false,
+            "event": "consume",
+            "eventTarget": false,
+            "amount": 2
+          }
+        ],
+        "mechanics": {},
+        "name": "残液验章",
+        "mapOk": true
+      },
+      {
+        "id": "item_manifest_clip",
+        "gdd": {
+          "a": "step8/end-summary",
+          "s": "step8/end-summary",
+          "c": "step9/ledger"
+        },
+        "effects": [
+          {
+            "phase": "summary",
+            "canon": "step8/end-summary",
+            "op": "reward",
+            "defer": false,
+            "event": null,
+            "eventTarget": false,
+            "amount": 6
+          }
+        ],
+        "mechanics": {},
+        "name": "夜单夹",
+        "mapOk": true
+      },
+      {
+        "id": "item_return_track",
+        "gdd": {
+          "a": "choice/commit",
+          "s": "choice/commit",
+          "c": "choice/commit"
+        },
+        "effects": [],
+        "mechanics": {
+          "skipOrdinals": [
+            1,
+            3
+          ],
+          "resource": "rerollTokens",
+          "amount": 1
+        },
+        "name": "空返侧轨",
+        "mapOk": true
+      },
+      {
+        "id": "item_small_hold",
+        "gdd": {
+          "a": "step8/end-summary",
+          "s": "step8/end-summary",
+          "c": "step9/ledger"
+        },
+        "effects": [
+          {
+            "phase": "summary",
+            "canon": "step8/end-summary",
+            "op": "reward",
+            "defer": false,
+            "event": null,
+            "eventTarget": false,
+            "amount": 5
+          }
+        ],
+        "mechanics": {},
+        "name": "小舱限载牌",
+        "mapOk": true
+      },
+      {
+        "id": "item_exchange_hook",
+        "gdd": {
+          "a": "step5/structural-event",
+          "s": "step5/structural-event",
+          "c": "choice/commit"
+        },
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "guarantee",
+            "defer": false,
+            "event": "consume",
+            "eventTarget": false,
+            "amount": null
+          }
+        ],
+        "mechanics": {},
+        "name": "换装挂钩",
+        "mapOk": true
+      },
+      {
+        "id": "item_pressure_index",
+        "gdd": {
+          "a": "step4/pressure-injection",
+          "s": "step5/structural-event",
+          "c": "step6/pressure-injection"
+        },
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "pressure",
+            "defer": false,
+            "event": "pressureIncrease",
+            "eventTarget": true,
+            "amount": 1
+          }
+        ],
+        "mechanics": {},
+        "name": "压班索引",
+        "mapOk": true
+      },
+      {
+        "id": "item_insulation_shawl",
+        "gdd": {
+          "a": "step4/risk",
+          "s": "step4/risk",
+          "c": "step4/risk"
+        },
+        "effects": [],
+        "mechanics": {
+          "riskReduction": 3
+        },
+        "name": "隔温披布",
+        "mapOk": true
+      },
+      {
+        "id": "item_release_receipt",
+        "gdd": {
+          "a": "step7/pressure",
+          "s": "step7/pressure",
+          "c": "step7/pressure"
+        },
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "reward",
+            "defer": false,
+            "event": "release",
+            "eventTarget": false,
+            "amount": 12
+          }
+        ],
+        "mechanics": {},
+        "name": "泄压回执",
+        "mapOk": true
+      },
+      {
+        "id": "item_spare_baffle",
+        "gdd": {
+          "a": "step4/risk",
+          "s": "step4/risk",
+          "c": "step4/risk"
+        },
+        "effects": [],
+        "mechanics": {
+          "replaceRiskJunk": true,
+          "replacementLoss": 3
+        },
+        "name": "备用挡板",
+        "mapOk": true
+      },
+      {
+        "id": "item_safe_carbon",
+        "gdd": {
+          "a": "step4/copy",
+          "s": "step4/copy",
+          "c": "step9/ledger"
+        },
+        "effects": [],
+        "mechanics": {
+          "copyBonus": 2
+        },
+        "name": "安全复写膜",
+        "mapOk": true
+      },
+      {
+        "id": "item_spectrum_book",
+        "gdd": {
+          "a": "step2/tagAdded",
+          "s": "step2/tagAdded",
+          "c": "step8/end-summary"
+        },
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "add",
+            "defer": true,
+            "event": "tagAdded",
+            "eventTarget": true,
+            "amount": 3
+          }
+        ],
+        "mechanics": {},
+        "name": "谱类手册",
+        "mapOk": true
+      },
+      {
+        "id": "item_registration_pin",
+        "gdd": {
+          "a": "step4/copy",
+          "s": "step4/copy",
+          "c": "step8/end-summary"
+        },
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "reserve",
+            "defer": true,
+            "event": "copy",
+            "eventTarget": true,
+            "amount": null
+          }
+        ],
+        "mechanics": {},
+        "name": "对版定位针",
+        "mapOk": true
+      },
+      {
+        "id": "item_growth_negative",
+        "gdd": {
+          "a": "step6/lifecycle",
+          "s": "step6/lifecycle",
+          "c": "step6/lifecycle"
+        },
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "reward",
+            "defer": false,
+            "event": "grow",
+            "eventTarget": false,
+            "amount": null
+          }
+        ],
+        "mechanics": {},
+        "name": "增量底片册",
+        "mapOk": true
+      },
+      {
+        "id": "item_low_balance_tab",
+        "gdd": {
+          "a": "step4/appearance",
+          "s": "step4/appearance",
+          "c": "step9/ledger"
+        },
+        "effects": [
+          {
+            "phase": "appearance",
+            "canon": "step4/appearance",
+            "op": "reward",
+            "defer": false,
+            "event": null,
+            "eventTarget": false,
+            "amount": 3
+          }
+        ],
+        "mechanics": {},
+        "name": "薄账分页条",
+        "mapOk": true
+      },
+      {
+        "id": "item_compliance_carbon",
+        "gdd": {
+          "a": "step5/structural-event",
+          "s": "step5/structural-event",
+          "c": "step9/ledger"
+        },
+        "effects": [
+          {
+            "phase": "listen",
+            "canon": "step6/lifecycle",
+            "op": "add",
+            "defer": false,
+            "event": "transform",
+            "eventTarget": true,
+            "amount": 3
+          }
+        ],
+        "mechanics": {},
+        "name": "合规复核纸",
+        "mapOk": true
+      },
+      {
+        "id": "item_audit_clip",
+        "gdd": {
+          "a": "choice/commit",
+          "s": "choice/commit",
+          "c": "choice/commit"
+        },
+        "effects": [],
+        "mechanics": {
+          "paymentResource": "removeTokens",
+          "amount": 1,
+          "poolWithoutTag": "junk",
+          "finalOnlyStats": true
+        },
+        "name": "稽核夹",
+        "mapOk": true
+      },
+      {
+        "id": "item_margin_lantern",
+        "gdd": {
+          "a": "step4/appearance",
+          "s": "step4/appearance",
+          "c": "step9/ledger"
+        },
+        "effects": [
+          {
+            "phase": "summary",
+            "canon": "step8/end-summary",
+            "op": "multiply",
+            "defer": false,
+            "event": null,
+            "eventTarget": false,
+            "amount": null
+          }
+        ],
+        "mechanics": {},
+        "name": "余账灯",
+        "mapOk": true
+      }
+    ],
+    "events": [
+      {
+        "id": "event_fog_shift",
+        "gdd": "choice/commit → step3/age → step3/age",
+        "op": "modifier",
+        "cost": 4,
+        "spinEffects": [],
+        "present": true,
+        "mapOk": true
+      },
+      {
+        "id": "event_copper_queue",
+        "gdd": "choice/commit → choice/commit",
+        "op": "transform",
+        "cost": 0,
+        "spinEffects": [],
+        "present": true,
+        "mapOk": true
+      },
+      {
+        "id": "event_silent_bell",
+        "gdd": "choice/commit → step4/appearance → step9/ledger",
+        "op": "modifier",
+        "cost": 0,
+        "spinEffects": [
+          {
+            "phase": "summary",
+            "canon": "step8/end-summary",
+            "op": "multiply"
+          }
+        ],
+        "present": true,
+        "mapOk": true
+      },
+      {
+        "id": "event_brine_inspection",
+        "gdd": "choice/commit → choice/commit → choice/commit",
+        "op": "remove",
+        "cost": 0,
+        "spinEffects": [],
+        "present": true,
+        "mapOk": true
+      },
+      {
+        "id": "event_empty_manifest",
+        "gdd": "choice/commit → step8/end-summary → step9/ledger",
+        "op": "removeModifier",
+        "cost": 0,
+        "spinEffects": [
+          {
+            "phase": "summary",
+            "canon": "step8/end-summary",
+            "op": "add"
+          }
+        ],
+        "present": true,
+        "mapOk": true
+      },
+      {
+        "id": "event_boiler_test",
+        "gdd": "choice/commit → choice/commit",
+        "op": "boiler",
+        "cost": 0,
+        "spinEffects": [],
+        "present": true,
+        "mapOk": true
+      },
+      {
+        "id": "event_misprint_window",
+        "gdd": "choice/commit → step2/tagAdded → step9/ledger",
+        "op": "modifier",
+        "cost": 6,
+        "spinEffects": [
+          {
+            "phase": "preprocess",
+            "canon": "step2/tagAdded",
+            "op": "tagAdded"
+          },
+          {
+            "phase": "preprocess",
+            "canon": "step2/tagAdded",
+            "op": "add"
+          }
+        ],
+        "present": true,
+        "mapOk": true
+      },
+      {
+        "id": "event_quota_recount",
+        "gdd": "choice/commit → choice/commit → choice/commit",
+        "op": "quota",
+        "cost": 0,
+        "spinEffects": [],
+        "present": true,
+        "mapOk": true
+      }
+    ]
+  },
+  "ok": false
+}

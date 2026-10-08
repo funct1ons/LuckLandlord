@@ -1,0 +1,136 @@
+{
+  "status": "PASS_SLICE_TOOL_RETEST_ONLY",
+  "selfExcluded": true,
+  "entries": {
+    "docs/GDD1_SLICE_SIMULATION_RETEST.md": {
+      "bytes": 11499,
+      "sha256": "9d023a3d3ed3c34ca0c74acdf58d03eac75358f565bdb98c247a61f9c585a0bc"
+    },
+    "tests/gdd1/f3-slice-retest-baseline.json": {
+      "bytes": 126603,
+      "sha256": "5062765cac1f22ddac663f63569a561ecf73e44a2a11f514306aa148293ea46e"
+    },
+    "tests/gdd1/f3-slice-retest-boundaries.js": {
+      "bytes": 7407,
+      "sha256": "6d1b6c0baa9f3579cec1cee750fd3c9c03dd316bb2f32d1c0e49083dc9f26ad1"
+    },
+    "tests/gdd1/f3-slice-retest-boundaries.json": {
+      "bytes": 2651,
+      "sha256": "86602c9a70c1be834eac0a8bd484a91cc6861014c5721d7ca42792c69f16a3da"
+    },
+    "tests/gdd1/f3-slice-retest-boundaries.patch": {
+      "bytes": 7510,
+      "sha256": "9e470af636b7f30a5ed9c01e5d411ff12e8e8722c1e403cfaca42787fae4bd9c"
+    },
+    "tests/gdd1/f3-slice-retest-extra-replay.js": {
+      "bytes": 3697,
+      "sha256": "da81613027ae066b84087879990a1a2f82e1eaf85cd8bb05d251045b9714dfff"
+    },
+    "tests/gdd1/f3-slice-retest-extra-replay.json": {
+      "bytes": 673,
+      "sha256": "51bf80e1a006d918fc22ddabe92d7d2446116a0ee424313fe3382322eb0621e6"
+    },
+    "tests/gdd1/f3-slice-retest-extra-replay.patch": {
+      "bytes": 3793,
+      "sha256": "7a66b6a6b7dc2a6952b878035736e5115c52f45b713bdc856162c8e75ae8b331"
+    },
+    "tests/gdd1/f3-slice-retest-freeze-update.patch": {
+      "bytes": 2013,
+      "sha256": "7c2b8608f6d69e02f10543058fd6bee5a46f0af33493b0144e7ba9c850e69207"
+    },
+    "tests/gdd1/f3-slice-retest-freeze.js": {
+      "bytes": 5042,
+      "sha256": "c91745332b19d93d5691b5f383a8787bf99de9fb96a2f4ea9ad6fa41d6086e34"
+    },
+    "tests/gdd1/f3-slice-retest-freeze.patch": {
+      "bytes": 5082,
+      "sha256": "d05a08d6fb86203540820ecb80587d8adeba547589da4e0f95aadd661fcdf9d7"
+    },
+    "tests/gdd1/f3-slice-retest-limits.js": {
+      "bytes": 2708,
+      "sha256": "e0aae773ca6888029ae1248fc97f9d078ae5c2ebb9d96e25f06373230f6b2043"
+    },
+    "tests/gdd1/f3-slice-retest-limits.json": {
+      "bytes": 789,
+      "sha256": "90f6bcc09765bf1ac84051a56ca641044f629951a6a9c7c2736329c37611de42"
+    },
+    "tests/gdd1/f3-slice-retest-limits.patch": {
+      "bytes": 2798,
+      "sha256": "d0f799c0b36d2f1c564cefb6f1c5cf0f447340d12317a14d328a0ae25f05a72a"
+    },
+    "tests/gdd1/f3-slice-retest-protection.json": {
+      "bytes": 1185,
+      "sha256": "3a2cbf576a2c4bef2557a73548b53c1069a3c4c57d32c8fdfbeeac38568b246c"
+    },
+    "tests/gdd1/f3-slice-retest-report.patch": {
+      "bytes": 11644,
+      "sha256": "5eb7973bdba8f9b0d7a6c5dfcc57b78c178a75d75e8dbdc16b71f5fcf005858e"
+    },
+    "tests/gdd1/f3-slice-retest-results.json": {
+      "bytes": 4710191,
+      "sha256": "417122601f9137879a2f97df98537e6754d1838a39c5ee0480b0a4ef95f4fbb8"
+    },
+    "tests/gdd1/f3-slice-retest-scan.js": {
+      "bytes": 17580,
+      "sha256": "d5bb0604f721f89054f20115f171be3189e2e0916b319a3467136dc458e930a5"
+    },
+    "tests/gdd1/f3-slice-retest-scan.patch": {
+      "bytes": 17714,
+      "sha256": "67c4a47926dcc9cc808583f8f61a94b1a7f80889907cb42f73f97babd654cde7"
+    }
+  },
+  "protection": {
+    "pass": true,
+    "baseline": 655,
+    "identical": 653,
+    "changes": [],
+    "added": [],
+    "runtimeChanges": [
+      {
+        "path": ".pi/loops/01a101f0-a171-761a-8429-9edd4dbe73ac.json",
+        "before": {
+          "bytes": 1788,
+          "sha256": "476a3a8dcc75ed855f1751e0eb2408d8062ec3ad88ffa20e384b4d0871e18b33"
+        },
+        "after": {
+          "bytes": 1788,
+          "sha256": "fbea65eedc34397b13050853635d763c85e81cb8e3afb53e4c7438cd7f302e25"
+        }
+      },
+      {
+        "path": ".pi/loops.json",
+        "before": {
+          "bytes": 77,
+          "sha256": "c4aa74c78cc7b418b2e5b5b44d4f7f0f83f7b502df9c0a521573e1e441814075"
+        },
+        "after": {
+          "bytes": 77,
+          "sha256": "8f7c0147c6d7643bd955c1ad22397e45b3851b8ff7dca1f8f9ee5c163c7cf430"
+        }
+      }
+    ],
+    "runtimeException": ".pi/loops.json and .pi/loops/ are parent scheduling runtime; disclosed, not restored",
+    "manifests": {
+      "tests/gdd1/f3-slice-sim-deliverables.json": 48,
+      "tests/gdd1/f3-slice-audit-freeze.json": 10,
+      "tests/gdd1/f3-slice-fix-freeze.json": 38
+    },
+    "historical245": 245,
+    "auditProtected": 574,
+    "fixProtected": 585,
+    "productionChanges": 0,
+    "existingEvidenceChanges": 0
+  },
+  "games": 8000,
+  "representativeReplays": 49,
+  "independentCases": 13,
+  "productionChanges": 0,
+  "notApproved": [
+    "formal Normal",
+    "full F4",
+    "balance tuning",
+    "browser transactions",
+    "human play",
+    "art/audio"
+  ]
+}

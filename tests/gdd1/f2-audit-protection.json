@@ -1,0 +1,24 @@
+{
+  "freeze": {
+    "total": 51,
+    "failures": []
+  },
+  "original": {
+    "total": 245,
+    "failures": []
+  },
+  "accidentalWrites": {
+    "commands": [
+      "node tests/gdd1/f2-run.js",
+      "node tests/gdd1/f2-regression.js",
+      "node tests/gdd1/f2-verify.js"
+    ],
+    "paths": [
+      "f2-node.json",
+      "f2-legacy.json",
+      "f2-f1-regression.json",
+      "f2-protection.json"
+    ],
+    "allBytesStillMatchFreeze": true
+  }
+}

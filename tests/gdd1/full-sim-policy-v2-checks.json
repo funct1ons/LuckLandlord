@@ -1,0 +1,64 @@
+{
+  "passed": 6,
+  "total": 6,
+  "lookahead": "policy-v2: Random identical to full-sim-v1 (uniform legal, policy-full-v1 / decision-full-v1). Value/Synergy/Greedy: root beam over all legal action TYPES with no skipItem/reroll/remove prune; remove UIDs limited to the 3 statically worst pool members. After the root action, continuation is staticChoiceV2 for at most 5 spins / 36 fullCommand. Surrogate reseeds synthetic full-sim-model-v2/0 (createRng); live seed and five streams never copied. Model-generated offers are visible to static continuation; they are not live offers. Branch width = |root candidates| (typically 4-12). Utility: WON +1e5, LOST -1e5, model income, mean synergy-or-static value, pool, tokens, cash-payment margin. Not optimal, not exhaustive tree search, not a live-RNG oracle.",
+  "results": [
+    {
+      "name": "production resolver/full-effects bytes unchanged",
+      "ok": true,
+      "detail": true
+    },
+    {
+      "name": "publicView and decideV2 ignore live seed/RNG",
+      "ok": true,
+      "detail": {
+        "action": {
+          "op": "choose",
+          "id": "condense_coil",
+          "windowId": 1
+        },
+        "modelCommands": 91,
+        "candidates": 8
+      }
+    },
+    {
+      "name": "root candidates include skipItem, reroll, and remove when legal",
+      "ok": true,
+      "detail": {
+        "symbolOps": [
+          "choose",
+          "skip",
+          "reroll",
+          "remove"
+        ],
+        "itemOps": [
+          "item",
+          "skipItem"
+        ]
+      }
+    },
+    {
+      "name": "horizon 5 spins / 36 commands; model offers do not read live streams",
+      "ok": true,
+      "detail": {
+        "utility": 181.31946666666667,
+        "commands": 11,
+        "spins": 5
+      }
+    },
+    {
+      "name": "Random policy-v2 matches v1 recorded train/0000 finalHash",
+      "ok": true,
+      "detail": {
+        "seed": "F4-FULL-v1/Random/train/0000",
+        "ms": 150.2559,
+        "outcome": "LOST"
+      }
+    },
+    {
+      "name": "v1 batch dests still exist and are not the v2 prefix",
+      "ok": true,
+      "detail": true
+    }
+  ]
+}

@@ -1,0 +1,979 @@
+{
+  "inputValid": true,
+  "commandAccepted": true,
+  "inputUnchanged": true,
+  "input": {
+    "schema": 2,
+    "rules": "GDD1",
+    "content": "GDD1",
+    "saveKey": "fog-port.save.v1.gdd1",
+    "rngAlgorithm": "fnv1a-utf16le-xorshift32-v1",
+    "profile": "slice-abd-v1",
+    "difficulty": "Normal",
+    "seed": "AUDIT-EPOCH-4",
+    "rng": {
+      "draw": {
+        "state": 1161466692,
+        "consumed": 0
+      },
+      "effect": {
+        "state": 2219877283,
+        "consumed": 0
+      },
+      "symbolOffer": {
+        "state": 3299100378,
+        "consumed": 0
+      },
+      "itemOffer": {
+        "state": 3427327281,
+        "consumed": 0
+      },
+      "event": {
+        "state": 3349738088,
+        "consumed": 0
+      }
+    },
+    "revision": 0,
+    "phase": "READY",
+    "stageId": 3,
+    "spin": 12,
+    "stageSpin": 0,
+    "spinsRemaining": 7,
+    "basePayment": 137,
+    "payment": 137,
+    "cash": 0,
+    "pendingSettlement": null,
+    "last": {
+      "spin": 12,
+      "total": 0,
+      "reward": 0,
+      "board": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "ledger": [],
+      "log": []
+    },
+    "pool": [
+      {
+        "uid": "u1",
+        "type": "pearl_separator",
+        "permanent": 0,
+        "epoch": 0,
+        "counters": {}
+      },
+      {
+        "uid": "u2",
+        "type": "reserve_facet",
+        "permanent": 0,
+        "epoch": 0,
+        "counters": {
+          "pressure": 0
+        }
+      },
+      {
+        "uid": "u3",
+        "type": "wick_bed",
+        "permanent": 0,
+        "epoch": 0,
+        "counters": {}
+      }
+    ],
+    "nextUid": 4,
+    "items": [],
+    "rerollTokens": 2,
+    "removeTokens": 2,
+    "offer": {
+      "windowId": 0,
+      "kind": null,
+      "choices": [],
+      "choiceRefreshesUsed": 0,
+      "guarantees": {
+        "applied": null,
+        "stageCommonHandled": false,
+        "eventCrystalPending": false,
+        "itemProductPending": false
+      }
+    },
+    "events": {
+      "seenIds": [],
+      "count": 0,
+      "cooldownPayments": 0,
+      "activeModifiers": [],
+      "choice": null
+    },
+    "reservations": [
+      {
+        "uid": "u1",
+        "pos": 0,
+        "epoch": 0,
+        "source": "u3",
+        "expiresSpin": 13
+      },
+      {
+        "uid": "u2",
+        "pos": 1,
+        "epoch": 0,
+        "source": "u3",
+        "expiresSpin": 13
+      }
+    ],
+    "fractionGaugeReserved": false,
+    "itemState": {
+      "stageId": 3,
+      "spin": 12,
+      "quotas": {},
+      "used": {}
+    },
+    "stageState": {
+      "advanceClaims": [],
+      "paymentModifiers": [],
+      "skipCount": 0
+    },
+    "settings": {
+      "autosave": true,
+      "advanceAccepted": false
+    }
+  },
+  "command": {
+    "op": "spin",
+    "revision": 0,
+    "windowId": 0
+  },
+  "actual": {
+    "schema": 2,
+    "rules": "GDD1",
+    "content": "GDD1",
+    "saveKey": "fog-port.save.v1.gdd1",
+    "rngAlgorithm": "fnv1a-utf16le-xorshift32-v1",
+    "profile": "slice-abd-v1",
+    "difficulty": "Normal",
+    "seed": "AUDIT-EPOCH-4",
+    "rng": {
+      "draw": {
+        "state": 1116712520,
+        "consumed": 17
+      },
+      "effect": {
+        "state": 2219877283,
+        "consumed": 0
+      },
+      "symbolOffer": {
+        "state": 2907877046,
+        "consumed": 5
+      },
+      "itemOffer": {
+        "state": 3427327281,
+        "consumed": 0
+      },
+      "event": {
+        "state": 3349738088,
+        "consumed": 0
+      }
+    },
+    "revision": 1,
+    "phase": "SYMBOL_CHOICE",
+    "stageId": 3,
+    "spin": 13,
+    "stageSpin": 1,
+    "spinsRemaining": 6,
+    "basePayment": 137,
+    "payment": 137,
+    "cash": 0,
+    "pendingSettlement": 11,
+    "last": {
+      "spin": 13,
+      "total": 11,
+      "reward": 2,
+      "board": [
+        {
+          "uid": "u1",
+          "type": "pearl_separator",
+          "epoch": 0,
+          "alive": true
+        },
+        {
+          "uid": "u2",
+          "type": "tide_prism",
+          "epoch": 1,
+          "alive": true
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "uid": "u3",
+          "type": "wick_bed",
+          "epoch": 0,
+          "alive": false
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "ledger": [
+        {
+          "uid": "u1",
+          "type": "pearl_separator",
+          "amount": 2,
+          "alive": true,
+          "ratio": [
+            "1",
+            "1"
+          ],
+          "contributions": [
+            {
+              "source": "u1",
+              "amount": 2
+            }
+          ]
+        },
+        {
+          "uid": "u2",
+          "type": "tide_prism",
+          "amount": 7,
+          "alive": true,
+          "ratio": [
+            "1",
+            "1"
+          ],
+          "contributions": [
+            {
+              "source": "u2",
+              "amount": 7
+            }
+          ]
+        },
+        {
+          "uid": "u3",
+          "type": "wick_bed",
+          "amount": 0,
+          "alive": false,
+          "ratio": [
+            "1",
+            "1"
+          ],
+          "contributions": []
+        }
+      ],
+      "log": [
+        {
+          "id": 0,
+          "parent": null,
+          "depth": 0,
+          "phase": "step5/structural-event",
+          "action": "transform",
+          "source": "u1",
+          "target": "u2",
+          "amount": null,
+          "facts": {
+            "effectKey": "pearl_separator:0",
+            "sourcePos": 0,
+            "targetPos": 1,
+            "beforeType": "reserve_facet",
+            "afterType": "tide_prism",
+            "beforeTags": [
+              "crystal",
+              "pressure"
+            ],
+            "afterTags": [
+              "crystal",
+              "product",
+              "cargo"
+            ],
+            "cause": "transform",
+            "actualIncrease": 0,
+            "createdUid": null,
+            "skipReason": null
+          }
+        },
+        {
+          "id": 1,
+          "parent": 0,
+          "depth": 1,
+          "phase": "step5/structural-event",
+          "action": "add",
+          "source": "u2",
+          "target": "u2",
+          "amount": 3,
+          "facts": {
+            "effectKey": "tide_prism:0",
+            "sourcePos": 1,
+            "targetPos": 1,
+            "beforeType": "tide_prism",
+            "afterType": "tide_prism",
+            "beforeTags": [
+              "crystal",
+              "product",
+              "cargo"
+            ],
+            "afterTags": [
+              "crystal",
+              "product",
+              "cargo"
+            ],
+            "cause": "add",
+            "actualIncrease": 0,
+            "createdUid": null,
+            "skipReason": null
+          }
+        },
+        {
+          "id": 2,
+          "parent": null,
+          "depth": 0,
+          "phase": "step5/structural-event",
+          "action": "consume",
+          "source": "u2",
+          "target": "u3",
+          "amount": null,
+          "facts": {
+            "effectKey": "reserve_facet:0",
+            "sourcePos": 1,
+            "targetPos": 7,
+            "beforeType": "wick_bed",
+            "afterType": null,
+            "beforeTags": [
+              "plant",
+              "fuel"
+            ],
+            "afterTags": [],
+            "cause": "consume",
+            "actualIncrease": 0,
+            "createdUid": null,
+            "skipReason": null
+          }
+        },
+        {
+          "id": 3,
+          "parent": 2,
+          "depth": 1,
+          "phase": "step5/structural-event",
+          "action": "destroy",
+          "source": "u2",
+          "target": "u3",
+          "amount": null,
+          "facts": {
+            "effectKey": "reserve_facet:0",
+            "sourcePos": 1,
+            "targetPos": 7,
+            "beforeType": "wick_bed",
+            "afterType": null,
+            "beforeTags": [
+              "plant",
+              "fuel"
+            ],
+            "afterTags": [],
+            "cause": "consume",
+            "actualIncrease": 0,
+            "createdUid": null,
+            "skipReason": null
+          }
+        },
+        {
+          "id": 4,
+          "parent": 2,
+          "depth": 1,
+          "phase": "step5/structural-event",
+          "action": "reward",
+          "source": "u2",
+          "target": "u3",
+          "amount": 2,
+          "facts": {
+            "effectKey": "reserve_facet:0",
+            "sourcePos": 1,
+            "targetPos": 7,
+            "beforeType": "wick_bed",
+            "afterType": "wick_bed",
+            "beforeTags": [
+              "plant",
+              "fuel"
+            ],
+            "afterTags": [
+              "plant",
+              "fuel"
+            ],
+            "cause": "reward",
+            "actualIncrease": 0,
+            "createdUid": null,
+            "skipReason": null
+          }
+        }
+      ]
+    },
+    "pool": [
+      {
+        "uid": "u1",
+        "type": "pearl_separator",
+        "permanent": 0,
+        "epoch": 0,
+        "counters": {}
+      },
+      {
+        "uid": "u2",
+        "type": "tide_prism",
+        "permanent": 0,
+        "epoch": 1,
+        "counters": {}
+      }
+    ],
+    "nextUid": 4,
+    "items": [],
+    "rerollTokens": 2,
+    "removeTokens": 2,
+    "offer": {
+      "windowId": 1,
+      "kind": "symbol",
+      "choices": [
+        "brine_strip",
+        "copper_burr",
+        "sorting_tong"
+      ],
+      "choiceRefreshesUsed": 0,
+      "guarantees": {
+        "applied": "stage-common",
+        "stageCommonHandled": true,
+        "eventCrystalPending": false,
+        "itemProductPending": false
+      }
+    },
+    "events": {
+      "seenIds": [],
+      "count": 0,
+      "cooldownPayments": 0,
+      "activeModifiers": [],
+      "choice": null
+    },
+    "reservations": [],
+    "fractionGaugeReserved": false,
+    "itemState": {
+      "stageId": 3,
+      "spin": 13,
+      "quotas": {},
+      "used": {}
+    },
+    "stageState": {
+      "advanceClaims": [],
+      "paymentModifiers": [],
+      "skipCount": 0
+    },
+    "settings": {
+      "autosave": true,
+      "advanceAccepted": false
+    }
+  },
+  "expected": {
+    "consumeCount": 0,
+    "reward": 0,
+    "wickSurvives": true,
+    "tideAmount": 7
+  },
+  "note": "Public durable state + public sliceCommand + real draw; no content or resolver patches. Reservations allowed by schema but crafted; separate seed below has no reservations.",
+  "unlocked": {
+    "input": {
+      "schema": 2,
+      "rules": "GDD1",
+      "content": "GDD1",
+      "saveKey": "fog-port.save.v1.gdd1",
+      "rngAlgorithm": "fnv1a-utf16le-xorshift32-v1",
+      "profile": "slice-abd-v1",
+      "difficulty": "Normal",
+      "seed": "AUDIT-UNLOCKED-2",
+      "rng": {
+        "draw": {
+          "state": 51436394,
+          "consumed": 0
+        },
+        "effect": {
+          "state": 3584227181,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 414145156,
+          "consumed": 0
+        },
+        "itemOffer": {
+          "state": 55910495,
+          "consumed": 0
+        },
+        "event": {
+          "state": 3022567638,
+          "consumed": 0
+        }
+      },
+      "revision": 0,
+      "phase": "READY",
+      "stageId": 3,
+      "spin": 12,
+      "stageSpin": 0,
+      "spinsRemaining": 7,
+      "basePayment": 137,
+      "payment": 137,
+      "cash": 0,
+      "pendingSettlement": null,
+      "last": {
+        "spin": 12,
+        "total": 0,
+        "reward": 0,
+        "board": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ledger": [],
+        "log": []
+      },
+      "pool": [
+        {
+          "uid": "u1",
+          "type": "pearl_separator",
+          "permanent": 0,
+          "epoch": 0,
+          "counters": {}
+        },
+        {
+          "uid": "u2",
+          "type": "reserve_facet",
+          "permanent": 0,
+          "epoch": 0,
+          "counters": {
+            "pressure": 0
+          }
+        },
+        {
+          "uid": "u3",
+          "type": "wick_bed",
+          "permanent": 0,
+          "epoch": 0,
+          "counters": {}
+        }
+      ],
+      "nextUid": 4,
+      "items": [],
+      "rerollTokens": 2,
+      "removeTokens": 2,
+      "offer": {
+        "windowId": 0,
+        "kind": null,
+        "choices": [],
+        "choiceRefreshesUsed": 0,
+        "guarantees": {
+          "applied": null,
+          "stageCommonHandled": false,
+          "eventCrystalPending": false,
+          "itemProductPending": false
+        }
+      },
+      "events": {
+        "seenIds": [],
+        "count": 0,
+        "cooldownPayments": 0,
+        "activeModifiers": [],
+        "choice": null
+      },
+      "reservations": [],
+      "fractionGaugeReserved": false,
+      "itemState": {
+        "stageId": 3,
+        "spin": 12,
+        "quotas": {},
+        "used": {}
+      },
+      "stageState": {
+        "advanceClaims": [],
+        "paymentModifiers": [],
+        "skipCount": 0
+      },
+      "settings": {
+        "autosave": true,
+        "advanceAccepted": false
+      }
+    },
+    "command": {
+      "op": "spin",
+      "revision": 0,
+      "windowId": 0
+    },
+    "actual": {
+      "schema": 2,
+      "rules": "GDD1",
+      "content": "GDD1",
+      "saveKey": "fog-port.save.v1.gdd1",
+      "rngAlgorithm": "fnv1a-utf16le-xorshift32-v1",
+      "profile": "slice-abd-v1",
+      "difficulty": "Normal",
+      "seed": "AUDIT-UNLOCKED-2",
+      "rng": {
+        "draw": {
+          "state": 1529216158,
+          "consumed": 19
+        },
+        "effect": {
+          "state": 3584227181,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 2796280894,
+          "consumed": 5
+        },
+        "itemOffer": {
+          "state": 55910495,
+          "consumed": 0
+        },
+        "event": {
+          "state": 3022567638,
+          "consumed": 0
+        }
+      },
+      "revision": 1,
+      "phase": "SYMBOL_CHOICE",
+      "stageId": 3,
+      "spin": 13,
+      "stageSpin": 1,
+      "spinsRemaining": 6,
+      "basePayment": 137,
+      "payment": 137,
+      "cash": 0,
+      "pendingSettlement": 11,
+      "last": {
+        "spin": 13,
+        "total": 11,
+        "reward": 2,
+        "board": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "uid": "u1",
+            "type": "pearl_separator",
+            "epoch": 0,
+            "alive": true
+          },
+          null,
+          null,
+          {
+            "uid": "u3",
+            "type": "wick_bed",
+            "epoch": 0,
+            "alive": false
+          },
+          {
+            "uid": "u2",
+            "type": "tide_prism",
+            "epoch": 1,
+            "alive": true
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ledger": [
+          {
+            "uid": "u1",
+            "type": "pearl_separator",
+            "amount": 2,
+            "alive": true,
+            "ratio": [
+              "1",
+              "1"
+            ],
+            "contributions": [
+              {
+                "source": "u1",
+                "amount": 2
+              }
+            ]
+          },
+          {
+            "uid": "u3",
+            "type": "wick_bed",
+            "amount": 0,
+            "alive": false,
+            "ratio": [
+              "1",
+              "1"
+            ],
+            "contributions": []
+          },
+          {
+            "uid": "u2",
+            "type": "tide_prism",
+            "amount": 7,
+            "alive": true,
+            "ratio": [
+              "1",
+              "1"
+            ],
+            "contributions": [
+              {
+                "source": "u2",
+                "amount": 7
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "id": 0,
+            "parent": null,
+            "depth": 0,
+            "phase": "step5/structural-event",
+            "action": "transform",
+            "source": "u1",
+            "target": "u2",
+            "amount": null,
+            "facts": {
+              "effectKey": "pearl_separator:0",
+              "sourcePos": 9,
+              "targetPos": 13,
+              "beforeType": "reserve_facet",
+              "afterType": "tide_prism",
+              "beforeTags": [
+                "crystal",
+                "pressure"
+              ],
+              "afterTags": [
+                "crystal",
+                "product",
+                "cargo"
+              ],
+              "cause": "transform",
+              "actualIncrease": 0,
+              "createdUid": null,
+              "skipReason": null
+            }
+          },
+          {
+            "id": 1,
+            "parent": 0,
+            "depth": 1,
+            "phase": "step5/structural-event",
+            "action": "add",
+            "source": "u2",
+            "target": "u2",
+            "amount": 3,
+            "facts": {
+              "effectKey": "tide_prism:0",
+              "sourcePos": 13,
+              "targetPos": 13,
+              "beforeType": "tide_prism",
+              "afterType": "tide_prism",
+              "beforeTags": [
+                "crystal",
+                "product",
+                "cargo"
+              ],
+              "afterTags": [
+                "crystal",
+                "product",
+                "cargo"
+              ],
+              "cause": "add",
+              "actualIncrease": 0,
+              "createdUid": null,
+              "skipReason": null
+            }
+          },
+          {
+            "id": 2,
+            "parent": null,
+            "depth": 0,
+            "phase": "step5/structural-event",
+            "action": "consume",
+            "source": "u2",
+            "target": "u3",
+            "amount": null,
+            "facts": {
+              "effectKey": "reserve_facet:0",
+              "sourcePos": 13,
+              "targetPos": 12,
+              "beforeType": "wick_bed",
+              "afterType": null,
+              "beforeTags": [
+                "plant",
+                "fuel"
+              ],
+              "afterTags": [],
+              "cause": "consume",
+              "actualIncrease": 0,
+              "createdUid": null,
+              "skipReason": null
+            }
+          },
+          {
+            "id": 3,
+            "parent": 2,
+            "depth": 1,
+            "phase": "step5/structural-event",
+            "action": "destroy",
+            "source": "u2",
+            "target": "u3",
+            "amount": null,
+            "facts": {
+              "effectKey": "reserve_facet:0",
+              "sourcePos": 13,
+              "targetPos": 12,
+              "beforeType": "wick_bed",
+              "afterType": null,
+              "beforeTags": [
+                "plant",
+                "fuel"
+              ],
+              "afterTags": [],
+              "cause": "consume",
+              "actualIncrease": 0,
+              "createdUid": null,
+              "skipReason": null
+            }
+          },
+          {
+            "id": 4,
+            "parent": 2,
+            "depth": 1,
+            "phase": "step5/structural-event",
+            "action": "reward",
+            "source": "u2",
+            "target": "u3",
+            "amount": 2,
+            "facts": {
+              "effectKey": "reserve_facet:0",
+              "sourcePos": 13,
+              "targetPos": 12,
+              "beforeType": "wick_bed",
+              "afterType": "wick_bed",
+              "beforeTags": [
+                "plant",
+                "fuel"
+              ],
+              "afterTags": [
+                "plant",
+                "fuel"
+              ],
+              "cause": "reward",
+              "actualIncrease": 0,
+              "createdUid": null,
+              "skipReason": null
+            }
+          }
+        ]
+      },
+      "pool": [
+        {
+          "uid": "u1",
+          "type": "pearl_separator",
+          "permanent": 0,
+          "epoch": 0,
+          "counters": {}
+        },
+        {
+          "uid": "u2",
+          "type": "tide_prism",
+          "permanent": 0,
+          "epoch": 1,
+          "counters": {}
+        }
+      ],
+      "nextUid": 4,
+      "items": [],
+      "rerollTokens": 2,
+      "removeTokens": 2,
+      "offer": {
+        "windowId": 1,
+        "kind": "symbol",
+        "choices": [
+          "sorting_tong",
+          "brine_strip",
+          "tide_prism"
+        ],
+        "choiceRefreshesUsed": 0,
+        "guarantees": {
+          "applied": "stage-common",
+          "stageCommonHandled": true,
+          "eventCrystalPending": false,
+          "itemProductPending": false
+        }
+      },
+      "events": {
+        "seenIds": [],
+        "count": 0,
+        "cooldownPayments": 0,
+        "activeModifiers": [],
+        "choice": null
+      },
+      "reservations": [],
+      "fractionGaugeReserved": false,
+      "itemState": {
+        "stageId": 3,
+        "spin": 13,
+        "quotas": {},
+        "used": {}
+      },
+      "stageState": {
+        "advanceClaims": [],
+        "paymentModifiers": [],
+        "skipCount": 0
+      },
+      "settings": {
+        "autosave": true,
+        "advanceAccepted": false
+      }
+    },
+    "inputValid": true,
+    "commandAccepted": true
+  }
+}

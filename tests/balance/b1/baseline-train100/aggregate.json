@@ -1,0 +1,4846 @@
+{
+  "generatedAt": "2026-10-07T16:30:28Z",
+  "label": "baseline-train100",
+  "configId": "P0-baseline",
+  "sourceHash": "63b46982183010f57ecc01278c94ded6d1fb6bc72213b4fe78324527bafe465a",
+  "configHash": "a394845740474a85e8e659db892ca50fb656f89a0562003bdcf4fbc03b1adf8f",
+  "srcHashes": {
+    "js/gdd1/contract.js": "e2ed31312b3751af76c3b6a0fc22250f0a5886d887f2886badd28c149556dbcf",
+    "js/gdd1/rng.js": "f3f5c055a8e3f4d5e18d355488194f94dfbc28603be7c29a5aab1743bd6704f7",
+    "js/gdd1/schema.js": "00cca48c0545622b0b70fd36194615d336e639b48158cefc91ed68eddfa6aa16",
+    "js/gdd1/save.js": "2f0d39ceebee434cbbb38c9fb01c6bf73e7ad6328ced84ab022a135d618eebba",
+    "js/gdd1/full-save.js": "cee2c57d646af61c7fc9e962e08f9115df07753dd235ae24adb3c61b5dd516a3",
+    "js/gdd1/content.js": "e6c753479683480c27ad0a3888a058edb8e90a0a4397e218c9e7fa8efe7ad239",
+    "js/gdd1/full-content.js": "1326808297527bc3a033c29e9d4658b4e22061eb9a960be6fa2a3b4a7b3a8c0e",
+    "js/gdd1/full-effects.js": "d061a923a36b0a4d12f1d6da91006b9fdc73be3a41e863a6d015c441e0680c3e",
+    "js/gdd1/descriptions.js": "a16bcb1ef37acea9ba736d6c141af1e759a829a5925d9b6e90f22154b20754b7",
+    "js/gdd1/offers.js": "81862b7b51e1eb335799f8dbacdb80c8b9df30e0cd322b9129c8654458f15bd0",
+    "js/gdd1/resolver.js": "e86d51fb4c20d235312b263146f18d2c4cd69c13453846fe0daf9b07a0aaf88b",
+    "js/gdd1/controller.js": "fb2f2870ea89cbe742c7f8190ad5c48fbacb4e09906545039119214f955afe24",
+    "js/gdd1/full-controller.js": "2c44f91f7f8806216b06666e685cbd4ab1a6f4ca2973528b7022102cd13e4558"
+  },
+  "engineFiles": [
+    "js/gdd1/contract.js",
+    "js/gdd1/rng.js",
+    "js/gdd1/schema.js",
+    "js/gdd1/save.js",
+    "js/gdd1/full-save.js",
+    "js/gdd1/content.js",
+    "js/gdd1/full-content.js",
+    "js/gdd1/full-effects.js",
+    "js/gdd1/descriptions.js",
+    "js/gdd1/offers.js",
+    "js/gdd1/resolver.js",
+    "js/gdd1/controller.js",
+    "js/gdd1/full-controller.js"
+  ],
+  "appliedOverrides": [],
+  "policyVersion": "balance-v1-policies/1",
+  "commandLine": "node tests/tools/balance-v1.js --config tests/balance/b1/configs/P0-baseline.json --games 100 --policies random,value,synergy,greedy --out tests/balance/b1/baseline-train100 --label baseline-train100",
+  "seedCount": 100,
+  "seedPrefix": "B1-TRAIN-",
+  "seedsHash": "2b4b442164c1d6759f10716c65a073e1f6e348cfac1cc604f7961dcc94835dd6",
+  "seeds": [
+    "B1-TRAIN-0000",
+    "B1-TRAIN-0001",
+    "B1-TRAIN-0002",
+    "B1-TRAIN-0003",
+    "B1-TRAIN-0004",
+    "B1-TRAIN-0005",
+    "B1-TRAIN-0006",
+    "B1-TRAIN-0007",
+    "B1-TRAIN-0008",
+    "B1-TRAIN-0009",
+    "B1-TRAIN-0010",
+    "B1-TRAIN-0011",
+    "B1-TRAIN-0012",
+    "B1-TRAIN-0013",
+    "B1-TRAIN-0014",
+    "B1-TRAIN-0015",
+    "B1-TRAIN-0016",
+    "B1-TRAIN-0017",
+    "B1-TRAIN-0018",
+    "B1-TRAIN-0019",
+    "B1-TRAIN-0020",
+    "B1-TRAIN-0021",
+    "B1-TRAIN-0022",
+    "B1-TRAIN-0023",
+    "B1-TRAIN-0024",
+    "B1-TRAIN-0025",
+    "B1-TRAIN-0026",
+    "B1-TRAIN-0027",
+    "B1-TRAIN-0028",
+    "B1-TRAIN-0029",
+    "B1-TRAIN-0030",
+    "B1-TRAIN-0031",
+    "B1-TRAIN-0032",
+    "B1-TRAIN-0033",
+    "B1-TRAIN-0034",
+    "B1-TRAIN-0035",
+    "B1-TRAIN-0036",
+    "B1-TRAIN-0037",
+    "B1-TRAIN-0038",
+    "B1-TRAIN-0039",
+    "B1-TRAIN-0040",
+    "B1-TRAIN-0041",
+    "B1-TRAIN-0042",
+    "B1-TRAIN-0043",
+    "B1-TRAIN-0044",
+    "B1-TRAIN-0045",
+    "B1-TRAIN-0046",
+    "B1-TRAIN-0047",
+    "B1-TRAIN-0048",
+    "B1-TRAIN-0049",
+    "B1-TRAIN-0050",
+    "B1-TRAIN-0051",
+    "B1-TRAIN-0052",
+    "B1-TRAIN-0053",
+    "B1-TRAIN-0054",
+    "B1-TRAIN-0055",
+    "B1-TRAIN-0056",
+    "B1-TRAIN-0057",
+    "B1-TRAIN-0058",
+    "B1-TRAIN-0059",
+    "B1-TRAIN-0060",
+    "B1-TRAIN-0061",
+    "B1-TRAIN-0062",
+    "B1-TRAIN-0063",
+    "B1-TRAIN-0064",
+    "B1-TRAIN-0065",
+    "B1-TRAIN-0066",
+    "B1-TRAIN-0067",
+    "B1-TRAIN-0068",
+    "B1-TRAIN-0069",
+    "B1-TRAIN-0070",
+    "B1-TRAIN-0071",
+    "B1-TRAIN-0072",
+    "B1-TRAIN-0073",
+    "B1-TRAIN-0074",
+    "B1-TRAIN-0075",
+    "B1-TRAIN-0076",
+    "B1-TRAIN-0077",
+    "B1-TRAIN-0078",
+    "B1-TRAIN-0079",
+    "B1-TRAIN-0080",
+    "B1-TRAIN-0081",
+    "B1-TRAIN-0082",
+    "B1-TRAIN-0083",
+    "B1-TRAIN-0084",
+    "B1-TRAIN-0085",
+    "B1-TRAIN-0086",
+    "B1-TRAIN-0087",
+    "B1-TRAIN-0088",
+    "B1-TRAIN-0089",
+    "B1-TRAIN-0090",
+    "B1-TRAIN-0091",
+    "B1-TRAIN-0092",
+    "B1-TRAIN-0093",
+    "B1-TRAIN-0094",
+    "B1-TRAIN-0095",
+    "B1-TRAIN-0096",
+    "B1-TRAIN-0097",
+    "B1-TRAIN-0098",
+    "B1-TRAIN-0099"
+  ],
+  "policies": [
+    {
+      "policy": "random",
+      "games": 100,
+      "won": 22,
+      "lost": 78,
+      "error": 0,
+      "winRate": 0.22,
+      "winRateCI": {
+        "k": 22,
+        "n": 100,
+        "p": 0.22,
+        "lo": 0.150012823846054,
+        "hi": 0.31070353514985793
+      },
+      "winRateUsable": true,
+      "winRateExcludingError": 0.22,
+      "errors": [],
+      "accountingError": null,
+      "survival": {
+        "1": {
+          "entered": 100,
+          "passed": 100,
+          "failedHere": 0,
+          "cumulativeSurvival": 1,
+          "conditionalFailure": 0
+        },
+        "2": {
+          "entered": 100,
+          "passed": 85,
+          "failedHere": 15,
+          "cumulativeSurvival": 0.85,
+          "conditionalFailure": 0.15
+        },
+        "3": {
+          "entered": 85,
+          "passed": 65,
+          "failedHere": 20,
+          "cumulativeSurvival": 0.65,
+          "conditionalFailure": 0.23529411764705882
+        },
+        "4": {
+          "entered": 65,
+          "passed": 51,
+          "failedHere": 14,
+          "cumulativeSurvival": 0.51,
+          "conditionalFailure": 0.2153846153846154
+        },
+        "5": {
+          "entered": 51,
+          "passed": 45,
+          "failedHere": 6,
+          "cumulativeSurvival": 0.45,
+          "conditionalFailure": 0.11764705882352941
+        },
+        "6": {
+          "entered": 45,
+          "passed": 41,
+          "failedHere": 4,
+          "cumulativeSurvival": 0.41,
+          "conditionalFailure": 0.08888888888888889
+        },
+        "7": {
+          "entered": 41,
+          "passed": 38,
+          "failedHere": 3,
+          "cumulativeSurvival": 0.38,
+          "conditionalFailure": 0.07317073170731707
+        },
+        "8": {
+          "entered": 38,
+          "passed": 28,
+          "failedHere": 10,
+          "cumulativeSurvival": 0.28,
+          "conditionalFailure": 0.2631578947368421
+        },
+        "9": {
+          "entered": 28,
+          "passed": 26,
+          "failedHere": 2,
+          "cumulativeSurvival": 0.26,
+          "conditionalFailure": 0.07142857142857142
+        },
+        "10": {
+          "entered": 26,
+          "passed": 22,
+          "failedHere": 4,
+          "cumulativeSurvival": 0.22,
+          "conditionalFailure": 0.15384615384615385
+        }
+      },
+      "endStage": {
+        "2": 15,
+        "3": 20,
+        "4": 14,
+        "5": 6,
+        "6": 4,
+        "7": 3,
+        "8": 10,
+        "9": 2,
+        "10": 26
+      },
+      "endStageWon": {
+        "10": 22
+      },
+      "actions": {
+        "decisions": 9080,
+        "choose": 3509,
+        "skip": 398,
+        "remove": 410,
+        "reroll": 266,
+        "item": 432,
+        "skipItem": 47,
+        "eventAccept": 55,
+        "eventReject": 56,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      },
+      "coop": {
+        "gamesWithCoop": 94,
+        "rate": 0.94,
+        "ci": {
+          "k": 94,
+          "n": 100,
+          "p": 0.94,
+          "lo": 0.8752318455410406,
+          "hi": 0.9722138760368118
+        },
+        "qualifyingSpinsBeforeStage4": 661,
+        "coopSpinsTotal": 1953
+      },
+      "income": {
+        "perSpin": {
+          "n": 3907,
+          "mean": 55.16918351676478,
+          "min": 18,
+          "p10": 32,
+          "p50": 56,
+          "p90": 75,
+          "p99": 96.94000000000005,
+          "max": 160
+        },
+        "perStage": {
+          "1": {
+            "n": 100,
+            "mean": 178.93,
+            "min": 151,
+            "p10": 159.9,
+            "p50": 180,
+            "p90": 194,
+            "p99": 204.04000000000002,
+            "max": 208
+          },
+          "2": {
+            "n": 100,
+            "mean": 278.31,
+            "min": 165,
+            "p10": 239.9,
+            "p50": 283.5,
+            "p90": 311.1,
+            "p99": 336,
+            "max": 336
+          },
+          "3": {
+            "n": 85,
+            "mean": 390.21176470588233,
+            "min": 308,
+            "p10": 330.6,
+            "p50": 391,
+            "p90": 441.6,
+            "p99": 485.19999999999993,
+            "max": 502
+          },
+          "4": {
+            "n": 65,
+            "mean": 426.83076923076925,
+            "min": 309,
+            "p10": 371.4,
+            "p50": 438,
+            "p90": 480.8,
+            "p99": 512.68,
+            "max": 521
+          },
+          "5": {
+            "n": 51,
+            "mean": 440.2156862745098,
+            "min": 353,
+            "p10": 384,
+            "p50": 437,
+            "p90": 495,
+            "p99": 554.5,
+            "max": 560
+          },
+          "6": {
+            "n": 45,
+            "mean": 457.02222222222224,
+            "min": 373,
+            "p10": 418.8,
+            "p50": 454,
+            "p90": 506,
+            "p99": 584.8000000000002,
+            "max": 609
+          },
+          "7": {
+            "n": 41,
+            "mean": 467.3658536585366,
+            "min": 388,
+            "p10": 418,
+            "p50": 458,
+            "p90": 524,
+            "p99": 569,
+            "max": 573
+          },
+          "8": {
+            "n": 38,
+            "mean": 456.8157894736842,
+            "min": 376,
+            "p10": 401.5,
+            "p50": 444.5,
+            "p90": 520.5,
+            "p99": 582.3100000000001,
+            "max": 596
+          },
+          "9": {
+            "n": 28,
+            "mean": 545.8571428571429,
+            "min": 468,
+            "p10": 483.4,
+            "p50": 536.5,
+            "p90": 611.8,
+            "p99": 652.6,
+            "max": 658
+          },
+          "10": {
+            "n": 26,
+            "mean": 541.8461538461538,
+            "min": 421,
+            "p10": 473,
+            "p50": 542.5,
+            "p90": 607,
+            "p99": 642.25,
+            "max": 651
+          }
+        },
+        "lateStagePerSpin": {
+          "n": 985,
+          "mean": 66.89644670050761,
+          "min": 34,
+          "p10": 51,
+          "p50": 66,
+          "p90": 84,
+          "p99": 107.15999999999997,
+          "max": 160
+        },
+        "lateSpinsCounted": 985
+      },
+      "margin": {
+        "all": {
+          "n": 579,
+          "mean": 78.40587219343696,
+          "min": -94,
+          "p10": -12,
+          "p50": 50,
+          "p90": 201.80000000000018,
+          "p99": 390.5400000000002,
+          "max": 612
+        },
+        "late": {
+          "n": 133,
+          "mean": 154,
+          "min": -94,
+          "p10": -14.599999999999998,
+          "p50": 137,
+          "p90": 339.6,
+          "p99": 541.2,
+          "max": 612
+        },
+        "lateGamesReaching": 41,
+        "nonPositiveShare": 0.13644214162348878
+      },
+      "routes": {
+        "terminalIdCounts": {
+          "resonance": 460,
+          "cargo": 367,
+          "pressure": 520,
+          "magic": 552,
+          "unknown": 1251,
+          "contract": 447
+        },
+        "mainRouteWinCounts": {
+          "unknown": 3
+        },
+        "wonTerminalCounts": {
+          "cargo": 139,
+          "pressure": 188,
+          "unknown": 447,
+          "contract": 162,
+          "magic": 215,
+          "resonance": 146
+        },
+        "mixedWins": 22,
+        "mixedWinShare": 1,
+        "gamesWithAnyRoute": 100
+      },
+      "poolSize": {
+        "n": 100,
+        "mean": 36.58,
+        "min": 12,
+        "p10": 17,
+        "p50": 32.5,
+        "p90": 60.10000000000001,
+        "p99": 70.02000000000001,
+        "max": 72
+      },
+      "itemCount": {
+        "n": 100,
+        "mean": 4.32,
+        "min": 0,
+        "p10": 1,
+        "p50": 3,
+        "p90": 8,
+        "p99": 9,
+        "max": 9
+      },
+      "byType": {
+        "mist_pouch": 551,
+        "phase_chip": 9607,
+        "copper_burr": 10458,
+        "pressure_pouch": 2204,
+        "spent_gasket": -1007,
+        "wick_bed": 9876,
+        "lean_receipt": 11905,
+        "saline_ampoule": 7796,
+        "dock_chime": 12690,
+        "ash_felt": 371,
+        "cargo_rope": 1291,
+        "dew_lantern": 1723,
+        "brine_strip": 86,
+        "amber_frond": 18154,
+        "beat_spool": 3063,
+        "deep_still": 1408,
+        "sieve_drum": 1556,
+        "compliance_desk": 1247,
+        "crystal_index": 5978,
+        "pause_dial": 4850,
+        "cleared_stub": 7669,
+        "parcel_cage": 3429,
+        "switch_lamp": 600,
+        "pitch_fork": 1977,
+        "cancellation_clerk": 779,
+        "fog_stitcher": 753,
+        "fog_reed": 2261,
+        "clinker_router": 330,
+        "manifest_desk": 7261,
+        "tide_prism": 11230,
+        "safety_shim": 713,
+        "cloudy_negative": 147,
+        "surge_vessel": 0,
+        "prism_hum": 2912,
+        "warm_pod": 2565,
+        "alignment_cloth": 653,
+        "chord_frame": 1908,
+        "furnace_auditor": 726,
+        "route_stub": 9596,
+        "offset_reader": 965,
+        "quota_margin": 1815,
+        "feed_valve": 971,
+        "blank_facet": 9328,
+        "heat_clerk": 829,
+        "transit_seal": 788,
+        "root_ledger": 211,
+        "reserve_facet": 444,
+        "sorting_tong": 1242,
+        "condense_coil": 1183,
+        "echo_plate": 266,
+        "cracked_regulator": 4599,
+        "silence_keeper": 1855,
+        "spectrum_pin": 5516,
+        "sorting_runner": 730,
+        "pearl_separator": 612,
+        "demand_coupler": 368,
+        "advance_stamp": 621,
+        "return_station": 480,
+        "nursery_gauge": 346,
+        "harbor_conductor": 215,
+        "settlement_beacon": 1382,
+        "split_register": 158,
+        "release_spire": 396
+      },
+      "contribByType": {
+        "mist_pouch": 539,
+        "phase_chip": 7388,
+        "copper_burr": 9964,
+        "pressure_pouch": 2204,
+        "spent_gasket": -1007,
+        "wick_bed": 9876,
+        "lean_receipt": 11384,
+        "saline_ampoule": 7780,
+        "dock_chime": 11055,
+        "ash_felt": 371,
+        "cargo_rope": 3349,
+        "dew_lantern": 1662,
+        "brine_strip": 74,
+        "amber_frond": 17308,
+        "beat_spool": 2797,
+        "deep_still": 1408,
+        "sieve_drum": 1556,
+        "compliance_desk": 1170,
+        "crystal_index": 5978,
+        "pause_dial": 4850,
+        "cleared_stub": 6845,
+        "parcel_cage": 3423,
+        "item_margin_lantern": 67,
+        "switch_lamp": 598,
+        "pitch_fork": 4274,
+        "cancellation_clerk": 716,
+        "fog_stitcher": 753,
+        "fog_reed": 1698,
+        "clinker_router": 330,
+        "manifest_desk": 6404,
+        "tide_prism": 10590,
+        "event_misprint_window": 52,
+        "safety_shim": 713,
+        "cloudy_negative": 147,
+        "item_frost_glass": 126,
+        "prism_hum": 2476,
+        "warm_pod": 2565,
+        "event_empty_manifest": 50,
+        "alignment_cloth": 1163,
+        "chord_frame": 2187,
+        "furnace_auditor": 726,
+        "route_stub": 8544,
+        "item_pitch_marker": 205,
+        "offset_reader": 963,
+        "quota_margin": 1644,
+        "feed_valve": 967,
+        "blank_facet": 9310,
+        "heat_clerk": 741,
+        "transit_seal": 438,
+        "root_ledger": 176,
+        "reserve_facet": 440,
+        "sorting_tong": 1242,
+        "condense_coil": 1183,
+        "echo_plate": 195,
+        "item_brine_lining": 128,
+        "cracked_regulator": 4644,
+        "silence_keeper": 1335,
+        "item_spectrum_book": 642,
+        "spectrum_pin": 5508,
+        "item_spare_baffle": -45,
+        "sorting_runner": 730,
+        "pearl_separator": 612,
+        "demand_coupler": 342,
+        "item_lane_clapper": 1084,
+        "advance_stamp": 492,
+        "return_station": 480,
+        "nursery_gauge": 346,
+        "harbor_conductor": 234,
+        "settlement_beacon": 5128,
+        "split_register": 177,
+        "release_spire": 404,
+        "item_rest_notch": 694,
+        "event_silent_bell": -9,
+        "item_root_wrap": 44,
+        "item_compliance_carbon": 9
+      },
+      "lookahead": {
+        "decisions": 0,
+        "candidates": 0,
+        "runs": 0,
+        "failures": 0
+      }
+    },
+    {
+      "policy": "value",
+      "games": 100,
+      "won": 65,
+      "lost": 35,
+      "error": 0,
+      "winRate": 0.65,
+      "winRateCI": {
+        "k": 65,
+        "n": 100,
+        "p": 0.65,
+        "lo": 0.5525444329688796,
+        "hi": 0.7363575175690247
+      },
+      "winRateUsable": true,
+      "winRateExcludingError": 0.65,
+      "errors": [],
+      "accountingError": null,
+      "survival": {
+        "1": {
+          "entered": 100,
+          "passed": 100,
+          "failedHere": 0,
+          "cumulativeSurvival": 1,
+          "conditionalFailure": 0
+        },
+        "2": {
+          "entered": 100,
+          "passed": 97,
+          "failedHere": 3,
+          "cumulativeSurvival": 0.97,
+          "conditionalFailure": 0.03
+        },
+        "3": {
+          "entered": 97,
+          "passed": 91,
+          "failedHere": 6,
+          "cumulativeSurvival": 0.91,
+          "conditionalFailure": 0.061855670103092786
+        },
+        "4": {
+          "entered": 91,
+          "passed": 85,
+          "failedHere": 6,
+          "cumulativeSurvival": 0.85,
+          "conditionalFailure": 0.06593406593406594
+        },
+        "5": {
+          "entered": 85,
+          "passed": 78,
+          "failedHere": 7,
+          "cumulativeSurvival": 0.78,
+          "conditionalFailure": 0.08235294117647059
+        },
+        "6": {
+          "entered": 78,
+          "passed": 75,
+          "failedHere": 3,
+          "cumulativeSurvival": 0.75,
+          "conditionalFailure": 0.038461538461538464
+        },
+        "7": {
+          "entered": 75,
+          "passed": 73,
+          "failedHere": 2,
+          "cumulativeSurvival": 0.73,
+          "conditionalFailure": 0.02666666666666667
+        },
+        "8": {
+          "entered": 73,
+          "passed": 68,
+          "failedHere": 5,
+          "cumulativeSurvival": 0.68,
+          "conditionalFailure": 0.0684931506849315
+        },
+        "9": {
+          "entered": 68,
+          "passed": 67,
+          "failedHere": 1,
+          "cumulativeSurvival": 0.67,
+          "conditionalFailure": 0.014705882352941176
+        },
+        "10": {
+          "entered": 67,
+          "passed": 65,
+          "failedHere": 2,
+          "cumulativeSurvival": 0.65,
+          "conditionalFailure": 0.029850746268656716
+        }
+      },
+      "endStage": {
+        "2": 3,
+        "3": 6,
+        "4": 6,
+        "5": 7,
+        "6": 3,
+        "7": 2,
+        "8": 5,
+        "9": 1,
+        "10": 67
+      },
+      "endStageWon": {
+        "10": 65
+      },
+      "actions": {
+        "decisions": 13054,
+        "choose": 3738,
+        "skip": 2035,
+        "remove": 603,
+        "reroll": 0,
+        "item": 734,
+        "skipItem": 0,
+        "eventAccept": 152,
+        "eventReject": 19,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      },
+      "coop": {
+        "gamesWithCoop": 46,
+        "rate": 0.46,
+        "ci": {
+          "k": 46,
+          "n": 100,
+          "p": 0.46,
+          "lo": 0.36560808309024106,
+          "hi": 0.5573513967663177
+        },
+        "qualifyingSpinsBeforeStage4": 271,
+        "coopSpinsTotal": 1024
+      },
+      "income": {
+        "perSpin": {
+          "n": 5773,
+          "mean": 64.1664645764767,
+          "min": 16,
+          "p10": 39,
+          "p50": 64,
+          "p90": 84,
+          "p99": 132,
+          "max": 191
+        },
+        "perStage": {
+          "1": {
+            "n": 100,
+            "mean": 179.28,
+            "min": 152,
+            "p10": 165,
+            "p50": 179,
+            "p90": 193.10000000000002,
+            "p99": 215,
+            "max": 215
+          },
+          "2": {
+            "n": 100,
+            "mean": 307.08,
+            "min": 222,
+            "p10": 266,
+            "p50": 304,
+            "p90": 347.1,
+            "p99": 407.2400000000001,
+            "max": 431
+          },
+          "3": {
+            "n": 97,
+            "mean": 427.659793814433,
+            "min": 318,
+            "p10": 369.8,
+            "p50": 423,
+            "p90": 475.4,
+            "p99": 564.1999999999988,
+            "max": 713
+          },
+          "4": {
+            "n": 91,
+            "mean": 450.1098901098901,
+            "min": 350,
+            "p10": 397,
+            "p50": 440,
+            "p90": 497,
+            "p99": 655.4999999999995,
+            "max": 732
+          },
+          "5": {
+            "n": 85,
+            "mean": 468.22352941176473,
+            "min": 361,
+            "p10": 412.4,
+            "p50": 460,
+            "p90": 529.6,
+            "p99": 640.2799999999995,
+            "max": 752
+          },
+          "6": {
+            "n": 78,
+            "mean": 497.79487179487177,
+            "min": 382,
+            "p10": 424.3,
+            "p50": 479,
+            "p90": 576.8,
+            "p99": 748.2400000000004,
+            "max": 816
+          },
+          "7": {
+            "n": 75,
+            "mean": 511.68,
+            "min": 355,
+            "p10": 438.4,
+            "p50": 485,
+            "p90": 623.6,
+            "p99": 786.1400000000002,
+            "max": 815
+          },
+          "8": {
+            "n": 73,
+            "mean": 527.5205479452055,
+            "min": 420,
+            "p10": 442.4,
+            "p50": 505,
+            "p90": 648.6,
+            "p99": 805.8000000000001,
+            "max": 867
+          },
+          "9": {
+            "n": 68,
+            "mean": 624.6176470588235,
+            "min": 494,
+            "p10": 536,
+            "p50": 576,
+            "p90": 799.9000000000001,
+            "p99": 1070.1899999999998,
+            "max": 1099
+          },
+          "10": {
+            "n": 67,
+            "mean": 617.4328358208955,
+            "min": 472,
+            "p10": 536,
+            "p50": 598,
+            "p90": 725.6,
+            "p99": 939.6800000000001,
+            "max": 941
+          }
+        },
+        "lateStagePerSpin": {
+          "n": 2116,
+          "mean": 75.95793950850661,
+          "min": 32,
+          "p10": 60.5,
+          "p50": 71,
+          "p90": 96,
+          "p99": 145,
+          "max": 191
+        },
+        "lateSpinsCounted": 2116
+      },
+      "margin": {
+        "all": {
+          "n": 834,
+          "mean": 213.41966426858514,
+          "min": -78,
+          "p10": 19,
+          "p50": 108,
+          "p90": 487.8000000000002,
+          "p99": 1577.0299999999997,
+          "max": 2322
+        },
+        "late": {
+          "n": 283,
+          "mean": 401.208480565371,
+          "min": -57,
+          "p10": 48,
+          "p50": 290,
+          "p90": 987.6000000000004,
+          "p99": 2080.18,
+          "max": 2322
+        },
+        "lateGamesReaching": 75,
+        "nonPositiveShare": 0.04316546762589928
+      },
+      "routes": {
+        "terminalIdCounts": {
+          "cargo": 451,
+          "pressure": 352,
+          "unknown": 1275,
+          "magic": 826,
+          "resonance": 791,
+          "contract": 381
+        },
+        "mainRouteWinCounts": {
+          "unknown": 2
+        },
+        "wonTerminalCounts": {
+          "cargo": 311,
+          "pressure": 246,
+          "unknown": 971,
+          "magic": 598,
+          "resonance": 558,
+          "contract": 279
+        },
+        "mixedWins": 63,
+        "mixedWinShare": 0.9692307692307692,
+        "gamesWithAnyRoute": 100
+      },
+      "poolSize": {
+        "n": 100,
+        "mean": 41.72,
+        "min": 17,
+        "p10": 27,
+        "p50": 41.5,
+        "p90": 56.10000000000001,
+        "p99": 74,
+        "max": 74
+      },
+      "itemCount": {
+        "n": 100,
+        "mean": 7.34,
+        "min": 1,
+        "p10": 3,
+        "p50": 9,
+        "p90": 9,
+        "p99": 9,
+        "max": 9
+      },
+      "byType": {
+        "mist_pouch": 407,
+        "lean_receipt": 11119,
+        "copper_burr": 22580,
+        "phase_chip": 10020,
+        "wick_bed": 16369,
+        "saline_ampoule": 11168,
+        "dock_chime": 17458,
+        "ash_felt": 216,
+        "pause_dial": 11509,
+        "dew_lantern": 1697,
+        "cleared_stub": 38115,
+        "amber_frond": 54616,
+        "beat_spool": 1957,
+        "quota_margin": 5039,
+        "compliance_desk": 128,
+        "sieve_drum": 3268,
+        "tide_prism": 34848,
+        "clinker_router": 2260,
+        "split_register": 1285,
+        "offset_reader": 7691,
+        "release_spire": 5691,
+        "reserve_facet": 1872,
+        "settlement_beacon": 6104,
+        "harbor_conductor": 1192,
+        "blank_facet": 14968,
+        "return_station": 2234,
+        "furnace_auditor": 2258,
+        "manifest_desk": 13650,
+        "prism_hum": 6942,
+        "heat_clerk": 292,
+        "advance_stamp": 1916,
+        "nursery_gauge": 2935,
+        "cloudy_negative": 20,
+        "deep_still": 2712,
+        "fog_reed": 296,
+        "alignment_cloth": 494,
+        "route_stub": 17228,
+        "feed_valve": 106,
+        "cracked_regulator": 7910,
+        "spent_gasket": -1129,
+        "pearl_separator": 2632,
+        "condense_coil": 316,
+        "sorting_tong": 114,
+        "safety_shim": 143,
+        "spectrum_pin": 1743,
+        "parcel_cage": 4952,
+        "crystal_index": 2638,
+        "transit_seal": 2631,
+        "switch_lamp": 573,
+        "cargo_rope": 243,
+        "chord_frame": 3788,
+        "demand_coupler": 128,
+        "echo_plate": 124,
+        "surge_vessel": 0,
+        "pitch_fork": 246,
+        "fog_stitcher": 188,
+        "sorting_runner": 299,
+        "brine_strip": 12,
+        "warm_pod": 745,
+        "pressure_pouch": 57,
+        "cancellation_clerk": 64,
+        "root_ledger": 1,
+        "silence_keeper": 1331
+      },
+      "contribByType": {
+        "mist_pouch": 407,
+        "lean_receipt": 10097,
+        "copper_burr": 22020,
+        "phase_chip": 8250,
+        "wick_bed": 16362,
+        "saline_ampoule": 11154,
+        "dock_chime": 15537,
+        "ash_felt": 216,
+        "pause_dial": 11509,
+        "dew_lantern": 1590,
+        "cleared_stub": 29525,
+        "amber_frond": 53356,
+        "beat_spool": 1723,
+        "quota_margin": 4256,
+        "compliance_desk": 121,
+        "sieve_drum": 3268,
+        "tide_prism": 33805,
+        "item_root_wrap": 232,
+        "event_empty_manifest": 180,
+        "clinker_router": 2260,
+        "split_register": 2022,
+        "item_rest_notch": 2741,
+        "item_spectrum_book": 804,
+        "offset_reader": 7662,
+        "release_spire": 5803,
+        "reserve_facet": 1760,
+        "settlement_beacon": 22930,
+        "item_lane_clapper": 1212,
+        "harbor_conductor": 1175,
+        "blank_facet": 14942,
+        "return_station": 2228,
+        "furnace_auditor": 2258,
+        "manifest_desk": 11340,
+        "prism_hum": 6096,
+        "heat_clerk": 260,
+        "advance_stamp": 1404,
+        "nursery_gauge": 2962,
+        "item_frost_glass": 123,
+        "item_pitch_marker": 1475,
+        "cloudy_negative": 20,
+        "deep_still": 2712,
+        "fog_reed": 214,
+        "alignment_cloth": 974,
+        "route_stub": 13074,
+        "feed_valve": 106,
+        "cracked_regulator": 7910,
+        "spent_gasket": -1129,
+        "pearl_separator": 2632,
+        "condense_coil": 316,
+        "event_silent_bell": -47,
+        "event_misprint_window": 58,
+        "sorting_tong": 114,
+        "safety_shim": 143,
+        "spectrum_pin": 1741,
+        "item_margin_lantern": 178,
+        "parcel_cage": 4940,
+        "crystal_index": 2638,
+        "item_brine_lining": 4,
+        "transit_seal": 1822,
+        "switch_lamp": 573,
+        "cargo_rope": 879,
+        "chord_frame": 4598,
+        "demand_coupler": 124,
+        "echo_plate": 92,
+        "item_compliance_carbon": 30,
+        "pitch_fork": 574,
+        "fog_stitcher": 188,
+        "sorting_runner": 297,
+        "brine_strip": 9,
+        "warm_pod": 745,
+        "pressure_pouch": 57,
+        "cancellation_clerk": 62,
+        "root_ledger": 1,
+        "silence_keeper": 695
+      },
+      "lookahead": {
+        "decisions": 0,
+        "candidates": 0,
+        "runs": 0,
+        "failures": 0
+      }
+    },
+    {
+      "policy": "synergy",
+      "games": 100,
+      "won": 54,
+      "lost": 46,
+      "error": 0,
+      "winRate": 0.54,
+      "winRateCI": {
+        "k": 54,
+        "n": 100,
+        "p": 0.54,
+        "lo": 0.44264860323368227,
+        "hi": 0.6343919169097589
+      },
+      "winRateUsable": true,
+      "winRateExcludingError": 0.54,
+      "errors": [],
+      "accountingError": null,
+      "survival": {
+        "1": {
+          "entered": 100,
+          "passed": 99,
+          "failedHere": 1,
+          "cumulativeSurvival": 0.99,
+          "conditionalFailure": 0.01
+        },
+        "2": {
+          "entered": 99,
+          "passed": 97,
+          "failedHere": 2,
+          "cumulativeSurvival": 0.97,
+          "conditionalFailure": 0.020202020202020204
+        },
+        "3": {
+          "entered": 97,
+          "passed": 83,
+          "failedHere": 14,
+          "cumulativeSurvival": 0.83,
+          "conditionalFailure": 0.14432989690721648
+        },
+        "4": {
+          "entered": 83,
+          "passed": 78,
+          "failedHere": 5,
+          "cumulativeSurvival": 0.78,
+          "conditionalFailure": 0.060240963855421686
+        },
+        "5": {
+          "entered": 78,
+          "passed": 68,
+          "failedHere": 10,
+          "cumulativeSurvival": 0.68,
+          "conditionalFailure": 0.1282051282051282
+        },
+        "6": {
+          "entered": 68,
+          "passed": 65,
+          "failedHere": 3,
+          "cumulativeSurvival": 0.65,
+          "conditionalFailure": 0.04411764705882353
+        },
+        "7": {
+          "entered": 65,
+          "passed": 63,
+          "failedHere": 2,
+          "cumulativeSurvival": 0.63,
+          "conditionalFailure": 0.03076923076923077
+        },
+        "8": {
+          "entered": 63,
+          "passed": 61,
+          "failedHere": 2,
+          "cumulativeSurvival": 0.61,
+          "conditionalFailure": 0.031746031746031744
+        },
+        "9": {
+          "entered": 61,
+          "passed": 56,
+          "failedHere": 5,
+          "cumulativeSurvival": 0.56,
+          "conditionalFailure": 0.08196721311475409
+        },
+        "10": {
+          "entered": 56,
+          "passed": 54,
+          "failedHere": 2,
+          "cumulativeSurvival": 0.54,
+          "conditionalFailure": 0.03571428571428571
+        }
+      },
+      "endStage": {
+        "1": 1,
+        "2": 2,
+        "3": 14,
+        "4": 5,
+        "5": 10,
+        "6": 3,
+        "7": 2,
+        "8": 2,
+        "9": 5,
+        "10": 56
+      },
+      "endStageWon": {
+        "10": 54
+      },
+      "actions": {
+        "decisions": 12102,
+        "choose": 5271,
+        "skip": 37,
+        "remove": 664,
+        "reroll": 0,
+        "item": 670,
+        "skipItem": 0,
+        "eventAccept": 150,
+        "eventReject": 2,
+        "lookaheadDecisions": 0,
+        "lookaheadCandidates": 0,
+        "lookaheadRuns": 0,
+        "lookaheadFailures": 0
+      },
+      "coop": {
+        "gamesWithCoop": 99,
+        "rate": 0.99,
+        "ci": {
+          "k": 99,
+          "n": 100,
+          "p": 0.99,
+          "lo": 0.9455138038212946,
+          "hi": 0.9982325679358593
+        },
+        "qualifyingSpinsBeforeStage4": 1187,
+        "coopSpinsTotal": 3832
+      },
+      "income": {
+        "perSpin": {
+          "n": 5308,
+          "mean": 63.34155990957046,
+          "min": 16,
+          "p10": 36,
+          "p50": 62,
+          "p90": 86,
+          "p99": 144,
+          "max": 265
+        },
+        "perStage": {
+          "1": {
+            "n": 100,
+            "mean": 177.2,
+            "min": 147,
+            "p10": 163,
+            "p50": 177,
+            "p90": 190.10000000000002,
+            "p99": 197.01,
+            "max": 198
+          },
+          "2": {
+            "n": 99,
+            "mean": 296.32323232323233,
+            "min": 201,
+            "p10": 261.8,
+            "p50": 295,
+            "p90": 337.2,
+            "p99": 354.03999999999996,
+            "max": 356
+          },
+          "3": {
+            "n": 97,
+            "mean": 418.8041237113402,
+            "min": 289,
+            "p10": 354.4,
+            "p50": 425,
+            "p90": 466.4,
+            "p99": 538.7199999999997,
+            "max": 580
+          },
+          "4": {
+            "n": 83,
+            "mean": 449.04819277108436,
+            "min": 342,
+            "p10": 382,
+            "p50": 450,
+            "p90": 513.8,
+            "p99": 550.54,
+            "max": 553
+          },
+          "5": {
+            "n": 78,
+            "mean": 472.43589743589746,
+            "min": 341,
+            "p10": 382.7,
+            "p50": 467,
+            "p90": 540.5,
+            "p99": 683.5800000000014,
+            "max": 950
+          },
+          "6": {
+            "n": 68,
+            "mean": 500.25,
+            "min": 373,
+            "p10": 427.1,
+            "p50": 479.5,
+            "p90": 612.7,
+            "p99": 784.26,
+            "max": 799
+          },
+          "7": {
+            "n": 65,
+            "mean": 510.46153846153845,
+            "min": 404,
+            "p10": 433.6,
+            "p50": 492,
+            "p90": 598,
+            "p99": 803.04,
+            "max": 828
+          },
+          "8": {
+            "n": 63,
+            "mean": 530.936507936508,
+            "min": 381,
+            "p10": 457,
+            "p50": 516,
+            "p90": 639.8,
+            "p99": 745.1200000000001,
+            "max": 760
+          },
+          "9": {
+            "n": 61,
+            "mean": 627.344262295082,
+            "min": 436,
+            "p10": 515,
+            "p50": 595,
+            "p90": 769,
+            "p99": 1117.3999999999996,
+            "max": 1268
+          },
+          "10": {
+            "n": 56,
+            "mean": 633.9642857142857,
+            "min": 488,
+            "p10": 532,
+            "p50": 604.5,
+            "p90": 764.5,
+            "p99": 932.45,
+            "max": 944
+          }
+        },
+        "lateStagePerSpin": {
+          "n": 1832,
+          "mean": 76.63700873362446,
+          "min": 36,
+          "p10": 56,
+          "p50": 72,
+          "p90": 101,
+          "p99": 161,
+          "max": 265
+        },
+        "lateSpinsCounted": 1832
+      },
+      "margin": {
+        "all": {
+          "n": 770,
+          "mean": 201.7922077922078,
+          "min": -101,
+          "p10": 14,
+          "p50": 107,
+          "p90": 509.20000000000005,
+          "p99": 1302.0299999999993,
+          "max": 2414
+        },
+        "late": {
+          "n": 245,
+          "mean": 412.76326530612243,
+          "min": -70,
+          "p10": 56.800000000000004,
+          "p50": 358,
+          "p90": 762.4,
+          "p99": 1575.5200000000004,
+          "max": 2414
+        },
+        "lateGamesReaching": 65,
+        "nonPositiveShare": 0.05974025974025974
+      },
+      "routes": {
+        "terminalIdCounts": {
+          "resonance": 447,
+          "pressure": 888,
+          "magic": 758,
+          "unknown": 1503,
+          "contract": 1038,
+          "cargo": 409
+        },
+        "mainRouteWinCounts": {},
+        "wonTerminalCounts": {
+          "unknown": 1019,
+          "resonance": 286,
+          "contract": 739,
+          "magic": 543,
+          "pressure": 591,
+          "cargo": 280
+        },
+        "mixedWins": 54,
+        "mixedWinShare": 1,
+        "gamesWithAnyRoute": 100
+      },
+      "poolSize": {
+        "n": 100,
+        "mean": 51.03,
+        "min": 13,
+        "p10": 21,
+        "p50": 59,
+        "p90": 68,
+        "p99": 76.04000000000002,
+        "max": 80
+      },
+      "itemCount": {
+        "n": 100,
+        "mean": 6.7,
+        "min": 0,
+        "p10": 2,
+        "p50": 9,
+        "p90": 9,
+        "p99": 9,
+        "max": 9
+      },
+      "byType": {
+        "mist_pouch": 405,
+        "lean_receipt": 15745,
+        "copper_burr": 12298,
+        "phase_chip": 7343,
+        "wick_bed": 10952,
+        "saline_ampoule": 8196,
+        "dock_chime": 14088,
+        "ash_felt": 276,
+        "cargo_rope": 5731,
+        "dew_lantern": 1396,
+        "fog_reed": 4040,
+        "amber_frond": 22221,
+        "pitch_fork": 10527,
+        "quota_margin": 7610,
+        "alignment_cloth": 3613,
+        "sieve_drum": 2672,
+        "tide_prism": 15668,
+        "crystal_index": 15592,
+        "cleared_stub": 10796,
+        "parcel_cage": 7678,
+        "manifest_desk": 24691,
+        "spectrum_pin": 13906,
+        "sorting_runner": 1286,
+        "compliance_desk": 339,
+        "clinker_router": 438,
+        "pause_dial": 13340,
+        "feed_valve": 339,
+        "sorting_tong": 877,
+        "prism_hum": 12807,
+        "warm_pod": 4652,
+        "blank_facet": 7689,
+        "route_stub": 29838,
+        "pearl_separator": 1186,
+        "settlement_beacon": 6730,
+        "cracked_regulator": 2846,
+        "silence_keeper": 10389,
+        "demand_coupler": 1958,
+        "nursery_gauge": 1489,
+        "offset_reader": 1098,
+        "condense_coil": 937,
+        "harbor_conductor": 594,
+        "heat_clerk": 93,
+        "switch_lamp": 172,
+        "furnace_auditor": 1304,
+        "safety_shim": 10,
+        "chord_frame": 3015,
+        "deep_still": 2288,
+        "return_station": 776,
+        "spent_gasket": -421,
+        "split_register": 69,
+        "release_spire": 624,
+        "brine_strip": 11,
+        "transit_seal": 657,
+        "reserve_facet": 614,
+        "echo_plate": 30,
+        "cloudy_negative": 2,
+        "fog_stitcher": 108,
+        "advance_stamp": 95,
+        "root_ledger": 284,
+        "cancellation_clerk": 144,
+        "pressure_pouch": 13,
+        "surge_vessel": 0
+      },
+      "contribByType": {
+        "mist_pouch": 405,
+        "lean_receipt": 14011,
+        "copper_burr": 10390,
+        "phase_chip": 4708,
+        "wick_bed": 10950,
+        "saline_ampoule": 8184,
+        "dock_chime": 10636,
+        "ash_felt": 276,
+        "cargo_rope": 14061,
+        "dew_lantern": 1284,
+        "fog_reed": 2476,
+        "amber_frond": 19000,
+        "pitch_fork": 16978,
+        "quota_margin": 5660,
+        "alignment_cloth": 4700,
+        "sieve_drum": 2672,
+        "tide_prism": 13533,
+        "crystal_index": 15592,
+        "cleared_stub": 7161,
+        "parcel_cage": 7664,
+        "manifest_desk": 19232,
+        "spectrum_pin": 13860,
+        "sorting_runner": 1284,
+        "event_empty_manifest": 148,
+        "compliance_desk": 247,
+        "clinker_router": 438,
+        "pause_dial": 13340,
+        "item_margin_lantern": 170,
+        "feed_valve": 339,
+        "sorting_tong": 877,
+        "prism_hum": 9854,
+        "warm_pod": 4652,
+        "blank_facet": 7658,
+        "route_stub": 23654,
+        "pearl_separator": 1186,
+        "settlement_beacon": 27817,
+        "cracked_regulator": 2846,
+        "silence_keeper": 5284,
+        "demand_coupler": 1473,
+        "nursery_gauge": 1495,
+        "offset_reader": 1096,
+        "condense_coil": 937,
+        "harbor_conductor": 492,
+        "item_lane_clapper": 2588,
+        "heat_clerk": 50,
+        "event_silent_bell": 59,
+        "item_frost_glass": 291,
+        "switch_lamp": 170,
+        "furnace_auditor": 1304,
+        "safety_shim": 10,
+        "chord_frame": 2760,
+        "deep_still": 2288,
+        "return_station": 776,
+        "spent_gasket": -421,
+        "event_misprint_window": 132,
+        "split_register": 108,
+        "item_pitch_marker": 330,
+        "release_spire": 632,
+        "item_spectrum_book": 171,
+        "brine_strip": 8,
+        "transit_seal": 282,
+        "item_rest_notch": 2563,
+        "reserve_facet": 606,
+        "echo_plate": 11,
+        "item_root_wrap": 64,
+        "cloudy_negative": 2,
+        "fog_stitcher": 108,
+        "advance_stamp": 88,
+        "root_ledger": 222,
+        "cancellation_clerk": 144,
+        "pressure_pouch": 13,
+        "item_brine_lining": 64,
+        "item_compliance_carbon": 21
+      },
+      "lookahead": {
+        "decisions": 0,
+        "candidates": 0,
+        "runs": 0,
+        "failures": 0
+      }
+    },
+    {
+      "policy": "greedy",
+      "games": 100,
+      "won": 76,
+      "lost": 24,
+      "error": 0,
+      "winRate": 0.76,
+      "winRateCI": {
+        "k": 76,
+        "n": 100,
+        "p": 0.76,
+        "lo": 0.6676766365018553,
+        "hi": 0.8330867444305122
+      },
+      "winRateUsable": true,
+      "winRateExcludingError": 0.76,
+      "errors": [],
+      "accountingError": null,
+      "survival": {
+        "1": {
+          "entered": 100,
+          "passed": 100,
+          "failedHere": 0,
+          "cumulativeSurvival": 1,
+          "conditionalFailure": 0
+        },
+        "2": {
+          "entered": 100,
+          "passed": 95,
+          "failedHere": 5,
+          "cumulativeSurvival": 0.95,
+          "conditionalFailure": 0.05
+        },
+        "3": {
+          "entered": 95,
+          "passed": 90,
+          "failedHere": 5,
+          "cumulativeSurvival": 0.9,
+          "conditionalFailure": 0.05263157894736842
+        },
+        "4": {
+          "entered": 90,
+          "passed": 88,
+          "failedHere": 2,
+          "cumulativeSurvival": 0.88,
+          "conditionalFailure": 0.022222222222222223
+        },
+        "5": {
+          "entered": 88,
+          "passed": 84,
+          "failedHere": 4,
+          "cumulativeSurvival": 0.84,
+          "conditionalFailure": 0.045454545454545456
+        },
+        "6": {
+          "entered": 84,
+          "passed": 83,
+          "failedHere": 1,
+          "cumulativeSurvival": 0.83,
+          "conditionalFailure": 0.011904761904761904
+        },
+        "7": {
+          "entered": 83,
+          "passed": 81,
+          "failedHere": 2,
+          "cumulativeSurvival": 0.81,
+          "conditionalFailure": 0.024096385542168676
+        },
+        "8": {
+          "entered": 81,
+          "passed": 79,
+          "failedHere": 2,
+          "cumulativeSurvival": 0.79,
+          "conditionalFailure": 0.024691358024691357
+        },
+        "9": {
+          "entered": 79,
+          "passed": 77,
+          "failedHere": 2,
+          "cumulativeSurvival": 0.77,
+          "conditionalFailure": 0.02531645569620253
+        },
+        "10": {
+          "entered": 77,
+          "passed": 76,
+          "failedHere": 1,
+          "cumulativeSurvival": 0.76,
+          "conditionalFailure": 0.012987012987012988
+        }
+      },
+      "endStage": {
+        "2": 5,
+        "3": 5,
+        "4": 2,
+        "5": 4,
+        "6": 1,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 77
+      },
+      "endStageWon": {
+        "10": 76
+      },
+      "actions": {
+        "decisions": 13944,
+        "choose": 5953,
+        "skip": 142,
+        "remove": 801,
+        "reroll": 0,
+        "item": 777,
+        "skipItem": 0,
+        "eventAccept": 175,
+        "eventReject": 1,
+        "lookaheadDecisions": 6095,
+        "lookaheadCandidates": 18285,
+        "lookaheadRuns": 146280,
+        "lookaheadFailures": 0
+      },
+      "coop": {
+        "gamesWithCoop": 100,
+        "rate": 1,
+        "ci": {
+          "k": 100,
+          "n": 100,
+          "p": 1,
+          "lo": 0.9630065017930143,
+          "hi": 1
+        },
+        "qualifyingSpinsBeforeStage4": 1187,
+        "coopSpinsTotal": 4486
+      },
+      "income": {
+        "perSpin": {
+          "n": 6095,
+          "mean": 67.34963084495489,
+          "min": 20,
+          "p10": 39,
+          "p50": 66,
+          "p90": 92,
+          "p99": 145.0600000000004,
+          "max": 221
+        },
+        "perStage": {
+          "1": {
+            "n": 100,
+            "mean": 181.98,
+            "min": 156,
+            "p10": 168.9,
+            "p50": 181,
+            "p90": 196.10000000000002,
+            "p99": 205.10000000000005,
+            "max": 215
+          },
+          "2": {
+            "n": 100,
+            "mean": 308.62,
+            "min": 207,
+            "p10": 267.8,
+            "p50": 313.5,
+            "p90": 350.1,
+            "p99": 381.1700000000001,
+            "max": 398
+          },
+          "3": {
+            "n": 95,
+            "mean": 444.4947368421053,
+            "min": 326,
+            "p10": 386.4,
+            "p50": 447,
+            "p90": 496.8,
+            "p99": 584.4200000000001,
+            "max": 591
+          },
+          "4": {
+            "n": 90,
+            "mean": 471.18888888888887,
+            "min": 348,
+            "p10": 399.6,
+            "p50": 460.5,
+            "p90": 551.6,
+            "p99": 622.31,
+            "max": 641
+          },
+          "5": {
+            "n": 88,
+            "mean": 491.25,
+            "min": 376,
+            "p10": 405.7,
+            "p50": 475.5,
+            "p90": 596.4,
+            "p99": 705.2399999999998,
+            "max": 747
+          },
+          "6": {
+            "n": 84,
+            "mean": 507.6190476190476,
+            "min": 387,
+            "p10": 430.6,
+            "p50": 493,
+            "p90": 587.6,
+            "p99": 805.7200000000003,
+            "max": 902
+          },
+          "7": {
+            "n": 83,
+            "mean": 522.7590361445783,
+            "min": 375,
+            "p10": 443.8,
+            "p50": 508,
+            "p90": 614.5999999999999,
+            "p99": 791.3199999999998,
+            "max": 811
+          },
+          "8": {
+            "n": 81,
+            "mean": 541.1728395061729,
+            "min": 395,
+            "p10": 451,
+            "p50": 530,
+            "p90": 653,
+            "p99": 780.8000000000003,
+            "max": 860
+          },
+          "9": {
+            "n": 79,
+            "mean": 652.7848101265823,
+            "min": 445,
+            "p10": 545.8,
+            "p50": 622,
+            "p90": 846,
+            "p99": 981.3,
+            "max": 993
+          },
+          "10": {
+            "n": 77,
+            "mean": 677.1168831168832,
+            "min": 489,
+            "p10": 570.6,
+            "p50": 654,
+            "p90": 834,
+            "p99": 1070.8399999999997,
+            "max": 1121
+          }
+        },
+        "lateStagePerSpin": {
+          "n": 2396,
+          "mean": 79.68781302170284,
+          "min": 31,
+          "p10": 58,
+          "p50": 75,
+          "p90": 108,
+          "p99": 160.05000000000018,
+          "max": 221
+        },
+        "lateSpinsCounted": 2396
+      },
+      "margin": {
+        "all": {
+          "n": 877,
+          "mean": 278.38084378563286,
+          "min": -62,
+          "p10": 28.60000000000001,
+          "p50": 153,
+          "p90": 659.5999999999999,
+          "p99": 1590.5600000000009,
+          "max": 2037
+        },
+        "late": {
+          "n": 320,
+          "mean": 502.80625,
+          "min": -53,
+          "p10": 80.7,
+          "p50": 415,
+          "p90": 1053.4,
+          "p99": 1916.8600000000001,
+          "max": 2037
+        },
+        "lateGamesReaching": 83,
+        "nonPositiveShare": 0.027366020524515394
+      },
+      "routes": {
+        "terminalIdCounts": {
+          "pressure": 966,
+          "unknown": 1735,
+          "contract": 1132,
+          "cargo": 413,
+          "magic": 792,
+          "resonance": 502
+        },
+        "mainRouteWinCounts": {
+          "contract": 1
+        },
+        "wonTerminalCounts": {
+          "pressure": 829,
+          "unknown": 1493,
+          "contract": 990,
+          "cargo": 355,
+          "magic": 703,
+          "resonance": 408
+        },
+        "mixedWins": 76,
+        "mixedWinShare": 1,
+        "gamesWithAnyRoute": 100
+      },
+      "poolSize": {
+        "n": 100,
+        "mean": 56.2,
+        "min": 14,
+        "p10": 29.6,
+        "p50": 61,
+        "p90": 72,
+        "p99": 80.10000000000005,
+        "max": 90
+      },
+      "itemCount": {
+        "n": 100,
+        "mean": 7.77,
+        "min": 1,
+        "p10": 2.9000000000000004,
+        "p50": 9,
+        "p90": 9,
+        "p99": 9,
+        "max": 9
+      },
+      "byType": {
+        "mist_pouch": 406,
+        "lean_receipt": 14999,
+        "copper_burr": 14495,
+        "phase_chip": 8842,
+        "wick_bed": 12456,
+        "saline_ampoule": 7416,
+        "dock_chime": 19628,
+        "ash_felt": 281,
+        "cargo_rope": 5733,
+        "dew_lantern": 1501,
+        "cleared_stub": 16177,
+        "amber_frond": 27462,
+        "pitch_fork": 11970,
+        "quota_margin": 7750,
+        "alignment_cloth": 3777,
+        "sieve_drum": 3202,
+        "tide_prism": 23218,
+        "crystal_index": 16145,
+        "parcel_cage": 8809,
+        "manifest_desk": 31111,
+        "spectrum_pin": 17245,
+        "sorting_runner": 1633,
+        "fog_reed": 4432,
+        "compliance_desk": 444,
+        "clinker_router": 610,
+        "pause_dial": 14730,
+        "prism_hum": 12853,
+        "switch_lamp": 123,
+        "blank_facet": 9765,
+        "settlement_beacon": 7438,
+        "return_station": 894,
+        "demand_coupler": 2109,
+        "silence_keeper": 12976,
+        "furnace_auditor": 1462,
+        "sorting_tong": 841,
+        "warm_pod": 4799,
+        "route_stub": 39319,
+        "cracked_regulator": 8890,
+        "deep_still": 2114,
+        "spent_gasket": -657,
+        "pearl_separator": 1534,
+        "nursery_gauge": 1587,
+        "chord_frame": 5128,
+        "harbor_conductor": 739,
+        "condense_coil": 1370,
+        "release_spire": 1122,
+        "offset_reader": 1657,
+        "reserve_facet": 848,
+        "split_register": 249,
+        "feed_valve": 260,
+        "heat_clerk": 151,
+        "transit_seal": 1707,
+        "beat_spool": 684,
+        "brine_strip": 20,
+        "pressure_pouch": 33,
+        "advance_stamp": 307,
+        "fog_stitcher": 104,
+        "root_ledger": 108,
+        "cancellation_clerk": 671,
+        "echo_plate": 39,
+        "safety_shim": 8,
+        "surge_vessel": 0
+      },
+      "contribByType": {
+        "mist_pouch": 406,
+        "lean_receipt": 13256,
+        "copper_burr": 12420,
+        "phase_chip": 5242,
+        "wick_bed": 12454,
+        "saline_ampoule": 7396,
+        "dock_chime": 14531,
+        "ash_felt": 281,
+        "cargo_rope": 14723,
+        "dew_lantern": 1374,
+        "cleared_stub": 11339,
+        "amber_frond": 24168,
+        "pitch_fork": 19537,
+        "quota_margin": 6032,
+        "alignment_cloth": 5269,
+        "sieve_drum": 3202,
+        "tide_prism": 20406,
+        "crystal_index": 16145,
+        "parcel_cage": 8791,
+        "manifest_desk": 22846,
+        "spectrum_pin": 17163,
+        "sorting_runner": 1627,
+        "fog_reed": 2435,
+        "event_empty_manifest": 230,
+        "compliance_desk": 307,
+        "clinker_router": 610,
+        "pause_dial": 14730,
+        "item_rest_notch": 3550,
+        "prism_hum": 9912,
+        "switch_lamp": 123,
+        "blank_facet": 9725,
+        "item_frost_glass": 510,
+        "settlement_beacon": 34343,
+        "item_margin_lantern": 236,
+        "return_station": 894,
+        "demand_coupler": 1650,
+        "silence_keeper": 6993,
+        "furnace_auditor": 1462,
+        "sorting_tong": 841,
+        "event_misprint_window": 184,
+        "warm_pod": 4799,
+        "route_stub": 31358,
+        "cracked_regulator": 8890,
+        "deep_still": 2114,
+        "spent_gasket": -657,
+        "pearl_separator": 1534,
+        "nursery_gauge": 1593,
+        "item_spectrum_book": 441,
+        "chord_frame": 5232,
+        "harbor_conductor": 704,
+        "condense_coil": 1370,
+        "item_lane_clapper": 3542,
+        "event_silent_bell": -14,
+        "release_spire": 1144,
+        "item_brine_lining": 84,
+        "item_root_wrap": 180,
+        "offset_reader": 1653,
+        "reserve_facet": 828,
+        "item_pitch_marker": 725,
+        "split_register": 307,
+        "feed_valve": 258,
+        "heat_clerk": 86,
+        "transit_seal": 694,
+        "beat_spool": 472,
+        "brine_strip": 11,
+        "pressure_pouch": 33,
+        "advance_stamp": 208,
+        "fog_stitcher": 104,
+        "root_ledger": 64,
+        "cancellation_clerk": 556,
+        "echo_plate": 24,
+        "item_compliance_carbon": 36,
+        "safety_shim": 8
+      },
+      "lookahead": {
+        "decisions": 6095,
+        "candidates": 18285,
+        "runs": 146280,
+        "failures": 0
+      }
+    }
+  ],
+  "paired": [
+    {
+      "policyA": "random",
+      "policyB": "value",
+      "seedsOnList": 100,
+      "pairedUsableGames": 100,
+      "excludedForError": 0,
+      "aWinsOnly": 6,
+      "bWinsOnly": 49,
+      "bothWin": 16,
+      "bothLose": 29,
+      "disagreements": 55,
+      "meanDiff": -0.43,
+      "bootstrap": {
+        "n": 100,
+        "mean": -0.43,
+        "lo": -0.55,
+        "hi": -0.31,
+        "iterations": 10000
+      }
+    },
+    {
+      "policyA": "random",
+      "policyB": "synergy",
+      "seedsOnList": 100,
+      "pairedUsableGames": 100,
+      "excludedForError": 0,
+      "aWinsOnly": 6,
+      "bWinsOnly": 38,
+      "bothWin": 16,
+      "bothLose": 40,
+      "disagreements": 44,
+      "meanDiff": -0.32,
+      "bootstrap": {
+        "n": 100,
+        "mean": -0.32,
+        "lo": -0.43,
+        "hi": -0.21,
+        "iterations": 10000
+      }
+    },
+    {
+      "policyA": "random",
+      "policyB": "greedy",
+      "seedsOnList": 100,
+      "pairedUsableGames": 100,
+      "excludedForError": 0,
+      "aWinsOnly": 2,
+      "bWinsOnly": 56,
+      "bothWin": 20,
+      "bothLose": 22,
+      "disagreements": 58,
+      "meanDiff": -0.54,
+      "bootstrap": {
+        "n": 100,
+        "mean": -0.54,
+        "lo": -0.64,
+        "hi": -0.43,
+        "iterations": 10000
+      }
+    },
+    {
+      "policyA": "value",
+      "policyB": "synergy",
+      "seedsOnList": 100,
+      "pairedUsableGames": 100,
+      "excludedForError": 0,
+      "aWinsOnly": 26,
+      "bWinsOnly": 15,
+      "bothWin": 39,
+      "bothLose": 20,
+      "disagreements": 41,
+      "meanDiff": 0.11,
+      "bootstrap": {
+        "n": 100,
+        "mean": 0.11,
+        "lo": -0.02,
+        "hi": 0.23,
+        "iterations": 10000
+      }
+    },
+    {
+      "policyA": "value",
+      "policyB": "greedy",
+      "seedsOnList": 100,
+      "pairedUsableGames": 100,
+      "excludedForError": 0,
+      "aWinsOnly": 13,
+      "bWinsOnly": 24,
+      "bothWin": 52,
+      "bothLose": 11,
+      "disagreements": 37,
+      "meanDiff": -0.11,
+      "bootstrap": {
+        "n": 100,
+        "mean": -0.11,
+        "lo": -0.23,
+        "hi": 0.01,
+        "iterations": 10000
+      }
+    },
+    {
+      "policyA": "synergy",
+      "policyB": "greedy",
+      "seedsOnList": 100,
+      "pairedUsableGames": 100,
+      "excludedForError": 0,
+      "aWinsOnly": 1,
+      "bWinsOnly": 23,
+      "bothWin": 53,
+      "bothLose": 23,
+      "disagreements": 24,
+      "meanDiff": -0.22,
+      "bootstrap": {
+        "n": 100,
+        "mean": -0.22,
+        "lo": -0.31,
+        "hi": -0.14,
+        "iterations": 10000
+      }
+    }
+  ],
+  "stageList": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "gamesPerPolicy": 100,
+  "totalGames": 400,
+  "totalError": 0,
+  "accountingErrors": [],
+  "elapsedMs": 1393350,
+  "batchOk": true,
+  "effectiveParams": {
+    "schema": 2,
+    "rules": "GDD1",
+    "content": "GDD1",
+    "rngAlgorithm": "fnv1a-utf16le-xorshift32-v1",
+    "profiles": {
+      "full-v1": {
+        "symbols": 64,
+        "items": 32,
+        "events": 8,
+        "payments": [
+          150,
+          265,
+          400,
+          425,
+          445,
+          450,
+          455,
+          475,
+          550,
+          585
+        ]
+      },
+      "slice-abd-v1": {
+        "symbols": 24,
+        "items": 10,
+        "events": 3,
+        "payments": [
+          98,
+          173,
+          260,
+          277,
+          290,
+          293,
+          296,
+          309,
+          358,
+          381
+        ]
+      }
+    },
+    "normalSpins": [
+      6,
+      6,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      8,
+      8
+    ],
+    "symbolWeights": [
+      [
+        72,
+        25,
+        3,
+        0
+      ],
+      [
+        58,
+        34,
+        8,
+        0
+      ],
+      [
+        43,
+        42,
+        14,
+        1
+      ],
+      [
+        32,
+        45,
+        21,
+        2
+      ],
+      [
+        25,
+        45,
+        27,
+        3
+      ]
+    ],
+    "itemWeights": [
+      [
+        55,
+        40,
+        5,
+        0
+      ],
+      [
+        30,
+        50,
+        20,
+        0
+      ],
+      [
+        20,
+        50,
+        30,
+        0
+      ]
+    ],
+    "focus": {
+      "chord_frame": {
+        "base": 2,
+        "rarity": "uncommon",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "chord_frame:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "multiply",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "resonance"
+            },
+            "predicate": {
+              "count": {
+                "scope": "adjacent",
+                "tag": "resonance"
+              },
+              "distinct": true,
+              "min": 2
+            },
+            "ratio": [
+              2,
+              1
+            ]
+          }
+        ]
+      },
+      "harbor_conductor": {
+        "base": 2,
+        "rarity": "epic",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "harbor_conductor:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "multiply",
+            "selector": {
+              "scope": "row",
+              "tag": "resonance"
+            },
+            "predicate": {
+              "count": {
+                "scope": "row",
+                "tag": "resonance"
+              },
+              "distinct": true,
+              "min": 3
+            },
+            "ratio": [
+              2,
+              1
+            ],
+            "each": true
+          }
+        ]
+      },
+      "silence_keeper": {
+        "base": 1,
+        "rarity": "rare",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "silence_keeper:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "row",
+                "tag": "resonance"
+              },
+              "min": 1,
+              "max": 1
+            },
+            "amount": 10
+          }
+        ]
+      },
+      "sorting_runner": {
+        "base": 1,
+        "rarity": "uncommon",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "sorting_runner:0",
+            "limit": 1,
+            "phase": "structure",
+            "op": "consume",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "product"
+            },
+            "reward": 6,
+            "rewardTargetBase": true
+          }
+        ]
+      },
+      "return_station": {
+        "base": 2,
+        "rarity": "rare",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "return_station:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "reward",
+            "event": "consume",
+            "match": {
+              "beforeTag": "product",
+              "actorTag": "cargo",
+              "actorAdjacent": true
+            },
+            "defer": true,
+            "commitPredicate": {
+              "poolBetween": [
+                0,
+                20
+              ]
+            },
+            "amount": 8
+          }
+        ]
+      },
+      "pressure_pouch": {
+        "base": 1,
+        "rarity": "common",
+        "mechanics": {
+          "pressure": {
+            "cap": 4,
+            "reward": 10
+          }
+        },
+        "effects": [
+          {
+            "key": "pressure_pouch:0",
+            "limit": 1,
+            "phase": "pressure-injection",
+            "op": "pressure",
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 1
+          }
+        ]
+      },
+      "feed_valve": {
+        "base": 1,
+        "rarity": "common",
+        "mechanics": {
+          "pressure": {
+            "cap": 6,
+            "reward": 14
+          }
+        },
+        "effects": [
+          {
+            "key": "feed_valve:0",
+            "limit": 1,
+            "phase": "structure",
+            "op": "consume",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "fuel"
+            },
+            "reward": 3,
+            "pressure": 2
+          }
+        ]
+      }
+    },
+    "symbols": {
+      "mist_pouch": {
+        "name": "凝雾软囊",
+        "rarity": "common",
+        "tags": [
+          "plant",
+          "mist"
+        ],
+        "base": 1,
+        "mechanics": {
+          "age": {
+            "threshold": 3,
+            "to": "dew_lantern"
+          }
+        },
+        "effects": []
+      },
+      "wick_bed": {
+        "name": "灯芯苗床",
+        "rarity": "common",
+        "tags": [
+          "plant",
+          "fuel"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": []
+      },
+      "dew_lantern": {
+        "name": "露灯苞",
+        "rarity": "uncommon",
+        "tags": [
+          "plant",
+          "mist",
+          "product"
+        ],
+        "base": 3,
+        "mechanics": {
+          "age": {
+            "threshold": 2,
+            "to": "amber_frond"
+          }
+        },
+        "effects": []
+      },
+      "amber_frond": {
+        "name": "琥露扇叶",
+        "rarity": "uncommon",
+        "tags": [
+          "plant",
+          "fuel",
+          "product",
+          "cargo"
+        ],
+        "base": 4,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "amber_frond:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "reward",
+            "event": "consume",
+            "match": {
+              "targetSelf": true
+            },
+            "amount": 4,
+            "deathAllowed": true
+          }
+        ]
+      },
+      "fog_stitcher": {
+        "name": "补雾工",
+        "rarity": "uncommon",
+        "tags": [
+          "machine",
+          "support"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "fog_stitcher:0",
+            "limit": 1,
+            "phase": "age-extra",
+            "op": "age",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "plant",
+              "age": true
+            },
+            "amount": 1
+          }
+        ]
+      },
+      "root_ledger": {
+        "name": "根须账簿",
+        "rarity": "rare",
+        "tags": [
+          "plant",
+          "contract"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "root_ledger:0",
+            "limit": 2,
+            "phase": "listen",
+            "op": "grow",
+            "event": "transform",
+            "match": {
+              "beforeTag": "plant"
+            },
+            "amount": 1
+          }
+        ]
+      },
+      "warm_pod": {
+        "name": "温灯荚",
+        "rarity": "common",
+        "tags": [
+          "plant",
+          "pressure"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "warm_pod:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "adjacent",
+                "tag": "fuel"
+              },
+              "min": 1
+            },
+            "amount": 3
+          }
+        ]
+      },
+      "nursery_gauge": {
+        "name": "苗圃指针",
+        "rarity": "rare",
+        "tags": [
+          "machine",
+          "plant"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "nursery_gauge:0",
+            "limit": 1,
+            "phase": "summary",
+            "op": "multiply",
+            "selector": {
+              "scope": "all",
+              "tag": "plant"
+            },
+            "predicate": {
+              "events": "transform",
+              "min": 2,
+              "beforeTag": "plant"
+            },
+            "ratio": [
+              3,
+              2
+            ],
+            "each": true
+          }
+        ]
+      },
+      "ash_felt": {
+        "name": "灰温毡",
+        "rarity": "common",
+        "tags": [
+          "scrap",
+          "fuel"
+        ],
+        "base": 1,
+        "mechanics": {
+          "age": {
+            "threshold": 3,
+            "destroy": true
+          }
+        },
+        "effects": [
+          {
+            "key": "ash_felt:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "spawn",
+            "event": "consume",
+            "match": {
+              "targetSelf": true
+            },
+            "type": "copper_burr",
+            "deathAllowed": true
+          },
+          {
+            "key": "ash_felt:1",
+            "limit": 1,
+            "phase": "end",
+            "op": "destroy",
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "counter": "age",
+              "min": 3
+            },
+            "reward": 3,
+            "cause": "self_mature"
+          }
+        ]
+      },
+      "sorting_tong": {
+        "name": "分温夹",
+        "rarity": "common",
+        "tags": [
+          "machine"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "sorting_tong:0",
+            "limit": 1,
+            "phase": "structure",
+            "op": "consume",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "scrap"
+            },
+            "reward": 6
+          }
+        ]
+      },
+      "copper_burr": {
+        "name": "铜毛刺",
+        "rarity": "common",
+        "tags": [
+          "scrap",
+          "product",
+          "cargo"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "copper_burr:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "adjacent",
+                "tag": "machine"
+              },
+              "min": 1
+            },
+            "amount": 2
+          }
+        ]
+      },
+      "spent_gasket": {
+        "name": "过役垫圈",
+        "rarity": "common",
+        "tags": [
+          "scrap",
+          "junk"
+        ],
+        "base": -1,
+        "mechanics": {
+          "candidate": false
+        },
+        "effects": []
+      },
+      "sieve_drum": {
+        "name": "除滞滚筒",
+        "rarity": "uncommon",
+        "tags": [
+          "machine",
+          "support"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "sieve_drum:0",
+            "limit": 1,
+            "phase": "structure",
+            "op": "transform",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "junk"
+            },
+            "type": "copper_burr"
+          }
+        ]
+      },
+      "heat_clerk": {
+        "name": "余温录员",
+        "rarity": "uncommon",
+        "tags": [
+          "machine",
+          "contract"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "heat_clerk:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "grow",
+            "event": "consume",
+            "match": {
+              "beforeTag": "scrap"
+            },
+            "amount": 1
+          }
+        ]
+      },
+      "clinker_router": {
+        "name": "灰渣分路器",
+        "rarity": "rare",
+        "tags": [
+          "machine",
+          "pressure"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "clinker_router:0",
+            "limit": 1,
+            "phase": "structure",
+            "op": "destroy",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "junk"
+            }
+          },
+          {
+            "key": "clinker_router:1",
+            "limit": 2,
+            "phase": "listen",
+            "op": "pressure",
+            "event": "destroy",
+            "match": {
+              "beforeTag": "junk",
+              "notCause": "consume"
+            },
+            "selector": {
+              "scope": "all",
+              "tag": "pressure",
+              "pressureMechanism": true
+            },
+            "amount": 2
+          }
+        ]
+      },
+      "furnace_auditor": {
+        "name": "炉账稽核灯",
+        "rarity": "rare",
+        "tags": [
+          "machine"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "furnace_auditor:0",
+            "limit": 1,
+            "phase": "summary",
+            "op": "multiply",
+            "selector": {
+              "scope": "all",
+              "tag": "machine"
+            },
+            "predicate": {
+              "events": "consume",
+              "min": 2,
+              "beforeTag": "scrap",
+              "distinct": true
+            },
+            "ratio": [
+              3,
+              2
+            ],
+            "each": true
+          }
+        ]
+      },
+      "brine_strip": {
+        "name": "盐雾滤带",
+        "rarity": "common",
+        "tags": [
+          "mist",
+          "feedstock"
+        ],
+        "base": 1,
+        "mechanics": {
+          "age": {
+            "threshold": 2,
+            "to": "saline_ampoule"
+          }
+        },
+        "effects": []
+      },
+      "saline_ampoule": {
+        "name": "微盐安瓿",
+        "rarity": "common",
+        "tags": [
+          "feedstock",
+          "cargo"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": []
+      },
+      "condense_coil": {
+        "name": "凝潮盘管",
+        "rarity": "common",
+        "tags": [
+          "machine"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "condense_coil:0",
+            "limit": 1,
+            "phase": "structure",
+            "op": "transform",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "feedstock"
+            },
+            "type": "tide_prism"
+          }
+        ]
+      },
+      "tide_prism": {
+        "name": "潮棱块",
+        "rarity": "uncommon",
+        "tags": [
+          "crystal",
+          "product",
+          "cargo"
+        ],
+        "base": 4,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "tide_prism:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "add",
+            "event": "transform",
+            "match": {
+              "targetSelf": true,
+              "afterSelfType": true
+            },
+            "amount": 3
+          }
+        ]
+      },
+      "deep_still": {
+        "name": "深盐分馏器",
+        "rarity": "uncommon",
+        "tags": [
+          "machine"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "deep_still:0",
+            "limit": 1,
+            "phase": "structure",
+            "op": "consume",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "mist"
+            },
+            "reward": 4,
+            "spawn": "saline_ampoule"
+          }
+        ]
+      },
+      "crystal_index": {
+        "name": "晶层索引",
+        "rarity": "uncommon",
+        "tags": [
+          "crystal",
+          "support"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "crystal_index:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "all",
+                "tag": "crystal"
+              },
+              "distinct": true,
+              "min": 2
+            },
+            "amount": 6
+          }
+        ]
+      },
+      "pearl_separator": {
+        "name": "浮珠分离器",
+        "rarity": "rare",
+        "tags": [
+          "machine"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "pearl_separator:0",
+            "limit": 1,
+            "phase": "structure",
+            "op": "transform",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "crystal",
+              "notTag": "product"
+            },
+            "type": "tide_prism"
+          }
+        ]
+      },
+      "reserve_facet": {
+        "name": "留温晶面",
+        "rarity": "rare",
+        "tags": [
+          "crystal",
+          "pressure"
+        ],
+        "base": 2,
+        "mechanics": {
+          "pressure": {
+            "cap": 6,
+            "reward": 18
+          }
+        },
+        "effects": [
+          {
+            "key": "reserve_facet:0",
+            "limit": 1,
+            "phase": "structure",
+            "op": "consume",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "fuel"
+            },
+            "reward": 2,
+            "pressure": 2
+          }
+        ]
+      },
+      "dock_chime": {
+        "name": "栈桥鸣片",
+        "rarity": "common",
+        "tags": [
+          "resonance",
+          "cargo"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "dock_chime:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "countAmount": {
+              "selector": {
+                "scope": "row",
+                "tag": "resonance",
+                "excludeSelf": true
+              },
+              "distinct": true,
+              "cap": 3
+            }
+          }
+        ]
+      },
+      "pitch_fork": {
+        "name": "港音分叉",
+        "rarity": "common",
+        "tags": [
+          "resonance",
+          "support"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "pitch_fork:0",
+            "limit": 1,
+            "phase": "adjacency-add",
+            "op": "add",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "resonance"
+            },
+            "amount": 3,
+            "lockFirst": true
+          }
+        ]
+      },
+      "fog_reed": {
+        "name": "雾笛簧",
+        "rarity": "common",
+        "tags": [
+          "resonance",
+          "mist"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "fog_reed:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "adjacent",
+                "tag": "mist"
+              },
+              "min": 1
+            },
+            "amount": 3
+          }
+        ]
+      },
+      "beat_spool": {
+        "name": "拍点线轴",
+        "rarity": "uncommon",
+        "tags": [
+          "resonance",
+          "machine"
+        ],
+        "base": 1,
+        "mechanics": {
+          "cycle_count": 3
+        },
+        "effects": [
+          {
+            "key": "beat_spool:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "cycle",
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 9
+          }
+        ]
+      },
+      "chord_frame": {
+        "name": "和音框",
+        "rarity": "uncommon",
+        "tags": [
+          "resonance",
+          "machine"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "chord_frame:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "multiply",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "resonance"
+            },
+            "predicate": {
+              "count": {
+                "scope": "adjacent",
+                "tag": "resonance"
+              },
+              "distinct": true,
+              "min": 2
+            },
+            "ratio": [
+              2,
+              1
+            ]
+          }
+        ]
+      },
+      "prism_hum": {
+        "name": "晶腔哼鸣器",
+        "rarity": "uncommon",
+        "tags": [
+          "resonance",
+          "crystal"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "prism_hum:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "adjacent",
+                "tag": "crystal"
+              },
+              "min": 1
+            },
+            "amount": 4
+          }
+        ]
+      },
+      "silence_keeper": {
+        "name": "静拍保管员",
+        "rarity": "rare",
+        "tags": [
+          "resonance",
+          "contract"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "silence_keeper:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "row",
+                "tag": "resonance"
+              },
+              "min": 1,
+              "max": 1
+            },
+            "amount": 10
+          }
+        ]
+      },
+      "harbor_conductor": {
+        "name": "港湾拍长",
+        "rarity": "epic",
+        "tags": [
+          "resonance"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "harbor_conductor:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "multiply",
+            "selector": {
+              "scope": "row",
+              "tag": "resonance"
+            },
+            "predicate": {
+              "count": {
+                "scope": "row",
+                "tag": "resonance"
+              },
+              "distinct": true,
+              "min": 3
+            },
+            "ratio": [
+              2,
+              1
+            ],
+            "each": true
+          }
+        ]
+      },
+      "cargo_rope": {
+        "name": "夜班扎绳",
+        "rarity": "common",
+        "tags": [
+          "cargo",
+          "support"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "cargo_rope:0",
+            "limit": 1,
+            "phase": "adjacency-add",
+            "op": "add",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "product"
+            },
+            "amount": 3,
+            "lockFirst": true
+          }
+        ]
+      },
+      "route_stub": {
+        "name": "转栈短票",
+        "rarity": "common",
+        "tags": [
+          "cargo",
+          "contract"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "route_stub:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "all",
+                "tag": "cargo"
+              },
+              "distinct": true,
+              "min": 3
+            },
+            "amount": 4
+          }
+        ]
+      },
+      "parcel_cage": {
+        "name": "铜格货笼",
+        "rarity": "common",
+        "tags": [
+          "cargo",
+          "machine"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "parcel_cage:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "initialEmptyMin": 4
+            },
+            "amount": 3
+          }
+        ]
+      },
+      "sorting_runner": {
+        "name": "分栈跑员",
+        "rarity": "uncommon",
+        "tags": [
+          "cargo"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "sorting_runner:0",
+            "limit": 1,
+            "phase": "structure",
+            "op": "consume",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "product"
+            },
+            "reward": 6,
+            "rewardTargetBase": true
+          }
+        ]
+      },
+      "manifest_desk": {
+        "name": "夜单台",
+        "rarity": "uncommon",
+        "tags": [
+          "cargo",
+          "contract"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "manifest_desk:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "multiply",
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "all",
+                "tag": "cargo"
+              },
+              "distinct": true,
+              "min": 4
+            },
+            "ratio": [
+              3,
+              1
+            ]
+          }
+        ]
+      },
+      "switch_lamp": {
+        "name": "换轨灯",
+        "rarity": "uncommon",
+        "tags": [
+          "cargo",
+          "machine"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "switch_lamp:0",
+            "limit": 1,
+            "phase": "structure",
+            "op": "reserve",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "product"
+            },
+            "defer": true,
+            "priority": 0
+          }
+        ]
+      },
+      "transit_seal": {
+        "name": "联运封蜡",
+        "rarity": "rare",
+        "tags": [
+          "cargo",
+          "magic"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "transit_seal:0",
+            "limit": 1,
+            "phase": "preprocess",
+            "op": "tagMajority",
+            "selector": {
+              "scope": "self"
+            },
+            "tags": [
+              "plant",
+              "crystal",
+              "resonance"
+            ]
+          }
+        ]
+      },
+      "return_station": {
+        "name": "空箱返程站",
+        "rarity": "rare",
+        "tags": [
+          "cargo",
+          "machine"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "return_station:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "reward",
+            "event": "consume",
+            "match": {
+              "beforeTag": "product",
+              "actorTag": "cargo",
+              "actorAdjacent": true
+            },
+            "defer": true,
+            "commitPredicate": {
+              "poolBetween": [
+                0,
+                20
+              ]
+            },
+            "amount": 8
+          }
+        ]
+      },
+      "pressure_pouch": {
+        "name": "余压软袋",
+        "rarity": "common",
+        "tags": [
+          "pressure"
+        ],
+        "base": 1,
+        "mechanics": {
+          "pressure": {
+            "cap": 4,
+            "reward": 10
+          }
+        },
+        "effects": [
+          {
+            "key": "pressure_pouch:0",
+            "limit": 1,
+            "phase": "pressure-injection",
+            "op": "pressure",
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 1
+          }
+        ]
+      },
+      "feed_valve": {
+        "name": "添温小阀",
+        "rarity": "common",
+        "tags": [
+          "machine",
+          "pressure"
+        ],
+        "base": 1,
+        "mechanics": {
+          "pressure": {
+            "cap": 6,
+            "reward": 14
+          }
+        },
+        "effects": [
+          {
+            "key": "feed_valve:0",
+            "limit": 1,
+            "phase": "structure",
+            "op": "consume",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "fuel"
+            },
+            "reward": 3,
+            "pressure": 2
+          }
+        ]
+      },
+      "pause_dial": {
+        "name": "歇拍刻盘",
+        "rarity": "common",
+        "tags": [
+          "pressure",
+          "support"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "pause_dial:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 1,
+            "copyable": true
+          },
+          {
+            "key": "pause_dial:1",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "adjacent",
+                "tag": "pressure"
+              },
+              "min": 1
+            },
+            "amount": 2
+          }
+        ]
+      },
+      "surge_vessel": {
+        "name": "脉冲釜",
+        "rarity": "uncommon",
+        "tags": [
+          "pressure",
+          "machine"
+        ],
+        "base": 1,
+        "mechanics": {
+          "pressure": {
+            "cap": 3,
+            "reward": 16
+          },
+          "ordinaryZero": true
+        },
+        "effects": [
+          {
+            "key": "surge_vessel:0",
+            "limit": 1,
+            "phase": "pressure-injection",
+            "op": "pressure",
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 1
+          }
+        ]
+      },
+      "cracked_regulator": {
+        "name": "裂缝调压器",
+        "rarity": "uncommon",
+        "tags": [
+          "pressure",
+          "machine"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "cracked_regulator:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "risk",
+            "selector": {
+              "scope": "self"
+            },
+            "chance": [
+              3,
+              4
+            ],
+            "successAdd": 8,
+            "failureLoss": 6,
+            "spawn": "spent_gasket",
+            "riskTag": "pressure"
+          }
+        ]
+      },
+      "safety_shim": {
+        "name": "卸压薄衬",
+        "rarity": "uncommon",
+        "tags": [
+          "pressure",
+          "support"
+        ],
+        "base": 1,
+        "mechanics": {
+          "riskMitigation": {
+            "tag": "pressure",
+            "amount": 4
+          }
+        },
+        "effects": []
+      },
+      "release_spire": {
+        "name": "泄峰塔",
+        "rarity": "rare",
+        "tags": [
+          "pressure",
+          "machine"
+        ],
+        "base": 3,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "release_spire:0",
+            "limit": 1,
+            "phase": "step7",
+            "op": "release",
+            "selector": {
+              "scope": "adjacent",
+              "pressureMechanism": true,
+              "pressureAtLeast": 3,
+              "belowReleaseThreshold": true,
+              "notReleased": true
+            },
+            "spend": 3,
+            "belowThreshold": true,
+            "ratio": [
+              3,
+              1
+            ],
+            "reward": 8
+          }
+        ]
+      },
+      "demand_coupler": {
+        "name": "配额耦合器",
+        "rarity": "rare",
+        "tags": [
+          "pressure",
+          "contract"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "demand_coupler:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "multiply",
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "remainingAtMost": 2
+            },
+            "ratio": [
+              4,
+              1
+            ],
+            "spawn": "spent_gasket"
+          }
+        ]
+      },
+      "phase_chip": {
+        "name": "偏相小片",
+        "rarity": "common",
+        "tags": [
+          "magic"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "phase_chip:0",
+            "limit": 1,
+            "phase": "preprocess",
+            "op": "tagChoice",
+            "selector": {
+              "scope": "self"
+            },
+            "tags": [
+              "resonance",
+              "crystal"
+            ]
+          }
+        ]
+      },
+      "spectrum_pin": {
+        "name": "谱别别针",
+        "rarity": "common",
+        "tags": [
+          "magic",
+          "support"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "spectrum_pin:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "adjacent",
+                "excludeSelf": true
+              },
+              "distinct": true,
+              "min": 3
+            },
+            "amount": 4
+          }
+        ]
+      },
+      "cloudy_negative": {
+        "name": "雾面底片",
+        "rarity": "common",
+        "tags": [
+          "magic",
+          "feedstock"
+        ],
+        "base": 1,
+        "mechanics": {
+          "age": {
+            "threshold": 3,
+            "to": "blank_facet"
+          }
+        },
+        "effects": []
+      },
+      "blank_facet": {
+        "name": "无谱晶坯",
+        "rarity": "uncommon",
+        "tags": [
+          "magic",
+          "crystal"
+        ],
+        "base": 3,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "blank_facet:0",
+            "limit": 1,
+            "phase": "initial",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 2,
+            "copyable": true
+          }
+        ]
+      },
+      "offset_reader": {
+        "name": "偏印读头",
+        "rarity": "rare",
+        "tags": [
+          "magic",
+          "machine"
+        ],
+        "base": 3,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "offset_reader:0",
+            "limit": 1,
+            "phase": "copy",
+            "op": "copy",
+            "selector": {
+              "scope": "adjacent",
+              "copyable": true
+            },
+            "cap": 8
+          }
+        ]
+      },
+      "alignment_cloth": {
+        "name": "对相织布",
+        "rarity": "uncommon",
+        "tags": [
+          "magic",
+          "support"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "alignment_cloth:0",
+            "limit": 1,
+            "phase": "step2",
+            "op": "add",
+            "selector": {
+              "scope": "adjacent",
+              "receivedTag": true,
+              "order": "tagAdded"
+            },
+            "amount": 5,
+            "lockFirst": true
+          }
+        ]
+      },
+      "echo_plate": {
+        "name": "迟相印板",
+        "rarity": "rare",
+        "tags": [
+          "magic",
+          "resonance"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "echo_plate:0",
+            "limit": 2,
+            "phase": "listen",
+            "op": "add",
+            "event": "grow",
+            "match": {
+              "adjacent": true,
+              "positiveIncrease": true
+            },
+            "eventAmount": {
+              "factor": 4
+            }
+          }
+        ]
+      },
+      "split_register": {
+        "name": "双谱登记器",
+        "rarity": "epic",
+        "tags": [
+          "magic",
+          "contract"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "split_register:0",
+            "limit": 1,
+            "phase": "preprocess",
+            "op": "tagBundle",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "product"
+            },
+            "tags": [
+              "resonance",
+              "crystal"
+            ],
+            "ratio": [
+              3,
+              2
+            ]
+          }
+        ]
+      },
+      "arrears_slip": {
+        "name": "待核欠条",
+        "rarity": "common",
+        "tags": [
+          "contract",
+          "junk"
+        ],
+        "base": -1,
+        "mechanics": {
+          "candidate": false
+        },
+        "effects": []
+      },
+      "lean_receipt": {
+        "name": "薄账回执",
+        "rarity": "common",
+        "tags": [
+          "contract"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "lean_receipt:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "cashBelowHalf": true
+            },
+            "amount": 4
+          }
+        ]
+      },
+      "compliance_desk": {
+        "name": "合规小台",
+        "rarity": "common",
+        "tags": [
+          "contract",
+          "machine"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "compliance_desk:0",
+            "limit": 1,
+            "phase": "structure",
+            "op": "transform",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "junk"
+            },
+            "type": "cleared_stub"
+          }
+        ]
+      },
+      "cleared_stub": {
+        "name": "核清存根",
+        "rarity": "common",
+        "tags": [
+          "contract",
+          "product",
+          "cargo"
+        ],
+        "base": 3,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "cleared_stub:0",
+            "limit": 1,
+            "phase": "initial",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 1,
+            "copyable": true
+          }
+        ]
+      },
+      "cancellation_clerk": {
+        "name": "撤账员",
+        "rarity": "uncommon",
+        "tags": [
+          "contract"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "cancellation_clerk:0",
+            "limit": 1,
+            "phase": "structure",
+            "op": "consume",
+            "selector": {
+              "scope": "adjacent",
+              "tag": "junk"
+            },
+            "reward": 5,
+            "growSource": 1
+          }
+        ]
+      },
+      "quota_margin": {
+        "name": "配额边签",
+        "rarity": "uncommon",
+        "tags": [
+          "contract",
+          "pressure"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "quota_margin:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "add",
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "cashDeficitAtMost": 15
+            },
+            "amount": 6
+          }
+        ]
+      },
+      "advance_stamp": {
+        "name": "先支邮戳",
+        "rarity": "rare",
+        "tags": [
+          "contract"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "advance_stamp:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "advance",
+            "selector": {
+              "scope": "self"
+            },
+            "amount": 18,
+            "obligation": 12,
+            "spawn": "arrears_slip"
+          }
+        ]
+      },
+      "settlement_beacon": {
+        "name": "清算信标",
+        "rarity": "rare",
+        "tags": [
+          "contract",
+          "machine"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "settlement_beacon:0",
+            "limit": 1,
+            "phase": "summary",
+            "op": "multiply",
+            "selector": {
+              "scope": "all",
+              "tag": "contract"
+            },
+            "predicate": {
+              "all": [
+                {
+                  "poolWithoutTag": "junk"
+                },
+                {
+                  "count": {
+                    "scope": "all",
+                    "tag": "contract"
+                  },
+                  "distinct": true,
+                  "min": 3
+                }
+              ]
+            },
+            "ratio": [
+              2,
+              1
+            ],
+            "each": true
+          }
+        ]
+      }
+    },
+    "items": {
+      "item_dew_calendar": {
+        "name": "露班轮历",
+        "rarity": "common",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_dew_calendar:0",
+            "limit": 1,
+            "phase": "step3",
+            "op": "age",
+            "selector": {
+              "scope": "all",
+              "age": true,
+              "tag": "plant"
+            },
+            "age": true,
+            "amount": 1
+          }
+        ]
+      },
+      "item_root_wrap": {
+        "name": "根温绑带",
+        "rarity": "uncommon",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_root_wrap:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "add",
+            "event": "transform",
+            "match": {
+              "beforeTag": "plant"
+            },
+            "amount": 4,
+            "eventTarget": true
+          }
+        ]
+      },
+      "item_frost_glass": {
+        "name": "防寒窄窗",
+        "rarity": "uncommon",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_frost_glass:0",
+            "limit": 2,
+            "phase": "appearance",
+            "op": "add",
+            "selector": {
+              "scope": "all",
+              "tag": "mist"
+            },
+            "amount": 3,
+            "window": "stage",
+            "each": true
+          }
+        ]
+      },
+      "item_sorting_apron": {
+        "name": "分温围裙",
+        "rarity": "common",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_sorting_apron:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "reward",
+            "event": "consume",
+            "match": {
+              "beforeTag": "scrap"
+            },
+            "amount": 3
+          }
+        ]
+      },
+      "item_waste_log": {
+        "name": "滞物登记本",
+        "rarity": "uncommon",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_waste_log:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "token",
+            "event": "destroy",
+            "match": {
+              "beforeTag": "junk",
+              "notCause": "consume"
+            },
+            "threshold": 3,
+            "resource": "removeTokens",
+            "amount": 1
+          }
+        ]
+      },
+      "item_offcut_chute": {
+        "name": "边料回流槽",
+        "rarity": "rare",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_offcut_chute:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "spawn",
+            "event": "consume",
+            "match": {
+              "beforeTag": "scrap",
+              "notBeforeTag": "junk"
+            },
+            "type": "ash_felt"
+          }
+        ]
+      },
+      "item_clean_mesh": {
+        "name": "清栈细网",
+        "rarity": "uncommon",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_clean_mesh:0",
+            "limit": 1,
+            "phase": "step1",
+            "op": "weight",
+            "tag": "junk",
+            "ratio": [
+              1,
+              2
+            ]
+          }
+        ]
+      },
+      "item_brine_lining": {
+        "name": "盐雾内衬",
+        "rarity": "common",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_brine_lining:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "add",
+            "event": "transform",
+            "match": {
+              "beforeTag": "feedstock",
+              "afterTag": "crystal"
+            },
+            "amount": 4,
+            "eventTarget": true
+          }
+        ]
+      },
+      "item_fraction_gauge": {
+        "name": "分馏格尺",
+        "rarity": "uncommon",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_fraction_gauge:0",
+            "limit": 1,
+            "phase": "change",
+            "op": "reward",
+            "predicate": {
+              "count": {
+                "scope": "all",
+                "tag": "crystal"
+              },
+              "distinct": true,
+              "min": 3
+            },
+            "amount": 7
+          }
+        ]
+      },
+      "item_residue_stamp": {
+        "name": "残液验章",
+        "rarity": "uncommon",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_residue_stamp:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "reward",
+            "event": "consume",
+            "match": {
+              "beforeTag": "mist"
+            },
+            "amount": 2
+          }
+        ]
+      },
+      "item_nursery_scale": {
+        "name": "苗圃轻秤",
+        "rarity": "rare",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_nursery_scale:0",
+            "limit": 1,
+            "phase": "step1",
+            "op": "weight",
+            "tag": "plant",
+            "ratio": [
+              3,
+              2
+            ],
+            "poolMax": 28
+          }
+        ]
+      },
+      "item_lane_clapper": {
+        "name": "轨边拍板",
+        "rarity": "common",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_lane_clapper:0",
+            "limit": 4,
+            "phase": "summary",
+            "op": "add",
+            "selector": {
+              "scope": "all",
+              "tag": "resonance",
+              "rowFirst": true,
+              "rowMinTypes": 2
+            },
+            "amount": 2,
+            "each": true
+          }
+        ]
+      },
+      "item_rest_notch": {
+        "name": "休拍刻槽",
+        "rarity": "uncommon",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_rest_notch:0",
+            "limit": 4,
+            "phase": "summary",
+            "op": "multiply",
+            "selector": {
+              "scope": "all",
+              "tag": "resonance",
+              "rowCountExact": 1
+            },
+            "ratio": [
+              3,
+              2
+            ],
+            "each": true
+          }
+        ]
+      },
+      "item_pitch_marker": {
+        "name": "音高记签",
+        "rarity": "rare",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_pitch_marker:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "add",
+            "event": "tagAdded",
+            "match": {
+              "afterTag": "resonance",
+              "notBeforeTag": "resonance"
+            },
+            "eventTarget": true,
+            "defer": true,
+            "amount": 5
+          }
+        ]
+      },
+      "item_shared_metronome": {
+        "name": "公用节拍器",
+        "rarity": "uncommon",
+        "mechanics": {
+          "cycleThresholdReduction": 1
+        },
+        "effects": []
+      },
+      "item_jar_rack": {
+        "name": "安瓿架",
+        "rarity": "rare",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_jar_rack:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "reserve",
+            "event": "transform",
+            "match": {
+              "afterTag": "crystal"
+            },
+            "defer": true,
+            "priority": 1,
+            "eventTarget": true
+          }
+        ]
+      },
+      "item_manifest_clip": {
+        "name": "夜单夹",
+        "rarity": "common",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_manifest_clip:0",
+            "limit": 1,
+            "phase": "summary",
+            "op": "reward",
+            "amount": 6,
+            "predicate": {
+              "count": {
+                "scope": "all",
+                "tag": "cargo"
+              },
+              "distinct": true,
+              "min": 4
+            }
+          }
+        ]
+      },
+      "item_return_track": {
+        "name": "空返侧轨",
+        "rarity": "uncommon",
+        "mechanics": {
+          "skipOrdinals": [
+            1,
+            3
+          ],
+          "resource": "rerollTokens",
+          "amount": 1
+        },
+        "effects": []
+      },
+      "item_small_hold": {
+        "name": "小舱限载牌",
+        "rarity": "rare",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_small_hold:0",
+            "limit": 1,
+            "phase": "summary",
+            "op": "reward",
+            "amount": 5,
+            "predicate": {
+              "poolBetween": [
+                12,
+                20
+              ]
+            }
+          }
+        ]
+      },
+      "item_exchange_hook": {
+        "name": "换装挂钩",
+        "rarity": "uncommon",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_exchange_hook:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "guarantee",
+            "event": "consume",
+            "match": {
+              "beforeTag": "product"
+            },
+            "guarantee": "itemProductPending",
+            "window": "stage"
+          }
+        ]
+      },
+      "item_pressure_index": {
+        "name": "压班索引",
+        "rarity": "common",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_pressure_index:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "pressure",
+            "event": "pressureIncrease",
+            "eventTarget": true,
+            "noDispatch": true,
+            "amount": 1
+          }
+        ]
+      },
+      "item_insulation_shawl": {
+        "name": "隔温披布",
+        "rarity": "uncommon",
+        "mechanics": {
+          "riskReduction": 3
+        },
+        "effects": []
+      },
+      "item_release_receipt": {
+        "name": "泄压回执",
+        "rarity": "rare",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_release_receipt:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "reward",
+            "event": "release",
+            "amount": 12,
+            "threshold": 3,
+            "window": "stage"
+          }
+        ]
+      },
+      "item_spare_baffle": {
+        "name": "备用挡板",
+        "rarity": "uncommon",
+        "mechanics": {
+          "replaceRiskJunk": true,
+          "replacementLoss": 3
+        },
+        "effects": []
+      },
+      "item_safe_carbon": {
+        "name": "安全复写膜",
+        "rarity": "common",
+        "mechanics": {
+          "copyBonus": 2
+        },
+        "effects": []
+      },
+      "item_spectrum_book": {
+        "name": "谱类手册",
+        "rarity": "uncommon",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_spectrum_book:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "add",
+            "event": "tagAdded",
+            "eventTarget": true,
+            "defer": true,
+            "amount": 3
+          }
+        ]
+      },
+      "item_registration_pin": {
+        "name": "对版定位针",
+        "rarity": "rare",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_registration_pin:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "reserve",
+            "event": "copy",
+            "defer": true,
+            "priority": 2,
+            "eventTarget": true
+          }
+        ]
+      },
+      "item_growth_negative": {
+        "name": "增量底片册",
+        "rarity": "uncommon",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_growth_negative:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "reward",
+            "event": "grow",
+            "match": {
+              "positiveIncrease": true
+            },
+            "eventAmount": {
+              "factor": 2,
+              "cap": 6
+            }
+          }
+        ]
+      },
+      "item_low_balance_tab": {
+        "name": "薄账分页条",
+        "rarity": "common",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_low_balance_tab:0",
+            "limit": 1,
+            "phase": "appearance",
+            "op": "reward",
+            "amount": 3,
+            "predicate": {
+              "cashBelowHalf": true
+            }
+          }
+        ]
+      },
+      "item_compliance_carbon": {
+        "name": "合规复核纸",
+        "rarity": "uncommon",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_compliance_carbon:0",
+            "limit": 1,
+            "phase": "listen",
+            "op": "add",
+            "event": "transform",
+            "match": {
+              "beforeTag": "junk",
+              "notAfterTag": "junk"
+            },
+            "amount": 3,
+            "eventTarget": true
+          }
+        ]
+      },
+      "item_audit_clip": {
+        "name": "稽核夹",
+        "rarity": "rare",
+        "mechanics": {
+          "paymentResource": "removeTokens",
+          "amount": 1,
+          "poolWithoutTag": "junk",
+          "finalOnlyStats": true
+        },
+        "effects": []
+      },
+      "item_margin_lantern": {
+        "name": "余账灯",
+        "rarity": "uncommon",
+        "mechanics": {},
+        "effects": [
+          {
+            "key": "item_margin_lantern:0",
+            "limit": 20,
+            "phase": "summary",
+            "op": "multiply",
+            "selector": {
+              "scope": "all",
+              "tag": "contract"
+            },
+            "ratio": [
+              3,
+              2
+            ],
+            "each": true,
+            "predicate": {
+              "lastSpin": true,
+              "cashFraction": [
+                3,
+                4
+              ],
+              "cashBelowPayment": true
+            }
+          }
+        ]
+      }
+    },
+    "events": {
+      "event_fog_shift": {
+        "name": "雾班调换",
+        "tag": "plant",
+        "age": true,
+        "cost": 4,
+        "op": "modifier",
+        "remaining": 2,
+        "id": "event_fog_shift",
+        "description": "GDD1 F4 event transaction"
+      },
+      "event_copper_queue": {
+        "name": "铜屑排队",
+        "tag": "junk",
+        "cost": 0,
+        "op": "transform",
+        "type": "copper_burr",
+        "spawn": "spent_gasket",
+        "requiresCapacity": true,
+        "id": "event_copper_queue",
+        "description": "GDD1 F4 event transaction"
+      },
+      "event_brine_inspection": {
+        "name": "盐雾抽检",
+        "tag": "feedstock",
+        "cost": 0,
+        "op": "remove",
+        "guarantee": "eventCrystalPending",
+        "id": "event_brine_inspection",
+        "description": "GDD1 F4 event transaction"
+      },
+      "event_silent_bell": {
+        "id": "event_silent_bell",
+        "name": "停鸣通知",
+        "cost": 0,
+        "tag": "resonance",
+        "op": "modifier",
+        "remaining": 3,
+        "spinEffects": [
+          {
+            "phase": "summary",
+            "op": "multiply",
+            "selector": {
+              "scope": "all",
+              "tag": "resonance"
+            },
+            "ratios": [
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ]
+          }
+        ],
+        "target": {
+          "tag": "resonance"
+        },
+        "minStageSpins": 3,
+        "description": "GDD1 F4 event transaction"
+      },
+      "event_empty_manifest": {
+        "id": "event_empty_manifest",
+        "name": "空白夜单",
+        "cost": 0,
+        "tag": "contract",
+        "op": "removeModifier",
+        "remaining": 1,
+        "spinEffects": [
+          {
+            "phase": "summary",
+            "op": "add",
+            "selector": {
+              "scope": "all",
+              "tag": "cargo"
+            },
+            "amount": 2,
+            "maxTargets": 5
+          }
+        ],
+        "target": {
+          "rarity": "common",
+          "notTag": "junk"
+        },
+        "minPool": 21,
+        "description": "GDD1 F4 event transaction"
+      },
+      "event_boiler_test": {
+        "id": "event_boiler_test",
+        "name": "压锅试鸣",
+        "cost": 0,
+        "tag": "pressure",
+        "op": "boiler",
+        "remaining": 1,
+        "target": {
+          "tag": "pressure",
+          "pressureMechanism": true
+        },
+        "allowEmptyTarget": true,
+        "capacityWhenEmpty": true,
+        "description": "GDD1 F4 event transaction"
+      },
+      "event_misprint_window": {
+        "id": "event_misprint_window",
+        "name": "错版窗口",
+        "cost": 6,
+        "tag": "magic",
+        "op": "modifier",
+        "remaining": 3,
+        "spinEffects": [
+          {
+            "phase": "preprocess",
+            "op": "tagAdded",
+            "selector": {
+              "scope": "all",
+              "tag": "magic"
+            },
+            "tag": "cargo",
+            "maxTargets": 1
+          },
+          {
+            "phase": "preprocess",
+            "op": "add",
+            "selector": {
+              "scope": "all",
+              "tag": "magic"
+            },
+            "amount": 2,
+            "maxTargets": 1
+          }
+        ],
+        "description": "GDD1 F4 event transaction"
+      },
+      "event_quota_recount": {
+        "id": "event_quota_recount",
+        "name": "配额复点",
+        "cost": 0,
+        "tag": "contract",
+        "op": "quota",
+        "remaining": 1,
+        "target": null,
+        "allowEmptyTarget": true,
+        "requiresCapacity": true,
+        "description": "GDD1 F4 event transaction"
+      }
+    }
+  }
+}

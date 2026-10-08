@@ -1,0 +1,14 @@
+﻿[
+    {
+        "exists":  false,
+        "path":  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    },
+    {
+        "exists":  false,
+        "path":  "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+    },
+    {
+        "exists":  false,
+        "path":  "C:\\Users\\admin\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe"
+    }
+]

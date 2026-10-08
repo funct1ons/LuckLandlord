@@ -1,0 +1,111 @@
+{
+  "status": "PASS listed historical files except disclosed F4/runtime changes",
+  "sources": [
+    "f3-slice-retest-baseline.json",
+    "f3-slice-retest-freeze.json entries override"
+  ],
+  "total": 674,
+  "unchanged": 667,
+  "changes": [
+    {
+      "path": "gdd1.html",
+      "before": {
+        "path": "gdd1.html",
+        "bytes": 1895,
+        "sha256": "caaa700d91e46baa88296d201b6853c93aed5321b708ec7c7cc9dd326b17c62c",
+        "runtime": false
+      },
+      "current": {
+        "bytes": 2210,
+        "sha256": "7d49790c6e1f375ae464e463dccbd4efc89ff2b876c433bd063a8f949bd4f1b4"
+      },
+      "status": "DISCLOSED F4 CHANGE"
+    },
+    {
+      "path": "js/gdd1/offers.js",
+      "before": {
+        "path": "js/gdd1/offers.js",
+        "bytes": 3200,
+        "sha256": "6d3ec272e2af0e32bc4d604cd5b6b4be53196e3be593a27ca6fee0303ed23295",
+        "runtime": false
+      },
+      "current": {
+        "bytes": 3252,
+        "sha256": "81862b7b51e1eb335799f8dbacdb80c8b9df30e0cd322b9129c8654458f15bd0"
+      },
+      "status": "DISCLOSED F4 CHANGE"
+    },
+    {
+      "path": "js/gdd1/resolver.js",
+      "before": {
+        "path": "js/gdd1/resolver.js",
+        "bytes": 13959,
+        "sha256": "ceb14cd1a65a0b5fd9ff9c74d0d493fa30876a1231a515cd59ce4fcf0bd005bd",
+        "runtime": false
+      },
+      "current": {
+        "bytes": 27548,
+        "sha256": "069ccb0c40dd32c6a82d6b059ee1e8d11578b2dd23d0df8ece8b83c6f974d1b0"
+      },
+      "status": "DISCLOSED F4 CHANGE"
+    },
+    {
+      "path": "js/gdd1/schema.js",
+      "before": {
+        "path": "js/gdd1/schema.js",
+        "bytes": 17026,
+        "sha256": "50d8eff3f55a7150635795a301f568409c8fd57a4d7a438e2b6ab5aebc9154a9",
+        "runtime": false
+      },
+      "current": {
+        "bytes": 17142,
+        "sha256": "3e3216520b4e8c75a4d59517432fa0cefe98f14eea8c13823802f3fe2637bf33"
+      },
+      "status": "DISCLOSED F4 CHANGE"
+    },
+    {
+      "path": "js/gdd1UI/main.js",
+      "before": {
+        "path": "js/gdd1UI/main.js",
+        "bytes": 8511,
+        "sha256": "4145b5be5193cc3c9c15b65d61e8c59a8e91b2227a022dfb073c2ff8608be7d5",
+        "runtime": false
+      },
+      "current": {
+        "bytes": 9670,
+        "sha256": "782996912e6dc76e567ab7c221c157989de44f1581e7d99ea862263fdcb04bb1"
+      },
+      "status": "DISCLOSED F4 CHANGE"
+    }
+  ],
+  "runtime": [
+    {
+      "path": ".pi/loops/01a101f0-a171-761a-8429-9edd4dbe73ac.json",
+      "before": {
+        "path": ".pi/loops/01a101f0-a171-761a-8429-9edd4dbe73ac.json",
+        "bytes": 1788,
+        "sha256": "476a3a8dcc75ed855f1751e0eb2408d8062ec3ad88ffa20e384b4d0871e18b33",
+        "runtime": true
+      },
+      "current": {
+        "bytes": 1783,
+        "sha256": "6cdc1a27df7f1a9ed675e078e69a21ecc0dd74780a3af48ffd53d46852d7661d"
+      },
+      "status": "DISCLOSED RUNTIME SCHEDULER EXCEPTION"
+    },
+    {
+      "path": ".pi/loops.json",
+      "before": {
+        "path": ".pi/loops.json",
+        "bytes": 77,
+        "sha256": "c4aa74c78cc7b418b2e5b5b44d4f7f0f83f7b502df9c0a521573e1e441814075",
+        "runtime": true
+      },
+      "current": {
+        "bytes": 77,
+        "sha256": "5b0ecdc33151bdb04f9630cbd916b305e62a53750945fb410a8da7eac2e3e585"
+      },
+      "status": "DISCLOSED RUNTIME SCHEDULER EXCEPTION"
+    }
+  ]
+}

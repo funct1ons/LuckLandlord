@@ -1,0 +1,8 @@
+{
+  "status": "FAILED before schema correction; preserved observed failure, not a passing run",
+  "command": "node tests/gdd1/f4-integration-reload.js",
+  "observed": "AssertionError [ERR_ASSERTION]: GDD1: log facts at f4-integration-reload.js:11:114",
+  "cause": "Implementation/schema integration defect: full resolver emits cycle causal actions, but schema actions whitelist omitted cycle. Isolated resolver cycle tests did not validate full command save transactions.",
+  "correction": "Accept cycle log action exclusively for profile full-v1; retain frozen slice whitelist and all exact causal fact and ledger checks.",
+  "acceptance": "No freeze or integration acceptance follows from this failure record. The corrected implementation must rerun the unchanged integration assertions and independent regression."
+}

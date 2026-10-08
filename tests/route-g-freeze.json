@@ -1,0 +1,204 @@
+{
+  "status": "DEVELOPMENT_FROZEN_AWAITING_INDEPENDENT_REVIEW",
+  "provider": "openai-codex",
+  "model": "gpt-6.1-sol",
+  "reasoning": "xhigh",
+  "generatedAt": "2026-10-04T12:25:37.496Z",
+  "node": {
+    "total": 475,
+    "passed": 475,
+    "baseline": {
+      "expected": 357,
+      "total": 357,
+      "passed": 357,
+      "namesPreserved": true
+    },
+    "suites": {
+      "core": 50,
+      "formal": 75,
+      "cultivation": 24,
+      "recycling": 24,
+      "distillation": 29,
+      "resonance": 28,
+      "cargo": 48,
+      "pressure": 27,
+      "pressureTransaction": 52,
+      "routeG": 118
+    }
+  },
+  "baselineSHA256": "d174424b8bdfc34b02b1b0610d817af86d7b2400593e855fe0b2696194d72c12",
+  "originalBaselineSnapshotSHA256": "d174424b8bdfc34b02b1b0610d817af86d7b2400593e855fe0b2696194d72c12",
+  "audits": {
+    "scripts": 11,
+    "passed": 207,
+    "failed": 0,
+    "caseCounts": {
+      "audit-cargo-retest.js": {
+        "total": 15,
+        "passed": 15,
+        "failed": 0
+      },
+      "audit-cargo.js": {
+        "total": 18,
+        "passed": 18,
+        "failed": 0
+      },
+      "audit-cultivation-retest.js": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0
+      },
+      "audit-cultivation.js": {
+        "total": 7,
+        "passed": 7,
+        "failed": 0
+      },
+      "audit-distillation.js": {
+        "total": 17,
+        "passed": 17,
+        "failed": 0
+      },
+      "audit-pressure-retest.js": {
+        "total": 49,
+        "passed": 49,
+        "failed": 0
+      },
+      "audit-pressure-transaction-retest.js": {
+        "total": 10,
+        "passed": 10,
+        "failed": 0
+      },
+      "audit-pressure.js": {
+        "total": 39,
+        "passed": 39,
+        "failed": 0
+      },
+      "audit-recycling.js": {
+        "total": 10,
+        "passed": 10,
+        "failed": 0
+      },
+      "audit-resonance-retest.js": {
+        "total": 18,
+        "passed": 18,
+        "failed": 0
+      },
+      "audit-resonance.js": {
+        "total": 18,
+        "passed": 18,
+        "failed": 0
+      }
+    }
+  },
+  "fixture": {
+    "total": 10,
+    "manualMatches": 10
+  },
+  "file": {
+    "checks": 4,
+    "suite": {
+      "total": 475,
+      "routeG": 118,
+      "baseline": 357,
+      "exactNodeParity": true
+    }
+  },
+  "http": {
+    "protocol": "http",
+    "freshProfile": "C:\\Users\\admin\\AppData\\Local\\Temp\\route-g-http-81c6ba3a-d54e-4017-974a-b2f48d1e3593",
+    "checks": 2,
+    "suite": {
+      "total": 475,
+      "routeG": 118,
+      "baseline": 357,
+      "exactNodeParity": true
+    },
+    "strictSmoke": true
+  },
+  "pressureHttp": {
+    "nodeCases": 49,
+    "ui": {
+      "strictSmoke": true,
+      "strictPressure": true,
+      "passed": 4
+    }
+  },
+  "sources": {
+    "js/core/rng.js": "9f69ac259faad08fd67e7bfe3a86d5f382338130f9df8b0090fe209fdbed320f",
+    "js/data/content.js": "400e449bcd43d8155ee47260ab81f9e5f1a8a60484d1e84d9e99419a912a2112",
+    "js/engine/resolver.js": "5ae5775055bef0ba4e97c311d86540a8e0b764ca37c102dc8591ae1a7f56deed",
+    "js/core/game.js": "d40fe2ccd8d5181d0c0d1c7a60c802c9385a3193562a5b15c017b18e21c5cd8d",
+    "js/core/validation.js": "3697a7d117282ac3e75d708fd1160469e41bcd3b14d53dff8fe654777cb32149",
+    "js/core/save.js": "8ad357f39e954038a22e741f83236042e738aa8beb1369e7fabbe0ae4cef20a9",
+    "js/ui/main.js": "72ecbdea5093dbeeac4c8802b01349a1b8a51b82da9d21b0a90a457722bdf6ba",
+    "tests/run.js": "93f646ff311f85c5a6c0647b5b2bfe36743560537525553f4e0672b5ffa461fd",
+    "tests/browser-tests.js": "cbae7a9b3e5e9f51e4421f33c2adcee922944ed61401e8ce7e281431dfd88289",
+    "tests/index.html": "3d4f1df1d580a3f7ed252d7ebd991a960a37154d055e5af0628dfdb6a32b5c47",
+    "tests/route-g-behavior.js": "5cee09be81dde3490179c887d68d03adfb507b9baa8ce337e04fd166544826f1",
+    "tests/route-g-evidence-check.js": "da54a037c47699f4327df0b08e81ac42c1d450901458d5d8497bdde101d55508",
+    "tests/route-g-http-check.js": "8f650edd323563c94ece711f400fc245073cd4457c69b82b602053f24fe46057",
+    "tests/route-g-freeze.js": "692dc68f027ccf30e148ab0d2381d914ed51cfef1e881368800a0b9199371ef6",
+    "tests/suite.js": "3b2d9ca8d609bcb67637150714adf335a635d0721e72e40abdc2e623db041cd8",
+    "tests/formal-symbols.js": "c2a6d3cf212f9a26e7f3189d1a7fdaf6d282f90adb7bfb157a283260f0edbef4",
+    "tests/cultivation-behavior.js": "f40ee4a2643a9a00e4a1bf6440277a7b6798e8860006a48eb70d01ba2bd2828e",
+    "tests/recycling-behavior.js": "bea7ba8e8c1f3a26f10dbafa7443bc35d105871e721d09351abf0b2c8997d075",
+    "tests/distillation-behavior.js": "59fc75eb429ea05959310fb409b6eb5b771b31559d10a3c7efbd95092058add0",
+    "tests/resonance-behavior.js": "339b7ee64cd9e725532c1c633cc50f2444e1101904095b9cec97f16031cde945",
+    "tests/cargo-behavior.js": "665e166041e34deacc6ce0fb1546535fad01026a33de4f002e6a2333f240683b",
+    "tests/pressure-suite.js": "384a86d90dbcca1c94429fda4e5fdfcf723b6743f7275c511255956329fbeafd",
+    "tests/pressure-transaction.js": "892a8a729c6a9cdc5577f5f47b1bd20040d88ad7e03e33bcda2981204b38cbce",
+    "tests/baseline-357-manifest.json": "d174424b8bdfc34b02b1b0610d817af86d7b2400593e855fe0b2696194d72c12",
+    "tests/fixture-report.js": "473e07265e5a71d54e8c7c2b45de3fcb704f865eb22186aac1a97d755ec660dc",
+    "tests/fixtures/combos.js": "ce4a115463c91105b9b6486d0cc04bb2e8184f38ec67909cc1f73a93d1115c78",
+    "tests/browser-check.ps1": "86c99b5692d7769c5f2df0c027f90f769cdc2f24c1ee98772a6662ef62c18743",
+    "tests/ui-smoke.html": "73532b3ed972d52e16aa2f91e1617197f24cf7750a21d8c4db2746ceca865c21",
+    "tests/ui-smoke.js": "66abf1e74f72d13d5758a9602cd7cd0fd560e98d1d72fddf65606bad96fac777",
+    "tests/storage-smoke.html": "b388f90f5dbd08d7df959f951c4a8933999387e4d595b9517a4930871a2c29c2",
+    "EXECUTION_PLAN.md": "944b2d219175aedb3ba7d4f92f1fff7b9bf8186a92a3e728fffddb13ccbb0d9b",
+    "docs/CONTENT_MATRIX.md": "ac3b9dd06b34fd84a0ba5967379ea0157e2c46c57bbb9c1bc56173ef1feef1e4",
+    "docs/MECHANICS_GAPS.md": "84ef3fb6871db494c2b8009fcdadc3d568761cff2ade176cba2b5bc6ffd0c4e1",
+    "docs/RULES.md": "5c88445a104ec8a7e46a323f24bb64481b61b02d68ea8e3d52fd828997fed525",
+    "docs/PRESSURE_TRANSACTION_RETEST.md": "2216403639f2c46ec319fc22af95400a2736c88bc2779a38dee2db7dea7ff4be",
+    "docs/ROUTE_G_PROOF.md": "0657a904ea8dd8e83dbc1a68f3c0e1712e1551e3106bf741e2f3b351779c60a4",
+    "docs/PROGRESS.md": "65675c0ce107cb7365133e98d269dbaf5c799d1d5e3196453e977b3c17d2c77c",
+    "tests/audit-cargo-retest.js": "ab5f96c7f4ee43807b6187818768bf3a9ee8300237a2a6211e799ad42324c3b6",
+    "tests/audit-cargo.js": "e56c31d39c0ddb2a7736c565351cf6edcec1b791b6494aebc7480f6086d5ee4a",
+    "tests/audit-cultivation-retest.js": "b03bfd858bb29dcf29c99ba636e32653b4cb612f4ebeb5753c3c1e942eaac50f",
+    "tests/audit-cultivation.js": "ad211c1f460f66607d35eb3b645d61a8ba7a0ccbc3195526d274477f59721c1b",
+    "tests/audit-distillation.js": "dd2bb5395128d5ace2390d519e27bbe57231c9eae7a885804298890b8c74a84b",
+    "tests/audit-pressure-retest.js": "01e256b7ef2d0eb3d84334d38318a225bfe9db7bb1edf0697073551879e3b2c5",
+    "tests/audit-pressure-transaction-retest.js": "a56d015948a53123f838e9a8ec71ab00003f7b1cdddedab413e1595288101877",
+    "tests/audit-pressure.js": "f321ae7bfdb2f931dbdd37aab66de377493e8cde5bae8f3216dc5516488fa279",
+    "tests/audit-recycling.js": "0b07be6a43a97289e07c1b5f21d2955f27a47414dc0578427aac735d4144996e",
+    "tests/audit-resonance-retest.js": "cb81a02055340b52f9756d1bc835e763cc179e8f4b29b68d29d1ffc3491ca667",
+    "tests/audit-resonance.js": "95c44f75c717079b30e2de138d04ddc7044ad54491ca1ab757bc3e75900523bb"
+  },
+  "evidence": {
+    "tests/suite-manifest.json": "50d138410c6d411bf36c4cf1dee16bd61c3813f903badfcb18c186faed0cba2d",
+    "tests/route-g-node-result.txt": "c6546e97fa9e14965ea3d50c49c69a1b260e599499afaff1303cb19ecbede722",
+    "tests/fixture-result.json": "c6167c4c51dbcd5bda200753ff1ea9323a873b5a2cceee4bd96cf91d9cf7ba19",
+    "tests/route-g-file-proof.txt": "ae89226e282ec42ff7be3483747f95720feb9c36bd0100afabea8cda613e8444",
+    "tests/route-g-file-manifest-proof.json": "7a3df30510778c46af9894f846bb7718732afe970dfe34aff55542ff5d888dc2",
+    "tests/browser-result.html": "b499e54cb1a815c2da92fafe373f8fadf1d294bf1cb316bc7944f841c8bcbc8f",
+    "tests/ui-smoke-result.html": "8d203c39a743ad2ca7da73209ab040ea8821a8f4cc3c2f6007598fd67385e1fd",
+    "tests/storage-write-result.html": "da967c9cc32172044abacb05053603c397edb371e03510327283b9edc5127a3a",
+    "tests/storage-read-result.html": "011c8a39afd0d1f613be02031c3e676a5cb0bf57fd404e6ad366faa7b65baade",
+    "tests/route-g-http-proof.json": "b4cb0f45b317105c05758566254ea2ceed092dd547854d125df17ab8818da3cc",
+    "tests/route-g-http-suite.html": "b499e54cb1a815c2da92fafe373f8fadf1d294bf1cb316bc7944f841c8bcbc8f",
+    "tests/route-g-http-smoke.html": "8d203c39a743ad2ca7da73209ab040ea8821a8f4cc3c2f6007598fd67385e1fd",
+    "tests/route-g-pressure-http-result.txt": "6786e02b7f4799f10ed6e97153cf8fff31e3880eacd2d090f2ddcd6ddbc647c0",
+    "tests/route-g-pressure-http.html": "a08dbd3717c558249076c612eae096d7bbfd6fa31264f9b9729e4ee56e487fc5",
+    "tests/route-g-strict-dom-proof.json": "9db9bc1a5f67cffdfdd514ca98a8a3bbdf1e96aab42d65c874560d7e9c452d0e",
+    "tests/route-g-audit-cargo-retest.txt": "6af3e0b46a81448dacdc38d3a9f078dfc43a928051b7a5be133f1c00b5db8db6",
+    "tests/route-g-audit-cargo.txt": "e38829accd4ab86856d4b2be6dcdd745a5dc6c0e2495e8f140fe96b04cefaaa3",
+    "tests/route-g-audit-cultivation-retest.txt": "7f4a0ae38e3da99f3c9c17aeddbfa383f3d463c528fdc6db5f9616b1d272231c",
+    "tests/route-g-audit-cultivation.txt": "1887877d114faf475f8e1a1f24c7e61bb89d958ba41ec76f0c58b35c97979ac4",
+    "tests/route-g-audit-distillation.txt": "64eb6f004683578406ad6d28786f91075fcc27ede1fe3e59a6763a66b260a0e7",
+    "tests/route-g-audit-pressure-retest.txt": "8682a06d4a51fbd5a2467e51c59bfcbaf6832b48e5192fc6c44b280ecfb39922",
+    "tests/route-g-audit-pressure-transaction-retest.txt": "c25829cbba14322462f4716c0faa7ac3c59e2b85de7b29fd3073c5737388053d",
+    "tests/route-g-audit-pressure.txt": "dac0412a967edc54ddb92bd6e402a8d42b6cc542ef9297ab834f5a62faf7c120",
+    "tests/route-g-audit-recycling.txt": "4b8e289415cfbd35c8fce56f7ef63ab54a8130c4d000c3fdb381ac1f2cf619ae",
+    "tests/route-g-audit-resonance-retest.txt": "c5a67b709af4cfd747744e494cfd16380bdfd3267f826b15124cc57d00050d3f",
+    "tests/route-g-audit-resonance.txt": "8bb0d72416d0ec239c0a5888a9926d61639d1f9db2a421b10e9aa1454e82989d"
+  }
+}

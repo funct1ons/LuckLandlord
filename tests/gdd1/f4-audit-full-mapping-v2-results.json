@@ -1,0 +1,83 @@
+{
+  "scope": "GDD1 F4 supplemental full 64/32/8 mapping audit",
+  "total": 14,
+  "passed": 11,
+  "failed": [
+    {
+      "name": "symbols/all-effect-ops-known",
+      "ok": false,
+      "error": "root_ledger:grow"
+    },
+    {
+      "name": "items/all-32-defined",
+      "ok": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(d&&d.id===id&&d.name&&d.rarity&&Array.isArray(d.tags)&&Array.isArray(d.effects))\n"
+    },
+    {
+      "name": "events/all-8-defined",
+      "ok": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(d&&d.id===id&&d.name&&Number.isInteger(d.cost)&&d.tag!==undefined&&d.op&&Number.isInteger(d.remaining))\n"
+    }
+  ],
+  "cases": [
+    {
+      "name": "dispatch/full-defs-selects-full",
+      "ok": true
+    },
+    {
+      "name": "dispatch/slice-defs-selects-slice",
+      "ok": true
+    },
+    {
+      "name": "symbols/all-64-defined",
+      "ok": true
+    },
+    {
+      "name": "symbols/all-64-tags-nonempty",
+      "ok": true
+    },
+    {
+      "name": "symbols/all-effect-ops-known",
+      "ok": false,
+      "error": "root_ledger:grow"
+    },
+    {
+      "name": "symbols/all-64-isolated-resolve",
+      "ok": true
+    },
+    {
+      "name": "items/all-32-defined",
+      "ok": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(d&&d.id===id&&d.name&&d.rarity&&Array.isArray(d.tags)&&Array.isArray(d.effects))\n"
+    },
+    {
+      "name": "items/all-32-effect-ops-known",
+      "ok": true
+    },
+    {
+      "name": "events/all-8-defined",
+      "ok": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(d&&d.id===id&&d.name&&Number.isInteger(d.cost)&&d.tag!==undefined&&d.op&&Number.isInteger(d.remaining))\n"
+    },
+    {
+      "name": "events/all-spin-effect-ops-known",
+      "ok": true
+    },
+    {
+      "name": "events/full-specific-cost-and-targets",
+      "ok": true
+    },
+    {
+      "name": "controller/full-command-observes-full-defs",
+      "ok": true
+    },
+    {
+      "name": "controller/full-specific-content-not-slice-only",
+      "ok": true
+    },
+    {
+      "name": "resolver/full-effect-execution-uses-full-def",
+      "ok": true
+    }
+  ]
+}

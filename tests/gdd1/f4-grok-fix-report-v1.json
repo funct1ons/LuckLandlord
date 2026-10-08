@@ -1,0 +1,8 @@
+{
+  "path": "docs/GDD1_F4_GROK_FIX.md",
+  "bytes": 6840,
+  "sha256": "8333caa701ff830f6127bdbdb9bc1ad42967741d79a3c78fa05ab5692bacfe5c",
+  "freeze": "tests/gdd1/f4-grok-freeze-v1.json",
+  "freezeSha256": "f78d91d01a1a1d9bfb1b5c4c1b5db2bfb09d489b23de91ee97e41d9c2f0170bf",
+  "note": "Report written after freeze; freeze self-excluded and does not include this report."
+}

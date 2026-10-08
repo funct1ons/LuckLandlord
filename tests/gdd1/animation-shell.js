@@ -1,0 +1,26 @@
+'use strict';
+const assert=require('assert'),run=require('./shell-harness');
+run(async({evaluate:e,key,errors,shot})=>{
+ await e("document.getElementById('tutorial-choice').checked=true;document.getElementById('start-full').click()");
+ assert.ok(await e("document.querySelector('[data-op=spin]').getBoundingClientRect().bottom<=innerHeight"),'run visible at 1366x768');
+ await shot('tests/gdd1/shell-shots/ready.png');
+ await e("GDD1SETTINGS.set({speed:'normal'});document.querySelector('[data-op=spin]').click()");
+ const encoded=await e('GDD1.encode(GDD1UI.getState())');
+ await key(' ','Space');await e('new Promise(r=>setTimeout(r,30))');
+ assert.equal(await e('GDD1.encode(GDD1UI.getState())'),encoded);
+ assert.equal(await e('GDD1OVERLAY.top()'),'choice');
+ assert.equal(await e("document.querySelectorAll('#board > .cell').length"),20);
+ assert.equal(await e("document.querySelectorAll('#board .cell .cell').length"),0);
+ await e("document.querySelector('[data-inspect]').focus()");await key('Enter');
+ assert.equal(await e('GDD1OVERLAY.top()'),'details');await key('Escape');
+ await key('s','KeyS');const committed=await e('GDD1.encode(GDD1UI.getState())');
+ await key(' ','Space');await e('new Promise(r=>setTimeout(r,30))');
+ assert.equal(await e('GDD1.encode(GDD1UI.getState())'),committed);
+ assert.equal(await e('GDD1UI.getState().phase'),'READY');
+ await e("GDD1UI.send('spin');document.getElementById('menu').click()");
+ await e('new Promise(r=>setTimeout(r,60))');
+ assert.equal(await e('GDD1UI.getState()'),null);
+ assert.equal(await e("document.getElementById('welcome').hidden"),false);
+ assert.equal(await e('GDD1OVERLAY.top()'),null);
+ assert.deepStrictEqual(errors,[]);console.log('PASS normal animation skip, committed state unchanged, keyboard inspection, visible run control');
+}).catch(e=>{console.error(e);process.exitCode=1;});

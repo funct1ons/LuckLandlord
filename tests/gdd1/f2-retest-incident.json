@@ -1,0 +1,33 @@
+{
+  "incident": {
+    "command": "node tests/gdd1/retest-run.js > tests/gdd1/f2-retest-f1-run.txt",
+    "path": "tests/gdd1/retest-node.json",
+    "before": {
+      "bytes": 27272,
+      "sha256": "a1bb4a3beefe47ed9646673bd7aa645a930c353e205255c0c3715fce35bdb590"
+    },
+    "after": {
+      "bytes": 27272,
+      "sha256": "17447f669087e5ca7f85f5b339cdfee33a1c6c623f98ff208bc2af1afabcbd40"
+    },
+    "sameBytes": false
+  },
+  "reconstruction": {
+    "method": "Only replace hashes[\"js/gdd1/schema.js\"] with F1 accepted bytes/hash and retain exact JSON serialization/newline",
+    "candidateSha256": "a1bb4a3beefe47ed9646673bd7aa645a930c353e205255c0c3715fce35bdb590",
+    "baselineExact": true
+  },
+  "changedFields": [
+    {
+      "field": "hashes[\"js/gdd1/schema.js\"].bytes",
+      "before": 14987,
+      "after": 17026
+    },
+    {
+      "field": "hashes[\"js/gdd1/schema.js\"].sha256",
+      "before": "607b30ac2c74708e1dff56063f1aa82d4e57f4099837707e6c02e25c2d22a858",
+      "after": "50d8eff3f55a7150635795a301f568409c8fd57a4d7a438e2b6ab5aebc9154a9"
+    }
+  ],
+  "restored": false
+}

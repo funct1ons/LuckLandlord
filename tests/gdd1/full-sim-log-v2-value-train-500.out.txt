@@ -1,0 +1,2 @@
+{"bot":"Value","split":"train","startIndex":500,"done":1,"n":500,"wins":0,"errors":0,"seconds":0.5}
+{"bot":"Value","split":"train","startIndex":500,"done":10,"n":500,"wins":0,"errors":0,"seconds":7.4}

@@ -1,0 +1,14 @@
+{
+  "baselineFiles": 467,
+  "authorizedChanged": ["js/gdd1/resolver.js", "js/gdd1UI/main.js"],
+  "unexpectedChanged": [],
+  "deliverablesChecked": 40,
+  "deliverableMismatches": 0,
+  "freezeFilesChecked": 51,
+  "freezeMismatches": ["js/gdd1/resolver.js", "js/gdd1UI/main.js"],
+  "oldAuditNodeFinalSha256": "988456e467dd1a8ef0a3e68d97ea00b0920fdb047f6c4b3452357f8ad1cf4301",
+  "oldAuditNodeMatchesBaseline": true,
+  "oldAuditNodeWasWrittenDuringRun": true,
+  "oldAuditNodeWriteReason": "Initial audit runner wrote its built-in historical JSON path; temporary old-resolver regeneration restored the original bytes.",
+  "server8323Stopped": true
+}

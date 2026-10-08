@@ -1,0 +1,42 @@
+{
+  "pass": true,
+  "baseline": 655,
+  "identical": 653,
+  "changes": [],
+  "added": [],
+  "runtimeChanges": [
+    {
+      "path": ".pi/loops/01a101f0-a171-761a-8429-9edd4dbe73ac.json",
+      "before": {
+        "bytes": 1788,
+        "sha256": "476a3a8dcc75ed855f1751e0eb2408d8062ec3ad88ffa20e384b4d0871e18b33"
+      },
+      "after": {
+        "bytes": 1788,
+        "sha256": "fbea65eedc34397b13050853635d763c85e81cb8e3afb53e4c7438cd7f302e25"
+      }
+    },
+    {
+      "path": ".pi/loops.json",
+      "before": {
+        "bytes": 77,
+        "sha256": "c4aa74c78cc7b418b2e5b5b44d4f7f0f83f7b502df9c0a521573e1e441814075"
+      },
+      "after": {
+        "bytes": 77,
+        "sha256": "8f7c0147c6d7643bd955c1ad22397e45b3851b8ff7dca1f8f9ee5c163c7cf430"
+      }
+    }
+  ],
+  "runtimeException": ".pi/loops.json and .pi/loops/ are parent scheduling runtime; disclosed, not restored",
+  "manifests": {
+    "tests/gdd1/f3-slice-sim-deliverables.json": 48,
+    "tests/gdd1/f3-slice-audit-freeze.json": 10,
+    "tests/gdd1/f3-slice-fix-freeze.json": 38
+  },
+  "historical245": 245,
+  "auditProtected": 574,
+  "fixProtected": 585,
+  "productionChanges": 0,
+  "existingEvidenceChanges": 0
+}

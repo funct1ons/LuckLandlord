@@ -1,0 +1,197 @@
+{
+  "selfExcluded": true,
+  "entries": {
+    "docs/GDD1_SLICE_SIMULATION.md": {
+      "bytes": 51638,
+      "sha256": "98009fdb332bfa65e36e4638606ec54b8c4cd166136004d030da9c081f0fa128"
+    },
+    "tests/gdd1/f3-slice-sim-batch-greedy-holdout-0-index.json": {
+      "bytes": 189266,
+      "sha256": "d717a3ce74d3be0b1b98b93bd3f38c3e8585f858a036ea190d4e481a3724dadb"
+    },
+    "tests/gdd1/f3-slice-sim-batch-greedy-holdout-0.jsonl": {
+      "bytes": 168942155,
+      "sha256": "1577153d31ad33b3bbf93d3e14a5e6ae054ff9c97122c4381447d2cb07061fb8"
+    },
+    "tests/gdd1/f3-slice-sim-batch-greedy-holdout-500-index.json": {
+      "bytes": 189393,
+      "sha256": "c8194b23b7bc919e2040314a128c7d264b0cc9bd984d5a3e9fc21bbd6fcf6c51"
+    },
+    "tests/gdd1/f3-slice-sim-batch-greedy-holdout-500.jsonl": {
+      "bytes": 169019223,
+      "sha256": "7026ff0b8fe163830ea16f476b3d3a00645c5e2b6df036787da6e0b48bc09639"
+    },
+    "tests/gdd1/f3-slice-sim-batch-greedy-train-0-index.json": {
+      "bytes": 187247,
+      "sha256": "344369cda47090ca5536e6215b69e6f57eea20a79e4255da8aa0dcddaf757f55"
+    },
+    "tests/gdd1/f3-slice-sim-batch-greedy-train-0.jsonl": {
+      "bytes": 169233918,
+      "sha256": "54d81db00e8019d0e5d8e5f84d8abbcff008e7fa6e08534b63b509cba44e0949"
+    },
+    "tests/gdd1/f3-slice-sim-batch-greedy-train-500-index.json": {
+      "bytes": 187382,
+      "sha256": "247c3f6b4b8676c8f7e4d60ec27a0f9e74cceb10b695f8f68d45f4efc373c109"
+    },
+    "tests/gdd1/f3-slice-sim-batch-greedy-train-500.jsonl": {
+      "bytes": 169116474,
+      "sha256": "d198b4e2fcf681fb47e63327bd36e011e5e5e6f2bdee8b9da771580a85215b78"
+    },
+    "tests/gdd1/f3-slice-sim-batch-random-holdout-0-index.json": {
+      "bytes": 379631,
+      "sha256": "b16cf0fb213bd7899ba82c945263ef264ba2c71ef48df3d26237b7ecdd57390a"
+    },
+    "tests/gdd1/f3-slice-sim-batch-random-holdout-0.jsonl": {
+      "bytes": 303290568,
+      "sha256": "58c862d4715ef8a90cac4acceab99ac69e93fda9257ca2a914f0733e7bb4023d"
+    },
+    "tests/gdd1/f3-slice-sim-batch-random-train-0-index.json": {
+      "bytes": 375628,
+      "sha256": "c2a7b85aa7f7203d3d6d00764545612e8ae5b9c61ea09a79403f054f71d6ab30"
+    },
+    "tests/gdd1/f3-slice-sim-batch-random-train-0.jsonl": {
+      "bytes": 301951955,
+      "sha256": "655f525dca28e4bd643f70d45e884efddc69096250b012df9c05a0444d5a244f"
+    },
+    "tests/gdd1/f3-slice-sim-batch-synergy-holdout-0-index.json": {
+      "bytes": 381106,
+      "sha256": "bd45f5784b8101761ddeaaf99876ae62fde4d620a92bd26753cc3c2d4af87179"
+    },
+    "tests/gdd1/f3-slice-sim-batch-synergy-holdout-0.jsonl": {
+      "bytes": 340575199,
+      "sha256": "ac27c5a7f58d58c2d829ea6adb8ea07d12d19bf8001f42b5510de1426ed70119"
+    },
+    "tests/gdd1/f3-slice-sim-batch-synergy-train-0-index.json": {
+      "bytes": 377129,
+      "sha256": "5107299400432402174f358705915087eed1de4c9e63c9c46de7d07feeef98d9"
+    },
+    "tests/gdd1/f3-slice-sim-batch-synergy-train-0.jsonl": {
+      "bytes": 341223298,
+      "sha256": "38547607303ed785d0f6350010d2f8e4b9001ca058c7416f2fc2e9adaa4a93bc"
+    },
+    "tests/gdd1/f3-slice-sim-batch-value-holdout-0-index.json": {
+      "bytes": 377498,
+      "sha256": "ddde581eb1f84d21de758980e17cb392dec272ec30a64cd69a7fc44b936e1ea0"
+    },
+    "tests/gdd1/f3-slice-sim-batch-value-holdout-0.jsonl": {
+      "bytes": 341638220,
+      "sha256": "84ad79179723930c9264c39973b60ecdcc70d334b1b323fc7005406ee20ac522"
+    },
+    "tests/gdd1/f3-slice-sim-batch-value-train-0-index.json": {
+      "bytes": 373480,
+      "sha256": "7bf550baefc37000b19af81e7ad7f19b5b02ee1affc11ac712328e5714a32fa0"
+    },
+    "tests/gdd1/f3-slice-sim-batch-value-train-0.jsonl": {
+      "bytes": 342736185,
+      "sha256": "e7f9d5d7dbffc73765f85a6114f05c9c22f6549db9fa717d42881f50bc28c26c"
+    },
+    "tests/gdd1/f3-slice-sim-before.json": {
+      "bytes": 85126,
+      "sha256": "b69e5a6e4c1269f813ec24b9bb838b9545257a858e8da8fe61bd854c1202eb09"
+    },
+    "tests/gdd1/f3-slice-sim-checks.js": {
+      "bytes": 5439,
+      "sha256": "3c30fb59a09659abf1ea23097d4fd46759edb22e7451d682ab566efe585098cc"
+    },
+    "tests/gdd1/f3-slice-sim-engine.js": {
+      "bytes": 7606,
+      "sha256": "1d20244e4f001060402ab86b18c171515434cda3830861a478651a068ee0b81d"
+    },
+    "tests/gdd1/f3-slice-sim-freeze.js": {
+      "bytes": 4425,
+      "sha256": "ff5887c28d4034f1bc4f77f23a5d5494812bfd08589ffbef7bcf47672e0f750b"
+    },
+    "tests/gdd1/f3-slice-sim-freeze.json": {
+      "bytes": 1324,
+      "sha256": "d276259db83629ab326de465363b8da00c1d6be70bc4ae637c83ac586be1c02a"
+    },
+    "tests/gdd1/f3-slice-sim-gates.js": {
+      "bytes": 5509,
+      "sha256": "f27b638a48490eade01e407a64f2ffb7726df2257ccb7c11da265d07b47d4d4f"
+    },
+    "tests/gdd1/f3-slice-sim-gates.json": {
+      "bytes": 738102,
+      "sha256": "379c5167e1c9e1133911c304beacdbfdb7849955a20f4f39bb46dcbdbf095936"
+    },
+    "tests/gdd1/f3-slice-sim-manifest.js": {
+      "bytes": 2088,
+      "sha256": "4b80abb2907934549bb579d31e5c5fe776e37b1423ef3019d014e86a5ee59a36"
+    },
+    "tests/gdd1/f3-slice-sim-partial-recompute.json": {
+      "bytes": 1214,
+      "sha256": "fbc0baacfafdad7c2e6ac7b6138a79ff4670c7c581c28d15e995d2a8543ebd30"
+    },
+    "tests/gdd1/f3-slice-sim-partial-statistics.json": {
+      "bytes": 4040794,
+      "sha256": "5a61c8e580c761d0547018f20c51008b71ab19f74d9d162216732c2cd1f77772"
+    },
+    "tests/gdd1/f3-slice-sim-pilot-greedy-pilot-index.json": {
+      "bytes": 1309,
+      "sha256": "4b25fd516ea65ee5e59f665bb1218e8200301fb2853dc029fff15e3c570c43fa"
+    },
+    "tests/gdd1/f3-slice-sim-pilot-greedy-pilot.jsonl": {
+      "bytes": 1013342,
+      "sha256": "0729c725f686a261f95df45d3a428b1554255e684565fd837ab2e12a8b39d584"
+    },
+    "tests/gdd1/f3-slice-sim-pilot-random-pilot-index.json": {
+      "bytes": 1321,
+      "sha256": "20dc7f3949a4ef56a7e558636b72084c9f7f2786513e868e6d623de420af25e5"
+    },
+    "tests/gdd1/f3-slice-sim-pilot-random-pilot.jsonl": {
+      "bytes": 915040,
+      "sha256": "c8922a2e19d4e6da01ab4240b6d4cac3a5ef2bd77eda1d5f25f4460d5d7f1fc5"
+    },
+    "tests/gdd1/f3-slice-sim-pilot-synergy-pilot-index.json": {
+      "bytes": 1318,
+      "sha256": "f663e9ef26d163328430ccc0b1a8bf98dbeb73c9c760425c012d585f083df5ee"
+    },
+    "tests/gdd1/f3-slice-sim-pilot-synergy-pilot.jsonl": {
+      "bytes": 1017798,
+      "sha256": "e96da1518664aff623d4dcd6bc2b3777b49db1668e5668bd92d5b2ad485d9950"
+    },
+    "tests/gdd1/f3-slice-sim-pilot-value-pilot-index.json": {
+      "bytes": 1313,
+      "sha256": "4b9fd09ebe1a2adf73cb5a04dc74880b7348bb6f808a2b127c44c71bca0cca55"
+    },
+    "tests/gdd1/f3-slice-sim-pilot-value-pilot.jsonl": {
+      "bytes": 1034977,
+      "sha256": "90c07014f2a4adbcd0958ef66c5638cb780458b9f0ce2c076eca7406f0c0a9eb"
+    },
+    "tests/gdd1/f3-slice-sim-protection.json": {
+      "bytes": 177,
+      "sha256": "046b1f08d8c36db0bb4fd33fcd493c32b42cfb51ab52e9768515ba708dc19e0e"
+    },
+    "tests/gdd1/f3-slice-sim-recompute.json": {
+      "bytes": 1589,
+      "sha256": "d32c194eef9bf28cc6bec207b1c6bcb9fbc546daf5fd03cb12a1d41ab747b049"
+    },
+    "tests/gdd1/f3-slice-sim-report.js": {
+      "bytes": 5602,
+      "sha256": "7882793f6ce392aad363781202619b811090af7d606a8a48d2c2fff33b36d74b"
+    },
+    "tests/gdd1/f3-slice-sim-run.js": {
+      "bytes": 6516,
+      "sha256": "198236c8ea25f7b791c3725579dccac0b8cae2c0db398c2425eda50382f48d09"
+    },
+    "tests/gdd1/f3-slice-sim-seeds.js": {
+      "bytes": 861,
+      "sha256": "6ea297618d3a9a7d85f6138b4ce52925e7ac4fc6792374811bfba980096d9e55"
+    },
+    "tests/gdd1/f3-slice-sim-seeds.json": {
+      "bytes": 1446560,
+      "sha256": "172cd44203fbc7c226477e2743fdf7850e8c47eee4c100e9b214b3178d53d5ac"
+    },
+    "tests/gdd1/f3-slice-sim-statistics.json": {
+      "bytes": 5730966,
+      "sha256": "83558f10e3b0fc9e6776e8d0c2d030a024e4a3271b5bf2885532d6f9cd02f0d0"
+    },
+    "tests/gdd1/f3-slice-sim-stats.js": {
+      "bytes": 7697,
+      "sha256": "63b79ab06b7530483f134e028d10223be90dd54f34ca93a35b540d8200c41ed3"
+    },
+    "tests/gdd1/f3-slice-sim-validation.json": {
+      "bytes": 1086,
+      "sha256": "d5e195f459a5af9045f98cd2bee5ec3ad95c58edd61fe6987494e232bc9a8638"
+    }
+  }
+}

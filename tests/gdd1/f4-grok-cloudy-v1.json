@@ -1,0 +1,44 @@
+{
+  "scope": "GDD 5.G/5.I.1 cloudy_negative natural age only; third appearance converts; no appearance replay",
+  "extraSelfAgeRemoved": true,
+  "spins": [
+    {
+      "i": 1,
+      "type": "cloudy_negative",
+      "age": 1,
+      "epoch": 0,
+      "total": 1
+    },
+    {
+      "i": 2,
+      "type": "cloudy_negative",
+      "age": 2,
+      "epoch": 0,
+      "total": 1
+    },
+    {
+      "i": 3,
+      "type": "blank_facet",
+      "epoch": 1,
+      "total": 3
+    }
+  ],
+  "preset": {
+    "type": "blank_facet",
+    "total": 3,
+    "add": false
+  },
+  "mist": {
+    "ages": [
+      1,
+      2,
+      0
+    ],
+    "types": [
+      "mist_pouch",
+      "mist_pouch",
+      "dew_lantern"
+    ]
+  },
+  "ok": true
+}

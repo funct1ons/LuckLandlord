@@ -1,0 +1,260 @@
+{
+  "scope": "F2 slice-abd-v1 stopped for independent review; excludes self-reference",
+  "files": [
+    {
+      "path": "css/gdd1.css",
+      "bytes": 4699,
+      "sha256": "d28159e4d642c4d4b650daa2036fa53928f0dcccca5f505d0640970d62687740"
+    },
+    {
+      "path": "docs/GAME_DESIGN_V1.md",
+      "bytes": 103576,
+      "sha256": "e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07"
+    },
+    {
+      "path": "docs/GDD1_F2_REPORT.md",
+      "bytes": 12861,
+      "sha256": "eb5c5dd5f5ead850d00a10c7f63cc65ee4093745f9ed56cfcf1871b1d57d0bd4"
+    },
+    {
+      "path": "gdd1.html",
+      "bytes": 1895,
+      "sha256": "caaa700d91e46baa88296d201b6853c93aed5321b708ec7c7cc9dd326b17c62c"
+    },
+    {
+      "path": "js/gdd1/content.js",
+      "bytes": 7631,
+      "sha256": "e6c753479683480c27ad0a3888a058edb8e90a0a4397e218c9e7fa8efe7ad239"
+    },
+    {
+      "path": "js/gdd1/contract.js",
+      "bytes": 4911,
+      "sha256": "b7bd44d05ccdd4ffffe13e4949f7de92f3c7f37e628feaf3a6bf58023e7ea5c9"
+    },
+    {
+      "path": "js/gdd1/controller.js",
+      "bytes": 5274,
+      "sha256": "fb2f2870ea89cbe742c7f8190ad5c48fbacb4e09906545039119214f955afe24"
+    },
+    {
+      "path": "js/gdd1/descriptions.js",
+      "bytes": 11874,
+      "sha256": "d167d5053a1a30811dbc4a787555ba83fd302af293c82c6b17431f79d021d4ca"
+    },
+    {
+      "path": "js/gdd1/offers.js",
+      "bytes": 3200,
+      "sha256": "6d3ec272e2af0e32bc4d604cd5b6b4be53196e3be593a27ca6fee0303ed23295"
+    },
+    {
+      "path": "js/gdd1/resolver.js",
+      "bytes": 13629,
+      "sha256": "a3a16b619c3f910e14a9916b8bfed9556e97bcf2b82b5c77ab93b693e7bb930f"
+    },
+    {
+      "path": "js/gdd1/rng.js",
+      "bytes": 1680,
+      "sha256": "f3f5c055a8e3f4d5e18d355488194f94dfbc28603be7c29a5aab1743bd6704f7"
+    },
+    {
+      "path": "js/gdd1/save.js",
+      "bytes": 4686,
+      "sha256": "2f0d39ceebee434cbbb38c9fb01c6bf73e7ad6328ced84ab022a135d618eebba"
+    },
+    {
+      "path": "js/gdd1/schema.js",
+      "bytes": 17026,
+      "sha256": "50d8eff3f55a7150635795a301f568409c8fd57a4d7a438e2b6ab5aebc9154a9"
+    },
+    {
+      "path": "js/gdd1UI/main.js",
+      "bytes": 8499,
+      "sha256": "578eb0d2457ca7b54db556975f50ca6a387506c00c3943afa36ab9515868bdb7"
+    },
+    {
+      "path": "tests/gdd1/f2-before.json",
+      "bytes": 52550,
+      "sha256": "9b7d6043381fc51d6581ae47821cd966091fa250dc53e3baad63ae03a3a4fe21"
+    },
+    {
+      "path": "tests/gdd1/f2-browser-availability.json",
+      "bytes": 392,
+      "sha256": "4f99f21dc91b87f6bd2482a9dd21006118abd72c533018183caa85a2ffa30d03"
+    },
+    {
+      "path": "tests/gdd1/f2-browser.html",
+      "bytes": 651,
+      "sha256": "fcc32db3867f10e3dd5b8cda81b114bbcffd05a4e7b0230955af81f514438603"
+    },
+    {
+      "path": "tests/gdd1/f2-browser.js",
+      "bytes": 5933,
+      "sha256": "6928fff0a391e9522aba8bcd0eb91a87f4c8248973f494032dc229eb91338190"
+    },
+    {
+      "path": "tests/gdd1/f2-browser.ps1",
+      "bytes": 1086,
+      "sha256": "771fab697d398687ed9e1f9e67d35748fb48de3d373d36839f182034182b3c0a"
+    },
+    {
+      "path": "tests/gdd1/f2-checks.js",
+      "bytes": 17747,
+      "sha256": "245f071ea080044575f30637a83cfdad5e8801656b0b3c3ece03bb0fe9c457a3"
+    },
+    {
+      "path": "tests/gdd1/f2-desktop.png",
+      "bytes": 64345,
+      "sha256": "51b15cc3a62b1bed96d47743d0ac2407c194f81aca698c6247d9b0bdbbcee483"
+    },
+    {
+      "path": "tests/gdd1/f2-edge-file-read-stderr.txt",
+      "bytes": 676,
+      "sha256": "4ada9cdd4730acc233f89cdd2edffd222448fd467b28df1961fdfc39ef429d48"
+    },
+    {
+      "path": "tests/gdd1/f2-edge-file-read.html",
+      "bytes": 28436,
+      "sha256": "fa37f23e12cf15fb95a2a3819d4a806cb702c971190e39546ecef93a9fae0a95"
+    },
+    {
+      "path": "tests/gdd1/f2-edge-file-read.json",
+      "bytes": 42932,
+      "sha256": "ac909abead6b1771555e054de7a0fdd5113db8bbd8ee1d5a704b3a65fd107518"
+    },
+    {
+      "path": "tests/gdd1/f2-edge-file-write-stderr.txt",
+      "bytes": 495,
+      "sha256": "53869e80adeebe54b12a5b9c56e7f009fc3ce002f06baf9c60a809668893ba59"
+    },
+    {
+      "path": "tests/gdd1/f2-edge-file-write.html",
+      "bytes": 28970,
+      "sha256": "bedb624676c864d39f868749e684d785bfff37cd745b39b9ff1925f352d2a632"
+    },
+    {
+      "path": "tests/gdd1/f2-edge-file-write.json",
+      "bytes": 43696,
+      "sha256": "111bd55d0f22fb37eb423581377d778e98ba996c7bc9df4a4f77e6904563f1d1"
+    },
+    {
+      "path": "tests/gdd1/f2-edge-http-read-stderr.txt",
+      "bytes": 676,
+      "sha256": "ab72c73605e1da306d0ea8afdd4d0c92a133e6e4202eab5103eaacc8d97ebe86"
+    },
+    {
+      "path": "tests/gdd1/f2-edge-http-read.html",
+      "bytes": 28438,
+      "sha256": "cdbec5dc1b3f3ad3b492fcc7cd43098d7b88fc522e4c993f431be97c7dcbc88e"
+    },
+    {
+      "path": "tests/gdd1/f2-edge-http-read.json",
+      "bytes": 42932,
+      "sha256": "2467806bfba759e274a6df74f74d5166d978c32098fd122026680ed738542615"
+    },
+    {
+      "path": "tests/gdd1/f2-edge-http-write-stderr.txt",
+      "bytes": 832,
+      "sha256": "8c8b4ce51a5e82faf1b317d07b981b8e26dafcb9816145e374def99b514af871"
+    },
+    {
+      "path": "tests/gdd1/f2-edge-http-write.html",
+      "bytes": 28970,
+      "sha256": "4fa389c4ed3f3744e8e6d251f3317e67499af4133cb8803bcbb8fb250ecaf4da"
+    },
+    {
+      "path": "tests/gdd1/f2-edge-http-write.json",
+      "bytes": 43696,
+      "sha256": "ab8295851533d90806c043ffe75a47fc3bb8276684c96b395c251b513645ac6d"
+    },
+    {
+      "path": "tests/gdd1/f2-extra.js",
+      "bytes": 8082,
+      "sha256": "bed1195d83e79b48b154eeadda850e4b3c5ccd7ff9a255a8f8537decf26f23d3"
+    },
+    {
+      "path": "tests/gdd1/f2-f1-regression.json",
+      "bytes": 27272,
+      "sha256": "17447f669087e5ca7f85f5b339cdfee33a1c6c623f98ff208bc2af1afabcbd40"
+    },
+    {
+      "path": "tests/gdd1/f2-freeze.js",
+      "bytes": 1366,
+      "sha256": "608ff8ccfb6e655664b40a79adb57beb83837841066ea3a7ea5c3cd26b4d2375"
+    },
+    {
+      "path": "tests/gdd1/f2-legacy.json",
+      "bytes": 2316,
+      "sha256": "89a0730f5ca2d52d7cc720db840ab40719fd34c13f6c26b1792f87ed1ec8e7ac"
+    },
+    {
+      "path": "tests/gdd1/f2-mobile.png",
+      "bytes": 45493,
+      "sha256": "070df192c0946812d94cb52db64ef0a39b065d372f31e1dbb94923652336eb23"
+    },
+    {
+      "path": "tests/gdd1/f2-node.json",
+      "bytes": 14462,
+      "sha256": "ac51b7dd4ebf992765839f7fc08f2795074753a6756a67b35221fcfe6a78041e"
+    },
+    {
+      "path": "tests/gdd1/f2-parity.js",
+      "bytes": 1168,
+      "sha256": "093c113710b8df0b4639994deca4c439338d568c7a9fcbc8c6144f9bac68f2a8"
+    },
+    {
+      "path": "tests/gdd1/f2-parity.json",
+      "bytes": 1281,
+      "sha256": "b6bafcfe1df251cafb0befb5840fa4118f61d56232b471112ce554b8283f4c2e"
+    },
+    {
+      "path": "tests/gdd1/f2-protection.json",
+      "bytes": 540,
+      "sha256": "f0831d8cbe813a880694595ba36726b999adc6fe396d63a99c70b3bf26374df6"
+    },
+    {
+      "path": "tests/gdd1/f2-regression-stdout.txt",
+      "bytes": 61306,
+      "sha256": "836681cbffd4152b423eac9ae761b2f14d521e15e45d6b88ec04baf6166f18f7"
+    },
+    {
+      "path": "tests/gdd1/f2-regression.js",
+      "bytes": 601,
+      "sha256": "b5338084f0abc1d9f9d2a356818c4caae60040e73e0b97cd3c7f86df4b7ec171"
+    },
+    {
+      "path": "tests/gdd1/f2-run.js",
+      "bytes": 879,
+      "sha256": "78cabd46e188f02f4cdb837582089750675c4acf9fa780a43f88d50eeaba170e"
+    },
+    {
+      "path": "tests/gdd1/f2-screen-desktop-stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/gdd1/f2-screen-mobile-stderr.txt",
+      "bytes": 239,
+      "sha256": "235da006730894aba48c797061597803ca510c4cb81a76ac5f42f5d4038f61f4"
+    },
+    {
+      "path": "tests/gdd1/f2-server.js",
+      "bytes": 607,
+      "sha256": "659adef7710ce02c4f5b3e675f62107536bfe9fdfdc06ee884227a5442505525"
+    },
+    {
+      "path": "tests/gdd1/f2-verify.js",
+      "bytes": 1455,
+      "sha256": "d5873576920847d20cb1230d77890250cebe7bfcd3ef2e68d37993e0002290da"
+    },
+    {
+      "path": "tests/gdd1/f2-visual.html",
+      "bytes": 219,
+      "sha256": "1761e0d1444f8e1bf3cd2e73cf23494ce4a976339f0be2c14c6ed50783dc93a7"
+    },
+    {
+      "path": "tests/gdd1/protected-before.json",
+      "bytes": 60821,
+      "sha256": "8b47a1950e561b55fdd761463e3d8854a1999ee3eb950f3f580ad53b5ae0751e"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+﻿[
+    {
+        "path":  "js/gdd1/full-content.js",
+        "bytes":  5877,
+        "sha256":  "BACD645296FAEF5927F9409B18F06CF6ACCCC1C04A6B59D5B7FB131AE26FEDEC"
+    },
+    {
+        "path":  "js/gdd1/full-effects.js",
+        "bytes":  8035,
+        "sha256":  "74040ACE2AC8F3EA5F5B45BC512403587C98BE2FAFDE149069136C75782F5964"
+    },
+    {
+        "path":  "js/gdd1/full-controller.js",
+        "bytes":  5995,
+        "sha256":  "02C9B1E3BC6449CE026A68BA9F0AC78DDBEF405BF4235F2481E0FFC8B25D79A3"
+    },
+    {
+        "path":  "js/gdd1/offers.js",
+        "bytes":  3212,
+        "sha256":  "F8971B2071C9B0AC221206CC12E17374ABBDBC60FB14C8E8967F3EDB0A685CBB"
+    },
+    {
+        "path":  "js/gdd1/resolver.js",
+        "bytes":  16532,
+        "sha256":  "4F7336270EE34F90838FB85804AF7D270EE6477B3BF77C8E0AA95BFEB4CF1DB5"
+    },
+    {
+        "path":  "js/gdd1/schema.js",
+        "bytes":  17026,
+        "sha256":  "50D8EFF3F55A7150635795A301F568409C8FD57A4D7A438E2B6AB5AEBC9154A9"
+    },
+    {
+        "path":  "js/gdd1UI/main.js",
+        "bytes":  8852,
+        "sha256":  "DF6F13554FEABEF9CD873FB273DB123B7700A35E1682C3AF01B4CC5482B1693F"
+    },
+    {
+        "path":  "gdd1.html",
+        "bytes":  2039,
+        "sha256":  "DF9CF124414906BABF8DD504237D3849ED751D770533B62DB8E7124831D879BB"
+    },
+    {
+        "path":  "docs/GDD1_F4_REPORT.md",
+        "bytes":  2596,
+        "sha256":  "2BD91B07B0B7AA65F170FC4285474E4E9F45DF25ECBB05F0E2D075B74538B08D"
+    },
+    {
+        "path":  "tests/gdd1/f4-run.js",
+        "bytes":  1739,
+        "sha256":  "6AD5163E3A84EA444C12C2DEA80F64CD0E7616A63C9397760B6538CA0CB3C687"
+    },
+    {
+        "path":  "tests/gdd1/f4-contract-cases.js",
+        "bytes":  3383,
+        "sha256":  "819193D6E538727B31F14DBD258596D5C1007F42C9C9AAF73078C9DDBD981373"
+    },
+    {
+        "path":  "tests/gdd1/f4-behavior-cases.js",
+        "bytes":  4279,
+        "sha256":  "6D4A335304C505D4D020F5351530304BD60D29A24C6E0A08C68A919B17F0C11C"
+    },
+    {
+        "path":  "tests/gdd1/f4-id-matrix.js",
+        "bytes":  5123,
+        "sha256":  "0E26E31608364F401E3F406ED69E6CAE80EFB4A4A8D87B354234A5A1655A7A46"
+    },
+    {
+        "path":  "tests/gdd1/f4-browser.html",
+        "bytes":  1459,
+        "sha256":  "D19AFA5A881B5C473A914B023BA568242E0A153F5F0BC5C9D5D40EB07BF800E7"
+    }
+]

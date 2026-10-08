@@ -1,0 +1,74 @@
+{
+    "generated":  "current",
+    "total":  23,
+    "byId":  {
+                 "sorting_tong":  [
+                                      "sorting_tong/single-target",
+                                      "sorting_tong/no-target-boundary",
+                                      "sorting_tong/negative-target"
+                                  ],
+                 "furnace_auditor":  [
+                                         "furnace_auditor/two-scrap-types",
+                                         "furnace_auditor/same-type-negative",
+                                         "furnace_auditor/one-type-negative"
+                                     ],
+                 "heat_clerk":  [
+                                    "heat_clerk/scrap-consume-growth",
+                                    "heat_clerk/once-per-spin",
+                                    "heat_clerk/non-scrap-no-growth"
+                                ],
+                 "sieve_drum":  [
+                                    "sieve_drum/transform-junk",
+                                    "sieve_drum/once-per-spin",
+                                    "sieve_drum/does-not-consume"
+                                ],
+                 "event-cause":  [
+                                     "event-cause/consume-destroy-no-double"
+                                 ],
+                 "spent_gasket":  [
+                                      "spent_gasket/negative-ledger",
+                                      "spent_gasket/not-candidate"
+                                  ],
+                 "clinker_router":  [
+                                        "clinker_router/destroy-junk",
+                                        "clinker_router/pressure-counter",
+                                        "clinker_router/consume-cause-no-listen"
+                                    ],
+                 "save":  [
+                              "save/restore-after-recycling"
+                          ],
+                 "copper_burr":  [
+                                     "copper_burr/self-add",
+                                     "copper_burr/no-machine",
+                                     "copper_burr/machine-not-target"
+                                 ],
+                 "uid":  [
+                             "uid/permanent/clear-counter"
+                         ]
+             },
+    "names":  [
+                  "sorting_tong/single-target",
+                  "sorting_tong/no-target-boundary",
+                  "sorting_tong/negative-target",
+                  "copper_burr/self-add",
+                  "copper_burr/no-machine",
+                  "copper_burr/machine-not-target",
+                  "spent_gasket/negative-ledger",
+                  "spent_gasket/not-candidate",
+                  "sieve_drum/transform-junk",
+                  "sieve_drum/once-per-spin",
+                  "sieve_drum/does-not-consume",
+                  "heat_clerk/scrap-consume-growth",
+                  "heat_clerk/once-per-spin",
+                  "heat_clerk/non-scrap-no-growth",
+                  "clinker_router/destroy-junk",
+                  "clinker_router/pressure-counter",
+                  "clinker_router/consume-cause-no-listen",
+                  "furnace_auditor/two-scrap-types",
+                  "furnace_auditor/same-type-negative",
+                  "furnace_auditor/one-type-negative",
+                  "event-cause/consume-destroy-no-double",
+                  "uid/permanent/clear-counter",
+                  "save/restore-after-recycling"
+              ]
+}

@@ -1,0 +1,40 @@
+﻿PASS F1 pressure_pouch 4th spin exact reward/counter/uid
+PASS F2 pressure_pouch cap preserves counter at 3
+PASS F3 feed_valve consumes one fuel exact reward and target uid
+PASS F4 feed_valve threshold release exact 17 and reset
+PASS F5 pause_dial raw add +1 plus adjacent pressure +2
+PASS F6 surge_vessel ordinary output suppressed through third release
+PASS F7 cracked_regulator deterministic success +8 no spawn
+PASS F8 cracked_regulator deterministic failure -6 and exactly one gasket
+PASS F9 safety_shim reduces one failure by max4 without changing spawn
+PASS F10 two risk sources choose stable distinct guards each once
+PASS F11 failed risk generation is not blocked by guard
+PASS F12 release_spire must exclude target already at self-release threshold
+PASS F13 release_spire does not double release a target already at self threshold
+PASS F14 demand coupler uses opening cash snapshot and remaining window
+PASS F15 demand coupler rejects window >2 and does not spawn
+PASS F16 command save/restore preserves pressure counter and next UID
+PASS F17 schema rejects negative permanent and unknown instance field
+PASS F18 schema rejects unsafe integer and unknown command/action
+PASS F19 no risk effect on non-pressure source
+PASS F20 off-board command and save roundtrip do not advance pressure
+PASS F21 release selector skips pressure below3 and selects next legal UID
+PASS F22 two towers compete for exactly three pressure once
+PASS F23 counter schema rejects -1
+PASS F23 counter schema rejects 9007199254740992
+PASS F24 counter schema rejects unknown key
+PASS F25 counter action schema {"delta":-1}
+PASS F25 counter action schema {"max":-1}
+PASS F25 counter action schema {"reset":-1}
+PASS F25 counter action schema {"at":9007199254740992}
+PASS F25 counter action schema {"unknown":1}
+PASS F26 release action requires ratio
+PASS F27 risk loss must be safe integer
+PASS F28 risk guard applies only to pressure risks
+PASS F29 guard does not wrap row edge
+PASS F30 demand equality cash excludes benefit
+PASS F31 command spin then choose credits exact pressure ordinary income
+PASS F32 short risk loss capped at zero not positive
+PASS F33 one guard only first of two failures and resets next round
+PASS F34 recycling migration exact router2 pouch1 and UID target
+39/39 passed

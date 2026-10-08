@@ -1,0 +1,19 @@
+﻿'use strict';
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto');
+const root=path.resolve(__dirname,'../..'),sha=b=>crypto.createHash('sha256').update(b).digest('hex'),read=f=>fs.readFileSync(path.join(root,f),'utf8');
+function rows(dir=root){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(x=>{const full=path.join(dir,x.name),rel=path.relative(root,full).replaceAll('\\','/');if(x.name==='.pi'||rel==='docs/GDD1_F1_AUDIT.md'||rel.startsWith('tests/gdd1/audit-'))return [];if(x.isDirectory())return rows(full);const b=fs.readFileSync(full);return [{path:rel,bytes:b.length,sha256:sha(b)}];});}
+const snapshot=path.join(__dirname,'audit-before.json');if(!fs.existsSync(snapshot))fs.writeFileSync(snapshot,JSON.stringify({purpose:'Audit entry snapshot, not replacement freeze',files:rows()},null,2)+'\n');
+const entry=JSON.parse(fs.readFileSync(snapshot,'utf8')),ctx={window:{},console};vm.createContext(ctx);
+for(const f of ['contract','rng','schema','save'])vm.runInContext(read('js/gdd1/'+f+'.js'),ctx);
+ctx.window.GDD1_TEST_VECTORS=JSON.parse(read('tests/gdd1/rng-vectors.json'));ctx.window.GDD1_HAND_ORACLES=JSON.parse(read('tests/gdd1/hand-oracles.json'));
+for(const f of ['foundation-tests','oracle-integrity','audit-checks'])vm.runInContext(read('tests/gdd1/'+f+'.js'),ctx);
+function verify(files){return files.map(row=>{const b=fs.readFileSync(path.join(root,row.path));return {...row,ok:row.bytes===b.length&&row.sha256===sha(b)};});}
+function hash(identity){let h=2166136261n;for(const b of Buffer.from(identity,'utf16le'))h=((h^BigInt(b))*16777619n)&0xffffffffn;return Number(h||1n);}
+function step(x){let n=BigInt(x);n^=(n<<13n)&0xffffffffn;n^=n>>17n;n^=(n<<5n)&0xffffffffn;return Number(n&0xffffffffn);}
+(async()=>{const base=[...ctx.window.runGdd1FoundationTests(),...ctx.window.runGdd1OracleIntegrityTests()],audit=await ctx.window.runGdd1AuditChecks(),F=ctx.window.GDD1,rng=[];
+for(const profile of ['full-v1','slice-abd-v1'])for(const seed of ['F1-GOLDEN','',String.fromCodePoint(38654,28207,127787),'a"\\\n',String.fromCharCode(0xd800),'e\u0301','\u00e9','x'.repeat(1024)])for(const stream of ['draw','effect','symbolOffer','itemOffer','event']){const identity=JSON.stringify(['GDD1','GDD1',profile,'Normal',seed,stream]);let expected=hash(identity);const r=F.createRng(seed,profile,'Normal');let ok=r[stream].state===expected;for(let i=0;i<256;i++){expected=step(expected);ok=ok&&F.nextUint32(r,stream)===expected;}rng.push({profile,seed,stream,outputs:256,ok,final:r[stream]});}
+const original=verify(JSON.parse(read('tests/gdd1/protected-before.json')).files),f1=verify(JSON.parse(read('tests/gdd1/f1-deliverables.json')).files),current=verify(entry.files),summary=a=>({total:a.length,unchanged:a.filter(x=>x.ok).length});
+const result={node:process.version,baseline:{total:base.length,passed:base.filter(x=>x.ok).length,cases:base},audit,rngReference:{method:'Independent BigInt byte FNV and unsigned xorshift',identities:rng.length,outputs:rng.length*256,passed:rng.filter(x=>x.ok).length,rows:rng},protection:{original:summary(original),f1Deliverables:summary(f1),auditEntry:summary(current),failures:[...original,...f1,...current].filter(x=>!x.ok)}};
+fs.writeFileSync(path.join(__dirname,'f2-fix-f1-node.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({baseline:result.baseline.passed+'/'+base.length,auditReproductions:audit.passed+'/'+audit.total,findings:audit.findings.map(x=>x.id),rng:result.rngReference.passed+'/'+rng.length,protection:result.protection},null,2));process.exitCode=base.some(x=>!x.ok)||audit.cases.some(x=>!x.ok)||rng.some(x=>!x.ok)||result.protection.failures.length?1:0;
+})().catch(e=>{console.error(e);process.exitCode=1;});
+

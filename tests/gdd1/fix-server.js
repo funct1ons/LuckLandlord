@@ -1,0 +1,7 @@
+'use strict';
+const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'../..');
+http.createServer((q,r)=>{const n=new URL(q.url,'http://127.0.0.1').pathname,f=path.resolve(root,'.'+n);
+ if((!n.startsWith('/tests/gdd1/')&&!n.startsWith('/js/gdd1/'))||!f.startsWith(root+path.sep)){r.writeHead(403);return r.end()}
+ fs.readFile(f,(e,d)=>{if(e){r.writeHead(404);return r.end()}r.setHeader('Content-Type',f.endsWith('.js')?'application/javascript':f.endsWith('.html')?'text/html':'application/json');r.end(d)});
+}).listen(8319,'127.0.0.1',()=>console.log('fix server ready on 127.0.0.1:8319'));

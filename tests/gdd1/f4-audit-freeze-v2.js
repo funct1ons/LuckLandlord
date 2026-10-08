@@ -1,0 +1,5 @@
+'use strict';
+const fs=require('fs'),crypto=require('crypto'),path=require('path');
+const root=path.resolve(__dirname,'../..'),freeze=JSON.parse(fs.readFileSync(path.join(__dirname,'f4-review-freeze-v1.json'))),results=[];
+for(const e of freeze.entries){const p=path.join(root,e.path);let ok=false,error=null,bytes=null,sha256=null;try{const b=fs.readFileSync(p);bytes=b.length;sha256=crypto.createHash('sha256').update(b).digest('hex');ok=bytes===e.bytes&&sha256===e.sha256}catch(x){error=x.message}results.push({path:e.path,ok,expected:{bytes:e.bytes,sha256:e.sha256},actual:{bytes,sha256},error})}
+const out={scope:'F4 supplemental protected 158-entry freeze verification',entryCount:freeze.entryCount,manifestEntries:freeze.entries.length,matched:results.filter(x=>x.ok).length,mismatched:results.filter(x=>!x.ok),gddSha256:freeze.gddSha256};fs.writeFileSync(path.join(__dirname,'f4-audit-freeze-v2-results.json'),JSON.stringify(out,null,2));console.log(JSON.stringify({entryCount:out.entryCount,manifestEntries:out.manifestEntries,matched:out.matched,mismatched:out.mismatched.length},null,2));if(out.mismatched.length)process.exitCode=1;

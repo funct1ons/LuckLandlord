@@ -1,0 +1,2591 @@
+{
+  "scope": "11 hand-calculated Node reference cases replayed in real Edge file and HTTP, exact full engine state/action facts/ordinary and reward ledgers/five RNG streams; separate from real UI20 checks",
+  "results": [
+    {
+      "route": "file",
+      "cases": [
+        {
+          "name": "cycle-third",
+          "total": 10,
+          "reward": 0,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/appearance",
+              "action": "cycle",
+              "source": "u13",
+              "target": "u13",
+              "amount": 1,
+              "facts": {
+                "effectKey": "beat_spool:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "beat_spool",
+                "afterType": "beat_spool",
+                "beforeTags": [
+                  "resonance",
+                  "machine"
+                ],
+                "afterTags": [
+                  "resonance",
+                  "machine"
+                ],
+                "cause": "cycle",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": 0,
+              "depth": 1,
+              "phase": "step4/appearance",
+              "action": "add",
+              "source": "u13",
+              "target": "u13",
+              "amount": 9,
+              "facts": {
+                "effectKey": "beat_spool:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "beat_spool",
+                "afterType": "beat_spool",
+                "beforeTags": [
+                  "resonance",
+                  "machine"
+                ],
+                "afterTags": [
+                  "resonance",
+                  "machine"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 3677449091,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 222992756,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 737536661,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 1863073086,
+              "consumed": 0
+            },
+            "event": {
+              "state": 3600489607,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "pouch-release",
+          "total": 11,
+          "reward": 10,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/pressure-injection",
+              "action": "pressureIncrease",
+              "source": "u13",
+              "target": "u13",
+              "amount": 1,
+              "facts": {
+                "effectKey": "pressure_pouch:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "pressure_pouch",
+                "afterType": "pressure_pouch",
+                "beforeTags": [
+                  "pressure"
+                ],
+                "afterTags": [
+                  "pressure"
+                ],
+                "cause": "pressureIncrease",
+                "actualIncrease": 1,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": null,
+              "depth": 0,
+              "phase": "step7/pressure",
+              "action": "release",
+              "source": "u13",
+              "target": "u13",
+              "amount": 10,
+              "facts": {
+                "effectKey": "pressure-release",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "pressure_pouch",
+                "afterType": "pressure_pouch",
+                "beforeTags": [
+                  "pressure"
+                ],
+                "afterTags": [
+                  "pressure"
+                ],
+                "cause": "release",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 2,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step7/pressure",
+              "action": "reward",
+              "source": "u13",
+              "target": "u13",
+              "amount": 10,
+              "facts": {
+                "effectKey": "pressure-release",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "pressure_pouch",
+                "afterType": "pressure_pouch",
+                "beforeTags": [
+                  "pressure"
+                ],
+                "afterTags": [
+                  "pressure"
+                ],
+                "cause": "reward",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 1406531960,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 2540762687,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 686538438,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 3753350493,
+              "consumed": 0
+            },
+            "event": {
+              "state": 2779269300,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "surge-independent-zero",
+          "total": 16,
+          "reward": 16,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/pressure-injection",
+              "action": "pressureIncrease",
+              "source": "u13",
+              "target": "u13",
+              "amount": 1,
+              "facts": {
+                "effectKey": "surge_vessel:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "surge_vessel",
+                "afterType": "surge_vessel",
+                "beforeTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "afterTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "cause": "pressureIncrease",
+                "actualIncrease": 1,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": null,
+              "depth": 0,
+              "phase": "step7/pressure",
+              "action": "release",
+              "source": "u13",
+              "target": "u13",
+              "amount": 16,
+              "facts": {
+                "effectKey": "pressure-release",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "surge_vessel",
+                "afterType": "surge_vessel",
+                "beforeTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "afterTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "cause": "release",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 2,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step7/pressure",
+              "action": "reward",
+              "source": "u13",
+              "target": "u13",
+              "amount": 16,
+              "facts": {
+                "effectKey": "pressure-release",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "surge_vessel",
+                "afterType": "surge_vessel",
+                "beforeTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "afterTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "cause": "reward",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 3970147455,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 970015720,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 1337658649,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 4106141026,
+              "consumed": 0
+            },
+            "event": {
+              "state": 3878317387,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "feed-immediate-pressure",
+          "total": 18,
+          "reward": 17,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step3/age",
+              "action": "age",
+              "source": "u14",
+              "target": "u14",
+              "amount": 1,
+              "facts": {
+                "effectKey": "natural-age",
+                "sourcePos": 1,
+                "targetPos": 1,
+                "beforeType": "ash_felt",
+                "afterType": "ash_felt",
+                "beforeTags": [
+                  "scrap",
+                  "fuel"
+                ],
+                "afterTags": [
+                  "scrap",
+                  "fuel"
+                ],
+                "cause": "age",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": null,
+              "depth": 0,
+              "phase": "step5/structural-event",
+              "action": "consume",
+              "source": "u13",
+              "target": "u14",
+              "amount": null,
+              "facts": {
+                "effectKey": "feed_valve:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "ash_felt",
+                "afterType": null,
+                "beforeTags": [
+                  "scrap",
+                  "fuel"
+                ],
+                "afterTags": [],
+                "cause": "consume",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 2,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step5/structural-event",
+              "action": "spawn",
+              "source": "u14",
+              "target": null,
+              "amount": null,
+              "facts": {
+                "effectKey": "ash_felt:0",
+                "sourcePos": 1,
+                "targetPos": null,
+                "beforeType": null,
+                "afterType": "copper_burr",
+                "beforeTags": [],
+                "afterTags": [
+                  "scrap",
+                  "product",
+                  "cargo"
+                ],
+                "cause": "spawn",
+                "actualIncrease": 0,
+                "createdUid": "u15",
+                "skipReason": null
+              }
+            },
+            {
+              "id": 3,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step5/structural-event",
+              "action": "destroy",
+              "source": "u13",
+              "target": "u14",
+              "amount": null,
+              "facts": {
+                "effectKey": "feed_valve:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "ash_felt",
+                "afterType": null,
+                "beforeTags": [
+                  "scrap",
+                  "fuel"
+                ],
+                "afterTags": [],
+                "cause": "consume",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 4,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step5/structural-event",
+              "action": "reward",
+              "source": "u13",
+              "target": "u14",
+              "amount": 3,
+              "facts": {
+                "effectKey": "feed_valve:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "ash_felt",
+                "afterType": "ash_felt",
+                "beforeTags": [
+                  "scrap",
+                  "fuel"
+                ],
+                "afterTags": [
+                  "scrap",
+                  "fuel"
+                ],
+                "cause": "reward",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 5,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step5/structural-event",
+              "action": "pressureIncrease",
+              "source": "u13",
+              "target": "u13",
+              "amount": 2,
+              "facts": {
+                "effectKey": "feed_valve:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "feed_valve",
+                "afterType": "feed_valve",
+                "beforeTags": [
+                  "machine",
+                  "pressure"
+                ],
+                "afterTags": [
+                  "machine",
+                  "pressure"
+                ],
+                "cause": "pressureIncrease",
+                "actualIncrease": 2,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 6,
+              "parent": null,
+              "depth": 0,
+              "phase": "step7/pressure",
+              "action": "release",
+              "source": "u13",
+              "target": "u13",
+              "amount": 14,
+              "facts": {
+                "effectKey": "pressure-release",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "feed_valve",
+                "afterType": "feed_valve",
+                "beforeTags": [
+                  "machine",
+                  "pressure"
+                ],
+                "afterTags": [
+                  "machine",
+                  "pressure"
+                ],
+                "cause": "release",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 7,
+              "parent": 6,
+              "depth": 1,
+              "phase": "step7/pressure",
+              "action": "reward",
+              "source": "u13",
+              "target": "u13",
+              "amount": 14,
+              "facts": {
+                "effectKey": "pressure-release",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "feed_valve",
+                "afterType": "feed_valve",
+                "beforeTags": [
+                  "machine",
+                  "pressure"
+                ],
+                "afterTags": [
+                  "machine",
+                  "pressure"
+                ],
+                "cause": "reward",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 758855235,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 4256750900,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 2224552405,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 1315424894,
+              "consumed": 0
+            },
+            "event": {
+              "state": 4200991687,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "spire-spend3",
+          "total": 17,
+          "reward": 8,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step7/pressure",
+              "action": "release",
+              "source": "u13",
+              "target": "u14",
+              "amount": 3,
+              "facts": {
+                "effectKey": "release_spire:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "reserve_facet",
+                "afterType": "reserve_facet",
+                "beforeTags": [
+                  "crystal",
+                  "pressure"
+                ],
+                "afterTags": [
+                  "crystal",
+                  "pressure"
+                ],
+                "cause": "release",
+                "actualIncrease": -3,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": 0,
+              "depth": 1,
+              "phase": "step7/pressure",
+              "action": "multiply",
+              "source": "u13",
+              "target": "u14",
+              "amount": null,
+              "facts": {
+                "effectKey": "release_spire:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "reserve_facet",
+                "afterType": "reserve_facet",
+                "beforeTags": [
+                  "crystal",
+                  "pressure"
+                ],
+                "afterTags": [
+                  "crystal",
+                  "pressure"
+                ],
+                "cause": "multiply",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 2,
+              "parent": 0,
+              "depth": 1,
+              "phase": "step7/pressure",
+              "action": "reward",
+              "source": "u13",
+              "target": "u14",
+              "amount": 8,
+              "facts": {
+                "effectKey": "release_spire:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "reserve_facet",
+                "afterType": "reserve_facet",
+                "beforeTags": [
+                  "crystal",
+                  "pressure"
+                ],
+                "afterTags": [
+                  "crystal",
+                  "pressure"
+                ],
+                "cause": "reward",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 3648153050,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 4011353341,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 3183467476,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 459825167,
+              "consumed": 0
+            },
+            "event": {
+              "state": 43977734,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "copy-template",
+          "total": 7,
+          "reward": 0,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/appearance",
+              "action": "add",
+              "source": "u14",
+              "target": "u14",
+              "amount": 1,
+              "facts": {
+                "effectKey": "pause_dial:0",
+                "sourcePos": 1,
+                "targetPos": 1,
+                "beforeType": "pause_dial",
+                "afterType": "pause_dial",
+                "beforeTags": [
+                  "pressure",
+                  "support"
+                ],
+                "afterTags": [
+                  "pressure",
+                  "support"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/copy",
+              "action": "copy",
+              "source": "u13",
+              "target": "u14",
+              "amount": 1,
+              "facts": {
+                "effectKey": "offset_reader:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "pause_dial",
+                "afterType": "pause_dial",
+                "beforeTags": [
+                  "pressure",
+                  "support"
+                ],
+                "afterTags": [
+                  "pressure",
+                  "support"
+                ],
+                "cause": "copy",
+                "actualIncrease": 1,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 2,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step4/copy",
+              "action": "add",
+              "source": "u13",
+              "target": "u13",
+              "amount": 1,
+              "facts": {
+                "effectKey": "offset_reader:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "offset_reader",
+                "afterType": "offset_reader",
+                "beforeTags": [
+                  "magic",
+                  "machine"
+                ],
+                "afterTags": [
+                  "magic",
+                  "machine"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 3267789389,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 3807214906,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 2072873435,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 1095887840,
+              "consumed": 0
+            },
+            "event": {
+              "state": 2202651689,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "constants",
+          "total": 9,
+          "reward": 0,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/appearance",
+              "action": "add",
+              "source": "u13",
+              "target": "u13",
+              "amount": 2,
+              "facts": {
+                "effectKey": "blank_facet:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "blank_facet",
+                "afterType": "blank_facet",
+                "beforeTags": [
+                  "magic",
+                  "crystal"
+                ],
+                "afterTags": [
+                  "magic",
+                  "crystal"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/appearance",
+              "action": "add",
+              "source": "u14",
+              "target": "u14",
+              "amount": 1,
+              "facts": {
+                "effectKey": "cleared_stub:0",
+                "sourcePos": 1,
+                "targetPos": 1,
+                "beforeType": "cleared_stub",
+                "afterType": "cleared_stub",
+                "beforeTags": [
+                  "contract",
+                  "product",
+                  "cargo"
+                ],
+                "afterTags": [
+                  "contract",
+                  "product",
+                  "cargo"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 1182707592,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 2325808687,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 249212022,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 2475923821,
+              "consumed": 0
+            },
+            "event": {
+              "state": 4027935812,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "cash-snapshot",
+          "total": 5,
+          "reward": 0,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/appearance",
+              "action": "add",
+              "source": "u13",
+              "target": "u13",
+              "amount": 4,
+              "facts": {
+                "effectKey": "lean_receipt:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "lean_receipt",
+                "afterType": "lean_receipt",
+                "beforeTags": [
+                  "contract"
+                ],
+                "afterTags": [
+                  "contract"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 2089022909,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 3811519818,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 3900061803,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 3790139152,
+              "consumed": 0
+            },
+            "event": {
+              "state": 981964697,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "risk-negative",
+          "total": -4,
+          "reward": 0,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/risk",
+              "action": "risk",
+              "source": "u13",
+              "target": "u13",
+              "amount": -6,
+              "facts": {
+                "effectKey": "cracked_regulator:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "cracked_regulator",
+                "afterType": "cracked_regulator",
+                "beforeTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "afterTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "cause": "risk-failure",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": 0,
+              "depth": 1,
+              "phase": "step4/risk",
+              "action": "add",
+              "source": "u13",
+              "target": "u13",
+              "amount": -6,
+              "facts": {
+                "effectKey": "cracked_regulator:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "cracked_regulator",
+                "afterType": "cracked_regulator",
+                "beforeTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "afterTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 2,
+              "parent": 0,
+              "depth": 1,
+              "phase": "step4/risk",
+              "action": "spawn",
+              "source": "u13",
+              "target": null,
+              "amount": null,
+              "facts": {
+                "effectKey": "cracked_regulator:0",
+                "sourcePos": 0,
+                "targetPos": null,
+                "beforeType": null,
+                "afterType": "spent_gasket",
+                "beforeTags": [],
+                "afterTags": [
+                  "scrap",
+                  "junk"
+                ],
+                "cause": "spawn",
+                "actualIncrease": 0,
+                "createdUid": "u14",
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 3395497810,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 3746999292,
+              "consumed": 1
+            },
+            "symbolOffer": {
+              "state": 2866647196,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 474877943,
+              "consumed": 0
+            },
+            "event": {
+              "state": 3637216142,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "consumer-base-reward",
+          "total": 10,
+          "reward": 9,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/appearance",
+              "action": "add",
+              "source": "u14",
+              "target": "u14",
+              "amount": 1,
+              "facts": {
+                "effectKey": "cleared_stub:0",
+                "sourcePos": 1,
+                "targetPos": 1,
+                "beforeType": "cleared_stub",
+                "afterType": "cleared_stub",
+                "beforeTags": [
+                  "contract",
+                  "product",
+                  "cargo"
+                ],
+                "afterTags": [
+                  "contract",
+                  "product",
+                  "cargo"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": null,
+              "depth": 0,
+              "phase": "step5/structural-event",
+              "action": "consume",
+              "source": "u13",
+              "target": "u14",
+              "amount": null,
+              "facts": {
+                "effectKey": "sorting_runner:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "cleared_stub",
+                "afterType": null,
+                "beforeTags": [
+                  "contract",
+                  "product",
+                  "cargo"
+                ],
+                "afterTags": [],
+                "cause": "consume",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 2,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step5/structural-event",
+              "action": "destroy",
+              "source": "u13",
+              "target": "u14",
+              "amount": null,
+              "facts": {
+                "effectKey": "sorting_runner:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "cleared_stub",
+                "afterType": null,
+                "beforeTags": [
+                  "contract",
+                  "product",
+                  "cargo"
+                ],
+                "afterTags": [],
+                "cause": "consume",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 3,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step5/structural-event",
+              "action": "reward",
+              "source": "u13",
+              "target": "u14",
+              "amount": 9,
+              "facts": {
+                "effectKey": "sorting_runner:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "cleared_stub",
+                "afterType": "cleared_stub",
+                "beforeTags": [
+                  "contract",
+                  "product",
+                  "cargo"
+                ],
+                "afterTags": [
+                  "contract",
+                  "product",
+                  "cargo"
+                ],
+                "cause": "reward",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 80351369,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 3486137214,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 281309247,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 2912909700,
+              "consumed": 0
+            },
+            "event": {
+              "state": 1085953101,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "cycle-mechanism-item",
+          "total": 10,
+          "reward": 0,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/appearance",
+              "action": "cycle",
+              "source": "u13",
+              "target": "u13",
+              "amount": 1,
+              "facts": {
+                "effectKey": "beat_spool:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "beat_spool",
+                "afterType": "beat_spool",
+                "beforeTags": [
+                  "resonance",
+                  "machine"
+                ],
+                "afterTags": [
+                  "resonance",
+                  "machine"
+                ],
+                "cause": "cycle",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": 0,
+              "depth": 1,
+              "phase": "step4/appearance",
+              "action": "add",
+              "source": "u13",
+              "target": "u13",
+              "amount": 9,
+              "facts": {
+                "effectKey": "beat_spool:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "beat_spool",
+                "afterType": "beat_spool",
+                "beforeTags": [
+                  "resonance",
+                  "machine"
+                ],
+                "afterTags": [
+                  "resonance",
+                  "machine"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 3305397107,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 1738561412,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 4078453285,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 1970396974,
+              "consumed": 0
+            },
+            "event": {
+              "state": 3080044727,
+              "consumed": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "route": "http",
+      "cases": [
+        {
+          "name": "cycle-third",
+          "total": 10,
+          "reward": 0,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/appearance",
+              "action": "cycle",
+              "source": "u13",
+              "target": "u13",
+              "amount": 1,
+              "facts": {
+                "effectKey": "beat_spool:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "beat_spool",
+                "afterType": "beat_spool",
+                "beforeTags": [
+                  "resonance",
+                  "machine"
+                ],
+                "afterTags": [
+                  "resonance",
+                  "machine"
+                ],
+                "cause": "cycle",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": 0,
+              "depth": 1,
+              "phase": "step4/appearance",
+              "action": "add",
+              "source": "u13",
+              "target": "u13",
+              "amount": 9,
+              "facts": {
+                "effectKey": "beat_spool:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "beat_spool",
+                "afterType": "beat_spool",
+                "beforeTags": [
+                  "resonance",
+                  "machine"
+                ],
+                "afterTags": [
+                  "resonance",
+                  "machine"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 3677449091,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 222992756,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 737536661,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 1863073086,
+              "consumed": 0
+            },
+            "event": {
+              "state": 3600489607,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "pouch-release",
+          "total": 11,
+          "reward": 10,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/pressure-injection",
+              "action": "pressureIncrease",
+              "source": "u13",
+              "target": "u13",
+              "amount": 1,
+              "facts": {
+                "effectKey": "pressure_pouch:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "pressure_pouch",
+                "afterType": "pressure_pouch",
+                "beforeTags": [
+                  "pressure"
+                ],
+                "afterTags": [
+                  "pressure"
+                ],
+                "cause": "pressureIncrease",
+                "actualIncrease": 1,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": null,
+              "depth": 0,
+              "phase": "step7/pressure",
+              "action": "release",
+              "source": "u13",
+              "target": "u13",
+              "amount": 10,
+              "facts": {
+                "effectKey": "pressure-release",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "pressure_pouch",
+                "afterType": "pressure_pouch",
+                "beforeTags": [
+                  "pressure"
+                ],
+                "afterTags": [
+                  "pressure"
+                ],
+                "cause": "release",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 2,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step7/pressure",
+              "action": "reward",
+              "source": "u13",
+              "target": "u13",
+              "amount": 10,
+              "facts": {
+                "effectKey": "pressure-release",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "pressure_pouch",
+                "afterType": "pressure_pouch",
+                "beforeTags": [
+                  "pressure"
+                ],
+                "afterTags": [
+                  "pressure"
+                ],
+                "cause": "reward",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 1406531960,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 2540762687,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 686538438,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 3753350493,
+              "consumed": 0
+            },
+            "event": {
+              "state": 2779269300,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "surge-independent-zero",
+          "total": 16,
+          "reward": 16,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/pressure-injection",
+              "action": "pressureIncrease",
+              "source": "u13",
+              "target": "u13",
+              "amount": 1,
+              "facts": {
+                "effectKey": "surge_vessel:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "surge_vessel",
+                "afterType": "surge_vessel",
+                "beforeTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "afterTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "cause": "pressureIncrease",
+                "actualIncrease": 1,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": null,
+              "depth": 0,
+              "phase": "step7/pressure",
+              "action": "release",
+              "source": "u13",
+              "target": "u13",
+              "amount": 16,
+              "facts": {
+                "effectKey": "pressure-release",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "surge_vessel",
+                "afterType": "surge_vessel",
+                "beforeTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "afterTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "cause": "release",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 2,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step7/pressure",
+              "action": "reward",
+              "source": "u13",
+              "target": "u13",
+              "amount": 16,
+              "facts": {
+                "effectKey": "pressure-release",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "surge_vessel",
+                "afterType": "surge_vessel",
+                "beforeTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "afterTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "cause": "reward",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 3970147455,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 970015720,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 1337658649,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 4106141026,
+              "consumed": 0
+            },
+            "event": {
+              "state": 3878317387,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "feed-immediate-pressure",
+          "total": 18,
+          "reward": 17,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step3/age",
+              "action": "age",
+              "source": "u14",
+              "target": "u14",
+              "amount": 1,
+              "facts": {
+                "effectKey": "natural-age",
+                "sourcePos": 1,
+                "targetPos": 1,
+                "beforeType": "ash_felt",
+                "afterType": "ash_felt",
+                "beforeTags": [
+                  "scrap",
+                  "fuel"
+                ],
+                "afterTags": [
+                  "scrap",
+                  "fuel"
+                ],
+                "cause": "age",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": null,
+              "depth": 0,
+              "phase": "step5/structural-event",
+              "action": "consume",
+              "source": "u13",
+              "target": "u14",
+              "amount": null,
+              "facts": {
+                "effectKey": "feed_valve:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "ash_felt",
+                "afterType": null,
+                "beforeTags": [
+                  "scrap",
+                  "fuel"
+                ],
+                "afterTags": [],
+                "cause": "consume",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 2,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step5/structural-event",
+              "action": "spawn",
+              "source": "u14",
+              "target": null,
+              "amount": null,
+              "facts": {
+                "effectKey": "ash_felt:0",
+                "sourcePos": 1,
+                "targetPos": null,
+                "beforeType": null,
+                "afterType": "copper_burr",
+                "beforeTags": [],
+                "afterTags": [
+                  "scrap",
+                  "product",
+                  "cargo"
+                ],
+                "cause": "spawn",
+                "actualIncrease": 0,
+                "createdUid": "u15",
+                "skipReason": null
+              }
+            },
+            {
+              "id": 3,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step5/structural-event",
+              "action": "destroy",
+              "source": "u13",
+              "target": "u14",
+              "amount": null,
+              "facts": {
+                "effectKey": "feed_valve:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "ash_felt",
+                "afterType": null,
+                "beforeTags": [
+                  "scrap",
+                  "fuel"
+                ],
+                "afterTags": [],
+                "cause": "consume",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 4,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step5/structural-event",
+              "action": "reward",
+              "source": "u13",
+              "target": "u14",
+              "amount": 3,
+              "facts": {
+                "effectKey": "feed_valve:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "ash_felt",
+                "afterType": "ash_felt",
+                "beforeTags": [
+                  "scrap",
+                  "fuel"
+                ],
+                "afterTags": [
+                  "scrap",
+                  "fuel"
+                ],
+                "cause": "reward",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 5,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step5/structural-event",
+              "action": "pressureIncrease",
+              "source": "u13",
+              "target": "u13",
+              "amount": 2,
+              "facts": {
+                "effectKey": "feed_valve:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "feed_valve",
+                "afterType": "feed_valve",
+                "beforeTags": [
+                  "machine",
+                  "pressure"
+                ],
+                "afterTags": [
+                  "machine",
+                  "pressure"
+                ],
+                "cause": "pressureIncrease",
+                "actualIncrease": 2,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 6,
+              "parent": null,
+              "depth": 0,
+              "phase": "step7/pressure",
+              "action": "release",
+              "source": "u13",
+              "target": "u13",
+              "amount": 14,
+              "facts": {
+                "effectKey": "pressure-release",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "feed_valve",
+                "afterType": "feed_valve",
+                "beforeTags": [
+                  "machine",
+                  "pressure"
+                ],
+                "afterTags": [
+                  "machine",
+                  "pressure"
+                ],
+                "cause": "release",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 7,
+              "parent": 6,
+              "depth": 1,
+              "phase": "step7/pressure",
+              "action": "reward",
+              "source": "u13",
+              "target": "u13",
+              "amount": 14,
+              "facts": {
+                "effectKey": "pressure-release",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "feed_valve",
+                "afterType": "feed_valve",
+                "beforeTags": [
+                  "machine",
+                  "pressure"
+                ],
+                "afterTags": [
+                  "machine",
+                  "pressure"
+                ],
+                "cause": "reward",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 758855235,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 4256750900,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 2224552405,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 1315424894,
+              "consumed": 0
+            },
+            "event": {
+              "state": 4200991687,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "spire-spend3",
+          "total": 17,
+          "reward": 8,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step7/pressure",
+              "action": "release",
+              "source": "u13",
+              "target": "u14",
+              "amount": 3,
+              "facts": {
+                "effectKey": "release_spire:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "reserve_facet",
+                "afterType": "reserve_facet",
+                "beforeTags": [
+                  "crystal",
+                  "pressure"
+                ],
+                "afterTags": [
+                  "crystal",
+                  "pressure"
+                ],
+                "cause": "release",
+                "actualIncrease": -3,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": 0,
+              "depth": 1,
+              "phase": "step7/pressure",
+              "action": "multiply",
+              "source": "u13",
+              "target": "u14",
+              "amount": null,
+              "facts": {
+                "effectKey": "release_spire:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "reserve_facet",
+                "afterType": "reserve_facet",
+                "beforeTags": [
+                  "crystal",
+                  "pressure"
+                ],
+                "afterTags": [
+                  "crystal",
+                  "pressure"
+                ],
+                "cause": "multiply",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 2,
+              "parent": 0,
+              "depth": 1,
+              "phase": "step7/pressure",
+              "action": "reward",
+              "source": "u13",
+              "target": "u14",
+              "amount": 8,
+              "facts": {
+                "effectKey": "release_spire:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "reserve_facet",
+                "afterType": "reserve_facet",
+                "beforeTags": [
+                  "crystal",
+                  "pressure"
+                ],
+                "afterTags": [
+                  "crystal",
+                  "pressure"
+                ],
+                "cause": "reward",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 3648153050,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 4011353341,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 3183467476,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 459825167,
+              "consumed": 0
+            },
+            "event": {
+              "state": 43977734,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "copy-template",
+          "total": 7,
+          "reward": 0,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/appearance",
+              "action": "add",
+              "source": "u14",
+              "target": "u14",
+              "amount": 1,
+              "facts": {
+                "effectKey": "pause_dial:0",
+                "sourcePos": 1,
+                "targetPos": 1,
+                "beforeType": "pause_dial",
+                "afterType": "pause_dial",
+                "beforeTags": [
+                  "pressure",
+                  "support"
+                ],
+                "afterTags": [
+                  "pressure",
+                  "support"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/copy",
+              "action": "copy",
+              "source": "u13",
+              "target": "u14",
+              "amount": 1,
+              "facts": {
+                "effectKey": "offset_reader:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "pause_dial",
+                "afterType": "pause_dial",
+                "beforeTags": [
+                  "pressure",
+                  "support"
+                ],
+                "afterTags": [
+                  "pressure",
+                  "support"
+                ],
+                "cause": "copy",
+                "actualIncrease": 1,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 2,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step4/copy",
+              "action": "add",
+              "source": "u13",
+              "target": "u13",
+              "amount": 1,
+              "facts": {
+                "effectKey": "offset_reader:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "offset_reader",
+                "afterType": "offset_reader",
+                "beforeTags": [
+                  "magic",
+                  "machine"
+                ],
+                "afterTags": [
+                  "magic",
+                  "machine"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 3267789389,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 3807214906,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 2072873435,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 1095887840,
+              "consumed": 0
+            },
+            "event": {
+              "state": 2202651689,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "constants",
+          "total": 9,
+          "reward": 0,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/appearance",
+              "action": "add",
+              "source": "u13",
+              "target": "u13",
+              "amount": 2,
+              "facts": {
+                "effectKey": "blank_facet:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "blank_facet",
+                "afterType": "blank_facet",
+                "beforeTags": [
+                  "magic",
+                  "crystal"
+                ],
+                "afterTags": [
+                  "magic",
+                  "crystal"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/appearance",
+              "action": "add",
+              "source": "u14",
+              "target": "u14",
+              "amount": 1,
+              "facts": {
+                "effectKey": "cleared_stub:0",
+                "sourcePos": 1,
+                "targetPos": 1,
+                "beforeType": "cleared_stub",
+                "afterType": "cleared_stub",
+                "beforeTags": [
+                  "contract",
+                  "product",
+                  "cargo"
+                ],
+                "afterTags": [
+                  "contract",
+                  "product",
+                  "cargo"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 1182707592,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 2325808687,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 249212022,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 2475923821,
+              "consumed": 0
+            },
+            "event": {
+              "state": 4027935812,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "cash-snapshot",
+          "total": 5,
+          "reward": 0,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/appearance",
+              "action": "add",
+              "source": "u13",
+              "target": "u13",
+              "amount": 4,
+              "facts": {
+                "effectKey": "lean_receipt:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "lean_receipt",
+                "afterType": "lean_receipt",
+                "beforeTags": [
+                  "contract"
+                ],
+                "afterTags": [
+                  "contract"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 2089022909,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 3811519818,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 3900061803,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 3790139152,
+              "consumed": 0
+            },
+            "event": {
+              "state": 981964697,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "risk-negative",
+          "total": -4,
+          "reward": 0,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/risk",
+              "action": "risk",
+              "source": "u13",
+              "target": "u13",
+              "amount": -6,
+              "facts": {
+                "effectKey": "cracked_regulator:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "cracked_regulator",
+                "afterType": "cracked_regulator",
+                "beforeTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "afterTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "cause": "risk-failure",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": 0,
+              "depth": 1,
+              "phase": "step4/risk",
+              "action": "add",
+              "source": "u13",
+              "target": "u13",
+              "amount": -6,
+              "facts": {
+                "effectKey": "cracked_regulator:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "cracked_regulator",
+                "afterType": "cracked_regulator",
+                "beforeTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "afterTags": [
+                  "pressure",
+                  "machine"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 2,
+              "parent": 0,
+              "depth": 1,
+              "phase": "step4/risk",
+              "action": "spawn",
+              "source": "u13",
+              "target": null,
+              "amount": null,
+              "facts": {
+                "effectKey": "cracked_regulator:0",
+                "sourcePos": 0,
+                "targetPos": null,
+                "beforeType": null,
+                "afterType": "spent_gasket",
+                "beforeTags": [],
+                "afterTags": [
+                  "scrap",
+                  "junk"
+                ],
+                "cause": "spawn",
+                "actualIncrease": 0,
+                "createdUid": "u14",
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 3395497810,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 3746999292,
+              "consumed": 1
+            },
+            "symbolOffer": {
+              "state": 2866647196,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 474877943,
+              "consumed": 0
+            },
+            "event": {
+              "state": 3637216142,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "consumer-base-reward",
+          "total": 10,
+          "reward": 9,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/appearance",
+              "action": "add",
+              "source": "u14",
+              "target": "u14",
+              "amount": 1,
+              "facts": {
+                "effectKey": "cleared_stub:0",
+                "sourcePos": 1,
+                "targetPos": 1,
+                "beforeType": "cleared_stub",
+                "afterType": "cleared_stub",
+                "beforeTags": [
+                  "contract",
+                  "product",
+                  "cargo"
+                ],
+                "afterTags": [
+                  "contract",
+                  "product",
+                  "cargo"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": null,
+              "depth": 0,
+              "phase": "step5/structural-event",
+              "action": "consume",
+              "source": "u13",
+              "target": "u14",
+              "amount": null,
+              "facts": {
+                "effectKey": "sorting_runner:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "cleared_stub",
+                "afterType": null,
+                "beforeTags": [
+                  "contract",
+                  "product",
+                  "cargo"
+                ],
+                "afterTags": [],
+                "cause": "consume",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 2,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step5/structural-event",
+              "action": "destroy",
+              "source": "u13",
+              "target": "u14",
+              "amount": null,
+              "facts": {
+                "effectKey": "sorting_runner:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "cleared_stub",
+                "afterType": null,
+                "beforeTags": [
+                  "contract",
+                  "product",
+                  "cargo"
+                ],
+                "afterTags": [],
+                "cause": "consume",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 3,
+              "parent": 1,
+              "depth": 1,
+              "phase": "step5/structural-event",
+              "action": "reward",
+              "source": "u13",
+              "target": "u14",
+              "amount": 9,
+              "facts": {
+                "effectKey": "sorting_runner:0",
+                "sourcePos": 0,
+                "targetPos": 1,
+                "beforeType": "cleared_stub",
+                "afterType": "cleared_stub",
+                "beforeTags": [
+                  "contract",
+                  "product",
+                  "cargo"
+                ],
+                "afterTags": [
+                  "contract",
+                  "product",
+                  "cargo"
+                ],
+                "cause": "reward",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 80351369,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 3486137214,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 281309247,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 2912909700,
+              "consumed": 0
+            },
+            "event": {
+              "state": 1085953101,
+              "consumed": 0
+            }
+          }
+        },
+        {
+          "name": "cycle-mechanism-item",
+          "total": 10,
+          "reward": 0,
+          "log": [
+            {
+              "id": 0,
+              "parent": null,
+              "depth": 0,
+              "phase": "step4/appearance",
+              "action": "cycle",
+              "source": "u13",
+              "target": "u13",
+              "amount": 1,
+              "facts": {
+                "effectKey": "beat_spool:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "beat_spool",
+                "afterType": "beat_spool",
+                "beforeTags": [
+                  "resonance",
+                  "machine"
+                ],
+                "afterTags": [
+                  "resonance",
+                  "machine"
+                ],
+                "cause": "cycle",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            },
+            {
+              "id": 1,
+              "parent": 0,
+              "depth": 1,
+              "phase": "step4/appearance",
+              "action": "add",
+              "source": "u13",
+              "target": "u13",
+              "amount": 9,
+              "facts": {
+                "effectKey": "beat_spool:0",
+                "sourcePos": 0,
+                "targetPos": 0,
+                "beforeType": "beat_spool",
+                "afterType": "beat_spool",
+                "beforeTags": [
+                  "resonance",
+                  "machine"
+                ],
+                "afterTags": [
+                  "resonance",
+                  "machine"
+                ],
+                "cause": "add",
+                "actualIncrease": 0,
+                "createdUid": null,
+                "skipReason": null
+              }
+            }
+          ],
+          "rng": {
+            "draw": {
+              "state": 3305397107,
+              "consumed": 0
+            },
+            "effect": {
+              "state": 1738561412,
+              "consumed": 0
+            },
+            "symbolOffer": {
+              "state": 4078453285,
+              "consumed": 0
+            },
+            "itemOffer": {
+              "state": 1970396974,
+              "consumed": 0
+            },
+            "event": {
+              "state": 3080044727,
+              "consumed": 0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>雾港余热局 · 截图工具（仅测试用）</title><link rel="stylesheet" href="../../css/gdd1.css"></head>
+<body>
+<header><div><h1>雾港余热局</h1><small id="profile-summary">GDD1 · full-v1 · Normal</small></div>
+<div class="session"><label>Seed <input id="seed" value="GUIDE-DEMO" maxlength="1024"></label>
+<button id="new">新切片局</button><button id="new-full">新 Normal 局</button>
+<button id="continue">继续切片</button><button id="continue-full">继续 Normal</button>
+<button id="save">存档</button><button id="export">导出</button><button id="export-error" disabled>导出错误</button>
+<label class="file-button">导入<input id="import" type="file" accept=".json,application/json"></label>
+<label><input id="autosave" type="checkbox" checked> 自动保存</label>
+<label><input id="audio-on" type="checkbox" checked> 音效</label>
+<input id="audio-vol" type="range" min="0" max="1" step="0.05" value="0.65" title="音量" aria-label="音量" style="width:74px;vertical-align:middle">
+<select id="anim-speed" aria-label="演出速度" title="演出速度"><option value="normal">正常</option><option value="fast">快速</option><option value="instant">即时</option></select></div></header>
+<div id="notice" role="status" aria-live="polite"></div>
+<main><section class="workspace"><div id="stats" class="stats"></div>
+<div class="machine"><div id="board" class="board" aria-label="5列4行运行盘"></div></div>
+<div id="decision" class="decision"></div>
+<section class="ledger"><h2>本轮账本</h2><div id="summary"></div>
+<details open><summary>逐格收入与因果日志</summary><div id="ledger"></div><pre id="log"></pre></details></section></section>
+<aside><h2>实例池 <span id="pool-count"></span></h2><div id="pool" class="pool"></div>
+<h2>持续道具 / 修饰</h2><div id="items"></div>
+<details><summary>旧局只读摘要</summary><div id="legacy"></div></details></aside></main>
+<script src="../../js/gdd1/contract.js"></script><script src="../../js/gdd1/rng.js"></script>
+<script src="../../js/gdd1/schema.js"></script><script src="../../js/gdd1/save.js"></script>
+<script src="../../js/gdd1/full-save.js"></script><script src="../../js/gdd1/content.js"></script>
+<script src="../../js/gdd1/full-content.js"></script><script src="../../js/gdd1/full-effects.js"></script>
+<script src="../../js/gdd1/descriptions.js"></script><script src="../../js/gdd1/offers.js"></script>
+<script src="../../js/gdd1/resolver.js"></script><script src="../../js/gdd1/controller.js"></script>
+<script src="../../js/gdd1/full-controller.js"></script>
+<script src="../../js/gdd1UI/icons.js"></script><script src="../../js/gdd1UI/audio.js"></script>
+<script src="../../js/gdd1UI/anim.js"></script><script src="../../js/gdd1UI/main.js"></script>
+<script>
+/* 截图工具：?spins=N 推进 N 轮；?stop=choice|event|ready 停在特定状态
+   ?speed=instant 避免动画干扰截图；?showledger=1 展开账本 */
+(function () {
+  var q = new URLSearchParams(location.search);
+  var spins = Number(q.get('spins') || 0);
+  var stop = q.get('stop') || '';
+  var speed = q.get('speed') || 'instant';
+  if (q.get('showledger') !== '1') {
+    var det = document.querySelector('.ledger details'); if (det) det.open = false;
+  }
+  window.addEventListener('load', function () {
+    if (window.ANIM) window.ANIM.setSpeed(speed);
+    var sel = document.getElementById('anim-speed'); if (sel) sel.value = speed;
+    var ui = window.GDD1UI; if (!ui) { document.title = 'FAIL no ui'; return; }
+    var b = document.getElementById('start-full'); if (b) b.click();
+    var step = 0;
+    var t = setInterval(function () {
+      var st = ui.getState();
+      if (!st) return;
+      var arrived = stop && (
+        (stop === 'choice' && st.phase === 'SYMBOL_CHOICE') ||
+        (stop === 'event' && st.phase === 'EVENT_CHOICE') ||
+        (stop === 'ready' && st.phase === 'READY' && step >= spins) ||
+        (stop === 'lost' && st.phase === 'LOST') ||
+        (stop === 'won' && st.phase === 'WON'));
+      if (st.phase === 'WON' || st.phase === 'LOST' || step >= spins || arrived) {
+        clearInterval(t); document.title = 'DONE ' + st.phase + ' s' + st.stageId + ' n' + step; return;
+      }
+      if (st.phase === 'READY') { ui.send('spin'); step++; }
+      else if (st.phase === 'SYMBOL_CHOICE') {
+        var c = st.offer.choices || [];
+        var pick = c[0];
+        ui.send(c.length && st.pool.length < 200 ? 'choose' : 'skip', c.length ? { id: pick } : {});
+      } else if (st.phase === 'ITEM_CHOICE') {
+        var ic = st.offer.choices || [];
+        ui.send(ic.length ? 'item' : 'skipItem', ic.length ? { id: ic[0] } : {});
+      } else if (st.phase === 'EVENT_CHOICE') ui.send('event', { option: 'B', id: st.events.choice.id });
+    }, speed === 'instant' ? 12 : 90);
+  });
+})();
+</script>
+</body></html>

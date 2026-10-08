@@ -1,0 +1,12 @@
+﻿{
+  "rules": "0.2",
+  "policy": "value",
+  "runs": 1000,
+  "errors": [],
+  "winRate": 1,
+  "averageStage": 10,
+  "medianCash": 1134,
+  "averageIncome": 57.24882608695652,
+  "maxSpin": 1100,
+  "note": "M2原型：未调平衡，未实现Greedy及正式道具/事件，不证明游戏乐趣或平衡。"
+}

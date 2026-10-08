@@ -1,0 +1,134 @@
+{
+  "note": "Detached 16x500 full-sim-policy-v2 batches; v1 full-sim-batch-v3-* and probes retained; no overwrite",
+  "prefix": "full-sim-policy-v2-batch-",
+  "jobs": [
+    {
+      "pid": 71872,
+      "bot": "Random",
+      "split": "train",
+      "start": 0,
+      "tag": "random-train-0",
+      "dest": "tests/gdd1/full-sim-policy-v2-batch-random-train-0.jsonl"
+    },
+    {
+      "pid": 43864,
+      "bot": "Random",
+      "split": "train",
+      "start": 500,
+      "tag": "random-train-500",
+      "dest": "tests/gdd1/full-sim-policy-v2-batch-random-train-500.jsonl"
+    },
+    {
+      "pid": 72140,
+      "bot": "Random",
+      "split": "holdout",
+      "start": 0,
+      "tag": "random-holdout-0",
+      "dest": "tests/gdd1/full-sim-policy-v2-batch-random-holdout-0.jsonl"
+    },
+    {
+      "pid": 69660,
+      "bot": "Random",
+      "split": "holdout",
+      "start": 500,
+      "tag": "random-holdout-500",
+      "dest": "tests/gdd1/full-sim-policy-v2-batch-random-holdout-500.jsonl"
+    },
+    {
+      "pid": 64136,
+      "bot": "Value",
+      "split": "train",
+      "start": 0,
+      "tag": "value-train-0",
+      "dest": "tests/gdd1/full-sim-policy-v2-batch-value-train-0.jsonl"
+    },
+    {
+      "pid": 70888,
+      "bot": "Value",
+      "split": "train",
+      "start": 500,
+      "tag": "value-train-500",
+      "dest": "tests/gdd1/full-sim-policy-v2-batch-value-train-500.jsonl"
+    },
+    {
+      "pid": 2944,
+      "bot": "Value",
+      "split": "holdout",
+      "start": 0,
+      "tag": "value-holdout-0",
+      "dest": "tests/gdd1/full-sim-policy-v2-batch-value-holdout-0.jsonl"
+    },
+    {
+      "pid": 69764,
+      "bot": "Value",
+      "split": "holdout",
+      "start": 500,
+      "tag": "value-holdout-500",
+      "dest": "tests/gdd1/full-sim-policy-v2-batch-value-holdout-500.jsonl"
+    },
+    {
+      "pid": 67376,
+      "bot": "Synergy",
+      "split": "train",
+      "start": 0,
+      "tag": "synergy-train-0",
+      "dest": "tests/gdd1/full-sim-policy-v2-batch-synergy-train-0.jsonl"
+    },
+    {
+      "pid": 53968,
+      "bot": "Synergy",
+      "split": "train",
+      "start": 500,
+      "tag": "synergy-train-500",
+      "dest": "tests/gdd1/full-sim-policy-v2-batch-synergy-train-500.jsonl"
+    },
+    {
+      "pid": 58088,
+      "bot": "Synergy",
+      "split": "holdout",
+      "start": 0,
+      "tag": "synergy-holdout-0",
+      "dest": "tests/gdd1/full-sim-policy-v2-batch-synergy-holdout-0.jsonl"
+    },
+    {
+      "pid": 66328,
+      "bot": "Synergy",
+      "split": "holdout",
+      "start": 500,
+      "tag": "synergy-holdout-500",
+      "dest": "tests/gdd1/full-sim-policy-v2-batch-synergy-holdout-500.jsonl"
+    },
+    {
+      "pid": 53932,
+      "bot": "Greedy",
+      "split": "train",
+      "start": 0,
+      "tag": "greedy-train-0",
+      "dest": "tests/gdd1/full-sim-policy-v2-batch-greedy-train-0.jsonl"
+    },
+    {
+      "pid": 60184,
+      "bot": "Greedy",
+      "split": "train",
+      "start": 500,
+      "tag": "greedy-train-500",
+      "dest": "tests/gdd1/full-sim-policy-v2-batch-greedy-train-500.jsonl"
+    },
+    {
+      "pid": 65704,
+      "bot": "Greedy",
+      "split": "holdout",
+      "start": 0,
+      "tag": "greedy-holdout-0",
+      "dest": "tests/gdd1/full-sim-policy-v2-batch-greedy-holdout-0.jsonl"
+    },
+    {
+      "pid": 36160,
+      "bot": "Greedy",
+      "split": "holdout",
+      "start": 500,
+      "tag": "greedy-holdout-500",
+      "dest": "tests/gdd1/full-sim-policy-v2-batch-greedy-holdout-500.jsonl"
+    }
+  ]
+}

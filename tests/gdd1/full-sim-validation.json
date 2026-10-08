@@ -1,0 +1,52 @@
+{
+  "passed": 9,
+  "total": 11,
+  "results": [
+    {
+      "name": "full new run is 12-start Normal payments and five RNG streams",
+      "ok": false,
+      "error": "AssertionError [ERR_ASSERTION]: Values have same structure but are not reference-equal:\n\n[\n  'draw',\n  'effect',\n  'symbolOffer',\n  'itemOffer',\n  'event'\n]\n\n    at C:\\files\\code\\LuckLandlord\\tests\\gdd1\\full-sim-checks.js:26:10\n    at test (C:\\files\\code\\LuckLandlord\\tests\\gdd1\\full-sim-checks.js:11:9)\n    at Object.<anonymous> (C:\\files\\code\\LuckLandlord\\tests\\gdd1\\full-sim-checks.js:19:1)\n    at Module._compile (node:internal/modules/cjs/loader:1812:14)\n    at Object..js (node:internal/modules/cjs/loader:1943:10)\n    at Module.load (node:internal/modules/cjs/loader:1533:32)\n    at Module._load (node:internal/modules/cjs/loader:1335:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47"
+    },
+    {
+      "name": "public view hides live seed and five RNG states",
+      "ok": true
+    },
+    {
+      "name": "Greedy decision invariant to hidden seed and RNG; clone does not mutate live",
+      "ok": true
+    },
+    {
+      "name": "rollout future offer contents do not affect candidate utility",
+      "ok": true
+    },
+    {
+      "name": "policy RNG independent, replayable and strategy separated",
+      "ok": true
+    },
+    {
+      "name": "reroll consumes one token only symbolOffer, preserves pending and window",
+      "ok": true
+    },
+    {
+      "name": "remove in pending consumes one token without altering earned ledger or RNG",
+      "ok": true
+    },
+    {
+      "name": "skip settles actual pending; choose cannot rescue short payment; no false success",
+      "ok": true
+    },
+    {
+      "name": "exact payment item skip grants next-stage resources; no repeated payment",
+      "ok": true
+    },
+    {
+      "name": "actual event A/B and invalid target rollback on reachable event",
+      "ok": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n95 !== 85\n\n    at C:\\files\\code\\LuckLandlord\\tests\\gdd1\\full-sim-checks.js:145:14\n    at test (C:\\files\\code\\LuckLandlord\\tests\\gdd1\\full-sim-checks.js:11:9)\n    at Object.<anonymous> (C:\\files\\code\\LuckLandlord\\tests\\gdd1\\full-sim-checks.js:118:1)\n    at Module._compile (node:internal/modules/cjs/loader:1812:14)\n    at Object..js (node:internal/modules/cjs/loader:1943:10)\n    at Module.load (node:internal/modules/cjs/loader:1533:32)\n    at Module._load (node:internal/modules/cjs/loader:1335:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47"
+    },
+    {
+      "name": "64/32/8 defs live on full profile",
+      "ok": true
+    }
+  ]
+}

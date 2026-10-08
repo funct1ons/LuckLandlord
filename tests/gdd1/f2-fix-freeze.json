@@ -1,0 +1,9 @@
+{
+  "scope": "F2 E1/E2 fix self-test; authorized production sources only",
+  "selfTest": "pass",
+  "files": [
+    {"path":"js/gdd1/resolver.js","bytes":13959,"sha256":"ceb14cd1a65a0b5fd9ff9c74d0d493fa30876a1231a515cd59ce4fcf0bd005bd"},
+    {"path":"js/gdd1UI/main.js","bytes":8511,"sha256":"4145b5be5193cc3c9c15b65d61e8c59a8e91b2227a022dfb073c2ff8608be7d5"}
+  ],
+  "checks": {"node": "41/41", "targeted": "3/3", "isolatedF2": "154/154", "edgeWriteFile": "49/49", "edgeReadFile": "45/45", "edgeWriteHttp": "49/49", "edgeReadHttp": "45/45", "crossTaskDoubleClick": "pass"}
+}

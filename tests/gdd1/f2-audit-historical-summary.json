@@ -1,0 +1,59 @@
+{
+  "exits": [
+    {
+      "name": "f2-run",
+      "exitCode": 0
+    },
+    {
+      "name": "f2-regression",
+      "exitCode": 0
+    },
+    {
+      "name": "f2-verify",
+      "exitCode": 0
+    }
+  ],
+  "writes": [
+    {
+      "requested": "C:\\files\\code\\LuckLandlord\\tests\\gdd1\\f2-node.json",
+      "redirected": "C:\\files\\code\\LuckLandlord\\tests\\gdd1\\f2-audit-historical-f2-node.json"
+    },
+    {
+      "requested": "C:\\files\\code\\LuckLandlord\\tests\\gdd1\\f2-legacy.json",
+      "redirected": "C:\\files\\code\\LuckLandlord\\tests\\gdd1\\f2-audit-historical-f2-legacy.json"
+    },
+    {
+      "requested": "C:\\files\\code\\LuckLandlord\\tests\\gdd1\\f2-protection.json",
+      "redirected": "C:\\files\\code\\LuckLandlord\\tests\\gdd1\\f2-audit-historical-f2-protection.json"
+    }
+  ],
+  "legacyHistoricalExact": true,
+  "logs": [
+    "154/154",
+    "{\n  \"capturedExisting\": 341,\n  \"missing\": [],\n  \"changed\": [\n    {\n      \"path\": \"js/gdd1/schema.js\",\n      \"before\": \"607b30ac2c74708e1dff56063f1aa82d4e57f4099837707e6c02e25c2d22a858\",\n      \"after\": \"50d8eff3f55a7150635795a301f568409c8fd57a4d7a438e2b6ab5aebc9154a9\",\n      \"beforeBytes\": 14987,\n      \"afterBytes\": 17026\n    }\n  ],\n  \"onlyAllowedChanges\": true,\n  \"oldProtected\": {\n    \"count\": 245,\n    \"failures\": []\n  },\n  \"historicalUnchanged\": true,\n  \"gddSha256\": \"e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07\"\n}"
+  ],
+  "legacy": {
+    "scope": "Read-only existing regression; M3 is not independently accepted",
+    "old": {
+      "total": 602,
+      "passed": 602,
+      "namesPreserved": true
+    },
+    "m3": {
+      "total": 66,
+      "passed": 64,
+      "failures": [
+        {
+          "name": "route-m3/brine/feedstock-to-crystal-first-add-four",
+          "ok": false,
+          "error": "[[1,11],0,12] != [[2,8],0,10]"
+        },
+        {
+          "name": "route-m3/bus/storage-envelope-and-backup-counters-preserved",
+          "ok": false,
+          "error": "undefined != {\"version\":1,\"rules\":\"0.3\",\"contentVersion\":\"M3-1\",\"stageState\":{\"claims\":[],\"paymentModifiers\":[]},\"itemState\":{\"version\":1,\"stage\":0,\"spin\":1,\"runCounts\":{\"item_frost_glass/0\":1},\"stageCounts\":{\"item_frost_glass/0\":1},\"spinCounts\":{}},\"seed\":\"M3-ITEM-BUS\",\"rngState\":44785601,\"revision\":1,\"phase\":\"SYMBOL_CHOICE\",\"stage\":0,\"spin\":1,\"spinsRemaining\":5,\"payment\":30,\"cash\":0,\"symbols\":[{\"uid\":\"u11\",\"type\":\"mist_pouch\",\"permanent\":0,\"counters\":{\"age\":1}}],\"items\":[\"item_frost_glass\"],\"nextId\":12,\"rerollTokens\":2,\"removeTokens\":2,\"activeModifiers\":[],\"stats\":{\"spins\":1,\"total\":4,\"best\":4,\"removed\":0,\"stages\":0,\"chosen\":{},\"skipped\":0,\"rerolls\":0,\"events\":0},\"settings\":{\"autosave\":true,\"advanceAccepted\":false},\"history\":[{\"spin\":1,\"total\":4}],\"choices\":[\"alignment_cloth\",\"clinker_router\",\"sorting_tong\"],\"last\":{\"resolvedRules\":\"0.3\",\"board\":[{\"uid\":\"u11\",\"type\":\"mist_pouch\",\"alive\":true},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],\"ledger\":[{\"uid\":\"u11\",\"type\":\"mist_pouch\",\"amount\":4,\"alive\":true,\"multiplier\":1,\"ratio\":[\"1\",\"1\"]}],\"reward\":0,\"total\":4,\"log\":[{\"id\":0,\"parent\":null,\"type\":\"itemEffect\",\"itemId\":\"item_frost_glass\",\"effectKey\":\"item_frost_glass/0\",\"hook\":\"appear\",\"action\":\"add\",\"source\":\"u11\",\"target\":\"u11\",\"depth\":0,\"amount\":3,\"createdUid\":null,\"reason\":null},{\"id\":1,\"parent\":null,\"type\":\"age\",\"source\":\"u11\",\"target\":\"u11\",\"depth\":0,\"event\":\"ON_APPEAR\",\"amount\":null,\"payload\":null}],\"effects\":1},\"pendingSettlement\":4,\"event\":null,\"reservations\":[]}"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+PASS root UID limit and perSpin reset
+PASS ash consume cause no self_mature reward
+PASS dead event listener keeps target snapshot
+PASS scope and event predicates reject invalid schema
+PASS save restore preserves ash counter and continues lifecycle
+PASS no cultivation ID branches in resolver
+RETEST 6/6 passed
+
+STDERR
+
+EXIT 0

@@ -1,0 +1,177 @@
+{
+  "scope": "New F1 repair hashes; excludes this manifest itself, preserves original f1-deliverables snapshot",
+  "files": [
+    {
+      "path": "docs/GDD1_F1_FIX.md",
+      "bytes": 8572,
+      "sha256": "9cc87391f91a918d08cd939a686586d7674f0a3d610124294dd0f8ee996f62ee"
+    },
+    {
+      "path": "js/gdd1/contract.js",
+      "bytes": 4911,
+      "sha256": "b7bd44d05ccdd4ffffe13e4949f7de92f3c7f37e628feaf3a6bf58023e7ea5c9"
+    },
+    {
+      "path": "js/gdd1/rng.js",
+      "bytes": 1680,
+      "sha256": "f3f5c055a8e3f4d5e18d355488194f94dfbc28603be7c29a5aab1743bd6704f7"
+    },
+    {
+      "path": "js/gdd1/save.js",
+      "bytes": 4686,
+      "sha256": "2f0d39ceebee434cbbb38c9fb01c6bf73e7ad6328ced84ab022a135d618eebba"
+    },
+    {
+      "path": "js/gdd1/schema.js",
+      "bytes": 14987,
+      "sha256": "607b30ac2c74708e1dff56063f1aa82d4e57f4099837707e6c02e25c2d22a858"
+    },
+    {
+      "path": "tests/gdd1/fix-before.json",
+      "bytes": 49066,
+      "sha256": "8aa62b4773986d8a5e2a19d51757eddfa3f85daffa173f6216d5364e52ac11b5"
+    },
+    {
+      "path": "tests/gdd1/fix-browser-availability.json",
+      "bytes": 915,
+      "sha256": "f33091b8a317a1a38307ff794b8d82a7cfc70b38f7373cb14be439255792d8b0"
+    },
+    {
+      "path": "tests/gdd1/fix-browser.html",
+      "bytes": 2441,
+      "sha256": "337741afd83dd258a657e606bddf073e8e72b1c36951cb2282e6ba7da3555359"
+    },
+    {
+      "path": "tests/gdd1/fix-browser.ps1",
+      "bytes": 1136,
+      "sha256": "e169a8ed14ad985bd67def23318f8e56c3423f167cebcb43f3ee95de211a9e0a"
+    },
+    {
+      "path": "tests/gdd1/fix-checks.js",
+      "bytes": 7960,
+      "sha256": "33d2b471fc1aa062351b300690ba18a76ae2655d65874e160d154e735dcb253f"
+    },
+    {
+      "path": "tests/gdd1/fix-edge-file-read-stderr.txt",
+      "bytes": 158,
+      "sha256": "935b0134d29c9de44b8fb704d23cba952acea381936d7b1c66959c2cd9e1de41"
+    },
+    {
+      "path": "tests/gdd1/fix-edge-file-read.html",
+      "bytes": 18133,
+      "sha256": "6f431ebe94f44830ae8283dfcc5468a584ab38a31c1354cfb73b264c21133aaa"
+    },
+    {
+      "path": "tests/gdd1/fix-edge-file-write-stderr.txt",
+      "bytes": 158,
+      "sha256": "b456a76897b778901af6a097afbed9f49aebd765a65c2ce24c4d2bf8be5235c1"
+    },
+    {
+      "path": "tests/gdd1/fix-edge-file-write.html",
+      "bytes": 18134,
+      "sha256": "0a36fecb396f9c89b2415149ed560fdd55865f3bbc03fef499a046e32b27bcde"
+    },
+    {
+      "path": "tests/gdd1/fix-edge-http-read-stderr.txt",
+      "bytes": 158,
+      "sha256": "58b4a6c149f0fe674cde01124a663d980674648034ebe211243e2bf32ae0c4e7"
+    },
+    {
+      "path": "tests/gdd1/fix-edge-http-read.html",
+      "bytes": 18133,
+      "sha256": "af073737674ae2a85e3201a3052df3d18d61b60665c31dfa73c371547f315577"
+    },
+    {
+      "path": "tests/gdd1/fix-edge-http-write-stderr.txt",
+      "bytes": 158,
+      "sha256": "a3259752393b3a8879adce376d40c53ad4bdc37b46d908551beb402010dcf2dc"
+    },
+    {
+      "path": "tests/gdd1/fix-edge-http-write.html",
+      "bytes": 18134,
+      "sha256": "8ccf9d1a6a1702a8633f14e4ef75bc73c94985b764a326636159266101e0841c"
+    },
+    {
+      "path": "tests/gdd1/fix-legacy.json",
+      "bytes": 2316,
+      "sha256": "89a0730f5ca2d52d7cc720db840ab40719fd34c13f6c26b1792f87ed1ec8e7ac"
+    },
+    {
+      "path": "tests/gdd1/fix-manifest.js",
+      "bytes": 1558,
+      "sha256": "9a9afcbd31adc73fadb60d1c3f8c80cd70bb5d3207127aa145f1e2b6385c5d4f"
+    },
+    {
+      "path": "tests/gdd1/fix-node.json",
+      "bytes": 46781,
+      "sha256": "e04da70d494394eea89a82e0a63a85f7892a34b9a287ce38d1acc9ff2796f92c"
+    },
+    {
+      "path": "tests/gdd1/fix-parity.js",
+      "bytes": 1909,
+      "sha256": "9d26d28b79941eac56f49bea7974acd2b3fe9ece524b3da4e66227f84f35d5eb"
+    },
+    {
+      "path": "tests/gdd1/fix-parity.json",
+      "bytes": 2474,
+      "sha256": "50c36a960493a12d64b176baad6d979e902ee5cdba53b7528ffff430ef7d5c77"
+    },
+    {
+      "path": "tests/gdd1/fix-protection.json",
+      "bytes": 193189,
+      "sha256": "7e8e99935ac176208cb2482e70ca3f62a55e44c51af88fb95be7e063bac1fd7a"
+    },
+    {
+      "path": "tests/gdd1/fix-run.js",
+      "bytes": 2837,
+      "sha256": "23d8a380b0986795b8b282bc99044edd55713d5408741366858250bc54f8551d"
+    },
+    {
+      "path": "tests/gdd1/fix-server.js",
+      "bytes": 650,
+      "sha256": "3af15c740377c5c5ad842a15e04cd31246e5e2916908a4b38ed373e7adf166a8"
+    },
+    {
+      "path": "tests/gdd1/fix-verify.js",
+      "bytes": 2002,
+      "sha256": "c9cb32918694500b16bffc0cae52b2e51bf75b74ed3b894efeea013b77e93fb4"
+    }
+  ],
+  "modifiedSources": [
+    {
+      "path": "js/gdd1/save.js",
+      "before": {
+        "bytes": 4480,
+        "sha256": "b84ad697806e3d7a285fd3c822fb2c02d3700acf3d0dc754b3f0356d306619ba"
+      },
+      "after": {
+        "bytes": 4686,
+        "sha256": "2f0d39ceebee434cbbb38c9fb01c6bf73e7ad6328ced84ab022a135d618eebba"
+      },
+      "unchanged": false
+    },
+    {
+      "path": "js/gdd1/schema.js",
+      "before": {
+        "bytes": 14538,
+        "sha256": "809249e65162f0d0b5d391776872b42abcb7b7b07f0382b1550a46338df9e636"
+      },
+      "after": {
+        "bytes": 14987,
+        "sha256": "607b30ac2c74708e1dff56063f1aa82d4e57f4099837707e6c02e25c2d22a858"
+      },
+      "unchanged": false
+    }
+  ],
+  "original245": {
+    "total": 245,
+    "unchanged": 245
+  },
+  "repairEntry": {
+    "total": 299,
+    "unchanged": 297
+  },
+  "frozenGddSha256": "e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07",
+  "historicalF1ManifestSha256": "bacfc439c3015e710d99acb79d8eb72ad5ab4657d009e1531f0cb1f0b140d074",
+  "node": "v24.14.1"
+}

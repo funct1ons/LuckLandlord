@@ -1,0 +1,8 @@
+index.html: Edge exit=0
+ui-smoke.html: Edge exit=0
+storage-smoke.html?write: Edge exit=0
+storage-smoke.html?read: Edge exit=0
+4/4 Edge file:// browser checks passed (automated, not human play).
+
+
+EXIT 0

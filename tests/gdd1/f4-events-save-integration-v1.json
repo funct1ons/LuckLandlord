@@ -1,0 +1,485 @@
+{
+  "scope": "Eight distinct event A/B branches: exact transaction expectations inherited from precise event fixture, three actual spins with expiry/guarantee/strict save/replay, all RNG/state/input/other physical keys preserved",
+  "results": [
+    {
+      "id": "event_fog_shift",
+      "option": "A",
+      "transitions": 7,
+      "rng": {
+        "draw": {
+          "state": 522396432,
+          "consumed": 285
+        },
+        "effect": {
+          "state": 4207088963,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 225001382,
+          "consumed": 87
+        },
+        "itemOffer": {
+          "state": 3441315554,
+          "consumed": 12
+        },
+        "event": {
+          "state": 3953693570,
+          "consumed": 1
+        }
+      },
+      "finalPool": 1,
+      "cash": 100081,
+      "payment": 210
+    },
+    {
+      "id": "event_fog_shift",
+      "option": "B",
+      "transitions": 7,
+      "rng": {
+        "draw": {
+          "state": 522396432,
+          "consumed": 285
+        },
+        "effect": {
+          "state": 4207088963,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 225001382,
+          "consumed": 87
+        },
+        "itemOffer": {
+          "state": 3441315554,
+          "consumed": 12
+        },
+        "event": {
+          "state": 3953693570,
+          "consumed": 1
+        }
+      },
+      "finalPool": 1,
+      "cash": 100082,
+      "payment": 210
+    },
+    {
+      "id": "event_copper_queue",
+      "option": "A",
+      "transitions": 7,
+      "rng": {
+        "draw": {
+          "state": 522396432,
+          "consumed": 285
+        },
+        "effect": {
+          "state": 4207088963,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 225001382,
+          "consumed": 87
+        },
+        "itemOffer": {
+          "state": 3441315554,
+          "consumed": 12
+        },
+        "event": {
+          "state": 3953693570,
+          "consumed": 1
+        }
+      },
+      "finalPool": 2,
+      "cash": 100080,
+      "payment": 210
+    },
+    {
+      "id": "event_copper_queue",
+      "option": "B",
+      "transitions": 7,
+      "rng": {
+        "draw": {
+          "state": 522396432,
+          "consumed": 285
+        },
+        "effect": {
+          "state": 4207088963,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 225001382,
+          "consumed": 87
+        },
+        "itemOffer": {
+          "state": 3441315554,
+          "consumed": 12
+        },
+        "event": {
+          "state": 3953693570,
+          "consumed": 1
+        }
+      },
+      "finalPool": 1,
+      "cash": 100074,
+      "payment": 210
+    },
+    {
+      "id": "event_silent_bell",
+      "option": "A",
+      "transitions": 7,
+      "rng": {
+        "draw": {
+          "state": 522396432,
+          "consumed": 285
+        },
+        "effect": {
+          "state": 4207088963,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 225001382,
+          "consumed": 87
+        },
+        "itemOffer": {
+          "state": 3441315554,
+          "consumed": 12
+        },
+        "event": {
+          "state": 3953693570,
+          "consumed": 1
+        }
+      },
+      "finalPool": 1,
+      "cash": 100083,
+      "payment": 210
+    },
+    {
+      "id": "event_silent_bell",
+      "option": "B",
+      "transitions": 7,
+      "rng": {
+        "draw": {
+          "state": 522396432,
+          "consumed": 285
+        },
+        "effect": {
+          "state": 4207088963,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 225001382,
+          "consumed": 87
+        },
+        "itemOffer": {
+          "state": 3441315554,
+          "consumed": 12
+        },
+        "event": {
+          "state": 3953693570,
+          "consumed": 1
+        }
+      },
+      "finalPool": 1,
+      "cash": 100083,
+      "payment": 210
+    },
+    {
+      "id": "event_brine_inspection",
+      "option": "A",
+      "transitions": 7,
+      "rng": {
+        "draw": {
+          "state": 522396432,
+          "consumed": 285
+        },
+        "effect": {
+          "state": 4207088963,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 225001382,
+          "consumed": 87
+        },
+        "itemOffer": {
+          "state": 3441315554,
+          "consumed": 12
+        },
+        "event": {
+          "state": 3953693570,
+          "consumed": 1
+        }
+      },
+      "finalPool": 0,
+      "cash": 100077,
+      "payment": 210
+    },
+    {
+      "id": "event_brine_inspection",
+      "option": "B",
+      "transitions": 7,
+      "rng": {
+        "draw": {
+          "state": 522396432,
+          "consumed": 285
+        },
+        "effect": {
+          "state": 4207088963,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 225001382,
+          "consumed": 87
+        },
+        "itemOffer": {
+          "state": 3441315554,
+          "consumed": 12
+        },
+        "event": {
+          "state": 3953693570,
+          "consumed": 1
+        }
+      },
+      "finalPool": 1,
+      "cash": 100083,
+      "payment": 210
+    },
+    {
+      "id": "event_empty_manifest",
+      "option": "A",
+      "transitions": 7,
+      "rng": {
+        "draw": {
+          "state": 522396432,
+          "consumed": 285
+        },
+        "effect": {
+          "state": 4207088963,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 225001382,
+          "consumed": 87
+        },
+        "itemOffer": {
+          "state": 3441315554,
+          "consumed": 12
+        },
+        "event": {
+          "state": 3953693570,
+          "consumed": 1
+        }
+      },
+      "finalPool": 20,
+      "cash": 100267,
+      "payment": 210
+    },
+    {
+      "id": "event_empty_manifest",
+      "option": "B",
+      "transitions": 7,
+      "rng": {
+        "draw": {
+          "state": 3351326251,
+          "consumed": 345
+        },
+        "effect": {
+          "state": 4207088963,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 225001382,
+          "consumed": 87
+        },
+        "itemOffer": {
+          "state": 3441315554,
+          "consumed": 12
+        },
+        "event": {
+          "state": 3953693570,
+          "consumed": 1
+        }
+      },
+      "finalPool": 21,
+      "cash": 100257,
+      "payment": 210
+    },
+    {
+      "id": "event_boiler_test",
+      "option": "A",
+      "transitions": 7,
+      "rng": {
+        "draw": {
+          "state": 522396432,
+          "consumed": 285
+        },
+        "effect": {
+          "state": 4207088963,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 225001382,
+          "consumed": 87
+        },
+        "itemOffer": {
+          "state": 3441315554,
+          "consumed": 12
+        },
+        "event": {
+          "state": 3953693570,
+          "consumed": 1
+        }
+      },
+      "finalPool": 1,
+      "cash": 100100,
+      "payment": 222
+    },
+    {
+      "id": "event_boiler_test",
+      "option": "B",
+      "transitions": 7,
+      "rng": {
+        "draw": {
+          "state": 522396432,
+          "consumed": 285
+        },
+        "effect": {
+          "state": 4207088963,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 225001382,
+          "consumed": 87
+        },
+        "itemOffer": {
+          "state": 3441315554,
+          "consumed": 12
+        },
+        "event": {
+          "state": 3953693570,
+          "consumed": 1
+        }
+      },
+      "finalPool": 1,
+      "cash": 100080,
+      "payment": 210
+    },
+    {
+      "id": "event_misprint_window",
+      "option": "A",
+      "transitions": 7,
+      "rng": {
+        "draw": {
+          "state": 522396432,
+          "consumed": 285
+        },
+        "effect": {
+          "state": 4207088963,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 225001382,
+          "consumed": 87
+        },
+        "itemOffer": {
+          "state": 3441315554,
+          "consumed": 12
+        },
+        "event": {
+          "state": 3953693570,
+          "consumed": 1
+        }
+      },
+      "finalPool": 1,
+      "cash": 100083,
+      "payment": 210
+    },
+    {
+      "id": "event_misprint_window",
+      "option": "B",
+      "transitions": 7,
+      "rng": {
+        "draw": {
+          "state": 522396432,
+          "consumed": 285
+        },
+        "effect": {
+          "state": 4207088963,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 225001382,
+          "consumed": 87
+        },
+        "itemOffer": {
+          "state": 3441315554,
+          "consumed": 12
+        },
+        "event": {
+          "state": 3953693570,
+          "consumed": 1
+        }
+      },
+      "finalPool": 1,
+      "cash": 100083,
+      "payment": 210
+    },
+    {
+      "id": "event_quota_recount",
+      "option": "A",
+      "transitions": 7,
+      "rng": {
+        "draw": {
+          "state": 522396432,
+          "consumed": 285
+        },
+        "effect": {
+          "state": 4207088963,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 225001382,
+          "consumed": 87
+        },
+        "itemOffer": {
+          "state": 3441315554,
+          "consumed": 12
+        },
+        "event": {
+          "state": 3953693570,
+          "consumed": 1
+        }
+      },
+      "finalPool": 2,
+      "cash": 100095,
+      "payment": 220
+    },
+    {
+      "id": "event_quota_recount",
+      "option": "B",
+      "transitions": 7,
+      "rng": {
+        "draw": {
+          "state": 522396432,
+          "consumed": 285
+        },
+        "effect": {
+          "state": 4207088963,
+          "consumed": 0
+        },
+        "symbolOffer": {
+          "state": 225001382,
+          "consumed": 87
+        },
+        "itemOffer": {
+          "state": 3441315554,
+          "consumed": 12
+        },
+        "event": {
+          "state": 3953693570,
+          "consumed": 1
+        }
+      },
+      "finalPool": 1,
+      "cash": 100083,
+      "payment": 210
+    }
+  ]
+}

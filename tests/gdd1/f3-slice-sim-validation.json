@@ -1,0 +1,42 @@
+{
+  "passed": 9,
+  "total": 9,
+  "results": [
+    {
+      "name": "public view hides live seed and five RNG states",
+      "ok": true
+    },
+    {
+      "name": "Greedy decision invariant to hidden seed and RNG; clone does not mutate live",
+      "ok": true
+    },
+    {
+      "name": "rollout future offer contents do not affect candidate utility",
+      "ok": true
+    },
+    {
+      "name": "policy RNG independent, replayable and strategy separated",
+      "ok": true
+    },
+    {
+      "name": "reroll consumes one token only symbolOffer, preserves pending and window",
+      "ok": true
+    },
+    {
+      "name": "remove in pending consumes one token without altering earned ledger or RNG",
+      "ok": true
+    },
+    {
+      "name": "skip settles actual pending; choose cannot rescue short payment; no false success",
+      "ok": true
+    },
+    {
+      "name": "exact payment item skip grants next-stage resources; no repeated payment",
+      "ok": true
+    },
+    {
+      "name": "actual event A/B and invalid target rollback on reachable event",
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,963 @@
+{
+  "source": "Frozen GDD BODY, explicit independent paper derivation",
+  "total": 11,
+  "passed": 11,
+  "results": [
+    {
+      "id": "H01-single-maturity-growth-echo-no-gauge",
+      "ok": true,
+      "checks": {
+        "ledger": true,
+        "reward": true,
+        "created": true,
+        "removed": true,
+        "pending": true
+      },
+      "geometry": true,
+      "ledger": [
+        [
+          0,
+          "u1",
+          "dew_lantern",
+          3,
+          1,
+          1,
+          3,
+          true
+        ],
+        [
+          1,
+          "u2",
+          "root_ledger",
+          2,
+          1,
+          1,
+          2,
+          true
+        ],
+        [
+          2,
+          "u3",
+          "echo_plate",
+          5,
+          1,
+          1,
+          5,
+          true
+        ],
+        [
+          19,
+          "u4",
+          "nursery_gauge",
+          2,
+          1,
+          1,
+          2,
+          true
+        ]
+      ],
+      "independentRewards": [],
+      "pending": 12,
+      "derivation": [
+        "mist age2+1 reaches3; same UID dew epoch1 age0",
+        "root global plant conversion growth1; root1 adjacent echo2, actual1*4",
+        "one conversion is below nursery threshold2"
+      ],
+      "scope": "Manual semantic recalculation; not gameplay execution"
+    },
+    {
+      "id": "H02-two-maturity-actual-cap-and-rational-floor",
+      "ok": true,
+      "checks": {
+        "ledger": true,
+        "reward": true,
+        "created": true,
+        "removed": true,
+        "pending": true
+      },
+      "geometry": true,
+      "ledger": [
+        [
+          0,
+          "u1",
+          "dew_lantern",
+          7,
+          3,
+          2,
+          10,
+          true
+        ],
+        [
+          1,
+          "u2",
+          "root_ledger",
+          31,
+          3,
+          2,
+          46,
+          true
+        ],
+        [
+          2,
+          "u3",
+          "echo_plate",
+          5,
+          1,
+          1,
+          5,
+          true
+        ],
+        [
+          5,
+          "u4",
+          "amber_frond",
+          4,
+          3,
+          2,
+          6,
+          true
+        ],
+        [
+          19,
+          "u5",
+          "nursery_gauge",
+          2,
+          3,
+          2,
+          3,
+          true
+        ]
+      ],
+      "independentRewards": [
+        2
+      ],
+      "pending": 72,
+      "derivation": [
+        "natural mist2->dew0 and dew1->amber, two plant successes",
+        "root29+min(1,30-29)=30; second request actual0 so no growth/echo/item",
+        "wrap first living plant u1+4; nursery multiplies all four surviving plants incl itself",
+        "individual floors 10,46,5,6,3; reward2 unmultiplied"
+      ],
+      "scope": "Manual semantic recalculation; not gameplay execution"
+    },
+    {
+      "id": "H03-maturity-then-fuel-consumption-index-tower",
+      "ok": true,
+      "checks": {
+        "ledger": true,
+        "reward": true,
+        "created": true,
+        "removed": true,
+        "pending": true
+      },
+      "geometry": true,
+      "ledger": [
+        [
+          0,
+          "u1",
+          "feed_valve",
+          1,
+          3,
+          1,
+          3,
+          true
+        ],
+        [
+          1,
+          "u2",
+          "amber_frond",
+          8,
+          1,
+          1,
+          0,
+          false
+        ],
+        [
+          5,
+          "u3",
+          "release_spire",
+          3,
+          1,
+          1,
+          3,
+          true
+        ],
+        [
+          6,
+          "u4",
+          "root_ledger",
+          2,
+          1,
+          1,
+          2,
+          true
+        ],
+        [
+          7,
+          "u5",
+          "echo_plate",
+          5,
+          1,
+          1,
+          5,
+          true
+        ]
+      ],
+      "independentRewards": [
+        4,
+        3,
+        8
+      ],
+      "pending": 28,
+      "derivation": [
+        "dew1 matures before valve, root6 grows and adjacent echo7 adds4",
+        "wrap amber4+4 ordinary is lost on death; amber independent4 survives",
+        "valve0 adjacent amber1, consumes; pressure0+2+index1=3; tower5 consumes3 ->0 below valve threshold6; no self14"
+      ],
+      "scope": "Manual semantic recalculation; not gameplay execution"
+    },
+    {
+      "id": "H04-scrap-consume-death-spawn-growth-echo",
+      "ok": true,
+      "checks": {
+        "ledger": true,
+        "reward": true,
+        "created": true,
+        "removed": true,
+        "pending": true
+      },
+      "geometry": true,
+      "ledger": [
+        [
+          0,
+          "u1",
+          "sorting_tong",
+          1,
+          1,
+          1,
+          1,
+          true
+        ],
+        [
+          1,
+          "u2",
+          "ash_felt",
+          1,
+          1,
+          1,
+          0,
+          false
+        ],
+        [
+          6,
+          "u3",
+          "heat_clerk",
+          2,
+          1,
+          1,
+          2,
+          true
+        ],
+        [
+          7,
+          "u4",
+          "echo_plate",
+          5,
+          1,
+          1,
+          5,
+          true
+        ]
+      ],
+      "independentRewards": [
+        6,
+        3,
+        2
+      ],
+      "pending": 19,
+      "derivation": [
+        "tong0 consumes ash1; heat6 grows once and echo7 adjacent adds4",
+        "ash death consumes branch creates u5; nextUid6; no self3",
+        "apron3/growth2 once; new copper has no ledger/appearance this spin"
+      ],
+      "scope": "Manual semantic recalculation; not gameplay execution"
+    },
+    {
+      "id": "H05-two-scrap-types-limits-and-auditor-floor",
+      "ok": true,
+      "checks": {
+        "ledger": true,
+        "reward": true,
+        "created": true,
+        "removed": true,
+        "pending": true
+      },
+      "geometry": true,
+      "ledger": [
+        [
+          0,
+          "u1",
+          "sorting_tong",
+          1,
+          3,
+          2,
+          1,
+          true
+        ],
+        [
+          1,
+          "u2",
+          "ash_felt",
+          1,
+          1,
+          1,
+          0,
+          false
+        ],
+        [
+          6,
+          "u3",
+          "heat_clerk",
+          2,
+          3,
+          2,
+          3,
+          true
+        ],
+        [
+          7,
+          "u4",
+          "echo_plate",
+          5,
+          1,
+          1,
+          5,
+          true
+        ],
+        [
+          10,
+          "u5",
+          "sorting_tong",
+          1,
+          3,
+          2,
+          1,
+          true
+        ],
+        [
+          11,
+          "u6",
+          "spent_gasket",
+          -1,
+          1,
+          1,
+          0,
+          false
+        ],
+        [
+          19,
+          "u7",
+          "furnace_auditor",
+          2,
+          3,
+          2,
+          3,
+          true
+        ]
+      ],
+      "independentRewards": [
+        6,
+        6,
+        3,
+        2
+      ],
+      "pending": 30,
+      "derivation": [
+        "ash natural age2->3 remains until step6; tong0 consumes before self-destroy",
+        "tong10 consumes spent11; two different scrap successes; heat only first growth1, echo4 once",
+        "auditor surviving machines including itself multiply3/2; each tong floor1.5=1",
+        "new u8 pool-only nextUid9; no ash self reward"
+      ],
+      "scope": "Manual semantic recalculation; not gameplay execution"
+    },
+    {
+      "id": "H06-real-tags-adjacency-and-rational-multiplier",
+      "ok": true,
+      "checks": {
+        "ledger": true,
+        "reward": true,
+        "created": true,
+        "removed": true,
+        "pending": true
+      },
+      "geometry": true,
+      "ledger": [
+        [
+          0,
+          "u1",
+          "split_register",
+          2,
+          1,
+          1,
+          2,
+          true
+        ],
+        [
+          1,
+          "u2",
+          "copper_burr",
+          9,
+          3,
+          1,
+          27,
+          true
+        ],
+        [
+          2,
+          "u3",
+          "chord_frame",
+          2,
+          1,
+          1,
+          2,
+          true
+        ],
+        [
+          3,
+          "u4",
+          "dock_chime",
+          4,
+          1,
+          1,
+          4,
+          true
+        ],
+        [
+          6,
+          "u5",
+          "alignment_cloth",
+          1,
+          1,
+          1,
+          1,
+          true
+        ],
+        [
+          10,
+          "u6",
+          "dew_lantern",
+          3,
+          1,
+          1,
+          3,
+          true
+        ],
+        [
+          15,
+          "u7",
+          "root_ledger",
+          2,
+          1,
+          1,
+          2,
+          true
+        ],
+        [
+          16,
+          "u8",
+          "echo_plate",
+          5,
+          1,
+          1,
+          5,
+          true
+        ]
+      ],
+      "independentRewards": [],
+      "pending": 46,
+      "derivation": [
+        "split0 locks product copper1; two genuine new tags; cloth6 neighbor copper1 adds5 once",
+        "copper1 neighbor machine chord2 adds2; flat2+5+2=9",
+        "chord2 sees distinct resonance copper1/dock3, lowest target copper1 x2; split3/2 gives ratio3",
+        "dock3 same row other copper/chord two types adds2; root15 adjacent echo16"
+      ],
+      "scope": "Manual semantic recalculation; not gameplay execution"
+    },
+    {
+      "id": "H07-phase-resonance-priority-cloth-pitch-chord",
+      "ok": true,
+      "checks": {
+        "ledger": true,
+        "reward": true,
+        "created": true,
+        "removed": true,
+        "pending": true
+      },
+      "geometry": true,
+      "ledger": [
+        [
+          0,
+          "u1",
+          "phase_chip",
+          10,
+          2,
+          1,
+          20,
+          true
+        ],
+        [
+          1,
+          "u2",
+          "pitch_fork",
+          1,
+          1,
+          1,
+          1,
+          true
+        ],
+        [
+          2,
+          "u3",
+          "dock_chime",
+          4,
+          1,
+          1,
+          4,
+          true
+        ],
+        [
+          5,
+          "u4",
+          "alignment_cloth",
+          1,
+          1,
+          1,
+          1,
+          true
+        ],
+        [
+          6,
+          "u5",
+          "chord_frame",
+          2,
+          1,
+          1,
+          2,
+          true
+        ],
+        [
+          10,
+          "u6",
+          "dew_lantern",
+          3,
+          1,
+          1,
+          3,
+          true
+        ],
+        [
+          15,
+          "u7",
+          "root_ledger",
+          2,
+          1,
+          1,
+          2,
+          true
+        ],
+        [
+          16,
+          "u8",
+          "echo_plate",
+          5,
+          1,
+          1,
+          5,
+          true
+        ]
+      ],
+      "independentRewards": [],
+      "pending": 38,
+      "derivation": [
+        "phase0 sees pitch1 resonance, adds resonance not crystal; cloth5 adjacent adds5",
+        "chord6 sees phase0/pitch1/dock2, lowest resonance phase0 x2",
+        "pitch1 locks lowest neighbor phase0 +3 after preprocessing; phase flat2+5+3=10",
+        "dock2 row phase/pitch two other types +2"
+      ],
+      "scope": "Manual semantic recalculation; not gameplay execution"
+    },
+    {
+      "id": "H08-index-immediate-tower-third-release-receipt",
+      "ok": true,
+      "checks": {
+        "ledger": true,
+        "reward": true,
+        "created": true,
+        "removed": true,
+        "pending": true
+      },
+      "geometry": true,
+      "ledger": [
+        [
+          0,
+          "u1",
+          "feed_valve",
+          1,
+          3,
+          1,
+          3,
+          true
+        ],
+        [
+          1,
+          "u2",
+          "wick_bed",
+          2,
+          1,
+          1,
+          0,
+          false
+        ],
+        [
+          5,
+          "u3",
+          "release_spire",
+          3,
+          1,
+          1,
+          3,
+          true
+        ],
+        [
+          6,
+          "u4",
+          "pause_dial",
+          5,
+          1,
+          1,
+          5,
+          true
+        ],
+        [
+          10,
+          "u5",
+          "dew_lantern",
+          3,
+          1,
+          1,
+          3,
+          true
+        ],
+        [
+          15,
+          "u6",
+          "root_ledger",
+          2,
+          1,
+          1,
+          2,
+          true
+        ],
+        [
+          16,
+          "u7",
+          "echo_plate",
+          5,
+          1,
+          1,
+          5,
+          true
+        ]
+      ],
+      "independentRewards": [
+        3,
+        8,
+        12
+      ],
+      "pending": 44,
+      "derivation": [
+        "valve0 consumes wick1: pressure1->3; index immediate ->4; tower5 deduct3 ->1, marks release",
+        "third release stage count2->3 receipt12 once; no self-release14",
+        "pause6 neighbor valve0/tower5 pressure tag: base2+copyable1+conditional2=5, no pressure mechanism",
+        "mist10->dew triggers root15+1 then echo16+4"
+      ],
+      "scope": "Manual semantic recalculation; not gameplay execution"
+    },
+    {
+      "id": "H09-cap-zero-injection-no-event-and-self-release",
+      "ok": true,
+      "checks": {
+        "ledger": true,
+        "reward": true,
+        "created": true,
+        "removed": true,
+        "pending": true
+      },
+      "geometry": true,
+      "ledger": [
+        [
+          0,
+          "u1",
+          "reserve_facet",
+          2,
+          1,
+          1,
+          2,
+          true
+        ],
+        [
+          1,
+          "u2",
+          "amber_frond",
+          4,
+          1,
+          1,
+          0,
+          false
+        ],
+        [
+          5,
+          "u3",
+          "clinker_router",
+          2,
+          1,
+          1,
+          2,
+          true
+        ],
+        [
+          6,
+          "u4",
+          "spent_gasket",
+          -1,
+          1,
+          1,
+          0,
+          false
+        ],
+        [
+          10,
+          "u5",
+          "dew_lantern",
+          3,
+          1,
+          1,
+          3,
+          true
+        ],
+        [
+          15,
+          "u6",
+          "root_ledger",
+          2,
+          1,
+          1,
+          2,
+          true
+        ],
+        [
+          16,
+          "u7",
+          "echo_plate",
+          5,
+          1,
+          1,
+          5,
+          true
+        ]
+      ],
+      "independentRewards": [
+        2,
+        4,
+        18
+      ],
+      "pending": 38,
+      "derivation": [
+        "reserve0 consumes adjacent amber1: pressure3+2+index1=6",
+        "router5 destroys junk6 not consumes; first actual pressure target reserve0 capped6, delta0 no event/index",
+        "reserve self18 ->0; amber own independent4; no heat/root growth on destroy"
+      ],
+      "scope": "Manual semantic recalculation; not gameplay execution"
+    },
+    {
+      "id": "H10-calendar-fog-stitcher-common-maturity-guard",
+      "ok": true,
+      "checks": {
+        "ledger": true,
+        "reward": true,
+        "created": true,
+        "removed": true,
+        "pending": true
+      },
+      "geometry": true,
+      "ledger": [
+        [
+          0,
+          "u1",
+          "dew_lantern",
+          7,
+          1,
+          1,
+          7,
+          true
+        ],
+        [
+          1,
+          "u2",
+          "dew_lantern",
+          3,
+          1,
+          1,
+          3,
+          true
+        ],
+        [
+          5,
+          "u3",
+          "fog_stitcher",
+          1,
+          1,
+          1,
+          1,
+          true
+        ],
+        [
+          6,
+          "u4",
+          "root_ledger",
+          3,
+          1,
+          1,
+          3,
+          true
+        ],
+        [
+          7,
+          "u5",
+          "echo_plate",
+          9,
+          1,
+          1,
+          9,
+          true
+        ]
+      ],
+      "independentRewards": [
+        2
+      ],
+      "pending": 25,
+      "derivation": [
+        "natural mist0 age2 matures, mist1 age1->2; calendar filters mature0 selects1 ->3 ->dew",
+        "fog UIDu2 guard prevents second maturity, remaining2 unchanged; stitcher has no remaining legal target",
+        "root global two successes permanent2; echo7 neighbor root6 actual1*4 twice; wrap first only; growth item first only2"
+      ],
+      "scope": "Manual semantic recalculation; not gameplay execution"
+    },
+    {
+      "id": "H11-distillation-growth-and-crystal-gauge",
+      "ok": true,
+      "checks": {
+        "ledger": true,
+        "reward": true,
+        "created": true,
+        "removed": true,
+        "pending": true
+      },
+      "geometry": true,
+      "ledger": [
+        [
+          0,
+          "u1",
+          "condense_coil",
+          1,
+          1,
+          1,
+          1,
+          true
+        ],
+        [
+          1,
+          "u2",
+          "tide_prism",
+          11,
+          1,
+          1,
+          11,
+          true
+        ],
+        [
+          10,
+          "u3",
+          "dew_lantern",
+          7,
+          1,
+          1,
+          7,
+          true
+        ],
+        [
+          15,
+          "u4",
+          "root_ledger",
+          2,
+          1,
+          1,
+          2,
+          true
+        ],
+        [
+          16,
+          "u5",
+          "echo_plate",
+          5,
+          1,
+          1,
+          5,
+          true
+        ],
+        [
+          17,
+          "u6",
+          "blank_facet",
+          5,
+          1,
+          1,
+          5,
+          true
+        ],
+        [
+          18,
+          "u7",
+          "reserve_facet",
+          2,
+          1,
+          1,
+          2,
+          true
+        ],
+        [
+          19,
+          "u8",
+          "crystal_index",
+          7,
+          1,
+          1,
+          7,
+          true
+        ]
+      ],
+      "independentRewards": [
+        7,
+        2
+      ],
+      "pending": 49,
+      "derivation": [
+        "draw blank17/reserve18/index19 three crystal types =>gauge7 once reserved cleared",
+        "mist10 matures =>wrap4, root15+1, echo16+4; coil0 adjacent saline1 converts to tide epoch1",
+        "tide own transform+3 then lining+4 =>base4+7=11; saline not plant so no extra root",
+        "blank own appearance+2 and crystal index two distinct other types+6; converted tide no new appearance"
+      ],
+      "scope": "Manual semantic recalculation; not gameplay execution"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "fileChecks": 4,
+  "nodeFileHttpExactCaseResults": true,
+  "uiImportFaults": [
+    {
+      "path": "tests/mechanics-v1-ui-smoke-result.html",
+      "passed": 6,
+      "total": 6,
+      "names": [
+        "mechanics-ui/import-validation",
+        "mechanics-ui/import-preview-render",
+        "mechanics-ui/import-getItem",
+        "mechanics-ui/import-serialization",
+        "mechanics-ui/import-capacity",
+        "mechanics-ui/import-setItem"
+      ]
+    },
+    {
+      "path": "tests/mechanics-v1-http-ui.html",
+      "passed": 6,
+      "total": 6,
+      "names": [
+        "mechanics-ui/import-validation",
+        "mechanics-ui/import-preview-render",
+        "mechanics-ui/import-getItem",
+        "mechanics-ui/import-serialization",
+        "mechanics-ui/import-capacity",
+        "mechanics-ui/import-setItem"
+      ]
+    }
+  ],
+  "pressureHttp": {
+    "node": {
+      "total": 49,
+      "passed": 49
+    },
+    "strictSmoke": true,
+    "strictPressure": true,
+    "independentUI": [
+      {
+        "name": "UI final click skip commits before WON",
+        "ok": true
+      },
+      {
+        "name": "UI click choose then reward progresses",
+        "ok": true
+      },
+      {
+        "name": "UI negative final click LOST with cash clamp",
+        "ok": true
+      },
+      {
+        "name": "UI damaged pending import rejected preserving state/current/backup",
+        "ok": true
+      }
+    ],
+    "sourceTempPath": "C:\\Users\\admin\\AppData\\Local\\Temp\\pressure-http-1791183934321.html"
+  },
+  "independentReviewPassed": false
+}

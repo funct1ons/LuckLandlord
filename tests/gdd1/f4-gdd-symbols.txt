@@ -1,0 +1,108 @@
+| transit_seal | 联运封蜡 | rare | cargo,magic | 2 | 自身预处理临时获�?plant/crystal/resonance 中一个：选择其邻居含量最多者，同数按此序；当轮结束消失 | 跨体系通配，不改变池标�?|
+| return_station | 空箱返程�?| rare | cargo,machine | 2 | 本轮邻接 cargo 源成功消�?product 后，结束时若池不超过 20，发独立奖励 8；每轮一�?| 需其他消费者的精简回报 |
+
+注：return_station 本身不消耗，需邻接其他 cargo 消费者配合，不能自行兑现�?
+### 5.F 压力蓄能�?�?
+| id | 中文�?| rarity | tags | 基础�?| 清晰效果与原�?| 启动/回报角色 |
+|---|---|---|---|---:|---|---|
+| pressure_pouch | 余压软袋 | common | pressure | 1 | 每次上盘蓄压 +1，上�?4；达�?4 时独�?reward10（不吃倍率）并归零，普通产出仍�? | common 延迟回报入口 |
+| feed_valve | 添温小阀 | common | machine,pressure | 1 | 消耗一个邻�?fuel，独立奖�?3，自身蓄�?+2，上�?6；达 6 时独立奖�?14 并归�?| common 蓄压核心 |
+| pause_dial | 歇拍刻盘 | common | pressure,support | 2 | **出现快照（步�?�?*：自身固定平�?+1（可复制）；若邻接起始存活且带`pressure`标签的实例，�?+2（不可复制）；后续目标死亡不撤销 | 稳定过渡 |
+| surge_vessel | 脉冲�?| uncommon | pressure,machine | 1 | 每次上盘先蓄�?+1；未�?3 时普通产出归零；�?3 时独立奖�?16 并归零，普通产出仍 0 | 可替代纯时间核心 |
+| cracked_regulator | 裂缝调压�?| uncommon | pressure,machine | 2 | 每次上盘用本局 RNG�?/4 自身 +8�?/4 自身 -6 且池生成 spent_gasket；每轮一�?| 高收益污染风�?|
+| safety_shim | 卸压薄衬 | uncommon | pressure,support | 1 | 本轮首次邻接 pressure 风险判定的失败损失减�?4（最多减�?0）；不改变失�?生成事实 | 风险过渡、非全免 |
+| release_spire | 泄峰�?| rare | pressure,machine | 3 | 对一个邻接蓄压至�?3 的实例，�?3 蓄压，使其本�?×3，并发独立奖�?；只在该目标具有蓄压机制、尚未达到自身释放阈值且本轮未释放时合法 | 资源型倍率回报 |
+| demand_coupler | 配额耦合�?| rare | pressure,contract | 1 | 轮初现金低于本阶段配额且剩余运行不超�?2 时，自身 ×4，同时本轮在池生�?spent_gasket；每轮一�?| 临期抢救，未来污�?|
+
+### 5.G 异相映印�?�?
+| id | 中文�?| rarity | tags | 基础�?| 清晰效果与原�?| 启动/回报角色 |
+|---|---|---|---|---:|---|---|
+| phase_chip | 偏相小片 | common | magic | 2 | 预处理：有邻�?resonance 时临时加 resonance；否则邻�?crystal 时临时加 crystal；否则不�?| common 通配入口 |
+| spectrum_pin | 谱别别针 | common | magic,support | 1 | **出现快照（步�?�?*：若邻接至少3种其他起始存�?type，自�?+4；不计自身、不因后续死亡补�?| common 异类过渡 |
+| cloudy_negative | 雾面底片 | common | magic,feedstock | 1 | �?3 次上盘转换为 blank_facet | common 映印/蒸馏原料 |
+| blank_facet | 无谱晶坯 | uncommon | magic,crystal | 3 | ON_APPEAR 平面 +2（可复制）；�?product，可交浮珠分离器精炼；转换获得不触发出现 | 简明跨路线产物 |
+| offset_reader | 偏印读头 | rare | magic,machine | 3 | 选一个邻接实例，复制其显�?copyable �?ON_APPEAR 平面 add 常数，最�?+8；不复制条件、事件或其他动作 | 数值复制核�?|
+| alignment_cloth | 对相织布 | uncommon | magic,support | 1 | 给一个邻接本轮获得临时标签的实例 +5，每轮一次；�?tagAdded 日志而非最终标签猜�?| 通配核心替代，不靠稀有复�?|
+| echo_plate | 迟相印板 | rare | magic,resonance | 1 | 一个邻接实例本轮永久值成功增加时，自�?+ 该次实际增加值�?，每轮最�?2 次；不再产生 ON_GROW | 永久成长跨体系回�?|
+| split_register | 双谱登记�?| epic | magic,contract | 2 | 预处理给一个邻�?product 临时增加 resonance �?crystal；它本轮普通产�?×3/2；一次，不影响池标签 | 双接口回报，无递归复制 |
+
+复制白名单（本版本）：`cleared_stub` �?ON_APPEAR 平面 +1 是第三项显式可复制模板；前两项保持：`spectrum_pin` 的条件成功加值不在白名单；为给复制提供真实输入，`blank_facet` 增加 ON_APPEAR add +2、`pause_dial` 增加 ON_APPEAR add +1，均标记 copyable:true。三者其余条件不复制。前两项基础值仍是表�?3/2，cleared_stub 基础�?。实现必须将三项写进效果数组，不能让说明和数据各一套。其余效果全�?copyable:false�?
+### 5.H 契约套利�?�?
+| id | 中文�?| rarity | tags | 基础�?| 清晰效果与原�?| 启动/回报角色 |
+|---|---|---|---|---:|---|---|
+| arrears_slip | 待核欠条 | common | contract,junk | -1 | 无额外效果；禁正常候选；可被合规台转换或撤账员消�?| 有用途的污染，不是假奖励 |
+| lean_receipt | 薄账回执 | common | contract | 1 | 轮初现金低于本阶段配额的 1/2 时自�?+4，否则基础�?| common 低谷入口 |
+| compliance_desk | 合规小台 | common | contract,machine | 1 | 转换一个邻�?junk �?cleared_stub，每轮一�?| common 减负核心 |
+| cleared_stub | 核清存根 | common | contract,product,cargo | 3 | 本轮若非由转换获得、自�?+1；转换轮不加；ON_APPEAR add +1 可复�?| 垃圾转换回报/货运供货 |
+| cancellation_clerk | 撤账�?| uncommon | contract | 1 | 消耗一个邻�?junk，独立奖�?5；自身永�?+1，上�?30；成功才成长 | 可替代压缩池核心 |
+| quota_margin | 配额边签 | uncommon | contract,pressure | 2 | 若本轮初现金不足配额且只差不超过 15，自�?+6；不得读本轮中途收�?| 支付前过�?|
+| advance_stamp | 先支邮戳 | rare | contract | 2 | 每阶段自身首次上盘额外独立奖�?18，同时本阶段配额 +12 并尝试生�?arrears_slip（可选生成失败仍保留奖励与义务）；可选接�?拒绝在运行前配置，默认拒�?| 透明借支风险核心 |
+| settlement_beacon | 清算信标 | rare | contract,machine | 2 | 若本轮池�?junk �?0 且存�?contract 至少 3 �?type，本�?contract ×2；每轮一�?| 清池后的构筑回报 |
+
+`advance_stamp` 的接受是 READY 时的持久设置，运行中不弹窗；不允许结算后看结果才接受。拒绝时只有基础值且不消耗领取资格，之后READY改为接受，可在本阶段下一次上盘领取；接受时每UID/阶段只领一次。删�?转换邮戳不撤销已加的配额义务，关闭设置也不退款；进入新阶段重置领取记录但保留玩家设置。完整版本必须实现后进入候选；纵切片按§12另行限制�?
+
+本版本强度调整理由：读头基础3避免稀有件在窄白名单环境中反而弱于输入件；泄峰塔独立8使花3压力不总是劣于等自释放；先支邮戳义务从8提高�?2，净借支优势�?0降到6，再付污染成本。分温夹不额外发无目�?，避免“保底”被理解成基础1之外再次奖励。以上是新版本迁移，不改旧手算证据�?
+### 5.I 时点逐项核对与冲突裁�?
+为避免“本�?存活”被误读成轮末，以下是本表指定条件的最终合同：
+
+| 定义 | 判定时点 | 纸面边界 |
+|---|---|---|
+| `warm_pod` | 出现快照（步�?�?| 起始相邻fuel后来被consume，仍保留+3；起始无fuel、步�?才生成fuel，不�?3 |
+| `dock_chime` | 出现快照（步�?�?| 同排3种其他resonance�?3；其中一件步�?死亡，不撤销+3、不重新计数 |
+| `fog_reed` | 出现快照（步�?�?| 起始邻mist被步�?消费，仍保留自身+3；步�?才转换出的mist不触�?|
+| `chord_frame` | 出现快照（步�?�?| 起始两种其他resonance满足后锁定一个位置优先邻居�?；首目标随后死亡不转给第二目�?|
+| `prism_hum` | 出现快照（步�?�?| 起始邻crystal满足�?4；feedstock在步�?转crystal不会回头触发本件 |
+| `silence_keeper` | 出现快照（步�?�?| 起始所在排仅自身一个resonance�?10；另一鸣片步骤5被销毁也不把已不满足的密集排改算 |
+| `route_stub` | 出现快照（步�?�?| 起始cargo�?种type�?4；步�?生成第四种不�?4 |
+| `parcel_cage` | 出现快照（步�?，以步骤1空格�?| 抽盘16个实�?4空格触发；池里只�?6件但抽盘20满格不触发；生成后空位变化不重判 |
+| `manifest_desk` | 出现快照（步�?�?| 起始cargo四种type×3；步�?死亡一件不撤销，起始三种且步骤5生成第四种不触发 |
+| `pause_dial` | 出现快照（步�?�?| 起始邻接带`pressure`标签的实例即可加不可复制+2；这是一条普通标签加值，不要求目标具有蓄压计数机制。步�?注入压力不追�?|
+| `spectrum_pin` | 出现快照（步�?�?| 起始邻接三种其他type+4；重复type只算一次，步骤5转换成第三type不补+4 |
+| `cargo_rope` | 出现快照（步�?�?| 位置优先给一个起始邻product+3；第二product不因首目标死亡补�?|
+| `transit_seal` / `phase_chip` / `split_register` | 预处理（步骤2�?| 临时标签先于步骤4条件；不改变池标签，轮末不再重新选择 |
+| `furnace_auditor` / `nursery_gauge` / `settlement_beacon` | 分别为轮末事件汇总、轮末转换计数、轮末清池条�?| 只有表内明示的成功事�?最终池/最终存活盘才读步骤8；不按普通出现默认处�?|
+
+因此统一裁定�?*普通条�?步骤4出现快照；末期汇�?只有明确写“轮末汇�?结束�?压力检查点”才步骤8；成功生命周期事件在事件发生时�?* 表格若未写窗口，遵循普通条件默认，不允许实现者自行改成动态重算�?
+`cargo_rope`、`pitch_fork`与其他邻接数值效果属于步�?的`adjacency-add`，不属于步骤4普通出现快照；`alignment_cloth`属于步骤2预处理完成后的`tagAdded`即时子阶段：只读取该次预处理真实追加的记录，按记录顺序锁定第一个合法邻接目标，后续死亡不补选。所�?4个符号�?2个道具�?个事件必须按下列登记执行；未列为appearance-snapshot的效果不得套用普通条件默认�?
+#### 5.I.1 完整 phase 登记
+
+本索引按**效果**登记，不替代�?5.A�?.H 的正文；同一 ID 可在多个阶段出现，不能用索引删去或合并正文效果。阶段名固定为：`step1/draw`（抽盘权重与初始资格）、`step2/tagAdded`（预处理产生真实新增标签后立即记录；后续对齐效果读取 BODY �?tagAdded 值）、`step3/age`（自然年龄与年龄修饰）、`step4/appearance`（出现快照、普通条件、复制与风险）、`step4/pressure-injection`（步�?实际压力注入）、`step5/adjacency-add`（邻接加值）、`step5/structural-event`（消费、转换、销毁等结构动作；不属于 add）、`step6/pressure-injection`（步�?实际压力注入）、`step7/pressure`（释放检查）、`step8/end-summary`（轮末盘面或有效池汇总）、`step9/ledger`（账本提交）、`choice/commit`（候选、道具、事件、付款等稳定事务提交）。任何父效果成功后，其生命周期回调立即在该父效果成功之后有界执行，无论父效果发生在步�?、步�?、步�?或其他登记阶段；不得延迟到步�?统一执行�?
+**64 个符号的效果登记**
+
+- `step2/tagAdded`：`phase_chip`、`transit_seal`、`split_register` 的预处理登记；`alignment_cloth` 紧随预处理读�?BODY 的真�?`tagAdded` 值，按记录顺序锁定目标并立即执行�?- `step3/age`：`mist_pouch`、`dew_lantern`、`brine_strip`、`cloudy_negative`、`fog_stitcher`。前四个是年龄推进或成熟转换；`fog_stitcher` 是额外年龄推进�?- `step4/appearance`：`wick_bed`、`warm_pod`、`dock_chime`、`fog_reed`、`beat_spool`、`chord_frame`、`prism_hum`、`silence_keeper`、`saline_ampoule`、`crystal_index`、`route_stub`、`parcel_cage`、`manifest_desk`、`pause_dial`、`demand_coupler`、`spectrum_pin`、`blank_facet`、`arrears_slip`、`lean_receipt`、`cleared_stub`、`quota_margin`、`harbor_conductor`、`copper_burr`。这些自身条件均在步�?判定，不登记为邻接加值�?- `step4/pressure-injection`：`pressure_pouch`、`surge_vessel`。步�?的实际注压在发生时立即完成；其余压力释放登记见步�?�?- `step4/risk`：`cracked_regulator`、`safety_shim`。风险事实、失败结果和污染结果在此确定；保护效果只减少合法损失，不取消风险。`item_insulation_shawl`、`item_spare_baffle` 的风险回调在失败/生成成功后立即提交�?- `step4/copy`：`offset_reader`。它只读取步�?快照中的合法 copyable 模板，复制在步骤4完成；`advance_stamp` 的接受资格与自身普通条件也在步�?快照确定�?- `step5/adjacency-add`：`pitch_fork`、`cargo_rope`。二者在步骤5进入时按位置、UID、效果序锁定第一个合法邻接目标；目标随后失效不补选�?- `step5/structural-event`：`sorting_tong`、`sieve_drum`、`clinker_router`、`condense_coil`、`deep_still`、`pearl_separator`、`sorting_runner`、`reserve_facet`、`feed_valve`、`compliance_desk`、`cancellation_clerk`。这些效果执行消费、转换或销毁，不能登记为普�?add；成功后的生命周期回调立即紧随父动作执行，压力增加也按实际发生立即登记；不得延迟到步�?。`reserve_facet` 的结构性注压与释放阶段、`feed_valve` 对邻�?pressure 的结构性注压均�?BODY 状态登记�?- `step6/lifecycle`：`ash_felt`、`amber_frond`、`root_ledger`、`heat_clerk`、`clinker_router`、`tide_prism`、`echo_plate`。这些是父成功后的立即回调登记：随父成功事件紧接执行，不代表统一延迟到步�?；`clinker_router` 的非消耗销毁监听也在对应销毁成功后立即执行，`tide_prism` 只在成功转换成为该类型时触发�?- `step6/pressure-injection`：`reserve_facet`。其结构性实际注压在父结构成功后立即登记；释放阶段按 BODY �?`step7/pressure-release` 状态登记�?- `step7/pressure`：`pressure_pouch`、`surge_vessel`、`reserve_facet`、`release_spire`。`pressure_pouch` �?`surge_vessel` 的实际注压在步骤4，`reserve_facet` 的结构性注压在父成功后立即发生并在步骤7释放检查，`release_spire` 只在步骤7扣压并施加倍率�?- `step8/end-summary`：`nursery_gauge`、`furnace_auditor`、`switch_lamp`、`return_station`、`settlement_beacon`。`return_station` 的消费成功记录在对应父成功后的立即回调，池不超过20的奖励只在步�?提交�?- `base-only`：`spent_gasket`。它没有额外效果，仍属于完整正式 ID 集合�?
+**32 个道具的三段登记**
+
+每项都写�?`activationPhase �?targetSelectionPhase �?commitPhase`；三段分别表示开始监听、选择合法目标或资格、提交效果额度。阶段窗口按 §6 正文重置�?
+- `item_dew_calendar`：`step3/age �?step3/age �?step3/age`；自然年龄结束后选第一个起始、存活、未成熟且仍�?age �?plant，成功推进一次并消耗本轮额度�?- `item_root_wrap`：`step3/age �?step3/age �?step3/age`；监听任何阶段（包括步骤3、步�?等）plant 成功转换后的仍存活实例，转换成功后立即提交本�?+4；不要求 product�?- `item_nursery_scale`：`step1/draw �?step1/draw �?step1/draw`；选有效池�?plant UID，抽盘前提交 ×3/2 权重�?- `item_frost_glass`：`step4/appearance �?step4/appearance �?step9/ledger`；按板位、UID选本阶段前两个起�?mist，分别提交每�?+3�?- `item_sorting_apron`：`step5/structural-event �?step5/structural-event �?step6/lifecycle`；选本轮首次成功消费的 scrap，提交独立奖�?+3�?- `item_waste_log`：`step6/lifecycle �?step6/lifecycle �?choice/commit`；只计本阶段非消耗销�?junk 的成功事件，第三次提交删除券 +1，阶段内一次�?- `item_offcut_chute`：`step5/structural-event �?step5/structural-event �?step5/structural-event`；选本轮首次成功消费且目标不是 junk �?scrap，提交生�?ash_felt；新实例留在池中，下轮才可出现�?- `item_clean_mesh`：`step1/draw �?step1/draw �?step1/draw`；选有效池�?junk UID，抽盘前提交 ×1/2 权重�?- `item_lane_clapper`：`step8/end-summary �?step8/end-summary �?step9/ledger`；选每排第一�?resonance 且该排至少两�?resonance type 的实例，提交 +2�?- `item_rest_notch`：`step8/end-summary �?step8/end-summary �?step9/ledger`；选恰有一�?resonance 的排，提交该实例 ×3/2�?- `item_pitch_marker`：`step2/tagAdded �?step2/tagAdded �?step8/end-summary`；选本轮第一个成功新�?resonance 临时标签且仍存活的实例，末期提交 +5�?- `item_shared_metronome`：`step1/draw �?step1/draw �?step1/draw`；在 Spin 初始化时设置 cycle 阈�?3�?，当前计数不追溯触发；相同机制键 `cycle_count` 的后续符号也可用�?- `item_brine_lining`：`step5/structural-event �?step5/structural-event �?step9/ledger`；选本轮首�?feedstock→crystal 的成功转换产物，提交 +4�?- `item_fraction_gauge`：`step1/draw �?step1/draw �?step1/draw`；步�?检查初始资格，此后每次 board/type/tag/liveness 变化立即检查；仅当前资格与本轮 quota/reservation 均可用时预占并提交独立奖�?，失败回滚不消耗额度、不保留预占�?- `item_jar_rack`：`step5/structural-event �?step5/structural-event �?step8/end-summary`；选本轮首次转换得到的 crystal UID，末期提交下一轮原格预约�?- `item_residue_stamp`：`step5/structural-event �?step5/structural-event �?step6/lifecycle`；选本轮首次成功消费的 mist，提交独立奖�?+2�?- `item_manifest_clip`：`step8/end-summary �?step8/end-summary �?step9/ledger`；选末期有效盘�?cargo type 达到4种的资格，提交独立奖�?�?- `item_return_track`：`choice/commit �?choice/commit �?choice/commit`；选本阶段�?次和�?次主动跳过，分别提交刷新�?+1，阶段内最多两次�?- `item_small_hold`：`step8/end-summary �?step8/end-summary �?step9/ledger`；选末期有效池数量12�?0的资格，提交独立奖励5�?- `item_exchange_hook`：`step5/structural-event �?step5/structural-event �?choice/commit`；选本阶段首次成功消费 product，提交下一次自然候选的 common product 保底�?- `item_pressure_index`：`step4/pressure-injection �?step5/structural-event �?step6/pressure-injection`；每个实�?pressure 增加事件立即检查本轮额度，首个合法事件对同一事件目标额外 +1（不超过目标上限），附加增加不递归触发；覆盖步�?�?，不延迟到步�?�?- `item_insulation_shawl`：`step4/risk �?step4/risk �?step4/risk`；选本轮首�?pressure risk 失败，提交负加值减�?且最低为0�?- `item_release_receipt`：`step7/pressure �?step7/pressure �?step7/pressure`；选本阶段第三次成功压力释放，提交独立奖励12，阶段内一次�?- `item_spare_baffle`：`step4/risk �?step4/risk �?step4/risk`；选本轮首�?risk 产生 junk，提交生成替代为源本�?-3；生成事实保留且不触发消�?销毁奖励�?- `item_safe_carbon`：`step4/copy �?step4/copy �?step9/ledger`；选本轮首次成功合�?copy，提交实际加�?+2且总加值不超过8�?- `item_spectrum_book`：`step2/tagAdded �?step2/tagAdded �?step8/end-summary`；选本轮首次新增原定义没有的标签，目标仍存活时末期提交 +3�?- `item_registration_pin`：`step4/copy �?step4/copy �?step8/end-summary`；选本轮首次成�?copy 的目�?UID，末期提交下一轮预约；预约失败不补偿�?- `item_growth_negative`：`step6/lifecycle �?step6/lifecycle �?step6/lifecycle`；选本轮第一�?actualIncrease>0 �?growth，提交独立奖�?`min(6, 2×实际增长)`�?- `item_low_balance_tab`：`step4/appearance �?step4/appearance �?step9/ledger`；选轮初现金低于本阶段配额一半的快照资格，提交独立奖�?�?- `item_compliance_carbon`：`step5/structural-event �?step5/structural-event �?step9/ledger`；选本轮首�?junk→非junk 的成功转换产物，提交 +3�?- `item_audit_clip`：`choice/commit �?choice/commit �?choice/commit`；选本阶段首次成功付款且付款后池内�?junk，提交删除券 +1；最终胜利只记统计�?- `item_margin_lantern`：`step4/appearance �?step4/appearance �?step9/ledger`；选阶段最后一轮且轮初现金处于配额�?/4至不足配额区间，提交 contract ×3/2�?
+**8 个事件的效果登记**
+
+- `event_fog_shift`：`choice/commit �?step3/age �?step3/age`，modifier 绑定确认 UID，后续两次合法年龄推进逐次扣减�?- `event_copper_queue`：`choice/commit �?choice/commit`；确认事务内立即转换 junk、加�?spent_gasket 并提交池数量增加一件；所有直接效果均 `cause=event`，不触发运行监听�?- `event_boiler_test`：`choice/commit �?choice/commit`；确认事务内立即提交配额+12、现�?10与目�?pressure+2（或生成 pressure_pouch 初压2）；所有直接效果均 `cause=event`，不触发运行监听�?- `event_silent_bell`：`choice/commit �?step4/appearance �?step9/ledger`，绑定阶段前两轮 ×1/2、第三轮 ×2�?- `event_brine_inspection`：`choice/commit �?choice/commit �?choice/commit`，确认删�?feedstock，并在下一次候选提交时消费 crystal 保底�?- `event_empty_manifest`：`choice/commit �?step8/end-summary �?step9/ledger`，绑定新阶段首轮，末期对最多五�?cargo 提交 +2�?- `event_misprint_window`：`choice/commit �?step2/tagAdded �?step9/ledger`，新阶段前三轮首�?magic 立即获得 cargo 标签并提�?+2�?- `event_quota_recount`：`choice/commit �?choice/commit �?choice/commit`，确认配额、cleared_stub、刷新券三项原子提交�?
+本索引只规定效果何时激活、选目标和提交额度；金额、标签、目标条件、边界与迁移规则仍以�?5.A�?.H、�?.I �?§6 正文为准。`pause_dial` 的普通加值只读取 `pressure` 标签；只有明确登记为压力机制的效果才可注压、扣压或释放�?
+## 5.J 起始双植物自然成熟迁移边�?
+这是GDD1相对当前M3中间契约的有意破坏性迁移。旧契约是：自然成熟的首个实例不接受额外年龄，且额外年龄不会顺延给第二个实例；GDD1先完成全部自然年龄，再过滤掉本轮已成熟实例，给第一个仍有age且未成熟的plant额外一步�?
+- **边界A，双软囊同轮自然成熟**：起�?`mist_pouch A(age=2, pos0)`、`mist_pouch B(age=2, pos1)`，步�?两者都自然+1并各自转 `dew_lantern`。旧M3行为：首个A判“自然成熟”后不加A，也不找B，A/B均只完成自然转换；GDD1行为：A被过滤，B也已自然成熟，因此无合法目标，A/B均不再加龄。此例确认“首个成熟不顺延”旧规则与“过滤所有成熟者”新规则在双成熟时结果相同，迁移差异不在该边界�?- **边界B，首个成熟、第二个未成�?*：A=`mist_pouch(age=2,pos0)`，B=`mist_pouch(age=1,pos1)`，两者步�?先自然处理，A转`dew_lantern`，B到age2仍为`mist_pouch`。旧M3行为：A占据首个位置且自然成熟，额外年龄不转移给B，B停在age2；GDD1行为：过滤A后选择B，B额外+1并在同轮转`dew_lantern`。B的转换只发生一次，不重开新类型出现效果。这样新规则明确提高成熟速度，必须用新经济与新seed重新模拟，不能迁移旧自然年龄测试的期望�?
+年龄状态表（同一spin共享`maturedThisSpin`）：
+
+| 起始状�?| 自然年龄�?| 轮历 | fog事件 | fog_stitcher | 本轮结果 |
+|---|---|---|---|---|---|
+| A age2、B age1，无modifier | A成熟；B age2 | 不适用 | 不适用 | 不适用 | 仅A转换，B保留age2 |
+| A age2、B age1，有轮历 | A成熟；B age2 | 轮历绑定B，成功推进B并消耗calendar | �?| �?| A、B均成�?转换；若事件modifier也绑定B，其remaining不因本次calendar归零 |
+| A age2、B age1，有fog事件 | A成熟；B age2 | �?| fog modifier绑定B，成功推进B，remaining 2�? | �?| A、B均成�?转换；B若仍有age，下一轮继续保留该UID的remaining=1 |
+| A age2、B age1，有fog_stitcher | A成熟；B age2 | �?| �?| 仍活的fog_stitcher且B为其邻接、B起始有age且本轮未成熟；成功推进B并消耗stitcher | A、B均成�?转换，后续不重�?|
+| A age2、B age1，calendar+fog(B)+stitcher并存 | A成熟；B先被calendar推进并成�?| calendar绑定B并成�?| fog已绑定B但B已成熟，remaining�?且本轮不消�?| 无其他合法邻接目标，stitcher不执�?| 只执行calendar；fog不转选A/其他UID，stitcher不转选其他目标；B新类型age=0、epoch+1 |
+| A age2、B age1，fog绑定A | A自然成熟并转`dew_lantern`；B age2 | �?| 绑定A但A本轮已自然成熟，不消耗remaining=2；不转绑B | �?| A新类型若仍有age则下轮仍带remaining=2；B不受该modifier影响 |
+| A/B均自然成�?| A/B均成�?| 无合法目�?| 无合法目�?| 无合法目�?| 三类modifier均不消耗；新类型age=0且epoch+1 |
+## 5.K 付款→道具→事件事务算例
+
+以第2阶段付款成功为例，设进入付款�?`cash=130`、本阶段实际配额`payment=125`、本轮`pendingSettlement=20`、余轮为0，池有feedstock，且本局尚未出现`event_brine_inspection`�?
+1. 玩家在SYMBOL_CHOICE选择候选，事务先结�?`cash=150`、清除pending，再�?25，付款后余额25；阶�?的`spinsRemaining=0`不允许停留READY�?2. 进入`ITEM_CHOICE`，从未拥有道具层按阶�?权重抽三件，玩家选择`item_brine_lining`。此选择不追溯本轮；阶段3开始时道具监听生效，阶段计数窗口清零。若玩家放弃，道具机会仍已消耗，不补发第二组选项�?3. 阶段奖励资源在同一STAGE_SETUP发放：付款完成后进入�?阶段，按§9�?阶段固定资源获得1刷新券�?删除券；刷新券上�?，若已满则丢弃并提示，不折现。道具选择不能重抽资源�?4. 付款后仅在stage setup完成且存在至少一个可确认A时做事件抽取：本例的资格集合还需满足阶段编号、池含feedstock、事件ID未出现、距离上次事件至少一付款节点、事件数<3、现�?容量/目标均可确认。若集合为空，不消�?0% RNG，直接READY；集合非空后40%判定成功，再等权选`event_brine_inspection`并保存选项。若40%失败，则直接进入READY阶段3，不保存事件ID、不增加事件次数、不消耗间隔，也不进入EVENT_CHOICE。若弹窗期间feedstock死亡或容量改变，A确认失败且仍留EVENT_CHOICE，不重抽�?5. 玩家选择B“不参与”：不花钱、不删feedstock、不添加modifier�?*但该事件已计入本局事件次数1/3、该ID已出现、间隔计时已消�?*，下一付款节点（阶�?）不尝试事件。原状态与选择结果一次提交后进入READY阶段3�?6. 若选择A�?*免费**删除一个feedstock并设置下一次候选精良晶保底；本例选择B，所以现金仍25、阶�?实际配额210，事件不加价；UI显示`payment=210`，不得把阶段2�?25沿用�?
+这也裁定“拒绝”不是事件未发生：拒绝没有收�?成本，但消耗事件出现机会、ID一次性和间隔；支付失败或最终第10期没有上述事件事务。若阶段2虽付款成功但候选资格为空，则不消�?0%触发抽样机会，也不计事件次数�?
+## 6. 全部32持续道具
+
+共同获取方式：第1�?次成功付款后三选一，候选权重见§8；不进入盘面，每ID只能拥有1件、全局最�?件。没有事件专属或商店道具。获得时不补发本阶段已经错过的触发；立即开始监听下一阶段。表内次数按道具自身独立计，每轮/阶段重置，跨保存必须保持。所有表内奖励金额均为独立奖励，只有标“产�?自身+”的加值进入格子乘区�?
+| id | 中文�?| rarity | 持续生效规则（含边界�?| 设计用�?|
+|---|---|---|---|---|
+| item_dew_calendar | 露班轮历 | common | **轮内步骤3之后**：每轮第一个起始带age、存活且本轮未自然成熟的 plant 额外推进1步；每轮一次；若首个自然成熟则跳过寻找下一�?| 培育速度 |
+| item_root_wrap | 根温绑带 | uncommon | 每轮第一�?plant 转换后存活实例本�?+4 | 成熟过渡 |
+| item_nursery_scale | 苗圃轻秤 | rare | 抽盘时池�?plant 权重 ×3/2；仅当池总数不超�?28；无放回 | 概率调节，有扩池成本 |
+| item_frost_glass | 防寒窄窗 | uncommon | 每阶段最先上盘的 2 �?mist 自身本轮 +3；每阶段重置 | 雾料经济 |

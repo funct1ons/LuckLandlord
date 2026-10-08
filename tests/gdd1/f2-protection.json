@@ -1,0 +1,20 @@
+{
+  "capturedExisting": 341,
+  "missing": [],
+  "changed": [
+    {
+      "path": "js/gdd1/schema.js",
+      "before": "607b30ac2c74708e1dff56063f1aa82d4e57f4099837707e6c02e25c2d22a858",
+      "after": "50d8eff3f55a7150635795a301f568409c8fd57a4d7a438e2b6ab5aebc9154a9",
+      "beforeBytes": 14987,
+      "afterBytes": 17026
+    }
+  ],
+  "onlyAllowedChanges": true,
+  "oldProtected": {
+    "count": 245,
+    "failures": []
+  },
+  "historicalUnchanged": true,
+  "gddSha256": "e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07"
+}

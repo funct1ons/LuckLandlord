@@ -1,0 +1,22 @@
+{
+  "pass": true,
+  "baselineExisting": 586,
+  "unchanged": 585,
+  "changes": [],
+  "added": [],
+  "runtimeChanges": [
+    {
+      "path": ".pi/loops.json",
+      "before": "6cdb2b672736f5aafb018728cb42cc8df582bd71b5bbefa869cf3deb63295806",
+      "after": "c4aa74c78cc7b418b2e5b5b44d4f7f0f83f7b502df9c0a521573e1e441814075"
+    }
+  ],
+  "runtimeException": ".pi/loops.json and .pi/loops subtree only, parent scheduled runtime, outside fix ownership; never restored",
+  "historical245": 245,
+  "manifests": {
+    "f3-slice-sim-deliverables.json": 48,
+    "f3-slice-audit-freeze.json": 10
+  },
+  "auditProtected": 574,
+  "productionChanges": 0
+}

@@ -1,0 +1,632 @@
+{
+  "total": 154,
+  "passed": 144,
+  "cases": [
+    {
+      "name": "f2/new-run-exact-12-uids-payments",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/mist_pouch/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/wick_bed/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/dew_lantern/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/amber_frond/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/fog_stitcher/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/root_ledger/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/warm_pod/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/nursery_gauge/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/ash_felt/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/sorting_tong/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/copper_burr/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/spent_gasket/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/sieve_drum/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/heat_clerk/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/clinker_router/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/furnace_auditor/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/brine_strip/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/saline_ampoule/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/condense_coil/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/tide_prism/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/deep_still/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/crystal_index/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/pearl_separator/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/symbol/reserve_facet/no-target-base",
+      "ok": true
+    },
+    {
+      "name": "f2/age/mist-natural-growth-immediate-chain",
+      "ok": true
+    },
+    {
+      "name": "f2/age/dew-amber-and-brine-saline",
+      "ok": true
+    },
+    {
+      "name": "f2/appearance/fuel-snapshot-survives-consumption",
+      "ok": true
+    },
+    {
+      "name": "f2/consume/ash-death-listener-generates-next-uid-only",
+      "ok": true
+    },
+    {
+      "name": "f2/consume/two-consumers-only-success-pays",
+      "ok": true
+    },
+    {
+      "name": "f2/ash/end-third-appearance-self-destroy-reward",
+      "ok": true
+    },
+    {
+      "name": "f2/ash/third-appearance-consumed-no-self-reward",
+      "ok": true
+    },
+    {
+      "name": "f2/transform/sieve-preserves-uid-permanent-clears-counter",
+      "ok": true
+    },
+    {
+      "name": "f2/transform/coil-tide-listener-lining-no-reappear",
+      "ok": true
+    },
+    {
+      "name": "f2/consume/deep-still-mist-generates-and-residue",
+      "ok": true
+    },
+    {
+      "name": "f2/pressure/reserve-consume-amber-owner-reward-release",
+      "ok": true
+    },
+    {
+      "name": "f2/pressure/router-real-mechanism-not-warm-pod",
+      "ok": true
+    },
+    {
+      "name": "f2/summary/auditor-distinct-consumed-types-rational",
+      "ok": true
+    },
+    {
+      "name": "f2/summary/auditor-same-type-does-not-trigger",
+      "ok": true
+    },
+    {
+      "name": "f2/summary/nursery-two-transforms-only-plant",
+      "ok": true
+    },
+    {
+      "name": "f2/growth/root-soft-cap-actual-one-no-second-growth",
+      "ok": true
+    },
+    {
+      "name": "f2/age/calendar-filters-matured-shared-guard-fog-stitcher",
+      "ok": true
+    },
+    {
+      "name": "f2/age/fog-bound-natural-maturity-does-not-consume",
+      "ok": true
+    },
+    {
+      "name": "f2/age/stitcher-first-valid-aged-plant-only",
+      "ok": true
+    },
+    {
+      "name": "f2/item/apron-first-success-only",
+      "ok": true
+    },
+    {
+      "name": "f2/item/offcut-nonjunk-only-next-pool",
+      "ok": true
+    },
+    {
+      "name": "f2/item/offcut-junk-does-not-consume-budget",
+      "ok": true
+    },
+    {
+      "name": "f2/item/root-wrap-first-plant-only",
+      "ok": true
+    },
+    {
+      "name": "f2/item/frost-stage-quota-two-appearances",
+      "ok": true
+    },
+    {
+      "name": "f2/item/waste-log-real-nonconsumed-third-stage",
+      "ok": true
+    },
+    {
+      "name": "f2/item/fraction-gauge-rechecks-no-available-three-crystals",
+      "ok": true
+    },
+    {
+      "name": "f2/item/fraction-two-types-no-reward",
+      "ok": true
+    },
+    {
+      "name": "f2/appearance/crystal-index-distinct-not-count",
+      "ok": true
+    },
+    {
+      "name": "f2/transform/pearl-only-nonproduct-and-no-goal-equals",
+      "ok": true
+    },
+    {
+      "name": "f2/draw/12-random-slots-19-consumed-no-other-stream",
+      "ok": true
+    },
+    {
+      "name": "f2/draw/weighted-21-no-replacement-20-plus19-draws",
+      "ok": true
+    },
+    {
+      "name": "f2/draw/reservation-occupies-original-and-consumed",
+      "ok": true
+    },
+    {
+      "name": "f2/offer/natural-common-consumes-stage-once-refresh-not-natural",
+      "ok": true
+    },
+    {
+      "name": "f2/offer/event-crystal-before-product-common-suppressed",
+      "ok": true
+    },
+    {
+      "name": "f2/transaction/spin-pending-reload-no-cash-no-rng-replay",
+      "ok": true
+    },
+    {
+      "name": "f2/transaction/refresh-0-to3-revision-doubleclick-reject",
+      "ok": true
+    },
+    {
+      "name": "f2/transaction/full200-offer-delete-choose201-reject-no-uid-loss",
+      "ok": true
+    },
+    {
+      "name": "f2/payment/stage1/delta-1",
+      "ok": true
+    },
+    {
+      "name": "f2/payment/stage1/delta0",
+      "ok": true
+    },
+    {
+      "name": "f2/payment/stage1/delta1",
+      "ok": true
+    },
+    {
+      "name": "f2/payment/stage10/delta-1",
+      "ok": true
+    },
+    {
+      "name": "f2/payment/stage10/delta0",
+      "ok": true
+    },
+    {
+      "name": "f2/payment/stage10/delta1",
+      "ok": true
+    },
+    {
+      "name": "f2/payment/item-choice-only-two-remaining-weighted-not-static",
+      "ok": true
+    },
+    {
+      "name": "f2/setup/skip-item-awards-next-stage-tokens-once",
+      "ok": true
+    },
+    {
+      "name": "f2/event/event_fog_shift/reject-reload-no-rng",
+      "ok": true
+    },
+    {
+      "name": "f2/event/event_fog_shift/invalid-target-atomic",
+      "ok": true
+    },
+    {
+      "name": "f2/event/event_fog_shift/confirm-effect-no-runtime-listener",
+      "ok": true
+    },
+    {
+      "name": "f2/event/event_copper_queue/reject-reload-no-rng",
+      "ok": true
+    },
+    {
+      "name": "f2/event/event_copper_queue/invalid-target-atomic",
+      "ok": true
+    },
+    {
+      "name": "f2/event/event_copper_queue/confirm-effect-no-runtime-listener",
+      "ok": true
+    },
+    {
+      "name": "f2/event/event_brine_inspection/reject-reload-no-rng",
+      "ok": true
+    },
+    {
+      "name": "f2/event/event_brine_inspection/invalid-target-atomic",
+      "ok": true
+    },
+    {
+      "name": "f2/event/event_brine_inspection/confirm-effect-no-runtime-listener",
+      "ok": true
+    },
+    {
+      "name": "f2/event/fog-cost-insufficient-no-commit",
+      "ok": true
+    },
+    {
+      "name": "f2/event/copper-capacity-200-rejected",
+      "ok": true
+    },
+    {
+      "name": "f2/save/import-preview-and-write-fault-no-publication",
+      "ok": true
+    },
+    {
+      "name": "f2/save/pending-extended-log-roundtrip",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/70-spin-ten-payments-reload-every-command-0",
+      "ok": false,
+      "error": "Unsupported primitive weight"
+    },
+    {
+      "name": "f2-extra/70-spin-ten-payments-reload-every-command-1",
+      "ok": false,
+      "error": "Unsupported primitive weight"
+    },
+    {
+      "name": "f2-extra/70-spin-ten-payments-reload-every-command-2",
+      "ok": false,
+      "error": "Unsupported primitive weight"
+    },
+    {
+      "name": "f2-extra/70-spin-ten-payments-reload-every-command-3",
+      "ok": false,
+      "error": "Unsupported primitive weight"
+    },
+    {
+      "name": "f2-extra/70-spin-ten-payments-reload-every-command-4",
+      "ok": false,
+      "error": "Unsupported primitive weight"
+    },
+    {
+      "name": "f2-extra/70-spin-ten-payments-reload-every-command-5",
+      "ok": false,
+      "error": "Unsupported primitive weight"
+    },
+    {
+      "name": "f2-extra/70-spin-ten-payments-reload-every-command-6",
+      "ok": false,
+      "error": "Unsupported primitive weight"
+    },
+    {
+      "name": "f2-extra/70-spin-ten-payments-reload-every-command-7",
+      "ok": false,
+      "error": "Unsupported primitive weight"
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-0",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-1",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-2",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-3",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-4",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-5",
+      "ok": false,
+      "error": "Unsupported primitive weight"
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-6",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-7",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-8",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-9",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-10",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-11",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-12",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-13",
+      "ok": false,
+      "error": "Unsupported primitive weight"
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-14",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-15",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-16",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-17",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-18",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/seed-replay-all-five-streams-19",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/fraction-reservation-not-stable-state-field",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/multiplier-three-sources-per-effect-target-cap2-single-floor",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/multiplier-negative-rational-floor-with-generic-data",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/generation-global2-third-ash-no-uid-consumption",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/generation-full200-after-death-first-spawn-second-cap-skipped",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/pressure-first-full-target-searches-next-valid-no-quota-waste",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/dead-source-listener-not-permitted",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/invalid-command-resolver-fault-rng-and-state-atomic",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-0",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-1",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-2",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-3",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-4",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-5",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-6",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-7",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-8",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-9",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-10",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-11",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-12",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-13",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-14",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-15",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-16",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-17",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-18",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-19",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-20",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-21",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-22",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-23",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-24",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-25",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-26",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-27",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-28",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-eligibility-40percent-cooldown-29",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/event-coverage-both-roll-outcomes-and-cooldown",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/contributions-item-add-own-tide-and-consumer-independent",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/contributions-multiplier-margins-and-final-rounding",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/contributions-death-zero-normal-reward-own-uid",
+      "ok": true
+    },
+    {
+      "name": "f2-extra/schema-rejects-corrupt-contribution-without-weakened-old-ledger",
+      "ok": true
+    }
+  ]
+}

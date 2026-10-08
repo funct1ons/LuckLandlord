@@ -1,0 +1,132 @@
+﻿[
+    {
+        "path":  "docs/GAME_DESIGN_V1.md",
+        "bytes":  103576,
+        "sha256":  "E33E1699AED464CD656ABC2344D9E68BE92A7238DA482F9861E5E67DEDC8DF07"
+    },
+    {
+        "path":  "docs/GAME_DESIGN_V1_AUDIT.md",
+        "bytes":  24984,
+        "sha256":  "21FA22ECD565728C8FE670E1CC907504B34FFDABB7DE1AE65B6D4E8300532221"
+    },
+    {
+        "path":  "docs/GDD1_F0_FREEZE.md",
+        "bytes":  1430,
+        "sha256":  "A05AA54CF1424A2407A59854AF41A9DB4F47E46F2436027507C8278B9C26EBFE"
+    },
+    {
+        "path":  "docs/GDD1_F1_CONTRACT.md",
+        "bytes":  22966,
+        "sha256":  "09D50D390B412E45BA41516C01990930313CD6FACB390125F7D92BF98B9BB1F7"
+    },
+    {
+        "path":  "docs/GDD1_F1_FIX.md",
+        "bytes":  8572,
+        "sha256":  "9CC87391F91A918D08CD939A686586D7674F0A3D610124294DD0F8EE996F62EE"
+    },
+    {
+        "path":  "docs/GDD1_F1_RETEST.md",
+        "bytes":  6390,
+        "sha256":  "70D2BD246939CABBF1014199A9CC8B0496409AAFDC342A04DA97822AD29471DF"
+    },
+    {
+        "path":  "docs/GDD1_F1_ACCEPTANCE.md",
+        "bytes":  1346,
+        "sha256":  "CCCD5EAC6F2940F2C1552FABC8BBDFF1341EF58A25703CF30A2C66C81342702B"
+    },
+    {
+        "path":  "docs/GDD1_F2_REPORT.md",
+        "bytes":  12861,
+        "sha256":  "EB5C5DD5F5EAD850D00A10C7F63CC65EE4093745F9ED56CFCF1871B1D57D0BD4"
+    },
+    {
+        "path":  "docs/GDD1_F2_AUDIT.md",
+        "bytes":  12138,
+        "sha256":  "BD146808ACDA9A9EDFAF5EAA2F5E76CD6E9C81118408D323375491F47B9512A5"
+    },
+    {
+        "path":  "docs/GDD1_F2_FIX.md",
+        "bytes":  3007,
+        "sha256":  "47447BBF4220968FB060C21594BE967D9944C2066D27B328CB255CE445C4E9B8"
+    },
+    {
+        "path":  "docs/GDD1_F2_RETEST.md",
+        "bytes":  7698,
+        "sha256":  "C2E55991CB6C16EFA642A5C92A3E631496AA059F8072001CD8109EE15B3DAF80"
+    },
+    {
+        "path":  "docs/GDD1_F3_ACCEPTANCE.md",
+        "bytes":  2931,
+        "sha256":  "9D52F771208BD75F36470999EB6F5189BA2C79AFFC9F7044337A551321615A2A"
+    },
+    {
+        "path":  "docs/GDD1_SLICE_SIMULATION.md",
+        "bytes":  51638,
+        "sha256":  "98009FDB332BFA65E36E4638606EC54B8C4CD166136004D030DA9C081F0FA128"
+    },
+    {
+        "path":  "docs/GDD1_SLICE_SIMULATION_AUDIT.md",
+        "bytes":  15363,
+        "sha256":  "7D0812A0A219C0EDE1EC4AF6706615C9E821DFA13D10415B22D00BEA49D8BA40"
+    },
+    {
+        "path":  "docs/GDD1_SLICE_SIMULATION_FIX.md",
+        "bytes":  17081,
+        "sha256":  "9EFAF2D0410C18A91F40C877CF43F2640EF696A654C028C2F45393C8B110AA33"
+    },
+    {
+        "path":  "docs/GDD1_SLICE_SIMULATION_RETEST.md",
+        "bytes":  11499,
+        "sha256":  "9D023A3D3ED3C34CA0C74ACDF58D03EAC75358F565BDB98C247A61F9C585A0BC"
+    },
+    {
+        "path":  "js/gdd1/content.js",
+        "bytes":  7631,
+        "sha256":  "E6C753479683480C27AD0A3888A058EDB8E90A0A4397E218C9E7FA8EFE7AD239"
+    },
+    {
+        "path":  "js/gdd1/contract.js",
+        "bytes":  4911,
+        "sha256":  "B7BD44D05CCDD4FFFFE13E4949F7DE92F3C7F37E628FEAF3A6BF58023E7EA5C9"
+    },
+    {
+        "path":  "js/gdd1/controller.js",
+        "bytes":  5274,
+        "sha256":  "FB2F2870EA89CBE742C7F8190AD5C48FBACB4E09906545039119214F955AFE24"
+    },
+    {
+        "path":  "js/gdd1/descriptions.js",
+        "bytes":  11874,
+        "sha256":  "D167D5053A1A30811DBC4A787555BA83FD302AF293C82C6B17431F79D021D4CA"
+    },
+    {
+        "path":  "js/gdd1/offers.js",
+        "bytes":  3200,
+        "sha256":  "6D3EC272E2AF0E32BC4D604CD5B6B4BE53196E3BE593A27CA6FEE0303ED23295"
+    },
+    {
+        "path":  "js/gdd1/resolver.js",
+        "bytes":  13959,
+        "sha256":  "CEB14CD1A65A0B5FD9FF9C74D0D493FA30876A1231A515CD59CE4FCF0BD005BD"
+    },
+    {
+        "path":  "js/gdd1/rng.js",
+        "bytes":  1680,
+        "sha256":  "F3F5C055A8E3F4D5E18D355488194F94DFBC28603BE7C29A5AAB1743BD6704F7"
+    },
+    {
+        "path":  "js/gdd1/save.js",
+        "bytes":  4686,
+        "sha256":  "2F0D39CEEBEE434CBBB38C9FB01C6BF73E7AD6328CED84AB022A135D618EEBBA"
+    },
+    {
+        "path":  "js/gdd1/schema.js",
+        "bytes":  17026,
+        "sha256":  "50D8EFF3F55A7150635795A301F568409C8FD57A4D7A438E2B6AB5AEBC9154A9"
+    },
+    {
+        "path":  "js/gdd1UI/main.js",
+        "bytes":  8511,
+        "sha256":  "4145B5BE5193CC3C9C15B65D61E8C59A8E91B2227A022DFB073C2FF8608BE7D5"
+    }
+]

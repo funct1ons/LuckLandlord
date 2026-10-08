@@ -1,0 +1,523 @@
+{
+  "status": "ROUTE_H_DEVELOPMENT_FROZEN_READABLE_AWAITING_INDEPENDENT_REVIEW",
+  "contentVersion": "H-1",
+  "node": {
+    "total": 602,
+    "passed": 602,
+    "failed": 0
+  },
+  "routeH": {
+    "total": 81,
+    "passed": 81,
+    "failed": 0
+  },
+  "old521NamesPreserved": true,
+  "protectedMechanicsEvidence": {
+    "count": 31,
+    "bad": [],
+    "hashes": {
+      "tests/mechanics-v1-suite-manifest.json": {
+        "frozenSHA256": "41b3c8425b8551fdb2a1959d699464a0e89b070241b840b6de1bf40818594496",
+        "currentSHA256": "41b3c8425b8551fdb2a1959d699464a0e89b070241b840b6de1bf40818594496"
+      },
+      "tests/mechanics-v1-node-result.txt": {
+        "frozenSHA256": "73f592899c791894810223d6dcbac75232f9d5e288d6fdc0219f60c4c868a754",
+        "currentSHA256": "73f592899c791894810223d6dcbac75232f9d5e288d6fdc0219f60c4c868a754"
+      },
+      "tests/mechanics-v1-ma7-map.json": {
+        "frozenSHA256": "6af39b5ce39d3813c16941787127e4dc9275b7b92ce0e670a7f7cedc57d701cc",
+        "currentSHA256": "6af39b5ce39d3813c16941787127e4dc9275b7b92ce0e670a7f7cedc57d701cc"
+      },
+      "tests/mechanics-v1-browser-result.html": {
+        "frozenSHA256": "7676d4b79df87f5254b39eda69be01bf73f7adaa620c985a4dabb27e4f2d4387",
+        "currentSHA256": "7676d4b79df87f5254b39eda69be01bf73f7adaa620c985a4dabb27e4f2d4387"
+      },
+      "tests/mechanics-v1-ui-smoke-result.html": {
+        "frozenSHA256": "d25d18d0ab9c99d81229004eaf0effbfe102bcd0819b662e77475526c15648de",
+        "currentSHA256": "d25d18d0ab9c99d81229004eaf0effbfe102bcd0819b662e77475526c15648de"
+      },
+      "tests/mechanics-v1-storage-write-result.html": {
+        "frozenSHA256": "da967c9cc32172044abacb05053603c397edb371e03510327283b9edc5127a3a",
+        "currentSHA256": "da967c9cc32172044abacb05053603c397edb371e03510327283b9edc5127a3a"
+      },
+      "tests/mechanics-v1-storage-read-result.html": {
+        "frozenSHA256": "011c8a39afd0d1f613be02031c3e676a5cb0bf57fd404e6ad366faa7b65baade",
+        "currentSHA256": "011c8a39afd0d1f613be02031c3e676a5cb0bf57fd404e6ad366faa7b65baade"
+      },
+      "tests/mechanics-v1-file-proof.txt": {
+        "frozenSHA256": "04e2c927f06b617a4c96d8f80aaea9a5f0bd6306bf4587d763eb5d2271d9f895",
+        "currentSHA256": "04e2c927f06b617a4c96d8f80aaea9a5f0bd6306bf4587d763eb5d2271d9f895"
+      },
+      "tests/mechanics-v1-edge-stderr.txt": {
+        "frozenSHA256": "ee2dfa5076ae9ca4fd738ea25d2951ddb87952846dbb60c3f0cf94be38236b29",
+        "currentSHA256": "ee2dfa5076ae9ca4fd738ea25d2951ddb87952846dbb60c3f0cf94be38236b29"
+      },
+      "tests/mechanics-v1-http-proof.json": {
+        "frozenSHA256": "5b7712e4447a11eb96a67c22cdcb76e277fd74f31c8e46021f01015373091c48",
+        "currentSHA256": "5b7712e4447a11eb96a67c22cdcb76e277fd74f31c8e46021f01015373091c48"
+      },
+      "tests/mechanics-v1-http-suite.html": {
+        "frozenSHA256": "7676d4b79df87f5254b39eda69be01bf73f7adaa620c985a4dabb27e4f2d4387",
+        "currentSHA256": "7676d4b79df87f5254b39eda69be01bf73f7adaa620c985a4dabb27e4f2d4387"
+      },
+      "tests/mechanics-v1-http-ui.html": {
+        "frozenSHA256": "d25d18d0ab9c99d81229004eaf0effbfe102bcd0819b662e77475526c15648de",
+        "currentSHA256": "d25d18d0ab9c99d81229004eaf0effbfe102bcd0819b662e77475526c15648de"
+      },
+      "tests/mechanics-v1-http-suite-stderr.txt": {
+        "frozenSHA256": "3406be52dccdcf58c910629efdacf55c9ebc23a6b3203f63e4a77f0d5f527e1c",
+        "currentSHA256": "3406be52dccdcf58c910629efdacf55c9ebc23a6b3203f63e4a77f0d5f527e1c"
+      },
+      "tests/mechanics-v1-http-ui-stderr.txt": {
+        "frozenSHA256": "f53d28b6e91bb39fde731979980ea144340d2e692460b17d860264fc2f447454",
+        "currentSHA256": "f53d28b6e91bb39fde731979980ea144340d2e692460b17d860264fc2f447454"
+      },
+      "tests/mechanics-v1-audit-proof.json": {
+        "frozenSHA256": "fea2e9b17f4c86a49c8eb18489c92bb6a2e7856add0ebaad0071af533bc2b086",
+        "currentSHA256": "fea2e9b17f4c86a49c8eb18489c92bb6a2e7856add0ebaad0071af533bc2b086"
+      },
+      "tests/mechanics-v1-pressure-http.txt": {
+        "frozenSHA256": "432e8bbe195d0dd26510b009bc67d3d8e43658b4f561b0665d326e1ae30e827d",
+        "currentSHA256": "432e8bbe195d0dd26510b009bc67d3d8e43658b4f561b0665d326e1ae30e827d"
+      },
+      "tests/mechanics-v1-pressure-http.html": {
+        "frozenSHA256": "1be61cb460d984b3a0fa196d9b5e7975e26344b8032b6668215d28bb552ae351",
+        "currentSHA256": "1be61cb460d984b3a0fa196d9b5e7975e26344b8032b6668215d28bb552ae351"
+      },
+      "tests/mechanics-v1-strict-dom-proof.json": {
+        "frozenSHA256": "a2a99d448d88114f0ead6cffb99401448253d584c77141b75f99cb3d62721c9c",
+        "currentSHA256": "a2a99d448d88114f0ead6cffb99401448253d584c77141b75f99cb3d62721c9c"
+      },
+      "tests/mechanics-v1-fixture-result.json": {
+        "frozenSHA256": "c6167c4c51dbcd5bda200753ff1ea9323a873b5a2cceee4bd96cf91d9cf7ba19",
+        "currentSHA256": "c6167c4c51dbcd5bda200753ff1ea9323a873b5a2cceee4bd96cf91d9cf7ba19"
+      },
+      "tests/mechanics-v1-fixtures.txt": {
+        "frozenSHA256": "0dace108e6725b6c4b98e6a3458b1a1dc34ec8e439cda312c67a9e0e012d01ac",
+        "currentSHA256": "0dace108e6725b6c4b98e6a3458b1a1dc34ec8e439cda312c67a9e0e012d01ac"
+      },
+      "tests/mechanics-v1-audit-cargo-retest.txt": {
+        "frozenSHA256": "3fb5e3d2a2f055fc106d0959d934ee4b9394d5f4b4bc19ba9703b1d18c7be2dc",
+        "currentSHA256": "3fb5e3d2a2f055fc106d0959d934ee4b9394d5f4b4bc19ba9703b1d18c7be2dc"
+      },
+      "tests/mechanics-v1-audit-cargo.txt": {
+        "frozenSHA256": "c59018f1f0514167b06169e9221c09eb0c8cf217ed58c3d367a637d68a744f0e",
+        "currentSHA256": "c59018f1f0514167b06169e9221c09eb0c8cf217ed58c3d367a637d68a744f0e"
+      },
+      "tests/mechanics-v1-audit-cultivation-retest.txt": {
+        "frozenSHA256": "5dcf38c8ca371e6bd7e0f8aff7eaaae14abd47cd350cd1c581d915a479e53bc7",
+        "currentSHA256": "5dcf38c8ca371e6bd7e0f8aff7eaaae14abd47cd350cd1c581d915a479e53bc7"
+      },
+      "tests/mechanics-v1-audit-cultivation.txt": {
+        "frozenSHA256": "3847c491150c5c2ba45a26456fb9b01915a753d55078dc3fd577c7ad6609469f",
+        "currentSHA256": "3847c491150c5c2ba45a26456fb9b01915a753d55078dc3fd577c7ad6609469f"
+      },
+      "tests/mechanics-v1-audit-distillation.txt": {
+        "frozenSHA256": "b010452026270d943068f94d41e4f86ec653da6d4c19e3c4eeda61600b7708c9",
+        "currentSHA256": "b010452026270d943068f94d41e4f86ec653da6d4c19e3c4eeda61600b7708c9"
+      },
+      "tests/mechanics-v1-audit-pressure-retest.txt": {
+        "frozenSHA256": "5433eb163fe470b79027fb30ad3dfc46ee24f06f1d2a1cf1a569e25f9c686b78",
+        "currentSHA256": "5433eb163fe470b79027fb30ad3dfc46ee24f06f1d2a1cf1a569e25f9c686b78"
+      },
+      "tests/mechanics-v1-audit-pressure-transaction-retest.txt": {
+        "frozenSHA256": "527fd84057a29f766dafbfdfa39cf6fee7b373bd975efb90e0887ef68ba05ccb",
+        "currentSHA256": "527fd84057a29f766dafbfdfa39cf6fee7b373bd975efb90e0887ef68ba05ccb"
+      },
+      "tests/mechanics-v1-audit-pressure.txt": {
+        "frozenSHA256": "44ce95f2bb740ac39d61e008f8f1326741679e1f00bc0e20e11099d2033b9ea3",
+        "currentSHA256": "44ce95f2bb740ac39d61e008f8f1326741679e1f00bc0e20e11099d2033b9ea3"
+      },
+      "tests/mechanics-v1-audit-recycling.txt": {
+        "frozenSHA256": "40aafa6febecba7085d8f0c54ac7a5eb3510d6f1e25b595389329d03cc130b8d",
+        "currentSHA256": "40aafa6febecba7085d8f0c54ac7a5eb3510d6f1e25b595389329d03cc130b8d"
+      },
+      "tests/mechanics-v1-audit-resonance-retest.txt": {
+        "frozenSHA256": "f27526c56acaf683670a744bb0005d0656b667ca2b136d308d0e39734be1b23f",
+        "currentSHA256": "f27526c56acaf683670a744bb0005d0656b667ca2b136d308d0e39734be1b23f"
+      },
+      "tests/mechanics-v1-audit-resonance.txt": {
+        "frozenSHA256": "d317f1c365cc4aea136ef71fca1002e42b1297039168024ab49037b493c8f08a",
+        "currentSHA256": "d317f1c365cc4aea136ef71fca1002e42b1297039168024ab49037b493c8f08a"
+      }
+    }
+  },
+  "historicalAudits": {
+    "total": 207,
+    "passed": 204,
+    "failed": 3,
+    "allHistoricalAuditsGreen": false,
+    "approvedConflicts": [
+      "cargo malformed reservation rejected before clone",
+      "cargo-retest malformed reservation rejected before clone",
+      "recycling formal dead listener without allowDeadSource"
+    ]
+  },
+  "browser": {
+    "file": "route-h-file-proof.txt",
+    "http": "route-h-http-result.txt",
+    "strictDOM": true,
+    "uiSeparate": [
+      "route-h-ui/READY-accept-setting-save-restore",
+      "route-h-ui/SYMBOL_CHOICE-setting-rejected-with-memory-and-bytes",
+      "route-h-ui/pending-reload-choose-next-spin-no-repeat"
+    ],
+    "proofs": [
+      {
+        "file": "route-h-browser-result.html",
+        "total": 602,
+        "passed": 602,
+        "exactCases": true
+      },
+      {
+        "file": "route-h-http-suite.html",
+        "total": 602,
+        "passed": 602,
+        "exactCases": true
+      }
+    ]
+  },
+  "fixtures": "route-h-fixtures.txt",
+  "mechanicsAudit": "route-h-mechanics-audit.txt",
+  "migration": {
+    "approved": [
+      "route-g/offset_reader/conditional-and-h-placeholder-not-copyable",
+      "route-g/content/formal-copy-whitelist-exact-two-and-prototype-unmarked"
+    ],
+    "otherOldCasesUnchanged": true,
+    "approvedDetails": [
+      {
+        "name": "route-g/offset_reader/conditional-and-h-placeholder-not-copyable",
+        "old": "ledger [1,4,5], no copy",
+        "current": "ledger [2,4,4], cleared_stub flat1 copied; total10 unchanged",
+        "basis": "CONTENT_MATRIX H cleared_stub and section3.1"
+      },
+      {
+        "name": "route-g/content/formal-copy-whitelist-exact-two-and-prototype-unmarked",
+        "old": "pause_dial +1 and blank_facet +2 only",
+        "current": "add cleared_stub +1; prior two and unmarked prototype preserved",
+        "basis": "Authorized H content revision"
+      }
+    ]
+  },
+  "knownNotComplete": [
+    "G overall",
+    "remaining selector/row near-neighbor differences",
+    "32 persistent items",
+    "8 events/P10 modifier bus",
+    "candidate weights",
+    "balance",
+    "art and manual play"
+  ],
+  "protectedHistoricalEvidence": {
+    "count": 26,
+    "bad": [],
+    "hashes": {
+      "tests/suite-manifest.json": {
+        "frozenSHA256": "50d138410c6d411bf36c4cf1dee16bd61c3813f903badfcb18c186faed0cba2d",
+        "currentSHA256": "50d138410c6d411bf36c4cf1dee16bd61c3813f903badfcb18c186faed0cba2d"
+      },
+      "tests/route-g-node-result.txt": {
+        "frozenSHA256": "c6546e97fa9e14965ea3d50c49c69a1b260e599499afaff1303cb19ecbede722",
+        "currentSHA256": "c6546e97fa9e14965ea3d50c49c69a1b260e599499afaff1303cb19ecbede722"
+      },
+      "tests/fixture-result.json": {
+        "frozenSHA256": "c6167c4c51dbcd5bda200753ff1ea9323a873b5a2cceee4bd96cf91d9cf7ba19",
+        "currentSHA256": "c6167c4c51dbcd5bda200753ff1ea9323a873b5a2cceee4bd96cf91d9cf7ba19"
+      },
+      "tests/route-g-file-proof.txt": {
+        "frozenSHA256": "ae89226e282ec42ff7be3483747f95720feb9c36bd0100afabea8cda613e8444",
+        "currentSHA256": "ae89226e282ec42ff7be3483747f95720feb9c36bd0100afabea8cda613e8444"
+      },
+      "tests/route-g-file-manifest-proof.json": {
+        "frozenSHA256": "7a3df30510778c46af9894f846bb7718732afe970dfe34aff55542ff5d888dc2",
+        "currentSHA256": "7a3df30510778c46af9894f846bb7718732afe970dfe34aff55542ff5d888dc2"
+      },
+      "tests/browser-result.html": {
+        "frozenSHA256": "b499e54cb1a815c2da92fafe373f8fadf1d294bf1cb316bc7944f841c8bcbc8f",
+        "currentSHA256": "b499e54cb1a815c2da92fafe373f8fadf1d294bf1cb316bc7944f841c8bcbc8f"
+      },
+      "tests/ui-smoke-result.html": {
+        "frozenSHA256": "8d203c39a743ad2ca7da73209ab040ea8821a8f4cc3c2f6007598fd67385e1fd",
+        "currentSHA256": "8d203c39a743ad2ca7da73209ab040ea8821a8f4cc3c2f6007598fd67385e1fd"
+      },
+      "tests/storage-write-result.html": {
+        "frozenSHA256": "da967c9cc32172044abacb05053603c397edb371e03510327283b9edc5127a3a",
+        "currentSHA256": "da967c9cc32172044abacb05053603c397edb371e03510327283b9edc5127a3a"
+      },
+      "tests/storage-read-result.html": {
+        "frozenSHA256": "011c8a39afd0d1f613be02031c3e676a5cb0bf57fd404e6ad366faa7b65baade",
+        "currentSHA256": "011c8a39afd0d1f613be02031c3e676a5cb0bf57fd404e6ad366faa7b65baade"
+      },
+      "tests/route-g-http-proof.json": {
+        "frozenSHA256": "b4cb0f45b317105c05758566254ea2ceed092dd547854d125df17ab8818da3cc",
+        "currentSHA256": "b4cb0f45b317105c05758566254ea2ceed092dd547854d125df17ab8818da3cc"
+      },
+      "tests/route-g-http-suite.html": {
+        "frozenSHA256": "b499e54cb1a815c2da92fafe373f8fadf1d294bf1cb316bc7944f841c8bcbc8f",
+        "currentSHA256": "b499e54cb1a815c2da92fafe373f8fadf1d294bf1cb316bc7944f841c8bcbc8f"
+      },
+      "tests/route-g-http-smoke.html": {
+        "frozenSHA256": "8d203c39a743ad2ca7da73209ab040ea8821a8f4cc3c2f6007598fd67385e1fd",
+        "currentSHA256": "8d203c39a743ad2ca7da73209ab040ea8821a8f4cc3c2f6007598fd67385e1fd"
+      },
+      "tests/route-g-pressure-http-result.txt": {
+        "frozenSHA256": "6786e02b7f4799f10ed6e97153cf8fff31e3880eacd2d090f2ddcd6ddbc647c0",
+        "currentSHA256": "6786e02b7f4799f10ed6e97153cf8fff31e3880eacd2d090f2ddcd6ddbc647c0"
+      },
+      "tests/route-g-pressure-http.html": {
+        "frozenSHA256": "a08dbd3717c558249076c612eae096d7bbfd6fa31264f9b9729e4ee56e487fc5",
+        "currentSHA256": "a08dbd3717c558249076c612eae096d7bbfd6fa31264f9b9729e4ee56e487fc5"
+      },
+      "tests/route-g-strict-dom-proof.json": {
+        "frozenSHA256": "9db9bc1a5f67cffdfdd514ca98a8a3bbdf1e96aab42d65c874560d7e9c452d0e",
+        "currentSHA256": "9db9bc1a5f67cffdfdd514ca98a8a3bbdf1e96aab42d65c874560d7e9c452d0e"
+      },
+      "tests/route-g-audit-cargo-retest.txt": {
+        "frozenSHA256": "6af3e0b46a81448dacdc38d3a9f078dfc43a928051b7a5be133f1c00b5db8db6",
+        "currentSHA256": "6af3e0b46a81448dacdc38d3a9f078dfc43a928051b7a5be133f1c00b5db8db6"
+      },
+      "tests/route-g-audit-cargo.txt": {
+        "frozenSHA256": "e38829accd4ab86856d4b2be6dcdd745a5dc6c0e2495e8f140fe96b04cefaaa3",
+        "currentSHA256": "e38829accd4ab86856d4b2be6dcdd745a5dc6c0e2495e8f140fe96b04cefaaa3"
+      },
+      "tests/route-g-audit-cultivation-retest.txt": {
+        "frozenSHA256": "7f4a0ae38e3da99f3c9c17aeddbfa383f3d463c528fdc6db5f9616b1d272231c",
+        "currentSHA256": "7f4a0ae38e3da99f3c9c17aeddbfa383f3d463c528fdc6db5f9616b1d272231c"
+      },
+      "tests/route-g-audit-cultivation.txt": {
+        "frozenSHA256": "1887877d114faf475f8e1a1f24c7e61bb89d958ba41ec76f0c58b35c97979ac4",
+        "currentSHA256": "1887877d114faf475f8e1a1f24c7e61bb89d958ba41ec76f0c58b35c97979ac4"
+      },
+      "tests/route-g-audit-distillation.txt": {
+        "frozenSHA256": "64eb6f004683578406ad6d28786f91075fcc27ede1fe3e59a6763a66b260a0e7",
+        "currentSHA256": "64eb6f004683578406ad6d28786f91075fcc27ede1fe3e59a6763a66b260a0e7"
+      },
+      "tests/route-g-audit-pressure-retest.txt": {
+        "frozenSHA256": "8682a06d4a51fbd5a2467e51c59bfcbaf6832b48e5192fc6c44b280ecfb39922",
+        "currentSHA256": "8682a06d4a51fbd5a2467e51c59bfcbaf6832b48e5192fc6c44b280ecfb39922"
+      },
+      "tests/route-g-audit-pressure-transaction-retest.txt": {
+        "frozenSHA256": "c25829cbba14322462f4716c0faa7ac3c59e2b85de7b29fd3073c5737388053d",
+        "currentSHA256": "c25829cbba14322462f4716c0faa7ac3c59e2b85de7b29fd3073c5737388053d"
+      },
+      "tests/route-g-audit-pressure.txt": {
+        "frozenSHA256": "dac0412a967edc54ddb92bd6e402a8d42b6cc542ef9297ab834f5a62faf7c120",
+        "currentSHA256": "dac0412a967edc54ddb92bd6e402a8d42b6cc542ef9297ab834f5a62faf7c120"
+      },
+      "tests/route-g-audit-recycling.txt": {
+        "frozenSHA256": "4b8e289415cfbd35c8fce56f7ef63ab54a8130c4d000c3fdb381ac1f2cf619ae",
+        "currentSHA256": "4b8e289415cfbd35c8fce56f7ef63ab54a8130c4d000c3fdb381ac1f2cf619ae"
+      },
+      "tests/route-g-audit-resonance-retest.txt": {
+        "frozenSHA256": "c5a67b709af4cfd747744e494cfd16380bdfd3267f826b15124cc57d00050d3f",
+        "currentSHA256": "c5a67b709af4cfd747744e494cfd16380bdfd3267f826b15124cc57d00050d3f"
+      },
+      "tests/route-g-audit-resonance.txt": {
+        "frozenSHA256": "8bb0d72416d0ec239c0a5888a9926d61639d1f9db2a421b10e9aa1454e82989d",
+        "currentSHA256": "8bb0d72416d0ec239c0a5888a9926d61639d1f9db2a421b10e9aa1454e82989d"
+      }
+    }
+  },
+  "old521ExactResultsPreserved": true,
+  "previousFreezeSHA256": "2f57b3d1cae220ea2071dd1ff9aef93c4e51b6974d5323cddc1f947924ea6b9e",
+  "sourceDifferences": [
+    {
+      "path": "js/core/rng.js",
+      "beforeSHA256": "ae093c868f3da95d0c61c2f56008b89f674b2f9ad75011f66165893a134f6407",
+      "afterSHA256": "9a5d320312e7be6fb53c054eedd9da0da551a1acd0013611036a1639060bc039",
+      "authorization": "H-1 generic effects, stage settings/schema/migration, approved copy expansion, explicit suite/real UI or status documentation"
+    },
+    {
+      "path": "js/data/content.js",
+      "beforeSHA256": "8fdb3cc3f0e688fd948f1dbc243add8b929022b0292c70ad1630f48f27b14af9",
+      "afterSHA256": "6c73965aa1e2cc21b21f6a154e62273514b84d426370478aa76d64a61f4cd70d",
+      "authorization": "H-1 generic effects, stage settings/schema/migration, approved copy expansion, explicit suite/real UI or status documentation"
+    },
+    {
+      "path": "js/engine/resolver.js",
+      "beforeSHA256": "881874a2070869b25d31bcf3ebb38f37a7c60e58dc140951fe3ddf9aff02b271",
+      "afterSHA256": "18a9588ceb169c56e5c09dd690cd155b6bff3a8322f8319c9f60756ca5647a57",
+      "authorization": "H-1 generic effects, stage settings/schema/migration, approved copy expansion, explicit suite/real UI or status documentation"
+    },
+    {
+      "path": "js/core/game.js",
+      "beforeSHA256": "9dce1d91e957ca152c375e2c529867db6a315a8453d6585ae0af988abc310598",
+      "afterSHA256": "3b990d7916b22ad9d2d03c1e4591ae08bec6e09d8b4c6e5dfe66db51ff71d254",
+      "authorization": "H-1 generic effects, stage settings/schema/migration, approved copy expansion, explicit suite/real UI or status documentation"
+    },
+    {
+      "path": "js/core/validation.js",
+      "beforeSHA256": "8a02ceb4fbae738a62036afb968c72512e8dd70a4f0d7a07a20d071f9ce94847",
+      "afterSHA256": "223dcf9d23165d7393df18ffc5e65906bf01dc8c091ba48c12edc86405cdb163",
+      "authorization": "H-1 generic effects, stage settings/schema/migration, approved copy expansion, explicit suite/real UI or status documentation"
+    },
+    {
+      "path": "js/core/save.js",
+      "beforeSHA256": "cff05833b720f0d8c0840033ee2579d9069a2310c9e5d60d79b7a11ca39411c8",
+      "afterSHA256": "4226c3cd1d43846533d58a7e02221e7ce389fa9e0159c7efe2747e280d7fca12",
+      "authorization": "H-1 generic effects, stage settings/schema/migration, approved copy expansion, explicit suite/real UI or status documentation"
+    },
+    {
+      "path": "js/ui/main.js",
+      "beforeSHA256": "563b34d013109ed7970ee4b7cdc3bb01b8629dfaff6428eb44c4bb8573e5074e",
+      "afterSHA256": "22e876d0014dc5ae9c11723a05a53b576731cba6542025841c4e5f040841e538",
+      "authorization": "H-1 generic effects, stage settings/schema/migration, approved copy expansion, explicit suite/real UI or status documentation"
+    },
+    {
+      "path": "tests/run.js",
+      "beforeSHA256": "56e01697e9efbe2fdebb50399c285277a8a0ef35008f613c5f7f1d0f9bd39d4e",
+      "afterSHA256": "67b9b0dcf3c59a5f09a4699937920aef1a0ebd3d80b59b83c098b63e404add19",
+      "authorization": "H-1 generic effects, stage settings/schema/migration, approved copy expansion, explicit suite/real UI or status documentation"
+    },
+    {
+      "path": "tests/browser-tests.js",
+      "beforeSHA256": "e018eb80930140f04bff3504b562e5130a330777a01536c126aeb44839bcb101",
+      "afterSHA256": "771abd97341cf627189957013136cbf576283e39a2fe6465e19de95021ab6cd7",
+      "authorization": "H-1 generic effects, stage settings/schema/migration, approved copy expansion, explicit suite/real UI or status documentation"
+    },
+    {
+      "path": "tests/index.html",
+      "beforeSHA256": "622dd727aa31a7944df075da5dea7a2d379ac311e1f06b17e21631aeeb2d41c7",
+      "afterSHA256": "e985ac76ac0cea990078b274edd07f0b58efe2899283fac5bed36ae20c529462",
+      "authorization": "H-1 generic effects, stage settings/schema/migration, approved copy expansion, explicit suite/real UI or status documentation"
+    },
+    {
+      "path": "tests/route-g-behavior.js",
+      "beforeSHA256": "5cee09be81dde3490179c887d68d03adfb507b9baa8ce337e04fd166544826f1",
+      "afterSHA256": "231da3d713882d093ca42488ef1e34a607b300eccaa65f6fbef722246106cd20",
+      "authorization": "H-1 generic effects, stage settings/schema/migration, approved copy expansion, explicit suite/real UI or status documentation"
+    },
+    {
+      "path": "tests/ui-smoke.js",
+      "beforeSHA256": "6be24add6d977c59d2b667754b00452c852d2b339328e82ee4378ddef510e51d",
+      "afterSHA256": "4d69a91f46cfade56f6aa057f054d2fd463b961bedb493b0dbbde736a0ce8c70",
+      "authorization": "H-1 generic effects, stage settings/schema/migration, approved copy expansion, explicit suite/real UI or status documentation"
+    },
+    {
+      "path": "docs/CONTENT_MATRIX.md",
+      "beforeSHA256": "b950bbacd2613cc5f8ac3bb893b0370a236d6e8a4154785f38c14e2035c2bf5a",
+      "afterSHA256": "51885a1dfb29452e6c31dd902b1fdad50f0515b074e7acd18fe860ca1e369296",
+      "authorization": "H-1 generic effects, stage settings/schema/migration, approved copy expansion, explicit suite/real UI or status documentation"
+    },
+    {
+      "path": "docs/RULES.md",
+      "beforeSHA256": "e111ada5b466f1d62ece7846c670c6b52999c00a0665af2bfcefff1936afa360",
+      "afterSHA256": "4698aa54b133440fdeec38bcf5c8bebb47498a168eeb10fee10879a06f0ba502",
+      "authorization": "H-1 generic effects, stage settings/schema/migration, approved copy expansion, explicit suite/real UI or status documentation"
+    },
+    {
+      "path": "docs/PROGRESS.md",
+      "beforeSHA256": "9333db20b36f71f43c697c0d02b7aa6c4f90a5817b67384185dc7240f781178b",
+      "afterSHA256": "398e9b34757b7276b6e346c8ed038caebd691d909b855b8b32d9af8d28969d99",
+      "authorization": "H-1 generic effects, stage settings/schema/migration, approved copy expansion, explicit suite/real UI or status documentation"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "beforeSHA256": "1dbdec2edd02cf7704383a37126726c67fd04942dbc66ffb27a70b249db0e244",
+      "afterSHA256": "3652d8c3a0449ca141c42fc1ae79c9b09297f892c5e5f5719512b9e54ab259d0",
+      "authorization": "H-1 generic effects, stage settings/schema/migration, approved copy expansion, explicit suite/real UI or status documentation"
+    }
+  ],
+  "sources": {
+    "EXECUTION_PLAN.md": "944b2d219175aedb3ba7d4f92f1fff7b9bf8186a92a3e728fffddb13ccbb0d9b",
+    "docs/ARCHITECTURE.md": "3652d8c3a0449ca141c42fc1ae79c9b09297f892c5e5f5719512b9e54ab259d0",
+    "docs/CONTENT_MATRIX.md": "51885a1dfb29452e6c31dd902b1fdad50f0515b074e7acd18fe860ca1e369296",
+    "docs/MECHANICS_ADVISORY.md": "fd2fa918fcb146412872a688ef2eb23d6ec8f5301370c3c6fb9b36f766e86a34",
+    "docs/MECHANICS_GAPS.md": "84ef3fb6871db494c2b8009fcdadc3d568761cff2ade176cba2b5bc6ffd0c4e1",
+    "docs/MECHANICS_IMPLEMENTATION.md": "7b86d0d42d4b7b1085d3deb10dc634f87910454e2313aaf8ab4a6a782b3f91cb",
+    "docs/MECHANICS_V1_AUDIT.md": "7c951c85a7a31cd053e8657bedac53814184ea18fe2ac861b8e75000ba637fab",
+    "docs/PRESSURE_TRANSACTION_RETEST.md": "2216403639f2c46ec319fc22af95400a2736c88bc2779a38dee2db7dea7ff4be",
+    "docs/PROGRESS.md": "398e9b34757b7276b6e346c8ed038caebd691d909b855b8b32d9af8d28969d99",
+    "docs/ROUTE_G_PROOF.md": "0657a904ea8dd8e83dbc1a68f3c0e1712e1551e3106bf741e2f3b351779c60a4",
+    "docs/ROUTE_H_PROOF.md": "6aad3a5609db4878cc5e16173c79a72148f34816713fecb1b64efabe5e32a6a9",
+    "docs/RULES.md": "4698aa54b133440fdeec38bcf5c8bebb47498a168eeb10fee10879a06f0ba502",
+    "index.html": "7f4fbcae8e43a51acb0ec2d7f91ffa69ac480e0c8741df656129785187c731da",
+    "js/core/game.js": "3b990d7916b22ad9d2d03c1e4591ae08bec6e09d8b4c6e5dfe66db51ff71d254",
+    "js/core/rng.js": "9a5d320312e7be6fb53c054eedd9da0da551a1acd0013611036a1639060bc039",
+    "js/core/save.js": "4226c3cd1d43846533d58a7e02221e7ce389fa9e0159c7efe2747e280d7fca12",
+    "js/core/validation.js": "223dcf9d23165d7393df18ffc5e65906bf01dc8c091ba48c12edc86405cdb163",
+    "js/data/content.js": "6c73965aa1e2cc21b21f6a154e62273514b84d426370478aa76d64a61f4cd70d",
+    "js/engine/resolver.js": "18a9588ceb169c56e5c09dd690cd155b6bff3a8322f8319c9f60756ca5647a57",
+    "js/ui/main.js": "22e876d0014dc5ae9c11723a05a53b576731cba6542025841c4e5f040841e538",
+    "tests/audit-cargo-retest.js": "ab5f96c7f4ee43807b6187818768bf3a9ee8300237a2a6211e799ad42324c3b6",
+    "tests/audit-cargo.js": "e56c31d39c0ddb2a7736c565351cf6edcec1b791b6494aebc7480f6086d5ee4a",
+    "tests/audit-cultivation-retest.js": "b03bfd858bb29dcf29c99ba636e32653b4cb612f4ebeb5753c3c1e942eaac50f",
+    "tests/audit-cultivation.js": "ad211c1f460f66607d35eb3b645d61a8ba7a0ccbc3195526d274477f59721c1b",
+    "tests/audit-distillation.js": "dd2bb5395128d5ace2390d519e27bbe57231c9eae7a885804298890b8c74a84b",
+    "tests/audit-mechanics-v1.js": "5a11f9a10f52947f9b8be9bbdc121b088c31ce9e5f5d6e7ecb4634990bc0863b",
+    "tests/audit-pressure-retest.js": "01e256b7ef2d0eb3d84334d38318a225bfe9db7bb1edf0697073551879e3b2c5",
+    "tests/audit-pressure-transaction-retest.js": "a56d015948a53123f838e9a8ec71ab00003f7b1cdddedab413e1595288101877",
+    "tests/audit-pressure.js": "f321ae7bfdb2f931dbdd37aab66de377493e8cde5bae8f3216dc5516488fa279",
+    "tests/audit-recycling.js": "0b07be6a43a97289e07c1b5f21d2955f27a47414dc0578427aac735d4144996e",
+    "tests/audit-resonance-retest.js": "cb81a02055340b52f9756d1bc835e763cc179e8f4b29b68d29d1ffc3491ca667",
+    "tests/audit-resonance.js": "95c44f75c717079b30e2de138d04ddc7044ad54491ca1ab757bc3e75900523bb",
+    "tests/baseline-357-manifest.json": "d174424b8bdfc34b02b1b0610d817af86d7b2400593e855fe0b2696194d72c12",
+    "tests/browser-check.ps1": "1a2ce60c51d29274111336d182c1a0717e3b515c9f6f697bb00125da1178848d",
+    "tests/browser-tests.js": "771abd97341cf627189957013136cbf576283e39a2fe6465e19de95021ab6cd7",
+    "tests/cargo-behavior.js": "665e166041e34deacc6ce0fb1546535fad01026a33de4f002e6a2333f240683b",
+    "tests/cultivation-behavior.js": "ac0821df68b9b93f33e0ae331d41a1992b725492c7e733906cd2f590c5042922",
+    "tests/distillation-behavior.js": "59fc75eb429ea05959310fb409b6eb5b771b31559d10a3c7efbd95092058add0",
+    "tests/fixture-report.js": "473e07265e5a71d54e8c7c2b45de3fcb704f865eb22186aac1a97d755ec660dc",
+    "tests/fixtures/combos.js": "ce4a115463c91105b9b6486d0cc04bb2e8184f38ec67909cc1f73a93d1115c78",
+    "tests/formal-symbols.js": "c2a6d3cf212f9a26e7f3189d1a7fdaf6d282f90adb7bfb157a283260f0edbef4",
+    "tests/index.html": "e985ac76ac0cea990078b274edd07f0b58efe2899283fac5bed36ae20c529462",
+    "tests/mechanics-contract.js": "1e98c9f2a6e0a609a97bfc47dbfe4a02a29b78c7210861062d53c0dcdd96e861",
+    "tests/mechanics-v1-audit-check.js": "e08b0c06ecd6e4c702f8398d7f8e633cef3bc5b2640f8e4e4e38abc63cc28a53",
+    "tests/mechanics-v1-coverage-check.js": "e41582b3954236d8a567df66183ac934aa0c661a66a408ccace1653965c585ea",
+    "tests/mechanics-v1-freeze.js": "cf78d26112656c492a7b5e112d8bff95a39f885614d27be8bdf81288a87f29bf",
+    "tests/mechanics-v1-http-check.js": "49a3a18bdc8dbcbb29d86acfd4d88028d1c6cbeafda6246096b0a09beb2cbf59",
+    "tests/pressure-suite.js": "384a86d90dbcca1c94429fda4e5fdfcf723b6743f7275c511255956329fbeafd",
+    "tests/pressure-transaction.js": "892a8a729c6a9cdc5577f5f47b1bd20040d88ad7e03e33bcda2981204b38cbce",
+    "tests/recycling-behavior.js": "bea7ba8e8c1f3a26f10dbafa7443bc35d105871e721d09351abf0b2c8997d075",
+    "tests/resonance-behavior.js": "339b7ee64cd9e725532c1c633cc50f2444e1101904095b9cec97f16031cde945",
+    "tests/route-g-behavior.js": "231da3d713882d093ca42488ef1e34a607b300eccaa65f6fbef722246106cd20",
+    "tests/route-g-evidence-check.js": "da54a037c47699f4327df0b08e81ac42c1d450901458d5d8497bdde101d55508",
+    "tests/route-g-freeze.js": "692dc68f027ccf30e148ab0d2381d914ed51cfef1e881368800a0b9199371ef6",
+    "tests/route-g-http-check.js": "8f650edd323563c94ece711f400fc245073cd4457c69b82b602053f24fe46057",
+    "tests/route-h-audit-check.js": "f6f89d715f419ed6dc46168ca11dfebcb495a38bbfe874cdbb642c71fa3c975b",
+    "tests/route-h-behavior.js": "e1a98c5799bd6edbfb78d91785ca13b7f29f84ec2ebd48838d48463b395bf130",
+    "tests/route-h-browser-check.ps1": "b7b928916fcc29bbc73c2ca6ee15fc63577f2b9ce12540a11e403074f87b4354",
+    "tests/route-h-freeze.js": "76a9e39fc63a295a727ce0b3fea3b1fadb020c5f56704b20a1466a59397b870e",
+    "tests/route-h-http-check.js": "1b4e55fb52854b7c029f7e567f298a67015241a485658c7c686402811baafd3e",
+    "tests/run.js": "67b9b0dcf3c59a5f09a4699937920aef1a0ebd3d80b59b83c098b63e404add19",
+    "tests/storage-smoke.html": "b388f90f5dbd08d7df959f951c4a8933999387e4d595b9517a4930871a2c29c2",
+    "tests/suite.js": "3b2d9ca8d609bcb67637150714adf335a635d0721e72e40abdc2e623db041cd8",
+    "tests/ui-smoke.html": "73532b3ed972d52e16aa2f91e1617197f24cf7750a21d8c4db2746ceca865c21",
+    "tests/ui-smoke.js": "4d69a91f46cfade56f6aa057f054d2fd463b961bedb493b0dbbde736a0ce8c70"
+  },
+  "evidence": {
+    "tests/route-h-audit-cargo-retest.txt": "3fb5e3d2a2f055fc106d0959d934ee4b9394d5f4b4bc19ba9703b1d18c7be2dc",
+    "tests/route-h-audit-cargo.txt": "c59018f1f0514167b06169e9221c09eb0c8cf217ed58c3d367a637d68a744f0e",
+    "tests/route-h-audit-cultivation-retest.txt": "5dcf38c8ca371e6bd7e0f8aff7eaaae14abd47cd350cd1c581d915a479e53bc7",
+    "tests/route-h-audit-cultivation.txt": "3847c491150c5c2ba45a26456fb9b01915a753d55078dc3fd577c7ad6609469f",
+    "tests/route-h-audit-distillation.txt": "b010452026270d943068f94d41e4f86ec653da6d4c19e3c4eeda61600b7708c9",
+    "tests/route-h-audit-pressure-retest.txt": "5433eb163fe470b79027fb30ad3dfc46ee24f06f1d2a1cf1a569e25f9c686b78",
+    "tests/route-h-audit-pressure-transaction-retest.txt": "527fd84057a29f766dafbfdfa39cf6fee7b373bd975efb90e0887ef68ba05ccb",
+    "tests/route-h-audit-pressure.txt": "44ce95f2bb740ac39d61e008f8f1326741679e1f00bc0e20e11099d2033b9ea3",
+    "tests/route-h-audit-proof.json": "f910f09ced91d71071d55218408969dfc556b5728907dac5f83cff671a7f45af",
+    "tests/route-h-audit-recycling.txt": "40aafa6febecba7085d8f0c54ac7a5eb3510d6f1e25b595389329d03cc130b8d",
+    "tests/route-h-audit-resonance-retest.txt": "f27526c56acaf683670a744bb0005d0656b667ca2b136d308d0e39734be1b23f",
+    "tests/route-h-audit-resonance.txt": "d317f1c365cc4aea136ef71fca1002e42b1297039168024ab49037b493c8f08a",
+    "tests/route-h-audit-summary.txt": "99e5a17b73d0e34ce11a3dcf9b590561495884e272a3d6934ef628274e37dd21",
+    "tests/route-h-browser-result.html": "f340df5f3bfefbc18382c782ab485d4f31a381a073f2200d49aadea694690a00",
+    "tests/route-h-edge-stderr.txt": "c9022d3f085a05d284e840a0b25a2f851bc895a51606b5972dd9ef2d8844d63a",
+    "tests/route-h-file-proof.txt": "ae89226e282ec42ff7be3483747f95720feb9c36bd0100afabea8cda613e8444",
+    "tests/route-h-fixture-result.json": "c6167c4c51dbcd5bda200753ff1ea9323a873b5a2cceee4bd96cf91d9cf7ba19",
+    "tests/route-h-fixtures.txt": "0dace108e6725b6c4b98e6a3458b1a1dc34ec8e439cda312c67a9e0e012d01ac",
+    "tests/route-h-http-proof.json": "30fe82a6643d2a52b6e19db3fa175089dc0c52ca9410bd518af1d77afe7c967c",
+    "tests/route-h-http-result.txt": "ba0aaf45cce0e91b82dd6d5fbb88f34b722b0f751862b371b644ab848f30b5a8",
+    "tests/route-h-http-suite-stderr.txt": "f8c741418dbeba3879798bfcf6c4d7140f4cb1cecd39ad01cf8eb60787ffc2b0",
+    "tests/route-h-http-suite.html": "f340df5f3bfefbc18382c782ab485d4f31a381a073f2200d49aadea694690a00",
+    "tests/route-h-http-ui-stderr.txt": "6ecb35bae43dad49aaa6221decd8e8c5238142c792e0a8858ded669825d71362",
+    "tests/route-h-http-ui.html": "a1ac9fe89c8c144e268cffdeb1cc04a88cd93c6d3df872bbed87e81de757a3a4",
+    "tests/route-h-mechanics-audit.txt": "fc97396f47dd47b7c3a230dc2e2af6cbe59a2c1f3bccd7b75249154ac9b78fe3",
+    "tests/route-h-node-result.txt": "91ce62ca8e568458f0896eb0c1bac0af243d41682a4402c4870b6e9ba4e726e1",
+    "tests/route-h-pressure-http.html": "5caf550b00ee30ec420d50efa3f680e809232a4a1b3f7d1804a7ec4c9e03e3cc",
+    "tests/route-h-pressure-http.txt": "5386d8fd1fd3046ad4c89fa8e9a2bb16c019d3ecf3b15faa2ef2e8275acd267b",
+    "tests/route-h-storage-read-result.html": "011c8a39afd0d1f613be02031c3e676a5cb0bf57fd404e6ad366faa7b65baade",
+    "tests/route-h-storage-write-result.html": "da967c9cc32172044abacb05053603c397edb371e03510327283b9edc5127a3a",
+    "tests/route-h-suite-manifest.json": "8b1a825594a8850a2ce181e3b5a04b5fd52f54325324462250a138e4a27ac8e3",
+    "tests/route-h-ui-smoke-result.html": "a1ac9fe89c8c144e268cffdeb1cc04a88cd93c6d3df872bbed87e81de757a3a4"
+  }
+}

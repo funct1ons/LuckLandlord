@@ -1,0 +1,15 @@
+PASS reload-pending-then-choose-twice-save
+PASS invalid-choose-preserves-state-and-storage
+PASS backup-missing-primary-present-unchanged
+PASS primary-missing-backup-valid
+PASS both-primary-and-backup-corrupt
+PASS signed-extremes-clamp-and-credit
+PASS legacy-stable-migration-ready
+PASS legacy-symbol-choice-must-reject
+PASS release-no-legal-target-noop
+PASS schema-legacy-and-formal-legal
+10/10 passed
+
+STDERR
+
+EXIT 0

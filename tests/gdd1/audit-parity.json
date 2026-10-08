@@ -1,0 +1,75 @@
+{
+  "scope": "Audit reproduction parity, not F1 acceptance",
+  "rows": [
+    {
+      "file": "audit-edge-file-write.html",
+      "protocol": "file",
+      "mode": "write",
+      "total": 28,
+      "passed": 28,
+      "sameCases": true,
+      "sameFindings": true,
+      "storage": {
+        "mode": "write",
+        "ok": true,
+        "legacyNonempty": true,
+        "fiveStreamContinuation": true
+      },
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+      "ok": true
+    },
+    {
+      "file": "audit-edge-file-read.html",
+      "protocol": "file",
+      "mode": "read",
+      "total": 28,
+      "passed": 28,
+      "sameCases": true,
+      "sameFindings": true,
+      "storage": {
+        "mode": "read",
+        "ok": true,
+        "legacyNonempty": true,
+        "fiveStreamContinuation": true
+      },
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+      "ok": true
+    },
+    {
+      "file": "audit-edge-http-write.html",
+      "protocol": "http",
+      "mode": "write",
+      "total": 28,
+      "passed": 28,
+      "sameCases": true,
+      "sameFindings": true,
+      "storage": {
+        "mode": "write",
+        "ok": true,
+        "legacyNonempty": true,
+        "fiveStreamContinuation": true
+      },
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+      "ok": true
+    },
+    {
+      "file": "audit-edge-http-read.html",
+      "protocol": "http",
+      "mode": "read",
+      "total": 28,
+      "passed": 28,
+      "sameCases": true,
+      "sameFindings": true,
+      "storage": {
+        "mode": "read",
+        "ok": true,
+        "legacyNonempty": true,
+        "fiveStreamContinuation": true
+      },
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+      "ok": true
+    }
+  ],
+  "chrome": "NOT TESTED: Chrome absent in standard machine/user application paths",
+  "ok": true
+}

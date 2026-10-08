@@ -1,0 +1,287 @@
+{
+  "scope": "engineering tool audit of full-sim engine/runner/seeds/indexes; NOT independent auditor PASS; NOT formal Normal acceptance",
+  "passed": 11,
+  "total": 11,
+  "hashes": {
+    "engine": {
+      "bytes": 10020,
+      "sha256": "90531adfbc08ea0f00b037e8366e1379417f2964f97ae0eca16b8fce773f5227"
+    },
+    "runner": {
+      "bytes": 8926,
+      "sha256": "940802bdf670801182c8bdf86b07290eecc99fdb35dd0f9d6c09bc7f3b02c53d"
+    },
+    "stats": {
+      "bytes": 11517,
+      "sha256": "4e900fb0cb336c327aac5942195b1f160dbedd13ae1f90f3ea70d5d892001424"
+    },
+    "checks": {
+      "bytes": 8136,
+      "sha256": "275843cb02a028b91a89b9f3c2093ec247dc394db9b7b4f5354544ef1a289f7b"
+    }
+  },
+  "results": [
+    {
+      "name": "legal surface includes spin/choose/skip/remove/reroll/item/skipItem/event A/B",
+      "ok": true,
+      "detail": {
+        "eventReached": true,
+        "itemOps": [
+          "item",
+          "skipItem"
+        ],
+        "eventOps": [
+          "B",
+          "A"
+        ]
+      }
+    },
+    {
+      "name": "publicView deletes live seed and five RNG streams; decide never receives them",
+      "ok": true,
+      "detail": true
+    },
+    {
+      "name": "Greedy surrogate uses synthetic seed and ignores live RNG",
+      "ok": true,
+      "detail": {
+        "action": {
+          "op": "choose",
+          "id": "route_stub",
+          "windowId": 1
+        },
+        "modelCommands": 16
+      }
+    },
+    {
+      "name": "rollout future offer contents do not change utility; horizon 2 spins / 14 commands",
+      "ok": true,
+      "detail": {
+        "utility": 57.096000000000004,
+        "commands": 4,
+        "spins": 2
+      }
+    },
+    {
+      "name": "enumerated 8000 seeds unique, train/holdout disjoint, engine hash matches freeze",
+      "ok": true,
+      "detail": {
+        "engine": {
+          "bytes": 10020,
+          "sha256": "90531adfbc08ea0f00b037e8366e1379417f2964f97ae0eca16b8fce773f5227"
+        },
+        "runner": {
+          "bytes": 8926,
+          "sha256": "940802bdf670801182c8bdf86b07290eecc99fdb35dd0f9d6c09bc7f3b02c53d"
+        },
+        "runnerHashAtSeedFreeze": "2c2a67308eb4e29654df23aeeea7699c9c94df4f22cf2b1cf31b9f11b0ed3bb3",
+        "runnerDriftedAfterProgressSidecar": true
+      }
+    },
+    {
+      "name": "completed v3 indexes: n=500, errors=0, seed formula, no unfinished rows",
+      "ok": true,
+      "detail": {
+        "completedBatches": 16,
+        "expectedWhenDone": 16,
+        "rows": [
+          {
+            "name": "full-sim-batch-v3-greedy-holdout-0-index.json",
+            "bot": "Greedy",
+            "split": "holdout",
+            "n": 500,
+            "wins": 10,
+            "errors": 0,
+            "ms": 1828247.1375
+          },
+          {
+            "name": "full-sim-batch-v3-greedy-holdout-500-index.json",
+            "bot": "Greedy",
+            "split": "holdout",
+            "n": 500,
+            "wins": 13,
+            "errors": 0,
+            "ms": 1838973.7059000002
+          },
+          {
+            "name": "full-sim-batch-v3-greedy-train-0-index.json",
+            "bot": "Greedy",
+            "split": "train",
+            "n": 500,
+            "wins": 14,
+            "errors": 0,
+            "ms": 1823546.5969999998
+          },
+          {
+            "name": "full-sim-batch-v3-greedy-train-500-index.json",
+            "bot": "Greedy",
+            "split": "train",
+            "n": 500,
+            "wins": 19,
+            "errors": 0,
+            "ms": 1842221.8668
+          },
+          {
+            "name": "full-sim-batch-v3-random-holdout-0-index.json",
+            "bot": "Random",
+            "split": "holdout",
+            "n": 500,
+            "wins": 0,
+            "errors": 0,
+            "ms": 311228.21270000003
+          },
+          {
+            "name": "full-sim-batch-v3-random-holdout-500-index.json",
+            "bot": "Random",
+            "split": "holdout",
+            "n": 500,
+            "wins": 0,
+            "errors": 0,
+            "ms": 309500.1283
+          },
+          {
+            "name": "full-sim-batch-v3-random-train-0-index.json",
+            "bot": "Random",
+            "split": "train",
+            "n": 500,
+            "wins": 0,
+            "errors": 0,
+            "ms": 311048.429
+          },
+          {
+            "name": "full-sim-batch-v3-random-train-500-index.json",
+            "bot": "Random",
+            "split": "train",
+            "n": 500,
+            "wins": 0,
+            "errors": 0,
+            "ms": 298677.7908
+          },
+          {
+            "name": "full-sim-batch-v3-synergy-holdout-0-index.json",
+            "bot": "Synergy",
+            "split": "holdout",
+            "n": 500,
+            "wins": 0,
+            "errors": 0,
+            "ms": 353633.5236
+          },
+          {
+            "name": "full-sim-batch-v3-synergy-holdout-500-index.json",
+            "bot": "Synergy",
+            "split": "holdout",
+            "n": 500,
+            "wins": 0,
+            "errors": 0,
+            "ms": 353879.8678
+          },
+          {
+            "name": "full-sim-batch-v3-synergy-train-0-index.json",
+            "bot": "Synergy",
+            "split": "train",
+            "n": 500,
+            "wins": 0,
+            "errors": 0,
+            "ms": 354407.20680000004
+          },
+          {
+            "name": "full-sim-batch-v3-synergy-train-500-index.json",
+            "bot": "Synergy",
+            "split": "train",
+            "n": 500,
+            "wins": 0,
+            "errors": 0,
+            "ms": 353007.9367
+          },
+          {
+            "name": "full-sim-batch-v3-value-holdout-0-index.json",
+            "bot": "Value",
+            "split": "holdout",
+            "n": 500,
+            "wins": 0,
+            "errors": 0,
+            "ms": 345810.46609999996
+          },
+          {
+            "name": "full-sim-batch-v3-value-holdout-500-index.json",
+            "bot": "Value",
+            "split": "holdout",
+            "n": 500,
+            "wins": 0,
+            "errors": 0,
+            "ms": 350681.871
+          },
+          {
+            "name": "full-sim-batch-v3-value-train-0-index.json",
+            "bot": "Value",
+            "split": "train",
+            "n": 500,
+            "wins": 0,
+            "errors": 0,
+            "ms": 346034.9458
+          },
+          {
+            "name": "full-sim-batch-v3-value-train-500-index.json",
+            "bot": "Value",
+            "split": "train",
+            "n": 500,
+            "wins": 0,
+            "errors": 0,
+            "ms": 349071.8131
+          }
+        ]
+      }
+    },
+    {
+      "name": "incomplete v1/v2 jsonl retained; wx dests exist without being overwritten",
+      "ok": true,
+      "detail": {
+        "retained": [
+          "full-sim-validation.json",
+          "full-sim-validation-v2.json",
+          "full-sim-launch-v2.json"
+        ],
+        "historicalBatchFiles": 16,
+        "v2Files": 28
+      }
+    },
+    {
+      "name": "policy RNG isolated from five game streams; train/holdout prefixes disjoint",
+      "ok": true,
+      "detail": {
+        "streams": [
+          "draw",
+          "effect",
+          "symbolOffer",
+          "itemOffer",
+          "event"
+        ],
+        "train": 4000,
+        "holdout": 4000
+      }
+    },
+    {
+      "name": "income attribution matches ledger+reward on a real spin",
+      "ok": true,
+      "detail": {
+        "total": 20,
+        "attributed": 20
+      }
+    },
+    {
+      "name": "command replay of a stored v3 Random game matches finalHash",
+      "ok": true,
+      "detail": {
+        "seed": "F4-FULL-v1/Random/train/0000",
+        "actions": 114,
+        "outcome": "LOST",
+        "attributed": 2351
+      }
+    },
+    {
+      "name": "Normal 12-start 70-spin payments 64/32/8 live",
+      "ok": true,
+      "detail": true
+    }
+  ]
+}

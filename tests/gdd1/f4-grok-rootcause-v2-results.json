@@ -1,0 +1,76 @@
+{
+  "scope": "f4-grok-rootcause-v2 supersedes v1 extra-case FAIL only. v1 independent 32/32 already passed; extra cloth-record-order used deepStrictEqual across vm realms.",
+  "supersedes": {
+    "artifact": "tests/gdd1/f4-grok-rootcause-v1-results.json",
+    "reason": "v1 extra cloth-record-order-not-board-pos compared vm-realm arrays with assert.deepStrictEqual; independent 32/32 and production hashes remain authoritative from v1.",
+    "v1independent": {
+      "total": 32,
+      "passed": 32,
+      "failed": []
+    },
+    "v1extraFailed": [
+      {
+        "name": "cloth-record-order-not-board-pos",
+        "ok": false,
+        "error": "Values have same structure but are not reference-equal:\n\n[\n  'u4',\n  'u4',\n  'u2'\n]\n"
+      }
+    ]
+  },
+  "independent": {
+    "total": 32,
+    "passed": 32,
+    "failed": []
+  },
+  "extra": {
+    "total": 7,
+    "passed": 7,
+    "failed": []
+  },
+  "protected": {
+    "v4results": {
+      "path": "tests/gdd1/f4-audit-semantic-v4-results.json",
+      "bytes": 268091,
+      "sha256": "48b9045350a34a078f0c48a559dfc96de01423dd6c3edfdcdd644687b98ec676"
+    },
+    "v3source": {
+      "path": "tests/gdd1/f4-audit-semantic-v3.js",
+      "bytes": 5907,
+      "sha256": "e912fd007aa6be74b9c3bc29323cb5230b6a1b9d9e53988185438408251ef5a8"
+    },
+    "gdd": {
+      "path": "docs/GAME_DESIGN_V1.md",
+      "bytes": 103576,
+      "sha256": "e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07"
+    },
+    "v1results": {
+      "path": "tests/gdd1/f4-grok-rootcause-v1-results.json",
+      "bytes": 1438,
+      "sha256": "7710996226831f1f16d70317d99cf99bbba08b049d0be0035e1059605d9af1e3"
+    }
+  },
+  "productionAfter": {
+    "resolver": {
+      "path": "js/gdd1/resolver.js",
+      "bytes": 27996,
+      "sha256": "e86d51fb4c20d235312b263146f18d2c4cd69c13453846fe0daf9b07a0aaf88b"
+    },
+    "fullEffects": {
+      "path": "js/gdd1/full-effects.js",
+      "bytes": 38059,
+      "sha256": "b602a74a9e485454b3d5801e7a1a648ffa7fc8bdc220cc8928b483728c8af205"
+    }
+  },
+  "productionBefore": {
+    "resolver": {
+      "path": "js/gdd1/resolver.js",
+      "bytes": 27757,
+      "sha256": "435bf3266b0b3d161f2d26d5345c9b21e2a669a316c9c4bbaf09e3c6ab34351c"
+    },
+    "fullEffects": {
+      "path": "js/gdd1/full-effects.js",
+      "bytes": 38016,
+      "sha256": "82b207481c292270bb73109854ecd2f474ae4e191317f8476a4ccf80e7e338a3"
+    }
+  },
+  "ok": true
+}

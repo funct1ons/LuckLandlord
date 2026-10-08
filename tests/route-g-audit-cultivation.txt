@@ -1,0 +1,8 @@
+﻿PASS two-root-ledgers-each-per-spin-cap expected=[2,2] actual=[2,2] — CONTENT_MATRIX A root_ledger
+PASS ash-felt-three-appear-self-destroy expected=[false,3] actual=[false,3] — CONTENT_MATRIX A row 116 / section 7
+PASS pearl-separator-excludes-product expected="tide_prism" actual="tide_prism" — CONTENT_MATRIX A pearl_separator
+PASS conversion-snapshot-uid-permanent-counter expected=["u12",7,{}] actual=["u12",7,{}] — RULES conversion
+PASS nursery-full-board-once expected=[3,3] actual=[3,3] — CONTENT_MATRIX A row 110
+PASS save-failure-no-commit expected=false actual=false — RULES transaction
+PASS cultivation-behavior-case-count-at-least-20 expected=true actual=true — count=25
+AUDIT 7/7 passed; 0 failed

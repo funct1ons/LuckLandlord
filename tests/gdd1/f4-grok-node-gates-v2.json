@@ -1,0 +1,40 @@
+{
+  "scope": "Independent Node save/RNG/payment/pending/event-double-click gates; not Edge UI and not auditor signature",
+  "supersedes": {
+    "retained": "tests/gdd1/f4-grok-node-gates-v1.json",
+    "basis": "v1 used assert.deepStrictEqual across vm realms; v2 uses JSON.stringify equality"
+  },
+  "total": 7,
+  "passed": 7,
+  "cases": [
+    {
+      "name": "save-keys-isolation-previous-import-faults",
+      "ok": true
+    },
+    {
+      "name": "wrong-profile-import-legacy-keys",
+      "ok": true
+    },
+    {
+      "name": "rng-atomic-failed-command",
+      "ok": true
+    },
+    {
+      "name": "payment-skip-double-click",
+      "ok": true
+    },
+    {
+      "name": "pending-remove-retains-settlement",
+      "ok": true
+    },
+    {
+      "name": "event-double-click",
+      "ok": true
+    },
+    {
+      "name": "payments-table-matches-gdd",
+      "ok": true
+    }
+  ],
+  "ok": true
+}

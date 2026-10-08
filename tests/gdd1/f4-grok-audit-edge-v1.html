@@ -1,0 +1,46 @@
+<!doctype html><html><head><meta charset="utf-8"><title>f4-grok-audit-edge-v1</title></head><body><script src="../../js/gdd1/contract.js"></script><script src="../../js/gdd1/rng.js"></script><script src="../../js/gdd1/schema.js"></script><script src="../../js/gdd1/save.js"></script><script src="../../js/gdd1/content.js"></script><script src="../../js/gdd1/full-content.js"></script><script src="../../js/gdd1/full-effects.js"></script><script src="../../js/gdd1/offers.js"></script><script src="../../js/gdd1/resolver.js"></script><script src="../../js/gdd1/full-controller.js"></script><script>
+(function(root){'use strict';
+root.runF4IndependentV3=function(){const F=root.GDD1,cases=[];const eq=(a,b)=>{if(JSON.stringify(a)!==JSON.stringify(b))throw Error('expected '+JSON.stringify(b)+'; actual '+JSON.stringify(a))};
+function fixture(entries,items=[],configure=()=>{}){const s=F.fullNewRun('INDEPENDENT-V3');s.pool=[];s.nextUid=1;s.spin=1;s.stageSpin=1;s.spinsRemaining=5;s.items=items;for(const id of items){s.itemState.quotas[id]={spin:0,stage:0,run:0};s.itemState.used[id]={spin:false,stage:false}}const board=Array(20).fill(null);for(const [type,pos,counters]of entries){const x=F.instance(s,type);if(counters)Object.assign(x.counters,counters);s.pool.push(x);board[pos]=x}configure(s);return {s,board}}
+function test(name,clause,entries,items,expected,check,configure){const {s,board}=fixture(entries,items,configure),input=F.clone(s);let last=null;try{last=F.sliceResolve(s,board);check(last,s,eq);cases.push({name,clause,expected,input,board:board.map(x=>x&&x.uid),actual:{state:s,last},ok:true})}catch(e){cases.push({name,clause,expected,input,board:board.map(x=>x&&x.uid),actual:{state:s,last},ok:false,error:e.message})}}
+const sum=(name,clause,entries,expected,items=[],configure)=>test(name,clause,entries,items,{total:expected},(r,s,eq)=>eq(r.total,expected),configure);
+// Every expectation below is independent arithmetic from frozen GDD, not a captured engine output.
+sum('wick-pair','5.A: each wick base2, no adjacent plant', [['wick_bed',0],['wick_bed',1]],4);
+sum('negative-junk','5.B: spent -1', [['spent_gasket',0]],-1);
+sum('pouch-first','5.F: ordinary1 and pressure0->1', [['pressure_pouch',0]],1);
+test('pouch-release','5.F: pressure3+1 reaches4, reward10 and ordinary1',[['pressure_pouch',0,{pressure:3}]],[],{total:11,pressure:0,reward:10},(r,s,eq)=>{eq(r.total,11);eq(r.reward,10);eq(s.pool[0].counters.pressure,0)});
+sum('surge-before-release','5.F: ordinary always0', [['surge_vessel',0,{pressure:1}]],0);
+sum('surge-release','5.F: third injection reward16, ordinary0', [['surge_vessel',0,{pressure:2}]],16);
+sum('pause-alone','5.F: base2 plus constant1', [['pause_dial',0]],3);
+sum('pause-tag-not-mechanism','5.I: pressure tag sufficient, shim base1', [['pause_dial',0],['safety_shim',1]],6);
+sum('blank-appearance','5.G: base3+2', [['blank_facet',0]],5);
+sum('cleared-appearance','5.H: base3+1', [['cleared_stub',0]],4);
+sum('lean-below-half','5.H: 34*2<70 gives1+4', [['lean_receipt',0]],5,[],s=>s.cash=34);
+sum('lean-exact-half','5.H:35*2=70 no4', [['lean_receipt',0]],1,[],s=>s.cash=35);
+sum('margin-deficit15','5.H: base2+6', [['quota_margin',0]],8,[],s=>s.cash=55);
+sum('margin-deficit16','5.H: base2 only', [['quota_margin',0]],2,[],s=>s.cash=54);
+sum('margin-funded','5.H: cash=payment no bonus', [['quota_margin',0]],2,[],s=>s.cash=70);
+sum('dock-row-first-target','5.C/5.I: dock2+2distinct+fork3; fork1; reed1 =>9', [['dock_chime',0],['pitch_fork',1],['fog_reed',2]],9);
+sum('copy-blank','5.G: blank5, reader3+2 =>10', [['blank_facet',0],['offset_reader',1]],10);
+sum('copy-carbon','6: first copy2+2; blank5+reader7', [['blank_facet',0],['offset_reader',1]],12,['item_safe_carbon']);
+sum('copy-no-template','5.B/5.G/6: copper2+machine-neighbor2+reader3, no carbon', [['copper_burr',0],['offset_reader',1]],7,['item_safe_carbon']);
+sum('cycle-third','5.C: base1+9 and beat reset', [['beat_spool',0,{beat:2}]],10);
+sum('cycle-second-metronome','6: threshold2 base1+9', [['beat_spool',0,{beat:1}]],10,['item_shared_metronome']);
+test('natural-epoch','5.A/5.J: mist age2->dew age0 same uid epoch1; no new appearance',[['mist_pouch',0,{age:2}]],[],{type:'dew_lantern',epoch:1,age:0},(r,s,eq)=>{eq(s.pool[0].type,'dew_lantern');eq(s.pool[0].epoch,1);eq(s.pool[0].counters.age,0)});
+sum('cloudy-matures-not-new-appearance','5.G: converted blank only base3, not new +2', [['cloudy_negative',0,{age:2}]],3);
+sum('compliance-converted-no-appearance','5.H: desk1 and new stub3 (no +1)', [['compliance_desk',0],['arrears_slip',1]],4);
+sum('cancellation-reward-and-growth','5.H: clerk1+growth1 and independent5, target0', [['cancellation_clerk',0],['arrears_slip',1]],7);
+sum('low-balance-item-boundary','6: at exact half only copper2', [['copper_burr',0]],2,['item_low_balance_tab'],s=>s.cash=35);
+sum('low-balance-item-below','6: copper2+independent3', [['copper_burr',0]],5,['item_low_balance_tab'],s=>s.cash=34);
+sum('hold-below12','6: one copper=2, no hold reward', [['copper_burr',0]],2,['item_small_hold']);
+sum('rest-single-negative-floor','6: single resonance dock2 times1.5=3', [['dock_chime',0]],3,['item_rest_notch']);
+test('cloth-tag-log-order','5.I/5.I.1: cloth must select first adjacent tagAdded RECORD, not lowest board pos', [['split_register',0],['phase_chip',1],['alignment_cloth',2],['copper_burr',6]],[],{tagTargets:['u4','u4','u2'],clothTarget:'u4',ledger:[2,2,1,10],total:15},(r,s,eq)=>{eq(r.log.filter(e=>e.action==='tagAdded').map(e=>e.target),['u4','u4','u2']);eq(r.ledger.map(x=>x.amount),[2,2,1,10]);eq(r.total,15)});
+test('spectrum-book-deferred-phase','5.I.1 and6.1: book selects on tagAdded; commits +3 only at step8', [['phase_chip',0],['dock_chime',1]],['item_spectrum_book'],{bookAddPhase:'step8/end-summary',total:8},(r,s,eq)=>{eq(r.total,8);eq(r.log.filter(e=>e.source==='item_spectrum_book'&&e.action==='add').map(e=>e.phase),['step8/end-summary'])});
+test('spectrum-book-dead-target','6.1: tagged first target later consumed; do not commit book add or retarget', [['split_register',0],['copper_burr',1],['sorting_runner',2]],['item_spectrum_book'],{bookAdds:0},(r,s,eq)=>eq(r.log.filter(e=>e.source==='item_spectrum_book'&&e.action==='add').length,0));
+return{scope:'Independent frozen-GDD arithmetic and causal-phase fixtures; failures retained',total:cases.length,passed:cases.filter(c=>c.ok).length,cases};};
+})(typeof window!=='undefined'?window:globalThis);
+if(typeof module!=='undefined'&&module.exports)module.exports=globalThis.runF4IndependentV3;
+
+function __compact(r){return{total:r.total,passed:r.passed,cases:r.cases.map(function(c){var last=c.actual&&c.actual.last;return{name:c.name,ok:c.ok,error:c.error||null,expected:c.expected,total:last?last.total:null,reward:last?last.reward:null,ledger:last&&last.ledger?last.ledger.map(function(x){return{uid:x.uid,type:x.type,amount:x.amount,alive:x.alive}}):null,log:last&&last.log?last.log.map(function(e){return{action:e.action,source:e.source,target:e.target,phase:e.phase,amount:e.amount}}):null};});};}
+window.__f4GrokAudit=function(){return __compact(runF4IndependentV3());};
+</script></body></html>

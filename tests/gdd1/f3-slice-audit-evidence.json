@@ -1,0 +1,5849 @@
+{
+  "scope": "Frozen slice evidence only",
+  "files": [
+    {
+      "name": "f3-slice-sim-batch-greedy-holdout-0.jsonl",
+      "games": 500,
+      "bytes": 168942155,
+      "sha256": "1577153d31ad33b3bbf93d3e14a5e6ae054ff9c97122c4381447d2cb07061fb8"
+    },
+    {
+      "name": "f3-slice-sim-batch-greedy-holdout-500.jsonl",
+      "games": 500,
+      "bytes": 169019223,
+      "sha256": "7026ff0b8fe163830ea16f476b3d3a00645c5e2b6df036787da6e0b48bc09639"
+    },
+    {
+      "name": "f3-slice-sim-batch-greedy-train-0.jsonl",
+      "games": 500,
+      "bytes": 169233918,
+      "sha256": "54d81db00e8019d0e5d8e5f84d8abbcff008e7fa6e08534b63b509cba44e0949"
+    },
+    {
+      "name": "f3-slice-sim-batch-greedy-train-500.jsonl",
+      "games": 500,
+      "bytes": 169116474,
+      "sha256": "d198b4e2fcf681fb47e63327bd36e011e5e5e6f2bdee8b9da771580a85215b78"
+    },
+    {
+      "name": "f3-slice-sim-batch-random-holdout-0.jsonl",
+      "games": 1000,
+      "bytes": 303290568,
+      "sha256": "58c862d4715ef8a90cac4acceab99ac69e93fda9257ca2a914f0733e7bb4023d"
+    },
+    {
+      "name": "f3-slice-sim-batch-random-train-0.jsonl",
+      "games": 1000,
+      "bytes": 301951955,
+      "sha256": "655f525dca28e4bd643f70d45e884efddc69096250b012df9c05a0444d5a244f"
+    },
+    {
+      "name": "f3-slice-sim-batch-synergy-holdout-0.jsonl",
+      "games": 1000,
+      "bytes": 340575199,
+      "sha256": "ac27c5a7f58d58c2d829ea6adb8ea07d12d19bf8001f42b5510de1426ed70119"
+    },
+    {
+      "name": "f3-slice-sim-batch-synergy-train-0.jsonl",
+      "games": 1000,
+      "bytes": 341223298,
+      "sha256": "38547607303ed785d0f6350010d2f8e4b9001ca058c7416f2fc2e9adaa4a93bc"
+    },
+    {
+      "name": "f3-slice-sim-batch-value-holdout-0.jsonl",
+      "games": 1000,
+      "bytes": 341638220,
+      "sha256": "84ad79179723930c9264c39973b60ecdcc70d334b1b323fc7005406ee20ac522"
+    },
+    {
+      "name": "f3-slice-sim-batch-value-train-0.jsonl",
+      "games": 1000,
+      "bytes": 342736185,
+      "sha256": "e7f9d5d7dbffc73765f85a6114f05c9c22f6549db9fa717d42881f50bc28c26c"
+    }
+  ],
+  "jsonInventory": [
+    {
+      "name": "f3-slice-sim-batch-greedy-holdout-0-index.json",
+      "bytes": 189266,
+      "sha256": "d717a3ce74d3be0b1b98b93bd3f38c3e8585f858a036ea190d4e481a3724dadb",
+      "keys": [
+        "bot",
+        "split",
+        "n",
+        "wins",
+        "errors",
+        "ms",
+        "node",
+        "platform",
+        "cpu",
+        "index"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-batch-greedy-holdout-500-index.json",
+      "bytes": 189393,
+      "sha256": "c8194b23b7bc919e2040314a128c7d264b0cc9bd984d5a3e9fc21bbd6fcf6c51",
+      "keys": [
+        "bot",
+        "split",
+        "n",
+        "wins",
+        "errors",
+        "ms",
+        "node",
+        "platform",
+        "cpu",
+        "index"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-batch-greedy-train-0-index.json",
+      "bytes": 187247,
+      "sha256": "344369cda47090ca5536e6215b69e6f57eea20a79e4255da8aa0dcddaf757f55",
+      "keys": [
+        "bot",
+        "split",
+        "n",
+        "wins",
+        "errors",
+        "ms",
+        "node",
+        "platform",
+        "cpu",
+        "index"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-batch-greedy-train-500-index.json",
+      "bytes": 187382,
+      "sha256": "247c3f6b4b8676c8f7e4d60ec27a0f9e74cceb10b695f8f68d45f4efc373c109",
+      "keys": [
+        "bot",
+        "split",
+        "n",
+        "wins",
+        "errors",
+        "ms",
+        "node",
+        "platform",
+        "cpu",
+        "index"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-batch-random-holdout-0-index.json",
+      "bytes": 379631,
+      "sha256": "b16cf0fb213bd7899ba82c945263ef264ba2c71ef48df3d26237b7ecdd57390a",
+      "keys": [
+        "bot",
+        "split",
+        "n",
+        "wins",
+        "errors",
+        "ms",
+        "node",
+        "platform",
+        "cpu",
+        "index"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-batch-random-train-0-index.json",
+      "bytes": 375628,
+      "sha256": "c2a7b85aa7f7203d3d6d00764545612e8ae5b9c61ea09a79403f054f71d6ab30",
+      "keys": [
+        "bot",
+        "split",
+        "n",
+        "wins",
+        "errors",
+        "ms",
+        "node",
+        "platform",
+        "cpu",
+        "index"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-batch-synergy-holdout-0-index.json",
+      "bytes": 381106,
+      "sha256": "bd45f5784b8101761ddeaaf99876ae62fde4d620a92bd26753cc3c2d4af87179",
+      "keys": [
+        "bot",
+        "split",
+        "n",
+        "wins",
+        "errors",
+        "ms",
+        "node",
+        "platform",
+        "cpu",
+        "index"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-batch-synergy-train-0-index.json",
+      "bytes": 377129,
+      "sha256": "5107299400432402174f358705915087eed1de4c9e63c9c46de7d07feeef98d9",
+      "keys": [
+        "bot",
+        "split",
+        "n",
+        "wins",
+        "errors",
+        "ms",
+        "node",
+        "platform",
+        "cpu",
+        "index"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-batch-value-holdout-0-index.json",
+      "bytes": 377498,
+      "sha256": "ddde581eb1f84d21de758980e17cb392dec272ec30a64cd69a7fc44b936e1ea0",
+      "keys": [
+        "bot",
+        "split",
+        "n",
+        "wins",
+        "errors",
+        "ms",
+        "node",
+        "platform",
+        "cpu",
+        "index"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-batch-value-train-0-index.json",
+      "bytes": 373480,
+      "sha256": "7bf550baefc37000b19af81e7ad7f19b5b02ee1affc11ac712328e5714a32fa0",
+      "keys": [
+        "bot",
+        "split",
+        "n",
+        "wins",
+        "errors",
+        "ms",
+        "node",
+        "platform",
+        "cpu",
+        "index"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-before.json",
+      "bytes": 85126,
+      "sha256": "b69e5a6e4c1269f813ec24b9bb838b9545257a858e8da8fe61bd854c1202eb09",
+      "keys": [
+        "scope",
+        "entries"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-deliverables.json",
+      "bytes": 8136,
+      "sha256": "1f1acb1a9f0a7352d65f6bda9f2f43c4dc514ebc80c212acd459f9f7f16d21a3",
+      "keys": [
+        "selfExcluded",
+        "entries"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-freeze.json",
+      "bytes": 1324,
+      "sha256": "d276259db83629ab326de465363b8da00c1d6be70bc4ae637c83ac586be1c02a",
+      "keys": [
+        "scope",
+        "games",
+        "executionErrors",
+        "unfinished",
+        "baselineExisting",
+        "byteIdentical",
+        "rawProtectionOk",
+        "runtimeExceptions",
+        "unexpected",
+        "background",
+        "notApproved"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-gates.json",
+      "bytes": 738102,
+      "sha256": "379c5167e1c9e1133911c304beacdbfdb7849955a20f4f39bb46dcbdbf095936",
+      "keys": [
+        "gates",
+        "detail"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-partial-recompute.json",
+      "bytes": 1214,
+      "sha256": "fbc0baacfafdad7c2e6ac7b6138a79ff4670c7c581c28d15e995d2a8543ebd30",
+      "keys": [
+        "files",
+        "games",
+        "errors",
+        "indexHashes",
+        "replays"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-partial-statistics.json",
+      "bytes": 4040794,
+      "sha256": "5a61c8e580c761d0547018f20c51008b71ab19f74d9d162216732c2cd1f77772",
+      "keys": [
+        "quantiles",
+        "proportions",
+        "groups"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-pilot-greedy-pilot-index.json",
+      "bytes": 1309,
+      "sha256": "4b25fd516ea65ee5e59f665bb1218e8200301fb2853dc029fff15e3c570c43fa",
+      "keys": [
+        "bot",
+        "split",
+        "n",
+        "wins",
+        "errors",
+        "ms",
+        "node",
+        "platform",
+        "cpu",
+        "index"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-pilot-random-pilot-index.json",
+      "bytes": 1321,
+      "sha256": "20dc7f3949a4ef56a7e558636b72084c9f7f2786513e868e6d623de420af25e5",
+      "keys": [
+        "bot",
+        "split",
+        "n",
+        "wins",
+        "errors",
+        "ms",
+        "node",
+        "platform",
+        "cpu",
+        "index"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-pilot-synergy-pilot-index.json",
+      "bytes": 1318,
+      "sha256": "f663e9ef26d163328430ccc0b1a8bf98dbeb73c9c760425c012d585f083df5ee",
+      "keys": [
+        "bot",
+        "split",
+        "n",
+        "wins",
+        "errors",
+        "ms",
+        "node",
+        "platform",
+        "cpu",
+        "index"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-pilot-value-pilot-index.json",
+      "bytes": 1313,
+      "sha256": "4b9fd09ebe1a2adf73cb5a04dc74880b7348bb6f808a2b127c44c71bca0cca55",
+      "keys": [
+        "bot",
+        "split",
+        "n",
+        "wins",
+        "errors",
+        "ms",
+        "node",
+        "platform",
+        "cpu",
+        "index"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-protection.json",
+      "bytes": 177,
+      "sha256": "046b1f08d8c36db0bb4fd33fcd493c32b42cfb51ab52e9768515ba708dc19e0e",
+      "keys": [
+        "existing",
+        "unchanged",
+        "changed",
+        "unexpected",
+        "ok"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-recompute.json",
+      "bytes": 1589,
+      "sha256": "d32c194eef9bf28cc6bec207b1c6bcb9fbc546daf5fd03cb12a1d41ab747b049",
+      "keys": [
+        "files",
+        "games",
+        "errors",
+        "indexHashes",
+        "replays"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-seeds.json",
+      "bytes": 1446560,
+      "sha256": "172cd44203fbc7c226477e2743fdf7850e8c47eee4c100e9b214b3178d53d5ac",
+      "keys": [
+        "rule",
+        "policyHash",
+        "runnerHash",
+        "entries"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-statistics.json",
+      "bytes": 5730966,
+      "sha256": "83558f10e3b0fc9e6776e8d0c2d030a024e4a3271b5bf2885532d6f9cd02f0d0",
+      "keys": [
+        "quantiles",
+        "proportions",
+        "groups"
+      ]
+    },
+    {
+      "name": "f3-slice-sim-validation.json",
+      "bytes": 1086,
+      "sha256": "d5e195f459a5af9045f98cd2bee5ec3ad95c58edd61fe6987494e232bc9a8638",
+      "keys": [
+        "passed",
+        "total",
+        "results"
+      ]
+    }
+  ],
+  "games": 8000,
+  "comparisons": 1668979,
+  "replays": [
+    {
+      "seed": "F3-SLICE-v1/Greedy/holdout/0000",
+      "actions": 153,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [],
+      "finalHash": "26363e0181d11e7de7e4ace2123b088b3e7b6fa392b7ebd1f22039550e506595",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Greedy/holdout/0500",
+      "actions": 157,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [],
+      "finalHash": "32dbdf9d2ee57635cfc265677f239d88d69c36214b4610edf1413d515e2e46c4",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Greedy/train/0000",
+      "actions": 160,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [
+        "event_brine_inspection"
+      ],
+      "finalHash": "3dc4ca06e93f1f2d5f0a0f612ebd4e2ca7c2c96975ab202a0bc2c12e143f3754",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Greedy/train/0500",
+      "actions": 154,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [],
+      "finalHash": "65b87795f7a1c9b09360258e6b62627247d8413dac16d40662725feac94f7ec9",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Random/holdout/0000",
+      "actions": 171,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [],
+      "finalHash": "80f88ea90379f7e7f8cae69efbf95b1fe14f65eb55cb04861c86dceaa8b61128",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Random/train/0000",
+      "actions": 131,
+      "spins": 54,
+      "outcome": "LOST",
+      "eventA": [
+        "event_brine_inspection"
+      ],
+      "finalHash": "ea4da234a90a1eed3c975c435ad89b90d932d835b198090208ce0135a34cf2b3",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Synergy/holdout/0000",
+      "actions": 166,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [],
+      "finalHash": "d3dd3c0104436c7be0296eb21cac3db251331191211edfb145013e489a31b887",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Synergy/train/0000",
+      "actions": 169,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [
+        "event_brine_inspection"
+      ],
+      "finalHash": "fb791a3086fa668f10c8fbe3b9654f8eab4810fe543949ff0059617ed2e3a765",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Value/holdout/0000",
+      "actions": 171,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [
+        "event_brine_inspection"
+      ],
+      "finalHash": "97f2b5c183f6d893a9118e3199de17685777b6f9e41c0dee45e54dcb70fd19d3",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Value/train/0000",
+      "actions": 171,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [
+        "event_brine_inspection"
+      ],
+      "finalHash": "99c279f51633fde6e763de3f609b71138b5f61ea5cb6c4b45a45ab22a0b5ad29",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Greedy/holdout/0498",
+      "actions": 134,
+      "spins": 62,
+      "outcome": "LOST",
+      "eventA": [],
+      "finalHash": "59f11eab9220621dfe7eeb204f867d3e44e8866422dd4430f2f19d836376ce1f",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Greedy/holdout/0801",
+      "actions": 156,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [],
+      "finalHash": "256775b4c594ec3f16a6332aa09e2470e7264637a135e2ee9edf6903498f7023",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Greedy/holdout/0052",
+      "actions": 150,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [],
+      "finalHash": "9497264cbb431bfb4e13c1beca7b0b233bdd39b2d542dc809461c4370faf6c4b",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Greedy/holdout/0001",
+      "actions": 154,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [],
+      "finalHash": "130e36f11cb1eb3e6da2c7723d313d980fdeb48df901bcfe12952d42f4a008bc",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Greedy/train/0544",
+      "actions": 137,
+      "spins": 62,
+      "outcome": "LOST",
+      "eventA": [],
+      "finalHash": "acb53e337440bdec07c008b97bf1bbefd9df139c1f8ded34e9f399c1048f88e6",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Greedy/train/0999",
+      "actions": 159,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [],
+      "finalHash": "a3bd3e16d05a91a93f7e4d159b7680ad9a2fd7cd13c5f1fb20d6841d3b54b1a6",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Greedy/train/0804",
+      "actions": 160,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [
+        "event_brine_inspection"
+      ],
+      "finalHash": "a0c5685173e6330cfc89bad464bbb31421bb597444b782d2d6b8e8951bed9fdb",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Greedy/train/0553",
+      "actions": 151,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [],
+      "finalHash": "f83c21849d54a9f7a50fcb834038c02464ac380c254f44eb5937f371346eee52",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Greedy/train/0001",
+      "actions": 156,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [],
+      "finalHash": "db44434848192b1e012a3d9102647d901c9d32af7aa218600bb6822cb3575e48",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Random/holdout/0382",
+      "actions": 81,
+      "spins": 33,
+      "outcome": "LOST",
+      "eventA": [],
+      "finalHash": "4c721aa1c09b29e75b1f8179e83a3dbc296d7207801b58da1fde1712eb33c6bc",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Random/holdout/0077",
+      "actions": 171,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [
+        "event_brine_inspection"
+      ],
+      "finalHash": "9b7cf14ba4aa86538afc7a7b93b2e8daad4f5bc84d4eda8f88f98e366397ae6e",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Random/holdout/0948",
+      "actions": 170,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [],
+      "finalHash": "97c0f38c36aff45579a78056e65095d979c0f1f9f30d70c58a28fc3d786e45e7",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Random/holdout/0933",
+      "actions": 170,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [],
+      "finalHash": "11c1b4fde799ccb1b47358a07fbfffbb7b66e39bc9474c6200d0fddd07e86e94",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Random/train/0334",
+      "actions": 100,
+      "spins": 40,
+      "outcome": "LOST",
+      "eventA": [
+        "event_brine_inspection"
+      ],
+      "finalHash": "8df444760b9c2eee6c2651ffcbc32ad8f9e1e54f00b540b59ba31f770d801e34",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Random/train/0395",
+      "actions": 171,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [
+        "event_copper_queue"
+      ],
+      "finalHash": "4b2ae8ff66ad19b582f85d04cc608b12fdec7dda1a9cf4679a6e870434a2e599",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Random/train/0791",
+      "actions": 171,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [
+        "event_brine_inspection"
+      ],
+      "finalHash": "9396fb5dfab505c8eb9e91b16e83babd3738fb69ac1282e9105571dbd7d827d2",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Random/train/0059",
+      "actions": 171,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [],
+      "finalHash": "1ec00214c46a5ddacede3c2b04ea06bfa634f4bb3629b28fcf1967c1b67fa10e",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Synergy/holdout/0465",
+      "actions": 132,
+      "spins": 54,
+      "outcome": "LOST",
+      "eventA": [
+        "event_brine_inspection"
+      ],
+      "finalHash": "751ce33953281890a88ba687b03a916f1b14c004839e12118b7ef8e7320aa682",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Synergy/holdout/0872",
+      "actions": 170,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [
+        "event_fog_shift"
+      ],
+      "finalHash": "71b6a0529e5c0cca455b0b1114e69ff414195c2725496d53b4313ae99f53bac1",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Synergy/holdout/0166",
+      "actions": 171,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [
+        "event_fog_shift"
+      ],
+      "finalHash": "72ca497751ad248f35e7720519cf92a3dea68a995e918bed2721b6bec4ec845e",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Synergy/holdout/0458",
+      "actions": 165,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [],
+      "finalHash": "16de29231438c6aadacdbfb0196fba07e50815b2daded8eaf5fc5073802d65aa",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Synergy/holdout/0002",
+      "actions": 170,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [],
+      "finalHash": "34f788b8536072bbf64bda6146752bac11e2d804eeb2c83d2923cc2d576959a1",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Synergy/train/0805",
+      "actions": 152,
+      "spins": 62,
+      "outcome": "LOST",
+      "eventA": [
+        "event_brine_inspection"
+      ],
+      "finalHash": "2100b104e4ae3ca11c2f580dbfaf397562e7f2aff62ff9c8469acec4d9c35193",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Synergy/train/0968",
+      "actions": 166,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [],
+      "finalHash": "92b3726b238593431a5dab879764fdf1b90612e98a5d801e8ccef8fd2d73cfe7",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Synergy/train/0078",
+      "actions": 166,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [],
+      "finalHash": "6a560ae337c4cb53e1cbe86a085bc24760bb1c641e4bf3993b161dafbfa36864",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Synergy/train/0575",
+      "actions": 166,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [
+        "event_brine_inspection"
+      ],
+      "finalHash": "0341f212eec410c118f7fccab1d00b8f3cbfadd4291bb06e1aec4472fe6b06dd",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Synergy/train/0001",
+      "actions": 171,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [
+        "event_fog_shift"
+      ],
+      "finalHash": "5383a0dfe5f6c7ab11546d44bde22230e19b10949e79295a75906aff0f8ef446",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Value/holdout/0607",
+      "actions": 129,
+      "spins": 54,
+      "outcome": "LOST",
+      "eventA": [
+        "event_brine_inspection"
+      ],
+      "finalHash": "0ea7ddf8f0e3f0f73bf264fa99d87dd3751afce064f409bc138cce4c4294f906",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Value/holdout/0104",
+      "actions": 169,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [],
+      "finalHash": "8558ff82d85e3ac35c7f5b29ec1ad505ab74a6bf9136065e4880b31cd7f83c6d",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Value/holdout/0896",
+      "actions": 146,
+      "spins": 62,
+      "outcome": "LOST",
+      "eventA": [
+        "event_fog_shift"
+      ],
+      "finalHash": "9d785a48e811faf39297d4713286597aad9a5eceb716696ab229d8d767c8ce42",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Value/holdout/0002",
+      "actions": 168,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [
+        "event_fog_shift"
+      ],
+      "finalHash": "5426cf9264e999a00640da4ad300d9e8cb983eb54b4c503c7fbd14c8eb11f64a",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Value/holdout/0007",
+      "actions": 167,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [],
+      "finalHash": "39daae184ee4909741dc24083c5b13c06a8aa3339c2f0f5ab2551d9adb3d2339",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Value/train/0145",
+      "actions": 151,
+      "spins": 62,
+      "outcome": "LOST",
+      "eventA": [
+        "event_brine_inspection"
+      ],
+      "finalHash": "e5d9ea2195e65561c85d18d924b154cef4ec53ebb350a101722c1b7f6fe1dc88",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Value/train/0487",
+      "actions": 168,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [
+        "event_fog_shift"
+      ],
+      "finalHash": "55ee90c6adf856e2b2ce9c24919862c2abbfe5de964af70f91bc182517142f8c",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Value/train/0597",
+      "actions": 172,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [
+        "event_fog_shift",
+        "event_brine_inspection"
+      ],
+      "finalHash": "c2456dfa129babb9d62073a81893349965fa1ea07d5dd264c3a1dcbecd78513d",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Value/train/0088",
+      "actions": 162,
+      "spins": 70,
+      "outcome": "LOST",
+      "eventA": [
+        "event_fog_shift"
+      ],
+      "finalHash": "45913b96bbb5dffdc6941d5bd85ac161e79494dc3505f2ad6db8f648faf51563",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Value/train/0001",
+      "actions": 169,
+      "spins": 70,
+      "outcome": "WON",
+      "eventA": [
+        "event_fog_shift"
+      ],
+      "finalHash": "28e3a1db1880e2629e0d059f997db047040d7fd5942ddb5a881275735f02b85a",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "manifestEntries": 48,
+  "manifestSha256": "1f1acb1a9f0a7352d65f6bda9f2f43c4dc514ebc80c212acd459f9f7f16d21a3",
+  "groupSummary": {
+    "Greedy/holdout": {
+      "wins": 790,
+      "n": 1000,
+      "winRate": {
+        "k": 790,
+        "n": 1000,
+        "rate": 0.79,
+        "lo": 0.7636693994520036,
+        "hi": 0.8141110806263743
+      },
+      "events": {
+        "A": 118,
+        "B": 693
+      },
+      "actions": {
+        "spin": 69984,
+        "choose": 32150,
+        "remove": 6828,
+        "item": 8998,
+        "skip": 37834,
+        "eventB": 693,
+        "eventA": 118
+      },
+      "stage": [
+        {
+          "stage": 1,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 6000,
+            "P10": 16,
+            "P50": 31,
+            "P90": 42,
+            "P99": 48
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 161,
+            "P50": 178,
+            "P90": 197,
+            "P99": 211
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 115,
+            "P50": 132,
+            "P90": 151,
+            "P99": 165
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 12,
+            "P50": 14,
+            "P90": 14,
+            "P99": 15
+          },
+          "formedAmongReached": {
+            "k": 140,
+            "n": 1000,
+            "rate": 0.14,
+            "lo": 0.11986857462597701,
+            "hi": 0.16288669148362267
+          }
+        },
+        {
+          "stage": 2,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 6000,
+            "P10": 40,
+            "P50": 52,
+            "P90": 64,
+            "P99": 74
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 262,
+            "P50": 314,
+            "P90": 357,
+            "P99": 389
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 302,
+            "P50": 364,
+            "P90": 419,
+            "P99": 463
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 16,
+            "P50": 18,
+            "P90": 20,
+            "P99": 21
+          },
+          "formedAmongReached": {
+            "k": 322,
+            "n": 1000,
+            "rate": 0.322,
+            "lo": 0.2937691138167236,
+            "hi": 0.35159321220413403
+          }
+        },
+        {
+          "stage": 3,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 58,
+            "P50": 67,
+            "P90": 75,
+            "P99": 83
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 421,
+            "P50": 465,
+            "P90": 510,
+            "P99": 545
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 594,
+            "P50": 696,
+            "P90": 778,
+            "P99": 854
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 20,
+            "P50": 21,
+            "P90": 24,
+            "P99": 25
+          },
+          "formedAmongReached": {
+            "k": 484,
+            "n": 1000,
+            "rate": 0.484,
+            "lo": 0.45314660829173575,
+            "hi": 0.5149758479798021
+          }
+        },
+        {
+          "stage": 4,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 62,
+            "P50": 70,
+            "P90": 79,
+            "P99": 90
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 449,
+            "P50": 491,
+            "P90": 541,
+            "P99": 596
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 850,
+            "P50": 980,
+            "P90": 1093,
+            "P99": 1215
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 21,
+            "P50": 23,
+            "P90": 25,
+            "P99": 26
+          },
+          "formedAmongReached": {
+            "k": 642,
+            "n": 1000,
+            "rate": 0.642,
+            "lo": 0.6117948042178514,
+            "hi": 0.6711183963722509
+          }
+        },
+        {
+          "stage": 5,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 64,
+            "P50": 73,
+            "P90": 83,
+            "P99": 96
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 461,
+            "P50": 512,
+            "P90": 570,
+            "P99": 631
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 1031,
+            "P50": 1190,
+            "P90": 1336,
+            "P99": 1516
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 21,
+            "P50": 24,
+            "P90": 25,
+            "P99": 28
+          },
+          "formedAmongReached": {
+            "k": 738,
+            "n": 1000,
+            "rate": 0.738,
+            "lo": 0.7098723945402418,
+            "hi": 0.7643060684206339
+          }
+        },
+        {
+          "stage": 6,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 66,
+            "P50": 75,
+            "P90": 87,
+            "P99": 104
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 469,
+            "P50": 527,
+            "P90": 603,
+            "P99": 661
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 1110,
+            "P50": 1308,
+            "P90": 1509,
+            "P99": 1724
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 21,
+            "P50": 24,
+            "P90": 26,
+            "P99": 31
+          },
+          "formedAmongReached": {
+            "k": 803,
+            "n": 1000,
+            "rate": 0.803,
+            "lo": 0.7772091460935387,
+            "hi": 0.8264718382642148
+          }
+        },
+        {
+          "stage": 7,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 67,
+            "P50": 77,
+            "P90": 90,
+            "P99": 107
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 479,
+            "P50": 542,
+            "P90": 620,
+            "P99": 689
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 1069,
+            "P50": 1300,
+            "P90": 1556,
+            "P99": 1840
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 22,
+            "P50": 24,
+            "P90": 27,
+            "P99": 34
+          },
+          "formedAmongReached": {
+            "k": 853,
+            "n": 1000,
+            "rate": 0.853,
+            "lo": 0.8297022670609646,
+            "hi": 0.8735960414482333
+          }
+        },
+        {
+          "stage": 8,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 68,
+            "P50": 79,
+            "P90": 93,
+            "P99": 110
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 483,
+            "P50": 552,
+            "P90": 636,
+            "P99": 720
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 850,
+            "P50": 1124,
+            "P90": 1447,
+            "P99": 1777
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 22,
+            "P50": 24,
+            "P90": 28,
+            "P99": 36
+          },
+          "formedAmongReached": {
+            "k": 888,
+            "n": 1000,
+            "rate": 0.888,
+            "lo": 0.8669499763240902,
+            "hi": 0.9060804590911189
+          }
+        },
+        {
+          "stage": 9,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 998,
+            "n": 1000,
+            "rate": 0.998,
+            "lo": 0.9927371921365078,
+            "hi": 0.9994513564118792
+          },
+          "conditionalPayment": {
+            "k": 998,
+            "n": 1000,
+            "rate": 0.998,
+            "lo": 0.9927371921365078,
+            "hi": 0.9994513564118792
+          },
+          "spinIncome": {
+            "n": 8000,
+            "P10": 69,
+            "P50": 80,
+            "P90": 95,
+            "P99": 113
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 563,
+            "P50": 646,
+            "P90": 745,
+            "P99": 848
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 479,
+            "P50": 829,
+            "P90": 1212,
+            "P99": 1622
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 22,
+            "P50": 24,
+            "P90": 29,
+            "P99": 39
+          },
+          "formedAmongReached": {
+            "k": 902,
+            "n": 1000,
+            "rate": 0.902,
+            "lo": 0.882005297700964,
+            "hi": 0.9189179884766496
+          }
+        },
+        {
+          "stage": 10,
+          "reached": {
+            "k": 998,
+            "n": 1000,
+            "rate": 0.998,
+            "lo": 0.9927371921365078,
+            "hi": 0.9994513564118792
+          },
+          "survival": {
+            "k": 790,
+            "n": 1000,
+            "rate": 0.79,
+            "lo": 0.7636693994520036,
+            "hi": 0.8141110806263743
+          },
+          "conditionalPayment": {
+            "k": 790,
+            "n": 998,
+            "rate": 0.7915831663326653,
+            "lo": 0.7652888190978168,
+            "hi": 0.8156414217858999
+          },
+          "spinIncome": {
+            "n": 7984,
+            "P10": 69,
+            "P50": 81,
+            "P90": 97,
+            "P99": 117
+          },
+          "periodIncome": {
+            "n": 998,
+            "P10": 568,
+            "P50": 654,
+            "P90": 759,
+            "P99": 875
+          },
+          "margin": {
+            "n": 998,
+            "P10": -151,
+            "P50": 263,
+            "P90": 724,
+            "P99": 1187
+          },
+          "pool": {
+            "n": 998,
+            "P10": 22,
+            "P50": 24,
+            "P90": 31,
+            "P99": 42
+          },
+          "formedAmongReached": {
+            "k": 935,
+            "n": 998,
+            "rate": 0.93687374749499,
+            "lo": 0.9200467843315487,
+            "hi": 0.9503504150681092
+          }
+        }
+      ]
+    },
+    "Greedy/train": {
+      "wins": 810,
+      "n": 1000,
+      "winRate": {
+        "k": 810,
+        "n": 1000,
+        "rate": 0.81,
+        "lo": 0.7845166798033585,
+        "hi": 0.8331107299355973
+      },
+      "events": {
+        "A": 114,
+        "B": 650
+      },
+      "actions": {
+        "spin": 69992,
+        "choose": 32673,
+        "remove": 6966,
+        "item": 8999,
+        "skip": 37319,
+        "eventA": 114,
+        "eventB": 650
+      },
+      "stage": [
+        {
+          "stage": 1,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 6000,
+            "P10": 16,
+            "P50": 31,
+            "P90": 41,
+            "P99": 48
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 162,
+            "P50": 178,
+            "P90": 196,
+            "P99": 211
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 116,
+            "P50": 132,
+            "P90": 150,
+            "P99": 165
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 12,
+            "P50": 14,
+            "P90": 14,
+            "P99": 15
+          },
+          "formedAmongReached": {
+            "k": 143,
+            "n": 1000,
+            "rate": 0.143,
+            "lo": 0.12266731749770252,
+            "hi": 0.16606498806098383
+          }
+        },
+        {
+          "stage": 2,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 6000,
+            "P10": 41,
+            "P50": 52,
+            "P90": 65,
+            "P99": 74
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 265,
+            "P50": 320,
+            "P90": 359,
+            "P99": 389
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 304,
+            "P50": 370,
+            "P90": 419,
+            "P99": 458
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 16,
+            "P50": 19,
+            "P90": 20,
+            "P99": 21
+          },
+          "formedAmongReached": {
+            "k": 311,
+            "n": 1000,
+            "rate": 0.311,
+            "lo": 0.2830785879940784,
+            "hi": 0.34036792671346144
+          }
+        },
+        {
+          "stage": 3,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 57,
+            "P50": 67,
+            "P90": 75,
+            "P99": 83
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 420,
+            "P50": 468,
+            "P90": 507,
+            "P99": 545
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 590,
+            "P50": 701,
+            "P90": 782,
+            "P99": 850
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 20,
+            "P50": 22,
+            "P90": 24,
+            "P99": 25
+          },
+          "formedAmongReached": {
+            "k": 504,
+            "n": 1000,
+            "rate": 0.504,
+            "lo": 0.47305527933504465,
+            "hi": 0.5349141065970708
+          }
+        },
+        {
+          "stage": 4,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 63,
+            "P50": 70,
+            "P90": 79,
+            "P99": 90
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 452,
+            "P50": 491,
+            "P90": 542,
+            "P99": 585
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 856,
+            "P50": 984,
+            "P90": 1103,
+            "P99": 1182
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 21,
+            "P50": 23,
+            "P90": 25,
+            "P99": 27
+          },
+          "formedAmongReached": {
+            "k": 665,
+            "n": 1000,
+            "rate": 0.665,
+            "lo": 0.6351640508403954,
+            "hi": 0.6935731188593713
+          }
+        },
+        {
+          "stage": 5,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 64,
+            "P50": 72,
+            "P90": 83,
+            "P99": 97
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 462,
+            "P50": 508,
+            "P90": 570,
+            "P99": 621
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 1039,
+            "P50": 1188,
+            "P90": 1352,
+            "P99": 1471
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 21,
+            "P50": 24,
+            "P90": 25,
+            "P99": 29
+          },
+          "formedAmongReached": {
+            "k": 746,
+            "n": 1000,
+            "rate": 0.746,
+            "lo": 0.7181143099237187,
+            "hi": 0.7720029249013881
+          }
+        },
+        {
+          "stage": 6,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 66,
+            "P50": 75,
+            "P90": 87,
+            "P99": 103
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 474,
+            "P50": 528,
+            "P90": 597,
+            "P99": 667
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 1127,
+            "P50": 1309,
+            "P90": 1517,
+            "P99": 1698
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 22,
+            "P50": 24,
+            "P90": 26,
+            "P99": 30
+          },
+          "formedAmongReached": {
+            "k": 817,
+            "n": 1000,
+            "rate": 0.817,
+            "lo": 0.791836676289063,
+            "hi": 0.8397371588310949
+          }
+        },
+        {
+          "stage": 7,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 67,
+            "P50": 77,
+            "P90": 90,
+            "P99": 108
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 482,
+            "P50": 544,
+            "P90": 620,
+            "P99": 694
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 1089,
+            "P50": 1299,
+            "P90": 1560,
+            "P99": 1801
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 22,
+            "P50": 24,
+            "P90": 27,
+            "P99": 34
+          },
+          "formedAmongReached": {
+            "k": 870,
+            "n": 1000,
+            "rate": 0.87,
+            "lo": 0.8477319733455311,
+            "hi": 0.889436225375158
+          }
+        },
+        {
+          "stage": 8,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 68,
+            "P50": 79,
+            "P90": 93,
+            "P99": 112
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 485,
+            "P50": 555,
+            "P90": 642,
+            "P99": 728
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 865,
+            "P50": 1124,
+            "P90": 1451,
+            "P99": 1758
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 22,
+            "P50": 24,
+            "P90": 28,
+            "P99": 35
+          },
+          "formedAmongReached": {
+            "k": 899,
+            "n": 1000,
+            "rate": 0.899,
+            "lo": 0.8787702573809261,
+            "hi": 0.9161759893476008
+          }
+        },
+        {
+          "stage": 9,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 999,
+            "n": 1000,
+            "rate": 0.999,
+            "lo": 0.9943574414020421,
+            "hi": 0.9998234536293739
+          },
+          "conditionalPayment": {
+            "k": 999,
+            "n": 1000,
+            "rate": 0.999,
+            "lo": 0.9943574414020421,
+            "hi": 0.9998234536293739
+          },
+          "spinIncome": {
+            "n": 8000,
+            "P10": 69,
+            "P50": 80,
+            "P90": 96,
+            "P99": 116
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 558,
+            "P50": 649,
+            "P90": 754,
+            "P99": 849
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 509,
+            "P50": 825,
+            "P90": 1225,
+            "P99": 1642
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 22,
+            "P50": 24,
+            "P90": 29,
+            "P99": 37
+          },
+          "formedAmongReached": {
+            "k": 926,
+            "n": 1000,
+            "rate": 0.926,
+            "lo": 0.9080945943544139,
+            "hi": 0.940645007415893
+          }
+        },
+        {
+          "stage": 10,
+          "reached": {
+            "k": 999,
+            "n": 1000,
+            "rate": 0.999,
+            "lo": 0.9943574414020421,
+            "hi": 0.9998234536293739
+          },
+          "survival": {
+            "k": 810,
+            "n": 1000,
+            "rate": 0.81,
+            "lo": 0.7845166798033585,
+            "hi": 0.8331107299355973
+          },
+          "conditionalPayment": {
+            "k": 810,
+            "n": 999,
+            "rate": 0.8108108108108109,
+            "lo": 0.785350601165657,
+            "hi": 0.8338898525849028
+          },
+          "spinIncome": {
+            "n": 7992,
+            "P10": 69,
+            "P50": 82,
+            "P90": 98,
+            "P99": 119
+          },
+          "periodIncome": {
+            "n": 999,
+            "P10": 567,
+            "P50": 658,
+            "P90": 764,
+            "P99": 876
+          },
+          "margin": {
+            "n": 999,
+            "P10": -122,
+            "P50": 258,
+            "P90": 734,
+            "P99": 1259
+          },
+          "pool": {
+            "n": 999,
+            "P10": 22,
+            "P50": 24,
+            "P90": 31,
+            "P99": 41
+          },
+          "formedAmongReached": {
+            "k": 944,
+            "n": 999,
+            "rate": 0.944944944944945,
+            "lo": 0.9290213115518117,
+            "hi": 0.9574597889059139
+          }
+        }
+      ]
+    },
+    "Random/holdout": {
+      "wins": 1,
+      "n": 1000,
+      "winRate": {
+        "k": 1,
+        "n": 1000,
+        "rate": 0.001,
+        "lo": 0.00017654637062607809,
+        "hi": 0.0056425585979579355
+      },
+      "events": {
+        "A": 677,
+        "B": 476
+      },
+      "actions": {
+        "remove": 8959,
+        "spin": 61700,
+        "choose": 46450,
+        "skip": 15250,
+        "skipItem": 1956,
+        "reroll": 9503,
+        "item": 6003,
+        "eventB": 476,
+        "eventA": 677
+      },
+      "stage": [
+        {
+          "stage": 1,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 6000,
+            "P10": 13,
+            "P50": 22,
+            "P90": 30,
+            "P99": 37
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 111,
+            "P50": 129,
+            "P90": 149,
+            "P99": 170
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 65,
+            "P50": 83,
+            "P90": 103,
+            "P99": 124
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 10,
+            "P50": 12,
+            "P90": 13,
+            "P99": 14
+          },
+          "formedAmongReached": {
+            "k": 81,
+            "n": 1000,
+            "rate": 0.081,
+            "lo": 0.0656496215412003,
+            "hi": 0.0995572020696949
+          }
+        },
+        {
+          "stage": 2,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 6000,
+            "P10": 25,
+            "P50": 35,
+            "P90": 46,
+            "P99": 55
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 166,
+            "P50": 210,
+            "P90": 259,
+            "P99": 294
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 155,
+            "P50": 212,
+            "P90": 275,
+            "P99": 324
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 12,
+            "P50": 15,
+            "P90": 17,
+            "P99": 19
+          },
+          "formedAmongReached": {
+            "k": 366,
+            "n": 1000,
+            "rate": 0.366,
+            "lo": 0.33670944194660357,
+            "hi": 0.39631612932752525
+          }
+        },
+        {
+          "stage": 3,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 32,
+            "P50": 45,
+            "P90": 58,
+            "P99": 68
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 234,
+            "P50": 317,
+            "P90": 394,
+            "P99": 443
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 264,
+            "P50": 391,
+            "P90": 523,
+            "P99": 604
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 15,
+            "P50": 18,
+            "P90": 21,
+            "P99": 23
+          },
+          "formedAmongReached": {
+            "k": 589,
+            "n": 1000,
+            "rate": 0.589,
+            "lo": 0.5582210567913957,
+            "hi": 0.6190977801981754
+          }
+        },
+        {
+          "stage": 4,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 40,
+            "P50": 54,
+            "P90": 65,
+            "P99": 74
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 289,
+            "P50": 379,
+            "P90": 444,
+            "P99": 489
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 363,
+            "P50": 566,
+            "P90": 737,
+            "P99": 861
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 17,
+            "P50": 21,
+            "P90": 25,
+            "P99": 28
+          },
+          "formedAmongReached": {
+            "k": 767,
+            "n": 1000,
+            "rate": 0.767,
+            "lo": 0.7398071302206756,
+            "hi": 0.7921493807480379
+          }
+        },
+        {
+          "stage": 5,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 999,
+            "n": 1000,
+            "rate": 0.999,
+            "lo": 0.9943574414020421,
+            "hi": 0.9998234536293739
+          },
+          "conditionalPayment": {
+            "k": 999,
+            "n": 1000,
+            "rate": 0.999,
+            "lo": 0.9943574414020421,
+            "hi": 0.9998234536293739
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 46,
+            "P50": 58,
+            "P90": 68,
+            "P99": 79
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 338,
+            "P50": 406,
+            "P90": 462,
+            "P99": 506
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 427,
+            "P50": 674,
+            "P90": 881,
+            "P99": 1027
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 19,
+            "P50": 24,
+            "P90": 29,
+            "P99": 33
+          },
+          "formedAmongReached": {
+            "k": 851,
+            "n": 1000,
+            "rate": 0.851,
+            "lo": 0.8275879764800762,
+            "hi": 0.8717256390630639
+          }
+        },
+        {
+          "stage": 6,
+          "reached": {
+            "k": 999,
+            "n": 1000,
+            "rate": 0.999,
+            "lo": 0.9943574414020421,
+            "hi": 0.9998234536293739
+          },
+          "survival": {
+            "k": 994,
+            "n": 1000,
+            "rate": 0.994,
+            "lo": 0.986971831758148,
+            "hi": 0.9972473308581236
+          },
+          "conditionalPayment": {
+            "k": 994,
+            "n": 999,
+            "rate": 0.994994994994995,
+            "lo": 0.9883374367209259,
+            "hi": 0.9978603229558916
+          },
+          "spinIncome": {
+            "n": 6993,
+            "P10": 49,
+            "P50": 59,
+            "P90": 70,
+            "P99": 82
+          },
+          "periodIncome": {
+            "n": 999,
+            "P10": 350,
+            "P50": 415,
+            "P90": 472,
+            "P99": 543
+          },
+          "margin": {
+            "n": 999,
+            "P10": 383,
+            "P50": 679,
+            "P90": 916,
+            "P99": 1099
+          },
+          "pool": {
+            "n": 999,
+            "P10": 21,
+            "P50": 28,
+            "P90": 33,
+            "P99": 38
+          },
+          "formedAmongReached": {
+            "k": 914,
+            "n": 999,
+            "rate": 0.914914914914915,
+            "lo": 0.8959842870285606,
+            "hi": 0.93066681789771
+          }
+        },
+        {
+          "stage": 7,
+          "reached": {
+            "k": 994,
+            "n": 1000,
+            "rate": 0.994,
+            "lo": 0.986971831758148,
+            "hi": 0.9972473308581236
+          },
+          "survival": {
+            "k": 979,
+            "n": 1000,
+            "rate": 0.979,
+            "lo": 0.9681097049387624,
+            "hi": 0.9862242604320757
+          },
+          "conditionalPayment": {
+            "k": 979,
+            "n": 994,
+            "rate": 0.9849094567404426,
+            "lo": 0.9752514341687346,
+            "hi": 0.9908339008095395
+          },
+          "spinIncome": {
+            "n": 6958,
+            "P10": 49,
+            "P50": 59,
+            "P90": 71,
+            "P99": 86
+          },
+          "periodIncome": {
+            "n": 994,
+            "P10": 361,
+            "P50": 416,
+            "P90": 480,
+            "P99": 562
+          },
+          "margin": {
+            "n": 994,
+            "P10": 224,
+            "P50": 547,
+            "P90": 820,
+            "P99": 1030
+          },
+          "pool": {
+            "n": 994,
+            "P10": 24,
+            "P50": 31,
+            "P90": 37,
+            "P99": 42
+          },
+          "formedAmongReached": {
+            "k": 940,
+            "n": 994,
+            "rate": 0.9456740442655935,
+            "lo": 0.9297905827713255,
+            "hi": 0.9581260217833951
+          }
+        },
+        {
+          "stage": 8,
+          "reached": {
+            "k": 979,
+            "n": 1000,
+            "rate": 0.979,
+            "lo": 0.9681097049387624,
+            "hi": 0.9862242604320757
+          },
+          "survival": {
+            "k": 795,
+            "n": 1000,
+            "rate": 0.795,
+            "lo": 0.768872298969424,
+            "hi": 0.8188699135240983
+          },
+          "conditionalPayment": {
+            "k": 795,
+            "n": 979,
+            "rate": 0.8120531154239019,
+            "lo": 0.7863790506147064,
+            "hi": 0.835287846438187
+          },
+          "spinIncome": {
+            "n": 6853,
+            "P10": 49,
+            "P50": 60,
+            "P90": 72,
+            "P99": 89
+          },
+          "periodIncome": {
+            "n": 979,
+            "P10": 365,
+            "P50": 420,
+            "P90": 485,
+            "P99": 567
+          },
+          "margin": {
+            "n": 979,
+            "P10": -100,
+            "P50": 245,
+            "P90": 547,
+            "P99": 753
+          },
+          "pool": {
+            "n": 979,
+            "P10": 27,
+            "P50": 35,
+            "P90": 41,
+            "P99": 45
+          },
+          "formedAmongReached": {
+            "k": 944,
+            "n": 979,
+            "rate": 0.9642492339121552,
+            "lo": 0.9506861020617283,
+            "hi": 0.9741833077927398
+          }
+        },
+        {
+          "stage": 9,
+          "reached": {
+            "k": 795,
+            "n": 1000,
+            "rate": 0.795,
+            "lo": 0.768872298969424,
+            "hi": 0.8188699135240983
+          },
+          "survival": {
+            "k": 192,
+            "n": 1000,
+            "rate": 0.192,
+            "lo": 0.16878484731114132,
+            "hi": 0.21757243591596062
+          },
+          "conditionalPayment": {
+            "k": 192,
+            "n": 795,
+            "rate": 0.24150943396226415,
+            "lo": 0.21304671253659346,
+            "hi": 0.272458207792971
+          },
+          "spinIncome": {
+            "n": 6360,
+            "P10": 51,
+            "P50": 60,
+            "P90": 74,
+            "P99": 92
+          },
+          "periodIncome": {
+            "n": 795,
+            "P10": 430,
+            "P50": 487,
+            "P90": 564,
+            "P99": 663
+          },
+          "margin": {
+            "n": 795,
+            "P10": -419,
+            "P50": -159,
+            "P90": 154,
+            "P99": 428
+          },
+          "pool": {
+            "n": 795,
+            "P10": 32,
+            "P50": 39,
+            "P90": 46,
+            "P99": 51
+          },
+          "formedAmongReached": {
+            "k": 771,
+            "n": 795,
+            "rate": 0.969811320754717,
+            "lo": 0.9554735006790359,
+            "hi": 0.979630695218325
+          }
+        },
+        {
+          "stage": 10,
+          "reached": {
+            "k": 192,
+            "n": 1000,
+            "rate": 0.192,
+            "lo": 0.16878484731114132,
+            "hi": 0.21757243591596062
+          },
+          "survival": {
+            "k": 1,
+            "n": 1000,
+            "rate": 0.001,
+            "lo": 0.00017654637062607809,
+            "hi": 0.0056425585979579355
+          },
+          "conditionalPayment": {
+            "k": 1,
+            "n": 192,
+            "rate": 0.005208333333333333,
+            "lo": 0.0009199911384848505,
+            "hi": 0.02890749715674057
+          },
+          "spinIncome": {
+            "n": 1536,
+            "P10": 54,
+            "P50": 64,
+            "P90": 82,
+            "P99": 102
+          },
+          "periodIncome": {
+            "n": 192,
+            "P10": 463,
+            "P50": 520,
+            "P90": 607,
+            "P99": 744
+          },
+          "margin": {
+            "n": 192,
+            "P10": -703,
+            "P50": -577,
+            "P90": -319,
+            "P99": -96
+          },
+          "pool": {
+            "n": 192,
+            "P10": 37,
+            "P50": 44,
+            "P90": 52,
+            "P99": 62
+          },
+          "formedAmongReached": {
+            "k": 187,
+            "n": 192,
+            "rate": 0.9739583333333334,
+            "lo": 0.9404967518070467,
+            "hi": 0.9888263909838425
+          }
+        }
+      ]
+    },
+    "Random/train": {
+      "wins": 3,
+      "n": 1000,
+      "winRate": {
+        "k": 3,
+        "n": 1000,
+        "rate": 0.003,
+        "lo": 0.0010207838811386186,
+        "hi": 0.008783014053503173
+      },
+      "events": {
+        "A": 697,
+        "B": 488
+      },
+      "actions": {
+        "remove": 8933,
+        "spin": 61497,
+        "choose": 46137,
+        "reroll": 9440,
+        "skip": 15360,
+        "item": 5993,
+        "eventA": 697,
+        "skipItem": 1940,
+        "eventB": 488
+      },
+      "stage": [
+        {
+          "stage": 1,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 6000,
+            "P10": 13,
+            "P50": 22,
+            "P90": 30,
+            "P99": 37
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 112,
+            "P50": 128,
+            "P90": 150,
+            "P99": 168
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 66,
+            "P50": 82,
+            "P90": 104,
+            "P99": 122
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 10,
+            "P50": 12,
+            "P90": 13,
+            "P99": 14
+          },
+          "formedAmongReached": {
+            "k": 87,
+            "n": 1000,
+            "rate": 0.087,
+            "lo": 0.07107442145237503,
+            "hi": 0.10608648105669352
+          }
+        },
+        {
+          "stage": 2,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 6000,
+            "P10": 25,
+            "P50": 34,
+            "P90": 45,
+            "P99": 56
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 164,
+            "P50": 207,
+            "P90": 256,
+            "P99": 294
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 154,
+            "P50": 208,
+            "P90": 272,
+            "P99": 321
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 12,
+            "P50": 15,
+            "P90": 17,
+            "P99": 19
+          },
+          "formedAmongReached": {
+            "k": 331,
+            "n": 1000,
+            "rate": 0.331,
+            "lo": 0.3025295138380275,
+            "hi": 0.36076393053009015
+          }
+        },
+        {
+          "stage": 3,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 32,
+            "P50": 45,
+            "P90": 58,
+            "P99": 69
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 233,
+            "P50": 315,
+            "P90": 393,
+            "P99": 439
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 262,
+            "P50": 388,
+            "P90": 517,
+            "P99": 616
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 14,
+            "P50": 18,
+            "P90": 21,
+            "P99": 24
+          },
+          "formedAmongReached": {
+            "k": 594,
+            "n": 1000,
+            "rate": 0.594,
+            "lo": 0.5632592745396628,
+            "hi": 0.6240212948650526
+          }
+        },
+        {
+          "stage": 4,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 39,
+            "P50": 54,
+            "P90": 65,
+            "P99": 74
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 285,
+            "P50": 376,
+            "P90": 440,
+            "P99": 489
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 354,
+            "P50": 553,
+            "P90": 742,
+            "P99": 865
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 17,
+            "P50": 21,
+            "P90": 25,
+            "P99": 27
+          },
+          "formedAmongReached": {
+            "k": 754,
+            "n": 1000,
+            "rate": 0.754,
+            "lo": 0.726368159976174,
+            "hi": 0.7796878467131638
+          }
+        },
+        {
+          "stage": 5,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 45,
+            "P50": 58,
+            "P90": 68,
+            "P99": 79
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 327,
+            "P50": 406,
+            "P90": 464,
+            "P99": 513
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 393,
+            "P50": 660,
+            "P90": 887,
+            "P99": 1033
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 19,
+            "P50": 24,
+            "P90": 28,
+            "P99": 32
+          },
+          "formedAmongReached": {
+            "k": 849,
+            "n": 1000,
+            "rate": 0.849,
+            "lo": 0.8254750432083057,
+            "hi": 0.8698538793687768
+          }
+        },
+        {
+          "stage": 6,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 996,
+            "n": 1000,
+            "rate": 0.996,
+            "lo": 0.9897604437227376,
+            "hi": 0.9984434118595915
+          },
+          "conditionalPayment": {
+            "k": 996,
+            "n": 1000,
+            "rate": 0.996,
+            "lo": 0.9897604437227376,
+            "hi": 0.9984434118595915
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 48,
+            "P50": 59,
+            "P90": 69,
+            "P99": 83
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 345,
+            "P50": 412,
+            "P90": 468,
+            "P99": 517
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 362,
+            "P50": 666,
+            "P90": 924,
+            "P99": 1093
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 22,
+            "P50": 28,
+            "P90": 32,
+            "P99": 36
+          },
+          "formedAmongReached": {
+            "k": 907,
+            "n": 1000,
+            "rate": 0.907,
+            "lo": 0.8874087442345034,
+            "hi": 0.9234762743582546
+          }
+        },
+        {
+          "stage": 7,
+          "reached": {
+            "k": 996,
+            "n": 1000,
+            "rate": 0.996,
+            "lo": 0.9897604437227376,
+            "hi": 0.9984434118595915
+          },
+          "survival": {
+            "k": 971,
+            "n": 1000,
+            "rate": 0.971,
+            "lo": 0.9586616416633058,
+            "hi": 0.9797335518433012
+          },
+          "conditionalPayment": {
+            "k": 971,
+            "n": 996,
+            "rate": 0.9748995983935743,
+            "lo": 0.9632085951137977,
+            "hi": 0.9829414086235949
+          },
+          "spinIncome": {
+            "n": 6972,
+            "P10": 49,
+            "P50": 59,
+            "P90": 70,
+            "P99": 83
+          },
+          "periodIncome": {
+            "n": 996,
+            "P10": 357,
+            "P50": 417,
+            "P90": 474,
+            "P99": 531
+          },
+          "margin": {
+            "n": 996,
+            "P10": 190,
+            "P50": 533,
+            "P90": 815,
+            "P99": 1019
+          },
+          "pool": {
+            "n": 996,
+            "P10": 24,
+            "P50": 31,
+            "P90": 37,
+            "P99": 41
+          },
+          "formedAmongReached": {
+            "k": 939,
+            "n": 996,
+            "rate": 0.9427710843373494,
+            "lo": 0.9265720667988138,
+            "hi": 0.9555677886941887
+          }
+        },
+        {
+          "stage": 8,
+          "reached": {
+            "k": 971,
+            "n": 1000,
+            "rate": 0.971,
+            "lo": 0.9586616416633058,
+            "hi": 0.9797335518433012
+          },
+          "survival": {
+            "k": 782,
+            "n": 1000,
+            "rate": 0.782,
+            "lo": 0.7553565227948384,
+            "hi": 0.8064851854193082
+          },
+          "conditionalPayment": {
+            "k": 782,
+            "n": 971,
+            "rate": 0.8053553038105047,
+            "lo": 0.7792689188659762,
+            "hi": 0.8290351234317083
+          },
+          "spinIncome": {
+            "n": 6797,
+            "P10": 49,
+            "P50": 59,
+            "P90": 72,
+            "P99": 87
+          },
+          "periodIncome": {
+            "n": 971,
+            "P10": 362,
+            "P50": 418,
+            "P90": 479,
+            "P99": 551
+          },
+          "margin": {
+            "n": 971,
+            "P10": -114,
+            "P50": 227,
+            "P90": 536,
+            "P99": 815
+          },
+          "pool": {
+            "n": 971,
+            "P10": 27,
+            "P50": 34,
+            "P90": 41,
+            "P99": 45
+          },
+          "formedAmongReached": {
+            "k": 934,
+            "n": 971,
+            "rate": 0.9618949536560247,
+            "lo": 0.9479196524620865,
+            "hi": 0.9722299696981545
+          }
+        },
+        {
+          "stage": 9,
+          "reached": {
+            "k": 782,
+            "n": 1000,
+            "rate": 0.782,
+            "lo": 0.7553565227948384,
+            "hi": 0.8064851854193082
+          },
+          "survival": {
+            "k": 184,
+            "n": 1000,
+            "rate": 0.184,
+            "lo": 0.16120869057645776,
+            "hi": 0.2092098207864131
+          },
+          "conditionalPayment": {
+            "k": 184,
+            "n": 782,
+            "rate": 0.23529411764705882,
+            "lo": 0.20690245418285108,
+            "hi": 0.26627372486312795
+          },
+          "spinIncome": {
+            "n": 6256,
+            "P10": 50,
+            "P50": 60,
+            "P90": 73,
+            "P99": 91
+          },
+          "periodIncome": {
+            "n": 782,
+            "P10": 430,
+            "P50": 483,
+            "P90": 554,
+            "P99": 645
+          },
+          "margin": {
+            "n": 782,
+            "P10": -412,
+            "P50": -172,
+            "P90": 138,
+            "P99": 444
+          },
+          "pool": {
+            "n": 782,
+            "P10": 32,
+            "P50": 39,
+            "P90": 46,
+            "P99": 52
+          },
+          "formedAmongReached": {
+            "k": 762,
+            "n": 782,
+            "rate": 0.9744245524296675,
+            "lo": 0.9608270004504224,
+            "hi": 0.9833838090855281
+          }
+        },
+        {
+          "stage": 10,
+          "reached": {
+            "k": 184,
+            "n": 1000,
+            "rate": 0.184,
+            "lo": 0.16120869057645776,
+            "hi": 0.2092098207864131
+          },
+          "survival": {
+            "k": 3,
+            "n": 1000,
+            "rate": 0.003,
+            "lo": 0.0010207838811386186,
+            "hi": 0.008783014053503173
+          },
+          "conditionalPayment": {
+            "k": 3,
+            "n": 184,
+            "rate": 0.016304347826086956,
+            "lo": 0.005560179056259565,
+            "hi": 0.046832188861242526
+          },
+          "spinIncome": {
+            "n": 1472,
+            "P10": 54,
+            "P50": 64,
+            "P90": 80,
+            "P99": 102
+          },
+          "periodIncome": {
+            "n": 184,
+            "P10": 458,
+            "P50": 515,
+            "P90": 607,
+            "P99": 755
+          },
+          "margin": {
+            "n": 184,
+            "P10": -714,
+            "P50": -593,
+            "P90": -312,
+            "P99": 157
+          },
+          "pool": {
+            "n": 184,
+            "P10": 35,
+            "P50": 43,
+            "P90": 51,
+            "P99": 62
+          },
+          "formedAmongReached": {
+            "k": 180,
+            "n": 184,
+            "rate": 0.9782608695652174,
+            "lo": 0.9454459829976677,
+            "hi": 0.9915143723198584
+          }
+        }
+      ]
+    },
+    "Synergy/holdout": {
+      "wins": 564,
+      "n": 1000,
+      "winRate": {
+        "k": 564,
+        "n": 1000,
+        "rate": 0.564,
+        "lo": 0.5330781384432806,
+        "hi": 0.5944320364705682
+      },
+      "events": {
+        "A": 297,
+        "B": 164
+      },
+      "actions": {
+        "remove": 8578,
+        "spin": 69752,
+        "choose": 39341,
+        "item": 4442,
+        "reroll": 10969,
+        "skip": 30411,
+        "skipItem": 4527,
+        "eventA": 297,
+        "eventB": 164
+      },
+      "stage": [
+        {
+          "stage": 1,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 6000,
+            "P10": 17,
+            "P50": 30,
+            "P90": 39,
+            "P99": 47
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 158,
+            "P50": 173,
+            "P90": 192,
+            "P99": 205
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 112,
+            "P50": 127,
+            "P90": 146,
+            "P99": 159
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 12,
+            "P50": 13,
+            "P90": 14,
+            "P99": 14
+          },
+          "formedAmongReached": {
+            "k": 29,
+            "n": 1000,
+            "rate": 0.029,
+            "lo": 0.02026644815669875,
+            "hi": 0.04133835833669418
+          }
+        },
+        {
+          "stage": 2,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 6000,
+            "P10": 37,
+            "P50": 48,
+            "P90": 60,
+            "P99": 70
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 248,
+            "P50": 290,
+            "P90": 337,
+            "P99": 358
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 282,
+            "P50": 339,
+            "P90": 392,
+            "P99": 418
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 15,
+            "P50": 18,
+            "P90": 20,
+            "P99": 20
+          },
+          "formedAmongReached": {
+            "k": 599,
+            "n": 1000,
+            "rate": 0.599,
+            "lo": 0.5683007437869229,
+            "hi": 0.628941558032937
+          }
+        },
+        {
+          "stage": 3,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 52,
+            "P50": 64,
+            "P90": 73,
+            "P99": 85
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 383,
+            "P50": 449,
+            "P90": 491,
+            "P99": 537
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 539,
+            "P50": 647,
+            "P90": 736,
+            "P99": 796
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 17,
+            "P50": 22,
+            "P90": 24,
+            "P99": 25
+          },
+          "formedAmongReached": {
+            "k": 873,
+            "n": 1000,
+            "rate": 0.873,
+            "lo": 0.8509252474282143,
+            "hi": 0.8922199907415616
+          }
+        },
+        {
+          "stage": 4,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 58,
+            "P50": 68,
+            "P90": 80,
+            "P99": 95
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 419,
+            "P50": 482,
+            "P90": 535,
+            "P99": 597
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 772,
+            "P50": 922,
+            "P90": 1042,
+            "P99": 1153
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 19,
+            "P50": 23,
+            "P90": 25,
+            "P99": 28
+          },
+          "formedAmongReached": {
+            "k": 951,
+            "n": 1000,
+            "rate": 0.951,
+            "lo": 0.9358092984933898,
+            "hi": 0.9627389653526394
+          }
+        },
+        {
+          "stage": 5,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 59,
+            "P50": 71,
+            "P90": 85,
+            "P99": 103
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 429,
+            "P50": 500,
+            "P90": 573,
+            "P99": 659
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 933,
+            "P50": 1126,
+            "P90": 1290,
+            "P99": 1476
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 20,
+            "P50": 23,
+            "P90": 26,
+            "P99": 31
+          },
+          "formedAmongReached": {
+            "k": 973,
+            "n": 1000,
+            "rate": 0.973,
+            "lo": 0.9610012692469597,
+            "hi": 0.981378617225705
+          }
+        },
+        {
+          "stage": 6,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 59,
+            "P50": 72,
+            "P90": 89,
+            "P99": 106
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 429,
+            "P50": 509,
+            "P90": 605,
+            "P99": 694
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 987,
+            "P50": 1222,
+            "P90": 1456,
+            "P99": 1686
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 20,
+            "P50": 24,
+            "P90": 26,
+            "P99": 32
+          },
+          "formedAmongReached": {
+            "k": 976,
+            "n": 1000,
+            "rate": 0.976,
+            "lo": 0.9645370943883885,
+            "hi": 0.9838198315333629
+          }
+        },
+        {
+          "stage": 7,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 60,
+            "P50": 74,
+            "P90": 93,
+            "P99": 113
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 431,
+            "P50": 516,
+            "P90": 635,
+            "P99": 744
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 888,
+            "P50": 1186,
+            "P90": 1512,
+            "P99": 1813
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 21,
+            "P50": 24,
+            "P90": 27,
+            "P99": 35
+          },
+          "formedAmongReached": {
+            "k": 979,
+            "n": 1000,
+            "rate": 0.979,
+            "lo": 0.9681097049387624,
+            "hi": 0.9862242604320757
+          }
+        },
+        {
+          "stage": 8,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 998,
+            "n": 1000,
+            "rate": 0.998,
+            "lo": 0.9927371921365078,
+            "hi": 0.9994513564118792
+          },
+          "conditionalPayment": {
+            "k": 998,
+            "n": 1000,
+            "rate": 0.998,
+            "lo": 0.9927371921365078,
+            "hi": 0.9994513564118792
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 59,
+            "P50": 76,
+            "P90": 98,
+            "P99": 118
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 427,
+            "P50": 533,
+            "P90": 676,
+            "P99": 795
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 630,
+            "P50": 987,
+            "P90": 1439,
+            "P99": 1824
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 22,
+            "P50": 24,
+            "P90": 29,
+            "P99": 36
+          },
+          "formedAmongReached": {
+            "k": 980,
+            "n": 1000,
+            "rate": 0.98,
+            "lo": 0.9693099947702821,
+            "hi": 0.9870163170835848
+          }
+        },
+        {
+          "stage": 9,
+          "reached": {
+            "k": 998,
+            "n": 1000,
+            "rate": 0.998,
+            "lo": 0.9927371921365078,
+            "hi": 0.9994513564118792
+          },
+          "survival": {
+            "k": 971,
+            "n": 1000,
+            "rate": 0.971,
+            "lo": 0.9586616416633058,
+            "hi": 0.9797335518433012
+          },
+          "conditionalPayment": {
+            "k": 971,
+            "n": 998,
+            "rate": 0.9729458917835672,
+            "lo": 0.960923689003375,
+            "hi": 0.9813411690623097
+          },
+          "spinIncome": {
+            "n": 7984,
+            "P10": 60,
+            "P50": 80,
+            "P90": 104,
+            "P99": 129
+          },
+          "periodIncome": {
+            "n": 998,
+            "P10": 491,
+            "P50": 631,
+            "P90": 815,
+            "P99": 1036
+          },
+          "margin": {
+            "n": 998,
+            "P10": 211,
+            "P50": 665,
+            "P90": 1286,
+            "P99": 1830
+          },
+          "pool": {
+            "n": 998,
+            "P10": 24,
+            "P50": 24,
+            "P90": 31,
+            "P99": 40
+          },
+          "formedAmongReached": {
+            "k": 978,
+            "n": 998,
+            "rate": 0.9799599198396793,
+            "lo": 0.9692489005096449,
+            "hi": 0.9869902245188785
+          }
+        },
+        {
+          "stage": 10,
+          "reached": {
+            "k": 971,
+            "n": 1000,
+            "rate": 0.971,
+            "lo": 0.9586616416633058,
+            "hi": 0.9797335518433012
+          },
+          "survival": {
+            "k": 564,
+            "n": 1000,
+            "rate": 0.564,
+            "lo": 0.5330781384432806,
+            "hi": 0.5944320364705682
+          },
+          "conditionalPayment": {
+            "k": 564,
+            "n": 971,
+            "rate": 0.5808444902162719,
+            "lo": 0.5495501815375584,
+            "hi": 0.611501647536196
+          },
+          "spinIncome": {
+            "n": 7768,
+            "P10": 61,
+            "P50": 83,
+            "P90": 109,
+            "P99": 139
+          },
+          "periodIncome": {
+            "n": 971,
+            "P10": 506,
+            "P50": 654,
+            "P90": 864,
+            "P99": 1060
+          },
+          "margin": {
+            "n": 971,
+            "P10": -440,
+            "P50": 108,
+            "P90": 920,
+            "P99": 1710
+          },
+          "pool": {
+            "n": 971,
+            "P10": 24,
+            "P50": 26,
+            "P90": 34,
+            "P99": 42
+          },
+          "formedAmongReached": {
+            "k": 951,
+            "n": 971,
+            "rate": 0.9794026776519053,
+            "lo": 0.9683996643197217,
+            "hi": 0.986627424009358
+          }
+        }
+      ]
+    },
+    "Synergy/train": {
+      "wins": 546,
+      "n": 1000,
+      "winRate": {
+        "k": 546,
+        "n": 1000,
+        "rate": 0.546,
+        "lo": 0.5150242420441903,
+        "hi": 0.5766236961751384
+      },
+      "events": {
+        "A": 294,
+        "B": 189
+      },
+      "actions": {
+        "remove": 8538,
+        "spin": 69856,
+        "choose": 39431,
+        "item": 4401,
+        "reroll": 10982,
+        "skip": 30425,
+        "eventA": 294,
+        "skipItem": 4581,
+        "eventB": 189
+      },
+      "stage": [
+        {
+          "stage": 1,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 6000,
+            "P10": 17,
+            "P50": 30,
+            "P90": 39,
+            "P99": 46
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 158,
+            "P50": 173,
+            "P90": 190,
+            "P99": 204
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 112,
+            "P50": 127,
+            "P90": 144,
+            "P99": 158
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 12,
+            "P50": 13,
+            "P90": 14,
+            "P99": 14
+          },
+          "formedAmongReached": {
+            "k": 27,
+            "n": 1000,
+            "rate": 0.027,
+            "lo": 0.018621382774294995,
+            "hi": 0.03899873075304015
+          }
+        },
+        {
+          "stage": 2,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 6000,
+            "P10": 38,
+            "P50": 48,
+            "P90": 60,
+            "P99": 69
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 250,
+            "P50": 291,
+            "P90": 335,
+            "P99": 358
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 286,
+            "P50": 337,
+            "P90": 388,
+            "P99": 423
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 15,
+            "P50": 18,
+            "P90": 20,
+            "P99": 20
+          },
+          "formedAmongReached": {
+            "k": 586,
+            "n": 1000,
+            "rate": 0.586,
+            "lo": 0.5551996791811112,
+            "hi": 0.6161421183593733
+          }
+        },
+        {
+          "stage": 3,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 53,
+            "P50": 64,
+            "P90": 72,
+            "P99": 86
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 392,
+            "P50": 447,
+            "P90": 490,
+            "P99": 530
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 552,
+            "P50": 647,
+            "P90": 728,
+            "P99": 788
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 17,
+            "P50": 22,
+            "P90": 24,
+            "P99": 25
+          },
+          "formedAmongReached": {
+            "k": 856,
+            "n": 1000,
+            "rate": 0.856,
+            "lo": 0.8328762978702983,
+            "hi": 0.8763990500879865
+          }
+        },
+        {
+          "stage": 4,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 57,
+            "P50": 68,
+            "P90": 79,
+            "P99": 95
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 420,
+            "P50": 477,
+            "P90": 531,
+            "P99": 599
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 783,
+            "P50": 914,
+            "P90": 1037,
+            "P99": 1145
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 19,
+            "P50": 23,
+            "P90": 25,
+            "P99": 27
+          },
+          "formedAmongReached": {
+            "k": 950,
+            "n": 1000,
+            "rate": 0.95,
+            "lo": 0.9346861797557491,
+            "hi": 0.9618697376072511
+          }
+        },
+        {
+          "stage": 5,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 59,
+            "P50": 70,
+            "P90": 85,
+            "P99": 100
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 430,
+            "P50": 496,
+            "P90": 568,
+            "P99": 641
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 939,
+            "P50": 1109,
+            "P90": 1279,
+            "P99": 1443
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 20,
+            "P50": 23,
+            "P90": 26,
+            "P99": 30
+          },
+          "formedAmongReached": {
+            "k": 972,
+            "n": 1000,
+            "rate": 0.972,
+            "lo": 0.9598298168024068,
+            "hi": 0.980557723187229
+          }
+        },
+        {
+          "stage": 6,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 59,
+            "P50": 72,
+            "P90": 89,
+            "P99": 106
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 429,
+            "P50": 504,
+            "P90": 597,
+            "P99": 692
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 987,
+            "P50": 1203,
+            "P90": 1439,
+            "P99": 1702
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 20,
+            "P50": 24,
+            "P90": 26,
+            "P99": 30
+          },
+          "formedAmongReached": {
+            "k": 978,
+            "n": 1000,
+            "rate": 0.978,
+            "lo": 0.9669143266526002,
+            "hi": 0.9854272922352089
+          }
+        },
+        {
+          "stage": 7,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 59,
+            "P50": 74,
+            "P90": 93,
+            "P99": 112
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 427,
+            "P50": 513,
+            "P90": 630,
+            "P99": 768
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 891,
+            "P50": 1162,
+            "P90": 1488,
+            "P99": 1875
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 21,
+            "P50": 24,
+            "P90": 27,
+            "P99": 32
+          },
+          "formedAmongReached": {
+            "k": 982,
+            "n": 1000,
+            "rate": 0.982,
+            "lo": 0.9717267448294926,
+            "hi": 0.9885842599904322
+          }
+        },
+        {
+          "stage": 8,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 60,
+            "P50": 76,
+            "P90": 97,
+            "P99": 117
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 433,
+            "P50": 534,
+            "P90": 674,
+            "P99": 785
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 625,
+            "P50": 960,
+            "P90": 1383,
+            "P99": 1920
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 22,
+            "P50": 24,
+            "P90": 28,
+            "P99": 36
+          },
+          "formedAmongReached": {
+            "k": 982,
+            "n": 1000,
+            "rate": 0.982,
+            "lo": 0.9717267448294926,
+            "hi": 0.9885842599904322
+          }
+        },
+        {
+          "stage": 9,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 982,
+            "n": 1000,
+            "rate": 0.982,
+            "lo": 0.9717267448294926,
+            "hi": 0.9885842599904322
+          },
+          "conditionalPayment": {
+            "k": 982,
+            "n": 1000,
+            "rate": 0.982,
+            "lo": 0.9717267448294926,
+            "hi": 0.9885842599904322
+          },
+          "spinIncome": {
+            "n": 8000,
+            "P10": 60,
+            "P50": 79,
+            "P90": 102,
+            "P99": 122
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 495,
+            "P50": 628,
+            "P90": 806,
+            "P99": 945
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 214,
+            "P50": 637,
+            "P90": 1232,
+            "P99": 1962
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 24,
+            "P50": 24,
+            "P90": 30,
+            "P99": 40
+          },
+          "formedAmongReached": {
+            "k": 983,
+            "n": 1000,
+            "rate": 0.983,
+            "lo": 0.97294404115977,
+            "hi": 0.9893593101431836
+          }
+        },
+        {
+          "stage": 10,
+          "reached": {
+            "k": 982,
+            "n": 1000,
+            "rate": 0.982,
+            "lo": 0.9717267448294926,
+            "hi": 0.9885842599904322
+          },
+          "survival": {
+            "k": 546,
+            "n": 1000,
+            "rate": 0.546,
+            "lo": 0.5150242420441903,
+            "hi": 0.5766236961751384
+          },
+          "conditionalPayment": {
+            "k": 546,
+            "n": 982,
+            "rate": 0.5560081466395111,
+            "lo": 0.5247740754841463,
+            "hi": 0.5868057318122384
+          },
+          "spinIncome": {
+            "n": 7856,
+            "P10": 61,
+            "P50": 81,
+            "P90": 108,
+            "P99": 128
+          },
+          "periodIncome": {
+            "n": 982,
+            "P10": 498,
+            "P50": 649,
+            "P90": 854,
+            "P99": 994
+          },
+          "margin": {
+            "n": 982,
+            "P10": -435,
+            "P50": 70,
+            "P90": 848,
+            "P99": 1724
+          },
+          "pool": {
+            "n": 982,
+            "P10": 24,
+            "P50": 26,
+            "P90": 33,
+            "P99": 43
+          },
+          "formedAmongReached": {
+            "k": 966,
+            "n": 982,
+            "rate": 0.9837067209775967,
+            "lo": 0.9736974261300761,
+            "hi": 0.989946364156884
+          }
+        }
+      ]
+    },
+    "Value/holdout": {
+      "wins": 173,
+      "n": 1000,
+      "winRate": {
+        "k": 173,
+        "n": 1000,
+        "rate": 0.173,
+        "lo": 0.15081923445295148,
+        "hi": 0.19768346559660155
+      },
+      "events": {
+        "A": 1122,
+        "B": 157
+      },
+      "actions": {
+        "remove": 9649,
+        "spin": 69624,
+        "choose": 37545,
+        "item": 6067,
+        "reroll": 10953,
+        "skip": 32079,
+        "skipItem": 2886,
+        "eventA": 1122,
+        "eventB": 157
+      },
+      "stage": [
+        {
+          "stage": 1,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 6000,
+            "P10": 17,
+            "P50": 29,
+            "P90": 36,
+            "P99": 40
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 154,
+            "P50": 162,
+            "P90": 172,
+            "P99": 184
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 108,
+            "P50": 116,
+            "P90": 126,
+            "P99": 138
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 13,
+            "P50": 14,
+            "P90": 14,
+            "P99": 14
+          },
+          "formedAmongReached": {
+            "k": 12,
+            "n": 1000,
+            "rate": 0.012,
+            "lo": 0.006877647806403521,
+            "hi": 0.020857268475498278
+          }
+        },
+        {
+          "stage": 2,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 6000,
+            "P10": 38,
+            "P50": 46,
+            "P90": 55,
+            "P99": 63
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 250,
+            "P50": 277,
+            "P90": 302,
+            "P99": 332
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 279,
+            "P50": 312,
+            "P90": 344,
+            "P99": 383
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 18,
+            "P50": 20,
+            "P90": 20,
+            "P99": 20
+          },
+          "formedAmongReached": {
+            "k": 517,
+            "n": 1000,
+            "rate": 0.517,
+            "lo": 0.48602235996108767,
+            "hi": 0.5478475302504034
+          }
+        },
+        {
+          "stage": 3,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 51,
+            "P50": 58,
+            "P90": 64,
+            "P99": 72
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 364,
+            "P50": 405,
+            "P90": 441,
+            "P99": 484
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 507,
+            "P50": 578,
+            "P90": 640,
+            "P99": 717
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 22,
+            "P50": 24,
+            "P90": 24,
+            "P99": 25
+          },
+          "formedAmongReached": {
+            "k": 830,
+            "n": 1000,
+            "rate": 0.83,
+            "lo": 0.805465935038086,
+            "hi": 0.8520084043614475
+          }
+        },
+        {
+          "stage": 4,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 56,
+            "P50": 64,
+            "P90": 70,
+            "P99": 76
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 394,
+            "P50": 443,
+            "P90": 478,
+            "P99": 507
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 704,
+            "P50": 816,
+            "P90": 906,
+            "P99": 1003
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 24,
+            "P50": 25,
+            "P90": 27,
+            "P99": 30
+          },
+          "formedAmongReached": {
+            "k": 962,
+            "n": 1000,
+            "rate": 0.962,
+            "lo": 0.9482730796686496,
+            "hi": 0.9721909954906973
+          }
+        },
+        {
+          "stage": 5,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 60,
+            "P50": 66,
+            "P90": 72,
+            "P99": 78
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 422,
+            "P50": 468,
+            "P90": 500,
+            "P99": 530
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 835,
+            "P50": 981,
+            "P90": 1104,
+            "P99": 1232
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 24,
+            "P50": 27,
+            "P90": 30,
+            "P99": 33
+          },
+          "formedAmongReached": {
+            "k": 981,
+            "n": 1000,
+            "rate": 0.981,
+            "lo": 0.9705155440876868,
+            "hi": 0.9878031142492091
+          }
+        },
+        {
+          "stage": 6,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 63,
+            "P50": 70,
+            "P90": 74,
+            "P99": 80
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 448,
+            "P50": 488,
+            "P90": 516,
+            "P99": 538
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 868,
+            "P50": 1060,
+            "P90": 1204,
+            "P99": 1366
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 24,
+            "P50": 29,
+            "P90": 33,
+            "P99": 36
+          },
+          "formedAmongReached": {
+            "k": 992,
+            "n": 1000,
+            "rate": 0.992,
+            "lo": 0.9842936654690199,
+            "hi": 0.9959408041811938
+          }
+        },
+        {
+          "stage": 7,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 66,
+            "P50": 72,
+            "P90": 76,
+            "P99": 80
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 462,
+            "P50": 504,
+            "P90": 528,
+            "P99": 548
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 780,
+            "P50": 1009,
+            "P90": 1179,
+            "P99": 1349
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 25,
+            "P50": 31,
+            "P90": 35,
+            "P99": 39
+          },
+          "formedAmongReached": {
+            "k": 997,
+            "n": 1000,
+            "rate": 0.997,
+            "lo": 0.9912169859464968,
+            "hi": 0.9989792161188613
+          }
+        },
+        {
+          "stage": 8,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 999,
+            "n": 1000,
+            "rate": 0.999,
+            "lo": 0.9943574414020421,
+            "hi": 0.9998234536293739
+          },
+          "conditionalPayment": {
+            "k": 999,
+            "n": 1000,
+            "rate": 0.999,
+            "lo": 0.9943574414020421,
+            "hi": 0.9998234536293739
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 68,
+            "P50": 74,
+            "P90": 78,
+            "P99": 80
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 476,
+            "P50": 516,
+            "P90": 538,
+            "P99": 552
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 545,
+            "P50": 796,
+            "P90": 991,
+            "P99": 1169
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 26,
+            "P50": 33,
+            "P90": 37,
+            "P99": 42
+          },
+          "formedAmongReached": {
+            "k": 999,
+            "n": 1000,
+            "rate": 0.999,
+            "lo": 0.9943574414020421,
+            "hi": 0.9998234536293739
+          }
+        },
+        {
+          "stage": 9,
+          "reached": {
+            "k": 999,
+            "n": 1000,
+            "rate": 0.999,
+            "lo": 0.9943574414020421,
+            "hi": 0.9998234536293739
+          },
+          "survival": {
+            "k": 954,
+            "n": 1000,
+            "rate": 0.954,
+            "lo": 0.9391877960583809,
+            "hi": 0.9653375072367351
+          },
+          "conditionalPayment": {
+            "k": 954,
+            "n": 999,
+            "rate": 0.954954954954955,
+            "lo": 0.9402579471747685,
+            "hi": 0.9661664851267755
+          },
+          "spinIncome": {
+            "n": 7992,
+            "P10": 70,
+            "P50": 76,
+            "P90": 78,
+            "P99": 80
+          },
+          "periodIncome": {
+            "n": 999,
+            "P10": 564,
+            "P50": 600,
+            "P90": 626,
+            "P99": 640
+          },
+          "margin": {
+            "n": 999,
+            "P10": 157,
+            "P50": 444,
+            "P90": 665,
+            "P99": 860
+          },
+          "pool": {
+            "n": 999,
+            "P10": 26,
+            "P50": 34,
+            "P90": 40,
+            "P99": 45
+          },
+          "formedAmongReached": {
+            "k": 998,
+            "n": 999,
+            "rate": 0.998998998998999,
+            "lo": 0.9943518155299295,
+            "hi": 0.9998232768844152
+          }
+        },
+        {
+          "stage": 10,
+          "reached": {
+            "k": 954,
+            "n": 1000,
+            "rate": 0.954,
+            "lo": 0.9391877960583809,
+            "hi": 0.9653375072367351
+          },
+          "survival": {
+            "k": 173,
+            "n": 1000,
+            "rate": 0.173,
+            "lo": 0.15081923445295148,
+            "hi": 0.19768346559660155
+          },
+          "conditionalPayment": {
+            "k": 173,
+            "n": 954,
+            "rate": 0.18134171907756813,
+            "lo": 0.15818561118452293,
+            "hi": 0.20705380876230536
+          },
+          "spinIncome": {
+            "n": 7632,
+            "P10": 72,
+            "P50": 76,
+            "P90": 80,
+            "P99": 80
+          },
+          "periodIncome": {
+            "n": 954,
+            "P10": 582,
+            "P50": 610,
+            "P90": 632,
+            "P99": 640
+          },
+          "margin": {
+            "n": 954,
+            "P10": -420,
+            "P50": -156,
+            "P90": 83,
+            "P99": 275
+          },
+          "pool": {
+            "n": 954,
+            "P10": 26,
+            "P50": 35,
+            "P90": 42,
+            "P99": 48
+          },
+          "formedAmongReached": {
+            "k": 954,
+            "n": 954,
+            "rate": 1,
+            "lo": 0.995989462780799,
+            "hi": 1
+          }
+        }
+      ]
+    },
+    "Value/train": {
+      "wins": 195,
+      "n": 1000,
+      "winRate": {
+        "k": 195,
+        "n": 1000,
+        "rate": 0.195,
+        "lo": 0.1716300938918986,
+        "hi": 0.22070422878429002
+      },
+      "events": {
+        "A": 1126,
+        "B": 159
+      },
+      "actions": {
+        "remove": 9771,
+        "spin": 69816,
+        "choose": 37648,
+        "item": 6040,
+        "reroll": 10976,
+        "skipItem": 2937,
+        "skip": 32168,
+        "eventA": 1126,
+        "eventB": 159
+      },
+      "stage": [
+        {
+          "stage": 1,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 6000,
+            "P10": 17,
+            "P50": 29,
+            "P90": 35,
+            "P99": 40
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 154,
+            "P50": 162,
+            "P90": 173,
+            "P99": 183
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 108,
+            "P50": 116,
+            "P90": 127,
+            "P99": 137
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 13,
+            "P50": 14,
+            "P90": 14,
+            "P99": 14
+          },
+          "formedAmongReached": {
+            "k": 10,
+            "n": 1000,
+            "rate": 0.01,
+            "lo": 0.00544075444552925,
+            "hi": 0.018309468870314774
+          }
+        },
+        {
+          "stage": 2,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 6000,
+            "P10": 38,
+            "P50": 46,
+            "P90": 55,
+            "P99": 62
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 252,
+            "P50": 278,
+            "P90": 302,
+            "P99": 329
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 282,
+            "P50": 312,
+            "P90": 342,
+            "P99": 373
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 18,
+            "P50": 20,
+            "P90": 20,
+            "P99": 20
+          },
+          "formedAmongReached": {
+            "k": 516,
+            "n": 1000,
+            "rate": 0.516,
+            "lo": 0.48502415202019794,
+            "hi": 0.5468533917082643
+          }
+        },
+        {
+          "stage": 3,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 51,
+            "P50": 58,
+            "P90": 64,
+            "P99": 72
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 370,
+            "P50": 405,
+            "P90": 443,
+            "P99": 476
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 520,
+            "P50": 582,
+            "P90": 641,
+            "P99": 706
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 22,
+            "P50": 24,
+            "P90": 24,
+            "P99": 25
+          },
+          "formedAmongReached": {
+            "k": 835,
+            "n": 1000,
+            "rate": 0.835,
+            "lo": 0.8107207516702333,
+            "hi": 0.8567153201444446
+          }
+        },
+        {
+          "stage": 4,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 56,
+            "P50": 64,
+            "P90": 70,
+            "P99": 74
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 403,
+            "P50": 443,
+            "P90": 480,
+            "P99": 510
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 722,
+            "P50": 814,
+            "P90": 910,
+            "P99": 1001
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 24,
+            "P50": 25,
+            "P90": 28,
+            "P99": 29
+          },
+          "formedAmongReached": {
+            "k": 962,
+            "n": 1000,
+            "rate": 0.962,
+            "lo": 0.9482730796686496,
+            "hi": 0.9721909954906973
+          }
+        },
+        {
+          "stage": 5,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 60,
+            "P50": 68,
+            "P90": 72,
+            "P99": 78
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 430,
+            "P50": 470,
+            "P90": 500,
+            "P99": 524
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 859,
+            "P50": 983,
+            "P90": 1110,
+            "P99": 1219
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 24,
+            "P50": 27,
+            "P90": 31,
+            "P99": 33
+          },
+          "formedAmongReached": {
+            "k": 981,
+            "n": 1000,
+            "rate": 0.981,
+            "lo": 0.9705155440876868,
+            "hi": 0.9878031142492091
+          }
+        },
+        {
+          "stage": 6,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 64,
+            "P50": 70,
+            "P90": 75,
+            "P99": 78
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 452,
+            "P50": 490,
+            "P90": 518,
+            "P99": 538
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 906,
+            "P50": 1061,
+            "P90": 1213,
+            "P99": 1347
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 25,
+            "P50": 29,
+            "P90": 33,
+            "P99": 37
+          },
+          "formedAmongReached": {
+            "k": 989,
+            "n": 1000,
+            "rate": 0.989,
+            "lo": 0.9804106042992137,
+            "hi": 0.9938468259019132
+          }
+        },
+        {
+          "stage": 7,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 66,
+            "P50": 72,
+            "P90": 76,
+            "P99": 80
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 471,
+            "P50": 506,
+            "P90": 529,
+            "P99": 548
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 827,
+            "P50": 1012,
+            "P90": 1190,
+            "P99": 1334
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 26,
+            "P50": 31,
+            "P90": 36,
+            "P99": 39
+          },
+          "formedAmongReached": {
+            "k": 994,
+            "n": 1000,
+            "rate": 0.994,
+            "lo": 0.986971831758148,
+            "hi": 0.9972473308581236
+          }
+        },
+        {
+          "stage": 8,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "conditionalPayment": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "spinIncome": {
+            "n": 7000,
+            "P10": 68,
+            "P50": 74,
+            "P90": 78,
+            "P99": 80
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 482,
+            "P50": 516,
+            "P90": 538,
+            "P99": 554
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 579,
+            "P50": 800,
+            "P90": 1001,
+            "P99": 1156
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 27,
+            "P50": 33,
+            "P90": 38,
+            "P99": 42
+          },
+          "formedAmongReached": {
+            "k": 995,
+            "n": 1000,
+            "rate": 0.995,
+            "lo": 0.9883490446266248,
+            "hi": 0.9978624644726755
+          }
+        },
+        {
+          "stage": 9,
+          "reached": {
+            "k": 1000,
+            "n": 1000,
+            "rate": 1,
+            "lo": 0.9961732415144449,
+            "hi": 1
+          },
+          "survival": {
+            "k": 977,
+            "n": 1000,
+            "rate": 0.977,
+            "lo": 0.9657235493377734,
+            "hi": 0.984625723067007
+          },
+          "conditionalPayment": {
+            "k": 977,
+            "n": 1000,
+            "rate": 0.977,
+            "lo": 0.9657235493377734,
+            "hi": 0.984625723067007
+          },
+          "spinIncome": {
+            "n": 8000,
+            "P10": 70,
+            "P50": 76,
+            "P90": 78,
+            "P99": 80
+          },
+          "periodIncome": {
+            "n": 1000,
+            "P10": 570,
+            "P50": 602,
+            "P90": 626,
+            "P99": 640
+          },
+          "margin": {
+            "n": 1000,
+            "P10": 206,
+            "P50": 452,
+            "P90": 674,
+            "P99": 845
+          },
+          "pool": {
+            "n": 1000,
+            "P10": 26,
+            "P50": 35,
+            "P90": 41,
+            "P99": 45
+          },
+          "formedAmongReached": {
+            "k": 999,
+            "n": 1000,
+            "rate": 0.999,
+            "lo": 0.9943574414020421,
+            "hi": 0.9998234536293739
+          }
+        },
+        {
+          "stage": 10,
+          "reached": {
+            "k": 977,
+            "n": 1000,
+            "rate": 0.977,
+            "lo": 0.9657235493377734,
+            "hi": 0.984625723067007
+          },
+          "survival": {
+            "k": 195,
+            "n": 1000,
+            "rate": 0.195,
+            "lo": 0.1716300938918986,
+            "hi": 0.22070422878429002
+          },
+          "conditionalPayment": {
+            "k": 195,
+            "n": 977,
+            "rate": 0.19959058341862845,
+            "lo": 0.1757259601604615,
+            "hi": 0.2258083095004334
+          },
+          "spinIncome": {
+            "n": 7816,
+            "P10": 72,
+            "P50": 76,
+            "P90": 80,
+            "P99": 80
+          },
+          "periodIncome": {
+            "n": 977,
+            "P10": 586,
+            "P50": 612,
+            "P90": 638,
+            "P99": 640
+          },
+          "margin": {
+            "n": 977,
+            "P10": -404,
+            "P50": -151,
+            "P90": 92,
+            "P99": 264
+          },
+          "pool": {
+            "n": 977,
+            "P10": 26,
+            "P50": 36,
+            "P90": 43,
+            "P99": 48
+          },
+          "formedAmongReached": {
+            "k": 977,
+            "n": 977,
+            "rate": 1,
+            "lo": 0.9960835068846774,
+            "hi": 1
+          }
+        }
+      ]
+    }
+  },
+  "pass": true
+}

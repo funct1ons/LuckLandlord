@@ -1,0 +1,212 @@
+{
+  "status": "policy-v3 holdout subset probe",
+  "lookahead": "policy-v3: Random is NOT re-run (v1/v2 control on the same seeds). Value/Synergy/Greedy: root beam over ALL legal action TYPES with no skipItem/reroll/remove prune; remove UIDs ranked by dual static+synergy value, beam width min(8, |removes|) (wider than v2 beam 3; full set when pool removes ≤ 8). After the root action, continuation is dualChoiceV3 (staticChoice under synergy=false AND synergy=true; if they differ, keep the higher dualActionScore) for at most 8 spins / 64 fullCommand. Surrogate reseeds synthetic full-sim-model-v3/0 (createRng); live seed and five streams never copied. Model-generated offers are visible to dual continuation; they are not live offers. Branch width = |root candidates| (typically 8-20). Root utility still bot-specific: Value uses static mean, Greedy/Synergy use synergy mean. Utility: WON +1e5, LOST -1e5, model income, mean value, pool, tokens, cash-payment margin. Not optimal, not exhaustive tree search, not a live-RNG oracle. Horizon 8 (low end of 8-10) chosen to keep wall under the 3h budget with REMOVE_BEAM 8.",
+  "horizon": 8,
+  "commandCap": 64,
+  "removeBeam": 8,
+  "modelSeed": "full-sim-model-v3/0",
+  "officialFiles": [
+    "full-sim-policy-v3-batch-greedy-holdout-0.jsonl",
+    "full-sim-policy-v3-batch-greedy-holdout-100.jsonl",
+    "full-sim-policy-v3-batch-synergy-holdout-0.jsonl",
+    "full-sim-policy-v3-batch-synergy-holdout-100.jsonl",
+    "full-sim-policy-v3-batch-value-holdout-0.jsonl",
+    "full-sim-policy-v3-batch-value-holdout-100.jsonl"
+  ],
+  "probeFiles": [
+    "full-sim-policy-v3-probe-greedy-holdout-0.jsonl",
+    "full-sim-policy-v3-probe-synergy-holdout-0.jsonl",
+    "full-sim-policy-v3-probe-value-holdout-0.jsonl"
+  ],
+  "groups": {
+    "Value": {
+      "n": 200,
+      "indexMin": 0,
+      "indexMax": 199,
+      "v3": {
+        "k": 67,
+        "n": 200,
+        "rate": 0.335,
+        "lo": 0.2732408697841632,
+        "hi": 0.40297808792033485,
+        "z": 1.959963984540054
+      },
+      "v2": {
+        "k": 54,
+        "n": 200,
+        "rate": 0.27,
+        "lo": 0.21323449814685844,
+        "hi": 0.33543435198668425,
+        "z": 1.959963984540054
+      },
+      "v1": {
+        "k": 0,
+        "n": 200,
+        "rate": 0,
+        "lo": 1.7020320458977177e-18,
+        "hi": 0.018845326377266575,
+        "z": 1.959963984540054
+      },
+      "deltaV2pp": 6.5,
+      "deltaV1pp": 33.5,
+      "failV3": "10:54, 8:13, 9:66, WON:67",
+      "failV2": "10:49, 8:16, 9:81, WON:54",
+      "failV1": "10:1, 7:38, 8:148, 9:13",
+      "actionsV3": {
+        "spin": 13264,
+        "reroll": 2211,
+        "remove": 2029,
+        "choose": 7832,
+        "item": 1708,
+        "skip": 5432,
+        "event": 412
+      },
+      "actionsV2": {
+        "spin": 13096,
+        "choose": 7189,
+        "reroll": 2161,
+        "item": 1687,
+        "remove": 1962,
+        "skip": 5907,
+        "event": 413
+      },
+      "meanMs": 26247.540732499994,
+      "errors": 0
+    },
+    "Synergy": {
+      "n": 200,
+      "indexMin": 0,
+      "indexMax": 199,
+      "v3": {
+        "k": 67,
+        "n": 200,
+        "rate": 0.335,
+        "lo": 0.2732408697841632,
+        "hi": 0.40297808792033485,
+        "z": 1.959963984540054
+      },
+      "v2": {
+        "k": 50,
+        "n": 200,
+        "rate": 0.25,
+        "lo": 0.195081680068175,
+        "hi": 0.31434098312045833,
+        "z": 1.959963984540054
+      },
+      "v1": {
+        "k": 0,
+        "n": 200,
+        "rate": 0,
+        "lo": 1.7020320458977177e-18,
+        "hi": 0.018845326377266575,
+        "z": 1.959963984540054
+      },
+      "deltaV2pp": 8.5,
+      "deltaV1pp": 33.5,
+      "failV3": "10:41, 8:15, 9:77, WON:67",
+      "failV2": "10:43, 8:24, 9:83, WON:50",
+      "failV1": "6:4, 7:89, 8:104, 9:3",
+      "actionsV3": {
+        "spin": 13144,
+        "reroll": 2262,
+        "choose": 7762,
+        "item": 1692,
+        "remove": 1982,
+        "skip": 5382,
+        "event": 421,
+        "skipItem": 1
+      },
+      "actionsV2": {
+        "spin": 12952,
+        "choose": 7121,
+        "remove": 1909,
+        "reroll": 1910,
+        "item": 1669,
+        "skip": 5831,
+        "event": 417
+      },
+      "meanMs": 26334.150729500005,
+      "errors": 0
+    },
+    "Greedy": {
+      "n": 200,
+      "indexMin": 0,
+      "indexMax": 199,
+      "v3": {
+        "k": 51,
+        "n": 200,
+        "rate": 0.255,
+        "lo": 0.19960495172031348,
+        "hi": 0.3196292582045472,
+        "z": 1.959963984540054
+      },
+      "v2": {
+        "k": 44,
+        "n": 200,
+        "rate": 0.22,
+        "lo": 0.16816538358833258,
+        "hi": 0.28238799918293667,
+        "z": 1.959963984540054
+      },
+      "v1": {
+        "k": 3,
+        "n": 200,
+        "rate": 0.015,
+        "lo": 0.005114237793258312,
+        "hi": 0.04316572879269027,
+        "z": 1.959963984540054
+      },
+      "deltaV2pp": 3.5000000000000004,
+      "deltaV1pp": 24,
+      "failV3": "10:52, 8:17, 9:80, WON:51",
+      "failV2": "10:37, 7:1, 8:21, 9:97, WON:44",
+      "failV1": "10:12, 7:7, 8:113, 9:65, WON:3",
+      "actionsV3": {
+        "spin": 13088,
+        "remove": 1952,
+        "choose": 7760,
+        "reroll": 2184,
+        "item": 1685,
+        "skip": 5328,
+        "event": 390,
+        "skipItem": 1
+      },
+      "actionsV2": {
+        "spin": 12865,
+        "remove": 1893,
+        "choose": 7288,
+        "reroll": 1918,
+        "item": 1658,
+        "skip": 5577,
+        "event": 389
+      },
+      "meanMs": 25778.222744500003,
+      "errors": 0
+    }
+  },
+  "randomControl": {
+    "n": 200,
+    "v2": {
+      "k": 0,
+      "n": 200,
+      "rate": 0,
+      "lo": 1.7020320458977177e-18,
+      "hi": 0.018845326377266575,
+      "z": 1.959963984540054
+    },
+    "v1": {
+      "k": 0,
+      "n": 200,
+      "rate": 0,
+      "lo": 1.7020320458977177e-18,
+      "hi": 0.018845326377266575,
+      "z": 1.959963984540054
+    }
+  },
+  "productionUnchanged": true,
+  "gddUnchanged": true,
+  "inBand40": false,
+  "maxHoldoutRate": 0.335,
+  "judgment": "v3 remains significantly below 40% on this holdout subset. Economy-side residual hypothesis is STRENGTHENED. Phase B still requires explicit authorization.",
+  "wilsonZ": 1.959963984540054
+}

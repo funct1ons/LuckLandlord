@@ -1,0 +1,286 @@
+{
+  "scope": "Independent v3 32 after cloudy natural-age data fix; originals retained",
+  "supersedes": {
+    "retainedEngineering": "tests/gdd1/f4-grok-rootcause-v2-results.json",
+    "retainedAuditor": "tests/gdd1/f4-grok-audit-semantic-v1-results.json",
+    "basis": "v1/v2 were post cloth/book; this re-runs the same 32 after removing cloudy age-extra"
+  },
+  "total": 32,
+  "passed": 32,
+  "failed": [],
+  "cases": [
+    {
+      "name": "wick-pair",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 4
+      }
+    },
+    {
+      "name": "negative-junk",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": -1
+      }
+    },
+    {
+      "name": "pouch-first",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 1
+      }
+    },
+    {
+      "name": "pouch-release",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 11,
+        "pressure": 0,
+        "reward": 10
+      }
+    },
+    {
+      "name": "surge-before-release",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 0
+      }
+    },
+    {
+      "name": "surge-release",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 16
+      }
+    },
+    {
+      "name": "pause-alone",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 3
+      }
+    },
+    {
+      "name": "pause-tag-not-mechanism",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 6
+      }
+    },
+    {
+      "name": "blank-appearance",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 5
+      }
+    },
+    {
+      "name": "cleared-appearance",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 4
+      }
+    },
+    {
+      "name": "lean-below-half",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 5
+      }
+    },
+    {
+      "name": "lean-exact-half",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 1
+      }
+    },
+    {
+      "name": "margin-deficit15",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 8
+      }
+    },
+    {
+      "name": "margin-deficit16",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 2
+      }
+    },
+    {
+      "name": "margin-funded",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 2
+      }
+    },
+    {
+      "name": "dock-row-first-target",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 9
+      }
+    },
+    {
+      "name": "copy-blank",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 10
+      }
+    },
+    {
+      "name": "copy-carbon",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 12
+      }
+    },
+    {
+      "name": "copy-no-template",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 7
+      }
+    },
+    {
+      "name": "cycle-third",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 10
+      }
+    },
+    {
+      "name": "cycle-second-metronome",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 10
+      }
+    },
+    {
+      "name": "natural-epoch",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "type": "dew_lantern",
+        "epoch": 1,
+        "age": 0
+      }
+    },
+    {
+      "name": "cloudy-matures-not-new-appearance",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 3
+      }
+    },
+    {
+      "name": "compliance-converted-no-appearance",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 4
+      }
+    },
+    {
+      "name": "cancellation-reward-and-growth",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 7
+      }
+    },
+    {
+      "name": "low-balance-item-boundary",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 2
+      }
+    },
+    {
+      "name": "low-balance-item-below",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 5
+      }
+    },
+    {
+      "name": "hold-below12",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 2
+      }
+    },
+    {
+      "name": "rest-single-negative-floor",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "total": 3
+      }
+    },
+    {
+      "name": "cloth-tag-log-order",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "tagTargets": [
+          "u4",
+          "u4",
+          "u2"
+        ],
+        "clothTarget": "u4",
+        "ledger": [
+          2,
+          2,
+          1,
+          10
+        ],
+        "total": 15
+      }
+    },
+    {
+      "name": "spectrum-book-deferred-phase",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "bookAddPhase": "step8/end-summary",
+        "total": 8
+      }
+    },
+    {
+      "name": "spectrum-book-dead-target",
+      "ok": true,
+      "error": null,
+      "expected": {
+        "bookAdds": 0
+      }
+    }
+  ]
+}

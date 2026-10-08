@@ -1,0 +1,37 @@
+{
+  "reports": [
+    {
+      "filename": "f2-retest-edge-file-write.html",
+      "mode": "write",
+      "protocol": "file",
+      "total": 63,
+      "passed": 63,
+      "engineExact": true
+    },
+    {
+      "filename": "f2-retest-edge-file-read.html",
+      "mode": "read",
+      "protocol": "file",
+      "total": 57,
+      "passed": 57,
+      "engineExact": true
+    },
+    {
+      "filename": "f2-retest-edge-http-write.html",
+      "mode": "write",
+      "protocol": "http",
+      "total": 63,
+      "passed": 63,
+      "engineExact": true
+    },
+    {
+      "filename": "f2-retest-edge-http-read.html",
+      "mode": "read",
+      "protocol": "http",
+      "total": 57,
+      "passed": 57,
+      "engineExact": true
+    }
+  ],
+  "pass": true
+}

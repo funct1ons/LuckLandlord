@@ -1,0 +1,55 @@
+{
+  "scope": "independent F2 E1/E2 retest",
+  "total": 12,
+  "passed": 12,
+  "cases": [
+    {
+      "name": "f2-retest/queued-cancel-preserves-five-rng-pressure-and-target",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/new-type-listener-parent-and-attribution-exact",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/new-type-never-reopens-injected-appearance",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/multi-target-source-epoch-changes-after-first-consume-stops-second",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/multi-target-source-dies-after-first-consume-stops-second",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/death-permission-own-amber-one-reward-no-bystander",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/dead-ordinary-listener-cannot-grow-after-second-event",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/cancelled-old-effect-does-not-spend-item-quota-before-next-legal-event",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/public-spin-real-draw-cancel-and-roundtrip-exact",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/hard-listener-fault-rolls-back-whole-command-and-five-rng",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/failed-empty-event-target-followed-by-legal-same-revision-command",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/storage-failure-keeps-bytes-and-pending-then-retry-single-write",
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "NEW_DELIVERY_ERRATA",
+  "warning": "Does not overwrite freeze-v3, GDD1_F4_GROK_AUDIT.md, or FIX reports",
+  "file": {
+    "path": "docs/GDD1_F4_AUDIT_SUPPLEMENT.md",
+    "bytes": 7352,
+    "sha256": "8b83cc616b41a6b115cfb20f70b8d04dfe214de6c66cbdd33096449ffb229824",
+    "hexLength": 64
+  },
+  "frozenReportsUse": "8b83cc616b41a6b115cfb20f70b8d04dfe214de6c66cbdd33096449ffb229824",
+  "typed65Hex": "8b83cc616b41a6b115cfb20f70b8d04dfe214de6c66cbddd33096449ffb229824",
+  "matchesFrozenReports": true,
+  "typedIsExtraD": true,
+  "action": "leave frozen reports byte-identical"
+}

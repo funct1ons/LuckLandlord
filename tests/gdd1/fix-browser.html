@@ -1,0 +1,23 @@
+<!doctype html><html><meta charset="utf-8"><title>F1 repair regression</title><body><pre id="result">running</pre>
+<script src="../../js/gdd1/contract.js"></script><script src="../../js/gdd1/rng.js"></script><script src="../../js/gdd1/schema.js"></script><script src="../../js/gdd1/save.js"></script>
+<script src="browser-data.js"></script><script src="foundation-tests.js"></script><script src="oracle-integrity.js"></script><script src="fix-checks.js"></script><script>
+(async()=>{
+ const F=GDD1,regression=await runGdd1FixTests(),cases=[...runGdd1FoundationTests(),...runGdd1OracleIntegrityTests(),...regression.cases];
+ const mode=new URL(location.href).searchParams.get('mode')||'write';
+ const legacy=[' {"rules":"0.3","pendingSettlement":-17} ',' {broken backup} '],s=F.createFoundationState('FIX-BROWSER','full-v1');s.cash=11;
+ F.STREAMS.forEach((n,i)=>{for(let j=0;j<=i;j++)F.nextUint32(s.rng,n)});
+ let storage={mode,ok:false};
+ try{
+  if(mode==='write'){F.LEGACY_KEYS.forEach((k,i)=>localStorage.setItem(k,legacy[i]));if(!F.store(localStorage,s).ok)throw Error('store')}
+  const loaded=F.load(localStorage,'full-v1');
+  if(!loaded.ok||JSON.stringify(loaded.state)!==JSON.stringify(s))throw Error('state drift');
+  if(JSON.stringify(F.readLegacy(localStorage).map(x=>x.text))!==JSON.stringify(legacy))throw Error('legacy drift');
+  for(const n of F.STREAMS)if(F.nextUint32(s.rng,n)!==F.nextUint32(loaded.state.rng,n))throw Error('continuation '+n);
+  const old=localStorage.getItem(F.SAVE_KEY),next=F.clone(loaded.state);next.cash=99;
+  for(const preview of[()=>Promise.resolve(),()=>({then(){throw Error('must not call')}})]){const r=F.commitImport(localStorage,F.encode(next),preview);if(r.ok||r.state||localStorage.getItem(F.SAVE_KEY)!==old)throw Error('async import committed')}
+  storage={mode,ok:true,legacyNonempty:true,fiveStreamContinuation:true,asyncImportRetainsBytes:true};
+ }catch(e){storage.error=e.message}
+ const out={total:cases.length,passed:cases.filter(x=>x.ok).length,cases,storage,protocol:location.protocol,userAgent:navigator.userAgent,scope:'F1 repair regressions; not F2 or independent acceptance'};
+ document.getElementById('result').textContent=JSON.stringify(out);document.body.dataset.done='true';document.body.dataset.passed=String(out.passed===out.total&&storage.ok);
+})().catch(e=>{document.getElementById('result').textContent=e.stack;document.body.dataset.done='error'});
+</script></body></html>

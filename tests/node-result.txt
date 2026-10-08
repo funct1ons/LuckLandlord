@@ -1,0 +1,51 @@
+﻿PASS schema 20原创定义
+PASS RNG固定向量
+PASS 八邻接无跨行
+PASS 抽样 0
+PASS 抽样 1
+PASS 抽样 19
+PASS 抽样 20
+PASS 抽样 21
+PASS 抽样 200
+PASS 复杂fixture 回收链
+PASS 复杂fixture 复制接入链
+PASS 复杂fixture 竞争消耗链
+PASS 复杂fixture 邻接调频
+PASS 复杂fixture 销毁哨增幅
+PASS 复杂fixture 转换后因果链
+PASS 复杂fixture 永久成长双乘区
+PASS 复杂fixture 雾芽成熟
+PASS 复杂fixture 自毁哨因果链
+PASS 复杂fixture 育匣新生
+PASS 竞争消耗仅一次
+PASS 转换ID 永久继承 专属清零 不重现
+PASS 转换链新定义监听
+PASS 多个倍率与负数取整
+PASS 复制仅add模板
+PASS 临时tag不持久
+PASS risk确定性和余额下限
+PASS 自毁无普通收益，监听链
+PASS END_SPIN修改在最终结算前且ON_GAIN不支付现金
+PASS 故意循环：全状态/RNG/ID/成长原子回滚
+PASS 最后spin先选，恰好/差1付款
+PASS 最终阶段胜利
+PASS 连续快速spin/过期选择拒绝
+PASS 每稳定节点存读档 与连续完整run完全一致
+PASS 刷新/删除保存不刷候选
+PASS 损坏/未来/重复/未知/phase/RNG/金额/候选拒绝
+PASS 存储禁用和备份恢复
+PASS 负数倍率向下取整与账本守恒
+PASS 转换取消旧类型已排队效果，不双发基础
+PASS 销毁self快照监听仍可emit，不复活普通产出
+PASS END_SPIN销毁取消普通收益
+PASS 生成预算超限原子回滚
+PASS 备份写入失败不提交新档
+PASS 精确有理数29/100及多倍率正负边界
+PASS 全局有理倍率不乘独立奖励
+PASS 同排/同列/全盘目标范围
+PASS schema逐项拒绝零分母/未知target/emit/缺必需值
+PASS 缺stats/假终局/last嵌套损坏全部在decode拒绝
+PASS 仅备份存在时恢复
+PASS revision缺失与过期均拒绝
+PASS ON_SPIN/ON_END_SPIN广播各一次，不随格数重复
+50/50 passed

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: "贡献指南"
+    url: "https://github.com/funct1ons/LuckLandlord/blob/main/CONTRIBUTING.md"
+    about: "了解本地运行、按改动范围验证，以及 Issue 和 PR 协作流程。"

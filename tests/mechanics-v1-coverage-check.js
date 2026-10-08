@@ -1,0 +1,33 @@
+'use strict';
+const fs=require('fs');
+const sections={
+ '7.1':[
+ ['A/three-registers-exact-limit-and-provenance'],['A/pool-order-and-next-resolve-do-not-change-winners'],['A/native-dual-tags-no-added-still-two-multipliers'],['A/different-definitions-and-targets-have-independent-caps','A/identical-ratios-different-definitions-remain-independent'],['A/different-definitions-and-targets-have-independent-caps'],['A/same-source-events-dedupe-with-independent-effectIds'],['A/command-choose-next-round-resets-limits','A/pool-order-and-next-resolve-do-not-change-winners'],['A/three-sources-negative-floor'],['A/third-source-tag-is-retained-when-ratio-is-skipped'],['A/dead-before-multiplier-does-not-take-source-quota','A/multiplier-already-applied-survives-owner-death'],['route-g/copy/legacy-mirror-unmarked-battery-compatible','route-g/offset_reader/unmarked-legacy-battery-not-formal-whitelist'],['复杂fixture 自毁哨因果链','复杂fixture 永久成长双乘区']],
+ '7.2':[
+ ['B/three-demand-soft-budget-preserves-values'],['B/single-uid-two-spawn-effects-and-independent-uid'],['B/different-spawn-definition-not-merged-by-product-type'],['B/ash-only-consumed-owner-spawns'],['B/three-consumed-ash-two-spawns-all-consume-rewards'],['B/amber-owned-death-reward-and-payload'],['cultivation/amber_frond/consumer-pays-independent-four','cultivation/amber_frond/consumer-base-separate'],['B/pool-200-consumed-mist-tombstone-frees-capacity'],['B/full-pool-optional-spawn-does-not-use-id'],['B/pool-199-first-success-second-pool-full'],['生成预算超限原子回滚'],['B/dead-owner-echo-does-not-listen-without-permission','B/explicit-death-permission-self-snapshot-works'],['B/direct-tide-not-rewarded-by-other-target-conversion']],
+ '7.3':[
+ ['C/tower-sees-injection-before-own-threshold','C/tower-and-age-position-swaps-preserve-checkpoints'],['C/natural-threshold-excluded-from-tower'],['C/two-towers-only-first-releases-three-pressure'],['audit-pressure-retest.js::P37 release excludes self-threshold and low pressure before legal UID'],['C/pouch-independent-ten-is-not-multiplied'],['distillation/reserve_facet/release-boundary','distillation/reserve_facet/three-independent-reserves'],['C/natural-and-extra-age-crossing-is-immediate','C/tower-and-age-position-swaps-preserve-checkpoints'],['route-g/cloudy_negative/third-preserves-identity-clears-counters-no-appear'],['route-g/copy/snapshot-retains-numeric-template-after-conversion'],['route-g/echo_plate/cap-truncation-actual-one-not-requested-three','route-g/growth/at-cap-no-event-no-legacy-lens-multiply'],['C/return-to-visited-type-rejected-old-source-queue-stale'],['route-g/alignment_cloth/tag-history-not-transformed-final-tags','route-g/phase_chip/previous-turn-tag-is-not-current-turn-tag']],
+ '7.4':[
+ ['route-g/command/save-restore-pending-once-with-g-tags-copy-growth'],['audit-pressure-retest.js::P11 final successful payment uses committed current spin cash','audit-pressure-retest.js::P29 final old sufficient cash becomes insufficient after negative income','audit-pressure-retest.js::P13 final negative income clamps cash zero before LOST'],['pressure-transaction/signed-pending-boundary--1000000000','pressure-transaction/signed-pending-boundary-1000000000','D/choose-cash-overflow-rollback-and-full-pool-skip'],['pressure-transaction/pending-damaged-0','pressure-transaction/pending-damaged-11','pressure-transaction/legacy-undecided-rejected','pressure-transaction/settled-phase-READY','pressure-transaction/settled-phase-ITEM_CHOICE','pressure-transaction/settled-phase-WON','pressure-transaction/settled-phase-LOST'],['生成预算超限原子回滚','D/choose-cash-overflow-rollback-and-full-pool-skip','刷新/删除保存不刷候选'],['D/strict-state-invalid-boundaries-reject-before-clone'],['pressure-transaction/primary-backup-strict-and-unchanged','audit-pressure-transaction-retest.js::both-primary-and-backup-corrupt','audit-pressure-transaction-retest.js::primary-missing-backup-valid'],['备份写入失败不提交新档','route-g/command/save-main-write-failure-keeps-valid-pending-backup'],['mechanics-ui/import-validation','mechanics-ui/import-preview-render','mechanics-ui/import-getItem','mechanics-ui/import-serialization','mechanics-ui/import-capacity','mechanics-ui/import-setItem'],['D/envelope-rotation-fallback-and-storage-faults','D/ordinary-store-rotates-valid-envelope-current','D/pending-envelope-current-previous-backup-never-recomputes']]
+};
+const manifest=JSON.parse(fs.readFileSync('tests/mechanics-v1-suite-manifest.json','utf8'));
+const names=new Set(manifest.cases.map(c=>c.name));
+const doc=fs.readFileSync('docs/MECHANICS_ADVISORY.md','utf8');
+const rows=[];
+for(const [section,cases] of Object.entries(sections)) {
+ const start=doc.indexOf('### '+section),end=doc.indexOf('\n### ',start+1);
+ const body=doc.slice(start,end<0?doc.indexOf('\n## 8.',start):end);
+ const scenarios=section==='7.4'?body.split('\n').filter(l=>/^\d+\. /.test(l)).map(l=>l.replace(/^\d+\. /,'')):
+ body.split('\n').filter(l=>l.startsWith('| ')&&!l.startsWith('| 案例')).map(l=>l.split('|')[1].trim());
+ if(scenarios.length!==cases.length)throw Error(section+' row count mismatch '+scenarios.length+' / '+cases.length);
+ scenarios.forEach((scenario,i)=>{const resolved=cases[i].map(name=>/^[A-D]\//.test(name)?'mechanics-contract/'+name:name);
+ for(const name of resolved){if(name.startsWith('mechanics-ui/')||name.includes('::'))continue;if(!names.has(name))throw Error('Missing exact case '+name);}
+ rows.push({id:section+'.'+(i+1),scenario,status:resolved.some(n=>n.startsWith('mechanics-'))?'new':'covered',cases:resolved,notApplicable:false});
+ });
+}
+const previous=JSON.parse(fs.readFileSync('tests/mechanics-v1-ma7-map.json','utf8'));
+const output={advisory:'MA-1 §7',rows,totalRows:rows.length,legacyCases:475,mechanicsCases:manifest.suites.mechanicsContract,uiFaultCases:6,migrations:previous.migrations || previous.migration,knownHistoricalConflicts:[
+ 'audit-recycling.js/dead-listener-target-snapshot: formal dead owner without explicit permission is now rejected; corrected positive/negative cases are §7.2.12.',
+ 'audit-cargo.js/switch_lamp/invalid-uid-clears-on-normal-resolve and audit-cargo-retest.js/reservation/runtime-invalid-record-is-cleaned: malformed reservation is rejected before clone; legitimate remove/consume/next-spin preservation is mechanics-contract/D/legal-reservation-remove-consume-next-spin-retention.'
+ ],limitations:['Independent audit case citations are separate-process evidence; UI fault cases run real FogUI in Edge smoke, not Node DOM emulation.','Historical rule-changing FAILs remain FAIL; they are not counted as all-green audits.']};
+fs.writeFileSync('tests/mechanics-v1-ma7-map.json',JSON.stringify(output,null,2));console.log(rows.length+' exact §7 rows mapped and Node references verified');

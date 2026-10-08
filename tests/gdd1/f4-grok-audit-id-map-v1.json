@@ -1,0 +1,4516 @@
+{
+  "scope": "Independent per-ID GDD BODY semantic mapping and actual-trigger hand review; not registration counts",
+  "gddSha256": "e33e1699aed464cd656abc2344d9e68be92a7238da482f9861e5e67dedc8df07",
+  "production": {
+    "resolver": {
+      "bytes": 27996,
+      "sha256": "e86d51fb4c20d235312b263146f18d2c4cd69c13453846fe0daf9b07a0aaf88b"
+    },
+    "fullEffects": {
+      "bytes": 38059,
+      "sha256": "b602a74a9e485454b3d5801e7a1a648ffa7fc8bdc220cc8928b483728c8af205"
+    }
+  },
+  "counts": {
+    "symbols": {
+      "total": 64,
+      "passed": 59
+    },
+    "items": {
+      "total": 32,
+      "passed": 30
+    },
+    "events": {
+      "total": 8,
+      "passed": 7
+    }
+  },
+  "sharedDefsNotDefect": "F.defs(state) shared sliceDraw/Resolve/Offer is not a defect",
+  "cargoRopeWindow": "GDD 5.I table appearance line is superseded in the same GDD body by step5/adjacency-add + 5.I.1",
+  "symbols": [
+    {
+      "id": "mist_pouch",
+      "gdd": {
+        "table": "5.A",
+        "body": "第3次上盘转 dew_lantern; natural age only",
+        "phase": "step3/age"
+      },
+      "impl": {
+        "name": "凝雾软囊",
+        "rarity": "common",
+        "tags": [
+          "plant",
+          "mist"
+        ],
+        "base": 1,
+        "mechanics": {
+          "age": {
+            "threshold": 3,
+            "to": "dew_lantern"
+          }
+        },
+        "effects": [],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "spin1Age": 1,
+        "spin3Type": "dew_lantern"
+      },
+      "error": null
+    },
+    {
+      "id": "wick_bed",
+      "gdd": {
+        "table": "5.A",
+        "body": "base 2, no extra",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "灯芯苗床",
+        "rarity": "common",
+        "tags": [
+          "plant",
+          "fuel"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "total": 2
+      },
+      "error": null
+    },
+    {
+      "id": "dew_lantern",
+      "gdd": {
+        "table": "5.A",
+        "body": "第2次上盘转 amber_frond",
+        "phase": "step3/age"
+      },
+      "impl": {
+        "name": "露灯苞",
+        "rarity": "uncommon",
+        "tags": [
+          "plant",
+          "mist",
+          "product"
+        ],
+        "base": 3,
+        "mechanics": {
+          "age": {
+            "threshold": 2,
+            "to": "amber_frond"
+          }
+        },
+        "effects": [],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "spin2Type": "amber_frond"
+      },
+      "error": null
+    },
+    {
+      "id": "amber_frond",
+      "gdd": {
+        "table": "5.A",
+        "body": "consume self reward 4 independent of consumer",
+        "phase": "step6/lifecycle"
+      },
+      "impl": {
+        "name": "琥露扇叶",
+        "rarity": "uncommon",
+        "tags": [
+          "plant",
+          "fuel",
+          "product",
+          "cargo"
+        ],
+        "base": 4,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "reward",
+            "amount": 4,
+            "event": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "match": {
+              "targetSelf": true
+            },
+            "deathAllowed": true
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": false,
+      "trigger": null,
+      "error": "tong6+amber4 expected 10 actual 0"
+    },
+    {
+      "id": "fog_stitcher",
+      "gdd": {
+        "table": "5.A",
+        "body": "age-extra one adjacent plant +1; finished products skipped",
+        "phase": "step3/age extra"
+      },
+      "impl": {
+        "name": "补雾工",
+        "rarity": "uncommon",
+        "tags": [
+          "machine",
+          "support"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "age-extra",
+            "op": "age",
+            "amount": 1,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "plant",
+              "age": true
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "mistAge": 2
+      },
+      "error": null
+    },
+    {
+      "id": "root_ledger",
+      "gdd": {
+        "table": "5.A",
+        "body": "each plant transform: self permanent +1, max 2/spin, cap 30",
+        "phase": "listen transform"
+      },
+      "impl": {
+        "name": "根须账簿",
+        "rarity": "rare",
+        "tags": [
+          "plant",
+          "contract"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "grow",
+            "amount": 1,
+            "event": "transform",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 2,
+            "match": {
+              "beforeTag": "plant"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "permanent": 2,
+        "total": 9
+      },
+      "error": null
+    },
+    {
+      "id": "warm_pod",
+      "gdd": {
+        "table": "5.A",
+        "body": "appearance: adj starting live fuel +3",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "温灯荚",
+        "rarity": "common",
+        "tags": [
+          "plant",
+          "pressure"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "add",
+            "amount": 3,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "adjacent",
+                "tag": "fuel"
+              },
+              "min": 1
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "withFuel": 6,
+        "alone": 1
+      },
+      "error": null
+    },
+    {
+      "id": "nursery_gauge",
+      "gdd": {
+        "table": "5.A",
+        "body": "summary: >=2 plant transforms then live plant ×3/2",
+        "phase": "step8/end-summary"
+      },
+      "impl": {
+        "name": "苗圃指针",
+        "rarity": "rare",
+        "tags": [
+          "machine",
+          "plant"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "summary",
+            "op": "multiply",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": true,
+            "limit": 1,
+            "selector": {
+              "scope": "all",
+              "tag": "plant"
+            },
+            "predicate": {
+              "events": "transform",
+              "min": 2,
+              "beforeTag": "plant"
+            },
+            "ratio": [
+              3,
+              2
+            ],
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "multiplied": true,
+        "total": 11
+      },
+      "error": null
+    },
+    {
+      "id": "ash_felt",
+      "gdd": {
+        "table": "5.B",
+        "body": "consume spawn copper; 3 appearances then self-destroy reward 3",
+        "phase": "listen consume + step6 end"
+      },
+      "impl": {
+        "name": "灰温毡",
+        "rarity": "common",
+        "tags": [
+          "scrap",
+          "fuel"
+        ],
+        "base": 1,
+        "mechanics": {
+          "age": {
+            "threshold": 3,
+            "destroy": true
+          }
+        },
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "spawn",
+            "event": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "match": {
+              "targetSelf": true
+            },
+            "deathAllowed": true
+          },
+          {
+            "phase": "end",
+            "op": "destroy",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "counter": "age",
+              "min": 3
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "spawnOnConsume": true,
+        "matureReward": 3
+      },
+      "error": null
+    },
+    {
+      "id": "sorting_tong",
+      "gdd": {
+        "table": "5.B",
+        "body": "consume adj scrap reward 6; no target => base 1 only",
+        "phase": "step5/structural-event"
+      },
+      "impl": {
+        "name": "分温夹",
+        "rarity": "common",
+        "tags": [
+          "machine"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "structure",
+            "op": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "scrap"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "alone": 1,
+        "withScrap": 7
+      },
+      "error": null
+    },
+    {
+      "id": "copper_burr",
+      "gdd": {
+        "table": "5.B",
+        "body": "adj any machine self +2",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "铜毛刺",
+        "rarity": "common",
+        "tags": [
+          "scrap",
+          "product",
+          "cargo"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "add",
+            "amount": 2,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "adjacent",
+                "tag": "machine"
+              },
+              "min": 1
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": false,
+      "trigger": null,
+      "error": "eq expected 4 actual 0"
+    },
+    {
+      "id": "spent_gasket",
+      "gdd": {
+        "table": "5.B",
+        "body": "base -1, no extra, candidate false",
+        "phase": "base-only"
+      },
+      "impl": {
+        "name": "过役垫圈",
+        "rarity": "common",
+        "tags": [
+          "scrap",
+          "junk"
+        ],
+        "base": -1,
+        "mechanics": {
+          "candidate": false
+        },
+        "effects": [],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "total": -1
+      },
+      "error": null
+    },
+    {
+      "id": "sieve_drum",
+      "gdd": {
+        "table": "5.B",
+        "body": "transform adj junk to copper_burr, not delete",
+        "phase": "step5/structural-event"
+      },
+      "impl": {
+        "name": "除滞滚筒",
+        "rarity": "uncommon",
+        "tags": [
+          "machine",
+          "support"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "structure",
+            "op": "transform",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "junk"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "transformed": "copper_burr",
+        "uidKept": "u2"
+      },
+      "error": null
+    },
+    {
+      "id": "heat_clerk",
+      "gdd": {
+        "table": "5.B",
+        "body": "scrap consume => self permanent +1 /spin",
+        "phase": "listen consume"
+      },
+      "impl": {
+        "name": "余温录员",
+        "rarity": "uncommon",
+        "tags": [
+          "machine",
+          "contract"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "grow",
+            "amount": 1,
+            "event": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "match": {
+              "beforeTag": "scrap"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "permanent": 1
+      },
+      "error": null
+    },
+    {
+      "id": "clinker_router",
+      "gdd": {
+        "table": "5.B",
+        "body": "destroy adj junk; listen non-consume junk destroy => one pressure +2",
+        "phase": "step5 + listen"
+      },
+      "impl": {
+        "name": "灰渣分路器",
+        "rarity": "rare",
+        "tags": [
+          "machine",
+          "pressure"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "structure",
+            "op": "destroy",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "junk"
+            },
+            "deathAllowed": false
+          },
+          {
+            "phase": "listen",
+            "op": "pressure",
+            "amount": 2,
+            "event": "destroy",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 2,
+            "selector": {
+              "scope": "all",
+              "tag": "pressure",
+              "pressureMechanism": true
+            },
+            "match": {
+              "beforeTag": "junk",
+              "notCause": "consume"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "junkGone": true,
+        "pressure": 3
+      },
+      "error": null
+    },
+    {
+      "id": "furnace_auditor",
+      "gdd": {
+        "table": "5.B",
+        "body": "summary: consume >=2 distinct scrap types then each live machine ×3/2",
+        "phase": "step8/end-summary"
+      },
+      "impl": {
+        "name": "炉账稽核灯",
+        "rarity": "rare",
+        "tags": [
+          "machine"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "summary",
+            "op": "multiply",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": true,
+            "limit": 1,
+            "selector": {
+              "scope": "all",
+              "tag": "machine"
+            },
+            "predicate": {
+              "events": "consume",
+              "min": 2,
+              "beforeTag": "scrap",
+              "distinct": true
+            },
+            "ratio": [
+              3,
+              2
+            ],
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "multiplied": true,
+        "total": 17
+      },
+      "error": null
+    },
+    {
+      "id": "dock_chime",
+      "gdd": {
+        "table": "5.C",
+        "body": "appearance self + distinct other row resonance types cap 3",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "栈桥鸣片",
+        "rarity": "common",
+        "tags": [
+          "resonance",
+          "cargo"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "add",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": false,
+      "trigger": null,
+      "error": "eq expected 4 actual 7"
+    },
+    {
+      "id": "pitch_fork",
+      "gdd": {
+        "table": "5.C",
+        "body": "step5 adjacency-add one adj resonance +3 lockFirst",
+        "phase": "step5/adjacency-add"
+      },
+      "impl": {
+        "name": "港音分叉",
+        "rarity": "common",
+        "tags": [
+          "resonance",
+          "support"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "adjacency-add",
+            "op": "add",
+            "amount": 3,
+            "defer": false,
+            "lockFirst": true,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "resonance"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "addPhase": "step5/adjacency-add",
+        "amount": 3
+      },
+      "error": null
+    },
+    {
+      "id": "fog_reed",
+      "gdd": {
+        "table": "5.C",
+        "body": "appearance adj starting mist +3",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "雾笛簧",
+        "rarity": "common",
+        "tags": [
+          "resonance",
+          "mist"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "add",
+            "amount": 3,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "adjacent",
+                "tag": "mist"
+              },
+              "min": 1
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "amount": 4
+      },
+      "error": null
+    },
+    {
+      "id": "beat_spool",
+      "gdd": {
+        "table": "5.C",
+        "body": "3rd appearance extra +9 reset beat",
+        "phase": "step4/appearance cycle"
+      },
+      "impl": {
+        "name": "拍点线轴",
+        "rarity": "uncommon",
+        "tags": [
+          "resonance",
+          "machine"
+        ],
+        "base": 1,
+        "mechanics": {
+          "cycle_count": 3
+        },
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "cycle",
+            "amount": 9,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "total": 10
+      },
+      "error": null
+    },
+    {
+      "id": "chord_frame",
+      "gdd": {
+        "table": "5.C",
+        "body": "appearance: >=2 other adj resonance types, first neighbor ×2",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "和音框",
+        "rarity": "uncommon",
+        "tags": [
+          "resonance",
+          "machine"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "multiply",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "resonance"
+            },
+            "predicate": {
+              "count": {
+                "scope": "adjacent",
+                "tag": "resonance"
+              },
+              "distinct": true,
+              "min": 2
+            },
+            "ratio": [
+              2,
+              1
+            ],
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "multiplied": true,
+        "total": 14
+      },
+      "error": null
+    },
+    {
+      "id": "prism_hum",
+      "gdd": {
+        "table": "5.C",
+        "body": "appearance adj starting crystal +4",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "晶腔哼鸣器",
+        "rarity": "uncommon",
+        "tags": [
+          "resonance",
+          "crystal"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "add",
+            "amount": 4,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "adjacent",
+                "tag": "crystal"
+              },
+              "min": 1
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "amount": 6
+      },
+      "error": null
+    },
+    {
+      "id": "silence_keeper",
+      "gdd": {
+        "table": "5.C",
+        "body": "appearance row resonance count exactly 1 => +10",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "静拍保管员",
+        "rarity": "rare",
+        "tags": [
+          "resonance",
+          "contract"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "add",
+            "amount": 10,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "row",
+                "tag": "resonance"
+              },
+              "min": 1,
+              "max": 1
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "alone": 11,
+        "crowded": 1
+      },
+      "error": null
+    },
+    {
+      "id": "harbor_conductor",
+      "gdd": {
+        "table": "5.C",
+        "body": "row >=3 distinct resonance types: that row resonance ×2 once",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "港湾拍长",
+        "rarity": "epic",
+        "tags": [
+          "resonance"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "multiply",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": true,
+            "limit": 1,
+            "selector": {
+              "scope": "row",
+              "tag": "resonance"
+            },
+            "predicate": {
+              "count": {
+                "scope": "row",
+                "tag": "resonance"
+              },
+              "distinct": true,
+              "min": 3
+            },
+            "ratio": [
+              2,
+              1
+            ],
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "multiplied": true,
+        "total": 24
+      },
+      "error": null
+    },
+    {
+      "id": "brine_strip",
+      "gdd": {
+        "table": "5.D",
+        "body": "第2次上盘转 saline_ampoule",
+        "phase": "step3/age"
+      },
+      "impl": {
+        "name": "盐雾滤带",
+        "rarity": "common",
+        "tags": [
+          "mist",
+          "feedstock"
+        ],
+        "base": 1,
+        "mechanics": {
+          "age": {
+            "threshold": 2,
+            "to": "saline_ampoule"
+          }
+        },
+        "effects": [],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "spin2Type": "saline_ampoule"
+      },
+      "error": null
+    },
+    {
+      "id": "saline_ampoule",
+      "gdd": {
+        "table": "5.D",
+        "body": "base 2 no extra",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "微盐安瓿",
+        "rarity": "common",
+        "tags": [
+          "feedstock",
+          "cargo"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "total": 2
+      },
+      "error": null
+    },
+    {
+      "id": "condense_coil",
+      "gdd": {
+        "table": "5.D",
+        "body": "transform adj feedstock to tide_prism",
+        "phase": "step5/structural-event"
+      },
+      "impl": {
+        "name": "凝潮盘管",
+        "rarity": "common",
+        "tags": [
+          "machine"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "structure",
+            "op": "transform",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "feedstock"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "type": "tide_prism"
+      },
+      "error": null
+    },
+    {
+      "id": "tide_prism",
+      "gdd": {
+        "table": "5.D",
+        "body": "on transform-into-self +3; direct draw base 4",
+        "phase": "listen transform self"
+      },
+      "impl": {
+        "name": "潮棱块",
+        "rarity": "uncommon",
+        "tags": [
+          "crystal",
+          "product",
+          "cargo"
+        ],
+        "base": 4,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "add",
+            "amount": 3,
+            "event": "transform",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "match": {
+              "targetSelf": true,
+              "afterSelfType": true
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "direct": 4,
+        "converted": 7
+      },
+      "error": null
+    },
+    {
+      "id": "deep_still",
+      "gdd": {
+        "table": "5.D",
+        "body": "consume adj mist reward 4 spawn saline",
+        "phase": "step5/structural-event"
+      },
+      "impl": {
+        "name": "深盐分馏器",
+        "rarity": "uncommon",
+        "tags": [
+          "machine"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "structure",
+            "op": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "mist"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "reward": 4,
+        "spawned": true
+      },
+      "error": null
+    },
+    {
+      "id": "crystal_index",
+      "gdd": {
+        "table": "5.D",
+        "body": ">=2 crystal types self +6",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "晶层索引",
+        "rarity": "uncommon",
+        "tags": [
+          "crystal",
+          "support"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "add",
+            "amount": 6,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "all",
+                "tag": "crystal"
+              },
+              "distinct": true,
+              "min": 2
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "with2": 7,
+        "alone": 1
+      },
+      "error": null
+    },
+    {
+      "id": "pearl_separator",
+      "gdd": {
+        "table": "5.D",
+        "body": "transform adj crystal non-product to tide_prism; tide already illegal",
+        "phase": "step5/structural-event"
+      },
+      "impl": {
+        "name": "浮珠分离器",
+        "rarity": "rare",
+        "tags": [
+          "machine"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "structure",
+            "op": "transform",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "crystal",
+              "notTag": "product"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "blankToTide": true,
+        "tideUntouched": true
+      },
+      "error": null
+    },
+    {
+      "id": "reserve_facet",
+      "gdd": {
+        "table": "5.D",
+        "body": "consume adj fuel reward 2 pressure +2 cap 6; at 6 reward 18",
+        "phase": "step5 + step7"
+      },
+      "impl": {
+        "name": "留温晶面",
+        "rarity": "rare",
+        "tags": [
+          "crystal",
+          "pressure"
+        ],
+        "base": 2,
+        "mechanics": {
+          "pressure": {
+            "cap": 6,
+            "reward": 18
+          }
+        },
+        "effects": [
+          {
+            "phase": "structure",
+            "op": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "fuel"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "inject": 2,
+        "release": 18
+      },
+      "error": null
+    },
+    {
+      "id": "cargo_rope",
+      "gdd": {
+        "table": "5.E/5.I.1",
+        "body": "step5 adjacency-add lock first adj product +3",
+        "phase": "step5/adjacency-add"
+      },
+      "impl": {
+        "name": "夜班扎绳",
+        "rarity": "common",
+        "tags": [
+          "cargo",
+          "support"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "adjacency-add",
+            "op": "add",
+            "amount": 3,
+            "defer": false,
+            "lockFirst": true,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "product"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "phase": "step5/adjacency-add",
+        "amount": 3
+      },
+      "error": null
+    },
+    {
+      "id": "route_stub",
+      "gdd": {
+        "table": "5.E",
+        "body": "appearance >=3 cargo types self +4",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "转栈短票",
+        "rarity": "common",
+        "tags": [
+          "cargo",
+          "contract"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "add",
+            "amount": 4,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "all",
+                "tag": "cargo"
+              },
+              "distinct": true,
+              "min": 3
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "amount": 6
+      },
+      "error": null
+    },
+    {
+      "id": "parcel_cage",
+      "gdd": {
+        "table": "5.E",
+        "body": "appearance initial empty >=4 self +3",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "铜格货笼",
+        "rarity": "common",
+        "tags": [
+          "cargo",
+          "machine"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "add",
+            "amount": 3,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "initialEmptyMin": 4
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "empty": 5,
+        "crowded": 2
+      },
+      "error": null
+    },
+    {
+      "id": "sorting_runner",
+      "gdd": {
+        "table": "5.E",
+        "body": "consume adj product reward 6+target base",
+        "phase": "step5/structural-event"
+      },
+      "impl": {
+        "name": "分栈跑员",
+        "rarity": "uncommon",
+        "tags": [
+          "cargo"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "structure",
+            "op": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "product"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "reward": 8
+      },
+      "error": null
+    },
+    {
+      "id": "manifest_desk",
+      "gdd": {
+        "table": "5.E",
+        "body": "appearance >=4 cargo types self ×3",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "夜单台",
+        "rarity": "uncommon",
+        "tags": [
+          "cargo",
+          "contract"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "multiply",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "all",
+                "tag": "cargo"
+              },
+              "distinct": true,
+              "min": 4
+            },
+            "ratio": [
+              3,
+              1
+            ],
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "multiplied": true,
+        "total": 16
+      },
+      "error": null
+    },
+    {
+      "id": "switch_lamp",
+      "gdd": {
+        "table": "5.E",
+        "body": "reserve adj product next spin; commit step8 if still valid",
+        "phase": "step5 defer → step8"
+      },
+      "impl": {
+        "name": "换轨灯",
+        "rarity": "uncommon",
+        "tags": [
+          "cargo",
+          "machine"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "structure",
+            "op": "reserve",
+            "defer": true,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "product"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "reserved": "u2"
+      },
+      "error": null
+    },
+    {
+      "id": "transit_seal",
+      "gdd": {
+        "table": "5.E",
+        "body": "preprocess majority adj plant/crystal/resonance tag",
+        "phase": "step2/tagAdded"
+      },
+      "impl": {
+        "name": "联运封蜡",
+        "rarity": "rare",
+        "tags": [
+          "cargo",
+          "magic"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "preprocess",
+            "op": "tagMajority",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "tagged": true
+      },
+      "error": null
+    },
+    {
+      "id": "return_station",
+      "gdd": {
+        "table": "5.E",
+        "body": "listen adj cargo consume product; step8 reward 8 if pool<=20",
+        "phase": "listen defer step8"
+      },
+      "impl": {
+        "name": "空箱返程站",
+        "rarity": "rare",
+        "tags": [
+          "cargo",
+          "machine"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "reward",
+            "amount": 8,
+            "event": "consume",
+            "defer": true,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "match": {
+              "beforeTag": "product",
+              "actorTag": "cargo",
+              "actorAdjacent": true
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "stationRewardPhase": "step8/end-summary"
+      },
+      "error": null
+    },
+    {
+      "id": "pressure_pouch",
+      "gdd": {
+        "table": "5.F",
+        "body": "inject +1 cap4; at4 reward10 reset; ordinary still 1",
+        "phase": "step4/pressure-injection + step7"
+      },
+      "impl": {
+        "name": "余压软袋",
+        "rarity": "common",
+        "tags": [
+          "pressure"
+        ],
+        "base": 1,
+        "mechanics": {
+          "pressure": {
+            "cap": 4,
+            "reward": 10
+          }
+        },
+        "effects": [
+          {
+            "phase": "pressure-injection",
+            "op": "pressure",
+            "amount": 1,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "release": 10
+      },
+      "error": null
+    },
+    {
+      "id": "feed_valve",
+      "gdd": {
+        "table": "5.F",
+        "body": "consume adj fuel reward3 pressure +2 cap6",
+        "phase": "step5/structural-event"
+      },
+      "impl": {
+        "name": "添温小阀",
+        "rarity": "common",
+        "tags": [
+          "machine",
+          "pressure"
+        ],
+        "base": 1,
+        "mechanics": {
+          "pressure": {
+            "cap": 6,
+            "reward": 14
+          }
+        },
+        "effects": [
+          {
+            "phase": "structure",
+            "op": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "fuel"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "reward": 3,
+        "pressure": 2
+      },
+      "error": null
+    },
+    {
+      "id": "pause_dial",
+      "gdd": {
+        "table": "5.F",
+        "body": "appearance copyable +1; adj pressure-tag +2 uncopyable",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "歇拍刻盘",
+        "rarity": "common",
+        "tags": [
+          "pressure",
+          "support"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "add",
+            "amount": 1,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": true,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "deathAllowed": false
+          },
+          {
+            "phase": "appearance",
+            "op": "add",
+            "amount": 2,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "adjacent",
+                "tag": "pressure"
+              },
+              "min": 1
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "alone": 3,
+        "adjTag": 5
+      },
+      "error": null
+    },
+    {
+      "id": "surge_vessel",
+      "gdd": {
+        "table": "5.F",
+        "body": "inject +1 cap3 reward16; ordinary always 0",
+        "phase": "step4/pressure-injection"
+      },
+      "impl": {
+        "name": "脉冲釜",
+        "rarity": "uncommon",
+        "tags": [
+          "pressure",
+          "machine"
+        ],
+        "base": 1,
+        "mechanics": {
+          "pressure": {
+            "cap": 3,
+            "reward": 16
+          },
+          "ordinaryZero": true
+        },
+        "effects": [
+          {
+            "phase": "pressure-injection",
+            "op": "pressure",
+            "amount": 1,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "unreleased": 0,
+        "released": 16
+      },
+      "error": null
+    },
+    {
+      "id": "cracked_regulator",
+      "gdd": {
+        "table": "5.F",
+        "body": "3/4 +8; 1/4 -6 spawn gasket",
+        "phase": "step4/risk"
+      },
+      "impl": {
+        "name": "裂缝调压器",
+        "rarity": "uncommon",
+        "tags": [
+          "pressure",
+          "machine"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "risk",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "success": true,
+        "fail": true
+      },
+      "error": null
+    },
+    {
+      "id": "safety_shim",
+      "gdd": {
+        "table": "5.F",
+        "body": "reduce first adj pressure-risk fail loss by 4 min 0",
+        "phase": "step4/risk mitigation"
+      },
+      "impl": {
+        "name": "卸压薄衬",
+        "rarity": "uncommon",
+        "tags": [
+          "pressure",
+          "support"
+        ],
+        "base": 1,
+        "mechanics": {
+          "riskMitigation": {
+            "tag": "pressure",
+            "amount": 4
+          }
+        },
+        "effects": [],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "reduced": true
+      },
+      "error": null
+    },
+    {
+      "id": "release_spire",
+      "gdd": {
+        "table": "5.F",
+        "body": "step7 spend 3 from adj pressure>=3 below cap, ×3 + reward 8",
+        "phase": "step7/pressure"
+      },
+      "impl": {
+        "name": "泄峰塔",
+        "rarity": "rare",
+        "tags": [
+          "pressure",
+          "machine"
+        ],
+        "base": 3,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "step7",
+            "op": "release",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "pressureMechanism": true,
+              "pressureAtLeast": 3,
+              "belowReleaseThreshold": true,
+              "notReleased": true
+            },
+            "ratio": [
+              3,
+              1
+            ],
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "reward": 8,
+        "phase": "step7/pressure"
+      },
+      "error": null
+    },
+    {
+      "id": "demand_coupler",
+      "gdd": {
+        "table": "5.F",
+        "body": "cash<payment and remaining<=2: self ×4 spawn gasket",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "配额耦合器",
+        "rarity": "rare",
+        "tags": [
+          "pressure",
+          "contract"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "multiply",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "remainingAtMost": 2
+            },
+            "ratio": [
+              4,
+              1
+            ],
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "multiplied": true,
+        "spawned": true
+      },
+      "error": null
+    },
+    {
+      "id": "phase_chip",
+      "gdd": {
+        "table": "5.G",
+        "body": "preprocess: adj resonance else crystal tag",
+        "phase": "step2/tagAdded"
+      },
+      "impl": {
+        "name": "偏相小片",
+        "rarity": "common",
+        "tags": [
+          "magic"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "preprocess",
+            "op": "tagChoice",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "tagged": true
+      },
+      "error": null
+    },
+    {
+      "id": "spectrum_pin",
+      "gdd": {
+        "table": "5.G",
+        "body": "appearance >=3 other adj types +4; not copyable",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "谱别别针",
+        "rarity": "common",
+        "tags": [
+          "magic",
+          "support"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "add",
+            "amount": 4,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "count": {
+                "scope": "adjacent",
+                "excludeSelf": true
+              },
+              "distinct": true,
+              "min": 3
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": false,
+      "trigger": null,
+      "error": "eq expected 5 actual 1"
+    },
+    {
+      "id": "cloudy_negative",
+      "gdd": {
+        "table": "5.G/5.I.1",
+        "body": "第3次上盘转 blank_facet; NATURAL age only, not fog_stitcher extra",
+        "phase": "step3/age natural"
+      },
+      "impl": {
+        "name": "雾面底片",
+        "rarity": "common",
+        "tags": [
+          "magic",
+          "feedstock"
+        ],
+        "base": 1,
+        "mechanics": {
+          "age": {
+            "threshold": 3,
+            "to": "blank_facet"
+          }
+        },
+        "effects": [
+          {
+            "phase": "age-extra",
+            "op": "age",
+            "amount": 0,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": false,
+      "trigger": null,
+      "error": "GDD 第3次上盘: first appearance age 0→1, extra self-age is not registered for cloudy expected 1 actual 2"
+    },
+    {
+      "id": "blank_facet",
+      "gdd": {
+        "table": "5.G",
+        "body": "ON_APPEAR copyable +2; convert-into skips appearance",
+        "phase": "step4/appearance initial"
+      },
+      "impl": {
+        "name": "无谱晶坯",
+        "rarity": "uncommon",
+        "tags": [
+          "magic",
+          "crystal"
+        ],
+        "base": 3,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "initial",
+            "op": "add",
+            "amount": 2,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": true,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "direct": 5,
+        "converted": 3
+      },
+      "error": null
+    },
+    {
+      "id": "offset_reader",
+      "gdd": {
+        "table": "5.G",
+        "body": "copy adj copyable ON_APPEAR add cap 8",
+        "phase": "step4/copy"
+      },
+      "impl": {
+        "name": "偏印读头",
+        "rarity": "rare",
+        "tags": [
+          "magic",
+          "machine"
+        ],
+        "base": 3,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "copy",
+            "op": "copy",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "copyable": true
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "total": 10
+      },
+      "error": null
+    },
+    {
+      "id": "alignment_cloth",
+      "gdd": {
+        "table": "5.G/5.I.1",
+        "body": "after preprocess, first legal adj by tagAdded RECORD order +5 lock, no retarget",
+        "phase": "step2/tagAdded"
+      },
+      "impl": {
+        "name": "对相织布",
+        "rarity": "uncommon",
+        "tags": [
+          "magic",
+          "support"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "step2",
+            "op": "add",
+            "amount": 5,
+            "defer": false,
+            "lockFirst": true,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "receivedTag": true,
+              "order": "tagAdded"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "tagTargets": [
+          "u4",
+          "u4",
+          "u2"
+        ],
+        "ledger": [
+          2,
+          2,
+          1,
+          10
+        ],
+        "total": 15,
+        "clothTarget": "u4"
+      },
+      "error": null
+    },
+    {
+      "id": "echo_plate",
+      "gdd": {
+        "table": "5.G",
+        "body": "listen adj grow actualIncrease×4, max 2",
+        "phase": "listen grow"
+      },
+      "impl": {
+        "name": "迟相印板",
+        "rarity": "rare",
+        "tags": [
+          "magic",
+          "resonance"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "add",
+            "event": "grow",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 2,
+            "match": {
+              "adjacent": true,
+              "positiveIncrease": true
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "add": 4
+      },
+      "error": null
+    },
+    {
+      "id": "split_register",
+      "gdd": {
+        "table": "5.G",
+        "body": "preprocess adj product +resonance+crystal and ×3/2",
+        "phase": "step2/tagAdded"
+      },
+      "impl": {
+        "name": "双谱登记器",
+        "rarity": "epic",
+        "tags": [
+          "magic",
+          "contract"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "preprocess",
+            "op": "tagBundle",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "product"
+            },
+            "ratio": [
+              3,
+              2
+            ],
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "tags": 2,
+        "multiplied": true
+      },
+      "error": null
+    },
+    {
+      "id": "arrears_slip",
+      "gdd": {
+        "table": "5.H",
+        "body": "base -1, candidate false",
+        "phase": "base-only"
+      },
+      "impl": {
+        "name": "待核欠条",
+        "rarity": "common",
+        "tags": [
+          "contract",
+          "junk"
+        ],
+        "base": -1,
+        "mechanics": {
+          "candidate": false
+        },
+        "effects": [],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "total": -1
+      },
+      "error": null
+    },
+    {
+      "id": "lean_receipt",
+      "gdd": {
+        "table": "5.H",
+        "body": "cash*2<payment self +4",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "薄账回执",
+        "rarity": "common",
+        "tags": [
+          "contract"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "add",
+            "amount": 4,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "cashBelowHalf": true
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "below": 5,
+        "half": 1
+      },
+      "error": null
+    },
+    {
+      "id": "compliance_desk",
+      "gdd": {
+        "table": "5.H",
+        "body": "transform adj junk to cleared_stub",
+        "phase": "step5/structural-event"
+      },
+      "impl": {
+        "name": "合规小台",
+        "rarity": "common",
+        "tags": [
+          "contract",
+          "machine"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "structure",
+            "op": "transform",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "junk"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "total": 4
+      },
+      "error": null
+    },
+    {
+      "id": "cleared_stub",
+      "gdd": {
+        "table": "5.H",
+        "body": "direct ON_APPEAR copyable +1; convert-into skips +1",
+        "phase": "step4/appearance initial"
+      },
+      "impl": {
+        "name": "核清存根",
+        "rarity": "common",
+        "tags": [
+          "contract",
+          "product",
+          "cargo"
+        ],
+        "base": 3,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "initial",
+            "op": "add",
+            "amount": 1,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": true,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "direct": 4
+      },
+      "error": null
+    },
+    {
+      "id": "cancellation_clerk",
+      "gdd": {
+        "table": "5.H",
+        "body": "consume adj junk reward 5 and self grow 1",
+        "phase": "step5/structural-event"
+      },
+      "impl": {
+        "name": "撤账员",
+        "rarity": "uncommon",
+        "tags": [
+          "contract"
+        ],
+        "base": 1,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "structure",
+            "op": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "adjacent",
+              "tag": "junk"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "total": 7,
+        "permanent": 1
+      },
+      "error": null
+    },
+    {
+      "id": "quota_margin",
+      "gdd": {
+        "table": "5.H",
+        "body": "cash deficit <=15 self +6; snapshot cash",
+        "phase": "step4/appearance"
+      },
+      "impl": {
+        "name": "配额边签",
+        "rarity": "uncommon",
+        "tags": [
+          "contract",
+          "pressure"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "add",
+            "amount": 6,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "predicate": {
+              "cashDeficitAtMost": 15
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "deficit15": 8,
+        "deficit16": 2
+      },
+      "error": null
+    },
+    {
+      "id": "advance_stamp",
+      "gdd": {
+        "table": "5.H",
+        "body": "if accepted: reward 18, payment +12, spawn arrears; default reject",
+        "phase": "step4/appearance advance"
+      },
+      "impl": {
+        "name": "先支邮戳",
+        "rarity": "rare",
+        "tags": [
+          "contract"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "advance",
+            "amount": 18,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "self"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "rejected": 2,
+        "acceptedReward": 18
+      },
+      "error": null
+    },
+    {
+      "id": "settlement_beacon",
+      "gdd": {
+        "table": "5.H",
+        "body": "summary: no junk and >=3 contract types: contract ×2",
+        "phase": "step8/end-summary"
+      },
+      "impl": {
+        "name": "清算信标",
+        "rarity": "rare",
+        "tags": [
+          "contract",
+          "machine"
+        ],
+        "base": 2,
+        "mechanics": {},
+        "effects": [
+          {
+            "phase": "summary",
+            "op": "multiply",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": true,
+            "limit": 1,
+            "selector": {
+              "scope": "all",
+              "tag": "contract"
+            },
+            "predicate": {
+              "all": [
+                {
+                  "poolWithoutTag": "junk"
+                },
+                {
+                  "count": {
+                    "scope": "all",
+                    "tag": "contract"
+                  },
+                  "distinct": true,
+                  "min": 3
+                }
+              ]
+            },
+            "ratio": [
+              2,
+              1
+            ],
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "cleanMultiplied": true,
+        "junkBlocked": true
+      },
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "id": "item_dew_calendar",
+      "gdd": {
+        "table": "6/5.I.1",
+        "body": "after natural age, first remaining aged plant +1"
+      },
+      "impl": {
+        "name": "露班轮历",
+        "rarity": "common",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "step3",
+            "op": "age",
+            "amount": 1,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "selector": {
+              "scope": "all",
+              "age": true,
+              "tag": "plant"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "secondPlantAge": 2
+      },
+      "error": null
+    },
+    {
+      "id": "item_root_wrap",
+      "gdd": {
+        "table": "6",
+        "body": "first plant transform survivor +4"
+      },
+      "impl": {
+        "name": "根温绑带",
+        "rarity": "uncommon",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "add",
+            "amount": 4,
+            "event": "transform",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "match": {
+              "beforeTag": "plant"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "total": 7
+      },
+      "error": null
+    },
+    {
+      "id": "item_nursery_scale",
+      "gdd": {
+        "table": "6",
+        "body": "draw plant weight ×3/2 if pool<=28"
+      },
+      "impl": {
+        "name": "苗圃轻秤",
+        "rarity": "rare",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "step1",
+            "op": "weight",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "ratio": [
+              3,
+              2
+            ],
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "weight": [
+          3,
+          2
+        ],
+        "drew": 2
+      },
+      "error": null
+    },
+    {
+      "id": "item_frost_glass",
+      "gdd": {
+        "table": "6",
+        "body": "stage first 2 starting mist +3 each"
+      },
+      "impl": {
+        "name": "防寒窄窗",
+        "rarity": "uncommon",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "add",
+            "amount": 3,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": true,
+            "limit": 2,
+            "window": "stage",
+            "selector": {
+              "scope": "all",
+              "tag": "mist"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "add": 6
+      },
+      "error": null
+    },
+    {
+      "id": "item_sorting_apron",
+      "gdd": {
+        "table": "6",
+        "body": "first scrap consume extra reward +3"
+      },
+      "impl": {
+        "name": "分温围裙",
+        "rarity": "common",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "reward",
+            "amount": 3,
+            "event": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "match": {
+              "beforeTag": "scrap"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "extra": 3
+      },
+      "error": null
+    },
+    {
+      "id": "item_waste_log",
+      "gdd": {
+        "table": "6",
+        "body": "3rd non-consume junk destroy this stage: removeTokens +1"
+      },
+      "impl": {
+        "name": "滞物登记本",
+        "rarity": "uncommon",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "token",
+            "amount": 1,
+            "event": "destroy",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "match": {
+              "beforeTag": "junk",
+              "notCause": "consume"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "removeTokensDelta": 1
+      },
+      "error": null
+    },
+    {
+      "id": "item_offcut_chute",
+      "gdd": {
+        "table": "6",
+        "body": "first consume non-junk scrap spawns ash_felt"
+      },
+      "impl": {
+        "name": "边料回流槽",
+        "rarity": "rare",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "spawn",
+            "event": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "match": {
+              "beforeTag": "scrap",
+              "notBeforeTag": "junk"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "spawned": true
+      },
+      "error": null
+    },
+    {
+      "id": "item_clean_mesh",
+      "gdd": {
+        "table": "6",
+        "body": "draw junk weight ×1/2"
+      },
+      "impl": {
+        "name": "清栈细网",
+        "rarity": "uncommon",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "step1",
+            "op": "weight",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "ratio": [
+              1,
+              2
+            ],
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "weight": [
+          1,
+          2
+        ]
+      },
+      "error": null
+    },
+    {
+      "id": "item_lane_clapper",
+      "gdd": {
+        "table": "6",
+        "body": "summary each row-first resonance if row >=2 types +2"
+      },
+      "impl": {
+        "name": "轨边拍板",
+        "rarity": "common",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "summary",
+            "op": "add",
+            "amount": 2,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": true,
+            "limit": 4,
+            "selector": {
+              "scope": "all",
+              "tag": "resonance",
+              "rowFirst": true,
+              "rowMinTypes": 2
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "add": 2
+      },
+      "error": null
+    },
+    {
+      "id": "item_rest_notch",
+      "gdd": {
+        "table": "6",
+        "body": "summary row with exactly 1 resonance ×3/2"
+      },
+      "impl": {
+        "name": "休拍刻槽",
+        "rarity": "uncommon",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "summary",
+            "op": "multiply",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": true,
+            "limit": 4,
+            "selector": {
+              "scope": "all",
+              "tag": "resonance",
+              "rowCountExact": 1
+            },
+            "ratio": [
+              3,
+              2
+            ],
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "total": 3
+      },
+      "error": null
+    },
+    {
+      "id": "item_pitch_marker",
+      "gdd": {
+        "table": "6/5.I.1",
+        "body": "first novel resonance tagAdded; commit +5 at step8 if alive"
+      },
+      "impl": {
+        "name": "音高记签",
+        "rarity": "rare",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "add",
+            "amount": 5,
+            "event": "tagAdded",
+            "defer": true,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "match": {
+              "afterTag": "resonance",
+              "notBeforeTag": "resonance"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "livePhase": "step8/end-summary",
+        "deadAdds": 0
+      },
+      "error": null
+    },
+    {
+      "id": "item_shared_metronome",
+      "gdd": {
+        "table": "6",
+        "body": "cycle_count threshold 3→2 via mechanics, not resolver ID"
+      },
+      "impl": {
+        "name": "公用节拍器",
+        "rarity": "uncommon",
+        "tags": null,
+        "mechanics": {
+          "cycleThresholdReduction": 1
+        },
+        "effects": [],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "total": 10
+      },
+      "error": null
+    },
+    {
+      "id": "item_brine_lining",
+      "gdd": {
+        "table": "6",
+        "body": "first feedstock→crystal product +4"
+      },
+      "impl": {
+        "name": "盐雾内衬",
+        "rarity": "common",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "add",
+            "amount": 4,
+            "event": "transform",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "match": {
+              "beforeTag": "feedstock",
+              "afterTag": "crystal"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "total": 12
+      },
+      "error": null
+    },
+    {
+      "id": "item_fraction_gauge",
+      "gdd": {
+        "table": "6",
+        "body": "first time live distinct crystal types >=3: reward 7"
+      },
+      "impl": {
+        "name": "分馏格尺",
+        "rarity": "uncommon",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "change",
+            "op": "reward",
+            "amount": 7,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "predicate": {
+              "count": {
+                "scope": "all",
+                "tag": "crystal"
+              },
+              "distinct": true,
+              "min": 3
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "reward": 7
+      },
+      "error": null
+    },
+    {
+      "id": "item_jar_rack",
+      "gdd": {
+        "table": "6",
+        "body": "first converted crystal reserved at step8"
+      },
+      "impl": {
+        "name": "安瓿架",
+        "rarity": "rare",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "reserve",
+            "event": "transform",
+            "defer": true,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "match": {
+              "afterTag": "crystal"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "reserved": true
+      },
+      "error": null
+    },
+    {
+      "id": "item_residue_stamp",
+      "gdd": {
+        "table": "6",
+        "body": "first mist consume extra reward +2"
+      },
+      "impl": {
+        "name": "残液验章",
+        "rarity": "uncommon",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "reward",
+            "amount": 2,
+            "event": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "match": {
+              "beforeTag": "mist"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "extra": 2
+      },
+      "error": null
+    },
+    {
+      "id": "item_manifest_clip",
+      "gdd": {
+        "table": "6",
+        "body": "summary >=4 cargo types reward 6"
+      },
+      "impl": {
+        "name": "夜单夹",
+        "rarity": "common",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "summary",
+            "op": "reward",
+            "amount": 6,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "predicate": {
+              "count": {
+                "scope": "all",
+                "tag": "cargo"
+              },
+              "distinct": true,
+              "min": 4
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "reward": 6
+      },
+      "error": null
+    },
+    {
+      "id": "item_return_track",
+      "gdd": {
+        "table": "6",
+        "body": "stage skip ordinals 1 and 3: rerollTokens +1 via mechanics"
+      },
+      "impl": {
+        "name": "空返侧轨",
+        "rarity": "uncommon",
+        "tags": null,
+        "mechanics": {
+          "skipOrdinals": [
+            1,
+            3
+          ],
+          "resource": "rerollTokens",
+          "amount": 1
+        },
+        "effects": [],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": false,
+      "trigger": null,
+      "error": "GDD1: item acquisition window"
+    },
+    {
+      "id": "item_small_hold",
+      "gdd": {
+        "table": "6",
+        "body": "summary pool 12–20 reward 5"
+      },
+      "impl": {
+        "name": "小舱限载牌",
+        "rarity": "rare",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "summary",
+            "op": "reward",
+            "amount": 5,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "predicate": {
+              "poolBetween": [
+                12,
+                20
+              ]
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "inRange": 5,
+        "below": 0
+      },
+      "error": null
+    },
+    {
+      "id": "item_exchange_hook",
+      "gdd": {
+        "table": "6",
+        "body": "first product consume sets itemProductPending"
+      },
+      "impl": {
+        "name": "换装挂钩",
+        "rarity": "uncommon",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "guarantee",
+            "event": "consume",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "window": "stage",
+            "match": {
+              "beforeTag": "product"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "pending": true
+      },
+      "error": null
+    },
+    {
+      "id": "item_pressure_index",
+      "gdd": {
+        "table": "6",
+        "body": "first real pressure increase extra +1 no recurse"
+      },
+      "impl": {
+        "name": "压班索引",
+        "rarity": "common",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "pressure",
+            "amount": 1,
+            "event": "pressureIncrease",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "pressure": 2
+      },
+      "error": null
+    },
+    {
+      "id": "item_insulation_shawl",
+      "gdd": {
+        "table": "6",
+        "body": "mechanics riskReduction 3 on first pressure fail"
+      },
+      "impl": {
+        "name": "隔温披布",
+        "rarity": "uncommon",
+        "tags": null,
+        "mechanics": {
+          "riskReduction": 3
+        },
+        "effects": [],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "reduced": true
+      },
+      "error": null
+    },
+    {
+      "id": "item_release_receipt",
+      "gdd": {
+        "table": "6",
+        "body": "3rd successful release this stage reward 12"
+      },
+      "impl": {
+        "name": "泄压回执",
+        "rarity": "rare",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "reward",
+            "amount": 12,
+            "event": "release",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "window": "stage",
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "thirdRelease": 12
+      },
+      "error": null
+    },
+    {
+      "id": "item_spare_baffle",
+      "gdd": {
+        "table": "6",
+        "body": "replace first risk junk spawn with source -3"
+      },
+      "impl": {
+        "name": "备用挡板",
+        "rarity": "uncommon",
+        "tags": null,
+        "mechanics": {
+          "replaceRiskJunk": true,
+          "replacementLoss": 3
+        },
+        "effects": [],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "replaced": true
+      },
+      "error": null
+    },
+    {
+      "id": "item_safe_carbon",
+      "gdd": {
+        "table": "6",
+        "body": "first legal copy +2 cap 8 via mechanics.copyBonus"
+      },
+      "impl": {
+        "name": "安全复写膜",
+        "rarity": "common",
+        "tags": null,
+        "mechanics": {
+          "copyBonus": 2
+        },
+        "effects": [],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "total": 12
+      },
+      "error": null
+    },
+    {
+      "id": "item_spectrum_book",
+      "gdd": {
+        "table": "6.1/5.I.1",
+        "body": "first novel tagAdded; +3 at step8 if alive; death cancels no retarget"
+      },
+      "impl": {
+        "name": "谱类手册",
+        "rarity": "uncommon",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "add",
+            "amount": 3,
+            "event": "tagAdded",
+            "defer": true,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "liveTotal": 8,
+        "livePhase": "step8/end-summary",
+        "deadAdds": 0
+      },
+      "error": null
+    },
+    {
+      "id": "item_registration_pin",
+      "gdd": {
+        "table": "6",
+        "body": "first copy target reserved at step8"
+      },
+      "impl": {
+        "name": "对版定位针",
+        "rarity": "rare",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "reserve",
+            "event": "copy",
+            "defer": true,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "reserved": true
+      },
+      "error": null
+    },
+    {
+      "id": "item_growth_negative",
+      "gdd": {
+        "table": "6",
+        "body": "first positive growth reward min(6,2×actual)"
+      },
+      "impl": {
+        "name": "增量底片册",
+        "rarity": "uncommon",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "reward",
+            "event": "grow",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "match": {
+              "positiveIncrease": true
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "reward": 2
+      },
+      "error": null
+    },
+    {
+      "id": "item_low_balance_tab",
+      "gdd": {
+        "table": "6",
+        "body": "cash*2<payment independent +3"
+      },
+      "impl": {
+        "name": "薄账分页条",
+        "rarity": "common",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "appearance",
+            "op": "reward",
+            "amount": 3,
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "predicate": {
+              "cashBelowHalf": true
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "below": 5,
+        "half": 2
+      },
+      "error": null
+    },
+    {
+      "id": "item_compliance_carbon",
+      "gdd": {
+        "table": "6",
+        "body": "first junk→nonjunk product +3"
+      },
+      "impl": {
+        "name": "合规复核纸",
+        "rarity": "uncommon",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "listen",
+            "op": "add",
+            "amount": 3,
+            "event": "transform",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": false,
+            "limit": 1,
+            "match": {
+              "beforeTag": "junk",
+              "notAfterTag": "junk"
+            },
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "total": 7
+      },
+      "error": null
+    },
+    {
+      "id": "item_audit_clip",
+      "gdd": {
+        "table": "6",
+        "body": "first successful payment this stage with no junk: removeTokens +1"
+      },
+      "impl": {
+        "name": "稽核夹",
+        "rarity": "rare",
+        "tags": null,
+        "mechanics": {
+          "paymentResource": "removeTokens",
+          "amount": 1,
+          "poolWithoutTag": "junk",
+          "finalOnlyStats": true
+        },
+        "effects": [],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": false,
+      "trigger": null,
+      "error": "GDD1: item acquisition window"
+    },
+    {
+      "id": "item_margin_lantern",
+      "gdd": {
+        "table": "6/5.I.1",
+        "body": "last spin, cash in [3/4, payment): contract ×3/2. 5.I.1 appearance; §6 last-spin all contract"
+      },
+      "impl": {
+        "name": "余账灯",
+        "rarity": "uncommon",
+        "tags": null,
+        "mechanics": null,
+        "effects": [
+          {
+            "phase": "summary",
+            "op": "multiply",
+            "defer": false,
+            "lockFirst": false,
+            "copyable": false,
+            "each": true,
+            "limit": 20,
+            "selector": {
+              "scope": "all",
+              "tag": "contract"
+            },
+            "predicate": {
+              "lastSpin": true,
+              "cashFraction": [
+                3,
+                4
+              ],
+              "cashBelowPayment": true
+            },
+            "ratio": [
+              3,
+              2
+            ],
+            "deathAllowed": false
+          }
+        ],
+        "spinEffects": null,
+        "op": null,
+        "target": null,
+        "tag": null
+      },
+      "ok": true,
+      "trigger": {
+        "implPhase": "summary",
+        "gdd511": "step4/appearance → step4/appearance → step9/ledger",
+        "lastSpinMultiply": true,
+        "convertedStubAmount": 4,
+        "note": "implementation selector is summary/all contract; 5.I.1 lists appearance. Converted spent_gasket→cleared_stub is a new contract cell-type after appearance."
+      },
+      "error": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event_fog_shift",
+      "gdd": {
+        "table": "7/5.I.1",
+        "body": "A binds plant UID remaining 2 extra ages; B no-op but consumes appearance"
+      },
+      "impl": {
+        "name": "雾班调换",
+        "tags": null,
+        "mechanics": null,
+        "effects": [],
+        "spinEffects": null,
+        "op": "modifier",
+        "cost": 4,
+        "remaining": 2,
+        "target": null,
+        "tag": "plant"
+      },
+      "ok": true,
+      "trigger": {
+        "remaining": 2,
+        "afterOneSpinAge": 2
+      },
+      "error": null
+    },
+    {
+      "id": "event_copper_queue",
+      "gdd": {
+        "table": "7",
+        "body": "A transform junk to copper + spawn gasket cause=event"
+      },
+      "impl": {
+        "name": "铜屑排队",
+        "tags": null,
+        "mechanics": null,
+        "effects": [],
+        "spinEffects": null,
+        "op": "transform",
+        "cost": 0,
+        "target": null,
+        "tag": "junk"
+      },
+      "ok": true,
+      "trigger": {
+        "type": "copper_burr",
+        "spawned": "spent_gasket"
+      },
+      "error": null
+    },
+    {
+      "id": "event_silent_bell",
+      "gdd": {
+        "table": "7",
+        "body": "stage remaining 3: ratios 1/2,1/2,2/1 on resonance at summary"
+      },
+      "impl": {
+        "name": "停鸣通知",
+        "tags": null,
+        "mechanics": null,
+        "effects": [],
+        "spinEffects": [
+          {
+            "phase": "summary",
+            "op": "multiply",
+            "selector": {
+              "scope": "all",
+              "tag": "resonance"
+            },
+            "ratios": [
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ]
+          }
+        ],
+        "op": "modifier",
+        "cost": 0,
+        "remaining": 3,
+        "target": {
+          "tag": "resonance"
+        },
+        "tag": "resonance"
+      },
+      "ok": false,
+      "trigger": null,
+      "error": "eq expected true actual false"
+    },
+    {
+      "id": "event_brine_inspection",
+      "gdd": {
+        "table": "7",
+        "body": "A delete feedstock, set crystal guarantee"
+      },
+      "impl": {
+        "name": "盐雾抽检",
+        "tags": null,
+        "mechanics": null,
+        "effects": [],
+        "spinEffects": null,
+        "op": "remove",
+        "cost": 0,
+        "target": null,
+        "tag": "feedstock"
+      },
+      "ok": true,
+      "trigger": {
+        "removed": true,
+        "guarantee": true
+      },
+      "error": null
+    },
+    {
+      "id": "event_empty_manifest",
+      "gdd": {
+        "table": "7",
+        "body": "requires pool>=21; remaining 1 summary +2 up to 5 cargo"
+      },
+      "impl": {
+        "name": "空白夜单",
+        "tags": null,
+        "mechanics": null,
+        "effects": [],
+        "spinEffects": [
+          {
+            "phase": "summary",
+            "op": "add",
+            "selector": {
+              "scope": "all",
+              "tag": "cargo"
+            },
+            "amount": 2,
+            "maxTargets": 5
+          }
+        ],
+        "op": "removeModifier",
+        "cost": 0,
+        "remaining": 1,
+        "target": {
+          "rarity": "common",
+          "notTag": "junk"
+        },
+        "tag": "contract"
+      },
+      "ok": true,
+      "trigger": {
+        "adds": 5,
+        "amount": 2
+      },
+      "error": null
+    },
+    {
+      "id": "event_boiler_test",
+      "gdd": {
+        "table": "7",
+        "body": "A payment+12 cash+10 target pressure+2 or spawn pouch@2"
+      },
+      "impl": {
+        "name": "压锅试鸣",
+        "tags": null,
+        "mechanics": null,
+        "effects": [],
+        "spinEffects": null,
+        "op": "boiler",
+        "cost": 0,
+        "remaining": 1,
+        "target": {
+          "tag": "pressure",
+          "pressureMechanism": true
+        },
+        "tag": "pressure"
+      },
+      "ok": true,
+      "trigger": {
+        "paymentDelta": 12,
+        "fallback": true
+      },
+      "error": null
+    },
+    {
+      "id": "event_misprint_window",
+      "gdd": {
+        "table": "7/5.I.1",
+        "body": "cost 6; remaining 3; first magic cargo tag + add 2 at preprocess"
+      },
+      "impl": {
+        "name": "错版窗口",
+        "tags": null,
+        "mechanics": null,
+        "effects": [],
+        "spinEffects": [
+          {
+            "phase": "preprocess",
+            "op": "tagAdded",
+            "selector": {
+              "scope": "all",
+              "tag": "magic"
+            },
+            "tag": "cargo",
+            "maxTargets": 1
+          },
+          {
+            "phase": "preprocess",
+            "op": "add",
+            "selector": {
+              "scope": "all",
+              "tag": "magic"
+            },
+            "amount": 2,
+            "maxTargets": 1
+          }
+        ],
+        "op": "modifier",
+        "cost": 6,
+        "remaining": 3,
+        "target": null,
+        "tag": "magic"
+      },
+      "ok": true,
+      "trigger": {
+        "cost": 6,
+        "tagPhase": "step2/tagAdded",
+        "add": 2
+      },
+      "error": null
+    },
+    {
+      "id": "event_quota_recount",
+      "gdd": {
+        "table": "7",
+        "body": "A payment+10, spawn cleared_stub, rerollTokens +1 atomic"
+      },
+      "impl": {
+        "name": "配额复点",
+        "tags": null,
+        "mechanics": null,
+        "effects": [],
+        "spinEffects": null,
+        "op": "quota",
+        "cost": 0,
+        "remaining": 1,
+        "target": null,
+        "tag": "contract"
+      },
+      "ok": true,
+      "trigger": {
+        "paymentDelta": 10,
+        "spawned": "cleared_stub"
+      },
+      "error": null
+    }
+  ],
+  "mismatches": [
+    {
+      "id": "amber_frond",
+      "error": "tong6+amber4 expected 10 actual 0",
+      "gdd": {
+        "table": "5.A",
+        "body": "consume self reward 4 independent of consumer",
+        "phase": "step6/lifecycle"
+      }
+    },
+    {
+      "id": "copper_burr",
+      "error": "eq expected 4 actual 0",
+      "gdd": {
+        "table": "5.B",
+        "body": "adj any machine self +2",
+        "phase": "step4/appearance"
+      }
+    },
+    {
+      "id": "dock_chime",
+      "error": "eq expected 4 actual 7",
+      "gdd": {
+        "table": "5.C",
+        "body": "appearance self + distinct other row resonance types cap 3",
+        "phase": "step4/appearance"
+      }
+    },
+    {
+      "id": "spectrum_pin",
+      "error": "eq expected 5 actual 1",
+      "gdd": {
+        "table": "5.G",
+        "body": "appearance >=3 other adj types +4; not copyable",
+        "phase": "step4/appearance"
+      }
+    },
+    {
+      "id": "cloudy_negative",
+      "error": "GDD 第3次上盘: first appearance age 0→1, extra self-age is not registered for cloudy expected 1 actual 2",
+      "gdd": {
+        "table": "5.G/5.I.1",
+        "body": "第3次上盘转 blank_facet; NATURAL age only, not fog_stitcher extra",
+        "phase": "step3/age natural"
+      }
+    },
+    {
+      "id": "item_return_track",
+      "error": "GDD1: item acquisition window",
+      "gdd": {
+        "table": "6",
+        "body": "stage skip ordinals 1 and 3: rerollTokens +1 via mechanics"
+      }
+    },
+    {
+      "id": "item_audit_clip",
+      "error": "GDD1: item acquisition window",
+      "gdd": {
+        "table": "6",
+        "body": "first successful payment this stage with no junk: removeTokens +1"
+      }
+    },
+    {
+      "id": "event_silent_bell",
+      "error": "eq expected true actual false",
+      "gdd": {
+        "table": "7",
+        "body": "stage remaining 3: ratios 1/2,1/2,2/1 on resonance at summary"
+      }
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "scope": "New GDD1 F1 deliverables only; never replaces any legacy manifest",
+  "protectedUnchanged": 245,
+  "files": [
+    {
+      "path": "docs/GDD1_F1_CONTRACT.md",
+      "bytes": 22966,
+      "sha256": "09d50d390b412e45ba41516c01990930313cd6facb390125f7d92bf98b9bb1f7"
+    },
+    {
+      "path": "docs/GDD1_F1_REPORT.md",
+      "bytes": 6976,
+      "sha256": "5efc03a44d5640ebcfea6d5a5861131f77b64dd8b65b89d07af16aa875c3e818"
+    },
+    {
+      "path": "js/gdd1/contract.js",
+      "bytes": 4911,
+      "sha256": "b7bd44d05ccdd4ffffe13e4949f7de92f3c7f37e628feaf3a6bf58023e7ea5c9"
+    },
+    {
+      "path": "js/gdd1/rng.js",
+      "bytes": 1680,
+      "sha256": "f3f5c055a8e3f4d5e18d355488194f94dfbc28603be7c29a5aab1743bd6704f7"
+    },
+    {
+      "path": "js/gdd1/save.js",
+      "bytes": 4480,
+      "sha256": "b84ad697806e3d7a285fd3c822fb2c02d3700acf3d0dc754b3f0356d306619ba"
+    },
+    {
+      "path": "js/gdd1/schema.js",
+      "bytes": 14538,
+      "sha256": "809249e65162f0d0b5d391776872b42abcb7b7b07f0382b1550a46338df9e636"
+    },
+    {
+      "path": "tests/gdd1/browser-check.ps1",
+      "bytes": 1167,
+      "sha256": "5318ac00e971a325164e414042bfe6178f28cf59b158aba55faf9cec2903e35a"
+    },
+    {
+      "path": "tests/gdd1/browser-data.js",
+      "bytes": 18914,
+      "sha256": "85e8ed007b9de12478c9dbe9be24a58bfac8eb75493b8a4996cfd9a7d95846d0"
+    },
+    {
+      "path": "tests/gdd1/check-parity.js",
+      "bytes": 2322,
+      "sha256": "7a79b27edfcc3a46a8d5aef678f0512120ed6c9bf8ffaa5b236b3cc223fbec52"
+    },
+    {
+      "path": "tests/gdd1/f1-edge-file-read-stderr.txt",
+      "bytes": 158,
+      "sha256": "a69caed743f53dae13235e20ac4682810c201e2a21dad9e754df01f2d99eaaff"
+    },
+    {
+      "path": "tests/gdd1/f1-edge-file-read.html",
+      "bytes": 10107,
+      "sha256": "7bb737192aabbb2fa5ddb66cfdab4c10cd18e2e5e2bc0fd6298c2efa3cfb5ff3"
+    },
+    {
+      "path": "tests/gdd1/f1-edge-file-write-stderr.txt",
+      "bytes": 158,
+      "sha256": "ba5d1172bc90a2f88c48ae9fe36c8f71ca2d6662154f36f082729ed555fac799"
+    },
+    {
+      "path": "tests/gdd1/f1-edge-file-write.html",
+      "bytes": 10106,
+      "sha256": "eef49c7e22fddc53c5650e545cd54b62030edbe0e69f1c4b4c42365c710e8b68"
+    },
+    {
+      "path": "tests/gdd1/f1-edge-http-read-stderr.txt",
+      "bytes": 158,
+      "sha256": "d4f8db8b2a0c6005c5fa1abb9806069bfb216bdd46e27b7d9217574c1b3071d1"
+    },
+    {
+      "path": "tests/gdd1/f1-edge-http-read.html",
+      "bytes": 10107,
+      "sha256": "7bb737192aabbb2fa5ddb66cfdab4c10cd18e2e5e2bc0fd6298c2efa3cfb5ff3"
+    },
+    {
+      "path": "tests/gdd1/f1-edge-http-write-stderr.txt",
+      "bytes": 158,
+      "sha256": "523a3a13d0d4dc16d23374c5c0368d12aab8578e327dd96449a52626f0e9c0d6"
+    },
+    {
+      "path": "tests/gdd1/f1-edge-http-write.html",
+      "bytes": 10106,
+      "sha256": "eef49c7e22fddc53c5650e545cd54b62030edbe0e69f1c4b4c42365c710e8b68"
+    },
+    {
+      "path": "tests/gdd1/f1-node-results.json",
+      "bytes": 10776,
+      "sha256": "7ce1a4f5f5eb991a9f443a9d5fbccec105ef0b378de77c06a1df0dc0607f4ad6"
+    },
+    {
+      "path": "tests/gdd1/f1-parity-report.json",
+      "bytes": 1113,
+      "sha256": "b86f6afe45c76135f4aebde8ace176070fc2f01817335de3bbc37af8bc1c41ee"
+    },
+    {
+      "path": "tests/gdd1/foundation-tests.js",
+      "bytes": 16846,
+      "sha256": "d2bc1d8b684a16c3ae7a97701e6e70622d68aa3976e0c091b1faa6ce8342fbc5"
+    },
+    {
+      "path": "tests/gdd1/hand-oracles.json",
+      "bytes": 11933,
+      "sha256": "1158c57e4a477314e050342bf0535165bc6298ac09c9c9da8dc07ec07c8e3bda"
+    },
+    {
+      "path": "tests/gdd1/index.html",
+      "bytes": 2256,
+      "sha256": "66676331a0a84acc89f0f636120f8d292ba62be5e4410c07855643ea8b1db873"
+    },
+    {
+      "path": "tests/gdd1/legacy-readonly-results.json",
+      "bytes": 2316,
+      "sha256": "89a0730f5ca2d52d7cc720db840ab40719fd34c13f6c26b1792f87ed1ec8e7ac"
+    },
+    {
+      "path": "tests/gdd1/legacy-readonly.js",
+      "bytes": 2076,
+      "sha256": "b5544201131f0fcc575e34d143f96fadf4a5c720a75c546daf22633e7549ae24"
+    },
+    {
+      "path": "tests/gdd1/oracle-integrity.js",
+      "bytes": 2032,
+      "sha256": "5a1c89545dffb974dda500a14523caa90c93dca6b83b0bcf5c3045da1d43b57b"
+    },
+    {
+      "path": "tests/gdd1/protected-after.json",
+      "bytes": 84842,
+      "sha256": "0977cc87446eb0684618750d21a8246cc860ea1ea74bcd4d28ddce92cee01226"
+    },
+    {
+      "path": "tests/gdd1/protected-before.json",
+      "bytes": 60821,
+      "sha256": "8b47a1950e561b55fdd761463e3d8854a1999ee3eb950f3f580ad53b5ae0751e"
+    },
+    {
+      "path": "tests/gdd1/rng-reference-current.txt",
+      "bytes": 7138,
+      "sha256": "de34eb8636e63a485dffb2063d16d4f02b3a154e7dd97ffe46178d6fc1e2d7b9"
+    },
+    {
+      "path": "tests/gdd1/rng-reference.py",
+      "bytes": 1208,
+      "sha256": "fd4de224a2d3069b7982df84cca3a730bd76171a69c7b4c305f3f8b92a9e8480"
+    },
+    {
+      "path": "tests/gdd1/rng-vectors.json",
+      "bytes": 6822,
+      "sha256": "3bfea53ffa7ce6c68a9dafcae06348029f14a15efb6567e7b8233fbbc750a2b8"
+    },
+    {
+      "path": "tests/gdd1/run.js",
+      "bytes": 1274,
+      "sha256": "b44faccad8a9bbb0082843984a89d0d5d3e53f4ab1e0e32527373c14fd6a9196"
+    },
+    {
+      "path": "tests/gdd1/server.js",
+      "bytes": 1010,
+      "sha256": "552f84915edec72e1ff6f911ffd44625617f8513497388c2498ada61e8e7f16c"
+    },
+    {
+      "path": "tests/gdd1/verify-protected.js",
+      "bytes": 1271,
+      "sha256": "62bbef02f63c1297912e2fa8e1a2496ceb86a6ae213024db9623d319ef95ef3d"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+﻿{
+    "scope":  "F2 E1/E2 fix complete new-artifact inventory; self-excluded",
+    "files":  [
+                  {
+                      "path":  "tests/gdd1/f2-fix-154-node.json",
+                      "bytes":  14462,
+                      "sha256":  "ac51b7dd4ebf992765839f7fc08f2795074753a6756a67b35221fcfe6a78041e"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-154-run.js",
+                      "bytes":  892,
+                      "sha256":  "002088b0c61f0c07a6c7ba9d687a4d40de32ba27a110a8f61a0ebc1f4df5ebc3"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-154-run.txt",
+                      "bytes":  20,
+                      "sha256":  "487affee6356026c9554731c1c83a05bc065d717dba2c71bd102d34a2e5cd4f5"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-audit-node.json",
+                      "bytes":  4278,
+                      "sha256":  "d2b4553514bae6e136f08c3221b85bf8cdf71f77c8b3a1ea1366a6d4387f77fd"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-audit-run.txt",
+                      "bytes":  16,
+                      "sha256":  "95c9693dc29f6cf9db4e20b4e4e7bf2c69eb34cd9106353c3b21da44f7c0d615"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-browser.html",
+                      "bytes":  630,
+                      "sha256":  "5b89361b4f26957f1c2c55dfe719942db98c5423125ab9dc50478e9c5454bf9f"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-browser.js",
+                      "bytes":  6139,
+                      "sha256":  "7a0434882f022bdd7bafedc891ec19feaad324084cc8b66060b23d3c8fcbd689"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-browser.ps1",
+                      "bytes":  1145,
+                      "sha256":  "b6075b8c8d1513f089a3cad484f74972acee27fcfbfe05895d0aaa640566fd77"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-checks.js",
+                      "bytes":  902,
+                      "sha256":  "da48c23b6536f9961e7d8379b1ef533d4ab49ef16419c1a0e91fdfdbaaa5a56c"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-edge-file-read.html",
+                      "bytes":  7488,
+                      "sha256":  "d078f40e6bb02bf5c7453943e5cdf43cd8f3f7981bb0bc1342c3ac5e0352ec15"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-edge-file-read-stderr.txt",
+                      "bytes":  158,
+                      "sha256":  "05b3908217f02513542db73f4ac7274b0e602959c1a9264fb025aaace3130fdf"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-edge-file-write.html",
+                      "bytes":  7816,
+                      "sha256":  "fee5622bc5799f45fd74905537add89e78c7f2ccc2e771df46f4a293cdab7f47"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-edge-file-write-stderr.txt",
+                      "bytes":  158,
+                      "sha256":  "5a6b41a8c2fe553e0b7d48f5ff20566fd9d44553e7f76fb91f9359b8b5a61f82"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-edge-http-read.html",
+                      "bytes":  7488,
+                      "sha256":  "d378f4321f40755c98e510df7af0a5c4ca549df369916b4889b79acb33d5b82c"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-edge-http-read-stderr.txt",
+                      "bytes":  158,
+                      "sha256":  "bedebd44fba6f51964fe79424b19621863de147ea01ea299ed6c1ef0e776128d"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-edge-http-write.html",
+                      "bytes":  7816,
+                      "sha256":  "3a4e826131b21e32b84bebf2cafb1616d5377ab9e0e0bd33a592cfce90f9ff0d"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-edge-http-write-stderr.txt",
+                      "bytes":  158,
+                      "sha256":  "185cbea6a8867cbf8afecd589da3dae9daea21253505182f93c7209fbbaa371a"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-epoch-repro.txt",
+                      "bytes":  3286,
+                      "sha256":  "4b41a2118319e33f1ca35ae28315af3c4da0074f88433f6dc669bd6ba5187f77"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-f1-101-legacy.json",
+                      "bytes":  2316,
+                      "sha256":  "89a0730f5ca2d52d7cc720db840ab40719fd34c13f6c26b1792f87ed1ec8e7ac"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-f1-101-node.json",
+                      "bytes":  46781,
+                      "sha256":  "e04da70d494394eea89a82e0a63a85f7892a34b9a287ce38d1acc9ff2796f92c"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-f1-101-run.js",
+                      "bytes":  2862,
+                      "sha256":  "043c5807378e0a3060b3663b7c8b1059f2e371a4c9aeeb004d2a93b74bdccb0c"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-f1-101-run.txt",
+                      "bytes":  6428,
+                      "sha256":  "449ac5b0cf0eea9e9d43629f6bd9295f91c97485dd0fba592953d86281fe065f"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-f1-node.json",
+                      "bytes":  44314,
+                      "sha256":  "5dd10eae834b97406a94600d29c0bef7c7b866d41ab3145c9b25bb577bad330b"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-f1-retest38-node.json",
+                      "bytes":  27272,
+                      "sha256":  "17447f669087e5ca7f85f5b339cdfee33a1c6c623f98ff208bc2af1afabcbd40"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-f1-retest38-run.js",
+                      "bytes":  2457,
+                      "sha256":  "8c5956a9fbdb63edda70050f6b91247abd448407c5b3bb41ba9e05281cf0326b"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-f1-retest38-run.txt",
+                      "bytes":  56626,
+                      "sha256":  "b67f30f3f6973aa084ebc6f043a4b91240084f093407dce585da400f04c53111"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-f1-run.js",
+                      "bytes":  3766,
+                      "sha256":  "a1277f8813b5e31ba1fb40752f757850f498d9b80250e770d731946c67053938"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-f1-run.txt",
+                      "bytes":  2260,
+                      "sha256":  "3cb4293569514293dc054f5608c7b23e9d2efed877c879ba0eacffd55725cd3c"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-freeze.json",
+                      "bytes":  573,
+                      "sha256":  "74e8d1ee38d1434cf62e35c7451cd6749cebb2abe2a2bd32e85c2d94344e3c3f"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-legacy-results.json",
+                      "bytes":  2316,
+                      "sha256":  "89a0730f5ca2d52d7cc720db840ab40719fd34c13f6c26b1792f87ed1ec8e7ac"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-legacy-run.js",
+                      "bytes":  2079,
+                      "sha256":  "886f8f7414e26e4d1d714a4ae91cb091a6ab1508cdc9a4e3d2d115bed95d23a9"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-legacy-run.txt",
+                      "bytes":  4682,
+                      "sha256":  "87f1f04ebf17fc82988d2555004d1ecf3f5657239781e08c6c42d20189a0dd81"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-protection.json",
+                      "bytes":  645,
+                      "sha256":  "7167c67fd3e1350498daeff8c65e2c0797cc5678d986cee36e251f03b7e8a156"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-run.js",
+                      "bytes":  868,
+                      "sha256":  "58d36807f24bed06d48e7df1c51037561f85d1a2e696b534e03cc143c7f4c54c"
+                  },
+                  {
+                      "path":  "tests/gdd1/f2-fix-server.js",
+                      "bytes":  616,
+                      "sha256":  "a8230715b1eb8753ad89de356bbfc1d1ac9954753d3ee5e6f544267ae3ae4528"
+                  },
+                  {
+                      "path":  "docs/GDD1_F2_FIX.md",
+                      "bytes":  3007,
+                      "sha256":  "47447bbf4220968fb060c21594be967d9944c2066d27b328cb255ce445c4e9b8"
+                  }
+              ],
+    "protection":  {
+                       "historicalProtectedFiles":  245,
+                       "historicalF2AuditDeliverables":  40,
+                       "historicalFreezeUnchangedEntries":  49,
+                       "sourceEntriesChanged":  2
+                   },
+    "results":  {
+                    "f2Node":  "41/41",
+                    "targeted":  "3/3",
+                    "isolatedF2":  "154/154",
+                    "edgeFile":  "read45/45 write49/49",
+                    "edgeHttp":  "read45/45 write49/49",
+                    "f1Fix101":  "baseline117/117 regression101/101",
+                    "f1Retest38":  "baseline117/117 fix101/101 retest38/38",
+                    "legacy":  "602/602",
+                    "m3":  "64/66 original failures retained"
+                }
+}

@@ -1,0 +1,117 @@
+{
+  "note": "Detached 16x500 full-v1 batches; incomplete full-sim-batch-*.jsonl without -v2 are retained job-killed first attempt",
+  "jobs": [
+    {
+      "pid": 55496,
+      "bot": "Random",
+      "split": "train",
+      "start": 0,
+      "tag": "random-train-0"
+    },
+    {
+      "pid": 70916,
+      "bot": "Random",
+      "split": "train",
+      "start": 500,
+      "tag": "random-train-500"
+    },
+    {
+      "pid": 65408,
+      "bot": "Random",
+      "split": "holdout",
+      "start": 0,
+      "tag": "random-holdout-0"
+    },
+    {
+      "pid": 64588,
+      "bot": "Random",
+      "split": "holdout",
+      "start": 500,
+      "tag": "random-holdout-500"
+    },
+    {
+      "pid": 49320,
+      "bot": "Value",
+      "split": "train",
+      "start": 0,
+      "tag": "value-train-0"
+    },
+    {
+      "pid": 70332,
+      "bot": "Value",
+      "split": "train",
+      "start": 500,
+      "tag": "value-train-500"
+    },
+    {
+      "pid": 60036,
+      "bot": "Value",
+      "split": "holdout",
+      "start": 0,
+      "tag": "value-holdout-0"
+    },
+    {
+      "pid": 71432,
+      "bot": "Value",
+      "split": "holdout",
+      "start": 500,
+      "tag": "value-holdout-500"
+    },
+    {
+      "pid": 64256,
+      "bot": "Synergy",
+      "split": "train",
+      "start": 0,
+      "tag": "synergy-train-0"
+    },
+    {
+      "pid": 69168,
+      "bot": "Synergy",
+      "split": "train",
+      "start": 500,
+      "tag": "synergy-train-500"
+    },
+    {
+      "pid": 60280,
+      "bot": "Synergy",
+      "split": "holdout",
+      "start": 0,
+      "tag": "synergy-holdout-0"
+    },
+    {
+      "pid": 57580,
+      "bot": "Synergy",
+      "split": "holdout",
+      "start": 500,
+      "tag": "synergy-holdout-500"
+    },
+    {
+      "pid": 67936,
+      "bot": "Greedy",
+      "split": "train",
+      "start": 0,
+      "tag": "greedy-train-0"
+    },
+    {
+      "pid": 67124,
+      "bot": "Greedy",
+      "split": "train",
+      "start": 500,
+      "tag": "greedy-train-500"
+    },
+    {
+      "pid": 27092,
+      "bot": "Greedy",
+      "split": "holdout",
+      "start": 0,
+      "tag": "greedy-holdout-0"
+    },
+    {
+      "pid": 47684,
+      "bot": "Greedy",
+      "split": "holdout",
+      "start": 500,
+      "tag": "greedy-holdout-500"
+    }
+  ]
+}

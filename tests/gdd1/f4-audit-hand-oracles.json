@@ -1,0 +1,12 @@
+[
+  {"id":"H01-two-wick-base","types":["wick_bed","wick_bed"],"positions":[0,1],"expectedTotal":4},
+  {"id":"H02-pressure-first-injection","types":["pressure_pouch"],"positions":[0],"expectedTotal":1},
+  {"id":"H03-surge-ordinary-zero","types":["surge_vessel"],"positions":[0],"expectedTotal":0},
+  {"id":"H04-pause-copyable-add","types":["pause_dial"],"positions":[0],"expectedTotal":3},
+  {"id":"H05-blank-initial-add","types":["blank_facet"],"positions":[0],"expectedTotal":5},
+  {"id":"H06-copper-base-only","types":["copper_burr"],"positions":[0],"expectedTotal":2},
+  {"id":"H07-dock-row-distinct","types":["dock_chime","pitch_fork","fog_reed"],"positions":[0,1,2],"expectedTotal":3},
+  {"id":"H08-tide-direct-base","types":["tide_prism"],"positions":[0],"expectedTotal":4},
+  {"id":"H09-lean-low-cash","types":["lean_receipt"],"positions":[0],"expectedTotal":5},
+  {"id":"H10-spent-negative-floor","types":["spent_gasket"],"positions":[0],"expectedTotal":-1}
+]

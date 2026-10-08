@@ -1,0 +1,219 @@
+{
+  "scope": "independent F2 E1/E2 retest",
+  "total": 53,
+  "passed": 53,
+  "cases": [
+    {
+      "name": "f2-audit/age/fog-maturity-decrements-retained-reference",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/age/fog-last-use-removes-modifier",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/age/fog-offboard-neither-age-nor-charge",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/age/double-natural-maturity-calendar-quota-zero",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/age/ash-third-death-no-fog-binding",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/epoch/transformed-source-cancels-queued-old-structure",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/epoch/new-tide-listener-not-new-appearance",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/reservation/source-left-two-fixed-corners",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/reservation/delete-clears-only-target",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/causal/immediate-growth-before-next-natural-root",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/death/permission-only-own-amber",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/death/consume-destroy-parent-not-nonconsume-router",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/death/ordinary-listener-after-death-with-real-uid",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/pressure/cap5-increase-actual1-and-release18",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/pressure/no-mechanism-does-not-create-counter",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/generation/two-different-sources-one-key-third-skips",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/generation/200-consume-two-spawns-only-one-slot",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/multiplier/three-sources-positive-single-floor",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/multiplier/negative-single-final-floor-not-truncated",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/conservation/dead-item-add-zero-independent-rewards-remain",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/draw/20-pool-all19-shuffle-no-sampling",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/draw/200-pool20-selected39-draws-pool-preserved",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/pool/201-spin-rejected-before-rng",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/offer/triple-guarantee-refresh-preserves-deferred-product",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/offer/no-tokens-refresh-rollback-all-fields",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/offer/stale-window-same-revision-rejects",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/delete/last-uid-confirmation-preserves-pending",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/payment/negative-pending-clamps-cash-no-refund",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/payment/stage2-exact-with-new-instance-no-revenue",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/payment/stage2-short1-no-item-rng",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/revision/double-choose-old-command-rejected-atomic",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/item/setup-cooldown-no-rng-and-cap9-quota-reset",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/event/empty-eligible-no-probability-consumption",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/event/quoted-target-now-wrong-type-keeps-event",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/event/fog-cost4-exact-consumed-once",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/event/copper-199-to200-preserves-permanent-no-logs",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/event/brine-delete-no-token-or-runtime-destroy",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/import/preview-disposable-clone-before-single-write",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/import/invalid-before-preview-read-write",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/import/throw-preview-preserves-envelope-previous",
+      "ok": true
+    },
+    {
+      "name": "f2-audit/generic/renamed-all-symbol-ids-same-primitives",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/queued-cancel-preserves-five-rng-pressure-and-target",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/new-type-listener-parent-and-attribution-exact",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/new-type-never-reopens-injected-appearance",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/multi-target-source-epoch-changes-after-first-consume-stops-second",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/multi-target-source-dies-after-first-consume-stops-second",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/death-permission-own-amber-one-reward-no-bystander",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/dead-ordinary-listener-cannot-grow-after-second-event",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/cancelled-old-effect-does-not-spend-item-quota-before-next-legal-event",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/public-spin-real-draw-cancel-and-roundtrip-exact",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/hard-listener-fault-rolls-back-whole-command-and-five-rng",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/failed-empty-event-target-followed-by-legal-same-revision-command",
+      "ok": true
+    },
+    {
+      "name": "f2-retest/storage-failure-keeps-bytes-and-pending-then-retry-single-write",
+      "ok": true
+    }
+  ]
+}

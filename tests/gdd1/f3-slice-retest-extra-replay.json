@@ -1,0 +1,30 @@
+{
+  "pass": true,
+  "separateFromOriginal47": true,
+  "count": 2,
+  "selected": [
+    {
+      "seed": "F3-SLICE-v1/Greedy/holdout/0002",
+      "categories": [
+        "dead-add",
+        "generated"
+      ],
+      "commands": 160,
+      "spins": 70,
+      "payments": 10,
+      "finalHash": "c1000deb9ee8bd5489a361a427209f1c60482cd4b51d34e167f6d69dd20c9b50",
+      "pass": true
+    },
+    {
+      "seed": "F3-SLICE-v1/Greedy/holdout/0004",
+      "categories": [
+        "epoch-add"
+      ],
+      "commands": 159,
+      "spins": 70,
+      "payments": 10,
+      "finalHash": "57c36ceaacb73c4c6db2cc339355baafddb1c081a335a0a17ba7a1d74c99c6dd",
+      "pass": true
+    }
+  ]
+}
